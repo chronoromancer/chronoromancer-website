@@ -1,0 +1,249 @@
+/* Story Page Styles */
+
+/* Navigation */
+.page-nav {
+    background: rgba(0, 0, 0, 0.9);
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    backdrop-filter: blur(10px);
+}
+
+.page-nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-logo-img {
+    max-height: 40px;
+    width: auto;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: #e8e8e8;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #f25c78;
+}
+
+/* Story Header */
+.story-header {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+    padding: 80px 0 60px;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.header-character {
+    max-width: 300px;
+    height: auto;
+    filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.5));
+}
+
+.header-text h1 {
+    font-size: 3.5rem;
+    color: #e8e8e8;
+    margin-bottom: 20px;
+    font-weight: 300;
+}
+
+.header-description {
+    font-size: 1.3rem;
+    color: #b8b8b8;
+    line-height: 1.6;
+    max-width: 500px;
+}
+
+/* Story Content */
+.story-content {
+    padding: 80px 0;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+}
+
+.story-section {
+    margin-bottom: 60px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.story-section h2 {
+    font-size: 2.2rem;
+    color: #f25c78;
+    margin-bottom: 25px;
+    font-weight: 400;
+}
+
+.story-section p {
+    font-size: 1.1rem;
+    color: #b8b8b8;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+/* Eras Grid */
+.eras-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.era-card {
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    padding: 30px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.era-card:hover {
+    transform: translateY(-5px);
+}
+
+.era-card h3 {
+    color: #e8e8e8;
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.era-card p {
+    color: #b8b8b8;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Gameplay Features */
+.gameplay-features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 40px;
+    margin-top: 30px;
+}
+
+.feature-detail {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    padding: 30px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.feature-detail h3 {
+    color: #f25c78;
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.feature-detail p {
+    color: #b8b8b8;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Back Navigation */
+.back-navigation {
+    padding: 60px 0;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.back-links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+    }
+    
+    .header-character {
+        max-width: 250px;
+    }
+    
+    .header-text h1 {
+        font-size: 2.8rem;
+    }
+    
+    .header-description {
+        font-size: 1.2rem;
+    }
+    
+    .story-section {
+        padding: 0 20px;
+    }
+    
+    .story-section h2 {
+        font-size: 1.8rem;
+    }
+    
+    .eras-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .gameplay-features {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .back-links {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .nav-links {
+        gap: 20px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .story-header {
+        padding: 60px 0 40px;
+    }
+    
+    .story-content {
+        padding: 60px 0;
+    }
+    
+    .header-text h1 {
+        font-size: 2.2rem;
+    }
+    
+    .header-description {
+        font-size: 1.1rem;
+    }
+    
+    .story-section {
+        margin-bottom: 50px;
+    }
+}
