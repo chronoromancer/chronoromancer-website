@@ -1,82 +1,80 @@
-// Screenshots Page JavaScript
-
+// Screenshots page functionality
 document.addEventListener('DOMContentLoaded', function() {
-    // Create modal for full-size screenshots
-    const modal = document.createElement('div');
-    modal.className = 'screenshot-modal';
-    modal.innerHTML = `
-        <span class="modal-close">&times;</span>
-        <img class="modal-content" src="" alt="">
+
+    // Create lightbox HTML
+    const lightboxHTML = `
+        <div class="lightbox" id="lightbox">
+            <span class="lightbox-close" id="lightbox-close">&times;</span>
+            <img class="lightbox-content" id="lightbox-img" src="" alt="">
+        </div>
     `;
-    document.body.appendChild(modal);
-
-    const modalImg = modal.querySelector('.modal-content');
-    const closeBtn = modal.querySelector('.modal-close');
-
-    // Add click handlers to screenshot items
-    document.querySelectorAll('.screenshot-item img').forEach(img => {
-        img.addEventListener('click', function(e) {
-            e.stopPropagation();
-            modal.classList.add('active');
-            modalImg.src = this.src;
-            modalImg.alt = this.alt;
-            document.body.style.overflow = 'hidden';
+    
+    // Add lightbox to page
+    document.body.insertAdjacentHTML('beforeend', lightboxHTML);
+    
+    // Get lightbox elements
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const lightboxClose = document.getElementById('lightbox-close');
+    
+    // Add click event to all gallery images
+    const galleryImages = document.querySelectorAll('.gallery-image');
+    
+    galleryImages.forEach(image => {
+        image.addEventListener('click', function() {
+            lightbox.classList.add('active');
+            lightboxImg.src = this.src;
+            lightboxImg.alt = this.alt;
+            document.body.style.overflow = 'hidden'; // Prevent background scrolling
         });
     });
-
-    // Close modal handlers
-    function closeModal() {
-        modal.classList.remove('active');
-        document.body.style.overflow = 'auto';
+    
+    // Close lightbox functionality
+    function closeLightbox() {
+        lightbox.classList.remove('active');
+        document.body.style.overflow = 'auto'; // Restore scrolling
     }
-
-    closeBtn.addEventListener('click', closeModal);
-    modal.addEventListener('click', function(e) {
-        if (e.target === modal) {
-            closeModal();
+    
+    // Close on X button click
+    lightboxClose.addEventListener('click', closeLightbox);
+    
+    // Close on background click
+    lightbox.addEventListener('click', function(e) {
+        if (e.target === lightbox) {
+            closeLightbox();
         }
     });
-
-    // Close modal with Escape key
+    
+    // Close on Escape key
     document.addEventListener('keydown', function(e) {
-        if (e.key === 'Escape' && modal.classList.contains('active')) {
-            closeModal();
+        if (e.key === 'Escape' && lightbox.classList.contains('active')) {
+            closeLightbox();
         }
     });
-
-    // Smooth entrance animations
-    const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '50px'
-    };
-
-    const screenshotObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.style.opacity = '1';
-                entry.target.style.transform = 'translateY(0)';
-                screenshotObserver.unobserve(entry.target);
+    
+    // Add smooth scroll for navigation
+    const navLinks = document.querySelectorAll('.nav-links a');
+    navLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            if (this.getAttribute('href').startsWith('#')) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
             }
         });
-    }, observerOptions);
-
-    // Apply animation to screenshot items
-    document.querySelectorAll('.screenshot-item').forEach((item, index) => {
-        item.style.opacity = '0';
-        item.style.transform = 'translateY(50px)';
-        item.style.transition = `opacity 0.6s ease ${index * 0.1}s, transform 0.6s ease ${index * 0.1}s`;
-        screenshotObserver.observe(item);
     });
-
-    // Add loading states for images
-    document.querySelectorAll('.screenshot-item img').forEach(img => {
-        img.addEventListener('load', function() {
-            this.style.opacity = '1';
-        });
-        
-        img.addEventListener('error', function() {
-            this.style.opacity = '0.5';
-            console.log('Failed to load image:', this.src);
-        });
+    
+    // Add loading animation for images
+    const images = document.querySelectorAll('.gallery-image');
+    images.forEach(img => {
+        // Remove the loading animation - just show images normally
+        img.style.opacity = '1';
     });
+    
 });

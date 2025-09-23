@@ -3,240 +3,127 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chronoromancer - Time-Traveling Adult Visual Novel</title>
-    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Age Verification - Chronoromancer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #1a1a2e, #16213e);
+            color: #fff;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .verification-container {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 60px 40px;
+            text-align: center;
+            max-width: 500px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+        
+        .logo {
+            margin-bottom: 30px;
+        }
+        
+        .logo h1 {
+            font-size: 2.5em;
+            color: #ff6b6b;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        
+        .warning-text {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+            line-height: 1.6;
+            color: #e0e0e0;
+        }
+        
+        .warning-text strong {
+            color: #ff6b6b;
+        }
+        
+        .buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            padding: 15px 30px;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.1em;
+            font-weight: bold;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+            min-width: 140px;
+        }
+        
+        .btn-enter {
+            background: linear-gradient(45deg, #ff6b6b, #ff8e53);
+            color: white;
+        }
+        
+        .btn-enter:hover {
+            background: linear-gradient(45deg, #ff5252, #ff7043);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(255, 107, 107, 0.3);
+        }
+        
+        .btn-leave {
+            background: linear-gradient(45deg, #666, #888);
+            color: white;
+        }
+        
+        .btn-leave:hover {
+            background: linear-gradient(45deg, #555, #777);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(102, 102, 102, 0.3);
+        }
+        
+        .disclaimer {
+            margin-top: 30px;
+            font-size: 0.9em;
+            color: #aaa;
+            line-height: 1.4;
+        }
+    </style>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="page-nav">
-        <div class="container">
-            <a href="index.html" class="nav-logo">
-                <img src="assets/images/chronoromancer_title.png" alt="Chronoromancer" class="nav-logo-img">
-            </a>
-            <div class="nav-links">
-                <a href="index.html" class="active">Home</a>
-                <a href="story.html">Story</a>
-                <a href="characters.html">Characters</a>
-                <a href="screenshots.html">Screenshots</a>
-            </div>
+    <div class="verification-container">
+        <div class="logo">
+            <h1>Chronoromancer</h1>
         </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <img src="assets/images/chronoromancer_title.png" alt="Chronoromancer" class="game-logo">
-            <p class="tagline">An epic time-traveling adult sandbox/RPG/visual novel spanning three distinct eras!</p>
-            <p class="subtitle">Master skills across three eras. Build authentic relationships. Save existence itself.</p>
-            <div class="cta-buttons">
-                <a href="https://discord.gg/6ggs8AS6S6" class="btn primary" target="_blank">Join Discord for Updates</a>
-                <a href="#community" class="btn secondary">Join Community</a>
-            </div>
+        
+        <div class="warning-text">
+            <p>This website contains <strong>adult content</strong> including mature themes, sexual content, and material intended for adults only.</p>
+            <br>
+            <p>You must be <strong>18 years or older</strong> to enter this site.</p>
         </div>
-        <div class="hero-characters">
-            <img src="assets/images/Emily.png" alt="Emily" class="character-overlay char1">
-            <img src="assets/images/bella.png" alt="Bella" class="character-overlay char2">
-            <img src="assets/images/Foxy.png" alt="Foxy" class="character-overlay char3">
-            <img src="assets/images/summer.png" alt="Summer" class="character-overlay char4">
-            <img src="assets/images/willow.png" alt="Willow" class="character-overlay char5">
-            <img src="assets/images/nova.png" alt="Nova" class="character-overlay char6">
-            <img src="assets/images/shadow.png" alt="Shadow" class="character-overlay char7">
-            <img src="assets/images/elara.png" alt="Elara" class="character-overlay char8">
-            <img src="assets/images/sashina.png" alt="Sashina" class="character-overlay char9">
-            <img src="assets/images/marina.png" alt="Marina" class="character-overlay char10">
-            <img src="assets/images/rei.png" alt="Rei" class="character-overlay char11">
-            <img src="assets/images/valkyra.png" alt="Valkyra" class="character-overlay char12">
+        
+        <div class="buttons">
+            <a href="main.html" class="btn btn-enter">I am 18 or older</a>
+            <a href="https://www.google.com" class="btn btn-leave">Leave this site</a>
         </div>
-    </section>
-
-    <!-- Features Main -->
-    <section class="features-main">
-        <div class="container">
-            <div class="features-grid">
-                <div class="feature">
-                    <h3>Time Travel That Matters</h3>
-                    <p>Same locations across Present, Medieval, and Future eras. Your actions in one era directly impact the others.</p>
-                </div>
-                <div class="feature">
-                    <h3>11 Different Ways to Play</h3>
-                    <p>Each proficiency completely changes your experience. Scholar, Martial Artist, Computer Expert - all offer unique storylines and opportunities.</p>
-                </div>
-                <div class="feature">
-                    <h3>Authentic Relationships</h3>
-                    <p>Real character development with 50+ NPCs. Adult content serves the story of human connection versus AI convenience.</p>
-                </div>
-                <div class="feature">
-                    <h3>Substantial Gameplay</h3>
-                    <p>Multiple engaging minigames, sophisticated brothel management, dungeon crawler combat, skill progression, and resource management.</p>
-                </div>
-            </div>
+        
+        <div class="disclaimer">
+            <p>By clicking "I am 18 or older" you certify that you are of legal age to view adult content in your jurisdiction and agree to view such material.</p>
         </div>
-    </section>
-
-    <!-- Navigation Links -->
-    <section class="main-navigation">
-        <div class="container">
-            <div class="nav-links-grid">
-                <a href="story.html" class="nav-link-item">
-                    <h3>Story</h3>
-                    <p>Learn about the epic time-traveling adventure</p>
-                </a>
-                <a href="characters.html" class="nav-link-item">
-                    <h3>Meet the NPCs</h3>
-                    <p>Discover the characters you'll encounter</p>
-                </a>
-                <a href="screenshots.html" class="nav-link-item">
-                    <h3>Screenshots</h3>
-                    <p>See the game in action</p>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Era Showcase -->
-    <section class="eras">
-        <div class="container">
-            <h2>Three Eras, One Epic Story</h2>
-            <div class="era-grid">
-                <div class="era-column">
-                    <div class="era-image">
-                        <img src="assets/images/ScreenShots/bedroom.png" alt="Present Era">
-                    </div>
-                    <h3>Present Era</h3>
-                    <p>Your starting point. Build skills, relationships, and wealth while fighting economic pressure and the creeping influence of AI convenience.</p>
-                </div>
-                <div class="era-column">
-                    <div class="era-image">
-                        <img src="assets/images/ScreenShots/shrine.png" alt="Medieval Era">
-                    </div>
-                    <h3>Medieval Era</h3>
-                    <p>Where magic still flows and authentic human connections thrive. Master combat, explore mystical locations, build your fortune.</p>
-                </div>
-                <div class="era-column">
-                    <div class="era-image">
-                        <img src="assets/images/ScreenShots/future.png" alt="Future Era">
-                    </div>
-                    <h3>Future Era</h3>
-                    <p>VOID's dystopian endpoint where AI has replaced human agency. Fight the final battle to save existence itself.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Screenshots Gallery -->
-    <section class="gameplay">
-        <div class="container">
-            <h2>Diverse Gameplay Systems</h2>
-            <div class="screenshot-grid">
-                <div class="screenshot-item">
-                    <img src="assets/images/ScreenShots/battle.png" alt="Combat System">
-                    <h4>Strategic Combat</h4>
-                    <p>Face 200+ enemy variants across dungeons</p>
-                </div>
-                <div class="screenshot-item">
-                    <img src="assets/images/ScreenShots/brothel.png" alt="Brothel Management">
-                    <h4>Business Management</h4>
-                    <p>Sophisticated brothel system with 25 workers</p>
-                </div>
-                <div class="screenshot-item">
-                    <img src="assets/images/ScreenShots/dice.png" alt="Liar's Dice">
-                    <h4>Minigames & Challenges</h4>
-                    <p>Dice, rhythm, and skill-based challenges</p>
-                </div>
-                <div class="screenshot-item">
-                    <img src="assets/images/ScreenShots/dance.png" alt="Dance Minigame">
-                    <h4>Rhythm Challenges</h4>
-                    <p>Musical skill development and entertainment</p>
-                </div>
-                <div class="screenshot-item">
-                    <img src="assets/images/ScreenShots/spacegame.png" alt="Space Combat">
-                    <h4>Future Combat</h4>
-                    <p>Advanced targeting and space battle systems</p>
-                </div>
-                <div class="screenshot-item">
-                    <img src="assets/images/ScreenShots/library.png" alt="Story Scenes">
-                    <h4>Rich Storytelling</h4>
-                    <p>Cinematic scenes with meaningful choices</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Features List -->
-    <section class="features-list">
-        <div class="container">
-            <h2>Features</h2>
-            <div class="features-icons">
-                <div class="feature-item">
-                    <span class="feature-number">65+</span>
-                    <h4>Locations Across Time</h4>
-                </div>
-                <div class="feature-item">
-                    <span class="feature-number">50+</span>
-                    <h4>Characters with Full Storylines</h4>
-                </div>
-                <div class="feature-item">
-                    <span class="feature-number">11</span>
-                    <h4>Unique Proficiency Classes</h4>
-                </div>
-                <div class="feature-item">
-                    <span class="feature-number">★</span>
-                    <h4>Rich Minigame Collection</h4>
-                </div>
-                <div class="feature-item">
-                    <span class="feature-number">3</span>
-                    <h4>Interconnected Eras</h4>
-                </div>
-                <div class="feature-item">
-                    <span class="feature-number">∞</span>
-                    <h4>Meaningful Adult Content</h4>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Community Section -->
-    <section class="community" id="community">
-        <div class="container">
-            <h2>Join the Community</h2>
-            <p class="community-text">Chronoromancer launches October 2025! Join our Discord for development updates and be first to know when it's available.</p>
-            <div class="social-links">
-                <a href="https://discord.gg/6ggs8AS6S6" class="social-link discord" target="_blank">
-                    <img src="assets/images/discord.png" alt="Discord">
-                    <span>Discord</span>
-                </a>
-                <a href="#" class="social-link patreon disabled" title="Available at launch">
-                    <img src="assets/images/patreon.png" alt="Patreon">
-                    <span>Patreon</span>
-                </a>
-                <a href="#" class="social-link subscribestar disabled" title="Available at launch">
-                    <img src="assets/images/subscribestar.png" alt="SubscribeStar">
-                    <span>SubscribeStar</span>
-                </a>
-                <a href="#" class="social-link itch disabled" title="Available at launch">
-                    <img src="assets/images/itch.png" alt="Itch.io">
-                    <span>Itch.io</span>
-                </a>
-                <a href="https://www.reddit.com/r/chronoromancer/" class="social-link reddit" target="_blank">
-                    <img src="assets/images/reddit.png" alt="Reddit">
-                    <span>Reddit</span>
-                </a>
-                <a href="#" class="social-link twitter">
-                    <img src="assets/images/twitter.png" alt="Twitter">
-                    <span>Twitter</span>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 Chronoromancer. An adult visual novel for mature audiences.</p>
-            <p class="development-note">Launching October 2025 - Join Discord for updates!</p>
-        </div>
-    </footer>
-
-    <script src="assets/js/script.js"></script>
+    </div>
 </body>
 </html>
