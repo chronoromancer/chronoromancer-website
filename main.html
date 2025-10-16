@@ -58,8 +58,8 @@
     <!-- Download Section -->
     <section class="download-section">
         <div class="container">
-            <h2>Download v0.1 Beta</h2>
-            <p class="download-text">This is an early beta release. Core systems are functional, but content is still being expanded. Expect incomplete dialogue, narration, and balancing. If you prefer polished builds, wait for a future release.</p>
+            <h2>Download v0.2 - Halloween Update</h2>
+            <p class="download-text">The Haunted Mansion has arrived! Featuring Friday - The Soul Collector, 37 haunted rooms, 21 lost souls, full Jade & Sophie storylines, new animations, dungeon expansion (Lv.15-20), and much more. This is an early beta - expect ongoing polish and content expansion.</p>
             <div class="download-buttons">
                 <a href="https://mega.nz/folder/cmARhbra#x7mNWdlQzqRIAOBaQprByQ" class="btn btn-download" target="_blank">
                     <span class="download-icon">📁</span>
@@ -74,7 +74,16 @@
                     <span>Download from itch.io</span>
                 </a>
             </div>
-            <p class="download-note">Windows build - 3.75 GB | Linux/Mac players may try Wine/Proton</p>
+            <p class="download-note">Windows build - 4.5 GB | <strong>IMPORTANT:</strong> Delete old saves from AppData folder before playing v0.2 (see instructions below) | Linux/Mac players may try Wine/Proton</p>
+            <div class="save-warning">
+                <p><strong>⚠️ v0.2 Save System Notice:</strong> The save system has been rebuilt. Before playing v0.2, you must delete old persistent data:</p>
+                <ul>
+                    <li><strong>Windows:</strong> Delete the folder at <code>C:\Users\[YourName]\AppData\Roaming\RenPy\Chronoromancer</code></li>
+                    <li><strong>Linux:</strong> Delete <code>~/.renpy/Chronoromancer</code></li>
+                    <li><strong>Mac:</strong> Delete <code>~/Library/RenPy/Chronoromancer</code></li>
+                </ul>
+                <p>Press <code>Windows + R</code>, type <code>%appdata%\RenPy</code> and hit Enter to quickly access the folder on Windows.</p>
+            </div>
         </div>
     </section>
 
@@ -168,6 +177,8 @@
         <div class="container">
             <h2>See the Game in Action</h2>
             <div class="screenshot-grid">
+                <img src="assets/images/screen_shots/Friday_1.jpg" alt="Friday - The Soul Collector" class="screenshot-item">
+                <img src="assets/images/screen_shots/Friday_Pose1.jpg" alt="Friday Portrait" class="screenshot-item">
                 <img src="assets/images/screen_shots/dance.jpg" alt="Dance Minigame" class="screenshot-item">
                 <img src="assets/images/screen_shots/demon.jpg" alt="Combat System" class="screenshot-item">
                 <img src="assets/images/screen_shots/vera_dice.jpg" alt="Dice Game" class="screenshot-item">
@@ -205,7 +216,7 @@
                     <img src="assets/images/reddit.png" alt="Reddit">
                     <span>Reddit</span>
                 </a>
-                <a href="#" class="social-link twitter">
+                <a href="https://x.com/Chronoromancer" class="social-link twitter" target="_blank">
                     <img src="assets/images/twitter.png" alt="Twitter">
                     <span>Twitter</span>
                 </a>

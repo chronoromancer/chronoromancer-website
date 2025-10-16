@@ -185,6 +185,120 @@ body {
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
 }
 
+/* Download Section */
+.download-section {
+    padding: 60px 0;
+    background: linear-gradient(135deg, rgba(26, 0, 51, 0.95), rgba(45, 27, 105, 0.85));
+    text-align: center;
+}
+
+.download-section h2 {
+    font-size: 2.5rem;
+    color: #e879f9;
+    margin-bottom: 25px;
+}
+
+.download-text {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #e5e7eb;
+    max-width: 800px;
+    margin: 0 auto 40px;
+}
+
+.download-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+
+.btn-download {
+    background: linear-gradient(135deg, #9333ea, #c084fc);
+    color: white;
+    padding: 18px 35px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 25px rgba(147, 51, 234, 0.3);
+    min-width: 200px;
+}
+
+.btn-download:hover {
+    background: linear-gradient(135deg, #7c3aed, #a855f7);
+    transform: translateY(-3px);
+    box-shadow: 0 12px 35px rgba(147, 51, 234, 0.4);
+}
+
+.download-icon {
+    font-size: 1.3rem;
+}
+
+.download-note {
+    font-size: 0.95rem;
+    color: #c084fc;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+.save-warning {
+    background: rgba(255, 107, 107, 0.15);
+    border: 2px solid rgba(255, 107, 107, 0.4);
+    border-radius: 15px;
+    padding: 25px 30px;
+    margin: 25px auto 0;
+    max-width: 900px;
+    text-align: left;
+}
+
+.save-warning p {
+    color: #fecaca;
+    font-size: 1.05rem;
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+.save-warning p:last-child {
+    margin-bottom: 0;
+}
+
+.save-warning strong {
+    color: #ff6b6b;
+    font-weight: 600;
+}
+
+.save-warning ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 15px 0;
+}
+
+.save-warning ul li {
+    color: #fecaca;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255, 107, 107, 0.2);
+    font-size: 1rem;
+}
+
+.save-warning ul li:last-child {
+    border-bottom: none;
+}
+
+.save-warning code {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 3px 8px;
+    border-radius: 5px;
+    font-family: 'Courier New', monospace;
+    color: #fca5a5;
+    font-size: 0.95rem;
+}
+
 /* Eras Section */
 .eras-showcase {
     padding: 60px 0;
@@ -476,6 +590,21 @@ footer p {
     
     .screenshot-grid {
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+    
+    .download-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .save-warning {
+        padding: 20px;
+        margin: 20px 15px 0;
+    }
+    
+    .save-warning p,
+    .save-warning ul li {
+        font-size: 0.95rem;
     }
     
     .social-links {
