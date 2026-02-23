@@ -567,6 +567,21 @@ footer p {
     font-weight: 600;
 }
 
+.footer-links {
+    margin-top: 10px;
+}
+
+.footer-link {
+    color: #888;
+    text-decoration: none;
+    font-size: 0.85rem;
+    transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+    color: #ff6b9d;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .hero-tagline {
