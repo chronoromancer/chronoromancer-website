@@ -1,0 +1,2521 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="This is a deep-dive technical reference for how worker stats, brothel systems, and the daily report all fit together. If you want a strategic guide for running the brothel, see brothel.md. This doc is for players who want to understand e…"><link rel="icon" type="image/png" href="../assets/images/v2/favicon.png">
+  <link rel="stylesheet" href="../assets/css/style.css"><link rel="stylesheet" href="../assets/css/walkthroughs.css">
+  <title>Brothel Stats &amp; Daily Calculation Reference | Chronoromancer Guides</title></head>
+<body class="guide-page" data-title-en="Brothel Stats &amp; Daily Calculation Reference | Chronoromancer Guides" data-title-zh="青楼属性与每日计算参考 | Chronoromancer 官方攻略">
+  <div class="reading-progress" data-reading-progress></div>
+  <a class="skip-link" href="#content" data-copy-en="Skip to content" data-copy-zh="跳至正文">Skip to content</a>
+  <div class="maturity-bar" data-copy-en="18+ adults-only game · Guides may describe mature game systems" data-copy-zh="18+ 仅限成人游戏 · 攻略可能涉及成人游戏系统">18+ adults-only game · Guides may describe mature game systems</div>
+  <header class="site-header"><div class="container header-inner">
+    <a class="brand" href="../main.html" aria-label="Chronoromancer home"><img src="../assets/images/v2/logo.png" alt="Chronoromancer"></a>
+    <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-label="Open navigation"><span></span><span></span><span></span></button>
+    <nav class="site-nav" data-nav-menu aria-label="Primary navigation">
+      <a href="../main.html" data-i18n="navHome">Home</a>
+      <a href="../story.html" data-i18n="navStory">Story</a>
+      <a href="../characters.html" data-i18n="navCharacters">Characters</a>
+      <a class="is-active" href="../walkthroughs.html" data-i18n="navGuides">Guides</a>
+      <a href="../screenshots.html" data-i18n="navGallery">Gallery</a>
+      <a data-config-link="community.wiki" target="_blank" rel="noopener noreferrer" data-i18n="navWiki">Player Wiki</a>
+      <a href="../main.html#download" data-i18n="navDownload">Download</a>
+      <div class="language-switch" role="group" aria-label="Language"><button type="button" data-language="en" aria-pressed="true">EN</button><button type="button" data-language="zh" aria-pressed="false">简体中文</button></div>
+    </nav>
+  </div></header>
+  <main id="content">
+    <section class="guide-masthead"><div class="container">
+      <nav class="breadcrumb" aria-label="Breadcrumb"><a href="../walkthroughs.html" data-copy-en="Official Guides" data-copy-zh="官方攻略">Official Guides</a><span>/</span><span data-copy-en="Activities &amp; Businesses" data-copy-zh="活动与经营">Activities &amp; Businesses</span></nav>
+      <p class="eyebrow" data-copy-en="Version-matched official guide" data-copy-zh="与当前版本匹配的官方攻略">Version-matched official guide</p>
+      <h1 data-copy-en="Brothel Stats &amp; Daily Calculation Reference" data-copy-zh="青楼属性与每日计算参考">Brothel Stats &amp; Daily Calculation Reference</h1>
+      <div class="guide-meta"><span data-copy-en="Activities &amp; Businesses" data-copy-zh="活动与经营">Activities &amp; Businesses</span><span data-copy-en="Simplified Chinese available" data-copy-zh="简体中文译文已上线">Simplified Chinese available</span><span data-site-version>V0.9.6.0</span></div>
+    </div></section>
+    <div class="container guide-layout">
+      <aside class="guide-sidebar">
+        <a class="back-to-library" href="../walkthroughs.html" data-copy-en="← All guides" data-copy-zh="← 全部攻略">← All guides</a>
+        <div data-lang-panel="en"><h2>On this page</h2><nav class="guide-toc"><a class="toc-level-2" href="#worker-primary-stats--full-breakdown">Worker Primary Stats — Full Breakdown</a><a class="toc-level-3" href="#stamina">Stamina</a><a class="toc-level-3" href="#intelligence">Intelligence</a><a class="toc-level-3" href="#dexterity">Dexterity</a><a class="toc-level-3" href="#ability">Ability</a><a class="toc-level-3" href="#appearance">Appearance</a><a class="toc-level-3" href="#charisma">Charisma</a><a class="toc-level-3" href="#fame-derived-stat">Fame (derived stat)</a><a class="toc-level-3" href="#how-to-train-each-stat">How to Train Each Stat</a><a class="toc-level-2" href="#strategic-stat-priorities">Strategic Stat Priorities</a><a class="toc-level-2" href="#the-daily-calculation--full-pipeline">The Daily Calculation — Full Pipeline</a><a class="toc-level-3" href="#pre-worker-setup">Pre-Worker Setup</a><a class="toc-level-3" href="#per-worker-calculation-each-working-worker">Per-Worker Calculation (each working worker)</a><a class="toc-level-3" href="#brothel-wide-bonuses-after-all-workers-processed">Brothel-Wide Bonuses (after all workers processed)</a><a class="toc-level-3" href="#tax--upkeep">Tax &amp; Upkeep</a><a class="toc-level-3" href="#cleanliness-calculation">Cleanliness Calculation</a><a class="toc-level-3" href="#reputation-bonus-pipeline">Reputation Bonus Pipeline</a><a class="toc-level-3" href="#final-income-adjustments">Final Income Adjustments</a><a class="toc-level-3" href="#daily-report-display">Daily Report Display</a><a class="toc-level-2" href="#cleanliness-tiers-income--reputation-effects">Cleanliness Tiers (Income &amp; Reputation Effects)</a><a class="toc-level-2" href="#reputation-levels-20-tiers">Reputation Levels (20 tiers)</a><a class="toc-level-2" href="#mess-generation-per-worker">Mess Generation (Per Worker)</a><a class="toc-level-2" href="#maid-cleaning-system">Maid Cleaning System</a><a class="toc-level-3" href="#per-maid-base-cleaning-by-level">Per-Maid Base Cleaning by Level</a><a class="toc-level-3" href="#maid-total-cleaning-formula">Maid Total Cleaning Formula</a><a class="toc-level-3" href="#daily-cleanliness-resolution">Daily Cleanliness Resolution</a><a class="toc-level-2" href="#daily-stress-math">Daily Stress Math</a><a class="toc-level-2" href="#health--sick-rest">Health &amp; Sick Rest</a><a class="toc-level-2" href="#refuse-to-work-strike">Refuse-to-Work (Strike)</a><a class="toc-level-2" href="#high-loyalty-bonus">High-Loyalty Bonus</a><a class="toc-level-2" href="#income-bonus-pipeline-stacking-order">Income Bonus Pipeline (Stacking Order)</a><a class="toc-level-3" href="#theoretical-maximum-daily-bonuses">Theoretical Maximum Daily Bonuses</a><a class="toc-level-2" href="#daily-event-success-calculation">Daily Event Success Calculation</a><a class="toc-level-3" href="#condition-types">Condition Types</a><a class="toc-level-3" href="#modifiers-applied-after-base-calculation">Modifiers Applied After Base Calculation</a><a class="toc-level-3" href="#final-clamp--roll">Final Clamp &amp; Roll</a><a class="toc-level-3" href="#worked-examples">Worked Examples</a><a class="toc-level-3" href="#strategic-implications">Strategic Implications</a><a class="toc-level-2" href="#worker-stat-caps">Worker Stat Caps</a><a class="toc-level-2" href="#reputation-bonus-pipeline-stacking-order">Reputation Bonus Pipeline (Stacking Order)</a><a class="toc-level-2" href="#specialty-room-apprentice-effects-quick-reference">Specialty Room Apprentice Effects (Quick Reference)</a><a class="toc-level-2" href="#bedroom-level-effects-per-worker">Bedroom Level Effects (Per Worker)</a><a class="toc-level-2" href="#clothing-level-effects-per-worker">Clothing Level Effects (Per Worker)</a><a class="toc-level-2" href="#house-upgrade-levels">House Upgrade Levels</a><a class="toc-level-2" href="#a-worked-example--daily-income-for-one-worker">A Worked Example — Daily Income for One Worker</a><a class="toc-level-2" href="#summary-what-to-optimize-first">Summary: What to Optimize First</a></nav></div>
+        <div data-lang-panel="zh" hidden><h2>本页目录</h2><nav class="guide-toc"><a class="toc-level-2" href="#zh-worker-primary-stats--full-breakdown">员工主要属性——完整解析</a><a class="toc-level-3" href="#zh-stamina">耐力</a><a class="toc-level-3" href="#zh-intelligence">智力</a><a class="toc-level-3" href="#zh-dexterity">灵巧</a><a class="toc-level-3" href="#zh-ability">能力</a><a class="toc-level-3" href="#zh-appearance">外貌</a><a class="toc-level-3" href="#zh-charisma">魅力</a><a class="toc-level-3" href="#zh-fame-derived-stat">名气（衍生属性）</a><a class="toc-level-3" href="#zh-how-to-train-each-stat">各属性的训练方式</a><a class="toc-level-2" href="#zh-strategic-stat-priorities">属性培养策略优先级</a><a class="toc-level-2" href="#zh-the-daily-calculation--full-pipeline">每日计算——完整流程</a><a class="toc-level-3" href="#zh-pre-worker-setup">员工计算前的准备</a><a class="toc-level-3" href="#zh-per-worker-calculation-each-working-worker">单名员工计算（每名工作员工）</a><a class="toc-level-3" href="#zh-brothel-wide-bonuses-after-all-workers-processed">青楼整体加成（处理所有员工后）</a><a class="toc-level-3" href="#zh-tax--upkeep">税款与维护费</a><a class="toc-level-3" href="#zh-cleanliness-calculation">清洁度计算</a><a class="toc-level-3" href="#zh-reputation-bonus-pipeline">声望加成流程</a><a class="toc-level-3" href="#zh-final-income-adjustments">最终收入调整</a><a class="toc-level-3" href="#zh-daily-report-display">每日报告显示</a><a class="toc-level-2" href="#zh-cleanliness-tiers-income--reputation-effects">清洁度层级（收入与声望效果）</a><a class="toc-level-2" href="#zh-reputation-levels-20-tiers">声望等级（20 级）</a><a class="toc-level-2" href="#zh-mess-generation-per-worker">脏乱生成（每名员工）</a><a class="toc-level-2" href="#zh-maid-cleaning-system">女仆清洁系统</a><a class="toc-level-3" href="#zh-per-maid-base-cleaning-by-level">各等级女仆基础清洁力</a><a class="toc-level-3" href="#zh-maid-total-cleaning-formula">女仆总清洁力公式</a><a class="toc-level-3" href="#zh-daily-cleanliness-resolution">每日清洁度结算</a><a class="toc-level-2" href="#zh-daily-stress-math">每日压力计算</a><a class="toc-level-2" href="#zh-health--sick-rest">生命与病假</a><a class="toc-level-2" href="#zh-refuse-to-work-strike">拒绝工作（罢工）</a><a class="toc-level-2" href="#zh-high-loyalty-bonus">高忠诚度奖励</a><a class="toc-level-2" href="#zh-income-bonus-pipeline-stacking-order">收入加成流程（叠加顺序）</a><a class="toc-level-3" href="#zh-theoretical-maximum-daily-bonuses">理论最高每日加成</a><a class="toc-level-2" href="#zh-daily-event-success-calculation">每日事件成功计算</a><a class="toc-level-3" href="#zh-condition-types">条件类型</a><a class="toc-level-3" href="#zh-modifiers-applied-after-base-calculation">基础计算后的修正</a><a class="toc-level-3" href="#zh-final-clamp--roll">最终限制与判定</a><a class="toc-level-3" href="#zh-worked-examples">计算示例</a><a class="toc-level-3" href="#zh-strategic-implications">策略意义</a><a class="toc-level-2" href="#zh-worker-stat-caps">员工属性上限</a><a class="toc-level-2" href="#zh-reputation-bonus-pipeline-stacking-order">声望加成流程（叠加顺序）</a><a class="toc-level-2" href="#zh-specialty-room-apprentice-effects-quick-reference">专用房间学徒效果（速查）</a><a class="toc-level-2" href="#zh-bedroom-level-effects-per-worker">卧室等级效果（每名员工）</a><a class="toc-level-2" href="#zh-clothing-level-effects-per-worker">服装等级效果（每名员工）</a><a class="toc-level-2" href="#zh-house-upgrade-levels">场所升级等级</a><a class="toc-level-2" href="#zh-a-worked-example--daily-income-for-one-worker">计算示例——一名员工的每日收入</a><a class="toc-level-2" href="#zh-summary-what-to-optimize-first">总结：优先优化什么</a></nav></div>
+      </aside>
+      <article class="guide-content">
+        <div class="spoiler-notice"><strong data-copy-en="Guide notice" data-copy-zh="攻略提示">Guide notice</strong><span data-copy-en="This page contains gameplay and story spoilers and may describe mature systems." data-copy-zh="本页包含玩法与剧情剧透，并可能涉及成人游戏系统。">This page contains gameplay and story spoilers and may describe mature systems.</span></div>
+        <div class="markdown-body" data-lang-panel="en">
+<p>This is a deep-dive technical reference for how worker stats, brothel systems, and the daily report all fit together. If you want a strategic guide for running the brothel, see <code>brothel.md</code>. This doc is for players who want to understand exactly <strong>why</strong> their numbers are what they are.</p>
+<hr/>
+<h2 id="worker-primary-stats--full-breakdown">Worker Primary Stats — Full Breakdown</h2>
+<p>Each worker has six primary stats (0–100) plus Fame as a derived stat. Every stat plays a role in the daily calculation, and ignoring any of them costs you opportunities.</p>
+<h3 id="stamina">Stamina</h3>
+<p><strong>Primary role: Endurance — stress resistance and health pool.</strong></p>
+<p>Each working day, a roll of <code>random(1-100) ≤ Stamina</code> succeeds → <strong>−2 daily stress</strong>. Higher Stamina = more frequent stress reduction = fewer days lost to exhaustion.</p>
+<p>Stamina also defines max health:</p>
+<pre><code>max_health = max(100, Stamina × 10)
+</code></pre>
+<p>Boosted to <strong>×1.5</strong> if she has the <strong>Iron Constitution</strong> skill. So a worker with 50 Stamina and Iron Constitution has a 750 health pool.</p>
+<p>Stamina is the gating stat for many "physical/endurance" daily events:</p>
+<ul>
+<li><strong>Festival Celebration</strong> (general)</li>
+<li><strong>Severe Storm</strong> (general)</li>
+<li><strong>Plumbing Disaster</strong> (general, base 30%)</li>
+<li><strong>Kitchen Fire</strong> (general, base 40%)</li>
+<li><strong>Mudslide</strong> (general)</li>
+<li><strong>Heat Wave</strong> (general, base 35%)</li>
+<li><strong>All-Night Gala</strong> (general)</li>
+<li><strong>Double Booking</strong> (general)</li>
+<li><strong>Sickly Patron</strong> (brothel, base 20%)</li>
+<li><strong>Endurance Challenge</strong> (brothel, dual-stat with ability)</li>
+<li><strong>Insatiable Merchant</strong> (brothel, dual-stat with ability)</li>
+<li><strong>Rough Customer</strong> (brothel, dual-stat with intelligence)</li>
+<li><strong>Midnight Summons</strong> (brothel, dual-stat with charisma)</li>
+<li><strong>Twin Special Request</strong> (brothel, dual-stat with dexterity)</li>
+</ul>
+<h3 id="intelligence">Intelligence</h3>
+<p><strong>Primary role: EXP doubler.</strong></p>
+<p>Each working day, after base EXP is calculated (= clients served), a roll of <code>random(1-100) ≤ Intelligence</code> succeeds → <strong>EXP × 2</strong> that day. Higher Intelligence = faster leveling.</p>
+<p>Intelligence also boosts <strong>Ballroom training EXP</strong> when a worker is being refined under Esperanza:</p>
+<pre><code>ballroom_exp = random(60, 100) + random(1, max(1, Intelligence))
+</code></pre>
+<p>Intelligence is the gating stat for "puzzle/problem-solving" daily events:</p>
+<ul>
+<li><strong>Merchant Request</strong> (general, base 25%)</li>
+<li><strong>Rat Infestation</strong> (general, base 25%)</li>
+<li><strong>Building Collapse</strong> (general, base 30%)</li>
+<li><strong>Counterfeit Scheme</strong> (general, base 25%)</li>
+<li><strong>Client's Riddle</strong> (general, base 20%)</li>
+<li><strong>Supply Shortage</strong> (general)</li>
+<li><strong>Wealthy Collector</strong> (general, dual with charisma)</li>
+<li><strong>Blackmail Letter</strong> (general)</li>
+<li><strong>Exotic Request</strong> (brothel, base 20%)</li>
+<li><strong>Demanding Duchess</strong> (brothel, dual with ability)</li>
+<li><strong>Secret Affair</strong> (brothel, dual with charisma)</li>
+<li><strong>Discreet Meeting</strong> (hotel, dual with charisma)</li>
+<li><strong>Rough Customer</strong> (brothel, dual with stamina)</li>
+<li><strong>Priest's Confession</strong> (brothel, dual with charisma)</li>
+</ul>
+<h3 id="dexterity">Dexterity</h3>
+<p><strong>Primary role: Performance/agility event gate.</strong></p>
+<p>Dexterity has no direct effect on daily income, EXP, or stress on its own — but it is <strong>actively rolled by 10+ daily events</strong>. A worker with 80+ Dexterity will dominate the establishment's "performance" event slate; a worker with 5 Dex will fail every one of these events.</p>
+<p>Dexterity-driven events:</p>
+<ul>
+<li><strong>Rooftop Chase</strong> (general, base 20%) — Success: +25% income, +10 EXP, +1 fame</li>
+<li><strong>Acrobatic Show</strong> (brothel, base 15%) — Success: +15 EXP, +1 fame, ×1.5 reputation</li>
+<li><strong>Dance Competition</strong> (brothel, base 20%) — Success: ×2.0 reputation, +1 fame, +12 EXP</li>
+<li><strong>Oil Wrestling</strong> (brothel, base 20%) — Success: +60% income, +10 EXP, +1 fame</li>
+<li><strong>Twin Special Request</strong> (brothel, dual with stamina)</li>
+<li><strong>Voyeur's Gallery</strong> (brothel, dual with appearance)</li>
+<li><strong>Bachelorette Party</strong> (brothel, dual with charisma)</li>
+<li><strong>Twin Coordination</strong> (hotel, dual with stamina)</li>
+<li><strong>Private Performance</strong> (hotel, dual with appearance)</li>
+<li><strong>Wedding Party</strong> (hotel, dual with charisma)</li>
+</ul>
+<p>Dexterity also feeds into the <strong>daily fame roll</strong>:</p>
+<pre><code>fame_chance = average(stamina, intelligence, dexterity, ability, appearance, charisma)
+</code></pre>
+<p>A <code>1–100 ≤ stat_average</code> roll grants +1 fame that day. So Dex contributes 1/6 to daily fame growth.</p>
+<p><strong>How to raise Dexterity:</strong></p>
+<ul>
+<li><strong>Acrobatics skill</strong> — +20 Dexterity for all checks</li>
+<li><strong>Special 1 training</strong> — +1 Dexterity per session</li>
+<li><strong>Time consumable gift</strong> — +1 Dexterity per gift</li>
+<li><strong>Special 2/3 training</strong> — +1 to two random primary stats (chance to hit Dex)</li>
+<li><strong>Pleasure Arts skill</strong> — +1 to a random primary stat per training session</li>
+</ul>
+<h3 id="ability">Ability</h3>
+<p><strong>Primary role: The income engine.</strong></p>
+<p>Ability is the single highest-impact stat for daily income. It drives two separate calculations:</p>
+<p><strong>1. Daily client count:</strong></p>
+<pre><code>clients_today = random(max(1, Ability÷10 − 2), Ability÷10 + 2)
+</code></pre>
+<ul>
+<li>Ability 10 → 1–3 clients</li>
+<li>Ability 50 → 3–7 clients</li>
+<li>Ability 100 → 8–12 clients</li>
+</ul>
+<p><strong>2. Bonus pay chance:</strong></p>
+<pre><code>bonus_chance = (Ability ÷ 2) + clients_today
+</code></pre>
+<p>A roll of <code>1–100 ≤ bonus_chance</code> succeeds → <strong>daily pay × 2</strong>. This is the single largest income lever in the game. With 100 Ability and 8 clients, the bonus chance is 58 — every other day she'll roll a doubled paycheck.</p>
+<p>Ability gates "skill-test" daily events:</p>
+<ul>
+<li><strong>Connoisseur's Test</strong> (brothel, base 20%) — Success: +100% income, ×1.5 reputation, +1 fame</li>
+<li><strong>Impossible Request</strong> (brothel, base 15%) — Success: +80% income, +20 EXP</li>
+<li><strong>Demanding Duchess</strong> (brothel, dual with intelligence)</li>
+<li><strong>Insatiable Merchant</strong> (brothel, dual with stamina)</li>
+<li><strong>Wedding Night Tutorial</strong> (brothel, dual with charisma)</li>
+<li><strong>Comparison Shopper</strong> (brothel, dual with charisma)</li>
+<li><strong>Anniversary Surprise</strong> (brothel, dual with charisma)</li>
+<li><strong>Endurance Challenge</strong> (brothel, dual with stamina)</li>
+<li><strong>Obsessed Regular</strong> (brothel, dual with appearance)</li>
+<li><strong>All Worker Request</strong> (brothel, dual with appearance)</li>
+<li><strong>Tireless Merchant</strong> (hotel, dual with stamina)</li>
+</ul>
+<h3 id="appearance">Appearance</h3>
+<p><strong>Primary role: Half of the income range formula.</strong></p>
+<p>Workers earn variable income per client based on a paired Appearance/Charisma calculation:</p>
+<pre><code>base_min_income = min(Appearance, Charisma) ÷ 2
+base_max_income = max(Appearance, Charisma) × 2
+daily_pay = random(min_income, max_income)
+</code></pre>
+<p>Notice the use of <code>min()</code> and <code>max()</code> — Appearance and Charisma work as a <strong>pair</strong>. Stacking only one without the other keeps the income range narrow. Stacking <strong>both</strong> explodes the range upward.</p>
+<p>Example:</p>
+<ul>
+<li>Appearance 50, Charisma 10 → range $5–$100</li>
+<li>Appearance 50, Charisma 50 → range $25–$100</li>
+<li>Appearance 100, Charisma 100 → range $50–$200</li>
+</ul>
+<p>Appearance gates "beauty/visual" daily events:</p>
+<ul>
+<li><strong>Portrait Commission</strong> (general, base 25%) — Success: +30% income, +2 fame</li>
+<li><strong>Beauty Pageant</strong> (general, base 20%) — Success: +50% income, ×2.0 reputation, +1 fame</li>
+<li><strong>Foreign Dignitary</strong> (general, base 25%) — Success: +125% income, ×1.5 reputation</li>
+<li><strong>Voyeur's Gallery</strong> (brothel, dual with dexterity)</li>
+<li><strong>Exotic Foreigner</strong> (brothel, dual with charisma)</li>
+<li><strong>Obsessed Regular</strong> (brothel, dual with ability)</li>
+<li><strong>All Worker Request</strong> (brothel, dual with ability)</li>
+<li><strong>Shy Noble's First</strong> (brothel, dual with charisma)</li>
+<li><strong>Private Performance</strong> (hotel, dual with dexterity)</li>
+<li><strong>Foreign Traveler</strong> (hotel, dual with charisma)</li>
+</ul>
+<h3 id="charisma">Charisma</h3>
+<p><strong>Primary role: Other half of the income range formula AND drives Praise relationship gain.</strong></p>
+<p>Charisma pairs with Appearance for the income range (see above).</p>
+<p>It also directly drives the <strong>Praise</strong> option in worker visits:</p>
+<pre><code>praise_relationship_gain = 2 + round(Charisma ÷ 5)
+</code></pre>
+<ul>
+<li>Charisma 10 → +4 relationship per Praise</li>
+<li>Charisma 50 → +12 relationship per Praise</li>
+<li>Charisma 100 → +22 relationship per Praise</li>
+</ul>
+<p>Charisma gates "social/personality" daily events:</p>
+<ul>
+<li><strong>Royal Delegation</strong> (general, highest_stat) — Success: ×2.5 income, ×2.0 reputation</li>
+<li><strong>Traveling Bard</strong> (general)</li>
+<li><strong>Food Critic Visit</strong> (general, dual with intelligence)</li>
+<li><strong>Wealthy Collector</strong> (general, dual with intelligence)</li>
+<li><strong>Merchant Celebration</strong> (general)</li>
+<li><strong>Angry Mob</strong> (general)</li>
+<li><strong>Noble Client</strong> (brothel, base 20%)</li>
+<li><strong>Jealous Client</strong> (brothel, base 30%)</li>
+<li><strong>Rival Poacher</strong> (brothel, base 30%)</li>
+<li><strong>Grieving Noble</strong> (brothel, base 25%)</li>
+<li><strong>Shy Noble's First</strong> (brothel, dual with appearance)</li>
+<li><strong>Priest's Confession</strong> (brothel, dual with intelligence)</li>
+<li><strong>Secret Affair</strong> (brothel, dual with intelligence)</li>
+<li><strong>Anniversary Surprise</strong> (brothel, dual with ability)</li>
+<li><strong>Comparison Shopper</strong> (brothel, dual with ability)</li>
+<li><strong>Wedding Night Tutorial</strong> (brothel, dual with ability)</li>
+<li><strong>Bachelorette Party</strong> (brothel, dual with dexterity)</li>
+<li><strong>Midnight Summons</strong> (brothel, dual with stamina)</li>
+<li><strong>Exotic Foreigner</strong> (brothel, dual with appearance)</li>
+<li><strong>Discreet Meeting</strong> (hotel, dual with intelligence)</li>
+<li><strong>Wedding Party</strong> (hotel, dual with dexterity)</li>
+</ul>
+<h3 id="fame-derived-stat">Fame (derived stat)</h3>
+<p><strong>Primary role: Direct contribution to daily reputation gain.</strong></p>
+<p>Fame isn't trained directly — it grows passively. Each day, a roll of <code>random(1-100) ≤ stat_average</code> (average of all 6 primary stats) succeeds → <strong>+1 fame</strong>. Higher overall stats mean more frequent fame growth.</p>
+<p>In the daily calculation, fame is added to the brothel's reputation gain pool:</p>
+<pre><code>total_reputation_gain += worker.fame  (for each working worker, every day)
+</code></pre>
+<p>So a worker with 50 fame contributes +50 to that day's reputation pool — every single day she works. Long-running workers accumulate massive fame over time.</p>
+<p>Fame is also rewarded as a <strong>one-time bonus</strong> by many high-tier daily events: Connoisseur's Test, Beauty Pageant, Acrobatic Show, Royal Delegation, Portrait Commission, Dance Competition, Rooftop Chase, Oil Wrestling, Voyeur's Gallery, Foreign Dignitary, and many more.</p>
+<h3 id="how-to-train-each-stat">How to Train Each Stat</h3>
+<div class="guide-table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th>Method</th>
+<th>What it Raises</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Worker Visit Training (Lvl 1, Kissing)</td>
+<td>+1 Charisma</td>
+<td>Per session</td>
+</tr>
+<tr>
+<td>Worker Visit Training (Lvl 2, Oral)</td>
+<td>+1 Intelligence</td>
+<td></td>
+</tr>
+<tr>
+<td>Worker Visit Training (Lvl 3, Missionary)</td>
+<td>+1 Appearance</td>
+<td></td>
+</tr>
+<tr>
+<td>Worker Visit Training (Lvl 4, Cowgirl)</td>
+<td>+1 Stamina</td>
+<td></td>
+</tr>
+<tr>
+<td>Worker Visit Training (Lvl 5, Doggie)</td>
+<td>+1 Ability</td>
+<td></td>
+</tr>
+<tr>
+<td>Worker Visit Training (Lvl 6, Special 1)</td>
+<td>+1 Dexterity</td>
+<td></td>
+</tr>
+<tr>
+<td>Worker Visit Training (Lvl 7+8, Special 2/3)</td>
+<td>+1 to 2 random primary stats</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Pleasure Arts</strong> (player skill)</td>
+<td>+1 random primary stat</td>
+<td>Per training session</td>
+</tr>
+<tr>
+<td>Power gift</td>
+<td>+1 Stamina</td>
+<td>One-time per gift</td>
+</tr>
+<tr>
+<td>Focus gift</td>
+<td>+1 Intelligence</td>
+<td></td>
+</tr>
+<tr>
+<td>Time gift</td>
+<td>+1 Dexterity</td>
+<td></td>
+</tr>
+<tr>
+<td>Desire gift</td>
+<td>+1 Ability</td>
+<td></td>
+</tr>
+<tr>
+<td>Cologne gift</td>
+<td>+1 Appearance</td>
+<td></td>
+</tr>
+<tr>
+<td>Luck gift</td>
+<td>+1 random primary stat</td>
+<td></td>
+</tr>
+<tr>
+<td>Antidote gift</td>
+<td>Full heal + clear stress</td>
+<td>Doesn't raise primaries</td>
+</tr>
+<tr>
+<td>Shield gift</td>
+<td>+1 Loyalty</td>
+<td>Doesn't raise primaries</td>
+</tr>
+</tbody>
+</table></div>
+<hr/>
+<h2 id="strategic-stat-priorities">Strategic Stat Priorities</h2>
+<p><strong>Highest income leverage:</strong></p>
+<ol>
+<li><strong>Ability</strong> — drives client count AND bonus pay chance (single biggest income lever)</li>
+<li><strong>Appearance + Charisma together</strong> — defines income range (must stack both, not one)</li>
+</ol>
+<p><strong>Survival/uptime leverage:</strong>
+3. <strong>Stamina</strong> — fewer rest days, larger health pool, gates many events
+4. <strong>Intelligence</strong> — doubles EXP (compound growth), gates many events</p>
+<p><strong>Event coverage:</strong>
+5. <strong>Dexterity</strong> — gates 10+ events, including some of the best reputation/fame rewards</p>
+<p><strong>Don't actively train Fame</strong> — it grows passively through stat-average rolls and high-tier events. Just stack the primaries and Fame will follow.</p>
+<hr/>
+<h2 id="the-daily-calculation--full-pipeline">The Daily Calculation — Full Pipeline</h2>
+<p>When time advances and a brothel day is processed, the game runs through ~30 sequential steps for each working worker, plus brothel-wide bonuses. Here's the full order.</p>
+<h3 id="pre-worker-setup">Pre-Worker Setup</h3>
+<ol>
+<li>Initialize all worker bedroom levels (any new workers default to Level 1).</li>
+<li>Apply migration corrections to baseline stats if not already migrated.</li>
+<li>Read service-room states: bar, infirmary, security, kitchen, secret room, master bedroom, ballroom, VIP lounge.</li>
+<li>Determine apprentice counts for each room.</li>
+<li>Identify the Ballroom trainee (if any) — she's removed from the client roster for the day.</li>
+<li>Build the non-resting worker list (excludes resting + ballroom trainee).</li>
+<li><strong>Process the Daily Event</strong> — pre-rolls success/failure and stores the modifiers (income multiplier, reputation multiplier, per-worker stress/exp/health/fame/loyalty changes).</li>
+<li>Roll Kitchen apprentice random clients (one extra random client per kitchen apprentice, distributed among working workers).</li>
+<li>Roll Promotion Level random clients (<code>random(0, promotion_level)</code> extra clients distributed similarly).</li>
+</ol>
+<h3 id="per-worker-calculation-each-working-worker">Per-Worker Calculation (each working worker)</h3>
+<p>For each active worker, in order:</p>
+<ol start="10">
+<li><strong>Loyalty decay catch-up</strong> — for visitable workers only. Walks day-by-day from her last calculation through today, rolling decay each missed day.</li>
+<li><strong>Refuse-to-work check</strong> — if loyalty &lt; 30 and refuse roll passes, she earns $0 and a flavor message fires. Skip to next worker.</li>
+<li><strong>Read base stats</strong> — Ability, Appearance, Charisma, Stamina, plus any worker-item stat bonuses to Appearance and Charisma.</li>
+<li><strong>Roll daily clients:</strong><pre><code>clients = random(max(1, Ability÷10 − 2), Ability÷10 + 2)
+</code></pre>
+</li>
+<li><strong>Apply room level bonuses to client count:</strong>
+<ul>
+<li>Level 2: +0 clients</li>
+<li>Level 3: +1 client</li>
+<li>Level 4: +2 clients</li>
+<li>Level 5: +3 clients</li>
+</ul>
+</li>
+<li><strong>Apply Bar apprentice bonus</strong> — if she's a bar apprentice, +2 clients.</li>
+<li><strong>Apply VIP Lounge bonus</strong> — if she's Vixen or a VIP apprentice, +1 client.</li>
+<li><strong>Apply Kitchen apprentice bonus</strong> — if she was randomly selected, +1 client (or more if multiple apprentices).</li>
+<li><strong>Apply Promotion Level bonus</strong> — if she was randomly selected, extra clients.</li>
+<li><strong>Apply worker item client bonus</strong> — if any equipped item grants extra clients.</li>
+<li><strong>Calculate base income range:</strong><pre><code>base_min = min(Appearance, Charisma) ÷ 2
+base_max = max(Appearance, Charisma) × 2
+</code></pre>
+</li>
+<li><strong>Apply cleanliness multipliers</strong> to income range (see Cleanliness Tiers below).</li>
+<li><strong>Apply clothing level bonuses</strong> to income range:
+<ul>
+<li>L2: max ×1.20</li>
+<li>L3: min ×1.10, max ×1.30</li>
+<li>L4: min ×1.20, max ×1.40</li>
+<li>L5: min ×1.30, max ×1.50</li>
+</ul>
+</li>
+<li><strong>Apply room level multiplier</strong> to max income:
+<ul>
+<li>L2: ×1.10</li>
+<li>L3: ×1.25</li>
+<li>L4: ×1.40</li>
+<li>L5: ×1.60</li>
+</ul>
+</li>
+<li><strong>Roll daily pay</strong> within the final range: <code>random(min_income, max_income)</code>.</li>
+<li><strong>Bonus pay roll:</strong><pre><code>bonus_chance = (Ability ÷ 2) + clients_today
+if random(1, 100) ≤ bonus_chance:
+    daily_pay × 2
+</code></pre>
+</li>
+<li><strong>Apply Daily Event modifiers</strong> (per-worker effects: stress, EXP, health, fame, loyalty changes; possibly worker-specific gold multiplier).</li>
+<li><strong>Apply worker item income bonuses</strong> (% bonus, then flat bonus added).</li>
+<li><strong>Calculate daily stress:</strong>
+<ul>
+<li>Base 10 (or 7 if Willow active in Nurse's Room)</li>
+<li>Stamina roll: <code>if random(1-100) ≤ Stamina, −2 stress</code></li>
+<li>Excess client penalty: <code>+1 stress per client above 2</code></li>
+<li>Subtract Infirmary apprentice count (each apprentice = −1 stress)</li>
+<li>Subtract worker item stress reduction</li>
+<li>Floor at 0</li>
+<li>Master Bedroom apprentices: stress set to 0 (immune)</li>
+</ul>
+</li>
+<li><strong>Apply stress to worker</strong> (capped 0–100).</li>
+<li><strong>Calculate base EXP:</strong>
+<ul>
+<li>Base = clients_today</li>
+<li>Intelligence roll: <code>if random(1-100) ≤ Intelligence, EXP × 2</code></li>
+<li>Add Secret Room apprentice count (each apprentice = +1 EXP)</li>
+<li>Add worker item flat EXP bonus</li>
+<li>Apply worker item EXP percentage bonus</li>
+<li>Master Bedroom apprentices: EXP × 1.5</li>
+</ul>
+</li>
+<li><strong>Apply Daily Event EXP</strong> (added to total).</li>
+<li><strong>Roll fame growth:</strong><pre><code>stat_average = (Ability + Appearance + Charisma + Stamina + Intelligence + Dexterity) ÷ 6
+if random(1-100) ≤ stat_average: fame += 1
+</code></pre>
+</li>
+<li><strong>Add clothing reputation bonus + room reputation bonus + worker item flat reputation</strong> to fame_gained for the day.</li>
+<li><strong>High-loyalty bonus check</strong> — for visitable workers only, if loyalty &gt; 80 and bonus roll passes:
+<ul>
+<li><strong>Extra Clients:</strong> +1 or +2 clients (each rolls its own pay)</li>
+<li><strong>Income Boost:</strong> daily_pay × 1.25</li>
+<li><strong>Reputation Boost:</strong> +2 fame today</li>
+</ul>
+</li>
+<li><strong>Rest checks (after work):</strong>
+<ul>
+<li>If stress &gt; 75: enter 2-day exhausted rest</li>
+<li>Else if health ≤ 0: enter sick rest (4 days, or 3 if Willow active)</li>
+</ul>
+</li>
+<li><strong>VIP Lounge bonus</strong> (Vixen + apprentices): daily_pay × 2 (the bonus is tracked separately).</li>
+<li><strong>Add to brothel-wide totals:</strong> <code>total_daily_income += daily_pay</code>, <code>total_reputation_gain += worker.fame</code>.</li>
+<li><strong>Calculate worker mess:</strong><pre><code>base_mess = clients_today
+mess_roll = random(1, 100)
+if mess_roll ≤ 10 + clients_today: mess × 2.0  (200%)
+elif mess_roll ≤ 20 + clients_today: mess × 1.5  (150%)
+elif mess_roll ≤ 30 + clients_today: mess × 1.25 (125%)
+else: mess × 1.0  (100%)
+</code></pre>
+</li>
+<li><strong>VIP Lounge mess penalty</strong> (Vixen + apprentices): worker_mess × 2.</li>
+</ol>
+<h3 id="brothel-wide-bonuses-after-all-workers-processed">Brothel-Wide Bonuses (after all workers processed)</h3>
+<ol start="40">
+<li><strong>Reputation income bonus:</strong> <code>+5% per reputation level above 1</code> (so Godlike rep = +95%).</li>
+<li><strong>Christmas Wreath bonus:</strong> +5% income if owned. The current calculation does not require the Christmas toggle to be active.</li>
+<li><strong>Patreon Master bonus:</strong> +5% income if active.</li>
+<li><strong>Elara's Office apprentice bonus:</strong> +5% income per apprentice.</li>
+<li><strong>Bar bonus:</strong> +5% income for ownership + 1% per bar apprentice.</li>
+<li><strong>Decor Level bonus:</strong> <code>random(0, decor_level × 5)%</code> income.</li>
+</ol>
+<h3 id="tax--upkeep">Tax &amp; Upkeep</h3>
+<ol start="46">
+<li><strong>15% tax</strong> deducted from total income (after all bonuses).</li>
+<li><strong>Daily upkeep</strong> subtracted:<pre><code>upkeep = $60 base
+       + $20 × Master Bedroom level
+       + $20 × (sum of all worker bedroom levels)
+       + $20 × (sum of Bar, Maids' Quarters, Nurse's Room,
+                Security, Exterior, Dungeon levels)
+</code></pre>
+</li>
+<li><strong>Net profit calculated:</strong> <code>income − tax − upkeep</code>. If negative, set to 0 (Elara's protection).</li>
+<li><strong>Ballroom fee:</strong> if a ballroom trainee was assigned, deduct 15% of net profit as Esperanza's fee.</li>
+</ol>
+<h3 id="cleanliness-calculation">Cleanliness Calculation</h3>
+<ol start="50">
+<li><strong>Total mess for cleanliness:</strong> sum of all worker mess values + bar mess (10 base + 1 per bar apprentice). <strong>Note: monster mess is NOT counted in this step</strong> — it gets added to the displayed total later but does NOT contribute to today's cleanliness drop.</li>
+<li><strong>Apply maid item mess reduction:</strong> <code>mess × (1 − reduction_percent / 100) − reduction_flat</code>.</li>
+<li><strong>Calculate maid cleaning power:</strong><pre><code>base_cleaning = sum of each maid's level-based cleaning + items
+apprentice_cleaning = maids_quarters_apprentice_count × 10
+total_base = base + apprentice
+variance_min = 50 + variance_bonus
+variance_max = 150 + variance_bonus
+actual_cleaning = total_base × random(variance_min, variance_max) / 100
+</code></pre>
+</li>
+<li><strong>Apply cleanliness change:</strong> <code>new_cleanliness = clamp(0, 100, old + actual_cleaning − total_mess)</code>.</li>
+<li><strong>Award maid EXP:</strong> each acquired maid gets <code>actual_cleaning ÷ maid_count</code> EXP (minimum 1).</li>
+</ol>
+<h3 id="reputation-bonus-pipeline">Reputation Bonus Pipeline</h3>
+<ol start="55">
+<li><strong>Apply maid item brothel wealth percent</strong> to total income (after all other multipliers).</li>
+<li><strong>Apply cleanliness multiplier</strong> to reputation gain:
+<ul>
+<li>Revolting (0–4): ×0.0 (no reputation gained)</li>
+<li>Filthy (5–14): ×0.25</li>
+<li>Dirty (15–29): ×0.5</li>
+<li>Messy (30–44): ×0.75</li>
+<li>Acceptable (45–59): ×1.0</li>
+<li>Clean (60–74): ×1.2</li>
+<li>Very Clean (75–89): ×1.4</li>
+<li>Spotless (90–100): ×1.6</li>
+</ul>
+</li>
+<li><strong>Apply Daily Event reputation override</strong> (if event blocks reputation, set to 0; else apply event multiplier).</li>
+<li><strong>Promotion Level reputation bonus:</strong> <code>random(0, promotion_level × 10)%</code>.</li>
+<li><strong>Decor Level reputation bonus:</strong> <code>random(0, decor_level × 5)%</code>.</li>
+<li><strong>Christmas Wreath reputation bonus:</strong> +5% if owned; independent of the Christmas toggle.</li>
+<li><strong>Patreon Master reputation bonus:</strong> +5% if active.</li>
+<li><strong>Elara's Office apprentice reputation bonus:</strong> +5% per apprentice.</li>
+<li><strong>Bar apprentice reputation bonus:</strong> +5% for ownership + 1% per apprentice.</li>
+<li><strong>Maid item reputation bonus</strong> (from items with brothel_reputation_percent).</li>
+<li><strong>Ballroom reputation bonus:</strong> +10% if a trainee is assigned.</li>
+<li><strong>Add to brothel reputation points:</strong> <code>brothel_reputation_points += adjusted_reputation_gain</code>.</li>
+<li><strong>Update reputation level</strong> based on new total points.</li>
+</ol>
+<h3 id="final-income-adjustments">Final Income Adjustments</h3>
+<ol start="68">
+<li><strong>Apply Daily Event income multiplier</strong> to the post-rep-bonus total.</li>
+<li><strong>Add monster income</strong> to net profit (after tax/upkeep/ballroom fee).</li>
+<li><strong>Add monster mess</strong> to total mess (already counted in cleanliness step).</li>
+</ol>
+<h3 id="daily-report-display">Daily Report Display</h3>
+<ol start="71">
+<li>The report screen shows worker-by-worker breakdowns, all bonuses applied, the triggered event, and the final net profit ready to collect from Elara's Office.</li>
+</ol>
+<hr/>
+<h2 id="cleanliness-tiers-income--reputation-effects">Cleanliness Tiers (Income &amp; Reputation Effects)</h2>
+<p>Cleanliness scales 0–100 and is divided into 8 tiers. Each tier applies the same multiplier to BOTH income bounds AND reputation gain.</p>
+<div class="guide-table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th>Cleanliness</th>
+<th>Tier</th>
+<th>Min Income</th>
+<th>Max Income</th>
+<th>Reputation Multiplier</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0–4</td>
+<td>Revolting</td>
+<td>0% (zero)</td>
+<td>100%</td>
+<td>×0.0 (no rep)</td>
+</tr>
+<tr>
+<td>5–14</td>
+<td>Filthy</td>
+<td>25%</td>
+<td>100%</td>
+<td>×0.25</td>
+</tr>
+<tr>
+<td>15–29</td>
+<td>Dirty</td>
+<td>50%</td>
+<td>100%</td>
+<td>×0.5</td>
+</tr>
+<tr>
+<td>30–44</td>
+<td>Messy</td>
+<td>75%</td>
+<td>100%</td>
+<td>×0.75</td>
+</tr>
+<tr>
+<td>45–59</td>
+<td>Acceptable</td>
+<td>100%</td>
+<td>100%</td>
+<td>×1.0</td>
+</tr>
+<tr>
+<td>60–74</td>
+<td>Clean</td>
+<td>100%</td>
+<td>120%</td>
+<td>×1.2</td>
+</tr>
+<tr>
+<td>75–89</td>
+<td>Very Clean</td>
+<td>100%</td>
+<td>140%</td>
+<td>×1.4</td>
+</tr>
+<tr>
+<td>90–100</td>
+<td>Spotless</td>
+<td>100%</td>
+<td><strong>160%</strong></td>
+<td><strong>×1.6</strong></td>
+</tr>
+</tbody>
+</table></div>
+<p>Spotless gives <strong>60% more income on the high end and 60% more reputation gain</strong> every single day. Cleanliness is the highest-leverage system in the game.</p>
+<hr/>
+<h2 id="reputation-levels-20-tiers">Reputation Levels (20 tiers)</h2>
+<p>Reputation accumulates as points, then translates to a level. Each level above 1 grants +5% income that day.</p>
+<div class="guide-table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th>Level</th>
+<th>Name</th>
+<th>Threshold</th>
+<th>Income Bonus</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Disgusting</td>
+<td>0</td>
+<td>+0%</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Revolting</td>
+<td>500</td>
+<td>+5%</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Filthy</td>
+<td>1,500</td>
+<td>+10%</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Dirty</td>
+<td>4,000</td>
+<td>+15%</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Shabby</td>
+<td>7,500</td>
+<td>+20%</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Poor</td>
+<td>12,000</td>
+<td>+25%</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Mediocre</td>
+<td>18,000</td>
+<td>+30%</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Acceptable</td>
+<td>26,000</td>
+<td>+35%</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Decent</td>
+<td>36,000</td>
+<td>+40%</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Good</td>
+<td>50,000</td>
+<td>+45%</td>
+</tr>
+<tr>
+<td>11</td>
+<td>Fine</td>
+<td>70,000</td>
+<td>+50%</td>
+</tr>
+<tr>
+<td>12</td>
+<td>Quality</td>
+<td>95,000</td>
+<td>+55%</td>
+</tr>
+<tr>
+<td>13</td>
+<td>Excellent</td>
+<td>125,000</td>
+<td>+60%</td>
+</tr>
+<tr>
+<td>14</td>
+<td>Superior</td>
+<td>160,000</td>
+<td>+65%</td>
+</tr>
+<tr>
+<td>15</td>
+<td>Premium</td>
+<td>200,000</td>
+<td>+70%</td>
+</tr>
+<tr>
+<td>16</td>
+<td>Luxurious</td>
+<td>250,000</td>
+<td>+75%</td>
+</tr>
+<tr>
+<td>17</td>
+<td>Exquisite</td>
+<td>310,000</td>
+<td>+80%</td>
+</tr>
+<tr>
+<td>18</td>
+<td>Royal</td>
+<td>380,000</td>
+<td>+85%</td>
+</tr>
+<tr>
+<td>19</td>
+<td>Kingly</td>
+<td>460,000</td>
+<td>+90%</td>
+</tr>
+<tr>
+<td>20</td>
+<td>Godlike</td>
+<td>550,000</td>
+<td><strong>+95%</strong></td>
+</tr>
+</tbody>
+</table></div>
+<hr/>
+<h2 id="mess-generation-per-worker">Mess Generation (Per Worker)</h2>
+<p>Every working worker produces mess based on her client count, with random multipliers:</p>
+<ul>
+<li><strong>Base mess</strong> = clients served that day</li>
+<li><strong>Mess roll:</strong> <code>random(1, 100)</code>
+<ul>
+<li><code>≤ 10 + clients_today</code> → ×2.0 (double mess) ← gets MORE likely with more clients</li>
+<li><code>≤ 20 + clients_today</code> → ×1.5</li>
+<li><code>≤ 30 + clients_today</code> → ×1.25</li>
+<li>else → ×1.0</li>
+</ul>
+</li>
+</ul>
+<p>So a worker with 8 clients has a 18% chance of double mess, 28% chance of 1.5×, 38% chance of 1.25×, and only 16% chance of clean baseline. <strong>More clients = more mess variance, not just more raw mess.</strong></p>
+<p>VIP Lounge benefiting workers (Vixen + apprentices) <strong>double their final mess on top of all this</strong>.</p>
+<hr/>
+<h2 id="maid-cleaning-system">Maid Cleaning System</h2>
+<p>Maid cleaning is calculated independently of the per-worker mess generation, then subtracted from total mess at end of day.</p>
+<h3 id="per-maid-base-cleaning-by-level">Per-Maid Base Cleaning by Level</h3>
+<div class="guide-table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th>Level</th>
+<th>Base Cleaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>10</td>
+</tr>
+<tr>
+<td>2</td>
+<td>15</td>
+</tr>
+<tr>
+<td>3</td>
+<td>20</td>
+</tr>
+<tr>
+<td>4</td>
+<td>25</td>
+</tr>
+<tr>
+<td>5</td>
+<td>30</td>
+</tr>
+<tr>
+<td>6 (MAX)</td>
+<td>40</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="maid-total-cleaning-formula">Maid Total Cleaning Formula</h3>
+<pre><code>For each acquired maid:
+    her_cleaning = base_level_cleaning + flat_item_bonuses
+    her_cleaning = her_cleaning × (1 + percent_item_bonuses / 100)
+    total += her_cleaning
+
+team_global_flat_bonus = sum of all_maids_cleaning_flat items
+team_global_percent_bonus = sum of all_maids_cleaning_percent items
+total = total × (1 + team_global_percent / 100) + team_global_flat
+
+apprentice_cleaning = maids_quarters_apprentices × 10
+total_base = total + apprentice_cleaning
+
+variance_bonus = sum of cleaning_variance_bonus from items
+variance_min = 50 + variance_bonus
+variance_max = 150 + variance_bonus
+final_cleaning = total_base × random(variance_min, variance_max) / 100
+</code></pre>
+<h3 id="daily-cleanliness-resolution">Daily Cleanliness Resolution</h3>
+<pre><code>new_cleanliness = clamp(0, 100, old + final_cleaning − total_mess)
+</code></pre>
+<p>Once mess starts exceeding maid cleaning, your cleanliness drops daily until it tanks the income/reputation multipliers. Add maid items, raise maid levels, or add Maids' Quarters apprentices to keep ahead.</p>
+<hr/>
+<h2 id="daily-stress-math">Daily Stress Math</h2>
+<p>Per worker, every working day:</p>
+<pre><code>daily_stress = 10  (or 7 if Willow active in Nurse's Room)
+if random(1-100) ≤ Stamina:
+    daily_stress -= 2
+if clients_today &gt; 2:
+    daily_stress += (clients_today - 2)
+daily_stress -= infirmary_apprentice_count   # 1 per apprentice
+daily_stress -= worker_item_stress_reduction
+daily_stress = max(0, daily_stress)
+
+if worker is Master Bedroom apprentice:
+    daily_stress = 0  (immune)
+
+worker.stress = clamp(0, 100, worker.stress + daily_stress)
+
+if worker.stress &gt; 75: enter 2-day exhausted rest
+</code></pre>
+<hr/>
+<h2 id="health--sick-rest">Health &amp; Sick Rest</h2>
+<p>Max health: <code>max(100, Stamina × 10)</code> → ×1.5 with <strong>Iron Constitution</strong> skill.</p>
+<p>Health damage sources:</p>
+<ul>
+<li>Failed daily events (e.g. Rough Customer = −12 health)</li>
+<li>Training stress overflow (any stress above 100 is converted to 2× the overflow as health damage)</li>
+</ul>
+<p>When health drops to 0:</p>
+<ul>
+<li>Enter sick rest: <strong>4 days</strong> (or <strong>3 days if Willow is active</strong>)</li>
+<li>During rest: $0 income, no clients, no EXP</li>
+<li>On rest completion: stress → 0, health → max</li>
+</ul>
+<hr/>
+<h2 id="refuse-to-work-strike">Refuse-to-Work (Strike)</h2>
+<p>Only applies to <strong>visitable workers</strong> (the 16 with Visit Worker content; recruited-but-not-visitable workers like Raven/Foxy/Lindia/Whiskers can never strike).</p>
+<p>Each working day, if:</p>
+<ul>
+<li><code>loyalty &lt; 30</code> AND</li>
+<li><code>random(1-100) ≤ refuse_chance</code> (per-worker stat)</li>
+</ul>
+<p>She refuses work. Earns $0, no clients, no mess. A flavor message appears in the daily report.</p>
+<p><strong>Fix:</strong> raise loyalty above 30 via worker visits (gifts, praise, talk, training).</p>
+<hr/>
+<h2 id="high-loyalty-bonus">High-Loyalty Bonus</h2>
+<p>Only applies to <strong>visitable workers</strong>.</p>
+<p>Each working day, if:</p>
+<ul>
+<li><code>loyalty &gt; 80</code> AND</li>
+<li><code>random(1-100) ≤ bonus_chance</code> (per-worker stat)</li>
+</ul>
+<p>One of three random bonuses fires:</p>
+<ul>
+<li><strong>Extra Clients:</strong> +1 or +2 clients (each rolls its own pay)</li>
+<li><strong>Income Boost:</strong> daily_pay × 1.25</li>
+<li><strong>Reputation Boost:</strong> +2 fame today</li>
+</ul>
+<hr/>
+<h2 id="income-bonus-pipeline-stacking-order">Income Bonus Pipeline (Stacking Order)</h2>
+<p>The income calculation has many stacking percentage bonuses. They apply in this order:</p>
+<ol>
+<li>Base worker pay (after cleanliness, clothing, room multipliers, bonus pay roll)</li>
+<li>
+<ul>
+<li>Daily Event income multiplier (per-worker, if applicable)</li>
+</ul>
+</li>
+<li>
+<ul>
+<li>Worker item income bonuses (per-worker)</li>
+</ul>
+</li>
+<li><strong>Total brothel income</strong> = sum of all worker pay</li>
+<li>
+<ul>
+<li>Reputation income bonus: <code>+5% × (reputation_level − 1)</code></li>
+</ul>
+</li>
+<li>
+<ul>
+<li>Christmas Wreath: +5% (if owned)</li>
+</ul>
+</li>
+<li>
+<ul>
+<li>Patreon Master: +5% (if owned)</li>
+</ul>
+</li>
+<li>
+<ul>
+<li>Elara's Office: +5% per apprentice (max +15%)</li>
+</ul>
+</li>
+<li>
+<ul>
+<li>Bar: +5% ownership + 1% per apprentice (max +8%)</li>
+</ul>
+</li>
+<li>
+<ul>
+<li>Decor Level: random 0 to (decor_level × 5)%</li>
+</ul>
+</li>
+<li><strong>Subtotal</strong></li>
+<li><strong>−15% tax</strong></li>
+<li><strong>− daily upkeep</strong></li>
+<li><strong>= net profit</strong> (clamped to ≥ $0 by Elara's protection)</li>
+<li><strong>−15% ballroom fee</strong> (if ballroom trainee assigned, only on positive net profit)</li>
+<li><strong>+ monster income</strong> (added after upkeep/tax/ballroom)</li>
+<li><strong>= final pending collection</strong></li>
+</ol>
+<p><strong>Note on Maid item brothel-wealth bonus:</strong> This is calculated AFTER tax and upkeep have already been applied to the income figure used for net profit. As of current code, the maid wealth bonus inflates the displayed total income value but does NOT actually increase the player's net profit. This may be a bug — verify with the developer if it matters to your strategy.</p>
+<h3 id="theoretical-maximum-daily-bonuses">Theoretical Maximum Daily Bonuses</h3>
+<p>If you stack everything (assuming Decor caps at level 10 — verify with developer):</p>
+<ul>
+<li>Reputation bonus (Godlike): +95%</li>
+<li>Christmas Wreath: +5%</li>
+<li>Patreon Master: +5%</li>
+<li>Office (3 apprentices): +15%</li>
+<li>Bar (3 apprentices): +8%</li>
+<li>Decor (level 10, max roll): up to +50%</li>
+</ul>
+<p>Total stackable bonus before tax: <strong>+178%</strong> in best-roll conditions.</p>
+<hr/>
+<h2 id="daily-event-success-calculation">Daily Event Success Calculation</h2>
+<p>Every daily event has a <code>success_condition</code> block in <code>brothel_daily_events.json</code> that defines how its success chance is calculated. There are four condition types, each with its own formula. After the base chance is computed, modifiers are added, then the result is clamped to a 5–95% range and rolled.</p>
+<h3 id="condition-types">Condition Types</h3>
+<p><strong>1. <code>average_stat</code></strong> — Average a single stat across all active workers.</p>
+<pre><code>total_stat = sum of (worker[stat] for each active worker)
+avg_stat = total_stat / active_worker_count
+success_chance = avg_stat + (bonus_per_worker × active_worker_count)
+</code></pre>
+<p><strong>2. <code>average_two_stats</code></strong> — Combined average of two stats across all active workers.</p>
+<pre><code>avg_stat1 = sum(worker[stat1]) / active_worker_count
+avg_stat2 = sum(worker[stat2]) / active_worker_count
+combined_avg = (avg_stat1 + avg_stat2) / 2
+success_chance = combined_avg + (bonus_per_worker × active_worker_count)
+</code></pre>
+<p><strong>3. <code>highest_stat</code></strong> — Each worker's single best stat (any of the 6 primaries), then averaged.</p>
+<pre><code>for each worker:
+    her_best = max(stamina, intelligence, dexterity, ability, appearance, charisma)
+avg_highest = sum(each worker's best) / active_worker_count
+success_chance = avg_highest + (bonus_per_worker × active_worker_count)
+</code></pre>
+<p><strong>4. <code>specific_worker</code></strong> — Uses the selected worker's stat plus a flat base chance.</p>
+<pre><code>success_chance = selected_worker[stat] + base_chance
+</code></pre>
+<h3 id="modifiers-applied-after-base-calculation">Modifiers Applied After Base Calculation</h3>
+<p>After the condition-type formula, these adders apply in order:</p>
+<ol>
+<li><strong>Security Room ownership:</strong> +8% (if Security room is built)</li>
+<li><strong>Security apprentices:</strong> +5% per apprentice (max +15% with 3 apprentices) — total Security stack maxes at +23%</li>
+<li><strong>Worker item event bonuses:</strong> sum of <code>event_success_bonus</code> from all equipped items across active workers</li>
+</ol>
+<h3 id="final-clamp--roll">Final Clamp &amp; Roll</h3>
+<pre><code>success_chance = clamp(5, 95, success_chance)
+roll = random(1, 100)
+success = roll ≤ success_chance
+</code></pre>
+<p>The 5–95% clamp means <strong>no event is ever a guaranteed win or loss</strong> — even with stat averages of 0, you have a 5% chance to succeed; with maxed stats and full bonuses, you still have a 5% chance to fail.</p>
+<h3 id="worked-examples">Worked Examples</h3>
+<p><strong>Example 1 — average_stat (Charisma, bonus_per_worker: 3, 5 active workers):</strong>
+Workers have Charisma values 30, 45, 22, 60, 38.</p>
+<ul>
+<li>avg = (30+45+22+60+38) / 5 = 39</li>
+<li>success = 39 + (3 × 5) = 54%</li>
+<li>With Security + 2 apprentices: 54 + 8 + 10 = 72%</li>
+<li>Clamp: 72%</li>
+</ul>
+<p><strong>Example 2 — specific_worker (Intelligence, base_chance: 25, selected worker has Int 18):</strong></p>
+<ul>
+<li>success = 18 + 25 = 43%</li>
+<li>With Security + 3 apprentices: 43 + 8 + 15 = 66%</li>
+<li>Clamp: 66%</li>
+</ul>
+<p><strong>Example 3 — highest_stat (4 active workers):</strong>
+Workers' best stats: 65, 40, 80, 25.</p>
+<ul>
+<li>avg_highest = (65+40+80+25) / 4 = 52.5</li>
+<li>success = 52.5 + (bonus × 4)</li>
+</ul>
+<h3 id="strategic-implications">Strategic Implications</h3>
+<ul>
+<li><strong>Security apprentices are powerful event boosters</strong> — going from 0 apprentices to 3 swings success on most events by +15%, often turning a 50/50 into a near-guaranteed win.</li>
+<li><strong>More active workers always helps</strong> for <code>average_*</code> and <code>highest_stat</code> events because <code>bonus_per_worker × count</code> scales linearly. Even low-stat workers contribute their per-worker bonus.</li>
+<li><strong><code>specific_worker</code> events ignore worker count</strong> — only the selected worker's stat + the base chance matter (modified afterward by Security and items).</li>
+<li><strong>Worker items with <code>event_success_bonus</code></strong> stack across the whole roster — equipping one on every worker can be substantial.</li>
+</ul>
+<hr/>
+<h2 id="worker-stat-caps">Worker Stat Caps</h2>
+<p>All worker primary stats (Stamina, Intelligence, Dexterity, Ability, Appearance, Charisma) and consumable inventory counts are <strong>capped at 999</strong>. The cap is enforced in:</p>
+<ul>
+<li><code>brothel_training_system.rpy</code> — gift consumables clamp via <code>min(999, current + 1)</code></li>
+<li>Player consumable inventory — same 999 cap on item counts</li>
+</ul>
+<p>Stats can never exceed 999 from any source — gifts, training, skills, items, or events. In practice the design balance assumes stats in the 1–100 range, so the 999 cap is mostly a safety net rather than a target. Skills like Acrobatics (+20 Dex/Ability for checks) and Iron Constitution (×1.5 max health) apply on top of the raw stat without affecting the stored value.</p>
+<p>Loyalty and Stress are capped at 100. Health is capped at the worker's calculated max (<code>Stamina × 10</code>, ×1.5 with Iron Constitution).</p>
+<hr/>
+<h2 id="reputation-bonus-pipeline-stacking-order">Reputation Bonus Pipeline (Stacking Order)</h2>
+<ol>
+<li>Base reputation gain = sum of working workers' fame</li>
+<li>× Cleanliness multiplier (×0.0 to ×1.6)</li>
+<li>× Daily Event reputation multiplier (or override to 0)</li>
+<li>
+<ul>
+<li>Promotion Level: random 0 to (promotion_level × 10)%</li>
+</ul>
+</li>
+<li>
+<ul>
+<li>Decor Level: random 0 to (decor_level × 5)%</li>
+</ul>
+</li>
+<li>
+<ul>
+<li>Christmas Wreath: +5%</li>
+</ul>
+</li>
+<li>
+<ul>
+<li>Patreon Master: +5%</li>
+</ul>
+</li>
+<li>
+<ul>
+<li>Elara's Office: +5% per apprentice</li>
+</ul>
+</li>
+<li>
+<ul>
+<li>Bar: +5% ownership + 1% per apprentice</li>
+</ul>
+</li>
+<li>
+<ul>
+<li>Maid item reputation percent</li>
+</ul>
+</li>
+<li>
+<ul>
+<li>Ballroom: +10% if trainee assigned</li>
+</ul>
+</li>
+<li>= final reputation gain added to brothel total</li>
+</ol>
+<hr/>
+<h2 id="specialty-room-apprentice-effects-quick-reference">Specialty Room Apprentice Effects (Quick Reference)</h2>
+<div class="guide-table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th>Room</th>
+<th>Master</th>
+<th>Per-Apprentice Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Master Bedroom</td>
+<td>Player</td>
+<td>+50% EXP, immune to all stress</td>
+</tr>
+<tr>
+<td>Elara's Office</td>
+<td>Elara</td>
+<td>+5% income, +5% reputation</td>
+</tr>
+<tr>
+<td>Maids' Quarters</td>
+<td>Maids</td>
+<td>+10 cleaning</td>
+</tr>
+<tr>
+<td>Nurse's Room</td>
+<td>Willow</td>
+<td>−1 daily stress for ALL workers</td>
+</tr>
+<tr>
+<td>Security</td>
+<td>Valkyra</td>
+<td>+5% daily event success chance</td>
+</tr>
+<tr>
+<td>Bar</td>
+<td>Sherry/Brandy</td>
+<td>+1% income, +1% rep, +1 mess; apprentice gets +2 clients</td>
+</tr>
+<tr>
+<td>Kitchen</td>
+<td>Poppy</td>
+<td>−10 min Room Service, +10 each stat, +1 random client</td>
+</tr>
+<tr>
+<td>Secret Room</td>
+<td>Azariel</td>
+<td>+1 daily EXP for ALL workers</td>
+</tr>
+<tr>
+<td>VIP Lounge</td>
+<td>Vixen</td>
+<td>Each VIP worker (Vixen + apprentices): 2× pay, +1 client, 2× mess</td>
+</tr>
+<tr>
+<td>Ballroom</td>
+<td>Esperanza</td>
+<td>1 slot only — trainee gets 60–100+ EXP, brothel gets +10% rep, Esperanza takes 15% of net profit</td>
+</tr>
+<tr>
+<td>Dungeon</td>
+<td>Raven</td>
+<td><em>Effect coming in a future update</em></td>
+</tr>
+<tr>
+<td>Arcane Room</td>
+<td>Blinky</td>
+<td><em>Effect coming in a future update</em></td>
+</tr>
+</tbody>
+</table></div>
+<hr/>
+<h2 id="bedroom-level-effects-per-worker">Bedroom Level Effects (Per Worker)</h2>
+<div class="guide-table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th>Room Level</th>
+<th>Max Income</th>
+<th>Reputation per Worker</th>
+<th>Extra Clients</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>baseline</td>
+<td>+0</td>
+<td>+0</td>
+</tr>
+<tr>
+<td>2</td>
+<td>×1.10</td>
+<td>+1</td>
+<td>+0</td>
+</tr>
+<tr>
+<td>3</td>
+<td>×1.25</td>
+<td>+3</td>
+<td>+1</td>
+</tr>
+<tr>
+<td>4</td>
+<td>×1.40</td>
+<td>+5</td>
+<td>+2</td>
+</tr>
+<tr>
+<td>5</td>
+<td>×1.60</td>
+<td>+7</td>
+<td>+3</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Compounding effect:</strong> extra clients also raise the bonus-pay chance (<code>Ability/2 + clients_today</code>), so a Level 5 bedroom raises max pay AND raises the chance of pay being doubled.</p>
+<hr/>
+<h2 id="clothing-level-effects-per-worker">Clothing Level Effects (Per Worker)</h2>
+<div class="guide-table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th>Clothing Level</th>
+<th>Min Income</th>
+<th>Max Income</th>
+<th>Reputation Bonus</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>baseline</td>
+<td>baseline</td>
+<td>+0</td>
+</tr>
+<tr>
+<td>2</td>
+<td>—</td>
+<td>×1.20</td>
+<td>+1</td>
+</tr>
+<tr>
+<td>3</td>
+<td>×1.10</td>
+<td>×1.30</td>
+<td>+2</td>
+</tr>
+<tr>
+<td>4</td>
+<td>×1.20</td>
+<td>×1.40</td>
+<td>+3</td>
+</tr>
+<tr>
+<td>5</td>
+<td>×1.30</td>
+<td>×1.50</td>
+<td>+4</td>
+</tr>
+</tbody>
+</table></div>
+<hr/>
+<h2 id="house-upgrade-levels">House Upgrade Levels</h2>
+<p><strong>Promotion Level</strong> (starts at 1):</p>
+<ul>
+<li>Adds <code>random(0, level)</code> extra clients daily, distributed among workers</li>
+<li>Adds <code>random(0, level × 10)%</code> reputation bonus</li>
+</ul>
+<p><strong>Decor Level</strong> (starts at 0):</p>
+<ul>
+<li>Adds <code>random(0, level × 5)%</code> income</li>
+<li>Adds <code>random(0, level × 5)%</code> reputation</li>
+<li>Rolled independently each day</li>
+</ul>
+<p><strong>Connections Level</strong> (starts at 0):</p>
+<ul>
+<li>Defined in code, mechanical effect not yet implemented</li>
+</ul>
+<hr/>
+<h2 id="a-worked-example--daily-income-for-one-worker">A Worked Example — Daily Income for One Worker</h2>
+<p><strong>Setup:</strong> Sandra (Worker #4)</p>
+<ul>
+<li>Stats: Stamina 18, Intelligence 22, Dexterity 20, Ability 12, Appearance 30, Charisma 35</li>
+<li>Bedroom: Level 3</li>
+<li>Clothing: Level 2</li>
+<li>Brothel: Cleanliness 80 (Very Clean), Reputation Level 8 (Acceptable)</li>
+<li>Office has 2 apprentices, Decor Level 5</li>
+</ul>
+<p><strong>Step 1 — Clients:</strong> <code>random(1, max(1, 12÷10 − 2), 12÷10 + 2) = random(1, 3)</code> → say she rolls 3.
+<strong>Step 2 — Room L3 bonus:</strong> +1 client → 4 clients.</p>
+<p><strong>Step 3 — Income range:</strong></p>
+<ul>
+<li><code>min = min(30, 35) ÷ 2 = 15</code></li>
+<li><code>max = max(30, 35) × 2 = 70</code></li>
+<li>Cleanliness Very Clean: max ×1.4 → 98</li>
+<li>Clothing L2: max ×1.2 → 117</li>
+<li>Room L3: max ×1.25 → 146</li>
+<li>Final range: $15–$146</li>
+</ul>
+<p><strong>Step 4 — Roll daily pay:</strong> say <code>random(15, 146) = $82</code>.</p>
+<p><strong>Step 5 — Bonus pay roll:</strong> <code>bonus_chance = 12÷2 + 4 = 10</code>. <code>random(1, 100) = 67</code> — fails. Pay stays at $82.</p>
+<p><strong>Step 6 — Brothel-wide bonuses applied to total</strong> (assuming her $82 is the only worker income for clarity):</p>
+<ul>
+<li>Reputation +35% (level 8): $82 × 1.35 = $110.70</li>
+<li>Office +10% (2 apprentices): × 1.10 = $121.77</li>
+<li>Decor: random(0, 5×5) = say 12% bonus: × 1.12 = $136.38</li>
+<li>After 15% tax: $115.92</li>
+<li>After upkeep ($60 base + $20×1 master bedroom + $20×3 Sandra's bedroom = $140): <strong>net = $0</strong> (Elara saves it)</li>
+</ul>
+<p>In this case, this single worker isn't profitable. Adding 3+ more workers brings the totals well above the upkeep threshold.</p>
+<hr/>
+<h2 id="summary-what-to-optimize-first">Summary: What to Optimize First</h2>
+<p>If you have limited training opportunities, this is the optimal order to invest:</p>
+<ol>
+<li><strong>Cleanliness first</strong> — keep it above 60 always, ideally 90+ (Spotless = 60% income/rep multiplier)</li>
+<li><strong>Ability</strong> on every worker — biggest income lever</li>
+<li><strong>Appearance + Charisma together</strong> — paired stats, must stack both</li>
+<li><strong>Reputation</strong> — every level adds +5% income; the Patreon Master and Christmas Wreath bonuses also benefit</li>
+<li><strong>Stamina</strong> — keeps workers off rest days</li>
+<li><strong>Intelligence</strong> — doubles EXP for compound stat growth</li>
+<li><strong>Dexterity</strong> — at least one or two workers should have it for event coverage</li>
+<li><strong>Office apprentices ×3</strong> — +15% income/rep, no downside</li>
+<li><strong>Maids' levels</strong> — keep cleaning ahead of mess</li>
+<li><strong>Bedroom upgrades to Level 3+</strong> for active workers — better income, more clients, higher bonus pay chance</li>
+</ol>
+<hr/>
+<p><em>This document is a snapshot of the brothel's systems as of the current game version. Numbers may change in future updates as the systems are refined and balanced. For strategic guidance on running the brothel day-to-day, see <code>brothel.md</code>.</em></p>
+</div>
+        <div class="markdown-body" data-lang-panel="zh" hidden>
+<p>本文深入讲解员工属性、青楼系统和每日报告如何共同运作。如果你想阅读经营青楼的策略指南，请参阅 <code>brothel.md</code>。本文面向希望准确理解各项数值<strong>为何</strong>如此计算的玩家。</p>
+<hr/>
+<h2 id="zh-worker-primary-stats--full-breakdown">员工主要属性——完整解析</h2>
+<p>每名员工都有六项主要属性（0–100），另有一项由其他属性衍生的名气。每项属性都会参与每日计算，忽略任何一项都会让你错失机会。</p>
+<h3 id="zh-stamina">耐力</h3>
+<p><strong>主要作用：持久力——抵抗压力并决定生命上限。</strong></p>
+<p>每个工作日，若 <code>random(1-100) ≤ Stamina</code> 判定成功，则<strong>当日压力 −2</strong>。耐力越高，降低压力的机会就越多，因疲惫而无法工作的天数也越少。</p>
+<p>耐力还决定生命上限：</p>
+<pre><code>max_health = max(100, Stamina × 10)
+</code></pre>
+<p>拥有<strong>钢铁体魄</strong>技能时提高至 <strong>×1.5</strong>。因此，耐力 50 且拥有钢铁体魄的员工会有 750 点生命上限。</p>
+<p>许多“体力／耐久”类每日事件都以耐力作为检定属性：</p>
+<ul>
+<li><strong>节庆庆典</strong>（通用）</li>
+<li><strong>猛烈风暴</strong>（通用）</li>
+<li><strong>管道灾难</strong>（通用，基础30%）</li>
+<li><strong>厨房火灾</strong>（通用，基础40%）</li>
+<li><strong>泥石流</strong>（通用）</li>
+<li><strong>热浪</strong>（通用，基础35%）</li>
+<li><strong>通宵盛会</strong>（通用）</li>
+<li><strong>重复预订</strong>（通用）</li>
+<li><strong>病弱顾客</strong>（青楼，基础20%）</li>
+<li><strong>耐力挑战</strong>（青楼，与能力进行双属性检定）</li>
+<li><strong>贪得无厌的商人</strong>（青楼，与能力进行双属性检定）</li>
+<li><strong>粗暴顾客</strong>（青楼，与智力进行双属性检定）</li>
+<li><strong>午夜召见</strong>（青楼，与魅力进行双属性检定）</li>
+<li><strong>双胞胎特殊要求</strong>（青楼，与灵巧进行双属性检定）</li>
+</ul>
+<h3 id="zh-intelligence">智力</h3>
+<p><strong>主要作用：经验翻倍。</strong></p>
+<p>每个工作日，计算出基础经验（＝接待顾客数）后，若 <code>random(1-100) ≤ Intelligence</code> 判定成功，则当天<strong>经验 ×2</strong>。智力越高，升级就越快。</p>
+<p>员工在 Esperanza 指导下接受精修时，智力还会提高<strong>舞厅训练经验</strong>：</p>
+<pre><code>ballroom_exp = random(60, 100) + random(1, max(1, Intelligence))
+</code></pre>
+<p>“谜题／解决问题”类每日事件以智力作为检定属性：</p>
+<ul>
+<li><strong>商人请求</strong>（通用，基础25%）</li>
+<li><strong>鼠患</strong>（通用，基础25%）</li>
+<li><strong>建筑倒塌</strong>（通用，基础30%）</li>
+<li><strong>假货骗局</strong>（通用，基础25%）</li>
+<li><strong>顾客的谜题</strong>（通用，基础 20%）</li>
+<li><strong>物资短缺</strong>（通用）</li>
+<li><strong>富有收藏家</strong>（通用，与魅力进行双属性检定）</li>
+<li><strong>勒索信</strong>（通用）</li>
+<li><strong>奇特请求</strong>（青楼，基础20%）</li>
+<li><strong>苛刻公爵夫人</strong>（青楼，与能力进行双属性检定）</li>
+<li><strong>秘密恋情</strong>（青楼，与魅力进行双属性检定）</li>
+<li><strong>秘密会面</strong>（旅馆，与魅力进行双属性检定）</li>
+<li><strong>粗暴顾客</strong>（青楼，与耐力进行双属性检定）</li>
+<li><strong>牧师忏悔</strong>（青楼，与魅力进行双属性检定）</li>
+</ul>
+<h3 id="zh-dexterity">灵巧</h3>
+<p><strong>主要作用：表演／灵活类事件检定。</strong></p>
+<p>灵巧本身不会直接影响每日收入、经验或压力，但有<strong>10 项以上每日事件会实际检定该属性</strong>。灵巧达到 80 以上的员工能轻松应对场所的“表演”类事件；灵巧只有 5 的员工则会在这些事件中屡屡失败。</p>
+<p>灵巧类事件：</p>
+<ul>
+<li><strong>屋顶追逐</strong>（通用，基础20%）——成功：收入+25%、经验+10、名气+1</li>
+<li><strong>杂技表演</strong>（青楼，基础15%）——成功：经验+15、名气+1、声望×1.5</li>
+<li><strong>舞蹈比赛</strong>（青楼，基础20%）——成功：声望×2.0、名气+1、经验+12</li>
+<li><strong>油摔跤</strong>（青楼，基础20%）——成功：收入+60%、经验+10、名气+1</li>
+<li><strong>双胞胎特殊要求</strong>（青楼，与耐力进行双属性检定）</li>
+<li><strong>窥淫画廊</strong>（青楼，与外貌进行双属性检定）</li>
+<li><strong>单身派对</strong>（青楼，与魅力进行双属性检定）</li>
+<li><strong>双人协作</strong>（旅馆，与耐力进行双属性检定）</li>
+<li><strong>私人表演</strong>（旅馆，与外貌进行双属性检定）</li>
+<li><strong>婚礼派对</strong>（旅馆，与魅力进行双属性检定）</li>
+</ul>
+<p>灵巧也参与<strong>每日名气判定</strong>：</p>
+<pre><code>fame_chance = average(stamina, intelligence, dexterity, ability, appearance, charisma)
+</code></pre>
+<p>若 <code>1–100 ≤ stat_average</code> 判定成功，当天名气 +1。因此，灵巧占每日名气成长判定的 1/6。</p>
+<p><strong>提高灵巧的方法：</strong></p>
+<ul>
+<li><strong>杂技技能</strong>——所有检定的灵巧+20</li>
+<li><strong>特殊训练 1</strong>——每次灵巧 +1</li>
+<li><strong>时间消耗品礼物</strong>——每份礼物灵巧+1</li>
+<li><strong>特殊训练 2／3</strong>——两项随机主要属性 +1（可能抽中灵巧）</li>
+<li><strong>愉悦艺术技能</strong>——每次训练使一项随机主要属性 +1</li>
+</ul>
+<h3 id="zh-ability">能力</h3>
+<p><strong>主要作用：收入引擎。</strong></p>
+<p>能力是对每日收入影响最大的单项属性。它分别参与两项计算：</p>
+<p><strong>1. 每日顾客数：</strong></p>
+<pre><code>clients_today = random(max(1, Ability÷10 − 2), Ability÷10 + 2)
+</code></pre>
+<ul>
+<li>能力 10 → 1 至 3 名顾客</li>
+<li>能力 50 → 3 至 7 名顾客</li>
+<li>能力 100 → 8 至 12 名顾客</li>
+</ul>
+<p><strong>2. 额外报酬概率：</strong></p>
+<pre><code>bonus_chance = (Ability ÷ 2) + clients_today
+</code></pre>
+<p>若 <code>1–100 ≤ bonus_chance</code> 判定成功，则<strong>每日薪资 ×2</strong>。这是游戏中影响收入最大的因素。能力 100 并接待 8 名顾客时，额外报酬概率为 58——几乎每隔一天就能掷出双倍薪资。</p>
+<p>能力会限制“技巧检定”类每日事件：</p>
+<ul>
+<li><strong>行家考验</strong>（青楼，基础20%）——成功：收入+100%、声望×1.5、名气+1</li>
+<li><strong>不可能的要求</strong>（青楼，基础15%）——成功：收入+80%、经验+20</li>
+<li><strong>苛刻公爵夫人</strong>（青楼，与智力进行双属性检定）</li>
+<li><strong>贪得无厌的商人</strong>（青楼，与耐力进行双属性检定）</li>
+<li><strong>新婚之夜指导</strong>（青楼，与魅力进行双属性检定）</li>
+<li><strong>货比三家者</strong>（青楼，与魅力进行双属性检定）</li>
+<li><strong>周年惊喜</strong>（青楼，与魅力进行双属性检定）</li>
+<li><strong>耐力挑战</strong>（青楼，与耐力进行双属性检定）</li>
+<li><strong>痴迷常客</strong>（青楼，与外貌进行双属性检定）</li>
+<li><strong>全体员工请求</strong>（青楼，与外貌进行双属性检定）</li>
+<li><strong>不知疲倦的商人</strong>（旅馆，与耐力进行双属性检定）</li>
+</ul>
+<h3 id="zh-appearance">外貌</h3>
+<p><strong>主要作用：收入区间公式的一半。</strong></p>
+<p>员工从每名顾客身上取得的收入会根据外貌／魅力配对计算，在一定区间内变化：</p>
+<pre><code>base_min_income = min(Appearance, Charisma) ÷ 2
+base_max_income = max(Appearance, Charisma) × 2
+daily_pay = random(min_income, max_income)
+</code></pre>
+<p>请注意其中使用了 <code>min()</code> 和 <code>max()</code>——外貌与魅力是<strong>配对生效</strong>的。只堆其中一项会让收入区间继续受较低属性限制；将<strong>两项都堆高</strong>，才能大幅提高整个区间。</p>
+<p>示例：</p>
+<ul>
+<li>外貌50、魅力10→区间$5至$100</li>
+<li>外貌50、魅力50→区间$25至$100</li>
+<li>外貌100、魅力100→区间$50至$200</li>
+</ul>
+<p>外貌会限制“美貌／视觉”类每日事件：</p>
+<ul>
+<li><strong>肖像委托</strong>（通用，基础25%）——成功：收入+30%、名气+2</li>
+<li><strong>选美大赛</strong>（通用，基础20%）——成功：收入+50%、声望×2.0、名气+1</li>
+<li><strong>外国权贵</strong>（通用，基础25%）——成功：收入+125%、声望×1.5</li>
+<li><strong>窥淫画廊</strong>（青楼，与灵巧进行双属性检定）</li>
+<li><strong>异国来客</strong>（青楼，与魅力进行双属性检定）</li>
+<li><strong>痴迷常客</strong>（青楼，与能力进行双属性检定）</li>
+<li><strong>全体员工请求</strong>（青楼，与能力进行双属性检定）</li>
+<li><strong>害羞贵族的第一次</strong>（青楼，与魅力进行双属性检定）</li>
+<li><strong>私人表演</strong>（旅馆，与灵巧进行双属性检定）</li>
+<li><strong>外国旅客</strong>（旅馆，与魅力进行双属性检定）</li>
+</ul>
+<h3 id="zh-charisma">魅力</h3>
+<p><strong>主要作用：收入区间公式的另一半，并决定赞美获得的好感度。</strong></p>
+<p>魅力与外貌共同决定收入区间（见上文）。</p>
+<p>它还直接决定拜访员工时<strong>赞美</strong>选项的收益：</p>
+<pre><code>praise_relationship_gain = 2 + round(Charisma ÷ 5)
+</code></pre>
+<ul>
+<li>魅力10→每次赞美好感度+4</li>
+<li>魅力50→每次赞美好感度+12</li>
+<li>魅力100→每次赞美好感度+22</li>
+</ul>
+<p>魅力会限制“社交／性格”类每日事件：</p>
+<ul>
+<li><strong>王室代表团</strong>（通用，最高属性）——成功：收入×2.5、声望×2.0</li>
+<li><strong>旅行吟游诗人</strong>（通用）</li>
+<li><strong>美食评论家来访</strong>（通用，与智力进行双属性检定）</li>
+<li><strong>富有收藏家</strong>（通用，与智力进行双属性检定）</li>
+<li><strong>商人庆典</strong>（通用）</li>
+<li><strong>愤怒暴民</strong>（通用）</li>
+<li><strong>贵族顾客</strong>（青楼，基础20%）</li>
+<li><strong>嫉妒顾客</strong>（青楼，基础30%）</li>
+<li><strong>竞争者挖角</strong>（青楼，基础30%）</li>
+<li><strong>悲伤贵族</strong>（青楼，基础25%）</li>
+<li><strong>害羞贵族的第一次</strong>（青楼，与外貌进行双属性检定）</li>
+<li><strong>牧师忏悔</strong>（青楼，与智力进行双属性检定）</li>
+<li><strong>秘密恋情</strong>（青楼，与智力进行双属性检定）</li>
+<li><strong>周年惊喜</strong>（青楼，与能力进行双属性检定）</li>
+<li><strong>货比三家者</strong>（青楼，与能力进行双属性检定）</li>
+<li><strong>新婚之夜指导</strong>（青楼，与能力进行双属性检定）</li>
+<li><strong>单身派对</strong>（青楼，与灵巧进行双属性检定）</li>
+<li><strong>午夜召见</strong>（青楼，与耐力进行双属性检定）</li>
+<li><strong>异国来客</strong>（青楼，与外貌进行双属性检定）</li>
+<li><strong>秘密会面</strong>（旅馆，与智力进行双属性检定）</li>
+<li><strong>婚礼派对</strong>（旅馆，与灵巧进行双属性检定）</li>
+</ul>
+<h3 id="zh-fame-derived-stat">名气（衍生属性）</h3>
+<p><strong>主要作用：直接增加每日声望收益。</strong></p>
+<p>名气无法直接训练，而是被动成长。每天，若 <code>random(1-100) ≤ stat_average</code> 判定成功（stat_average 为全部 6 项主要属性的平均值），则<strong>名气 +1</strong>。总体属性越高，名气提升得越频繁。</p>
+<p>在每日计算中，名气会加入青楼的声望收益池：</p>
+<pre><code>total_reputation_gain += worker.fame  (for each working worker, every day)
+</code></pre>
+<p>因此，拥有50名气的员工每天工作都会为当日声望池贡献+50。长期工作的员工会随时间积累巨量名气。</p>
+<p>许多高级每日事件还会提供<strong>一次性名气奖励</strong>：行家考验、选美大赛、杂技表演、王室代表团、肖像委托、舞蹈比赛、屋顶追逐、油摔跤、窥淫画廊、外国权贵等。</p>
+<h3 id="zh-how-to-train-each-stat">各属性的训练方式</h3>
+<div class="guide-table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th>方法</th>
+<th>提升内容</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>拜访员工训练（1级，亲吻）</td>
+<td>魅力+1</td>
+<td>每次训练</td>
+</tr>
+<tr>
+<td>拜访员工训练（2级，口交）</td>
+<td>智力+1</td>
+<td></td>
+</tr>
+<tr>
+<td>拜访员工训练（3级，传教士位）</td>
+<td>外貌+1</td>
+<td></td>
+</tr>
+<tr>
+<td>拜访员工训练（4级，女上位）</td>
+<td>耐力+1</td>
+<td></td>
+</tr>
+<tr>
+<td>拜访员工训练（5级，后入式）</td>
+<td>能力+1</td>
+<td></td>
+</tr>
+<tr>
+<td>拜访员工训练（6级，特殊1）</td>
+<td>灵巧+1</td>
+<td></td>
+</tr>
+<tr>
+<td>拜访员工训练（7＋8 级，特殊 2／3）</td>
+<td>2 项随机主要属性 +1</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>愉悦艺术</strong>（玩家技能）</td>
+<td>随机一项主要属性+1</td>
+<td>每次训练</td>
+</tr>
+<tr>
+<td>力量礼物</td>
+<td>耐力+1</td>
+<td>每份礼物仅限一次</td>
+</tr>
+<tr>
+<td>专注礼物</td>
+<td>智力+1</td>
+<td></td>
+</tr>
+<tr>
+<td>时间礼物</td>
+<td>灵巧+1</td>
+<td></td>
+</tr>
+<tr>
+<td>欲望礼物</td>
+<td>能力+1</td>
+<td></td>
+</tr>
+<tr>
+<td>古龙水礼物</td>
+<td>外貌+1</td>
+<td></td>
+</tr>
+<tr>
+<td>运气礼物</td>
+<td>随机一项主要属性+1</td>
+<td></td>
+</tr>
+<tr>
+<td>解毒剂礼物</td>
+<td>完全治疗＋清除压力</td>
+<td>不提高主要属性</td>
+</tr>
+<tr>
+<td>护盾礼物</td>
+<td>忠诚+1</td>
+<td>不提高主要属性</td>
+</tr>
+</tbody>
+</table></div>
+<hr/>
+<h2 id="zh-strategic-stat-priorities">属性培养策略优先级</h2>
+<p><strong>收入影响最大：</strong></p>
+<ol>
+<li><strong>能力</strong>——同时决定顾客数和额外报酬概率（最大的单项收入因素）</li>
+<li><strong>外貌＋魅力一起培养</strong>——共同决定收入区间（必须两项都堆，不能只堆一项）</li>
+</ol>
+<p><strong>生存／出勤影响最大：</strong>
+3. <strong>耐力</strong>——减少休息日、提高生命上限，并限制许多事件
+4. <strong>智力</strong>——使经验翻倍（产生复合成长），并限制许多事件</p>
+<p><strong>事件覆盖面：</strong>
+5. <strong>灵巧</strong>——限制 10 项以上事件，其中包括一些最好的声望／名气奖励</p>
+<p><strong>不要主动训练名气</strong>——它会通过属性平均值判定和高级事件被动成长。只需堆高主要属性，名气自然会随之提高。</p>
+<hr/>
+<h2 id="zh-the-daily-calculation--full-pipeline">每日计算——完整流程</h2>
+<p>时间推进并结算青楼一天的经营时，游戏会依次对每名工作员工执行约30个步骤，之后再计算青楼整体加成。完整顺序如下。</p>
+<h3 id="zh-pre-worker-setup">员工计算前的准备</h3>
+<ol>
+<li>初始化所有员工卧室等级（所有新员工默认为1级）。</li>
+<li>如果尚未迁移，便对基础属性应用迁移修正。</li>
+<li>读取服务房间状态：酒吧、护士室、保安室、厨房、秘密房间、主卧室、舞厅、VIP 休息室。</li>
+<li>确定每个房间的学徒人数。</li>
+<li>确定舞厅受训者（如有）——当天将她移出接客名单。</li>
+<li>建立非休息员工名单（不包括休息员工和舞厅受训者）。</li>
+<li><strong>处理每日事件</strong>——预先掷出成功／失败结果，并保存修正值（收入倍率、声望倍率，以及每名员工的压力／经验／生命／名气／忠诚变化）。</li>
+<li>掷出厨房学徒随机顾客（每名厨房学徒增加一名随机顾客，分配给工作员工）。</li>
+<li>掷出推广等级随机顾客（<code>random(0, promotion_level)</code> 名额外顾客，以相同方式分配）。</li>
+</ol>
+<h3 id="zh-per-worker-calculation-each-working-worker">单名员工计算（每名工作员工）</h3>
+<p>按以下顺序处理每名在职员工：</p>
+<ol start="10">
+<li><strong>补算忠诚衰减</strong>——仅限可拜访员工。从上次计算日期逐日推进至今天，对错过的每一天进行衰减判定。</li>
+<li><strong>拒绝工作检查</strong>——忠诚&lt;30且拒绝判定通过时，她的收入为$0并显示一条风味信息。跳至下一名员工。</li>
+<li><strong>读取基础属性</strong>——能力、外貌、魅力、耐力，以及员工物品为外貌和魅力提供的属性加成。</li>
+<li><strong>掷出每日顾客数：</strong><pre><code>clients = random(max(1, Ability÷10 − 2), Ability÷10 + 2)
+</code></pre>
+</li>
+<li><strong>将房间等级加成应用到顾客数：</strong>
+<ul>
+<li>2 级：顾客数 +0</li>
+<li>3 级：顾客数 +1</li>
+<li>4 级：顾客数 +2</li>
+<li>5 级：顾客数 +3</li>
+</ul>
+</li>
+<li><strong>应用酒吧学徒加成</strong>——如果她是酒吧学徒，顾客数 +2。</li>
+<li><strong>应用 VIP 休息室加成</strong>——如果她是 Vixen 或 VIP 学徒，顾客数 +1。</li>
+<li><strong>应用厨房学徒加成</strong>——如果她被随机选中，顾客数 +1（有多名学徒时可能更多）。</li>
+<li><strong>应用推广等级加成</strong>——如果她被随机选中，增加额外顾客。</li>
+<li><strong>应用员工物品顾客数加成</strong>——如果装备物品提供额外顾客。</li>
+<li><strong>计算基础收入区间：</strong><pre><code>base_min = min(Appearance, Charisma) ÷ 2
+base_max = max(Appearance, Charisma) × 2
+</code></pre>
+</li>
+<li><strong>将清洁度倍率</strong>应用到收入区间（见下文清洁度等级）。</li>
+<li><strong>将服装等级加成</strong>应用到收入区间：
+<ul>
+<li>L2：最大值×1.20</li>
+<li>L3：最小值×1.10、最大值×1.30</li>
+<li>L4：最小值×1.20、最大值×1.40</li>
+<li>L5：最小值×1.30、最大值×1.50</li>
+</ul>
+</li>
+<li><strong>将房间等级倍率</strong>应用到最大收入：
+<ul>
+<li>L2：×1.10</li>
+<li>L3：×1.25</li>
+<li>L4：×1.40</li>
+<li>L5：×1.60</li>
+</ul>
+</li>
+<li><strong>在最终区间内掷出每日薪资：</strong><code>random(min_income, max_income)</code>。</li>
+<li><strong>额外报酬判定：</strong><pre><code>bonus_chance = (Ability ÷ 2) + clients_today
+if random(1, 100) ≤ bonus_chance:
+    daily_pay × 2
+</code></pre>
+</li>
+<li><strong>应用每日事件修正</strong>（每员工效果：压力、经验、生命、名气、忠诚度变化；可能还有员工专属金钱倍率）。</li>
+<li><strong>应用员工物品收入加成</strong>（先加百分比，再加固定值）。</li>
+<li><strong>计算每日压力：</strong>
+<ul>
+<li>基础 10（若 Willow 当前在护士室，则为 7）</li>
+<li>耐力判定：<code>if random(1-100) ≤ Stamina, −2 stress</code></li>
+<li>超额顾客惩罚：<code>+1 stress per client above 2</code></li>
+<li>减去护士室（医务室）学徒数量（每名学徒 = 压力 −1）</li>
+<li>减去员工物品的压力减免</li>
+<li>最低为 0</li>
+<li>主卧室学徒：压力设为 0（免疫）</li>
+</ul>
+</li>
+<li><strong>将压力应用于员工</strong>（限制在 0–100）。</li>
+<li><strong>计算基础经验：</strong>
+<ul>
+<li>基础值 = 当日顾客数</li>
+<li>智力判定：<code>if random(1-100) ≤ Intelligence, EXP × 2</code></li>
+<li>加上秘密房间学徒数量（每名学徒 = 经验 +1）</li>
+<li>加上员工物品的固定经验加成</li>
+<li>应用员工物品的经验百分比加成</li>
+<li>主卧室学徒：经验 ×1.5</li>
+</ul>
+</li>
+<li><strong>应用每日事件经验</strong>（加入总量）。</li>
+<li><strong>判定名气增长：</strong><pre><code>stat_average = (Ability + Appearance + Charisma + Stamina + Intelligence + Dexterity) ÷ 6
+if random(1-100) ≤ stat_average: fame += 1
+</code></pre>
+</li>
+<li>将<strong>服装声望加成 + 房间声望加成 + 员工物品固定声望</strong>加入当天获得的名气。</li>
+<li><strong>高忠诚度奖励检查</strong>——仅限可拜访员工；若忠诚度 &gt; 80 且奖励判定成功：
+<ul>
+<li>**额外顾客：**顾客 +1 或 +2（每名顾客独立判定报酬）</li>
+<li>**收入提升：**每日薪资 ×1.25</li>
+<li>**声望提升：**当天名气 +2</li>
+</ul>
+</li>
+<li><strong>休息检查（工作后）：</strong>
+<ul>
+<li>若压力 &gt; 75：进入疲惫休息 2 天</li>
+<li>否则若生命 ≤ 0：进入病假（4 天；Willow 当前在职时为 3 天）</li>
+</ul>
+</li>
+<li><strong>VIP 休息室加成</strong>（Vixen + 学徒）：每日薪资 ×2（加成单独追踪）。</li>
+<li><strong>加入青楼整体总量：</strong><code>total_daily_income += daily_pay</code>、<code>total_reputation_gain += worker.fame</code>。</li>
+<li><strong>计算员工脏乱：</strong><pre><code>base_mess = clients_today
+mess_roll = random(1, 100)
+if mess_roll ≤ 10 + clients_today: mess × 2.0  (200%)
+elif mess_roll ≤ 20 + clients_today: mess × 1.5  (150%)
+elif mess_roll ≤ 30 + clients_today: mess × 1.25 (125%)
+else: mess × 1.0  (100%)
+</code></pre>
+</li>
+<li><strong>VIP 休息室脏乱惩罚</strong>（Vixen + 学徒）：员工脏乱 ×2。</li>
+</ol>
+<h3 id="zh-brothel-wide-bonuses-after-all-workers-processed">青楼整体加成（处理所有员工后）</h3>
+<ol start="40">
+<li><strong>声望收入加成：</strong><code>+5% per reputation level above 1</code>（所以神级声望 = +95%）。</li>
+<li>**圣诞花环加成：**持有时收入 +5%。当前计算不要求启用圣诞开关。</li>
+<li>**Patreon 大师加成：**启用时收入 +5%。</li>
+<li>**Elara 办公室学徒加成：**每名学徒收入 +5%。</li>
+<li>**酒吧加成：**持有酒吧时收入 +5%，每名酒吧学徒再 +1%。</li>
+<li>**装潢等级加成：**收入 <code>random(0, decor_level × 5)%</code>。</li>
+</ol>
+<h3 id="zh-tax--upkeep">税款与维护费</h3>
+<ol start="46">
+<li>从总收入（应用所有加成后）扣除 <strong>15% 税款</strong>。</li>
+<li>扣除<strong>每日维护费</strong>：<pre><code>upkeep = $60 base
+       + $20 × Master Bedroom level
+       + $20 × (sum of all worker bedroom levels)
+       + $20 × (sum of Bar, Maids' Quarters, Nurse's Room,
+                Security, Exterior, Dungeon levels)
+</code></pre>
+</li>
+<li><strong>计算净利润：</strong><code>income − tax − upkeep</code>。若为负数则设为 0（Elara 的保护）。</li>
+<li>**舞厅费用：**若已分配舞厅受训者，从净利润中扣除 15% 作为 Esperanza 的费用。</li>
+</ol>
+<h3 id="zh-cleanliness-calculation">清洁度计算</h3>
+<ol start="50">
+<li>**用于清洁度的总脏乱：**所有员工脏乱值之和 + 酒吧脏乱（基础 10 + 每名酒吧学徒 1）。<strong>注意：此步骤不计算怪物脏乱</strong>——怪物脏乱稍后会加入显示总量，但不会影响当天的清洁度下降。</li>
+<li><strong>应用女仆物品脏乱减免：</strong><code>mess × (1 − reduction_percent / 100) − reduction_flat</code>。</li>
+<li><strong>计算女仆清洁力：</strong><pre><code>base_cleaning = sum of each maid's level-based cleaning + items
+apprentice_cleaning = maids_quarters_apprentice_count × 10
+total_base = base + apprentice
+variance_min = 50 + variance_bonus
+variance_max = 150 + variance_bonus
+actual_cleaning = total_base × random(variance_min, variance_max) / 100
+</code></pre>
+</li>
+<li><strong>应用清洁度变化：</strong><code>new_cleanliness = clamp(0, 100, old + actual_cleaning − total_mess)</code>。</li>
+<li>**给予女仆经验：**每位已取得女仆获得 <code>actual_cleaning ÷ maid_count</code> 经验（最低 1）。</li>
+</ol>
+<h3 id="zh-reputation-bonus-pipeline">声望加成流程</h3>
+<ol start="55">
+<li>对总收入应用<strong>女仆物品的青楼财富百分比加成</strong>（在所有其他倍率之后）。</li>
+<li>对声望收益应用<strong>清洁度倍率</strong>：
+<ul>
+<li>恶心（0–4）：×0.0（不获得声望）</li>
+<li>污秽（5–14）：×0.25</li>
+<li>肮脏（15–29）：×0.5</li>
+<li>凌乱（30–44）：×0.75</li>
+<li>尚可（45–59）：×1.0</li>
+<li>清洁（60–74）：×1.2</li>
+<li>非常清洁（75–89）：×1.4</li>
+<li>一尘不染（90–100）：×1.6</li>
+</ul>
+</li>
+<li><strong>应用每日事件声望覆盖</strong>（若事件阻止声望则设为 0，否则应用事件倍率）。</li>
+<li><strong>推广等级声望加成：</strong><code>random(0, promotion_level × 10)%</code>。</li>
+<li><strong>装潢等级声望加成：</strong><code>random(0, decor_level × 5)%</code>。</li>
+<li>**圣诞花环声望加成：**持有时 +5%，与圣诞开关无关。</li>
+<li>**Patreon 大师声望加成：**启用时 +5%。</li>
+<li>**Elara 办公室学徒声望加成：**每名学徒 +5%。</li>
+<li>**酒吧学徒声望加成：**持有酒吧时 +5%，每名学徒再 +1%。</li>
+<li><strong>女仆物品声望加成</strong>（来自带有 brothel_reputation_percent 的物品）。</li>
+<li>**舞厅声望加成：**分配受训者时 +10%。</li>
+<li><strong>加入青楼声望点数：</strong><code>brothel_reputation_points += adjusted_reputation_gain</code>。</li>
+<li>根据新总点数<strong>更新声望等级</strong>。</li>
+</ol>
+<h3 id="zh-final-income-adjustments">最终收入调整</h3>
+<ol start="68">
+<li>对声望加成后的总量应用<strong>每日事件收入倍率</strong>。</li>
+<li>将<strong>怪物收入</strong>加入净利润（税款/维护费/舞厅费用之后）。</li>
+<li>将<strong>怪物脏乱</strong>加入总脏乱（清洁度步骤中已经计算）。</li>
+</ol>
+<h3 id="zh-daily-report-display">每日报告显示</h3>
+<ol start="71">
+<li>报告画面会显示每名员工的明细、全部已应用加成、触发的事件，以及可从 Elara 办公室领取的最终净利润。</li>
+</ol>
+<hr/>
+<h2 id="zh-cleanliness-tiers-income--reputation-effects">清洁度层级（收入与声望效果）</h2>
+<p>清洁度采用 0–100 刻度并分为 8 个层级。每个层级会对收入上下限和声望收益应用相同的倍率。</p>
+<div class="guide-table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th>清洁度</th>
+<th>层级</th>
+<th>最低收入</th>
+<th>最高收入</th>
+<th>声望倍率</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0–4</td>
+<td>恶心</td>
+<td>0%（零）</td>
+<td>100%</td>
+<td>×0.0（无声望）</td>
+</tr>
+<tr>
+<td>5–14</td>
+<td>污秽</td>
+<td>25%</td>
+<td>100%</td>
+<td>×0.25</td>
+</tr>
+<tr>
+<td>15–29</td>
+<td>肮脏</td>
+<td>50%</td>
+<td>100%</td>
+<td>×0.5</td>
+</tr>
+<tr>
+<td>30–44</td>
+<td>凌乱</td>
+<td>75%</td>
+<td>100%</td>
+<td>×0.75</td>
+</tr>
+<tr>
+<td>45–59</td>
+<td>尚可</td>
+<td>100%</td>
+<td>100%</td>
+<td>×1.0</td>
+</tr>
+<tr>
+<td>60–74</td>
+<td>清洁</td>
+<td>100%</td>
+<td>120%</td>
+<td>×1.2</td>
+</tr>
+<tr>
+<td>75–89</td>
+<td>非常清洁</td>
+<td>100%</td>
+<td>140%</td>
+<td>×1.4</td>
+</tr>
+<tr>
+<td>90–100</td>
+<td>一尘不染</td>
+<td>100%</td>
+<td><strong>160%</strong></td>
+<td><strong>×1.6</strong></td>
+</tr>
+</tbody>
+</table></div>
+<p>一尘不染每天都会让<strong>收入上限提高 60%，声望收益提高 60%</strong>。清洁度是游戏中收益杠杆最大的系统。</p>
+<hr/>
+<h2 id="zh-reputation-levels-20-tiers">声望等级（20 级）</h2>
+<p>声望以点数累积，再转换为等级。高于 1 的每个等级都会使当天收入 +5%。</p>
+<div class="guide-table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th>等级</th>
+<th>名称</th>
+<th>门槛</th>
+<th>收入加成</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>令人作呕</td>
+<td>0</td>
+<td>+0%</td>
+</tr>
+<tr>
+<td>2</td>
+<td>恶心</td>
+<td>500</td>
+<td>+5%</td>
+</tr>
+<tr>
+<td>3</td>
+<td>污秽</td>
+<td>1,500</td>
+<td>+10%</td>
+</tr>
+<tr>
+<td>4</td>
+<td>肮脏</td>
+<td>4,000</td>
+<td>+15%</td>
+</tr>
+<tr>
+<td>5</td>
+<td>破旧</td>
+<td>7,500</td>
+<td>+20%</td>
+</tr>
+<tr>
+<td>6</td>
+<td>差劲</td>
+<td>12,000</td>
+<td>+25%</td>
+</tr>
+<tr>
+<td>7</td>
+<td>平庸</td>
+<td>18,000</td>
+<td>+30%</td>
+</tr>
+<tr>
+<td>8</td>
+<td>尚可</td>
+<td>26,000</td>
+<td>+35%</td>
+</tr>
+<tr>
+<td>9</td>
+<td>还不错</td>
+<td>36,000</td>
+<td>+40%</td>
+</tr>
+<tr>
+<td>10</td>
+<td>良好</td>
+<td>50,000</td>
+<td>+45%</td>
+</tr>
+<tr>
+<td>11</td>
+<td>优良</td>
+<td>70,000</td>
+<td>+50%</td>
+</tr>
+<tr>
+<td>12</td>
+<td>优质</td>
+<td>95,000</td>
+<td>+55%</td>
+</tr>
+<tr>
+<td>13</td>
+<td>卓越</td>
+<td>125,000</td>
+<td>+60%</td>
+</tr>
+<tr>
+<td>14</td>
+<td>上乘</td>
+<td>160,000</td>
+<td>+65%</td>
+</tr>
+<tr>
+<td>15</td>
+<td>高级</td>
+<td>200,000</td>
+<td>+70%</td>
+</tr>
+<tr>
+<td>16</td>
+<td>奢华</td>
+<td>250,000</td>
+<td>+75%</td>
+</tr>
+<tr>
+<td>17</td>
+<td>精美绝伦</td>
+<td>310,000</td>
+<td>+80%</td>
+</tr>
+<tr>
+<td>18</td>
+<td>皇家</td>
+<td>380,000</td>
+<td>+85%</td>
+</tr>
+<tr>
+<td>19</td>
+<td>帝王级</td>
+<td>460,000</td>
+<td>+90%</td>
+</tr>
+<tr>
+<td>20</td>
+<td>神级</td>
+<td>550,000</td>
+<td><strong>+95%</strong></td>
+</tr>
+</tbody>
+</table></div>
+<hr/>
+<h2 id="zh-mess-generation-per-worker">脏乱生成（每名员工）</h2>
+<p>每名工作员工都会根据顾客数产生脏乱，并带有随机倍率：</p>
+<ul>
+<li><strong>基础脏乱</strong> = 当天服务的顾客数</li>
+<li><strong>脏乱判定：</strong><code>random(1, 100)</code>
+<ul>
+<li><code>≤ 10 + clients_today</code> → ×2.0（双倍脏乱）← 顾客越多越容易触发</li>
+<li><code>≤ 20 + clients_today</code> → ×1.5</li>
+<li><code>≤ 30 + clients_today</code> → ×1.25</li>
+<li>否则 → ×1.0</li>
+</ul>
+</li>
+</ul>
+<p>因此，一名接待 8 位顾客的员工有 18% 概率产生双倍脏乱、28% 概率产生 1.5 倍、38% 概率产生 1.25 倍，只有 16% 概率维持基础脏乱值。<strong>更多顾客不仅意味着更多基础脏乱，还会加剧脏乱波动。</strong></p>
+<p>受益于 VIP 休息室的员工（Vixen + 学徒）还会在上述计算后<strong>将最终脏乱翻倍</strong>。</p>
+<hr/>
+<h2 id="zh-maid-cleaning-system">女仆清洁系统</h2>
+<p>女仆清洁力与各员工产生的脏乱分别计算，并在日末从总脏乱中扣除。</p>
+<h3 id="zh-per-maid-base-cleaning-by-level">各等级女仆基础清洁力</h3>
+<div class="guide-table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th>等级</th>
+<th>基础清洁力</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>10</td>
+</tr>
+<tr>
+<td>2</td>
+<td>15</td>
+</tr>
+<tr>
+<td>3</td>
+<td>20</td>
+</tr>
+<tr>
+<td>4</td>
+<td>25</td>
+</tr>
+<tr>
+<td>5</td>
+<td>30</td>
+</tr>
+<tr>
+<td>6（MAX）</td>
+<td>40</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="zh-maid-total-cleaning-formula">女仆总清洁力公式</h3>
+<pre><code>For each acquired maid:
+    her_cleaning = base_level_cleaning + flat_item_bonuses
+    her_cleaning = her_cleaning × (1 + percent_item_bonuses / 100)
+    total += her_cleaning
+
+team_global_flat_bonus = sum of all_maids_cleaning_flat items
+team_global_percent_bonus = sum of all_maids_cleaning_percent items
+total = total × (1 + team_global_percent / 100) + team_global_flat
+
+apprentice_cleaning = maids_quarters_apprentices × 10
+total_base = total + apprentice_cleaning
+
+variance_bonus = sum of cleaning_variance_bonus from items
+variance_min = 50 + variance_bonus
+variance_max = 150 + variance_bonus
+final_cleaning = total_base × random(variance_min, variance_max) / 100
+</code></pre>
+<h3 id="zh-daily-cleanliness-resolution">每日清洁度结算</h3>
+<pre><code>new_cleanliness = clamp(0, 100, old + final_cleaning − total_mess)
+</code></pre>
+<p>脏乱一旦开始超过女仆清洁力，清洁度就会每天下降，直到收入／声望倍率崩溃。请增加女仆物品、提高女仆等级或安排女仆宿舍学徒，使清洁力持续高于脏乱增长。</p>
+<hr/>
+<h2 id="zh-daily-stress-math">每日压力计算</h2>
+<p>每名员工每天工作时：</p>
+<pre><code>daily_stress = 10  (or 7 if Willow active in Nurse's Room)
+if random(1-100) ≤ Stamina:
+    daily_stress -= 2
+if clients_today &gt; 2:
+    daily_stress += (clients_today - 2)
+daily_stress -= infirmary_apprentice_count   # 1 per apprentice
+daily_stress -= worker_item_stress_reduction
+daily_stress = max(0, daily_stress)
+
+if worker is Master Bedroom apprentice:
+    daily_stress = 0  (immune)
+
+worker.stress = clamp(0, 100, worker.stress + daily_stress)
+
+if worker.stress &gt; 75: enter 2-day exhausted rest
+</code></pre>
+<hr/>
+<h2 id="zh-health--sick-rest">生命与病假</h2>
+<p>生命上限：<code>max(100, Stamina × 10)</code>；拥有<strong>钢铁体魄</strong>技能时 ×1.5。</p>
+<p>生命伤害来源：</p>
+<ul>
+<li>每日事件失败（例如粗暴顾客 = 生命 −12）</li>
+<li>训练压力溢出（压力超过 100 的部分会以 2 倍转化为生命伤害）</li>
+</ul>
+<p>生命降至 0 时：</p>
+<ul>
+<li>进入病假：<strong>4 天</strong>（若 Willow 当前在职则为 <strong>3 天</strong>）</li>
+<li>休息期间：收入 $0、无顾客、无经验</li>
+<li>休息结束时：压力 → 0、生命 → 上限</li>
+</ul>
+<hr/>
+<h2 id="zh-refuse-to-work-strike">拒绝工作（罢工）</h2>
+<p>仅适用于<strong>可拜访员工</strong>（拥有拜访员工内容的 16 人；Raven、Foxy、Lindia、Whiskers 等已招募但不可拜访的员工永远不会罢工）。</p>
+<p>每天工作时，若：</p>
+<ul>
+<li><code>loyalty &lt; 30</code>，且</li>
+<li><code>random(1-100) ≤ refuse_chance</code>（每员工属性）</li>
+</ul>
+<p>她便会拒绝工作。收入为 $0，不接待顾客，也不产生脏乱。每日报告会显示一条风味信息。</p>
+<p>**解决方法：**通过拜访员工（礼物、赞美、交谈、训练）把忠诚度提高到 30 以上。</p>
+<hr/>
+<h2 id="zh-high-loyalty-bonus">高忠诚度奖励</h2>
+<p>仅适用于<strong>可拜访员工</strong>。</p>
+<p>每天工作时，若：</p>
+<ul>
+<li><code>loyalty &gt; 80</code>，且</li>
+<li><code>random(1-100) ≤ bonus_chance</code>（每员工属性）</li>
+</ul>
+<p>会随机触发以下三种奖励之一：</p>
+<ul>
+<li>**额外顾客：**顾客 +1 或 +2（每名顾客独立判定报酬）</li>
+<li>**收入提升：**每日薪资 ×1.25</li>
+<li>**声望提升：**当天名气 +2</li>
+</ul>
+<hr/>
+<h2 id="zh-income-bonus-pipeline-stacking-order">收入加成流程（叠加顺序）</h2>
+<p>收入计算包含许多可叠加的百分比加成，按以下顺序应用：</p>
+<ol>
+<li>员工基础薪资（清洁度、服装、房间倍率和额外报酬判定后）</li>
+<li>
+<ul>
+<li>每日事件收入倍率（每员工，若适用）</li>
+</ul>
+</li>
+<li>
+<ul>
+<li>员工物品收入加成（每员工）</li>
+</ul>
+</li>
+<li><strong>青楼总收入</strong> = 所有员工薪资之和</li>
+<li>
+<ul>
+<li>声望收入加成：<code>+5% × (reputation_level − 1)</code></li>
+</ul>
+</li>
+<li>
+<ul>
+<li>圣诞花环：+5%（若持有）</li>
+</ul>
+</li>
+<li>
+<ul>
+<li>Patreon 大师：+5%（若拥有）</li>
+</ul>
+</li>
+<li>
+<ul>
+<li>Elara 的办公室：每名学徒 +5%（最高 +15%）</li>
+</ul>
+</li>
+<li>
+<ul>
+<li>酒吧：持有时 +5%，每名学徒 +1%（最高 +8%）</li>
+</ul>
+</li>
+<li>
+<ul>
+<li>装潢等级：随机 0 至（装潢等级 × 5）%</li>
+</ul>
+</li>
+<li><strong>小计</strong></li>
+<li><strong>−15% 税款</strong></li>
+<li><strong>− 每日维护费</strong></li>
+<li><strong>= 净利润</strong>（受 Elara 保护，最低为 $0）</li>
+<li><strong>−15% 舞厅费用</strong>（分配舞厅受训者时，仅从正数净利润扣除）</li>
+<li><strong>+ 怪物收入</strong>（在维护费/税款/舞厅费用后加入）</li>
+<li><strong>= 最终待领取金额</strong></li>
+</ol>
+<p>**关于女仆物品的青楼财富加成：**该加成是在用于净利润的收入数值已经扣除税款与维护费之后才计算。按当前代码，女仆财富加成会提高显示的总收入，却不会实际增加玩家净利润。这可能是错误；若它会影响你的策略，请向开发者确认。</p>
+<h3 id="zh-theoretical-maximum-daily-bonuses">理论最高每日加成</h3>
+<p>若叠加全部效果（假设装潢等级上限为 10——请向开发者确认）：</p>
+<ul>
+<li>声望加成（神级）：+95%</li>
+<li>圣诞花环：+5%</li>
+<li>Patreon 大师：+5%</li>
+<li>办公室（3 名学徒）：+15%</li>
+<li>酒吧（3 名学徒）：+8%</li>
+<li>装潢（10 级，最高判定）：最高 +50%</li>
+</ul>
+<p>最佳判定条件下，税前可叠加加成总计：<strong>+178%</strong>。</p>
+<hr/>
+<h2 id="zh-daily-event-success-calculation">每日事件成功计算</h2>
+<p>每个每日事件都有一个 <code>success_condition</code> 区块，位于 <code>brothel_daily_events.json</code> 中，用于定义成功率的计算方式。共有四种条件类型，各自使用不同公式。计算基础概率后会加入修正，再限制在 5% 至 95% 范围内并进行判定。</p>
+<h3 id="zh-condition-types">条件类型</h3>
+<p><strong>1. <code>average_stat</code></strong>——计算所有当前员工某项属性的平均值。</p>
+<pre><code>total_stat = sum of (worker[stat] for each active worker)
+avg_stat = total_stat / active_worker_count
+success_chance = avg_stat + (bonus_per_worker × active_worker_count)
+</code></pre>
+<p><strong>2. <code>average_two_stats</code></strong>——计算所有当前员工两项属性合并后的平均值。</p>
+<pre><code>avg_stat1 = sum(worker[stat1]) / active_worker_count
+avg_stat2 = sum(worker[stat2]) / active_worker_count
+combined_avg = (avg_stat1 + avg_stat2) / 2
+success_chance = combined_avg + (bonus_per_worker × active_worker_count)
+</code></pre>
+<p><strong>3. <code>highest_stat</code></strong>——取每名员工 6 项主要属性中的最高值，再计算平均值。</p>
+<pre><code>for each worker:
+    her_best = max(stamina, intelligence, dexterity, ability, appearance, charisma)
+avg_highest = sum(each worker's best) / active_worker_count
+success_chance = avg_highest + (bonus_per_worker × active_worker_count)
+</code></pre>
+<p><strong>4. <code>specific_worker</code></strong>——使用所选员工的属性加固定基础概率。</p>
+<pre><code>success_chance = selected_worker[stat] + base_chance
+</code></pre>
+<h3 id="zh-modifiers-applied-after-base-calculation">基础计算后的修正</h3>
+<p>条件类型公式完成后，依序加入以下数值：</p>
+<ol>
+<li><strong>持有保安室：</strong>+8%（已建造保安室时）</li>
+<li>**保安室学徒：**每名 +5%（3 名学徒时最高 +15%）——保安室总叠加最高 +23%</li>
+<li>**员工物品事件加成：**汇总所有当前员工已装备物品的 <code>event_success_bonus</code></li>
+</ol>
+<h3 id="zh-final-clamp--roll">最终限制与判定</h3>
+<pre><code>success_chance = clamp(5, 95, success_chance)
+roll = random(1, 100)
+success = roll ≤ success_chance
+</code></pre>
+<p>5–95% 的限制意味着<strong>任何事件都不可能必胜或必败</strong>——即使属性平均值为 0，仍有 5% 成功率；即使属性全满且加成齐备，仍有 5% 失败率。</p>
+<h3 id="zh-worked-examples">计算示例</h3>
+<p><strong>示例 1——average_stat（魅力，bonus_per_worker: 3，5 名当前员工）：</strong>
+员工魅力分别为 30、45、22、60、38。</p>
+<ul>
+<li>平均值 = (30+45+22+60+38) / 5 = 39</li>
+<li>成功率 = 39 + (3 × 5) = 54%</li>
+<li>保安室 + 2 名学徒：54 + 8 + 10 = 72%</li>
+<li>限制后：72%</li>
+</ul>
+<p><strong>示例 2——specific_worker（智力，base_chance: 25，所选员工智力 18）：</strong></p>
+<ul>
+<li>成功率 = 18 + 25 = 43%</li>
+<li>保安室 + 3 名学徒：43 + 8 + 15 = 66%</li>
+<li>限制后：66%</li>
+</ul>
+<p><strong>示例 3——highest_stat（4 名当前员工）：</strong>
+员工最高属性分别为 65、40、80、25。</p>
+<ul>
+<li>avg_highest = (65+40+80+25) / 4 = 52.5</li>
+<li>成功率 = 52.5 + (bonus × 4)</li>
+</ul>
+<h3 id="zh-strategic-implications">策略意义</h3>
+<ul>
+<li><strong>保安室学徒是强力事件加成</strong>——从 0 名增至 3 名，会让大多数事件成功率提高 +15%，常能把 50/50 的局面变成近乎稳胜。</li>
+<li>对 <code>average_*</code> 和 <code>highest_stat</code> 事件而言，<strong>更多当前员工总是有帮助</strong>，因为 <code>bonus_per_worker × count</code> 会线性增长。即使低属性员工也会贡献每员工加成。</li>
+<li><strong><code>specific_worker</code> 事件忽略员工人数</strong>——只使用所选员工属性 + 基础概率（之后再由保安室和物品修正）。</li>
+<li>带有 <code>event_success_bonus</code> 的<strong>员工物品</strong>会跨整个员工名单叠加——若每名员工都装备一个，总量会相当可观。</li>
+</ul>
+<hr/>
+<h2 id="zh-worker-stat-caps">员工属性上限</h2>
+<p>所有员工主要属性（耐力、智力、灵巧、能力、外貌、魅力）和消耗品库存数量的<strong>上限均为 999</strong>。上限在以下位置强制执行：</p>
+<ul>
+<li><code>brothel_training_system.rpy</code>——礼物消耗品通过 <code>min(999, current + 1)</code> 限制</li>
+<li>玩家消耗品库存——物品数量同样以 999 为上限</li>
+</ul>
+<p>属性无论来自礼物、训练、技能、物品或事件，均无法超过 999。实际设计平衡以 1–100 范围为准，因此 999 主要是安全网而非培养目标。杂技（检定时灵巧/能力 +20）和钢铁体魄（生命上限 ×1.5）等技能会应用在原始属性之上，但不会改变存储值。</p>
+<p>忠诚度与压力上限为 100。生命上限取员工的计算值（<code>Stamina × 10</code>；拥有钢铁体魄时 ×1.5）。</p>
+<hr/>
+<h2 id="zh-reputation-bonus-pipeline-stacking-order">声望加成流程（叠加顺序）</h2>
+<ol>
+<li>基础声望收益 = 工作员工名气之和</li>
+<li>× 清洁度倍率（×0.0 至 ×1.6）</li>
+<li>× 每日事件声望倍率（或覆盖为 0）</li>
+<li>
+<ul>
+<li>推广等级：随机 0 至（推广等级 × 10）%</li>
+</ul>
+</li>
+<li>
+<ul>
+<li>装潢等级：随机 0 至（装潢等级 × 5）%</li>
+</ul>
+</li>
+<li>
+<ul>
+<li>圣诞花环：+5%</li>
+</ul>
+</li>
+<li>
+<ul>
+<li>Patreon 大师：+5%</li>
+</ul>
+</li>
+<li>
+<ul>
+<li>Elara 的办公室：每名学徒 +5%</li>
+</ul>
+</li>
+<li>
+<ul>
+<li>酒吧：持有时 +5%，每名学徒 +1%</li>
+</ul>
+</li>
+<li>
+<ul>
+<li>女仆物品声望百分比</li>
+</ul>
+</li>
+<li>
+<ul>
+<li>舞厅：分配受训者时 +10%</li>
+</ul>
+</li>
+<li>= 加入青楼总量的最终声望收益</li>
+</ol>
+<hr/>
+<h2 id="zh-specialty-room-apprentice-effects-quick-reference">专用房间学徒效果（速查）</h2>
+<div class="guide-table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th>房间</th>
+<th>导师</th>
+<th>每名学徒效果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>主卧室</td>
+<td>玩家</td>
+<td>经验 +50%，免疫所有压力</td>
+</tr>
+<tr>
+<td>Elara 的办公室</td>
+<td>Elara</td>
+<td>收入 +5%、声望 +5%</td>
+</tr>
+<tr>
+<td>女仆宿舍</td>
+<td>女仆</td>
+<td>清洁力 +10</td>
+</tr>
+<tr>
+<td>护士室</td>
+<td>Willow</td>
+<td>所有员工每日压力 −1</td>
+</tr>
+<tr>
+<td>保安室</td>
+<td>Valkyra</td>
+<td>每日事件成功率 +5%</td>
+</tr>
+<tr>
+<td>酒吧</td>
+<td>Sherry/Brandy</td>
+<td>收入 +1%、声望 +1%、脏乱 +1；学徒顾客 +2</td>
+</tr>
+<tr>
+<td>厨房</td>
+<td>Poppy</td>
+<td>客房服务 −10 分钟、每项属性恢复 +10、随机顾客 +1</td>
+</tr>
+<tr>
+<td>秘密房间</td>
+<td>Azariel</td>
+<td>所有员工每日经验 +1</td>
+</tr>
+<tr>
+<td>VIP 休息室</td>
+<td>Vixen</td>
+<td>每名 VIP 员工（Vixen + 学徒）：薪资 ×2、顾客 +1、脏乱 ×2</td>
+</tr>
+<tr>
+<td>舞厅</td>
+<td>Esperanza</td>
+<td>仅 1 个栏位——受训者获得 60–100+ 经验、青楼声望 +10%、Esperanza 收取净利润的 15%</td>
+</tr>
+<tr>
+<td>地牢</td>
+<td>Raven</td>
+<td><em>效果将在未来更新中加入</em></td>
+</tr>
+<tr>
+<td>奥术房间</td>
+<td>Blinky</td>
+<td><em>效果将在未来更新中加入</em></td>
+</tr>
+</tbody>
+</table></div>
+<hr/>
+<h2 id="zh-bedroom-level-effects-per-worker">卧室等级效果（每名员工）</h2>
+<div class="guide-table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th>房间等级</th>
+<th>最高收入</th>
+<th>每名员工声望</th>
+<th>额外顾客</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>基准</td>
+<td>+0</td>
+<td>+0</td>
+</tr>
+<tr>
+<td>2</td>
+<td>×1.10</td>
+<td>+1</td>
+<td>+0</td>
+</tr>
+<tr>
+<td>3</td>
+<td>×1.25</td>
+<td>+3</td>
+<td>+1</td>
+</tr>
+<tr>
+<td>4</td>
+<td>×1.40</td>
+<td>+5</td>
+<td>+2</td>
+</tr>
+<tr>
+<td>5</td>
+<td>×1.60</td>
+<td>+7</td>
+<td>+3</td>
+</tr>
+</tbody>
+</table></div>
+<p>**复合效果：**额外顾客还会提高额外报酬概率（<code>Ability/2 + clients_today</code>），所以 5 级卧室既提高最高薪资，也提高薪资翻倍概率。</p>
+<hr/>
+<h2 id="zh-clothing-level-effects-per-worker">服装等级效果（每名员工）</h2>
+<div class="guide-table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th>服装等级</th>
+<th>最低收入</th>
+<th>最高收入</th>
+<th>声望加成</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>基准</td>
+<td>基准</td>
+<td>+0</td>
+</tr>
+<tr>
+<td>2</td>
+<td>—</td>
+<td>×1.20</td>
+<td>+1</td>
+</tr>
+<tr>
+<td>3</td>
+<td>×1.10</td>
+<td>×1.30</td>
+<td>+2</td>
+</tr>
+<tr>
+<td>4</td>
+<td>×1.20</td>
+<td>×1.40</td>
+<td>+3</td>
+</tr>
+<tr>
+<td>5</td>
+<td>×1.30</td>
+<td>×1.50</td>
+<td>+4</td>
+</tr>
+</tbody>
+</table></div>
+<hr/>
+<h2 id="zh-house-upgrade-levels">场所升级等级</h2>
+<p><strong>推广等级</strong>（从 1 开始）：</p>
+<ul>
+<li>每天额外增加 <code>random(0, level)</code> 名顾客，并在员工之间分配</li>
+<li>声望获得 <code>random(0, level × 10)%</code> 加成</li>
+</ul>
+<p><strong>装潢等级</strong>（从 0 开始）：</p>
+<ul>
+<li>收入获得 <code>random(0, level × 5)%</code> 加成</li>
+<li>声望获得 <code>random(0, level × 5)%</code> 加成</li>
+<li>每天独立判定</li>
+</ul>
+<p><strong>人脉等级</strong>（从 0 开始）：</p>
+<ul>
+<li>已在代码中定义，但机制效果尚未实装</li>
+</ul>
+<hr/>
+<h2 id="zh-a-worked-example--daily-income-for-one-worker">计算示例——一名员工的每日收入</h2>
+<p>**设置：**Sandra（4 号员工）</p>
+<ul>
+<li>属性：耐力 18、智力 22、灵巧 20、能力 12、外貌 30、魅力 35</li>
+<li>卧室：3 级</li>
+<li>服装：2 级</li>
+<li>青楼：清洁度 80（非常清洁）、声望等级 8（尚可）</li>
+<li>办公室有 2 名学徒，装潢等级 5</li>
+</ul>
+<p><strong>步骤 1——顾客：</strong><code>random(1, max(1, 12÷10 − 2), 12÷10 + 2) = random(1, 3)</code> → 假设掷出 3。
+**步骤 2——房间 L3 加成：**顾客 +1 → 4 名顾客。</p>
+<p><strong>步骤 3——收入范围：</strong></p>
+<ul>
+<li><code>min = min(30, 35) ÷ 2 = 15</code></li>
+<li><code>max = max(30, 35) × 2 = 70</code></li>
+<li>清洁度非常清洁：最高值 ×1.4 → 98</li>
+<li>服装 L2：最高值 ×1.2 → 117</li>
+<li>房间 L3：最高值 ×1.25 → 146</li>
+<li>最终范围：$15–$146</li>
+</ul>
+<p>**步骤 4——判定每日薪资：**假设 <code>random(15, 146) = $82</code>。</p>
+<p><strong>步骤 5——额外报酬判定：</strong><code>bonus_chance = 12÷2 + 4 = 10</code>。<code>random(1, 100) = 67</code>——失败。薪资维持 $82。</p>
+<p><strong>步骤 6——对总量应用全青楼加成</strong>（为便于说明，假设她的 $82 是唯一员工收入）：</p>
+<ul>
+<li>声望 +35%（8 级）：$82 × 1.35 = $110.70</li>
+<li>办公室 +10%（2 名学徒）：× 1.10 = $121.77</li>
+<li>装潢：random(0, 5×5) = 假设加成 12%：× 1.12 = $136.38</li>
+<li>扣除 15% 税款后：$115.92</li>
+<li>扣除维护费（$60 基础 + $20×1 主卧室 + $20×3 Sandra 的卧室 = $140）：<strong>净利润 = $0</strong>（Elara 出手挽救）</li>
+</ul>
+<p>在这个例子中，单靠这名员工无法盈利。再增加 3 名以上员工，收入总量便会明显超过维护费门槛。</p>
+<hr/>
+<h2 id="zh-summary-what-to-optimize-first">总结：优先优化什么</h2>
+<p>训练机会有限时，最佳投入顺序如下：</p>
+<ol>
+<li><strong>清洁度优先</strong>——始终维持在 60 以上，最好达到 90+（一尘不染 = 收入/声望提高 60%）</li>
+<li>提高每名员工的<strong>能力</strong>——最大收入杠杆</li>
+<li><strong>外貌 + 魅力同时提高</strong>——配对属性，必须两者兼顾</li>
+<li><strong>声望</strong>——每级令收入 +5%；Patreon 大师和圣诞花环也会提供加成</li>
+<li><strong>耐力</strong>——避免员工频繁休息</li>
+<li><strong>智力</strong>——经验翻倍，实现属性复利成长</li>
+<li><strong>灵巧</strong>——至少培养一两名员工，以覆盖相关事件</li>
+<li><strong>办公室学徒 ×3</strong>——收入/声望 +15%，没有副作用</li>
+<li><strong>女仆等级</strong>——让清洁力持续高于脏乱</li>
+<li>将当前员工的<strong>卧室升至 3 级以上</strong>——提高收入、顾客数和额外报酬概率</li>
+</ol>
+<hr/>
+<p><em>本文档是当前游戏版本青楼系统的快照。随着系统继续完善和平衡，数值可能在未来更新中变化。有关青楼日常经营的策略指导，请参阅 <code>brothel.md</code>。</em></p>
+</div>
+        <div class="guide-community-note"><div><strong data-copy-en="Community discoveries" data-copy-zh="社区发现">Community discoveries</strong><p data-copy-en="These official guides track the current game. The player-maintained wiki may contain additional strategies and discoveries." data-copy-zh="这些官方攻略与当前游戏版本保持一致；玩家维护的 Wiki 可能还收录其他策略与社区发现。">These official guides track the current game. The player-maintained wiki may contain additional strategies and discoveries.</p></div><a href="https://chronoromancer.miraheze.org/wiki/Main_Page" target="_blank" rel="noopener noreferrer" data-copy-en="Visit Player Wiki →" data-copy-zh="访问玩家 Wiki →">Visit Player Wiki →</a></div>
+        <nav class="guide-pager" aria-label="Adjacent guides"><a href="blacksmith_and_forge.html"><span data-copy-en="Previous guide" data-copy-zh="上一篇攻略">Previous guide</span><strong data-copy-en="Blacksmith &amp; Forge — Complete Guide" data-copy-zh="铁匠与熔炉——完整指南">Blacksmith &amp; Forge — Complete Guide</strong></a><a href="caterpillar_rearing.html"><span data-copy-en="Next guide" data-copy-zh="下一篇攻略">Next guide</span><strong data-copy-en="Caterpillar Rearing - Complete System Guide" data-copy-zh="毛虫繁育——完整系统指南">Caterpillar Rearing - Complete System Guide</strong></a></nav>
+      </article>
+    </div>
+  </main>
+  <footer class="site-footer"><div class="container"><div class="footer-grid">
+    <div class="footer-brand"><img src="../assets/images/v2/logo.png" alt="Chronoromancer"><p data-i18n="footerDescription">An adults-only time-travel sandbox RPG. Public website artwork is SFW.</p></div>
+    <div class="footer-column"><h2 data-i18n="footerExplore">Explore</h2><a href="../story.html" data-i18n="navStory">Story</a><a href="../characters.html" data-i18n="navCharacters">Characters</a><a href="../walkthroughs.html" data-i18n="navGuides">Guides</a><a href="../screenshots.html" data-i18n="navGallery">Gallery</a><a href="../main.html#download" data-i18n="navDownload">Download</a></div>
+    <div class="footer-column"><h2 data-i18n="footerCommunity">Community</h2><a data-config-link="community.discord" target="_blank" rel="noopener noreferrer">Discord</a><a data-config-link="community.telegram" target="_blank" rel="noopener noreferrer">Telegram</a><a data-config-link="community.patreon" target="_blank" rel="noopener noreferrer">Patreon</a><a data-config-link="community.wiki" target="_blank" rel="noopener noreferrer" data-i18n="navWiki">Player Wiki</a></div>
+    <div class="footer-column"><h2 data-i18n="footerLegal">Legal</h2><a href="../privacy.html" data-i18n="footerPrivacy">Privacy</a><a href="../terms.html" data-i18n="footerTerms">Terms</a></div>
+  </div><div class="footer-bottom"><span>© <span data-current-year></span> <span data-i18n="copyright">Chronoromancer Studio. All rights reserved.</span></span><span data-copy-en="Official guides · English / Simplified Chinese" data-copy-zh="官方攻略 · English / 简体中文">Official guides · English / Simplified Chinese</span></div></div></footer>
+  <script src="../assets/js/site-config.js"></script><script src="../assets/js/site.js"></script><script src="../assets/js/walkthroughs.js"></script>
+</body></html>

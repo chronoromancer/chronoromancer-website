@@ -1,0 +1,1247 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="This guide expands on Sh1n7&#x27;s community-created Lindia wiki page, used under CC BY-SA 4.0. Requirements and mechanics below were rechecked against the current game source."><link rel="icon" type="image/png" href="../assets/images/v2/favicon.png">
+  <link rel="stylesheet" href="../assets/css/style.css"><link rel="stylesheet" href="../assets/css/walkthroughs.css">
+  <title>Lindia Walkthrough | Chronoromancer Guides</title></head>
+<body class="guide-page" data-title-en="Lindia Walkthrough | Chronoromancer Guides" data-title-zh="Lindia攻略 | Chronoromancer 官方攻略">
+  <div class="reading-progress" data-reading-progress></div>
+  <a class="skip-link" href="#content" data-copy-en="Skip to content" data-copy-zh="跳至正文">Skip to content</a>
+  <div class="maturity-bar" data-copy-en="18+ adults-only game · Guides may describe mature game systems" data-copy-zh="18+ 仅限成人游戏 · 攻略可能涉及成人游戏系统">18+ adults-only game · Guides may describe mature game systems</div>
+  <header class="site-header"><div class="container header-inner">
+    <a class="brand" href="../main.html" aria-label="Chronoromancer home"><img src="../assets/images/v2/logo.png" alt="Chronoromancer"></a>
+    <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-label="Open navigation"><span></span><span></span><span></span></button>
+    <nav class="site-nav" data-nav-menu aria-label="Primary navigation">
+      <a href="../main.html" data-i18n="navHome">Home</a>
+      <a href="../story.html" data-i18n="navStory">Story</a>
+      <a href="../characters.html" data-i18n="navCharacters">Characters</a>
+      <a class="is-active" href="../walkthroughs.html" data-i18n="navGuides">Guides</a>
+      <a href="../screenshots.html" data-i18n="navGallery">Gallery</a>
+      <a data-config-link="community.wiki" target="_blank" rel="noopener noreferrer" data-i18n="navWiki">Player Wiki</a>
+      <a href="../main.html#download" data-i18n="navDownload">Download</a>
+      <div class="language-switch" role="group" aria-label="Language"><button type="button" data-language="en" aria-pressed="true">EN</button><button type="button" data-language="zh" aria-pressed="false">简体中文</button></div>
+    </nav>
+  </div></header>
+  <main id="content">
+    <section class="guide-masthead"><div class="container">
+      <nav class="breadcrumb" aria-label="Breadcrumb"><a href="../walkthroughs.html" data-copy-en="Official Guides" data-copy-zh="官方攻略">Official Guides</a><span>/</span><span data-copy-en="Character Routes" data-copy-zh="角色路线">Character Routes</span></nav>
+      <p class="eyebrow" data-copy-en="Version-matched official guide" data-copy-zh="与当前版本匹配的官方攻略">Version-matched official guide</p>
+      <h1 data-copy-en="Lindia Walkthrough" data-copy-zh="Lindia攻略">Lindia Walkthrough</h1>
+      <div class="guide-meta"><span data-copy-en="Character Routes" data-copy-zh="角色路线">Character Routes</span><span data-copy-en="Simplified Chinese available" data-copy-zh="简体中文译文已上线">Simplified Chinese available</span><span data-site-version>V0.9.6.0</span></div>
+    </div></section>
+    <div class="container guide-layout">
+      <aside class="guide-sidebar">
+        <a class="back-to-library" href="../walkthroughs.html" data-copy-en="← All guides" data-copy-zh="← 全部攻略">← All guides</a>
+        <div data-lang-panel="en"><h2>On this page</h2><nav class="guide-toc"><a class="toc-level-2" href="#at-a-glance">At a Glance</a><a class="toc-level-2" href="#recruiting-lindia">Recruiting Lindia</a><a class="toc-level-3" href="#floor-7-battle-advice">Floor 7 battle advice</a><a class="toc-level-2" href="#where-to-find-her">Where to Find Her</a><a class="toc-level-2" href="#relationship-basics">Relationship Basics</a><a class="toc-level-3" href="#repeatable-actions">Repeatable actions</a><a class="toc-level-2" href="#training-room-progression">Training Room Progression</a><a class="toc-level-3" href="#first-visit-lindia-at-the-training-room">First visit: Lindia at the Training Room</a><a class="toc-level-3" href="#spell-control-notes">Spell Control Notes</a><a class="toc-level-3" href="#automatic-character-plots">Automatic character plots</a><a class="toc-level-2" href="#heart-to-hearts">Heart-to-Hearts</a><a class="toc-level-3" href="#controlled-magic">Controlled Magic</a><a class="toc-level-3" href="#close-enough">Close Enough</a><a class="toc-level-3" href="#sunset-walk-with-lindia">Sunset Walk with Lindia</a><a class="toc-level-2" href="#bazaar-date">Bazaar Date</a><a class="toc-level-2" href="#lindia-as-a-rose--thorn-worker">Lindia as a Rose &amp; Thorn Worker</a><a class="toc-level-2" href="#sirena-isle-resort-content">Sirena Isle Resort Content</a><a class="toc-level-2" href="#elemental-stone-bond">Elemental Stone Bond</a><a class="toc-level-2" href="#recommended-route">Recommended Route</a><a class="toc-level-2" href="#troubleshooting">Troubleshooting</a><a class="toc-level-3" href="#lindia-is-not-at-the-bar">Lindia is not at the Bar</a><a class="toc-level-3" href="#her-next-plot-will-not-trigger">Her next plot will not trigger</a><a class="toc-level-3" href="#spell-control-notes-is-missing">Spell Control Notes is missing</a><a class="toc-level-3" href="#close-enough-is-missing">Close Enough is missing</a><a class="toc-level-3" href="#intimate-bonding-is-missing">Intimate Bonding is missing</a><a class="toc-level-2" href="#source-reference">Source Reference</a></nav></div>
+        <div data-lang-panel="zh" hidden><h2>本页目录</h2><nav class="guide-toc"><a class="toc-level-2" href="#zh-at-a-glance">一览</a><a class="toc-level-2" href="#zh-recruiting-lindia">招募Lindia</a><a class="toc-level-3" href="#zh-floor-7-battle-advice">第7层战斗建议</a><a class="toc-level-2" href="#zh-where-to-find-her">去哪里找她</a><a class="toc-level-2" href="#zh-relationship-basics">关系基础</a><a class="toc-level-3" href="#zh-repeatable-actions">可重复行动</a><a class="toc-level-2" href="#zh-training-room-progression">训练室推进内容</a><a class="toc-level-3" href="#zh-first-visit-lindia-at-the-training-room">初次到访：训练室里的Lindia</a><a class="toc-level-3" href="#zh-spell-control-notes">法术控制笔记</a><a class="toc-level-3" href="#zh-automatic-character-plots">自动角色剧情</a><a class="toc-level-2" href="#zh-heart-to-hearts">谈心</a><a class="toc-level-3" href="#zh-controlled-magic">可控的魔法</a><a class="toc-level-3" href="#zh-close-enough">足够亲近</a><a class="toc-level-3" href="#zh-sunset-walk-with-lindia">与Lindia的日落散步</a><a class="toc-level-2" href="#zh-bazaar-date">集市约会</a><a class="toc-level-2" href="#zh-lindia-as-a-rose--thorn-worker">Lindia作为玫瑰与荆棘员工</a><a class="toc-level-2" href="#zh-sirena-isle-resort-content">塞壬岛度假村内容</a><a class="toc-level-2" href="#zh-elemental-stone-bond">元素之石羁绊</a><a class="toc-level-2" href="#zh-recommended-route">推荐路线</a><a class="toc-level-2" href="#zh-troubleshooting">故障排查</a><a class="toc-level-3" href="#zh-lindia-is-not-at-the-bar">酒吧里没有Lindia</a><a class="toc-level-3" href="#zh-her-next-plot-will-not-trigger">下一段剧情没有触发</a><a class="toc-level-3" href="#zh-spell-control-notes-is-missing">找不到法术控制笔记</a><a class="toc-level-3" href="#zh-close-enough-is-missing">找不到足够亲近</a><a class="toc-level-3" href="#zh-intimate-bonding-is-missing">找不到亲密羁绊</a><a class="toc-level-2" href="#zh-source-reference">源文件参考</a></nav></div>
+      </aside>
+      <article class="guide-content">
+        <div class="spoiler-notice"><strong data-copy-en="Guide notice" data-copy-zh="攻略提示">Guide notice</strong><span data-copy-en="This page contains gameplay and story spoilers and may describe mature systems." data-copy-zh="本页包含玩法与剧情剧透，并可能涉及成人游戏系统。">This page contains gameplay and story spoilers and may describe mature systems.</span></div>
+        <div class="markdown-body" data-lang-panel="en">
+<blockquote>
+<p><strong>Spoiler warning:</strong> This guide covers Lindia's dungeon encounter, recruitment, relationship plots, heart-to-hearts, resort content, and late-game bond action.</p>
+</blockquote>
+<p>This guide expands on Sh1n7's community-created <a href="https://chronoromancer.miraheze.org/wiki/Character:Lindia" rel="noopener noreferrer" target="_blank">Lindia wiki page</a>, used under <a href="https://creativecommons.org/licenses/by-sa/4.0/" rel="noopener noreferrer" target="_blank">CC BY-SA 4.0</a>. Requirements and mechanics below were rechecked against the current game source.</p>
+<h2 id="at-a-glance">At a Glance</h2>
+<div class="guide-table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th>Detail</th>
+<th>Current value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Recruitment</td>
+<td>Defeat Lindia on Dungeon Floor 7</td>
+</tr>
+<tr>
+<td>Encounter title</td>
+<td>The Guilty Apprentice</td>
+</tr>
+<tr>
+<td>Encounter level</td>
+<td>3</td>
+</tr>
+<tr>
+<td>Alignment</td>
+<td>Neutral</td>
+</tr>
+<tr>
+<td>Age</td>
+<td>22</td>
+</tr>
+<tr>
+<td>Favorite gift</td>
+<td>Book</td>
+</tr>
+<tr>
+<td>Least favorite gift</td>
+<td>Wine</td>
+</tr>
+<tr>
+<td>Favorite stats</td>
+<td>Intelligence 80, Mystic 80, Communication 80</td>
+</tr>
+<tr>
+<td>Special relationship skill</td>
+<td>Wizardry</td>
+</tr>
+<tr>
+<td>Worker ID / room</td>
+<td>12 / Room 12</td>
+</tr>
+<tr>
+<td>Worker special skill</td>
+<td>Blow Job</td>
+</tr>
+<tr>
+<td>Starting worker skill</td>
+<td>Perfect Memory</td>
+</tr>
+<tr>
+<td>Soul Stone</td>
+<td>Elemental Stone</td>
+</tr>
+</tbody>
+</table></div>
+<p>Lindia is a gifted but anxious wizard's apprentice. A forbidden transformation spell turned her master into a frog, and another accidental spell transformed Spectra's lost cat into Whiskers. Her route is about learning to use power without treating herself as a disaster waiting to happen.</p>
+<h2 id="recruiting-lindia">Recruiting Lindia</h2>
+<p>Lindia is the fixed miniboss on <strong>Dungeon Floor 7</strong>. Her first encounter has 235 Energy, targets your Energy, and runs for five narrative rounds.</p>
+<p>Defeating her immediately calls <code>activate_worker(12)</code>. Recruitment is silent, automatic, and unconditional; it works even if you have not purchased the brothel yet. Once the Rose &amp; Thorn is available, Lindia is already in its worker roster.</p>
+<h3 id="floor-7-battle-advice">Floor 7 battle advice</h3>
+<p>The encounter rewards calm, observant, or empathetic answers. Choose actions supported by your strongest relevant stat; unlocked skill choices are normally excellent.</p>
+<div class="guide-table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th style="text-align:right">Round</th>
+<th>Strong normal choice</th>
+<th>Excellent skill choice</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">1</td>
+<td>Talk to her (Charm) or read her ward (Intelligence)</td>
+<td>Protective Ward (Mystic)</td>
+</tr>
+<tr>
+<td style="text-align:right">2</td>
+<td>Predict the wild magic (Perception) or name her panic (Charm)</td>
+<td>Tactical Awareness (Intelligence)</td>
+</tr>
+<tr>
+<td style="text-align:right">3</td>
+<td>Offer to help find her master (Charm)</td>
+<td>Illusion Weaving (Mystic)</td>
+</tr>
+<tr>
+<td style="text-align:right">4</td>
+<td>Use responsibility (Charm), weather it (Stamina), or close in (Ability)</td>
+<td>Exploit Weakness (Intelligence)</td>
+</tr>
+<tr>
+<td style="text-align:right">5</td>
+<td>Tell her amends are possible (Charm)</td>
+<td>Empathy (Perception)</td>
+</tr>
+</tbody>
+</table></div>
+<p>Avoid <strong>snatching her spellbook in Round 3</strong>. It is the battle's explicit trap and doubles the counterattack multiplier.</p>
+<p>After victory, an optional Beast Mode branch requires Beast 25 and Erotic Experience 300. Its deeper branch requires Erotic Experience 600. Recruitment does not depend on either branch.</p>
+<h2 id="where-to-find-her">Where to Find Her</h2>
+<p>Lindia only appears at relationship locations after Worker 12 is active.</p>
+<div class="guide-table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th>Location</th>
+<th style="text-align:right">Hours</th>
+<th>Days</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Brothel Bar</td>
+<td style="text-align:right">04:00-08:00</td>
+<td>Every day</td>
+</tr>
+<tr>
+<td>Brothel Training Room</td>
+<td style="text-align:right">09:00-18:00</td>
+<td>Every day</td>
+</tr>
+</tbody>
+</table></div>
+<p>The current schedule is broader than the original fan page: her main progression content is in the <strong>Brothel Training Room</strong>, not only the early-morning bar slot.</p>
+<p>If she is missing, first confirm that Floor 7 was cleared and that she appears as an active Rose &amp; Thorn worker.</p>
+<h2 id="relationship-basics">Relationship Basics</h2>
+<p>Universal relationship stages use these point thresholds:</p>
+<div class="guide-table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th>Stage</th>
+<th style="text-align:right">Points</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Stranger</td>
+<td style="text-align:right">0</td>
+</tr>
+<tr>
+<td>Acknowledged</td>
+<td style="text-align:right">10</td>
+</tr>
+<tr>
+<td>Known</td>
+<td style="text-align:right">25</td>
+</tr>
+<tr>
+<td>Acquaintance</td>
+<td style="text-align:right">50</td>
+</tr>
+<tr>
+<td>Friend</td>
+<td style="text-align:right">100</td>
+</tr>
+<tr>
+<td>Close Friend</td>
+<td style="text-align:right">200</td>
+</tr>
+<tr>
+<td>Crush</td>
+<td style="text-align:right">400</td>
+</tr>
+<tr>
+<td>Romantic</td>
+<td style="text-align:right">800</td>
+</tr>
+<tr>
+<td>Intimate</td>
+<td style="text-align:right">1,600</td>
+</tr>
+<tr>
+<td>In Love</td>
+<td style="text-align:right">3,000</td>
+</tr>
+</tbody>
+</table></div>
+<p>Lindia's three favorite-stat checks are unusually demanding: <strong>Intelligence 80, Mystic 80, and Communication 80</strong>. Her special relationship skill is <strong>Wizardry</strong>. Meeting the game's favorite-stat and special-skill conditions improves relationship gains through the universal relationship system.</p>
+<h3 id="repeatable-actions">Repeatable actions</h3>
+<div class="guide-table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th>Action</th>
+<th>Requirement</th>
+<th style="text-align:right">Cost</th>
+<th style="text-align:right">Base relationship gain</th>
+<th style="text-align:right">Limit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Talk to Lindia</td>
+<td>Stranger+</td>
+<td style="text-align:right">15 min</td>
+<td style="text-align:right">+1</td>
+<td style="text-align:right">4/day</td>
+</tr>
+<tr>
+<td>Give Book</td>
+<td>Known+ and one Book</td>
+<td style="text-align:right">10 min</td>
+<td style="text-align:right">+8</td>
+<td style="text-align:right">2/day</td>
+</tr>
+</tbody>
+</table></div>
+<p>Both actions are offered at the Bar and Training Room during her scheduled hours. Their daily limits are relationship-action limits, so changing rooms does not create a fresh allowance.</p>
+<p>Books are her explicit gift action. Wine is recorded as her least favorite gift, but no dedicated Wine action appears in her current location menus.</p>
+<h2 id="training-room-progression">Training Room Progression</h2>
+<h3 id="first-visit-lindia-at-the-training-room">First visit: Lindia at the Training Room</h3>
+<p>Once Lindia is active, enter the Brothel Training Room from 09:00 through 18:00. Her introductory plot triggers automatically once and awards <strong>+5 Lindia relationship</strong>.</p>
+<h3 id="spell-control-notes">Spell Control Notes</h3>
+<p>This is Lindia's one-time mechanical reward.</p>
+<div class="guide-table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th>Requirement</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Relationship</td>
+<td>Friend+</td>
+</tr>
+<tr>
+<td>Mystic</td>
+<td>35+</td>
+</tr>
+<tr>
+<td>Time</td>
+<td>45 min</td>
+</tr>
+<tr>
+<td>Variable-stat cost</td>
+<td>12 Energy, 5 Calm</td>
+</tr>
+<tr>
+<td>Rewards</td>
+<td>+1 permanent Mystic, +8 relationship, +1 Wizard clout</td>
+</tr>
+</tbody>
+</table></div>
+<p>After completion the action is permanently hidden by <code>lindia_spell_control_notes_completed</code>.</p>
+<h3 id="automatic-character-plots">Automatic character plots</h3>
+<p>These plots trigger in sequence when you enter the Training Room during Lindia's 09:00-18:00 schedule.</p>
+<div class="guide-table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th style="text-align:right">Order</th>
+<th>Plot</th>
+<th>Requirements</th>
+<th style="text-align:right">Base reward</th>
+<th style="text-align:right">Best listed choice bonus</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">1</td>
+<td>Lindia at the Training Room</td>
+<td>Lindia active; first visit</td>
+<td style="text-align:right">+5</td>
+<td style="text-align:right">None</td>
+</tr>
+<tr>
+<td style="text-align:right">2</td>
+<td>Margin Notes</td>
+<td>Intro complete; Known+</td>
+<td style="text-align:right">+8</td>
+<td style="text-align:right">Warm: +5</td>
+</tr>
+<tr>
+<td style="text-align:right">3</td>
+<td>The Master Question</td>
+<td>Margin Notes complete; Friend+</td>
+<td style="text-align:right">+10</td>
+<td style="text-align:right">Kind: +5</td>
+</tr>
+<tr>
+<td style="text-align:right">4</td>
+<td>Apprentice No More</td>
+<td>Master Question complete; Crush+</td>
+<td style="text-align:right">+12</td>
+<td style="text-align:right">Close: +6</td>
+</tr>
+</tbody>
+</table></div>
+<p>The listed choice bonuses are added by the plot registry. Other choices still progress the plot; they simply award fewer points.</p>
+<h2 id="heart-to-hearts">Heart-to-Hearts</h2>
+<h3 id="controlled-magic">Controlled Magic</h3>
+<div class="guide-table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th>Requirement</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Relationship</td>
+<td>Acquaintance+</td>
+</tr>
+<tr>
+<td>Location</td>
+<td>Brothel Training Room</td>
+</tr>
+<tr>
+<td>Time</td>
+<td>75 min</td>
+</tr>
+<tr>
+<td>Cost</td>
+<td>20 Energy, 10 Calm</td>
+</tr>
+<tr>
+<td>Repeatable</td>
+<td>No</td>
+</tr>
+</tbody>
+</table></div>
+<p>The most supportive standard choices reach <strong>55 choice points</strong>. Mystic 40 unlocks a special Round 2 answer worth 12 instead of the best standard answer's 10, raising the ceiling to <strong>57</strong>.</p>
+<p>Best-answer pattern:</p>
+<ol>
+<li>“Contained mistakes sound like progress.”</li>
+<li>Mystic 40 special answer; otherwise the charming-instructor answer.</li>
+<li>“I am here with who you are now.”</li>
+<li>Either 12-point supportive or flirty answer.</li>
+<li>Either 13-point courage/pride answer.</li>
+</ol>
+<h3 id="close-enough">Close Enough</h3>
+<div class="guide-table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th>Requirement</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Relationship</td>
+<td>Close Friend+</td>
+</tr>
+<tr>
+<td>Prior content</td>
+<td>Controlled Magic complete</td>
+</tr>
+<tr>
+<td>Location</td>
+<td>Brothel Training Room</td>
+</tr>
+<tr>
+<td>Time</td>
+<td>90 min</td>
+</tr>
+<tr>
+<td>Cost</td>
+<td>25 Energy</td>
+</tr>
+<tr>
+<td>Repeatable</td>
+<td>No</td>
+</tr>
+</tbody>
+</table></div>
+<p>The best standard route reaches <strong>79 choice points</strong>. The Empathy skill unlocks a 16-point Round 2 special answer and raises the ceiling to <strong>81</strong>. The final round has one choice: kiss her.</p>
+<h3 id="sunset-walk-with-lindia">Sunset Walk with Lindia</h3>
+<p>This is a repeatable resort heart-to-heart. It is available through the resort's Sunset Walk activity when Lindia is vacationing and the resort activity requirements are met. It has a <strong>57-point</strong> maximum route and uses the resort's once-per-day sunset-walk cooldown for Lindia.</p>
+<p>See the <strong>Sirena Isle Resort Guide</strong> for vacation scheduling, presence chances, activity hours, and resource costs.</p>
+<h2 id="bazaar-date">Bazaar Date</h2>
+<div class="guide-table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th>Requirement</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Relationship</td>
+<td>Friend+</td>
+</tr>
+<tr>
+<td>Start window</td>
+<td>09:00-14:00</td>
+</tr>
+<tr>
+<td>Time</td>
+<td>120 min</td>
+</tr>
+<tr>
+<td>Cost</td>
+<td>$75 and 35 Energy</td>
+</tr>
+<tr>
+<td>Repeatable</td>
+<td>No</td>
+</tr>
+</tbody>
+</table></div>
+<p>The date awards a base <strong>+5 relationship</strong> plus three choice bonuses.</p>
+<div class="guide-table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th>Date choice</th>
+<th>Best available bonuses</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Choice 1</td>
+<td>Careful +5</td>
+</tr>
+<tr>
+<td>Choice 2</td>
+<td>Flirty +5</td>
+</tr>
+<tr>
+<td>Choice 3</td>
+<td>Careful or Flirty +5</td>
+</tr>
+</tbody>
+</table></div>
+<p>A perfect registered route therefore awards <strong>+20 Lindia relationship</strong> in total.</p>
+<h2 id="lindia-as-a-rose--thorn-worker">Lindia as a Rose &amp; Thorn Worker</h2>
+<div class="guide-table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th>Worker property</th>
+<th style="text-align:right">Starting value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Assigned room</td>
+<td style="text-align:right">12</td>
+</tr>
+<tr>
+<td>Minimum room level</td>
+<td style="text-align:right">2</td>
+</tr>
+<tr>
+<td>Work hours</td>
+<td style="text-align:right">12:00-20:00</td>
+</tr>
+<tr>
+<td>Base/current wage</td>
+<td style="text-align:right">$105</td>
+</tr>
+<tr>
+<td>Starting loyalty</td>
+<td style="text-align:right">60</td>
+</tr>
+<tr>
+<td>Starting fame</td>
+<td style="text-align:right">4</td>
+</tr>
+<tr>
+<td>Stamina</td>
+<td style="text-align:right">10</td>
+</tr>
+<tr>
+<td>Intelligence</td>
+<td style="text-align:right">38</td>
+</tr>
+<tr>
+<td>Dexterity</td>
+<td style="text-align:right">18</td>
+</tr>
+<tr>
+<td>Ability</td>
+<td style="text-align:right">5</td>
+</tr>
+<tr>
+<td>Appearance</td>
+<td style="text-align:right">22</td>
+</tr>
+<tr>
+<td>Charisma</td>
+<td style="text-align:right">8</td>
+</tr>
+<tr>
+<td>Clothing level</td>
+<td style="text-align:right">2</td>
+</tr>
+<tr>
+<td>Special service</td>
+<td style="text-align:right">Blow Job</td>
+</tr>
+<tr>
+<td>Starting skill</td>
+<td style="text-align:right">Perfect Memory</td>
+</tr>
+</tbody>
+</table></div>
+<p>Her Shy personality and low starting Stamina make fatigue and stress management important. Her room requires at least Level 2 before she can work there normally. The resort is particularly useful later because a full vacation day restores worker condition while building Loyalty.</p>
+<p>Fernando also has a Lindia clothing scene through the Rose &amp; Thorn clothing system.</p>
+<h2 id="sirena-isle-resort-content">Sirena Isle Resort Content</h2>
+<p>Lindia is a fully supported resort worker. In addition to the normal worker-vacation effects, she has:</p>
+<ul>
+<li>Eat with Lindia at the Resort Buffet: base +3, with a best +5 choice bonus.</li>
+<li>Relax with Lindia at the Beach: base +3, with a best +5 choice bonus.</li>
+<li>Spa Night with Lindia: base +3, with a best +5 choice bonus.</li>
+<li>Sunset Walk with Lindia: repeatable heart-to-heart.</li>
+<li>Tide Index: Lindia's solo ambient Beach plot, 08:00-16:00.</li>
+</ul>
+<p>She also has resort combination scenes with Foxy, Bellavia, Elara, Shadow, Raven, Jade, Kasumi, Willow, Gem, A.R.I.A., and Vespa. The appropriate workers must be vacationing together and present at the correct resort location and time.</p>
+<h2 id="elemental-stone-bond">Elemental Stone Bond</h2>
+<p>At <strong>In Love</strong>, if you own the <strong>Elemental Stone</strong>, Lindia gains <strong>Intimate Bonding</strong> in the Brothel Training Room.</p>
+<div class="guide-table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Relationship</td>
+<td>In Love (3,000 points)</td>
+</tr>
+<tr>
+<td>Required item</td>
+<td>Elemental Stone</td>
+</tr>
+<tr>
+<td>Time</td>
+<td>60 min</td>
+</tr>
+<tr>
+<td>Reward</td>
+<td>Elemental Stone level +1</td>
+</tr>
+<tr>
+<td>Limit</td>
+<td>Once per game day with Lindia</td>
+</tr>
+</tbody>
+</table></div>
+<p>The action hides for the rest of the day after use and returns the next day. It raises the Stone's stored level; it does not consume the Stone.</p>
+<h2 id="recommended-route">Recommended Route</h2>
+<ol>
+<li>Clear Dungeon Floor 7 and defeat Lindia.</li>
+<li>Confirm Worker 12 is active, then meet her in the Training Room at 09:00-18:00.</li>
+<li>Talk four times per day; at Known, add up to two Books per day.</li>
+<li>Complete <strong>Margin Notes</strong> at Known.</li>
+<li>At Acquaintance, complete <strong>Controlled Magic</strong>. Bring Mystic 40 for its special answer if convenient.</li>
+<li>At Friend, complete <strong>The Master Question</strong>, <strong>Spell Control Notes</strong>, and the one-time <strong>Bazaar Date</strong>.</li>
+<li>At Close Friend, complete <strong>Close Enough</strong>; Empathy provides its special answer.</li>
+<li>At Crush, trigger <strong>Apprentice No More</strong> in the Training Room.</li>
+<li>Use Sirena Isle activities and combination scenes for additional content and relationship gains.</li>
+<li>At In Love, use <strong>Intimate Bonding</strong> daily when you want to level the Elemental Stone.</li>
+</ol>
+<h2 id="troubleshooting">Troubleshooting</h2>
+<h3 id="lindia-is-not-at-the-bar">Lindia is not at the Bar</h3>
+<ul>
+<li>She must have been defeated on Floor 7.</li>
+<li>Her Bar schedule is only 04:00-08:00.</li>
+<li>Most of her route is instead at the Training Room from 09:00-18:00.</li>
+</ul>
+<h3 id="her-next-plot-will-not-trigger">Her next plot will not trigger</h3>
+<ul>
+<li>Enter the Brothel Training Room during 09:00-18:00.</li>
+<li>Make sure Lindia is an active worker.</li>
+<li>Complete the preceding plot.</li>
+<li>Reach the required relationship stage: Known, Friend, or Crush.</li>
+<li>If several automatic plots qualify at once, leave and re-enter after the current event finishes.</li>
+</ul>
+<h3 id="spell-control-notes-is-missing">Spell Control Notes is missing</h3>
+<p>You need Friend relationship, Mystic 35, the Training Room schedule, and an uncompleted <code>lindia_spell_control_notes_completed</code> flag.</p>
+<h3 id="close-enough-is-missing">Close Enough is missing</h3>
+<p>You need Close Friend and must already have completed <strong>Controlled Magic</strong>.</p>
+<h3 id="intimate-bonding-is-missing">Intimate Bonding is missing</h3>
+<p>You need In Love, the Elemental Stone in key items, the Training Room schedule, and must not already have bonded with Lindia that day.</p>
+<h2 id="source-reference">Source Reference</h2>
+<p>Primary implementation files checked for this guide:</p>
+<ul>
+<li><code>game/miniboss_lindia.rpy</code></li>
+<li><code>game/characters/lindia.rpy</code></li>
+<li><code>game/characters/lindia_conversations.rpy</code></li>
+<li><code>game/brothel_workers_data.rpy</code></li>
+<li><code>game/plot_list_registry_brothel.rpy</code></li>
+<li><code>game/plot_list_registry_dates.rpy</code></li>
+<li><code>game/plot_list_registry_resort.rpy</code></li>
+<li><code>game/soul_stone_actions.rpy</code></li>
+</ul>
+</div>
+        <div class="markdown-body" data-lang-panel="zh" hidden>
+<blockquote>
+<p><strong>剧透警告：</strong> 本指南涵盖Lindia的地牢遭遇、招募方式、关系剧情、谈心、度假村内容以及后期羁绊行动。</p>
+</blockquote>
+<p>本指南扩充自Sh1n7创作的社区<a href="https://chronoromancer.miraheze.org/wiki/Character:Lindia" rel="noopener noreferrer" target="_blank">Lindia维基页面</a>，依据<a href="https://creativecommons.org/licenses/by-sa/4.0/" rel="noopener noreferrer" target="_blank">CC BY-SA 4.0</a>许可使用。以下条件与机制均已按照当前游戏源文件重新核对。</p>
+<h2 id="zh-at-a-glance">一览</h2>
+<div class="guide-table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th>项目</th>
+<th>当前数值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>招募方式</td>
+<td>在地牢第7层击败Lindia</td>
+</tr>
+<tr>
+<td>遭遇标题</td>
+<td>心怀愧疚的学徒</td>
+</tr>
+<tr>
+<td>遭遇等级</td>
+<td>3</td>
+</tr>
+<tr>
+<td>阵营</td>
+<td>中立</td>
+</tr>
+<tr>
+<td>年龄</td>
+<td>22</td>
+</tr>
+<tr>
+<td>最喜欢的礼物</td>
+<td>书</td>
+</tr>
+<tr>
+<td>最不喜欢的礼物</td>
+<td>葡萄酒</td>
+</tr>
+<tr>
+<td>偏好属性</td>
+<td>智力80、神秘80、沟通80</td>
+</tr>
+<tr>
+<td>特殊关系技能</td>
+<td>魔法技艺</td>
+</tr>
+<tr>
+<td>员工ID／房间</td>
+<td>12／12号房</td>
+</tr>
+<tr>
+<td>员工特殊服务</td>
+<td>口交</td>
+</tr>
+<tr>
+<td>初始员工技能</td>
+<td>完美记忆</td>
+</tr>
+<tr>
+<td>灵魂石</td>
+<td>元素之石</td>
+</tr>
+</tbody>
+</table></div>
+<p>Lindia是一位天赋出众、却容易焦虑的巫师学徒。一道禁忌变形法术把她的导师变成了青蛙，另一次意外施法又把Spectra走失的猫变成了Whiskers。她的故事讲述了如何学会驾驭力量，同时不再把自己视为一场随时可能发生的灾难。</p>
+<h2 id="zh-recruiting-lindia">招募Lindia</h2>
+<p>Lindia是 <strong>地牢第7层</strong> 的固定小Boss。初次遭遇时她拥有235点精力，会攻击你的精力，战斗共进行五轮叙事回合。</p>
+<p>击败她后，游戏会立即调用<code>activate_worker(12)</code>。招募过程没有提示、自动完成且不附带任何其他条件；即使你尚未买下青楼，也同样有效。玫瑰与荆棘开放后，Lindia已经在员工名单之中。</p>
+<h3 id="zh-floor-7-battle-advice">第7层战斗建议</h3>
+<p>这场遭遇会奖励冷静、善于观察或富有同理心的回答。请选择有自己较强相关属性支持的行动；已解锁的技能选项通常都非常优秀。</p>
+<div class="guide-table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th style="text-align:right">回合</th>
+<th>优秀的普通选项</th>
+<th>极佳的技能选项</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">1</td>
+<td>与她交谈（魅力），或解读她的结界（智力）</td>
+<td>防护结界（神秘）</td>
+</tr>
+<tr>
+<td style="text-align:right">2</td>
+<td>预判失控魔法（感知），或指出她正在恐慌（魅力）</td>
+<td>战术意识（智力）</td>
+</tr>
+<tr>
+<td style="text-align:right">3</td>
+<td>主动帮她寻找导师（魅力）</td>
+<td>幻象编织（神秘）</td>
+</tr>
+<tr>
+<td style="text-align:right">4</td>
+<td>诉诸责任感（魅力）、硬扛过去（耐力），或贴身逼近（能力）</td>
+<td>利用弱点（智力）</td>
+</tr>
+<tr>
+<td style="text-align:right">5</td>
+<td>告诉她仍能弥补过错（魅力）</td>
+<td>共情（感知）</td>
+</tr>
+</tbody>
+</table></div>
+<p>第3回合不要选择 <strong>抢走她的法术书</strong>。这是本场战斗明确设置的陷阱，会让反击倍率翻倍。</p>
+<p>胜利后会出现一条可选的野兽模式分支，需要兽性25、情趣经验300；更深一层的分支则需要情趣经验600。无论是否进入这些分支，都不会影响招募。</p>
+<h2 id="zh-where-to-find-her">去哪里找她</h2>
+<p>只有12号员工激活后，Lindia才会出现在关系地点。</p>
+<div class="guide-table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th>地点</th>
+<th style="text-align:right">时段</th>
+<th>日期</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>青楼酒吧</td>
+<td style="text-align:right">04:00-08:00</td>
+<td>每天</td>
+</tr>
+<tr>
+<td>青楼训练室</td>
+<td style="text-align:right">09:00-18:00</td>
+<td>每天</td>
+</tr>
+</tbody>
+</table></div>
+<p>当前日程比最初的玩家页面所写更宽松：她的主要推进内容位于 <strong>青楼训练室</strong>，并非只有清晨的酒吧时段。</p>
+<p>如果找不到她，请先确认已经通过第7层，并且她已作为玫瑰与荆棘的在职员工出现。</p>
+<h2 id="zh-relationship-basics">关系基础</h2>
+<p>通用关系阶段采用以下点数门槛：</p>
+<div class="guide-table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th>阶段</th>
+<th style="text-align:right">点数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>陌生人</td>
+<td style="text-align:right">0</td>
+</tr>
+<tr>
+<td>已遇见</td>
+<td style="text-align:right">10</td>
+</tr>
+<tr>
+<td>已知</td>
+<td style="text-align:right">25</td>
+</tr>
+<tr>
+<td>相识</td>
+<td style="text-align:right">50</td>
+</tr>
+<tr>
+<td>朋友</td>
+<td style="text-align:right">100</td>
+</tr>
+<tr>
+<td>亲密朋友</td>
+<td style="text-align:right">200</td>
+</tr>
+<tr>
+<td>迷恋</td>
+<td style="text-align:right">400</td>
+</tr>
+<tr>
+<td>浪漫感</td>
+<td style="text-align:right">800</td>
+</tr>
+<tr>
+<td>亲密</td>
+<td style="text-align:right">1,600</td>
+</tr>
+<tr>
+<td>恋爱中</td>
+<td style="text-align:right">3,000</td>
+</tr>
+</tbody>
+</table></div>
+<p>Lindia的三项偏好属性要求格外高：<strong>智力80、神秘80、沟通80</strong>。她的特殊关系技能是 <strong>魔法技艺</strong>。满足游戏对偏好属性与特殊技能的条件后，通用关系系统会提高你获得的好感度。</p>
+<h3 id="zh-repeatable-actions">可重复行动</h3>
+<div class="guide-table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th>行动</th>
+<th>要求</th>
+<th style="text-align:right">消耗</th>
+<th style="text-align:right">基础关系收益</th>
+<th style="text-align:right">上限</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>与Lindia交谈</td>
+<td>陌生人以上</td>
+<td style="text-align:right">15分钟</td>
+<td style="text-align:right">+1</td>
+<td style="text-align:right">每天4次</td>
+</tr>
+<tr>
+<td>送书</td>
+<td>已知以上，并拥有一本书</td>
+<td style="text-align:right">10分钟</td>
+<td style="text-align:right">+8</td>
+<td style="text-align:right">每天2次</td>
+</tr>
+</tbody>
+</table></div>
+<p>在她的活动时段内，酒吧和训练室都会提供这两项行动。每日次数限制按关系行动本身计算，因此换个房间不会刷新可用次数。</p>
+<p>书是她明确设有专属行动的礼物。资料中记载葡萄酒是她最不喜欢的礼物，但她目前所在地点的菜单里没有专门的送酒行动。</p>
+<h2 id="zh-training-room-progression">训练室推进内容</h2>
+<h3 id="zh-first-visit-lindia-at-the-training-room">初次到访：训练室里的Lindia</h3>
+<p>激活Lindia后，于09:00至18:00进入青楼训练室。她的介绍剧情会自动触发一次，并奖励 <strong>Lindia关系+5</strong>。</p>
+<h3 id="zh-spell-control-notes">法术控制笔记</h3>
+<p>这是Lindia提供的一次性机制奖励。</p>
+<div class="guide-table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th>要求</th>
+<th>数值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>关系</td>
+<td>朋友以上</td>
+</tr>
+<tr>
+<td>神秘</td>
+<td>35以上</td>
+</tr>
+<tr>
+<td>时间</td>
+<td>45分钟</td>
+</tr>
+<tr>
+<td>可变属性消耗</td>
+<td>12精力、5镇定</td>
+</tr>
+<tr>
+<td>奖励</td>
+<td>永久神秘+1、关系+8、法师声望+1</td>
+</tr>
+</tbody>
+</table></div>
+<p>完成后，<code>lindia_spell_control_notes_completed</code>会使这项行动永久隐藏。</p>
+<h3 id="zh-automatic-character-plots">自动角色剧情</h3>
+<p>在Lindia的09:00-18:00日程内进入训练室时，以下剧情会依次触发。</p>
+<div class="guide-table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th style="text-align:right">顺序</th>
+<th>剧情</th>
+<th>要求</th>
+<th style="text-align:right">基础奖励</th>
+<th style="text-align:right">列出的最佳选项奖励</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">1</td>
+<td>训练室里的Lindia</td>
+<td>Lindia已激活；首次到访</td>
+<td style="text-align:right">+5</td>
+<td style="text-align:right">无</td>
+</tr>
+<tr>
+<td style="text-align:right">2</td>
+<td>页边笔记</td>
+<td>介绍已完成；已知以上</td>
+<td style="text-align:right">+8</td>
+<td style="text-align:right">温暖：+5</td>
+</tr>
+<tr>
+<td style="text-align:right">3</td>
+<td>导师之问</td>
+<td>页边笔记已完成；朋友以上</td>
+<td style="text-align:right">+10</td>
+<td style="text-align:right">善意：+5</td>
+</tr>
+<tr>
+<td style="text-align:right">4</td>
+<td>不再是学徒</td>
+<td>导师之问已完成；迷恋以上</td>
+<td style="text-align:right">+12</td>
+<td style="text-align:right">亲近：+6</td>
+</tr>
+</tbody>
+</table></div>
+<p>列出的选项加成由剧情注册表额外提供。选择其他选项仍会正常推进剧情，只是获得的点数较少。</p>
+<h2 id="zh-heart-to-hearts">谈心</h2>
+<h3 id="zh-controlled-magic">可控的魔法</h3>
+<div class="guide-table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th>要求</th>
+<th>数值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>关系</td>
+<td>相识以上</td>
+</tr>
+<tr>
+<td>地点</td>
+<td>青楼训练室</td>
+</tr>
+<tr>
+<td>时间</td>
+<td>75分钟</td>
+</tr>
+<tr>
+<td>消耗</td>
+<td>20精力、10镇定</td>
+</tr>
+<tr>
+<td>可否重复</td>
+<td>否</td>
+</tr>
+</tbody>
+</table></div>
+<p>最支持她的一组普通选项可获得 <strong>55点选项分</strong>。神秘40会在第2轮解锁一个特殊回答，价值12分，高于最佳普通回答的10分，从而将上限提高至 <strong>57分</strong>。</p>
+<p>最佳回答路线：</p>
+<ol>
+<li>“能控制住的失误，听起来就是进步。”</li>
+<li>选择神秘40特殊回答；否则选择那句有魅力的导师式回答。</li>
+<li>“我是为现在的你而来的。”</li>
+<li>两个12分选项均可：支持她或与她调情。</li>
+<li>两个13分选项均可：肯定她的勇气或为她感到骄傲。</li>
+</ol>
+<h3 id="zh-close-enough">足够亲近</h3>
+<div class="guide-table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th>要求</th>
+<th>数值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>关系</td>
+<td>亲密朋友以上</td>
+</tr>
+<tr>
+<td>前置内容</td>
+<td>已完成可控的魔法</td>
+</tr>
+<tr>
+<td>地点</td>
+<td>青楼训练室</td>
+</tr>
+<tr>
+<td>时间</td>
+<td>90分钟</td>
+</tr>
+<tr>
+<td>消耗</td>
+<td>25精力</td>
+</tr>
+<tr>
+<td>可否重复</td>
+<td>否</td>
+</tr>
+</tbody>
+</table></div>
+<p>最佳普通路线可获得 <strong>79点选项分</strong>。共情技能会在第2轮解锁一个16分的特殊回答，将上限提高至 <strong>81分</strong>。最后一轮只有一个选项：吻她。</p>
+<h3 id="zh-sunset-walk-with-lindia">与Lindia的日落散步</h3>
+<p>这是度假村中可重复进行的谈心。当Lindia正在度假，且满足度假村的活动要求时，可以通过度假村的日落散步活动参加。其最佳路线最高可得 <strong>57分</strong>，并使用Lindia每天一次的度假村日落散步冷却。</p>
+<p>有关度假安排、出现概率、活动时段和资源消耗，请参阅 <strong>塞壬岛度假村指南</strong>。</p>
+<h2 id="zh-bazaar-date">集市约会</h2>
+<div class="guide-table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th>要求</th>
+<th>数值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>关系</td>
+<td>朋友以上</td>
+</tr>
+<tr>
+<td>开始时段</td>
+<td>09:00-14:00</td>
+</tr>
+<tr>
+<td>时间</td>
+<td>120分钟</td>
+</tr>
+<tr>
+<td>消耗</td>
+<td>$75和35精力</td>
+</tr>
+<tr>
+<td>可否重复</td>
+<td>否</td>
+</tr>
+</tbody>
+</table></div>
+<p>约会提供基础 <strong>关系+5</strong>，另有三次选项加成。</p>
+<div class="guide-table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th>约会选项</th>
+<th>最佳可用加成</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>选项1</td>
+<td>谨慎+5</td>
+</tr>
+<tr>
+<td>选项2</td>
+<td>调情+5</td>
+</tr>
+<tr>
+<td>选项3</td>
+<td>谨慎或调情+5</td>
+</tr>
+</tbody>
+</table></div>
+<p>因此，在注册表认定的完美路线中，总计可获得 <strong>Lindia关系+20</strong>。</p>
+<h2 id="zh-lindia-as-a-rose--thorn-worker">Lindia作为玫瑰与荆棘员工</h2>
+<div class="guide-table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th>员工属性</th>
+<th style="text-align:right">初始值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>分配房间</td>
+<td style="text-align:right">12</td>
+</tr>
+<tr>
+<td>最低房间等级</td>
+<td style="text-align:right">2</td>
+</tr>
+<tr>
+<td>工作时间</td>
+<td style="text-align:right">12:00-20:00</td>
+</tr>
+<tr>
+<td>基础／当前工资</td>
+<td style="text-align:right">$105</td>
+</tr>
+<tr>
+<td>初始忠诚度</td>
+<td style="text-align:right">60</td>
+</tr>
+<tr>
+<td>初始名气</td>
+<td style="text-align:right">4</td>
+</tr>
+<tr>
+<td>耐力</td>
+<td style="text-align:right">10</td>
+</tr>
+<tr>
+<td>智力</td>
+<td style="text-align:right">38</td>
+</tr>
+<tr>
+<td>敏捷</td>
+<td style="text-align:right">18</td>
+</tr>
+<tr>
+<td>能力</td>
+<td style="text-align:right">5</td>
+</tr>
+<tr>
+<td>外貌</td>
+<td style="text-align:right">22</td>
+</tr>
+<tr>
+<td>魅力</td>
+<td style="text-align:right">8</td>
+</tr>
+<tr>
+<td>服装等级</td>
+<td style="text-align:right">2</td>
+</tr>
+<tr>
+<td>特殊服务</td>
+<td style="text-align:right">口交</td>
+</tr>
+<tr>
+<td>初始技能</td>
+<td style="text-align:right">完美记忆</td>
+</tr>
+</tbody>
+</table></div>
+<p>她的害羞性格与较低的初始耐力，使疲劳和压力管理格外重要。她的房间至少需要达到2级，她才能正常在那里工作。游戏后期，度假村尤其有用：完整休假一天可以恢复员工状态，同时提升忠诚度。</p>
+<p>Fernando还会通过玫瑰与荆棘的服装系统触发一段与Lindia有关的服装剧情。</p>
+<h2 id="zh-sirena-isle-resort-content">塞壬岛度假村内容</h2>
+<p>Lindia完整支持度假村员工系统。除常规员工度假效果外，她还有以下内容：</p>
+<ul>
+<li>与Lindia在度假村自助餐厅用餐：基础+3，最佳选项额外+5。</li>
+<li>与Lindia在海滩放松：基础+3，最佳选项额外+5。</li>
+<li>与Lindia共度水疗之夜：基础+3，最佳选项额外+5。</li>
+<li>与Lindia日落散步：可重复谈心。</li>
+<li>潮汐指数：Lindia在海滩的单人氛围剧情，08:00-16:00。</li>
+</ul>
+<p>她还会与Foxy、Bellavia、Elara、Shadow、Raven、Jade、Kasumi、Willow、Gem、A.R.I.A.和Vespa触发度假村组合剧情。相关员工必须同时在度假，并在正确的时间出现在正确的度假村地点。</p>
+<h2 id="zh-elemental-stone-bond">元素之石羁绊</h2>
+<p>关系达到 <strong>恋爱中</strong> 后，如果你拥有 <strong>元素之石</strong>，Lindia会在青楼训练室获得 <strong>亲密羁绊</strong> 行动。</p>
+<div class="guide-table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th>属性</th>
+<th>数值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>关系</td>
+<td>恋爱中（3,000点）</td>
+</tr>
+<tr>
+<td>所需物品</td>
+<td>元素之石</td>
+</tr>
+<tr>
+<td>时间</td>
+<td>60分钟</td>
+</tr>
+<tr>
+<td>奖励</td>
+<td>元素之石等级+1</td>
+</tr>
+<tr>
+<td>限制</td>
+<td>每个游戏日可与Lindia进行一次</td>
+</tr>
+</tbody>
+</table></div>
+<p>使用后，该行动会在当天剩余时间内隐藏，并于次日恢复。它会提高灵魂石存储的等级，不会消耗灵魂石本身。</p>
+<h2 id="zh-recommended-route">推荐路线</h2>
+<ol>
+<li>通过地牢第7层并击败Lindia。</li>
+<li>确认12号员工已激活，然后在09:00-18:00前往训练室见她。</li>
+<li>每天交谈四次；达到已知后，每天最多再送两本书。</li>
+<li>达到已知后完成 <strong>页边笔记</strong>。</li>
+<li>达到相识后完成 <strong>可控的魔法</strong>。方便的话，将神秘提升到40以选择特殊回答。</li>
+<li>达到朋友后，完成 <strong>导师之问</strong>、<strong>法术控制笔记</strong> 和一次性的 <strong>集市约会</strong>。</li>
+<li>达到亲密朋友后，完成 <strong>足够亲近</strong>；共情可解锁其中的特殊回答。</li>
+<li>达到迷恋后，在训练室触发 <strong>不再是学徒</strong>。</li>
+<li>利用塞壬岛活动与组合剧情，体验更多内容并获得更多好感度。</li>
+<li>达到恋爱中后，如果想提升元素之石，就每天使用一次 <strong>亲密羁绊</strong>。</li>
+</ol>
+<h2 id="zh-troubleshooting">故障排查</h2>
+<h3 id="zh-lindia-is-not-at-the-bar">酒吧里没有Lindia</h3>
+<ul>
+<li>必须先在第7层击败她。</li>
+<li>她在酒吧的活动时间只有04:00-08:00。</li>
+<li>她的大部分个人路线位于训练室，时段为09:00-18:00。</li>
+</ul>
+<h3 id="zh-her-next-plot-will-not-trigger">下一段剧情没有触发</h3>
+<ul>
+<li>在09:00-18:00进入青楼训练室。</li>
+<li>确认Lindia是已激活的员工。</li>
+<li>完成上一段剧情。</li>
+<li>达到所需关系阶段：已知、朋友或迷恋。</li>
+<li>如果同时有多个自动剧情满足条件，请在当前事件结束后离开，再重新进入。</li>
+</ul>
+<h3 id="zh-spell-control-notes-is-missing">找不到法术控制笔记</h3>
+<p>你需要达到朋友关系、拥有35点神秘、处于训练室活动时段，并且<code>lindia_spell_control_notes_completed</code>标记尚未完成。</p>
+<h3 id="zh-close-enough-is-missing">找不到足够亲近</h3>
+<p>你需要达到亲密朋友，并且已经完成 <strong>可控的魔法</strong>。</p>
+<h3 id="zh-intimate-bonding-is-missing">找不到亲密羁绊</h3>
+<p>你需要达到恋爱中、关键物品中拥有元素之石、处于训练室活动时段，并且当天尚未与Lindia进行过羁绊。</p>
+<h2 id="zh-source-reference">源文件参考</h2>
+<p>本指南核对的主要实现文件：</p>
+<ul>
+<li><code>game/miniboss_lindia.rpy</code></li>
+<li><code>game/characters/lindia.rpy</code></li>
+<li><code>game/characters/lindia_conversations.rpy</code></li>
+<li><code>game/brothel_workers_data.rpy</code></li>
+<li><code>game/plot_list_registry_brothel.rpy</code></li>
+<li><code>game/plot_list_registry_dates.rpy</code></li>
+<li><code>game/plot_list_registry_resort.rpy</code></li>
+<li><code>game/soul_stone_actions.rpy</code></li>
+</ul>
+</div>
+        <div class="guide-community-note"><div><strong data-copy-en="Community discoveries" data-copy-zh="社区发现">Community discoveries</strong><p data-copy-en="These official guides track the current game. The player-maintained wiki may contain additional strategies and discoveries." data-copy-zh="这些官方攻略与当前游戏版本保持一致；玩家维护的 Wiki 可能还收录其他策略与社区发现。">These official guides track the current game. The player-maintained wiki may contain additional strategies and discoveries.</p></div><a href="https://chronoromancer.miraheze.org/wiki/Main_Page" target="_blank" rel="noopener noreferrer" data-copy-en="Visit Player Wiki →" data-copy-zh="访问玩家 Wiki →">Visit Player Wiki →</a></div>
+        <nav class="guide-pager" aria-label="Adjacent guides"><a href="lime.html"><span data-copy-en="Previous guide" data-copy-zh="上一篇攻略">Previous guide</span><strong data-copy-en="Lime — Complete Walkthrough" data-copy-zh="Lime——完整攻略">Lime — Complete Walkthrough</strong></a><a href="lucy.html"><span data-copy-en="Next guide" data-copy-zh="下一篇攻略">Next guide</span><strong data-copy-en="Lucy — Complete Walkthrough" data-copy-zh="Lucy——完整攻略">Lucy — Complete Walkthrough</strong></a></nav>
+      </article>
+    </div>
+  </main>
+  <footer class="site-footer"><div class="container"><div class="footer-grid">
+    <div class="footer-brand"><img src="../assets/images/v2/logo.png" alt="Chronoromancer"><p data-i18n="footerDescription">An adults-only time-travel sandbox RPG. Public website artwork is SFW.</p></div>
+    <div class="footer-column"><h2 data-i18n="footerExplore">Explore</h2><a href="../story.html" data-i18n="navStory">Story</a><a href="../characters.html" data-i18n="navCharacters">Characters</a><a href="../walkthroughs.html" data-i18n="navGuides">Guides</a><a href="../screenshots.html" data-i18n="navGallery">Gallery</a><a href="../main.html#download" data-i18n="navDownload">Download</a></div>
+    <div class="footer-column"><h2 data-i18n="footerCommunity">Community</h2><a data-config-link="community.discord" target="_blank" rel="noopener noreferrer">Discord</a><a data-config-link="community.telegram" target="_blank" rel="noopener noreferrer">Telegram</a><a data-config-link="community.patreon" target="_blank" rel="noopener noreferrer">Patreon</a><a data-config-link="community.wiki" target="_blank" rel="noopener noreferrer" data-i18n="navWiki">Player Wiki</a></div>
+    <div class="footer-column"><h2 data-i18n="footerLegal">Legal</h2><a href="../privacy.html" data-i18n="footerPrivacy">Privacy</a><a href="../terms.html" data-i18n="footerTerms">Terms</a></div>
+  </div><div class="footer-bottom"><span>© <span data-current-year></span> <span data-i18n="copyright">Chronoromancer Studio. All rights reserved.</span></span><span data-copy-en="Official guides · English / Simplified Chinese" data-copy-zh="官方攻略 · English / 简体中文">Official guides · English / Simplified Chinese</span></div></div></footer>
+  <script src="../assets/js/site-config.js"></script><script src="../assets/js/site.js"></script><script src="../assets/js/walkthroughs.js"></script>
+</body></html>

@@ -1,0 +1,943 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="The Mining minigame is a match-and-cascade puzzle game where you swing pickaxes at an 8×11 grid of rocks, gems, and ores. Every tile broken gives fragments of one of six precious resources, and chaining the right tiles together creates e…"><link rel="icon" type="image/png" href="../assets/images/v2/favicon.png">
+  <link rel="stylesheet" href="../assets/css/style.css"><link rel="stylesheet" href="../assets/css/walkthroughs.css">
+  <title>Mining System - Complete Guide | Chronoromancer Guides</title></head>
+<body class="guide-page" data-title-en="Mining System - Complete Guide | Chronoromancer Guides" data-title-zh="采矿系统——完整指南 | Chronoromancer 官方攻略">
+  <div class="reading-progress" data-reading-progress></div>
+  <a class="skip-link" href="#content" data-copy-en="Skip to content" data-copy-zh="跳至正文">Skip to content</a>
+  <div class="maturity-bar" data-copy-en="18+ adults-only game · Guides may describe mature game systems" data-copy-zh="18+ 仅限成人游戏 · 攻略可能涉及成人游戏系统">18+ adults-only game · Guides may describe mature game systems</div>
+  <header class="site-header"><div class="container header-inner">
+    <a class="brand" href="../main.html" aria-label="Chronoromancer home"><img src="../assets/images/v2/logo.png" alt="Chronoromancer"></a>
+    <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-label="Open navigation"><span></span><span></span><span></span></button>
+    <nav class="site-nav" data-nav-menu aria-label="Primary navigation">
+      <a href="../main.html" data-i18n="navHome">Home</a>
+      <a href="../story.html" data-i18n="navStory">Story</a>
+      <a href="../characters.html" data-i18n="navCharacters">Characters</a>
+      <a class="is-active" href="../walkthroughs.html" data-i18n="navGuides">Guides</a>
+      <a href="../screenshots.html" data-i18n="navGallery">Gallery</a>
+      <a data-config-link="community.wiki" target="_blank" rel="noopener noreferrer" data-i18n="navWiki">Player Wiki</a>
+      <a href="../main.html#download" data-i18n="navDownload">Download</a>
+      <div class="language-switch" role="group" aria-label="Language"><button type="button" data-language="en" aria-pressed="true">EN</button><button type="button" data-language="zh" aria-pressed="false">简体中文</button></div>
+    </nav>
+  </div></header>
+  <main id="content">
+    <section class="guide-masthead"><div class="container">
+      <nav class="breadcrumb" aria-label="Breadcrumb"><a href="../walkthroughs.html" data-copy-en="Official Guides" data-copy-zh="官方攻略">Official Guides</a><span>/</span><span data-copy-en="Activities &amp; Businesses" data-copy-zh="活动与经营">Activities &amp; Businesses</span></nav>
+      <p class="eyebrow" data-copy-en="Version-matched official guide" data-copy-zh="与当前版本匹配的官方攻略">Version-matched official guide</p>
+      <h1 data-copy-en="Mining System - Complete Guide" data-copy-zh="采矿系统——完整指南">Mining System - Complete Guide</h1>
+      <div class="guide-meta"><span data-copy-en="Activities &amp; Businesses" data-copy-zh="活动与经营">Activities &amp; Businesses</span><span data-copy-en="Simplified Chinese available" data-copy-zh="简体中文译文已上线">Simplified Chinese available</span><span data-site-version>V0.9.6.0</span></div>
+    </div></section>
+    <div class="container guide-layout">
+      <aside class="guide-sidebar">
+        <a class="back-to-library" href="../walkthroughs.html" data-copy-en="← All guides" data-copy-zh="← 全部攻略">← All guides</a>
+        <div data-lang-panel="en"><h2>On this page</h2><nav class="guide-toc"><a class="toc-level-2" href="#table-of-contents">Table of Contents</a><a class="toc-level-2" href="#quick-start">Quick Start</a><a class="toc-level-2" href="#locations">Locations</a><a class="toc-level-3" href="#mountain-foothills-medieval-outskirts">Mountain Foothills (Medieval Outskirts)</a><a class="toc-level-2" href="#the-three-pickaxes">The Three Pickaxes</a><a class="toc-level-3" href="#iron-pickaxe-default">Iron Pickaxe (default)</a><a class="toc-level-3" href="#copper-pickaxe">Copper Pickaxe</a><a class="toc-level-3" href="#diamond-pickaxe">Diamond Pickaxe</a><a class="toc-level-3" href="#switching-between-them">Switching Between Them</a><a class="toc-level-2" href="#how-a-mining-session-works">How a Mining Session Works</a><a class="toc-level-2" href="#the-mining-screen">The Mining Screen</a><a class="toc-level-3" href="#top-bar">Top Bar</a><a class="toc-level-3" href="#left-side">Left Side</a><a class="toc-level-3" href="#bottom-left">Bottom Left</a><a class="toc-level-3" href="#right-side">Right Side</a><a class="toc-level-2" href="#tile-types-and-rewards">Tile Types and Rewards</a><a class="toc-level-3" href="#mineral--rock-type-tiles">Mineral / Rock-type Tiles</a><a class="toc-level-3" href="#gem-type-tiles">Gem-type Tiles</a><a class="toc-level-3" href="#crystal-type-tiles-panthers">Crystal-type Tiles (Panthers)</a><a class="toc-level-3" href="#special-tiles">Special Tiles</a><a class="toc-level-3" href="#power-ups">Power-Ups</a><a class="toc-level-3" href="#indestructible-tiles">Indestructible Tiles</a><a class="toc-level-2" href="#the-six-resources">The Six Resources</a><a class="toc-level-2" href="#cascade-matches">Cascade Matches</a><a class="toc-level-2" href="#wild-rocks">Wild Rocks</a><a class="toc-level-2" href="#power-ups-1">Power-Ups</a><a class="toc-level-3" href="#bomb">Bomb</a><a class="toc-level-3" href="#fireblock">Fireblock</a><a class="toc-level-3" href="#magic-cube">Magic Cube</a><a class="toc-level-3" href="#what-power-up-chains-destroy">What Power-Up Chains Destroy</a><a class="toc-level-2" href="#key-item-stones">Key Item Stones</a><a class="toc-level-3" href="#spawn-rules">Spawn Rules</a><a class="toc-level-3" href="#strategy-for-breaking-them">Strategy for Breaking Them</a><a class="toc-level-2" href="#pity-timer">Pity Timer</a><a class="toc-level-2" href="#getting-more-pickaxes">Getting More Pickaxes</a><a class="toc-level-3" href="#buying-from-gem">Buying from Gem</a><a class="toc-level-3" href="#pickaxe-haul-full-version">Pickaxe Haul (full version)</a><a class="toc-level-3" href="#battle-drops-dungeon">Battle Drops (Dungeon)</a><a class="toc-level-3" href="#heists-thieves-guild">Heists (Thieves Guild)</a><a class="toc-level-3" href="#search-encounters">Search Encounters</a><a class="toc-level-3" href="#repair-tiles-mining-itself">Repair Tiles (Mining Itself)</a><a class="toc-level-3" href="#hard-cap">Hard Cap</a><a class="toc-level-2" href="#tips-and-strategy">Tips and Strategy</a><a class="toc-level-3" href="#before-entering">Before Entering</a><a class="toc-level-3" href="#during-a-session">During a Session</a><a class="toc-level-3" href="#long-sessions-and-the-pity-timer">Long Sessions and the Pity Timer</a><a class="toc-level-3" href="#resource-strategy">Resource Strategy</a><a class="toc-level-3" href="#dont-forget-to-exit">Don&#x27;t Forget to Exit</a></nav></div>
+        <div data-lang-panel="zh" hidden><h2>本页目录</h2><nav class="guide-toc"><a class="toc-level-2" href="#zh-目录">目录</a><a class="toc-level-2" href="#zh-quick-start">快速开始</a><a class="toc-level-2" href="#zh-locations">地点</a><a class="toc-level-3" href="#zh-山脚中世纪郊外">山脚（中世纪郊外）</a><a class="toc-level-2" href="#zh-the-three-pickaxes">三种镐子</a><a class="toc-level-3" href="#zh-铁镐默认">铁镐（默认）</a><a class="toc-level-3" href="#zh-铜镐">铜镐</a><a class="toc-level-3" href="#zh-钻石镐">钻石镐</a><a class="toc-level-3" href="#zh-切换镐子">切换镐子</a><a class="toc-level-2" href="#zh-how-a-mining-session-works">一次采矿如何进行</a><a class="toc-level-2" href="#zh-the-mining-screen">采矿界面</a><a class="toc-level-3" href="#zh-顶栏">顶栏</a><a class="toc-level-3" href="#zh-左侧">左侧</a><a class="toc-level-3" href="#zh-左下角">左下角</a><a class="toc-level-3" href="#zh-右侧">右侧</a><a class="toc-level-2" href="#zh-tile-types-and-rewards">方块类型与奖励</a><a class="toc-level-3" href="#zh-矿物岩石类方块">矿物／岩石类方块</a><a class="toc-level-3" href="#zh-宝石类方块">宝石类方块</a><a class="toc-level-3" href="#zh-水晶类方块豹">水晶类方块（豹）</a><a class="toc-level-3" href="#zh-特殊方块">特殊方块</a><a class="toc-level-3" href="#zh-强化方块">强化方块</a><a class="toc-level-3" href="#zh-不可摧毁方块">不可摧毁方块</a><a class="toc-level-2" href="#zh-the-six-resources">六种资源</a><a class="toc-level-2" href="#zh-cascade-matches">连锁消除</a><a class="toc-level-2" href="#zh-wild-rocks">万能岩石</a><a class="toc-level-2" href="#zh-power-ups">强化方块</a><a class="toc-level-3" href="#zh-炸弹">炸弹</a><a class="toc-level-3" href="#zh-火焰方块">火焰方块</a><a class="toc-level-3" href="#zh-魔方">魔方</a><a class="toc-level-3" href="#zh-强化方块连锁会摧毁什么">强化方块连锁会摧毁什么</a><a class="toc-level-2" href="#zh-key-item-stones">关键物品石</a><a class="toc-level-3" href="#zh-生成规则">生成规则</a><a class="toc-level-3" href="#zh-击破策略">击破策略</a><a class="toc-level-2" href="#zh-pity-timer">保底计时器</a><a class="toc-level-2" href="#zh-getting-more-pickaxes">获得更多镐子</a><a class="toc-level-3" href="#zh-向-gem-购买">向 Gem 购买</a><a class="toc-level-3" href="#zh-镐子采购完整版">镐子采购（完整版）</a><a class="toc-level-3" href="#zh-战斗掉落地下城">战斗掉落（地下城）</a><a class="toc-level-3" href="#zh-劫案盗贼公会">劫案（盗贼公会）</a><a class="toc-level-3" href="#zh-搜索遭遇">搜索遭遇</a><a class="toc-level-3" href="#zh-修复方块采矿本身">修复方块（采矿本身）</a><a class="toc-level-3" href="#zh-硬上限">硬上限</a><a class="toc-level-2" href="#zh-tips-and-strategy">技巧与策略</a><a class="toc-level-3" href="#zh-进入前">进入前</a><a class="toc-level-3" href="#zh-采矿期间">采矿期间</a><a class="toc-level-3" href="#zh-长时间采矿与保底计时器">长时间采矿与保底计时器</a><a class="toc-level-3" href="#zh-资源策略">资源策略</a><a class="toc-level-3" href="#zh-别忘了退出">别忘了退出</a></nav></div>
+      </aside>
+      <article class="guide-content">
+        <div class="spoiler-notice"><strong data-copy-en="Guide notice" data-copy-zh="攻略提示">Guide notice</strong><span data-copy-en="This page contains gameplay and story spoilers and may describe mature systems." data-copy-zh="本页包含玩法与剧情剧透，并可能涉及成人游戏系统。">This page contains gameplay and story spoilers and may describe mature systems.</span></div>
+        <div class="markdown-body" data-lang-panel="en">
+<p>The Mining minigame is a match-and-cascade puzzle game where you swing pickaxes at an 8×11 grid of rocks, gems, and ores. Every tile broken gives fragments of one of six precious resources, and chaining the right tiles together creates explosive cascades that can destroy half the board in a single click. With three pickaxes that each behave differently and rare key items hidden in the rubble, mining is one of the most resource-rich activities in Chronoromancer.</p>
+<p>This guide covers everything: how to start, the three pickaxes and what they do, every tile type and what it gives you, the cascade and chain-reaction system, key item stones, and where to find more pickaxes outside of mining itself.</p>
+<h2 id="table-of-contents">Table of Contents</h2>
+<ul>
+<li><a href="#quick-start">Quick Start</a></li>
+<li><a href="#locations">Locations</a></li>
+<li><a href="#the-three-pickaxes">The Three Pickaxes</a></li>
+<li><a href="#how-a-mining-session-works">How a Mining Session Works</a></li>
+<li><a href="#the-mining-screen">The Mining Screen</a></li>
+<li><a href="#tile-types-and-rewards">Tile Types and Rewards</a></li>
+<li><a href="#the-six-resources">The Six Resources</a></li>
+<li><a href="#cascade-matches">Cascade Matches</a></li>
+<li><a href="#wild-rocks">Wild Rocks</a></li>
+<li><a href="#power-ups">Power-Ups</a></li>
+<li><a href="#key-item-stones">Key Item Stones</a></li>
+<li><a href="#pity-timer">Pity Timer</a></li>
+<li><a href="#getting-more-pickaxes">Getting More Pickaxes</a></li>
+<li><a href="#tips-and-strategy">Tips and Strategy</a></li>
+</ul>
+<hr/>
+<h2 id="quick-start">Quick Start</h2>
+<p>To start mining you need exactly two things:</p>
+<ol>
+<li><strong>At least one pickaxe</strong> of any kind in your inventory (new games start with 1 iron pickaxe)</li>
+<li><strong>At least 10 energy</strong> in your stat pool</li>
+</ol>
+<p>Travel to the <strong>Mountain Foothills</strong> in the Medieval era (Village Outskirts district) and use the <strong>Mining</strong> action. The minigame opens immediately. Each entry costs 30 minutes and 30 energy. If you have zero pickaxes, the action will be greyed out.</p>
+<p>Tiles are clicked one at a time. Every click costs 1 of your selected pickaxe and 10 energy. Rocks break, gems sparkle, and you collect fragments toward six different ingots and gems.</p>
+<hr/>
+<h2 id="locations">Locations</h2>
+<h3 id="mountain-foothills-medieval-outskirts">Mountain Foothills (Medieval Outskirts)</h3>
+<p>The only location where you can mine. The path to the foothills is also where you'll find Gem, the dwarven miner who lives here from 7 AM to 5 PM. Mining itself doesn't have a time restriction — you can swing your pickaxe at any hour of any day.</p>
+<p>Gem also sells <strong>bundles of 5 iron pickaxes</strong> for $200, once per day, as a shopping action at this location. If you ever run dry on iron, this is your reliable source.</p>
+<hr/>
+<h2 id="the-three-pickaxes">The Three Pickaxes</h2>
+<p>You start with the iron pickaxe and earn the others through play. Each one has a different role.</p>
+<h3 id="iron-pickaxe-default">Iron Pickaxe (default)</h3>
+<p>The basic pickaxe and your bread-and-butter. Hits any normal tile for 1 damage per click. Cannot break bedrock or glass cubes.</p>
+<ul>
+<li><strong>Strength:</strong> 1</li>
+<li><strong>Special:</strong> None</li>
+<li><strong>Best for:</strong> Everyday mining, breaking basic rocks and gems, triggering cascades</li>
+</ul>
+<h3 id="copper-pickaxe">Copper Pickaxe</h3>
+<p>Stronger than iron, and crucially, the <strong>only pickaxe besides diamond that can break bedrock</strong>.</p>
+<ul>
+<li><strong>Strength:</strong> 2 (kills multi-hit tiles in half the clicks)</li>
+<li><strong>Special:</strong> Breaks bedrock in one click</li>
+<li><strong>Best for:</strong> Clearing bedrock when it's blocking a good cascade, finishing tough multi-hit tiles faster</li>
+</ul>
+<h3 id="diamond-pickaxe">Diamond Pickaxe</h3>
+<p>The premium tool. High damage per swing, breaks anything, and <strong>always</strong> triggers a bonus hit on a random adjacent tile every time you click.</p>
+<ul>
+<li><strong>Strength:</strong> 5 (smashes most multi-hit tiles in 1–2 clicks)</li>
+<li><strong>Special:</strong> Breaks both bedrock and glass cubes in one click</li>
+<li><strong>Bonus hit:</strong> Every click also damages a random adjacent tile (any of the 8 surrounding tiles, including diagonals) for full 5 damage. The bonus does NOT consume an extra pickaxe — it's free.</li>
+<li><strong>Best for:</strong> Tough multi-hit tiles like rose gem, queenstone, and the rare key item stones. Also amazing for cleanup since the bonus hit can chain into matches.</li>
+</ul>
+<p>The bonus hit is the diamond's signature move. If your bonus hit lands on a power-up, that power-up triggers immediately. If it lands on bedrock or glass, those are destroyed too.</p>
+<h3 id="switching-between-them">Switching Between Them</h3>
+<p>You select your active pickaxe from the three squares at the bottom-left of the mining screen. The selected pickaxe has a yellow border around it. A pickaxe that has run out of charges goes grey and can't be selected.</p>
+<p>You can switch pickaxes between any two clicks — there's no penalty for swapping mid-session.</p>
+<hr/>
+<h2 id="how-a-mining-session-works">How a Mining Session Works</h2>
+<p>When you click a tile:</p>
+<ol>
+<li><strong>The selected pickaxe loses 1 charge.</strong></li>
+<li><strong>You lose 10 energy.</strong></li>
+<li><strong>Your pickaxe swings</strong> (animation plays on the clicked tile, and on the bonus tile if you're using diamond).</li>
+<li><strong>The tile takes damage</strong> equal to your pickaxe's strength. If it breaks, you get its rewards.</li>
+<li><strong>Tiles fall down</strong> to fill the gaps (gravity), and new tiles spawn at the top.</li>
+<li><strong>The game checks for matches</strong> — any 3+ tiles of the same type in a straight line will all break together.</li>
+<li><strong>Cascades continue</strong> as long as new matches keep forming after gravity.</li>
+</ol>
+<p>A single click can sometimes trigger an enormous chain — gravity refills, a new match forms, that match damages neighbors, those neighbors include a power-up that explodes, the explosion clears more tiles, gravity again, another match, and so on. This is where mining gets genuinely fun.</p>
+<p>A session ends when you click the X at the top-left, press ESC, or press Space.</p>
+<hr/>
+<h2 id="the-mining-screen">The Mining Screen</h2>
+<h3 id="top-bar">Top Bar</h3>
+<ul>
+<li><strong>X close button</strong> (top left) — exits the session at any time.</li>
+<li><strong>ENERGY X/Y</strong> — your current energy versus your maximum.</li>
+<li><strong>Energy resource icon</strong> — clickable to spend one of your stored energy items, restoring 25 energy (or 50 if you have Willow's Enhanced Healing). The number next to it shows how many you have left.</li>
+</ul>
+<h3 id="left-side">Left Side</h3>
+<p>Six rows showing your current totals for each resource:</p>
+<ul>
+<li><strong>Iron Ingots: X</strong> — Fragments X/100</li>
+<li><strong>Silver Ingots: X</strong> — Fragments X/100</li>
+<li><strong>Mithril Ingots: X</strong> — Fragments X/100</li>
+<li><strong>Mineral Clusters: X</strong> — Fragments X/100</li>
+<li><strong>Crystals: X</strong> — Fragments X/100</li>
+<li><strong>Gems: X</strong> — Fragments X/100</li>
+</ul>
+<p>Every 100 fragments rolls over into +1 of the whole resource. The fraction counter resets to 0 (or to the leftover, if you got more than 100 in one go).</p>
+<h3 id="bottom-left">Bottom Left</h3>
+<p>The three pickaxe selectors. Iron on the left, copper in the middle, diamond on the right. The selected one has a yellow border. The number on each shows how many charges you have.</p>
+<h3 id="right-side">Right Side</h3>
+<p>The 8×11 grid where the action happens. Multi-hit tiles show their remaining HP as a small number on the tile.</p>
+<hr/>
+<h2 id="tile-types-and-rewards">Tile Types and Rewards</h2>
+<p>The grid can spawn 30 different tile types: 22 regular group-spawned tiles, bedrock, and the seven rare key item stones. Here's the full list and what each one gives when consumed.</p>
+<h3 id="mineral--rock-type-tiles">Mineral / Rock-type Tiles</h3>
+<div class="guide-table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th>Tile</th>
+<th>HP</th>
+<th>Reward</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Rock</strong></td>
+<td>1</td>
+<td>1 fragment: 50% iron, 40% silver, 10% mithril</td>
+</tr>
+<tr>
+<td><strong>Iron Ore</strong></td>
+<td>1</td>
+<td>+1 iron fragment, 10% chance of 1 random other resource</td>
+</tr>
+<tr>
+<td><strong>Gold</strong></td>
+<td>1</td>
+<td>+1 iron, +1 silver, 10% chance of 1 random other</td>
+</tr>
+<tr>
+<td><strong>Coal</strong></td>
+<td>1</td>
+<td>+1 iron, 15% chance of 1 mithril, 10% chance of 1 gem</td>
+</tr>
+<tr>
+<td><strong>Metal</strong></td>
+<td>1</td>
+<td>3 fragments, each randomly chosen between iron / silver / mithril</td>
+</tr>
+<tr>
+<td><strong>Metal Star</strong></td>
+<td>3</td>
+<td>+2 iron, +2 silver, +2 mithril, +1 random of cluster / crystal / gem</td>
+</tr>
+<tr>
+<td><strong>Metal Fragments</strong></td>
+<td>8</td>
+<td>+1 iron, +1 silver, +1 mithril</td>
+</tr>
+<tr>
+<td><strong>Molten</strong></td>
+<td>5</td>
+<td>+2 iron, +1 silver, +1 mithril, 40% chance of 1 random of cluster / crystal / gem</td>
+</tr>
+<tr>
+<td><strong>Bedrock</strong></td>
+<td>special</td>
+<td>2 fragments, each independently random across all 6 resources</td>
+</tr>
+</tbody>
+</table></div>
+<p>Bedrock cannot be broken by iron — only copper or diamond — and four of them spawn at the start of every session as obstacles. During gravity refill, new tiles have a small 1.5% chance to respawn bedrock while fewer than four bedrock tiles are currently on the board.</p>
+<h3 id="gem-type-tiles">Gem-type Tiles</h3>
+<div class="guide-table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th>Tile</th>
+<th>HP</th>
+<th>Reward</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Emerald</strong></td>
+<td>1</td>
+<td>+1 cluster, 40% chance of 1 random of crystal / gem</td>
+</tr>
+<tr>
+<td><strong>Ruby</strong></td>
+<td>1</td>
+<td>+2 cluster, 20% chance of 1 random of crystal / gem</td>
+</tr>
+<tr>
+<td><strong>Rainbow Gem</strong></td>
+<td>15</td>
+<td>+3 cluster, +1 crystal, +1 gem</td>
+</tr>
+<tr>
+<td><strong>Rose Gem</strong></td>
+<td>30</td>
+<td>+1 of all 6 resources</td>
+</tr>
+<tr>
+<td><strong>Iridescent</strong></td>
+<td>25</td>
+<td>+2 of all 6 resources</td>
+</tr>
+</tbody>
+</table></div>
+<p>Iridescent and rose gem are the jackpot tiles — destroying one gives a chunk of every resource simultaneously.</p>
+<h3 id="crystal-type-tiles-panthers">Crystal-type Tiles (Panthers)</h3>
+<div class="guide-table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th>Tile</th>
+<th>HP</th>
+<th>Reward</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Panther Green</strong></td>
+<td>10</td>
+<td>3 fragments, each random from cluster / crystal / gem</td>
+</tr>
+<tr>
+<td><strong>Panther Blue</strong></td>
+<td>10</td>
+<td>3 fragments, each random from cluster / crystal / gem</td>
+</tr>
+<tr>
+<td><strong>Panther Pink</strong></td>
+<td>10</td>
+<td>3 fragments, each random from cluster / crystal / gem</td>
+</tr>
+</tbody>
+</table></div>
+<p>All three panther tiles are functionally identical for rewards — only the visuals differ.</p>
+<h3 id="special-tiles">Special Tiles</h3>
+<div class="guide-table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th>Tile</th>
+<th>HP</th>
+<th>Reward</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Energy</strong></td>
+<td>1</td>
+<td>+40 energy (capped at your max)</td>
+</tr>
+<tr>
+<td><strong>Repair</strong></td>
+<td>1</td>
+<td>+3 of whichever pickaxe you used to break it</td>
+</tr>
+</tbody>
+</table></div>
+<p>The energy tile is hugely valuable — net gain of +30 energy after the 10 energy your click cost. The repair tile is one of the only ways to passively replenish your pickaxes mid-session.</p>
+<h3 id="power-ups">Power-Ups</h3>
+<div class="guide-table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th>Tile</th>
+<th>Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Bomb</strong></td>
+<td>3×3 explosion centered on the bomb</td>
+</tr>
+<tr>
+<td><strong>Fireblock</strong></td>
+<td>Destroys the entire row</td>
+</tr>
+<tr>
+<td><strong>Magic Cube</strong></td>
+<td>Destroys the entire column</td>
+</tr>
+</tbody>
+</table></div>
+<p>Power-ups don't have rewards themselves, but the tiles destroyed by their blast all give their normal rewards. Power-ups in a chain reaction will trigger each other, and a single click on one power-up adjacent to another can destroy massive portions of the grid.</p>
+<h3 id="indestructible-tiles">Indestructible Tiles</h3>
+<div class="guide-table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th>Tile</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Glass Cube</strong></td>
+<td>Only diamond pickaxe can break it</td>
+</tr>
+<tr>
+<td><strong>Bedrock</strong></td>
+<td>Only copper or diamond can break it</td>
+</tr>
+</tbody>
+</table></div>
+<hr/>
+<h2 id="the-six-resources">The Six Resources</h2>
+<p>All mining rewards funnel into six resource pools, each tracked as fragments (0-99) and wholes:</p>
+<ul>
+<li><strong>Iron Ingots</strong> — basic crafting metal</li>
+<li><strong>Silver Ingots</strong> — mid-tier metal</li>
+<li><strong>Mithril Ingots</strong> — premium metal</li>
+<li><strong>Mineral Clusters</strong> — concentrated mineral matter</li>
+<li><strong>Crystals</strong> — magical resource (also goes into your main inventory)</li>
+<li><strong>Gems</strong> — premium magical resource (also goes into your main inventory)</li>
+</ul>
+<p>100 fragments of any resource = +1 whole of that resource. Crystals and gems show up in your main inventory immediately. The four ingot/cluster types are stored under "Mining Items" in the Supplies inventory screen.</p>
+<hr/>
+<h2 id="cascade-matches">Cascade Matches</h2>
+<p>After every successful click, gravity drops tiles down to fill empty spaces and new tiles spawn at the top. Then the game scans for <strong>straight lines of 3 or more tiles of the same type</strong>, horizontal or vertical only — diagonals don't count.</p>
+<p>If a match is found:</p>
+<ul>
+<li>All matched tiles are consumed (you get rewards for each)</li>
+<li>Adjacent tiles take damage based on match size:
+<ul>
+<li><strong>3-match:</strong> 5 damage to adjacent multi-hit tiles</li>
+<li><strong>4-match:</strong> 10 damage, AND adjacent repair / energy tiles are also consumed</li>
+<li><strong>5+ match:</strong> 25 damage, repair / energy still consumed</li>
+</ul>
+</li>
+<li>Adjacent power-ups in the blast zone are triggered, kicking off a chain reaction</li>
+<li>After everything settles, gravity runs again and another match check happens — cascades can chain indefinitely</li>
+</ul>
+<p>Note that the match-adjacent damage only hits <strong>multi-hit tiles</strong> (the ones with HP), repair / energy tiles (only on 4+ matches), and <strong>power-ups</strong> (always triggered). It does not consume basic tiles like rock, gold, coal, etc. — those only break from direct clicks or being in the matched line itself.</p>
+<hr/>
+<h2 id="wild-rocks">Wild Rocks</h2>
+<p>Once your cascade reaches its <strong>3rd round and beyond</strong>, a special rule kicks in: <strong>rocks become wild</strong>.</p>
+<p>A rock tile becomes a wild substitute if it has at least one neighbor (in any of the 8 surrounding tiles) that was consumed earlier in this same cascade chain. Wild rocks count as <strong>coal, iron, or metal</strong> for the purpose of forming a match line.</p>
+<p>So during a deep cascade, lines like rock-coal-coal, rock-iron-rock-iron, or coal-rock-rock-coal-coal can all match — provided the rocks are next to recently-broken tiles.</p>
+<p>This is what makes deep cascades so explosive. As more tiles break, more rocks become wild, which creates more matches, which consume more tiles, which makes more rocks wild. Once you start a long chain, it tends to keep going.</p>
+<p>Pure rock-rock-rock lines still match as a normal rock match (no wild logic needed). Lines with non-WILD_MATCHABLE basics like gold, emerald, or ruby don't accept wild rocks — they have to match exactly.</p>
+<p>The wild status resets when your full cascade finishes; on your next click, it starts over from depth 1.</p>
+<hr/>
+<h2 id="power-ups-1">Power-Ups</h2>
+<p>The three power-up tiles are your ticket to massive cascades. They can be triggered three ways:</p>
+<ol>
+<li><strong>Direct click</strong> — costs your pickaxe charge and 10 energy as normal</li>
+<li><strong>Diamond bonus hit</strong> — your diamond's adjacent random hit can land on a power-up</li>
+<li><strong>Cascade adjacency</strong> — when a match forms next to a power-up, the power-up fires automatically (free)</li>
+</ol>
+<p>When triggered, a power-up calculates its full chain reaction upfront, then plays out the animation. If the blast zone hits another power-up, that one triggers too — and so on, recursively, all in one calculation. A bomb next to a magic cube next to a fireblock can clear half the board with a single click.</p>
+<h3 id="bomb">Bomb</h3>
+<p>3×3 explosion centered on the bomb. Hits the bomb itself plus the 8 surrounding tiles.</p>
+<p><strong>Deep cascade bonus:</strong> If a bomb is triggered while your cascade is at depth 3 or higher (the same threshold that activates wild rocks), the bomb's blast also destroys <strong>every coal tile on the board</strong>. Each coal still gives its normal reward, the gaps left behind can form new matches, and any power-ups adjacent to those destroyed coal tiles get triggered too — sometimes leading to genuinely board-clearing chains.</p>
+<h3 id="fireblock">Fireblock</h3>
+<p>Destroys every tile in the same row.</p>
+<h3 id="magic-cube">Magic Cube</h3>
+<p>Destroys every tile in the same column.</p>
+<h3 id="what-power-up-chains-destroy">What Power-Up Chains Destroy</h3>
+<p>Power-up chains affect every tile in their blast except for <strong>bedrock and glass cubes</strong> (those are skipped). Multi-hit tiles take 15 damage per blast and break if reduced to 0 HP. Everything else — basic tiles, other power-ups, repair, energy, key item stones — gets consumed immediately.</p>
+<hr/>
+<h2 id="key-item-stones">Key Item Stones</h2>
+<p>Seven rare and powerful <strong>key item stones</strong> can spawn during mining. Each is a unique key item that goes into your permanent collection. Most have <strong>200 HP</strong>, while Queenstone and Aether Stone have <strong>400 HP</strong>, making them tough to break — diamond pickaxe is highly recommended.</p>
+<p>The seven mining stones:</p>
+<ul>
+<li><strong>Queenstone</strong></li>
+<li><strong>Sword Stone</strong></li>
+<li><strong>Brute Stone</strong></li>
+<li><strong>Balance Stone</strong></li>
+<li><strong>Elemental Stone</strong></li>
+<li><strong>Twilight Stone</strong></li>
+<li><strong>Aether Stone</strong></li>
+</ul>
+<h3 id="spawn-rules">Spawn Rules</h3>
+<ul>
+<li><strong>Each spawn slot has roughly a 0.013% chance</strong> of being a key stone (extremely rare in normal play)</li>
+<li><strong>Once any one of the seven spawns</strong> during your session, no other key stone can appear until you exit and re-enter the minigame</li>
+<li><strong>Stones you already own will never spawn again</strong> — once you have it, it's permanently filtered out</li>
+<li>If you somehow own all seven mining stones, no key stones will ever spawn</li>
+</ul>
+<p>When a key stone is consumed, it's added to your key items list and a celebratory chime plays. All seven mining stones are upgradeable and start at level 1 when first acquired.</p>
+<h3 id="strategy-for-breaking-them">Strategy for Breaking Them</h3>
+<p>200 HP is a lot. With diamond pickaxe (strength 5), that's 40 direct hits — but you can speed it up considerably by:</p>
+<ul>
+<li>Using power-up chains to land 15-damage hits on the stone</li>
+<li>Diamond's bonus hit doubles your effective damage on every click (up to 10 if both the main and bonus tile are the stone)</li>
+<li>4+ matches adjacent to the stone deal 10–25 damage per match</li>
+<li>Iron and copper still work, just much slower</li>
+</ul>
+<p>If a stone spawns and you're low on diamond charges, switch to iron or copper to chip at it while you save diamond for the killing blow.</p>
+<hr/>
+<h2 id="pity-timer">Pity Timer</h2>
+<p>To keep the rare items from being maddening, the game has a <strong>pity timer</strong>:</p>
+<p>After <strong>60 successful clicks</strong> in a single session, every spawn roll has a <strong>3% chance</strong> of forcing either a key stone or an iridescent (whichever you don't already have this session). The pool is split evenly between unowned key stones and iridescent.</p>
+<p>So if you've been mining a while and haven't seen anything special, the pity timer kicks in and significantly increases your odds. The 60-click counter resets every time you re-enter the minigame.</p>
+<hr/>
+<h2 id="getting-more-pickaxes">Getting More Pickaxes</h2>
+<p>You'll burn through pickaxes quickly. Here's how to restock:</p>
+<h3 id="buying-from-gem">Buying from Gem</h3>
+<ul>
+<li><strong>Mountain Foothills</strong>, while Gem is present (7 AM – 5 PM)</li>
+<li><strong>Iron Pickaxes (x5)</strong> action: $200, 10 minutes</li>
+<li><strong>Once per in-game day</strong></li>
+</ul>
+<h3 id="pickaxe-haul-full-version">Pickaxe Haul (full version)</h3>
+<p>Gem also offers a premium bundle: trade <strong>1 crystal</strong> for <strong>10 iron + 10 copper + 10 diamond pickaxes</strong> (15 minutes, +2 Gem relationship). No daily limit — if you have crystals to spare, this is by far the fastest way to stock up on copper and diamond charges.</p>
+<h3 id="battle-drops-dungeon">Battle Drops (Dungeon)</h3>
+<p>After dungeon battles, there's a chance of a free pickaxe drop. The deeper you go, the better the pickaxe — early floors drop iron, mid floors drop copper, and deep floors drop diamond. You'll see a "You found a [type] Pickaxe!" message in the battle log when one drops.</p>
+<h3 id="heists-thieves-guild">Heists (Thieves Guild)</h3>
+<p>After a successful clean getaway from a heist, there's a chance of a pickaxe drop. The fancier the neighborhood, the better the pickaxe — copper from the Gilded Row, diamond from the Noble Quarter.</p>
+<h3 id="search-encounters">Search Encounters</h3>
+<p>The <strong>Medieval Back Alley search action</strong> has a small chance to find a pickaxe stash. Choose to take it and you'll get:</p>
+<ul>
+<li>1–4 iron pickaxes</li>
+<li>1–3 copper pickaxes</li>
+<li>A bonus diamond pickaxe based on your Luck stat (Luck-checked, so higher Luck = better odds)</li>
+</ul>
+<h3 id="repair-tiles-mining-itself">Repair Tiles (Mining Itself)</h3>
+<p>Breaking a repair tile gives you +3 of whatever pickaxe you used. This is a meaningful net positive on iron (1 click in, 3 back), and it's one of the reasons cascade chains are so valuable — if a repair tile gets caught up in a cascade, you get the pickaxes for free.</p>
+<h3 id="hard-cap">Hard Cap</h3>
+<p>You can hold a maximum of <strong>999 of each pickaxe type</strong>. Any excess is discarded, so spend down before stockpiling beyond that.</p>
+<hr/>
+<h2 id="tips-and-strategy">Tips and Strategy</h2>
+<h3 id="before-entering">Before Entering</h3>
+<ul>
+<li><strong>Stock up on energy items</strong> — every click costs 10 energy, so a session with 100 energy gives you about 10 clicks before the energy tile becomes critical. Energy items inside the minigame restore 25-50 energy per use.</li>
+<li><strong>Have at least one pickaxe</strong> of any type. Don't enter at zero charges — you'll waste your time and energy cost.</li>
+<li><strong>Aim for a fresh full energy bar</strong> if you can — running out mid-cascade is frustrating.</li>
+</ul>
+<h3 id="during-a-session">During a Session</h3>
+<ul>
+<li><strong>Look for cascades before clicking.</strong> If you can break a tile that will cause a 4+ match, take that over a random click. Match damage chains and bonus rewards add up fast.</li>
+<li><strong>Save diamond for power-ups, multi-hit tiles, and key stones.</strong> Don't waste diamond charges on a basic rock when iron will do the same job.</li>
+<li><strong>Use copper to clear bedrock blockages.</strong> Bedrock blocks gravity flow and can prevent good matches. New bedrock can respawn during long sessions, so copper stays useful after the starting rocks are gone.</li>
+<li><strong>The energy tile is your friend.</strong> Every energy tile broken is +30 net energy (40 restored minus the 10 you spent clicking). Prioritize them when they appear.</li>
+<li><strong>Power-up adjacency is the highest-value play.</strong> If you can trigger a power-up by matching tiles next to it (so the chain triggers it for free), you're gaining a power-up activation without spending a charge.</li>
+</ul>
+<h3 id="long-sessions-and-the-pity-timer">Long Sessions and the Pity Timer</h3>
+<ul>
+<li>The 60-click pity timer means committed players will see rare items relatively often. Plan for sessions of at least 60+ clicks if you're hunting key stones or iridescent.</li>
+<li>After a key stone or iridescent has spawned in a session, the pity timer for that one is "spent" — you can still mine for the other (key stone vs iridescent), but you can't get a second key stone in the same run.</li>
+</ul>
+<h3 id="resource-strategy">Resource Strategy</h3>
+<ul>
+<li><strong>Mithril is the rarest of the four basic ingots.</strong> It only drops as a small chance from coal, the random pool of metal/molten/metal_star, and 10% from rock.</li>
+<li><strong>Gold tiles are the only common source of silver.</strong> If you need silver, prioritize sessions where group 2 spawns are abundant.</li>
+<li><strong>Cluster, crystal, and gem fragments mostly come from gems, panthers, and rainbow/rose/iridescent.</strong> These tiles are rarer than basic minerals, so crystal and gem fragments accumulate slower.</li>
+</ul>
+<h3 id="dont-forget-to-exit">Don't Forget to Exit</h3>
+<p>The minigame doesn't have a win condition or auto-exit. It runs until you decide to leave. If you've cleaned up everything you wanted, just press X, ESC, or Space to return to the world.</p>
+</div>
+        <div class="markdown-body" data-lang-panel="zh" hidden>
+<p>采矿小游戏是一款消除连锁益智游戏：你要挥动镐子，敲击由岩石、宝石和矿石组成的8×11网格。每破坏一个方块，都会获得六种珍贵资源之一的碎片；将合适的方块连在一起，还能引发爆炸性连锁，一次点击便摧毁半个盘面。三种镐子各有不同的性能，瓦砾中还藏有稀有关键物品，因此采矿是 Chronoromancer 中资源回报最丰厚的活动之一。</p>
+<p>本指南涵盖全部内容：如何开始、三种镐子及其作用、每种方块及其产出、连锁消除与连锁反应系统、关键物品石，以及在采矿之外获得更多镐子的途径。</p>
+<h2 id="zh-目录">目录</h2>
+<ul>
+<li><a href="#zh-quick-start">快速开始</a></li>
+<li><a href="#zh-locations">地点</a></li>
+<li><a href="#zh-the-three-pickaxes">三种镐子</a></li>
+<li><a href="#zh-how-a-mining-session-works">一次采矿如何进行</a></li>
+<li><a href="#zh-the-mining-screen">采矿界面</a></li>
+<li><a href="#zh-tile-types-and-rewards">方块类型与奖励</a></li>
+<li><a href="#zh-the-six-resources">六种资源</a></li>
+<li><a href="#zh-cascade-matches">连锁消除</a></li>
+<li><a href="#zh-wild-rocks">万能岩石</a></li>
+<li><a href="#zh-power-ups">强化方块</a></li>
+<li><a href="#zh-key-item-stones">关键物品石</a></li>
+<li><a href="#zh-pity-timer">保底计时器</a></li>
+<li><a href="#zh-getting-more-pickaxes">获得更多镐子</a></li>
+<li><a href="#zh-tips-and-strategy">技巧与策略</a></li>
+</ul>
+<hr/>
+<p></p>
+<h2 id="zh-quick-start">快速开始</h2>
+<p>开始采矿只需要满足两个条件：</p>
+<ol>
+<li>物品栏中有 <strong>至少一把任意种类的镐子</strong>（新游戏开始时会有1把铁镐）</li>
+<li>属性池中有 <strong>至少10点精力</strong></li>
+</ol>
+<p>前往中世纪的 <strong>山脚</strong>（村庄郊外地区），使用 <strong>采矿</strong> 动作。小游戏会立即开始。每次进入花费30分钟和30点精力。如果没有任何镐子，该动作会显示为灰色。</p>
+<p>每次点击一个方块。每次点击消耗所选镐子1次使用次数和10点精力。岩石碎裂、宝石闪光，而你会收集碎片，逐步合成六种不同的金属锭和宝石资源。</p>
+<hr/>
+<p></p>
+<h2 id="zh-locations">地点</h2>
+<h3 id="zh-山脚中世纪郊外">山脚（中世纪郊外）</h3>
+<p>这是唯一可以采矿的地点。通往山脚的小路也是矮人矿工 Gem 的住处，她每天上午7点至下午5点会出现在这里。采矿本身没有时间限制——无论哪一天、哪个时刻，你都可以挥动镐子。</p>
+<p>Gem 还会在此处提供购物动作，每天一次，以$200出售 <strong>5把铁镐组成的套装</strong>。如果铁镐彻底耗尽，这里就是可靠的补充来源。</p>
+<hr/>
+<p></p>
+<h2 id="zh-the-three-pickaxes">三种镐子</h2>
+<p>开局时你拥有铁镐，其他镐子则需要在游玩过程中获得。每种镐子的定位各不相同。</p>
+<h3 id="zh-铁镐默认">铁镐（默认）</h3>
+<p>最基础、最常用的镐子。每次点击对任意普通方块造成1点伤害。无法破坏基岩或玻璃立方体。</p>
+<ul>
+<li><strong>强度：</strong> 1</li>
+<li><strong>特殊效果：</strong> 无</li>
+<li><strong>最适合：</strong> 日常采矿、破坏基础岩石和宝石、触发连锁消除</li>
+</ul>
+<h3 id="zh-铜镐">铜镐</h3>
+<p>比铁镐更强；更关键的是，除钻石镐外，它是 <strong>唯一能够破坏基岩的镐子</strong>。</p>
+<ul>
+<li><strong>强度：</strong> 2（破坏需要多次命中的方块时，点击次数减半）</li>
+<li><strong>特殊效果：</strong> 点击一次即可破坏基岩</li>
+<li><strong>最适合：</strong> 清除妨碍优质连锁的基岩、更快解决坚固的多耐久方块</li>
+</ul>
+<h3 id="zh-钻石镐">钻石镐</h3>
+<p>顶级工具。每次挥动伤害极高，可破坏任何东西，而且你每次点击时都 <strong>必定</strong> 会额外命中一个随机相邻方块。</p>
+<ul>
+<li><strong>强度：</strong> 5（大多数多耐久方块只需点击1–2次即可击碎）</li>
+<li><strong>特殊效果：</strong> 点击一次即可破坏基岩和玻璃立方体</li>
+<li><strong>额外命中：</strong> 每次点击还会随机伤害一个相邻方块（周围8格中的任意一格，包括对角线），造成完整的5点伤害。这次额外命中不会额外消耗镐子，完全免费。</li>
+<li><strong>最适合：</strong> 玫瑰宝石、女王石和稀有关键物品石等坚固的多耐久方块。清理残局时也非常出色，因为额外命中可能继续引发消除。</li>
+</ul>
+<p>额外命中是钻石镐的招牌能力。若命中强化方块，该强化效果会立即触发；若命中基岩或玻璃，它们也会被摧毁。</p>
+<h3 id="zh-切换镐子">切换镐子</h3>
+<p>你可以在采矿界面左下方的三个方框中选择当前使用的镐子。所选镐子会带有黄色边框。用尽次数的镐子会变成灰色，无法选择。</p>
+<p>任意两次点击之间都可以切换镐子——中途更换不会受到惩罚。</p>
+<hr/>
+<p></p>
+<h2 id="zh-how-a-mining-session-works">一次采矿如何进行</h2>
+<p>点击一个方块时：</p>
+<ol>
+<li><strong>所选镐子减少1次使用次数。</strong></li>
+<li><strong>你失去10点精力。</strong></li>
+<li><strong>镐子挥下</strong>（被点击的方块会播放动画；若使用钻石镐，额外命中的方块也会播放）。</li>
+<li><strong>方块受到等同于镐子强度的伤害。</strong> 若方块被破坏，你会获得对应奖励。</li>
+<li><strong>方块向下掉落</strong> 填补空缺（重力），新方块则从顶部生成。</li>
+<li><strong>游戏检查消除组合</strong>——任何3个或更多同类方块连成直线，都会一同破坏。</li>
+<li><strong>只要重力结算后仍不断形成新组合，连锁就会继续。</strong></li>
+</ol>
+<p>一次点击有时会引发极其庞大的连锁——重力补充盘面，形成新的组合；该组合伤害邻近方块，邻近方块中又有强化方块爆炸；爆炸清除更多方块，重力再次生效，又形成下一组消除，如此循环。采矿真正有趣的地方就在这里。</p>
+<p>点击左上角的X、按 ESC 或按空格键，即可结束本次采矿。</p>
+<hr/>
+<p></p>
+<h2 id="zh-the-mining-screen">采矿界面</h2>
+<h3 id="zh-顶栏">顶栏</h3>
+<ul>
+<li><strong>X关闭按钮</strong>（左上角）——随时退出本次采矿。</li>
+<li><strong>精力 X/Y</strong>——当前精力与精力上限。</li>
+<li><strong>精力资源图标</strong>——点击后消耗一个储存的精力物品，恢复25点精力（若拥有 Willow 的强化治疗，则恢复50点）。旁边的数字显示剩余数量。</li>
+</ul>
+<h3 id="zh-左侧">左侧</h3>
+<p>六行数据显示各项资源的当前总量：</p>
+<ul>
+<li><strong>铁锭：X</strong>——碎片 X/100</li>
+<li><strong>银锭：X</strong>——碎片 X/100</li>
+<li><strong>秘银锭：X</strong>——碎片 X/100</li>
+<li><strong>矿物簇：X</strong>——碎片 X/100</li>
+<li><strong>水晶：X</strong>——碎片 X/100</li>
+<li><strong>宝石：X</strong>——碎片 X/100</li>
+</ul>
+<p>每100枚碎片会自动转化为对应的完整资源+1。碎片计数会重置为0（若一次获得后超过100，则保留余数）。</p>
+<h3 id="zh-左下角">左下角</h3>
+<p>三个镐子选择框。左侧是铁镐，中间是铜镐，右侧是钻石镐。当前选择带有黄色边框。每个图标上的数字表示其剩余使用次数。</p>
+<h3 id="zh-右侧">右侧</h3>
+<p>实际操作所在的8×11网格。需要多次命中的方块会以小数字显示剩余生命值。</p>
+<hr/>
+<p></p>
+<h2 id="zh-tile-types-and-rewards">方块类型与奖励</h2>
+<p>网格中可以生成30种不同方块：22种按组生成的普通方块、基岩和7种稀有关键物品石。下面是完整列表，以及每种方块被消耗时提供的奖励。</p>
+<h3 id="zh-矿物岩石类方块">矿物／岩石类方块</h3>
+<div class="guide-table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th>方块</th>
+<th>生命值</th>
+<th>奖励</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>岩石</strong></td>
+<td>1</td>
+<td>1枚碎片：50%铁、40%银、10%秘银</td>
+</tr>
+<tr>
+<td><strong>铁矿石</strong></td>
+<td>1</td>
+<td>+1铁碎片，10%概率获得1枚随机其他资源碎片</td>
+</tr>
+<tr>
+<td><strong>黄金</strong></td>
+<td>1</td>
+<td>+1铁、+1银，10%概率获得1枚随机其他资源碎片</td>
+</tr>
+<tr>
+<td><strong>煤块</strong></td>
+<td>1</td>
+<td>+1铁，15%概率获得1秘银，10%概率获得1宝石</td>
+</tr>
+<tr>
+<td><strong>金属</strong></td>
+<td>1</td>
+<td>3枚碎片，每枚随机为铁／银／秘银</td>
+</tr>
+<tr>
+<td><strong>金属星</strong></td>
+<td>3</td>
+<td>+2铁、+2银、+2秘银，并从矿物簇／水晶／宝石中随机+1</td>
+</tr>
+<tr>
+<td><strong>金属碎块</strong></td>
+<td>8</td>
+<td>+1铁、+1银、+1秘银</td>
+</tr>
+<tr>
+<td><strong>熔融矿物</strong></td>
+<td>5</td>
+<td>+2铁、+1银、+1秘银，40%概率从矿物簇／水晶／宝石中随机+1</td>
+</tr>
+<tr>
+<td><strong>基岩</strong></td>
+<td>特殊</td>
+<td>2枚碎片，每枚独立从全部6种资源中随机选择</td>
+</tr>
+</tbody>
+</table></div>
+<p>铁镐无法破坏基岩，只有铜镐或钻石镐可以；每次采矿开始时，盘面都会生成4块基岩作为障碍。重力补充新方块时，若盘面上现有基岩少于4块，新方块会有1.5%的小概率再次生成基岩。</p>
+<h3 id="zh-宝石类方块">宝石类方块</h3>
+<div class="guide-table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th>方块</th>
+<th>生命值</th>
+<th>奖励</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>祖母绿</strong></td>
+<td>1</td>
+<td>+1矿物簇，40%概率从水晶／宝石中随机+1</td>
+</tr>
+<tr>
+<td><strong>红宝石</strong></td>
+<td>1</td>
+<td>+2矿物簇，20%概率从水晶／宝石中随机+1</td>
+</tr>
+<tr>
+<td><strong>彩虹宝石</strong></td>
+<td>15</td>
+<td>+3矿物簇、+1水晶、+1宝石</td>
+</tr>
+<tr>
+<td><strong>玫瑰宝石</strong></td>
+<td>30</td>
+<td>全部6种资源各+1</td>
+</tr>
+<tr>
+<td><strong>虹彩宝石</strong></td>
+<td>25</td>
+<td>全部6种资源各+2</td>
+</tr>
+</tbody>
+</table></div>
+<p>虹彩宝石和玫瑰宝石是头奖方块——摧毁其中任意一个，便能同时获得每种资源。</p>
+<h3 id="zh-水晶类方块豹">水晶类方块（豹）</h3>
+<div class="guide-table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th>方块</th>
+<th>生命值</th>
+<th>奖励</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>绿色豹</strong></td>
+<td>10</td>
+<td>3枚碎片，每枚随机为矿物簇／水晶／宝石</td>
+</tr>
+<tr>
+<td><strong>蓝色豹</strong></td>
+<td>10</td>
+<td>3枚碎片，每枚随机为矿物簇／水晶／宝石</td>
+</tr>
+<tr>
+<td><strong>粉色豹</strong></td>
+<td>10</td>
+<td>3枚碎片，每枚随机为矿物簇／水晶／宝石</td>
+</tr>
+</tbody>
+</table></div>
+<p>三种豹方块的奖励机制完全相同——只有外观不同。</p>
+<h3 id="zh-特殊方块">特殊方块</h3>
+<div class="guide-table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th>方块</th>
+<th>生命值</th>
+<th>奖励</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>精力</strong></td>
+<td>1</td>
+<td>+40精力（不超过上限）</td>
+</tr>
+<tr>
+<td><strong>修复</strong></td>
+<td>1</td>
+<td>击破它时使用的镐子+3</td>
+</tr>
+</tbody>
+</table></div>
+<p>精力方块价值极高——扣除点击消耗的10点精力后，净收益为+30精力。修复方块则是少数能在采矿途中被动补充镐子的方法之一。</p>
+<h3 id="zh-强化方块">强化方块</h3>
+<div class="guide-table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th>方块</th>
+<th>效果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>炸弹</strong></td>
+<td>以炸弹为中心产生3×3爆炸</td>
+</tr>
+<tr>
+<td><strong>火焰方块</strong></td>
+<td>摧毁整行</td>
+</tr>
+<tr>
+<td><strong>魔方</strong></td>
+<td>摧毁整列</td>
+</tr>
+</tbody>
+</table></div>
+<p>强化方块本身不提供奖励，但被其爆炸摧毁的方块仍会提供正常奖励。连锁反应中的强化方块会彼此触发；只要点击与另一个强化方块相邻的强化方块，就可能摧毁网格中的大片区域。</p>
+<h3 id="zh-不可摧毁方块">不可摧毁方块</h3>
+<div class="guide-table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th>方块</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>玻璃立方体</strong></td>
+<td>只有钻石镐可以破坏</td>
+</tr>
+<tr>
+<td><strong>基岩</strong></td>
+<td>只有铜镐或钻石镐可以破坏</td>
+</tr>
+</tbody>
+</table></div>
+<hr/>
+<p></p>
+<h2 id="zh-the-six-resources">六种资源</h2>
+<p>所有采矿奖励都会汇入六种资源池；每种资源均分别记录碎片（0–99）和完整资源数量：</p>
+<ul>
+<li><strong>铁锭</strong>——基础制作金属</li>
+<li><strong>银锭</strong>——中级金属</li>
+<li><strong>秘银锭</strong>——高级金属</li>
+<li><strong>矿物簇</strong>——浓缩矿物质</li>
+<li><strong>水晶</strong>——魔法资源（也会进入主物品栏）</li>
+<li><strong>宝石</strong>——高级魔法资源（也会进入主物品栏）</li>
+</ul>
+<p>任意资源的100枚碎片＝该完整资源+1。水晶和宝石会立即显示在主物品栏中。三种金属锭与矿物簇则存放在补给物品栏界面的“采矿物品”类别下。</p>
+<hr/>
+<p></p>
+<h2 id="zh-cascade-matches">连锁消除</h2>
+<p>每次成功点击后，重力都会令方块向下掉落以填补空缺，并从顶部生成新方块。随后，游戏会扫描 <strong>3个或更多同类方块组成的直线</strong>；只计算横向或纵向，对角线不算。</p>
+<p>找到消除组合后：</p>
+<ul>
+<li>所有匹配方块都会被消耗（每个都提供奖励）</li>
+<li>邻近方块会根据消除规模受到伤害：
+<ul>
+<li><strong>3连：</strong> 对邻近的多耐久方块造成5点伤害</li>
+<li><strong>4连：</strong> 造成10点伤害，并且消耗邻近的修复／精力方块</li>
+<li><strong>5连以上：</strong> 造成25点伤害，仍会消耗修复／精力方块</li>
+</ul>
+</li>
+<li>爆炸范围内邻近的强化方块会被触发，从而引发连锁反应</li>
+<li>一切结算完毕后，重力再次生效并重新检查消除——连锁理论上可以无限持续</li>
+</ul>
+<p>请注意，相邻伤害只会命中 <strong>多耐久方块</strong>（显示耐久值的方块）、修复／精力方块（仅限4连以上）和 <strong>强化方块</strong>（必定触发）。它不会消耗岩石、黄金、煤块等基础方块——这些方块只会因直接点击，或本身处于匹配直线内而破坏。</p>
+<hr/>
+<p></p>
+<h2 id="zh-wild-rocks">万能岩石</h2>
+<p>连锁进入 <strong>第3轮及以后</strong>，一项特殊规则便会生效：<strong>岩石变为万能方块</strong>。</p>
+<p>如果岩石方块周围8格中的至少一格在当前同一条连锁中较早被消耗，该岩石便会成为万能替代方块。组成消除直线时，万能岩石可以视作 <strong>煤块、铁矿石或金属</strong>。</p>
+<p>因此，在深层连锁中，岩石—煤块—煤块、岩石—铁矿石—岩石—铁矿石，或煤块—岩石—岩石—煤块—煤块都可以匹配——前提是相关岩石与刚刚破坏的方块相邻。</p>
+<p>这正是深层连锁威力惊人的原因。破坏的方块越多，变成万能方块的岩石就越多；这会形成更多消除、消耗更多方块，继而让更多岩石变为万能方块。一旦启动长连锁，它往往会自行延续。</p>
+<p>纯粹的岩石—岩石—岩石仍可作为普通岩石组合消除（无须万能逻辑）。黄金、祖母绿或红宝石等不属于WILD_MATCHABLE集合的基础方块不接受万能岩石替代——它们必须完全同类才能匹配。</p>
+<p>完整连锁结束后，万能状态会重置；下一次点击时，连锁深度会重新从第1轮开始。</p>
+<hr/>
+<p></p>
+<h2 id="zh-power-ups">强化方块</h2>
+<p>三种强化方块是引发大规模连锁的关键。它们有三种触发方式：</p>
+<ol>
+<li><strong>直接点击</strong>——照常消耗镐子1次使用次数和10点精力</li>
+<li><strong>钻石镐额外命中</strong>——钻石镐随机攻击相邻方块时可能命中强化方块</li>
+<li><strong>连锁邻接</strong>——当强化方块旁边形成消除时，它会自动触发（免费）</li>
+</ol>
+<p>强化方块触发时，会预先计算完整的连锁反应，再依次播放动画。如果爆炸范围命中另一个强化方块，后者也会触发——如此递归，在一次计算中全部完成。炸弹旁边紧挨着魔方、魔方又紧挨着火焰方块时，一次点击便可清除半个盘面。</p>
+<h3 id="zh-炸弹">炸弹</h3>
+<p>以炸弹为中心产生3×3爆炸。命中炸弹本身及周围8格。</p>
+<p><strong>深层连锁加成：</strong> 若炸弹在连锁深度达到3或更高时触发（与激活万能岩石的门槛相同），爆炸还会摧毁 <strong>盘面上的所有煤块</strong>。每个煤块依旧提供正常奖励，留下的空缺可能形成新的消除，而与这些煤块相邻的强化方块也会被触发——有时真的能引发清空整个盘面的连锁。</p>
+<h3 id="zh-火焰方块">火焰方块</h3>
+<p>摧毁同一行的所有方块。</p>
+<h3 id="zh-魔方">魔方</h3>
+<p>摧毁同一列的所有方块。</p>
+<h3 id="zh-强化方块连锁会摧毁什么">强化方块连锁会摧毁什么</h3>
+<p>强化方块连锁会影响爆炸范围内的所有方块，但 <strong>基岩和玻璃立方体</strong> 除外（会直接跳过）。多耐久方块每受到一次爆炸便损失15点耐久值，降至0时破坏。其他所有方块——基础方块、其他强化方块、修复、精力和关键物品石——都会立即被消耗。</p>
+<hr/>
+<p></p>
+<h2 id="zh-key-item-stones">关键物品石</h2>
+<p>采矿时可能生成七种稀有而强大的 <strong>关键物品石</strong>。每种都是独一无二的关键物品，会加入你的永久收藏。大多数拥有 <strong>200点生命值</strong>，女王石和以太之石则拥有 <strong>400点生命值</strong>，很难击破——强烈建议使用钻石镐。</p>
+<p>七种采矿石：</p>
+<ul>
+<li><strong>女王石</strong></li>
+<li><strong>剑石</strong></li>
+<li><strong>蛮力之石</strong></li>
+<li><strong>平衡之石</strong></li>
+<li><strong>元素之石</strong></li>
+<li><strong>暮光之石</strong></li>
+<li><strong>以太之石</strong></li>
+</ul>
+<h3 id="zh-生成规则">生成规则</h3>
+<ul>
+<li><strong>每个生成栏位约有0.013%的概率</strong> 生成关键石（在普通游玩中极其稀有）</li>
+<li>本次采矿中 <strong>只要七种关键石中的任意一种生成</strong>，在你退出并重新进入小游戏前，其他关键石都不会再出现</li>
+<li><strong>已经拥有的石头绝不会再次生成</strong>——一旦获得，就会永久从生成池中过滤掉</li>
+<li>如果你已经拥有全部七种采矿石，关键石将不再生成</li>
+</ul>
+<p>关键石被消耗后，会加入关键物品列表，并播放庆祝音效。七种采矿石均可升级，初次获得时都为1级。</p>
+<h3 id="zh-击破策略">击破策略</h3>
+<p>200点生命值非常高。使用强度为5的钻石镐，需要直接命中40次——但可以通过以下方法大幅加快速度：</p>
+<ul>
+<li>利用强化方块连锁对石头造成每次15点的爆炸伤害</li>
+<li>钻石镐的额外命中可让每次点击的有效伤害翻倍（若主要与额外目标都命中石头，最高可达10点）</li>
+<li>在石头旁边形成4连以上，每次可造成10–25点伤害</li>
+<li>铁镐和铜镐也能奏效，只是慢得多</li>
+</ul>
+<p>如果石头生成时钻石镐次数所剩无几，可改用铁镐或铜镐逐步削减生命值，把钻石镐留作最后一击。</p>
+<hr/>
+<p></p>
+<h2 id="zh-pity-timer">保底计时器</h2>
+<p>为了避免稀有物品令人抓狂，游戏设有 <strong>保底计时器</strong>：</p>
+<p>单次采矿中完成 <strong>60次成功点击</strong> 后，每次生成判定都有 <strong>3%的概率</strong> 强制生成关键石或虹彩宝石（取本次采矿中尚未出现的那一类）。奖池会在玩家尚未拥有的关键石与虹彩宝石之间平均分配。</p>
+<p>所以，如果采矿了一段时间仍未看到特殊物品，保底计时器便会启动，大幅提高出现概率。每次重新进入小游戏时，60次点击计数都会重置。</p>
+<hr/>
+<p></p>
+<h2 id="zh-getting-more-pickaxes">获得更多镐子</h2>
+<p>镐子消耗得很快。补充方式如下：</p>
+<h3 id="zh-向-gem-购买">向 Gem 购买</h3>
+<ul>
+<li><strong>山脚</strong>，Gem 在场时（上午7点 – 下午5点）</li>
+<li><strong>铁镐（x5）</strong> 动作：$200，10分钟</li>
+<li><strong>每个游戏日一次</strong></li>
+</ul>
+<h3 id="zh-镐子采购完整版">镐子采购（完整版）</h3>
+<p>Gem 还提供高级套装：用 <strong>1枚水晶</strong> 交换 <strong>10把铁镐＋10把铜镐＋10把钻石镐</strong>（15分钟，Gem好感度+2）。没有每日限制——如果水晶有富余，这是补充铜镐和钻石镐使用次数最快得多的方法。</p>
+<h3 id="zh-战斗掉落地下城">战斗掉落（地下城）</h3>
+<p>地下城战斗结束后，有概率免费掉落镐子。深入的层数越高，掉落的镐子越好——浅层掉落铁镐，中层掉落铜镐，深层掉落钻石镐。掉落时，战斗日志会显示“你找到了一把[类型]镐！”的消息。</p>
+<h3 id="zh-劫案盗贼公会">劫案（盗贼公会）</h3>
+<p>完成劫案并顺利脱身后，有概率掉落镐子。街区越奢华，镐子越好——镀金街掉落铜镐，贵族区掉落钻石镐。</p>
+<h3 id="zh-搜索遭遇">搜索遭遇</h3>
+<p><strong>中世纪后巷搜索动作</strong> 有小概率发现一批镐子。选择拿走后，你会获得：</p>
+<ul>
+<li>1–4把铁镐</li>
+<li>1–3把铜镐</li>
+<li>根据运气属性额外获得1把钻石镐（会进行运气检定，因此运气越高，概率越大）</li>
+</ul>
+<h3 id="zh-修复方块采矿本身">修复方块（采矿本身）</h3>
+<p>破坏修复方块，会让击破它时使用的镐子+3。使用铁镐时，这会带来显著净收益（消耗1次，返还3次）；这也是连锁如此宝贵的原因之一——若修复方块被卷入连锁，你无需消耗镐子便能获得补充。</p>
+<h3 id="zh-硬上限">硬上限</h3>
+<p>每种镐子最多持有 <strong>999把</strong>。超出部分会被丢弃，因此不要囤积超过上限，应提前使用。</p>
+<hr/>
+<p></p>
+<h2 id="zh-tips-and-strategy">技巧与策略</h2>
+<h3 id="zh-进入前">进入前</h3>
+<ul>
+<li><strong>储备精力物品</strong>——每次点击消耗10点精力，因此拥有100点精力时，在精力方块变得至关重要前大约只能点击10次。在小游戏内使用精力物品，每个可恢复25–50点精力。</li>
+<li>确保拥有 <strong>至少一把任意种类的镐子</strong>。不要在使用次数为0时进入——只会白白浪费时间与入场精力。</li>
+<li>可以的话，尽量以 <strong>全满的精力条</strong> 进入——在连锁途中耗尽精力会令人沮丧。</li>
+</ul>
+<h3 id="zh-采矿期间">采矿期间</h3>
+<ul>
+<li><strong>点击前先寻找连锁机会。</strong> 若破坏某个方块可以形成4连以上，应优先于随意点击。匹配伤害连锁和额外奖励会迅速累积。</li>
+<li><strong>把钻石镐留给强化方块、多耐久方块和关键石。</strong> 基础岩石用铁镐也能取得同样效果，不要浪费钻石镐次数。</li>
+<li><strong>用铜镐清除基岩障碍。</strong> 基岩会阻挡方块因重力下落，并可能妨碍优质消除。长时间采矿时还会重新生成基岩，因此即便初始基岩已经清除，铜镐依然有用。</li>
+<li><strong>精力方块是你的好帮手。</strong> 每破坏一个精力方块，净得+30精力（恢复40点，减去点击消耗的10点）。出现时应优先处理。</li>
+<li><strong>邻接触发强化方块的价值最高。</strong> 若能通过在强化方块旁形成消除来触发它（从而免费启动连锁），就等于不消耗使用次数获得了一次强化效果。</li>
+</ul>
+<h3 id="zh-长时间采矿与保底计时器">长时间采矿与保底计时器</h3>
+<ul>
+<li>60次点击保底意味着坚持采矿的玩家会相对频繁地见到稀有物品。若目标是关键石或虹彩宝石，应规划至少60次以上点击的采矿。</li>
+<li>关键石或虹彩宝石在本次采矿中生成后，对应类别的保底就算“用掉了”——你仍可继续寻找另一类（关键石与虹彩宝石二选一中的另一个），但同一次采矿中无法获得第二块关键石。</li>
+</ul>
+<h3 id="zh-资源策略">资源策略</h3>
+<ul>
+<li><strong>秘银是四种基础金属锭／矿物资源中最稀有的一种。</strong> 它只会以小概率从煤块、metal／molten／metal_star随机奖池，以及岩石的10%概率中掉落。</li>
+<li><strong>黄金方块是银的唯一常见来源。</strong> 如果需要银，应优先选择第2组方块大量生成的采矿盘面。</li>
+<li><strong>矿物簇、水晶和宝石碎片主要来自宝石类、豹类和彩虹／玫瑰／虹彩宝石。</strong> 这些方块比基础矿物稀有，所以水晶和宝石碎片积累得更慢。</li>
+</ul>
+<h3 id="zh-别忘了退出">别忘了退出</h3>
+<p>小游戏没有胜利条件，也不会自动退出。它会一直持续到你决定离开。如果想要的东西都已清理完毕，只需按X、ESC或空格键即可返回游戏世界。</p>
+</div>
+        <div class="guide-community-note"><div><strong data-copy-en="Community discoveries" data-copy-zh="社区发现">Community discoveries</strong><p data-copy-en="These official guides track the current game. The player-maintained wiki may contain additional strategies and discoveries." data-copy-zh="这些官方攻略与当前游戏版本保持一致；玩家维护的 Wiki 可能还收录其他策略与社区发现。">These official guides track the current game. The player-maintained wiki may contain additional strategies and discoveries.</p></div><a href="https://chronoromancer.miraheze.org/wiki/Main_Page" target="_blank" rel="noopener noreferrer" data-copy-en="Visit Player Wiki →" data-copy-zh="访问玩家 Wiki →">Visit Player Wiki →</a></div>
+        <nav class="guide-pager" aria-label="Adjacent guides"><a href="haunted_mansion.html"><span data-copy-en="Previous guide" data-copy-zh="上一篇攻略">Previous guide</span><strong data-copy-en="Haunted Mansion — Complete Walkthrough" data-copy-zh="闹鬼豪宅——完整攻略">Haunted Mansion — Complete Walkthrough</strong></a><a href="sirena_isle_resort.html"><span data-copy-en="Next guide" data-copy-zh="下一篇攻略">Next guide</span><strong data-copy-en="Sirena Isle Resort — Complete System Guide" data-copy-zh="塞壬岛度假村——完整系统指南">Sirena Isle Resort — Complete System Guide</strong></a></nav>
+      </article>
+    </div>
+  </main>
+  <footer class="site-footer"><div class="container"><div class="footer-grid">
+    <div class="footer-brand"><img src="../assets/images/v2/logo.png" alt="Chronoromancer"><p data-i18n="footerDescription">An adults-only time-travel sandbox RPG. Public website artwork is SFW.</p></div>
+    <div class="footer-column"><h2 data-i18n="footerExplore">Explore</h2><a href="../story.html" data-i18n="navStory">Story</a><a href="../characters.html" data-i18n="navCharacters">Characters</a><a href="../walkthroughs.html" data-i18n="navGuides">Guides</a><a href="../screenshots.html" data-i18n="navGallery">Gallery</a><a href="../main.html#download" data-i18n="navDownload">Download</a></div>
+    <div class="footer-column"><h2 data-i18n="footerCommunity">Community</h2><a data-config-link="community.discord" target="_blank" rel="noopener noreferrer">Discord</a><a data-config-link="community.telegram" target="_blank" rel="noopener noreferrer">Telegram</a><a data-config-link="community.patreon" target="_blank" rel="noopener noreferrer">Patreon</a><a data-config-link="community.wiki" target="_blank" rel="noopener noreferrer" data-i18n="navWiki">Player Wiki</a></div>
+    <div class="footer-column"><h2 data-i18n="footerLegal">Legal</h2><a href="../privacy.html" data-i18n="footerPrivacy">Privacy</a><a href="../terms.html" data-i18n="footerTerms">Terms</a></div>
+  </div><div class="footer-bottom"><span>© <span data-current-year></span> <span data-i18n="copyright">Chronoromancer Studio. All rights reserved.</span></span><span data-copy-en="Official guides · English / Simplified Chinese" data-copy-zh="官方攻略 · English / 简体中文">Official guides · English / Simplified Chinese</span></div></div></footer>
+  <script src="../assets/js/site-config.js"></script><script src="../assets/js/site.js"></script><script src="../assets/js/walkthroughs.js"></script>
+</body></html>

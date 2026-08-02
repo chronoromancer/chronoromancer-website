@@ -1,0 +1,1362 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="This guide explains how combat works in detail — the order of operations, the way damage flows, and what each stat, skill, and item actually does in a fight. It&#x27;s written for players who want to understand the math under the hood, plan b…"><link rel="icon" type="image/png" href="../assets/images/v2/favicon.png">
+  <link rel="stylesheet" href="../assets/css/style.css"><link rel="stylesheet" href="../assets/css/walkthroughs.css">
+  <title>Combat System Guide | Chronoromancer Guides</title></head>
+<body class="guide-page" data-title-en="Combat System Guide | Chronoromancer Guides" data-title-zh="战斗系统指南 | Chronoromancer 官方攻略">
+  <div class="reading-progress" data-reading-progress></div>
+  <a class="skip-link" href="#content" data-copy-en="Skip to content" data-copy-zh="跳至正文">Skip to content</a>
+  <div class="maturity-bar" data-copy-en="18+ adults-only game · Guides may describe mature game systems" data-copy-zh="18+ 仅限成人游戏 · 攻略可能涉及成人游戏系统">18+ adults-only game · Guides may describe mature game systems</div>
+  <header class="site-header"><div class="container header-inner">
+    <a class="brand" href="../main.html" aria-label="Chronoromancer home"><img src="../assets/images/v2/logo.png" alt="Chronoromancer"></a>
+    <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-label="Open navigation"><span></span><span></span><span></span></button>
+    <nav class="site-nav" data-nav-menu aria-label="Primary navigation">
+      <a href="../main.html" data-i18n="navHome">Home</a>
+      <a href="../story.html" data-i18n="navStory">Story</a>
+      <a href="../characters.html" data-i18n="navCharacters">Characters</a>
+      <a class="is-active" href="../walkthroughs.html" data-i18n="navGuides">Guides</a>
+      <a href="../screenshots.html" data-i18n="navGallery">Gallery</a>
+      <a data-config-link="community.wiki" target="_blank" rel="noopener noreferrer" data-i18n="navWiki">Player Wiki</a>
+      <a href="../main.html#download" data-i18n="navDownload">Download</a>
+      <div class="language-switch" role="group" aria-label="Language"><button type="button" data-language="en" aria-pressed="true">EN</button><button type="button" data-language="zh" aria-pressed="false">简体中文</button></div>
+    </nav>
+  </div></header>
+  <main id="content">
+    <section class="guide-masthead"><div class="container">
+      <nav class="breadcrumb" aria-label="Breadcrumb"><a href="../walkthroughs.html" data-copy-en="Official Guides" data-copy-zh="官方攻略">Official Guides</a><span>/</span><span data-copy-en="Core Systems" data-copy-zh="核心系统">Core Systems</span></nav>
+      <p class="eyebrow" data-copy-en="Version-matched official guide" data-copy-zh="与当前版本匹配的官方攻略">Version-matched official guide</p>
+      <h1 data-copy-en="Combat System Guide" data-copy-zh="战斗系统指南">Combat System Guide</h1>
+      <div class="guide-meta"><span data-copy-en="Core Systems" data-copy-zh="核心系统">Core Systems</span><span data-copy-en="Simplified Chinese available" data-copy-zh="简体中文译文已上线">Simplified Chinese available</span><span data-site-version>V0.9.6.0</span></div>
+    </div></section>
+    <div class="container guide-layout">
+      <aside class="guide-sidebar">
+        <a class="back-to-library" href="../walkthroughs.html" data-copy-en="← All guides" data-copy-zh="← 全部攻略">← All guides</a>
+        <div data-lang-panel="en"><h2>On this page</h2><nav class="guide-toc"><a class="toc-level-2" href="#table-of-contents">Table of Contents</a><a class="toc-level-2" href="#the-big-picture">The Big Picture</a><a class="toc-level-2" href="#player-damage--the-outgoing-pipeline">Player Damage — The Outgoing Pipeline</a><a class="toc-level-3" href="#step-1--build-the-maximum-damage">Step 1 — Build the maximum damage</a><a class="toc-level-3" href="#step-2--apply-skill-triggers">Step 2 — Apply skill triggers</a><a class="toc-level-3" href="#step-3--roll-the-actual-damage">Step 3 — Roll the actual damage</a><a class="toc-level-3" href="#step-4--post-roll-triggers">Step 4 — Post-roll triggers</a><a class="toc-level-3" href="#step-5--skill-specific-power-ups">Step 5 — Skill-specific power-ups</a><a class="toc-level-3" href="#step-6--permanent-passive-bonuses">Step 6 — Permanent passive bonuses</a><a class="toc-level-3" href="#step-7--hand-it-to-the-enemy">Step 7 — Hand it to the enemy</a><a class="toc-level-2" href="#enemy-damage--the-incoming-pipeline">Enemy Damage — The Incoming Pipeline</a><a class="toc-level-3" href="#step-1--the-skills-base-damage">Step 1 — The skill&#x27;s base damage</a><a class="toc-level-3" href="#step-2--floor-scaling">Step 2 — Floor scaling</a><a class="toc-level-3" href="#step-3--damage-multiplier">Step 3 — Damage multiplier</a><a class="toc-level-3" href="#step-4--critical-hit-roll">Step 4 — Critical hit roll</a><a class="toc-level-3" href="#step-5--defending-stance">Step 5 — Defending stance</a><a class="toc-level-3" href="#step-6--armor-reduction">Step 6 — Armor reduction</a><a class="toc-level-3" href="#step-7--tai-chi-reflect">Step 7 — Tai-Chi reflect</a><a class="toc-level-3" href="#step-8--alignment-items">Step 8 — Alignment items</a><a class="toc-level-3" href="#step-9--tier-defense">Step 9 — Tier defense</a><a class="toc-level-3" href="#step-10--apply-to-your-hp">Step 10 — Apply to your HP</a><a class="toc-level-2" href="#fighting-experience-and-the-tier-system">Fighting Experience and the Tier System</a><a class="toc-level-3" href="#tier-table">Tier Table</a><a class="toc-level-3" href="#what-fighting-experience-actually-does">What Fighting Experience Actually Does</a><a class="toc-level-2" href="#magic-in-detail">Magic in Detail</a><a class="toc-level-3" href="#stat-contribution">Stat Contribution</a><a class="toc-level-3" href="#grimoire-bonus">Grimoire Bonus</a><a class="toc-level-3" href="#multipliers">Multipliers</a><a class="toc-level-3" href="#the-roll">The Roll</a><a class="toc-level-3" href="#arcane-surge">Arcane Surge</a><a class="toc-level-3" href="#vampire-grimoire">Vampire Grimoire</a><a class="toc-level-3" href="#heal-magic">Heal Magic</a><a class="toc-level-3" href="#sleep-magic">Sleep Magic</a><a class="toc-level-3" href="#energy-cost">Energy Cost</a><a class="toc-level-2" href="#status-effects-and-resistances">Status Effects and Resistances</a><a class="toc-level-2" href="#the-qte-block-system">The QTE Block System</a><a class="toc-level-2" href="#telegraphed-attacks">Telegraphed Attacks</a><a class="toc-level-2" href="#forge-armor">Forge Armor</a><a class="toc-level-2" href="#soul-stones-in-combat">Soul Stones in Combat</a><a class="toc-level-2" href="#combat-paths--sorcerer-assassin-blademaster">Combat Paths — Sorcerer, Assassin, Blademaster</a><a class="toc-level-3" href="#the-three-paths">The Three Paths</a><a class="toc-level-3" href="#earning-path-points">Earning Path Points</a><a class="toc-level-3" href="#ranks-and-the-damage-multiplier">Ranks and the Damage Multiplier</a><a class="toc-level-3" href="#assassinate--the-assassin-chain">Assassinate — The Assassin Chain</a><a class="toc-level-3" href="#practical-notes">Practical Notes</a><a class="toc-level-2" href="#alignment-in-combat">Alignment in Combat</a><a class="toc-level-2" href="#skills-that-actually-matter">Skills That Actually Matter</a><a class="toc-level-2" href="#build-strategy">Build Strategy</a><a class="toc-level-3" href="#the-magic-build">The Magic Build</a><a class="toc-level-3" href="#the-berserker">The Berserker</a><a class="toc-level-3" href="#the-tank">The Tank</a><a class="toc-level-3" href="#the-quick-strike">The Quick-Strike</a><a class="toc-level-2" href="#common-misconceptions">Common Misconceptions</a></nav></div>
+        <div data-lang-panel="zh" hidden><h2>本页目录</h2><nav class="guide-toc"><a class="toc-level-2" href="#zh-目录">目录</a><a class="toc-level-2" href="#zh-the-big-picture">整体概览</a><a class="toc-level-2" href="#zh-player-damage--the-outgoing-pipeline">玩家伤害——输出流程</a><a class="toc-level-3" href="#zh-第1步计算最大伤害">第1步——计算最大伤害</a><a class="toc-level-3" href="#zh-第2步应用技能触发效果">第2步——应用技能触发效果</a><a class="toc-level-3" href="#zh-第3步掷出实际伤害">第3步——掷出实际伤害</a><a class="toc-level-3" href="#zh-第4步掷骰后的触发效果">第4步——掷骰后的触发效果</a><a class="toc-level-3" href="#zh-第5步技能专属强化">第5步——技能专属强化</a><a class="toc-level-3" href="#zh-第6步永久被动加成">第6步——永久被动加成</a><a class="toc-level-3" href="#zh-第7步交由敌人处理">第7步——交由敌人处理</a><a class="toc-level-2" href="#zh-enemy-damage--the-incoming-pipeline">敌人伤害——承伤流程</a><a class="toc-level-3" href="#zh-第1步技能基础伤害">第1步——技能基础伤害</a><a class="toc-level-3" href="#zh-第2步楼层成长">第2步——楼层成长</a><a class="toc-level-3" href="#zh-第3步伤害倍率">第3步——伤害倍率</a><a class="toc-level-3" href="#zh-第4步暴击判定">第4步——暴击判定</a><a class="toc-level-3" href="#zh-第5步防御状态">第5步——防御状态</a><a class="toc-level-3" href="#zh-第6步护甲减伤">第6步——护甲减伤</a><a class="toc-level-3" href="#zh-第7步太极反伤">第7步——太极反伤</a><a class="toc-level-3" href="#zh-第8步阵营物品">第8步——阵营物品</a><a class="toc-level-3" href="#zh-第9步阶位防御">第9步——阶位防御</a><a class="toc-level-3" href="#zh-第10步扣除生命">第10步——扣除生命</a><a class="toc-level-2" href="#zh-fighting-experience-and-the-tier-system">战斗经验与阶位系统</a><a class="toc-level-3" href="#zh-阶位表">阶位表</a><a class="toc-level-3" href="#zh-战斗经验究竟有什么作用">战斗经验究竟有什么作用</a><a class="toc-level-2" href="#zh-magic-in-detail">魔法详解</a><a class="toc-level-3" href="#zh-属性贡献">属性贡献</a><a class="toc-level-3" href="#zh-魔导书加成">魔导书加成</a><a class="toc-level-3" href="#zh-倍率">倍率</a><a class="toc-level-3" href="#zh-掷骰">掷骰</a><a class="toc-level-3" href="#zh-奥术涌动">奥术涌动</a><a class="toc-level-3" href="#zh-吸血鬼魔导书">吸血鬼魔导书</a><a class="toc-level-3" href="#zh-治疗魔法">治疗魔法</a><a class="toc-level-3" href="#zh-催眠魔法">催眠魔法</a><a class="toc-level-3" href="#zh-精力消耗">精力消耗</a><a class="toc-level-2" href="#zh-status-effects-and-resistances">状态效果与抗性</a><a class="toc-level-2" href="#zh-the-qte-block-system">QTE格挡系统</a><a class="toc-level-2" href="#zh-telegraphed-attacks">预警攻击</a><a class="toc-level-2" href="#zh-forge-armor">锻造护甲</a><a class="toc-level-2" href="#zh-soul-stones-in-combat">灵魂石的战斗效果</a><a class="toc-level-2" href="#zh-combat-paths--sorcerer-assassin-blademaster">战斗路线——术士、刺客、剑术大师</a><a class="toc-level-3" href="#zh-三条路线">三条路线</a><a class="toc-level-3" href="#zh-获取路线点数">获取路线点数</a><a class="toc-level-3" href="#zh-等级与伤害倍率">等级与伤害倍率</a><a class="toc-level-3" href="#zh-暗杀刺客连击">暗杀——刺客连击</a><a class="toc-level-3" href="#zh-实用提示">实用提示</a><a class="toc-level-2" href="#zh-alignment-in-combat">阵营倾向对战斗的影响</a><a class="toc-level-2" href="#zh-skills-that-actually-matter">真正重要的技能</a><a class="toc-level-2" href="#zh-build-strategy">流派策略</a><a class="toc-level-3" href="#zh-魔法流派">魔法流派</a><a class="toc-level-3" href="#zh-狂战士">狂战士</a><a class="toc-level-3" href="#zh-坦克">坦克</a><a class="toc-level-3" href="#zh-快攻流派">快攻流派</a><a class="toc-level-2" href="#zh-common-misconceptions">常见误解</a></nav></div>
+      </aside>
+      <article class="guide-content">
+        <div class="spoiler-notice"><strong data-copy-en="Guide notice" data-copy-zh="攻略提示">Guide notice</strong><span data-copy-en="This page contains gameplay and story spoilers and may describe mature systems." data-copy-zh="本页包含玩法与剧情剧透，并可能涉及成人游戏系统。">This page contains gameplay and story spoilers and may describe mature systems.</span></div>
+        <div class="markdown-body" data-lang-panel="en">
+<p>This guide explains how combat works in detail — the order of operations, the way damage flows, and what each stat, skill, and item actually does in a fight. It's written for players who want to understand the math under the hood, plan builds, and know exactly why a hit landed for the number it did.</p>
+<p>If you just want to play, you don't need any of this. Combat is forgiving as long as you maintain decent armor and a magical specialty. But if you've ever wondered why a Power Strike sometimes hits like a freight train and sometimes politely taps the enemy's shoulder, this is the guide.</p>
+<blockquote>
+<p><strong>No spoilers.</strong> This guide names systems and mechanics. It does not name bosses, dungeon floors, or specific encounters.</p>
+</blockquote>
+<h2 id="table-of-contents">Table of Contents</h2>
+<ul>
+<li><a href="#the-big-picture">The Big Picture</a></li>
+<li><a href="#player-damage--the-outgoing-pipeline">Player Damage — The Outgoing Pipeline</a></li>
+<li><a href="#enemy-damage--the-incoming-pipeline">Enemy Damage — The Incoming Pipeline</a></li>
+<li><a href="#fighting-experience-and-the-tier-system">Fighting Experience and the Tier System</a></li>
+<li><a href="#magic-in-detail">Magic in Detail</a></li>
+<li><a href="#status-effects-and-resistances">Status Effects and Resistances</a></li>
+<li><a href="#the-qte-block-system">The QTE Block System</a></li>
+<li><a href="#telegraphed-attacks">Telegraphed Attacks</a></li>
+<li><a href="#forge-armor">Forge Armor</a></li>
+<li><a href="#soul-stones-in-combat">Soul Stones in Combat</a></li>
+<li><a href="#combat-paths--sorcerer-assassin-blademaster">Combat Paths — Sorcerer, Assassin, Blademaster</a></li>
+<li><a href="#alignment-in-combat">Alignment in Combat</a></li>
+<li><a href="#skills-that-actually-matter">Skills That Actually Matter</a></li>
+<li><a href="#build-strategy">Build Strategy</a></li>
+<li><a href="#common-misconceptions">Common Misconceptions</a></li>
+</ul>
+<hr/>
+<h2 id="the-big-picture">The Big Picture</h2>
+<p>Every battle is turn-based. You pick an action — attack, skill, magic, defend, item, or flee — and the enemy responds. Damage in either direction passes through a pipeline of multipliers, rolls, reductions, and final adjustments before it actually subtracts from someone's HP.</p>
+<p>There is <strong>never</strong> a single number that decides a hit. A basic attack might pass through eight or nine separate steps before the damage value is finalized. Understanding the pipeline is the difference between feeling like combat is random and knowing exactly what's happening.</p>
+<hr/>
+<h2 id="player-damage--the-outgoing-pipeline">Player Damage — The Outgoing Pipeline</h2>
+<p>When you swing a weapon or fire a spell at an enemy, your damage is built up step by step, then handed to the enemy who runs it through their defenses. Here's the order, roughly:</p>
+<h3 id="step-1--build-the-maximum-damage">Step 1 — Build the maximum damage</h3>
+<p>For a <strong>physical attack</strong>, the formula starts from the action's base value, its stat contribution, your fighting modifier, and your weapon bonus:</p>
+<pre><code>max_damage = base + stat_contribution + weapon_bonus
+</code></pre>
+<ul>
+<li><code>base</code> is small — between 1 and 5 depending on whether it's a basic attack, quick attack, stormslash, or power strike.</li>
+<li><code>fight_mod</code> is your fighting experience modifier, ranging from 1.0 (Novice) to 1.80 (cap). See the tier table below.</li>
+<li><code>weapon_bonus</code> is <code>weapon_level × 2</code>, upgraded to <code>weapon_level × 3</code> if you have <strong>Weapon Mastery</strong>.</li>
+</ul>
+<p>Action stat scaling:</p>
+<div class="guide-table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th>Action</th>
+<th style="text-align:right">Base</th>
+<th>Stat Contribution</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Basic Attack</td>
+<td style="text-align:right">1</td>
+<td>Strength ÷ 2 × fight_mod</td>
+</tr>
+<tr>
+<td>Quick Attack</td>
+<td style="text-align:right">2</td>
+<td>Ability ÷ 2 × fight_mod</td>
+</tr>
+<tr>
+<td>Stormslash</td>
+<td style="text-align:right">3</td>
+<td>(Strength + Ability) ÷ 3 × fight_mod</td>
+</tr>
+<tr>
+<td>Power Strike</td>
+<td style="text-align:right">5</td>
+<td>Strength × fight_mod</td>
+</tr>
+</tbody>
+</table></div>
+<p>Power Strike uses full Strength instead of Strength ÷ 2, so it scales much harder.</p>
+<p>For <strong>magic</strong>, see the <a href="#magic-in-detail">Magic in Detail</a> section below.</p>
+<h3 id="step-2--apply-skill-triggers">Step 2 — Apply skill triggers</h3>
+<p>Several skills can affect this stage:</p>
+<ul>
+<li><strong>Adrenaline Rush</strong> — when you're under 30% health, spikes <code>max_damage</code> higher.</li>
+<li><strong>Berserker Rage</strong> — Power Strike only. If you're at 90%+ health, 35% chance to force max damage and pay a random 3–10% of your max HP as the cost.</li>
+</ul>
+<h3 id="step-3--roll-the-actual-damage">Step 3 — Roll the actual damage</h3>
+<p>If Berserker Rage triggered, you skip the roll and use max_damage directly.</p>
+<p>Otherwise:</p>
+<pre><code>min_damage = max_damage ÷ 3   (or ÷ 2 with Martial Arts)
+final_damage = random(min_damage, max_damage)
+</code></pre>
+<p>This is why two identical attacks can land for very different numbers. Martial Arts is a huge upgrade because it raises the floor of every roll.</p>
+<h3 id="step-4--post-roll-triggers">Step 4 — Post-roll triggers</h3>
+<ul>
+<li><strong>Exploit Weakness</strong> — 15% chance to <strong>double</strong> the rolled damage. Has a built-in cooldown of 4 attacks after each trigger to prevent runaway scaling. When it fires, you'll see "You spot a flaw in their defense!" in sickly green.</li>
+<li><strong>Acrobatics</strong> — Quick Attack can gain a 15% damage bonus, and Acrobatics can also trigger a separate follow-up Quick Attack after physical actions.</li>
+</ul>
+<h3 id="step-5--skill-specific-power-ups">Step 5 — Skill-specific power-ups</h3>
+<p>Different skills have unique enhancement abilities:</p>
+<ul>
+<li><strong>Tempest Strike</strong> — Stormslash gets a +5% damage bump and gains the lightning element. If the enemy is weak to lightning, that's an additional ×2; if they resist it, ÷2.</li>
+<li><strong>Skull Crusher</strong> — Power Strike gets +10% base damage flat. Then there's a 30% chance to <strong>multiply by 4</strong> on top of that. This is the hardest single-target hit in the game when it triggers.</li>
+</ul>
+<h3 id="step-6--permanent-passive-bonuses">Step 6 — Permanent passive bonuses</h3>
+<p>Bonuses that always apply if the conditions are met:</p>
+<ul>
+<li><strong>Power consumable buff</strong> active → ×1.5 to physical damage.</li>
+<li><strong>Hell Fire</strong> key item → ×1.10 to all physical damage.</li>
+<li><strong>Sword Stone</strong> → +1 per level to basic attack and quick attack.</li>
+<li><strong>Brute Stone</strong> → +1 per level to stormslash and power strike.</li>
+<li><strong>Vampire Fangs</strong> → 15% chance on the main physical attack to trigger <strong>Vampirism</strong>, adding <code>1-Vampire</code> damage and bypassing enemy damage reduction, floor defense, and active guard.</li>
+<li><strong>Vampire Grimoire</strong> → 15% chance on the main offensive spell to trigger <strong>Vampirism</strong>, adding <code>1-Vampire</code> damage and bypassing magic defenses and absorption.</li>
+<li><strong>Heart of the Ocean</strong> and <strong>Eye of Batman</strong> → each grants +50 max Health, +50 max Energy, and +50 max Calm.</li>
+</ul>
+<h3 id="step-7--hand-it-to-the-enemy">Step 7 — Hand it to the enemy</h3>
+<p>Now your built-up number gets reduced by the enemy's defenses, in this order:</p>
+<ol>
+<li><strong>Enemy dodge</strong> — flat % chance to negate the entire hit.</li>
+<li><strong>Damage reduction</strong> — % off the top.</li>
+<li><strong>Elemental modifier</strong> — magic and Tempest Strike lightning can be ×2 if weak or ×0.5 if resisted.</li>
+<li><strong>Magic resistance</strong> — magic only, scales with random variance.</li>
+<li><strong>Absorb</strong> — magic only. If the roll succeeds, the enemy is <strong>healed</strong> for the full damage instead of taking it.</li>
+</ol>
+<p>If <strong>Vampire Bite</strong> triggers, the main physical hit skips the enemy damage-reduction, floor-defense, and guard parts of this step. It still has to hit in the first place, and bonus hits do not get their own Vampire Bite roll.
+6. <strong>Floor defense</strong> — random <code>eff_floor</code> to <code>eff_floor × 2</code> subtracted near the end. This is why deeper-floor enemies absorb chip damage easily.
+7. <strong>Enemy guard</strong> — if the enemy used Defensive Stance or Magical Shield, the next 3 damaging hits are reduced.</p>
+<p>That's the complete outgoing pipeline. Up to 16 separate calculations on a single Power Strike.</p>
+<hr/>
+<h2 id="enemy-damage--the-incoming-pipeline">Enemy Damage — The Incoming Pipeline</h2>
+<p>When the enemy attacks you, their damage goes through a different but equally complex pipeline. Most enemy attacks come from <strong>skills</strong>, not basic attacks, and the skill pipeline looks like this:</p>
+<h3 id="step-1--the-skills-base-damage">Step 1 — The skill's base damage</h3>
+<p>Every skill has a base range, like <code>(20, 48)</code> for a heavy slam attack. The enemy rolls between low and high.</p>
+<p>If you're wearing <strong>Forge Gauntlets</strong>, the <em>low end</em> of that range gets reduced (–1/–2/–3 by tier). The high end is unchanged. This means the worst-case rolls become smaller, but lucky high rolls still hit hard.</p>
+<h3 id="step-2--floor-scaling">Step 2 — Floor scaling</h3>
+<pre><code>floor_modifier = 1 + (eff_floor × 0.22)
+damage = base × floor_modifier
+</code></pre>
+<p>The enemy's effective floor level is what matters here, not the raw dungeon floor. Deeper floors apply automatic boosts of +3 to +15 to the enemy's effective level. A floor 38 enemy may calculate damage as if it's effective floor 53.</p>
+<h3 id="step-3--damage-multiplier">Step 3 — Damage multiplier</h3>
+<p>Many enemies have a <code>damage_multiplier</code>. Ordinary enemies are usually near 1.0, stronger enemies and bosses can be much higher. The multiplier is applied straight onto the running damage total.</p>
+<h3 id="step-4--critical-hit-roll">Step 4 — Critical hit roll</h3>
+<pre><code>threshold = 10 + critical_modifier_chance
+</code></pre>
+<p>Roll 1–100 against the threshold. On crit:</p>
+<pre><code>damage = damage × 1.5 + critical_flat_bonus
+</code></pre>
+<p>Some bosses have a <code>critical_modifier</code> like <code>(15, 250)</code> — meaning 25% crit chance and +250 flat damage on crit. That's a soul-shattering hit.</p>
+<h3 id="step-5--defending-stance">Step 5 — Defending stance</h3>
+<p>If you used <strong>Defend</strong> last turn, your defending stance is active and reduces this hit by a large percent. It starts at 50%, scales with your fighting modifier, and caps at 80%.</p>
+<h3 id="step-6--armor-reduction">Step 6 — Armor reduction</h3>
+<pre><code>armor_reduction = eff_armor_lvl × (eff_armor_lvl × 0.89 + 1.11)
+</code></pre>
+<p>Subtracted flat from the running damage. If armor is equipped, <strong>Pain Tolerance</strong> adds +1 to your effective armor level. <strong>Forge Pauldrons</strong> add +1/+2/+3 by tier, <strong>Jock Shell</strong> adds +1, and <strong>Nocturnal Cloak</strong> adds +1.</p>
+<p>If the enemy's skill has a <strong>skill_armor_break</strong> entry, they roll for it: chance × percent. On success, your armor reduction is reduced by that percent before being subtracted.</p>
+<h3 id="step-7--tai-chi-reflect">Step 7 — Tai-Chi reflect</h3>
+<p>If you have Tai-Chi: 5% base chance + 3% per True Neutral alignment tier. On trigger, a percent of incoming damage (5% + 3%/tier) is reflected back to the enemy and you only take the rest. Tai-Chi applies to most direct damage and QTE hits, but not to cover-ears audio damage.</p>
+<h3 id="step-8--alignment-items">Step 8 — Alignment items</h3>
+<p>In order:</p>
+<ol>
+<li><strong>Shield of Balance</strong> → ×0.85 always-on.</li>
+<li><strong>Forge Shield</strong> → roll to block a random percent of damage:
+<ul>
+<li>Iron: 6% chance, 3–7% blocked</li>
+<li>Silver: 12% chance, 6–14% blocked</li>
+<li>Mithril: 18% chance, 9–21% blocked</li>
+</ul>
+</li>
+<li><strong>Forge Helmet</strong> → only fires on critical hits:
+<ul>
+<li>Iron: ×0.9</li>
+<li>Silver: ×0.8</li>
+<li>Mithril: ×0.7</li>
+</ul>
+</li>
+<li><strong>Helmet of Immortality</strong> → if the hit would kill you and would deal 250+ damage and your HP is above 10, it's clamped so you survive at exactly 1 HP. It can trigger once, then recharges after 10 rounds.</li>
+</ol>
+<h3 id="step-9--tier-defense">Step 9 — Tier defense</h3>
+<p>Your final defensive layer:</p>
+<pre><code>range = your_tier to your_tier × 3
+armor_multiplier = 1 + (effective_armor_level ÷ 10)
+final_damage -= random(range) × armor_multiplier
+</code></pre>
+<p>The rolled value is multiplied by your effective armor synergy. <strong>Balance Stone</strong> adds an alternating min/max bonus per level before that roll (level 1: +1 min, level 2: +1 min/+1 max, level 3: +2 min, level 4: +2 min/+2 max, and so on).</p>
+<p>Examples with armor level 12:</p>
+<div class="guide-table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th>Tier</th>
+<th style="text-align:right">Final Tier Defense Range</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Godlike / tier 15</td>
+<td style="text-align:right">33-99</td>
+</tr>
+<tr>
+<td>Transcendent / tier 17</td>
+<td style="text-align:right">37-112</td>
+</tr>
+<tr>
+<td>Apex (1) / tier 18</td>
+<td style="text-align:right">39-118</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="step-10--apply-to-your-hp">Step 10 — Apply to your HP</h3>
+<p>Whatever's left finally subtracts from your health.</p>
+<hr/>
+<h2 id="fighting-experience-and-the-tier-system">Fighting Experience and the Tier System</h2>
+<p>Your <code>fighting_experience</code> is the most quietly powerful stat in combat. It scales your output and defenses, and it determines your tier — which feeds into your tier defense roll.</p>
+<h3 id="tier-table">Tier Table</h3>
+<div class="guide-table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th>Tier</th>
+<th>Title</th>
+<th>Exp Required</th>
+<th>Damage Modifier</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Novice</td>
+<td>0–99</td>
+<td>×1.00</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Brawler</td>
+<td>100–199</td>
+<td>×1.05</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Warrior</td>
+<td>200–499</td>
+<td>×1.10</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Veteran</td>
+<td>500–999</td>
+<td>×1.15</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Elite</td>
+<td>1,000–1,999</td>
+<td>×1.20</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Champion</td>
+<td>2,000–3,999</td>
+<td>×1.25</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Master</td>
+<td>4,000–7,999</td>
+<td>×1.30</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Gladiator</td>
+<td>8,000–15,999</td>
+<td>×1.35</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Warlord</td>
+<td>16,000–31,999</td>
+<td>×1.40</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Hero</td>
+<td>32,000–63,999</td>
+<td>×1.45</td>
+</tr>
+<tr>
+<td>11</td>
+<td>Legend</td>
+<td>64,000–127,999</td>
+<td>×1.50</td>
+</tr>
+<tr>
+<td>12</td>
+<td>Mythic</td>
+<td>128,000–255,999</td>
+<td>×1.55</td>
+</tr>
+<tr>
+<td>13</td>
+<td>Immortal</td>
+<td>256,000–511,999</td>
+<td>×1.60</td>
+</tr>
+<tr>
+<td>14</td>
+<td>Demigod</td>
+<td>512,000–1,023,999</td>
+<td>×1.65</td>
+</tr>
+<tr>
+<td>15</td>
+<td>Godlike</td>
+<td>1,024,000–2,047,999</td>
+<td>×1.70</td>
+</tr>
+<tr>
+<td>16</td>
+<td>Ascendant</td>
+<td>2,048,000–4,095,999</td>
+<td>×1.75</td>
+</tr>
+<tr>
+<td>17</td>
+<td>Transcendent</td>
+<td>4,096,000–8,191,999</td>
+<td>×1.80</td>
+</tr>
+<tr>
+<td>18</td>
+<td>Apex (1)</td>
+<td>8,192,000+</td>
+<td>×1.80 (capped)</td>
+</tr>
+</tbody>
+</table></div>
+<p>Beyond Apex (1), the tier number keeps growing — Apex (2), Apex (3), and so on, with each new sub-tier requiring 1.5× the previous threshold. The damage modifier is capped at ×1.80, but tier number continues to feed the <strong>tier defense</strong> flat reduction range, so progress past Apex still meaningfully matters.</p>
+<h3 id="what-fighting-experience-actually-does">What Fighting Experience Actually Does</h3>
+<ol>
+<li><strong>Multiplies your offensive stat contribution</strong> on every physical attack and on magic damage. Capped at ×1.80.</li>
+<li><strong>Sets your tier defense range</strong> — <code>min = tier</code>, <code>max = tier × 3</code>, then the roll is multiplied by armor synergy.</li>
+<li><strong>Multiplies your status resistance roll</strong> (capped at 90%).</li>
+<li><strong>Improves flee chance</strong> for non-boss fights.</li>
+</ol>
+<p>There is no current incoming-damage divisor based directly on raw fighting XP. Enemy skill damage is reduced by the tier-defense system above, plus armor and other defensive layers.</p>
+<hr/>
+<h2 id="magic-in-detail">Magic in Detail</h2>
+<p>Magic uses a different formula tree than physical attacks.</p>
+<h3 id="stat-contribution">Stat Contribution</h3>
+<ul>
+<li><strong>Standard damage magic</strong> (fire, ice): <code>base + (Mystic ÷ 2) × fight_mod</code></li>
+<li><strong>Advanced magic</strong> (light, dark): <code>base + (Mystic × 1.5) × fight_mod</code></li>
+</ul>
+<p>Light and Dark are dramatically more powerful than fire/ice if you have the Mystic stat for it.</p>
+<p>At very high Mystic, offensive spells get a small extra max-damage bonus:</p>
+<pre><code>if Mystic &gt; 100:
+    +1 max damage for every full 10 Mystic over 100
+</code></pre>
+<p>So Mystic 110 gives +1, Mystic 150 gives +5, and so on. This bonus applies to fire, ice, light, and dark spells.</p>
+<h3 id="grimoire-bonus">Grimoire Bonus</h3>
+<p>A grimoire adds <code>level × 2</code> to your max damage. <strong>Arcane Knowledge</strong> triples this bonus.</p>
+<h3 id="multipliers">Multipliers</h3>
+<p>Applied in order:</p>
+<ol>
+<li><strong>Master Wizard</strong> → ×1.5 to all magic.</li>
+<li><strong>Fire bonuses</strong> (fire magic only):
+<ul>
+<li>Fire Elemental Talisman → +20%</li>
+<li>Hell Fire → +50%</li>
+<li>Stack additively (so both = +70%).</li>
+</ul>
+</li>
+<li><strong>Alignment Essence</strong> → 5% per tier of matching alignment:
+<ul>
+<li>Light Magic ← Good alignment</li>
+<li>Dark Magic ← Evil alignment</li>
+<li>At max tier, this is ×1.45.</li>
+</ul>
+</li>
+</ol>
+<h3 id="the-roll">The Roll</h3>
+<p><code>min = max × 0.33</code> normally, or <code>× 0.55</code> with <strong>Wizardry</strong>.</p>
+<h3 id="arcane-surge">Arcane Surge</h3>
+<p>After the roll, if you have Arcane Surge, there's an 18% chance of:</p>
+<pre><code>final = (final × 3) + random(1, 300)
+</code></pre>
+<p>This is the magic equivalent of Skull Crusher — a build-defining occasional spike.</p>
+<h3 id="vampire-grimoire">Vampire Grimoire</h3>
+<p>If you have <strong>Vampire Grimoire</strong>, each main offensive spell has a 15% chance to trigger Vampirism, adding <code>1-Vampire</code> damage after the normal spell roll and before Arcane Surge. It also bypasses enemy magic defenses and absorption. It still has to get past enemy dodge, and enemy weakness still helps you.</p>
+<h3 id="heal-magic">Heal Magic</h3>
+<p>Same pipeline as offensive magic, but the result heals. <strong>Sacred Mending</strong> has a 30% chance to double the heal.</p>
+<h3 id="sleep-magic">Sleep Magic</h3>
+<p>Against non-bosses, Sleep chance scales with Mystic, gets +5 from <strong>Inner Peace</strong>, then the enemy reduces it by a random amount based on floor level. Non-boss Sleep chance caps at <strong>70%</strong>, or <strong>75%</strong> if you have <strong>Hypnotic Gaze</strong>. Against bosses, Sleep has a fixed <strong>13%</strong> chance, or <strong>20%</strong> with Hypnotic Gaze.</p>
+<h3 id="energy-cost">Energy Cost</h3>
+<p>Magic costs energy:</p>
+<ul>
+<li>Fire/Ice: 12</li>
+<li>Light/Dark: 40</li>
+<li>Sleep: 18</li>
+<li>Heal: 22</li>
+</ul>
+<p><strong>Mana Channeling</strong> halves the cost. <strong>Inner Peace</strong> reduces by another 10% on top. With both, Light/Dark drops from 40 → 18, which makes them sustainable.</p>
+<hr/>
+<h2 id="status-effects-and-resistances">Status Effects and Resistances</h2>
+<p>Some enemy attacks try to apply status effects (poison, sleep, web, charm, disorient, cover_ears).</p>
+<p>When the attack lands, a resistance check fires:</p>
+<pre><code>resistance_chance = (your_stat ÷ 100) × fight_mod
+</code></pre>
+<p><code>your_stat</code> depends on the effect type:</p>
+<div class="guide-table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th>Effect</th>
+<th>Resistance Stat</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Sleep</td>
+<td>Stamina</td>
+</tr>
+<tr>
+<td>Poison</td>
+<td>Strength</td>
+</tr>
+<tr>
+<td>Charm</td>
+<td>Charm</td>
+</tr>
+<tr>
+<td>Web</td>
+<td>Ability</td>
+</tr>
+<tr>
+<td>Disorient</td>
+<td>Perception</td>
+</tr>
+<tr>
+<td>Cover ears</td>
+<td>Perception</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Resistance is hard-capped at 90%.</strong> Even with stats and fight_mod that would mathematically push it over 100%, the cap means most effects still have at least a 10% chance to land unless a specific skill grants immunity.</p>
+<p>Some skills bypass everything:</p>
+<ul>
+<li><strong>Iron Will</strong> — 25% flat resist to mental effects (sleep/charm/disorient).</li>
+<li><strong>Combat Reflexes</strong> — 30% to dodge web entirely (separate from resistance roll).</li>
+<li><strong>Iron Constitution</strong> — 30% flat poison resist.</li>
+<li><strong>Music Production</strong> — full immunity to the cover-ears status effect.</li>
+</ul>
+<p>A few boss skills have a <code>skill_override_chance</code> that bypasses <em>all</em> resistance checks. If you're getting webbed despite a 90% resist roll, that's why.</p>
+<hr/>
+<h2 id="the-qte-block-system">The QTE Block System</h2>
+<p>Some enemy skills are <strong>QTE-blockable</strong>. When a QTE-blockable skill fires, the battle message will hint at it (cyan text saying to click the incoming attack), and a target will appear briefly on screen. Click it in time and the entire hit is negated.</p>
+<p>Multi-hit skills can have a QTE per hit. Block one, the rest still come — but each one is an independent chance to defend.</p>
+<p><strong>Forge Shield tiers also boost the QTE itself</strong> — the target gets bigger and you get more reaction time as you upgrade.</p>
+<hr/>
+<h2 id="telegraphed-attacks">Telegraphed Attacks</h2>
+<p>Certain enemy skills are telegraphed. The turn before they fire, the enemy displays a warning message describing what's coming. This is your cue to:</p>
+<ul>
+<li><strong>Defend</strong> — drastically reduces the incoming damage.</li>
+<li><strong>Heal preemptively</strong> if you're low on HP.</li>
+<li><strong>Move energy budget</strong> — sacrifice an attack to save resources for surviving.</li>
+</ul>
+<p>A few skills are <em>both</em> telegraphed AND QTE-blockable, but most are one or the other. Telegraph is the boss saying "I'm winding up." QTE is the boss saying "react now or eat it."</p>
+<hr/>
+<h2 id="forge-armor">Forge Armor</h2>
+<p>The blacksmith at one of the medieval locations crafts four armor pieces, each in four tiers — <strong>Iron</strong>, <strong>Silver</strong>, <strong>Mithril</strong>, and <strong>Gemmed</strong>.</p>
+<div class="guide-table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th>Piece</th>
+<th>Iron</th>
+<th>Silver</th>
+<th>Mithril</th>
+<th>Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Helmet</strong></td>
+<td>×0.9 on crits</td>
+<td>×0.8 on crits</td>
+<td>×0.7 on crits</td>
+<td>Reduces critical hit damage taken</td>
+</tr>
+<tr>
+<td><strong>Shield</strong></td>
+<td>6% / 3–7%</td>
+<td>12% / 6–14%</td>
+<td>18% / 9–21%</td>
+<td>Chance to block a random % of damage</td>
+</tr>
+<tr>
+<td><strong>Gauntlets</strong></td>
+<td>-1 low end</td>
+<td>-2 low end</td>
+<td>-3 low end</td>
+<td>Softens minimum enemy skill rolls</td>
+</tr>
+<tr>
+<td><strong>Pauldrons</strong></td>
+<td>+1 armor lvl</td>
+<td>+2 armor lvl</td>
+<td>+3 armor lvl</td>
+<td>Stacks with armor and Pain Tolerance</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Gemmed</strong> keeps each piece's full Mithril-level effect and adds a new layer: every Gemmed piece you own grants <strong>+1 effective armor level</strong>, up to <strong>+4</strong> with the complete set. That armor bonus feeds both the flat armor reduction formula and the tier-defense synergy multiplier, making a full Gemmed set the strongest defensive loadout in the game.</p>
+<p>Each tier is a meaningful upgrade. Mithril is rare and expensive, but the difference between unequipped and full Mithril is the difference between dying on the deepest floors and walking out of them — and Gemmed pushes past even that.</p>
+<p>The shield and pauldrons help on every hit. The helmet only helps when an enemy crits, but on those hits it can save your life. The gauntlets are a subtle, consistent damage reduction across long fights.</p>
+<hr/>
+<h2 id="soul-stones-in-combat">Soul Stones in Combat</h2>
+<p>For full coverage of Soul Stones, see <code>soul_stones.md</code>. Quick summary of their combat effects:</p>
+<ul>
+<li><strong>Sword Stone</strong> — +1 per level to basic attack and quick attack.</li>
+<li><strong>Brute Stone</strong> — +1 per level to stormslash and power strike.</li>
+<li><strong>Elemental Stone</strong> — +1 per level to fire and ice magic.</li>
+<li><strong>Balance Stone</strong> — alternating bonus to your tier defense range (level 1: +1 min; level 2: +1 min/+1 max; etc.).</li>
+<li><strong>Queenstone</strong> — +1 per level to maximum HP (passive, not a combat effect per se).</li>
+</ul>
+<p>All five level up to potentially absurd numbers if you're patient. There's no cap.</p>
+<hr/>
+<h2 id="combat-paths--sorcerer-assassin-blademaster">Combat Paths — Sorcerer, Assassin, Blademaster</h2>
+<p>Beyond stats, skills, and gear, the game has three <strong>Combat Paths</strong> — long-term mastery tracks that permanently multiply the damage of the actions they govern. You start with none of them; each must be <strong>awakened</strong> by a master, and once awakened it grows forever.</p>
+<h3 id="the-three-paths">The Three Paths</h3>
+<div class="guide-table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th>Path</th>
+<th>Governs</th>
+<th>Awakened By</th>
+<th>Awakening Requirements</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Blademaster</strong></td>
+<td>Basic Attack, Power Strike</td>
+<td><strong>Muramasa</strong> (Knight's Training Grounds)</td>
+<td>Close Friend with Muramasa, Fighters Guild reputation 200+. 300 min, −150 energy, −100 calm. One-time.</td>
+</tr>
+<tr>
+<td><strong>Assassin</strong></td>
+<td>Quick Attack, Stormslash</td>
+<td><strong>Arestes</strong> (Thieves Guild Hidden Chamber)</td>
+<td>Thieves Guild reputation 350+. 300 min, −150 energy, −150 calm. One-time.</td>
+</tr>
+<tr>
+<td><strong>Sorcerer</strong></td>
+<td>Fire, Ice, Light, Dark, Sleep, and Heal Magic</td>
+<td><strong>Aziza</strong> (Arcane Shop)</td>
+<td>In Love with Aziza, Lime recruited as Maid #4, the Floor 40 miniboss defeated, and Sashina's Gift learned. 300 min, −150 energy, −150 calm. One-time (+30 Aziza).</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="earning-path-points">Earning Path Points</h3>
+<p>Every use of a governed action in combat earns <strong>+1 point</strong> on that path. In the <strong>Infinity Dungeon</strong>, each action also earns a random bonus of <strong>1 up to your current Infinity floor</strong> — deep Infinity runs are by far the fastest way to rank up. Enemy affix experience multipliers and specialist enemies multiply the gain further.</p>
+<h3 id="ranks-and-the-damage-multiplier">Ranks and the Damage Multiplier</h3>
+<p>Each path has <strong>20 named ranks</strong> (and keeps going past 20 forever). Rank thresholds are cumulative points: 0, 100, 300, 700, 1,500, 3,100, 6,300, 12,700, 25,500, 44,700, 73,500, 116,700, 181,500, 278,700, 424,500, 643,200, 971,250, 1,463,325, 2,201,438, 3,308,607 — the required span doubles each rank through rank 8, then grows ×1.5 per rank. Past rank 20, each new rank costs ×1.5 the previous span, with no cap.</p>
+<p><strong>The payoff:</strong> every rank adds <strong>+15% damage</strong> to that path's governed actions. Rank 1 = ×1.15, rank 10 = ×2.5, rank 20 = ×4.0 — and it keeps climbing +0.15× per rank beyond that, forever.</p>
+<p>Rank names run from humble to mythic — Sorcerer: Novice → Warlock → Archmagus → <strong>Avatar of Magic</strong>; Assassin: Initiate → Nightblade → Master Assassin → <strong>Avatar of Shadows</strong>; Blademaster: Novice Blade → Sword Saint → Kensei → <strong>Avatar of Steel</strong>. Past rank 20 the title shows your rank number, e.g. "Avatar of Steel (23)".</p>
+<h3 id="assassinate--the-assassin-chain">Assassinate — The Assassin Chain</h3>
+<p>From Assassin rank 1, <strong>Quick Attack can chain into extra follow-up strikes</strong> ("Assassinate"). Each extra hit rolls against a chance that starts at <strong>50 + your Assassin rank</strong> and drops <strong>10 per hit</strong> in the chain. The <strong>Dark Consolador</strong> key item (a gift from Arestes) adds +15 starting chance and slows the decay to −5 per hit. Every chained hit is a full recalculated Quick Attack — path multiplier included — and the <strong>Phantom Stone</strong> adds its level as bonus damage to each chained strike.</p>
+<h3 id="practical-notes">Practical Notes</h3>
+<ul>
+<li>Pick the path that matches the buttons you already press. A sword build lives on Attack/Power Strike (Blademaster); a speed build on Quick Attack/Stormslash (Assassin); a caster on spells (Sorcerer).</li>
+<li>Nothing stops you from awakening all three — they track and multiply independently.</li>
+<li>The multipliers apply <strong>only</strong> to the governed actions. Blademaster rank does nothing for your Fireball.</li>
+</ul>
+<hr/>
+<h2 id="alignment-in-combat">Alignment in Combat</h2>
+<p>Your moral alignment matters in three combat-relevant ways:</p>
+<ol>
+<li><strong>Light Magic</strong> scales with your <strong>Good</strong> alignment tier — +5% per tier, max ×1.45.</li>
+<li><strong>Dark Magic</strong> scales with your <strong>Evil</strong> alignment tier — same scaling.</li>
+<li><strong>Tai-Chi</strong> — its reflect chance and reflect amount both scale with your <strong>True Neutral</strong> alignment tier:
+<ul>
+<li>Base: 5% chance to reflect 5%.</li>
+<li>Each Neutral tier (1–9): +3% chance, +3% reflect.</li>
+<li>At max Eternal: 32% chance to reflect 32%.</li>
+</ul>
+</li>
+</ol>
+<p>So your alignment commits you to a specialty: Good for Light, Evil for Dark, Neutral for Tai-Chi. There's no way to be optimal at all three simultaneously.</p>
+<hr/>
+<h2 id="skills-that-actually-matter">Skills That Actually Matter</h2>
+<p>This is the short list of combat skills with high practical value, ranked roughly by impact:</p>
+<p><strong>S-tier (transformative):</strong></p>
+<ul>
+<li>Skull Crusher (Power Strike ×4 chance — single-hit damage king)</li>
+<li>Master Wizard (×1.5 magic — turns every spell into a Power Strike)</li>
+<li>Tai-Chi (with high Neutral tier — turns the enemy into your healing source)</li>
+<li>Wizardry (raises magic damage floor enormously)</li>
+<li>Arcane Surge (build-defining magic spike)</li>
+</ul>
+<p><strong>A-tier (very strong):</strong></p>
+<ul>
+<li>Berserker Rage (max damage Power Strikes when healthy)</li>
+<li>Mana Channeling (sustains Light/Dark magic spam)</li>
+<li>Inner Peace (stacks with Mana Channeling, also deflects magic)</li>
+<li>Pain Tolerance (+1 effective armor level when armor is equipped)</li>
+<li>Sacred Mending (heals double, often saves runs)</li>
+<li>Precognition (10% full dodge against incoming attacks)</li>
+</ul>
+<p><strong>B-tier (situational but real):</strong></p>
+<ul>
+<li>Martial Arts (raises minimum damage roll on attacks)</li>
+<li>Weapon Mastery (50% more weapon contribution)</li>
+<li>Acrobatics (Quick Attack damage bonus)</li>
+<li>Iron Will / Iron Constitution / Music Production (status resists)</li>
+<li>Combat Reflexes (especially valuable against web effects)</li>
+<li>Adrenaline Rush (spikes max damage when badly hurt)</li>
+<li>Exploit Weakness (15% double damage with cooldown)</li>
+<li>Tempest Strike (Stormslash lightning conversion)</li>
+<li>Battle Meditation (per-turn regen)</li>
+<li>Counterattack (20% to retaliate after taking damage)</li>
+</ul>
+<p><strong>C-tier (niche):</strong></p>
+<ul>
+<li>Disarming Technique (currently narrow; it sets a disarm flag, but most enemy damage is skill-driven)</li>
+<li>Defensive Stance (low current impact in the live skill-driven enemy system)</li>
+<li>Combat Leadership</li>
+<li>Endurance Training</li>
+</ul>
+<p>The top of the list is where you should spend learning resources first if you're serious about combat.</p>
+<hr/>
+<h2 id="build-strategy">Build Strategy</h2>
+<h3 id="the-magic-build">The Magic Build</h3>
+<p>Mystic-stacked, Light Magic specialty, Good alignment. Master Wizard + Wizardry + Mana Channeling + Inner Peace + Arcane Surge + Sacred Mending. Light Magic spam with full Alignment Essence stacking, Sacred Mending healing in between. Vulnerable to enemies that absorb light or have very high magic resistance, but a properly built magic character can solo any boss.</p>
+<h3 id="the-berserker">The Berserker</h3>
+<p>Strength-stacked, Power Strike specialty. Skull Crusher + Berserker Rage + Weapon Mastery + Martial Arts. Stay above 90% HP by abusing healing or simply not getting hit. Each Power Strike is a hammer blow — and the 30% Skull Crusher × 4 chance creates terrifying damage spikes.</p>
+<h3 id="the-tank">The Tank</h3>
+<p>Stamina-stacked, defense-focused. Full Mithril armor, Tai-Chi, max True Neutral alignment, Helmet of Immortality, Shield of Balance. You don't kill enemies fast — you let them kill themselves. Tai-Chi reflects steady damage, defenses absorb most of what's left, and the immortality clamp catches one lethal heavy blow before needing 10 rounds to recharge.</p>
+<h3 id="the-quick-strike">The Quick-Strike</h3>
+<p>Ability-stacked, Quick Attack specialty. Acrobatics + Side-Step + Sword Stone (high level). Fast attacks, follow-up chances, and Side-Step dodges create more total actions and more chances to avoid an enemy hit.</p>
+<hr/>
+<h2 id="common-misconceptions">Common Misconceptions</h2>
+<p><strong>"My fighting experience makes me immune to enemy damage."</strong><br/>
+No. Fighting experience improves your outgoing damage and your final tier-defense roll, but it does not divide enemy skill damage by your raw XP. Bosses can still hit very hard.</p>
+<p><strong>"Higher armor means flat damage reduction every hit."</strong><br/>
+True for the armor stat itself, but <strong>skill_armor_break</strong> rolls can bypass a percentage of it on specific attacks. Some boss signature skills are designed to ignore armor.</p>
+<p><strong>"Tai-Chi only works against magic."</strong><br/>
+False, but with one caveat. It works against most direct incoming damage, including physical and QTE hits. It currently does not apply to cover-ears audio damage.</p>
+<p><strong>"Forge Helmet always reduces damage."</strong><br/>
+Only on critical hits. On non-crit hits it does nothing. But when it fires, it can mean the difference between surviving and dying — bosses with high critical_modifier values will land devastating crits otherwise.</p>
+<p><strong>"Defend is always 90% reduction."</strong><br/>
+Active defending starts at 50%, scales with your fighting modifier, and caps at 80%.</p>
+<p><strong>"Status effects can be made impossible to land."</strong><br/>
+No. The 90% resistance cap means every attempt has at least a 10% chance to succeed. Build defensively but don't expect immunity.</p>
+<p><strong>"Power Strike is just a basic attack with bigger damage."</strong><br/>
+It scales with full Strength instead of Strength ÷ 2 — that's a ×2 difference in stat contribution before its higher base, energy cost, and Skull Crusher's potential ×4.</p>
+<hr/>
+<p><em>Combat is intentionally deep. The pipeline is opaque while you're playing — fights resolve in seconds — but the systems beneath it reward thinking. The deeper floors of the dungeon are designed for builds that have understood and committed to a strategy. Generic builds plateau. Specialized builds break through.</em></p>
+</div>
+        <div class="markdown-body" data-lang-panel="zh" hidden>
+<p>本指南将详细说明战斗的运作方式——结算顺序、伤害的传递流程，以及各项属性、技能和物品在实战中的具体作用。它面向希望了解底层计算、规划流派，并弄清每次攻击为何会打出特定数值的玩家。</p>
+<p>如果你只想直接游玩，其实完全不必了解这些内容。只要护甲水平过得去，并专精一种魔法，战斗的容错率就很高。不过，如果你曾好奇为什么强力打击有时像货运列车般撞向敌人，有时却只是礼貌地拍拍对方肩膀，那么这篇指南正适合你。</p>
+<blockquote>
+<p><strong>无剧透。</strong> 本指南会提及系统与机制，但不会透露首领、地下城楼层或具体遭遇的名称。</p>
+</blockquote>
+<h2 id="zh-目录">目录</h2>
+<ul>
+<li><a href="#zh-the-big-picture">整体概览</a></li>
+<li><a href="#zh-player-damage--the-outgoing-pipeline">玩家伤害——输出流程</a></li>
+<li><a href="#zh-enemy-damage--the-incoming-pipeline">敌人伤害——承伤流程</a></li>
+<li><a href="#zh-fighting-experience-and-the-tier-system">战斗经验与阶位系统</a></li>
+<li><a href="#zh-magic-in-detail">魔法详解</a></li>
+<li><a href="#zh-status-effects-and-resistances">状态效果与抗性</a></li>
+<li><a href="#zh-the-qte-block-system">QTE格挡系统</a></li>
+<li><a href="#zh-telegraphed-attacks">预警攻击</a></li>
+<li><a href="#zh-forge-armor">锻造护甲</a></li>
+<li><a href="#zh-soul-stones-in-combat">灵魂石的战斗效果</a></li>
+<li><a href="#zh-combat-paths--sorcerer-assassin-blademaster">战斗路线——术士、刺客、剑术大师</a></li>
+<li><a href="#zh-alignment-in-combat">阵营倾向对战斗的影响</a></li>
+<li><a href="#zh-skills-that-actually-matter">真正重要的技能</a></li>
+<li><a href="#zh-build-strategy">流派策略</a></li>
+<li><a href="#zh-common-misconceptions">常见误解</a></li>
+</ul>
+<hr/>
+<p></p>
+<h2 id="zh-the-big-picture">整体概览</h2>
+<p>所有战斗均采用回合制。你选择一项行动——攻击、技能、魔法、防御、物品或逃跑——随后敌人作出回应。无论伤害由哪一方造成，都必须依次经过一系列倍率、掷骰、减免和最终调整，才会真正从某人的生命值中扣除。</p>
+<p>决定一次攻击结果的 <strong>从来不是</strong> 单一数值。即使是普通攻击，在最终确定伤害之前也可能要经过八九个独立步骤。理解这套流程，能让你从“战斗结果似乎很随机”，转变为清楚掌握每一步究竟发生了什么。</p>
+<hr/>
+<p></p>
+<h2 id="zh-player-damage--the-outgoing-pipeline">玩家伤害——输出流程</h2>
+<p>当你挥动武器或向敌人施放法术时，伤害会逐步构成，随后交由敌人的防御流程进行处理。大致顺序如下：</p>
+<h3 id="zh-第1步计算最大伤害">第1步——计算最大伤害</h3>
+<p>对于 <strong>物理攻击</strong>，公式从行动的基础值、属性贡献、战斗修正值和武器加成开始计算：</p>
+<pre><code>max_damage = base + stat_contribution + weapon_bonus
+</code></pre>
+<ul>
+<li><code>base</code>很小——根据行动是普通攻击、快速攻击、风暴斩还是强力打击，数值介于1到5之间。</li>
+<li><code>fight_mod</code>是你的战斗经验修正值，范围从1.0（新手）到1.80（上限）。详见下方的阶位表。</li>
+<li><code>weapon_bonus</code>为<code>weapon_level × 2</code>；若拥有 <strong>武器精通</strong>，则提升为<code>weapon_level × 3</code>。</li>
+</ul>
+<p>各项行动的属性成长：</p>
+<div class="guide-table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th>行动</th>
+<th style="text-align:right">基础值</th>
+<th>属性贡献</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>普通攻击</td>
+<td style="text-align:right">1</td>
+<td>力量 ÷ 2 × fight_mod</td>
+</tr>
+<tr>
+<td>快速攻击</td>
+<td style="text-align:right">2</td>
+<td>能力 ÷ 2 × fight_mod</td>
+</tr>
+<tr>
+<td>风暴斩</td>
+<td style="text-align:right">3</td>
+<td>（力量 + 能力）÷ 3 × fight_mod</td>
+</tr>
+<tr>
+<td>强力打击</td>
+<td style="text-align:right">5</td>
+<td>力量 × fight_mod</td>
+</tr>
+</tbody>
+</table></div>
+<p>强力打击使用完整力量值，而不是力量÷2，因此成长幅度要高得多。</p>
+<p>有关 <strong>魔法</strong> 的计算，请参阅下方的<a href="#zh-magic-in-detail">魔法详解</a>。</p>
+<h3 id="zh-第2步应用技能触发效果">第2步——应用技能触发效果</h3>
+<p>此阶段可能受到数项技能影响：</p>
+<ul>
+<li><strong>肾上腺素爆发</strong>——当你的生命低于30%时，大幅提高<code>max_damage</code>。</li>
+<li><strong>狂战士之怒</strong>——仅限强力打击。生命达到90%以上时，有35%概率强制打出最大伤害，并随机消耗最大生命值的3–10%作为代价。</li>
+</ul>
+<h3 id="zh-第3步掷出实际伤害">第3步——掷出实际伤害</h3>
+<p>如果狂战士之怒已触发，则跳过掷骰，直接使用max_damage。</p>
+<p>否则：</p>
+<pre><code>min_damage = max_damage ÷ 3   (or ÷ 2 with Martial Arts)
+final_damage = random(min_damage, max_damage)
+</code></pre>
+<p>这就是两次完全相同的攻击可能打出截然不同伤害的原因。武术是一项极为强力的升级，因为它提高了每次伤害掷骰的下限。</p>
+<h3 id="zh-第4步掷骰后的触发效果">第4步——掷骰后的触发效果</h3>
+<ul>
+<li><strong>利用弱点</strong>——有15%概率使掷出的伤害 <strong>翻倍</strong>。每次触发后内置4次攻击的冷却期，以防伤害无休止地滚大。触发时，你会看到病态绿色的“你发现了对方防御的破绽！”提示。</li>
+<li><strong>杂技</strong>——快速攻击可获得15%伤害加成；在执行物理行动后，杂技还可能另外触发一次追加快速攻击。</li>
+</ul>
+<h3 id="zh-第5步技能专属强化">第5步——技能专属强化</h3>
+<p>不同技能拥有各自独特的强化能力：</p>
+<ul>
+<li><strong>暴风打击</strong>——风暴斩获得+5%伤害，并附加雷电属性。若敌人弱雷，伤害再×2；若敌人抗雷，则÷2。</li>
+<li><strong>碎颅击</strong>——强力打击先获得固定+10%基础伤害，随后还有30%概率在此基础上 <strong>乘以4</strong>。一旦触发，这就是游戏中最强的单体一击。</li>
+</ul>
+<h3 id="zh-第6步永久被动加成">第6步——永久被动加成</h3>
+<p>只要满足条件，以下加成便会持续生效：</p>
+<ul>
+<li><strong>力度消耗品增益</strong> 处于生效状态→物理伤害×1.5。</li>
+<li><strong>地狱之火</strong> 关键物品→所有物理伤害×1.10。</li>
+<li><strong>剑石</strong> →普通攻击和快速攻击每级伤害+1。</li>
+<li><strong>蛮力之石</strong> →风暴斩和强力打击每级伤害+1。</li>
+<li><strong>吸血鬼獠牙</strong> →主要物理攻击有15%概率触发 <strong>吸血鬼化</strong>，追加<code>1-Vampire</code>伤害，并绕过敌人的伤害减免、楼层防御和主动防御。</li>
+<li><strong>吸血鬼魔导书</strong> →主要进攻法术有15%概率触发 <strong>吸血鬼化</strong>，追加<code>1-Vampire</code>伤害，并绕过魔法防御和吸收。</li>
+<li><strong>海洋之心</strong> 和 <strong>蝙蝠侠之眼</strong> →各自提供最大生命+50、最大精力+50和最大镇定+50。</li>
+</ul>
+<h3 id="zh-第7步交由敌人处理">第7步——交由敌人处理</h3>
+<p>此时，累计得出的数值会依次受到敌人防御的削减：</p>
+<ol>
+<li><strong>敌人闪避</strong>——按固定百分比概率完全规避这一击。</li>
+<li><strong>伤害减免</strong>——按百分比削减伤害。</li>
+<li><strong>元素修正</strong>——魔法与暴风打击的雷电伤害在敌人弱对应属性时可×2，遭到抵抗时则×0.5。</li>
+<li><strong>魔法抗性</strong>——仅限魔法，并带有随机浮动。</li>
+<li><strong>吸收</strong>——仅限魔法。若判定成功，敌人不会受到伤害，反而会 <strong>恢复</strong> 等同于全部伤害的生命。</li>
+</ol>
+<p>如果 <strong>吸血鬼噬咬</strong> 触发，主要物理攻击将跳过本步骤中的敌人伤害减免、楼层防御与防御效果。但这次攻击首先仍须命中，而且追加攻击不会各自再次判定吸血鬼噬咬。
+6. <strong>楼层防御</strong>——在接近结算末尾时，随机减去<code>eff_floor</code>至<code>eff_floor × 2</code>。这就是深层敌人为何能轻易化解刮痧伤害。
+7. <strong>敌人防御</strong>——如果敌人使用了防御姿态或魔法护盾，接下来的3次伤害命中都会受到削减。</p>
+<p>至此，完整的伤害输出流程才算结束。一次强力打击最多可能涉及16项独立计算。</p>
+<hr/>
+<p></p>
+<h2 id="zh-enemy-damage--the-incoming-pipeline">敌人伤害——承伤流程</h2>
+<p>敌人攻击你时，伤害会经过另一套同样复杂的流程。大多数敌人攻击来自 <strong>技能</strong>，而非普通攻击；技能的结算流程如下：</p>
+<h3 id="zh-第1步技能基础伤害">第1步——技能基础伤害</h3>
+<p>每项技能都有一个基础范围，例如重型猛击可能是<code>(20, 48)</code>。敌人会在下限与上限之间随机掷出数值。</p>
+<p>如果你装备了 <strong>锻造护手</strong>，范围的 <em>下限</em> 会降低（依阶级分别为−1／−2／−3），上限则保持不变。这意味着较差的伤害结果会降低，但敌人运气好时依然能打出重击。</p>
+<h3 id="zh-第2步楼层成长">第2步——楼层成长</h3>
+<pre><code>floor_modifier = 1 + (eff_floor × 0.22)
+damage = base × floor_modifier
+</code></pre>
+<p>此处采用的是敌人的有效楼层等级，而不是地下城的原始楼层。越深的楼层会自动为敌人的有效等级增加3至15级。第38层的敌人可能会按有效第53层来计算伤害。</p>
+<h3 id="zh-第3步伤害倍率">第3步——伤害倍率</h3>
+<p>许多敌人拥有<code>damage_multiplier</code>。普通敌人通常接近1.0，强敌和首领则可能高得多。该倍率会直接乘入当前累计伤害。</p>
+<h3 id="zh-第4步暴击判定">第4步——暴击判定</h3>
+<pre><code>threshold = 10 + critical_modifier_chance
+</code></pre>
+<p>以1至100掷骰并与阈值比较。暴击时：</p>
+<pre><code>damage = damage × 1.5 + critical_flat_bonus
+</code></pre>
+<p>部分首领拥有<code>critical_modifier</code>，例如<code>(15, 250)</code>——也就是25%暴击率，且暴击时固定追加250+点伤害。那种攻击足以震碎灵魂。</p>
+<h3 id="zh-第5步防御状态">第5步——防御状态</h3>
+<p>如果你上回合使用了 <strong>防御</strong>，防御状态便会生效，并大幅削减本次攻击。减伤从50%起步，随战斗修正值提高，最高为80%。</p>
+<h3 id="zh-第6步护甲减伤">第6步——护甲减伤</h3>
+<pre><code>armor_reduction = eff_armor_lvl × (eff_armor_lvl × 0.89 + 1.11)
+</code></pre>
+<p>该数值会直接从当前伤害中扣除。装备护甲时，<strong>疼痛耐受</strong> 会使有效护甲等级+1。<strong>锻造肩甲</strong> 依阶级增加+1／+2／+3，<strong>护身贝甲</strong> 增加+1，<strong>夜行斗篷</strong> 增加+1。</p>
+<p>如果敌人的技能含有 <strong>skill_armor_break</strong> 条目，便会按“概率×百分比”进行判定。成功时，你的护甲减伤会先按该百分比降低，随后才从伤害中扣除。</p>
+<h3 id="zh-第7步太极反伤">第7步——太极反伤</h3>
+<p>如果你拥有太极：基础触发概率为5%，每个绝对中立阵营阶级再增加3%。触发时，部分所受伤害（5%+每阶级3%）会反弹给敌人，而你只承受剩余部分。太极适用于大多数直接伤害和QTE攻击，但不适用于捂耳音波伤害。</p>
+<h3 id="zh-第8步阵营物品">第8步——阵营物品</h3>
+<p>按以下顺序结算：</p>
+<ol>
+<li><strong>平衡之盾</strong> →始终生效，伤害×0.85。</li>
+<li><strong>锻造盾牌</strong> →判定是否随机格挡一定百分比的伤害：
+<ul>
+<li>铁制：6%概率，格挡3–7%</li>
+<li>银制：12%概率，格挡6–14%</li>
+<li>秘银：18%概率，格挡9–21%</li>
+</ul>
+</li>
+<li><strong>锻造头盔</strong> →仅在暴击时触发：
+<ul>
+<li>铁制：×0.9</li>
+<li>银制：×0.8</li>
+<li>秘银：×0.7</li>
+</ul>
+</li>
+<li><strong>不朽头盔</strong> →如果这次攻击原本会致命、伤害达到250以上，且你当前生命高于10，伤害会被限制到让你恰好剩下1点生命。触发一次后，需要经过10回合才能再次使用。</li>
+</ol>
+<h3 id="zh-第9步阶位防御">第9步——阶位防御</h3>
+<p>你的最后一道防线：</p>
+<pre><code>range = your_tier to your_tier × 3
+armor_multiplier = 1 + (effective_armor_level ÷ 10)
+final_damage -= random(range) × armor_multiplier
+</code></pre>
+<p>掷出的数值会乘以你的有效护甲协同倍率。<strong>平衡之石</strong> 会在此次掷骰前，依等级交替增加最小值与最大值（1级：最小值+1；2级：最小值+1／最大值+1；3级：最小值+2；4级：最小值+2／最大值+2；依此类推）。</p>
+<p>护甲等级为12时的示例：</p>
+<div class="guide-table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th>阶位</th>
+<th style="text-align:right">最终阶位防御范围</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>神级／阶位15</td>
+<td style="text-align:right">33-99</td>
+</tr>
+<tr>
+<td>超越者／阶位17</td>
+<td style="text-align:right">37-112</td>
+</tr>
+<tr>
+<td>巅峰（1）／阶位18</td>
+<td style="text-align:right">39-118</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="zh-第10步扣除生命">第10步——扣除生命</h3>
+<p>剩余的伤害最终会从你的生命中扣除。</p>
+<hr/>
+<p></p>
+<h2 id="zh-fighting-experience-and-the-tier-system">战斗经验与阶位系统</h2>
+<p>你的<code>fighting_experience</code>是战斗中最容易被低估、却极为强大的属性。它会增强你的攻击与防御，并决定你的阶位，而阶位又会影响阶位防御掷骰。</p>
+<h3 id="zh-阶位表">阶位表</h3>
+<div class="guide-table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th>阶位</th>
+<th>称号</th>
+<th>所需经验</th>
+<th>伤害修正</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>新手</td>
+<td>0–99</td>
+<td>×1.00</td>
+</tr>
+<tr>
+<td>2</td>
+<td>斗士</td>
+<td>100–199</td>
+<td>×1.05</td>
+</tr>
+<tr>
+<td>3</td>
+<td>战士</td>
+<td>200–499</td>
+<td>×1.10</td>
+</tr>
+<tr>
+<td>4</td>
+<td>老兵</td>
+<td>500–999</td>
+<td>×1.15</td>
+</tr>
+<tr>
+<td>5</td>
+<td>精英</td>
+<td>1,000–1,999</td>
+<td>×1.20</td>
+</tr>
+<tr>
+<td>6</td>
+<td>冠军</td>
+<td>2,000–3,999</td>
+<td>×1.25</td>
+</tr>
+<tr>
+<td>7</td>
+<td>大师</td>
+<td>4,000–7,999</td>
+<td>×1.30</td>
+</tr>
+<tr>
+<td>8</td>
+<td>角斗士</td>
+<td>8,000–15,999</td>
+<td>×1.35</td>
+</tr>
+<tr>
+<td>9</td>
+<td>军阀</td>
+<td>16,000–31,999</td>
+<td>×1.40</td>
+</tr>
+<tr>
+<td>10</td>
+<td>英雄</td>
+<td>32,000–63,999</td>
+<td>×1.45</td>
+</tr>
+<tr>
+<td>11</td>
+<td>传说</td>
+<td>64,000–127,999</td>
+<td>×1.50</td>
+</tr>
+<tr>
+<td>12</td>
+<td>神话</td>
+<td>128,000–255,999</td>
+<td>×1.55</td>
+</tr>
+<tr>
+<td>13</td>
+<td>不朽</td>
+<td>256,000–511,999</td>
+<td>×1.60</td>
+</tr>
+<tr>
+<td>14</td>
+<td>半神</td>
+<td>512,000–1,023,999</td>
+<td>×1.65</td>
+</tr>
+<tr>
+<td>15</td>
+<td>神级</td>
+<td>1,024,000–2,047,999</td>
+<td>×1.70</td>
+</tr>
+<tr>
+<td>16</td>
+<td>超升</td>
+<td>2,048,000–4,095,999</td>
+<td>×1.75</td>
+</tr>
+<tr>
+<td>17</td>
+<td>超越者</td>
+<td>4,096,000–8,191,999</td>
+<td>×1.80</td>
+</tr>
+<tr>
+<td>18</td>
+<td>巅峰（1）</td>
+<td>8,192,000+</td>
+<td>×1.80（已达上限）</td>
+</tr>
+</tbody>
+</table></div>
+<p>超过巅峰（1）后，阶位数字仍会继续增长——巅峰（2）、巅峰（3），依此类推；每个新子阶位所需经验为前一阈值的1.5倍。伤害修正值上限为×1.80，但阶位数字仍会继续影响 <strong>阶位防御</strong> 的固定减伤范围，因此突破巅峰后继续成长依然意义重大。</p>
+<h3 id="zh-战斗经验究竟有什么作用">战斗经验究竟有什么作用</h3>
+<ol>
+<li><strong>提高每次物理攻击与魔法伤害中的进攻属性贡献</strong>，上限为×1.80。</li>
+<li><strong>设定阶位防御范围</strong>——<code>min = tier</code>、<code>max = tier × 3</code>，随后掷骰结果再乘以护甲协同倍率。</li>
+<li><strong>提高状态抗性判定</strong>，上限为90%。</li>
+<li><strong>提高非首领战的逃跑概率</strong>。</li>
+</ol>
+<p>目前，原始战斗经验值不会直接作为除数来降低所受伤害。敌人技能伤害会由上述阶位防御系统、护甲及其他防御层共同削减。</p>
+<hr/>
+<p></p>
+<h2 id="zh-magic-in-detail">魔法详解</h2>
+<p>魔法采用与物理攻击不同的公式体系。</p>
+<h3 id="zh-属性贡献">属性贡献</h3>
+<ul>
+<li><strong>标准伤害魔法</strong>（火、冰）：<code>base + (Mystic ÷ 2) × fight_mod</code></li>
+<li><strong>高级魔法</strong>（光、暗）：<code>base + (Mystic × 1.5) × fight_mod</code></li>
+</ul>
+<p>只要神秘属性足够高，光明与黑暗魔法的威力就会远超火焰／冰霜魔法。</p>
+<p>当神秘极高时，进攻法术还会获得少量额外最大伤害：</p>
+<pre><code>if Mystic &gt; 100:
+    +1 max damage for every full 10 Mystic over 100
+</code></pre>
+<p>因此，神秘110会提供+1，神秘150会提供+5，依此类推。该加成适用于火焰、冰霜、光明和黑暗法术。</p>
+<h3 id="zh-魔导书加成">魔导书加成</h3>
+<p>魔导书会使你的最大伤害增加<code>level × 2</code>。<strong>奥术知识</strong> 会令这项加成变为三倍。</p>
+<h3 id="zh-倍率">倍率</h3>
+<p>按以下顺序应用：</p>
+<ol>
+<li><strong>魔法大师</strong> →所有魔法×1.5。</li>
+<li><strong>火焰加成</strong>（仅限火焰魔法）：
+<ul>
+<li>火元素护符→+20%</li>
+<li>地狱之火→+50%</li>
+<li>两者以加法叠加（同时拥有即为+70%）。</li>
+</ul>
+</li>
+<li><strong>阵营精华</strong> →每个对应阵营阶级提供5%：
+<ul>
+<li>光明魔法←善良阵营</li>
+<li>黑暗魔法←邪恶阵营</li>
+<li>达到最高阶级时为×1.45。</li>
+</ul>
+</li>
+</ol>
+<h3 id="zh-掷骰">掷骰</h3>
+<p>通常为<code>min = max × 0.33</code>；拥有 <strong>巫术</strong> 时则为<code>× 0.55</code>。</p>
+<h3 id="zh-奥术涌动">奥术涌动</h3>
+<p>完成掷骰后，如果你拥有奥术涌动，则有18%概率触发：</p>
+<pre><code>final = (final × 3) + random(1, 300)
+</code></pre>
+<p>这是魔法版的碎颅击——偶尔爆发，却足以定义整个流派。</p>
+<h3 id="zh-吸血鬼魔导书">吸血鬼魔导书</h3>
+<p>如果你拥有 <strong>吸血鬼魔导书</strong>，每次主要进攻法术都有15%概率触发吸血鬼化，在正常法术掷骰后、奥术涌动前追加<code>1-Vampire</code>伤害。它还会绕过敌人的魔法防御与吸收。法术仍须先通过敌人的闪避判定，而敌人的属性弱点依然会提高你的伤害。</p>
+<h3 id="zh-治疗魔法">治疗魔法</h3>
+<p>采用与进攻魔法相同的流程，但结算结果会恢复生命。<strong>圣愈之术</strong> 有30%概率使治疗量翻倍。</p>
+<h3 id="zh-催眠魔法">催眠魔法</h3>
+<p>面对非首领敌人时，催眠概率随神秘提高，并从 <strong>内心平静</strong> 获得+5；随后敌人会依据楼层等级随机降低该概率。非首领的催眠概率上限为 <strong>70%</strong>；拥有 <strong>催眠凝视</strong> 时，上限为 <strong>75%</strong>。面对首领时，催眠的固定概率为 <strong>13%</strong>；拥有催眠凝视时则为 <strong>20%</strong>。</p>
+<h3 id="zh-精力消耗">精力消耗</h3>
+<p>魔法会消耗精力：</p>
+<ul>
+<li>火焰／冰霜：12</li>
+<li>光明／黑暗：40</li>
+<li>催眠：18</li>
+<li>治疗：22</li>
+</ul>
+<p><strong>法力引导</strong> 会使消耗减半，<strong>内心平静</strong> 会在此基础上再降低10%。两者兼备时，光明／黑暗魔法的消耗会从40降至18，从而可以持续使用。</p>
+<hr/>
+<p></p>
+<h2 id="zh-status-effects-and-resistances">状态效果与抗性</h2>
+<p>部分敌人攻击会尝试施加状态效果（poison、sleep、web、charm、disorient、cover_ears）。</p>
+<p>攻击命中时会进行抗性判定：</p>
+<pre><code>resistance_chance = (your_stat ÷ 100) × fight_mod
+</code></pre>
+<p><code>your_stat</code>取决于效果类型：</p>
+<div class="guide-table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th>效果</th>
+<th>抗性属性</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>催眠</td>
+<td>耐力</td>
+</tr>
+<tr>
+<td>中毒</td>
+<td>力量</td>
+</tr>
+<tr>
+<td>魅惑</td>
+<td>魅力</td>
+</tr>
+<tr>
+<td>蛛网</td>
+<td>能力</td>
+</tr>
+<tr>
+<td>迷乱</td>
+<td>感知</td>
+</tr>
+<tr>
+<td>捂耳</td>
+<td>感知</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>抗性硬性上限为90%。</strong> 即使属性和fight_mod在数学上足以把概率推至100%以上，受此上限影响，绝大多数效果仍至少有10%概率生效，除非某项特定技能直接提供免疫。</p>
+<p>部分技能可绕过常规规则：</p>
+<ul>
+<li><strong>钢铁意志</strong>——对精神效果（催眠／魅惑／迷乱）提供固定25%抗性。</li>
+<li><strong>战斗反射</strong>——有30%概率完全躲开蛛网（与抗性判定分开计算）。</li>
+<li><strong>钢铁体魄</strong>——提供固定30%中毒抗性。</li>
+<li><strong>音乐制作</strong>——完全免疫捂耳状态效果。</li>
+</ul>
+<p>少数首领技能拥有<code>skill_override_chance</code>，可以绕过 <em>所有</em> 抗性判定。如果你明明有90%抗性却仍被蛛网缠住，原因就在这里。</p>
+<hr/>
+<p></p>
+<h2 id="zh-the-qte-block-system">QTE格挡系统</h2>
+<p>部分敌人技能可以通过 <strong>QTE格挡</strong>。当可格挡技能发动时，战斗消息会给出提示（青色文字会要求你点击来袭攻击），随后屏幕上会短暂出现一个目标。及时点击即可完全抵消这一击。</p>
+<p>多段攻击可能每一击都有独立QTE。格挡其中一击后，其余攻击仍会继续——但每一击都可单独尝试防御。</p>
+<p><strong>锻造盾牌的阶级还会强化QTE本身</strong>——随着升级，目标会变得更大，留给你的反应时间也会更长。</p>
+<hr/>
+<p></p>
+<h2 id="zh-telegraphed-attacks">预警攻击</h2>
+<p>某些敌人技能会提前预警。在真正发动的前一个回合，敌人会显示警告消息，说明即将到来的攻击。这是在提醒你：</p>
+<ul>
+<li><strong>防御</strong>——大幅降低即将承受的伤害。</li>
+<li>如果生命偏低，<strong>提前治疗</strong>。</li>
+<li><strong>调整精力预算</strong>——放弃一次攻击，把资源留给保命。</li>
+</ul>
+<p>少数技能会 <em>同时</em> 提供预警且可由QTE格挡，但大多数只属于其中一种。预警相当于首领在说：“我要蓄力了。”QTE则相当于：“马上反应，不然就吃下这一击。”</p>
+<hr/>
+<p></p>
+<h2 id="zh-forge-armor">锻造护甲</h2>
+<p>中世纪某处地点的铁匠可以制作四件护甲，每件均有四个阶级——<strong>铁制</strong>、<strong>银制</strong>、<strong>秘银</strong> 和 <strong>镶宝石</strong>。</p>
+<div class="guide-table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th>部件</th>
+<th>铁制</th>
+<th>银制</th>
+<th>秘银</th>
+<th>效果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>头盔</strong></td>
+<td>暴击时×0.9</td>
+<td>暴击时×0.8</td>
+<td>暴击时×0.7</td>
+<td>降低受到的暴击伤害</td>
+</tr>
+<tr>
+<td><strong>盾牌</strong></td>
+<td>6%／3–7%</td>
+<td>12%／6–14%</td>
+<td>18%／9–21%</td>
+<td>有概率随机格挡一定百分比的伤害</td>
+</tr>
+<tr>
+<td><strong>护手</strong></td>
+<td>下限−1</td>
+<td>下限−2</td>
+<td>下限−3</td>
+<td>降低敌人技能掷骰的最低值</td>
+</tr>
+<tr>
+<td><strong>肩甲</strong></td>
+<td>护甲等级+1</td>
+<td>护甲等级+2</td>
+<td>护甲等级+3</td>
+<td>可与护甲及疼痛耐受叠加</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>镶宝石</strong> 会保留各部件完整的秘银级效果，并增加一个新层次：每拥有一件镶宝石部件，<strong>有效护甲等级+1</strong>；集齐整套时最多 <strong>+4</strong>。该护甲加成会同时参与固定护甲减伤公式与阶位防御协同倍率，使完整的镶宝石套装成为游戏中最强的防御配置。</p>
+<p>每个阶级都能带来明显提升。秘银稀有且昂贵，但从未装备套装到穿齐整套秘银，足以决定你会命丧最深层，还是安然走出来——镶宝石套装则会把防御力进一步推到秘银之上。</p>
+<p>盾牌与肩甲对每次攻击都有帮助。头盔仅在敌人暴击时生效，但一旦触发，往往能救你一命。护手的效果较不显眼，却能在漫长战斗中稳定降低伤害。</p>
+<hr/>
+<p></p>
+<h2 id="zh-soul-stones-in-combat">灵魂石的战斗效果</h2>
+<p>有关灵魂石的完整说明，请参阅<code>soul_stones.md</code>。以下是其战斗效果摘要：</p>
+<ul>
+<li><strong>剑石</strong>——普通攻击和快速攻击每级伤害+1。</li>
+<li><strong>蛮力之石</strong>——风暴斩和强力打击每级伤害+1。</li>
+<li><strong>元素之石</strong>——火焰与冰霜魔法每级伤害+1。</li>
+<li><strong>平衡之石</strong>——交替提高阶位防御范围（1级：最小值+1；2级：最小值+1／最大值+1；依此类推）。</li>
+<li><strong>女王石</strong>——最大生命每级+1（被动效果，严格来说并非战斗内效果）。</li>
+</ul>
+<p>只要你有耐心，这五颗灵魂石都能升到高得离谱的等级。它们没有等级上限。</p>
+<hr/>
+<p></p>
+<h2 id="zh-combat-paths--sorcerer-assassin-blademaster">战斗路线——术士、刺客、剑术大师</h2>
+<p>除了属性、技能和装备，游戏还设有三条 <strong>战斗路线</strong>——它们是长期精通轨道，会永久提高各自管辖行动的伤害倍率。你开始时不会拥有任何路线；每条路线都必须由一位大师将其 <strong>觉醒</strong>，一旦觉醒，便可无限成长。</p>
+<h3 id="zh-三条路线">三条路线</h3>
+<div class="guide-table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th>路线</th>
+<th>管辖行动</th>
+<th>觉醒者</th>
+<th>觉醒要求</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>剑术大师</strong></td>
+<td>普通攻击、强力打击</td>
+<td><strong>Muramasa</strong>（骑士训练场）</td>
+<td>与Muramasa达到亲密朋友，战士公会声望达到200+。耗时300分钟、精力−150、镇定−100。仅限一次。</td>
+</tr>
+<tr>
+<td><strong>刺客</strong></td>
+<td>快速攻击、风暴斩</td>
+<td><strong>Arestes</strong>（盗贼公会隐藏密室）</td>
+<td>盗贼公会声望达到350+。耗时300分钟、精力−150、镇定−150。仅限一次。</td>
+</tr>
+<tr>
+<td><strong>术士</strong></td>
+<td>火焰、冰霜、光明、黑暗、催眠及治疗魔法</td>
+<td><strong>Aziza</strong>（奥术商店）</td>
+<td>与Aziza恋爱中，已招募Lime担任4号女仆，已击败第40层小首领，并学会Sashina的恩赐。耗时300分钟、精力−150、镇定−150。仅限一次（Aziza好感度+30）。</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="zh-获取路线点数">获取路线点数</h3>
+<p>每在战斗中使用一次受路线管辖的行动，该路线就会获得 <strong>+1点</strong>。在 <strong>无限地下城</strong> 中，每次行动还会随机额外获得 <strong>1至当前无限楼层数</strong> 点——深入无限地下城，远远是提升路线等级最快的方法。敌人词缀的经验倍率和专精型敌人还能进一步放大收益。</p>
+<h3 id="zh-等级与伤害倍率">等级与伤害倍率</h3>
+<p>每条路线都有 <strong>20个命名等级</strong>（超过20级后仍可无限成长）。各级累计点数门槛为：0、100、300、700、1,500、3,100、6,300、12,700、25,500、44,700、73,500、116,700、181,500、278,700、424,500、643,200、971,250、1,463,325、2,201,438、3,308,607——到第8级为止，每级所需跨度翻倍；此后每级按×1.5增长。超过20级后，每个新等级仍需前一级跨度的×1.5，没有上限。</p>
+<p><strong>回报：</strong> 每级都会使该路线管辖行动的伤害 <strong>+15%</strong>。1级=×1.15，10级=×2.5，20级=×4.0；此后每级仍会永久增加0.15×。</p>
+<p>等级称号从朴素一路迈向神话——术士：新手→术法师→大魔导师→ <strong>魔法化身</strong>；刺客：入门者→夜刃→刺客大师→ <strong>暗影化身</strong>；剑术大师：新手剑士→剑圣→剑豪→ <strong>钢铁化身</strong>。超过20级后，称号会显示等级数字，例如“钢铁化身（23）”。</p>
+<h3 id="zh-暗杀刺客连击">暗杀——刺客连击</h3>
+<p>从刺客1级起，<strong>快速攻击可以连锁触发额外的追加打击</strong>（“暗杀”）。每次额外攻击都会进行概率判定，初始概率为 <strong>50 + 你的刺客等级</strong>，且连击中每多一击便 <strong>降低10</strong>。<strong>暗影慰藉者</strong> 关键物品（Arestes赠送）会使初始概率+15，并将每击衰减放缓至−5。每次连击都会重新完整计算一次快速攻击——包括路线倍率——而 <strong>幻影之石</strong> 会为每次连击追加等同于其等级的伤害。</p>
+<h3 id="zh-实用提示">实用提示</h3>
+<ul>
+<li>选择与你本来就常按的按钮相匹配的路线。剑系流派依赖攻击／强力打击（剑术大师）；速度流派依赖快速攻击／风暴斩（刺客）；施法流派则依赖法术（术士）。</li>
+<li>没有任何机制会阻止你觉醒全部三条路线——它们会分别追踪并独立计算倍率。</li>
+<li>倍率 <strong>仅</strong> 适用于路线管辖的行动。剑术大师等级不会提高火球术的伤害。</li>
+</ul>
+<hr/>
+<p></p>
+<h2 id="zh-alignment-in-combat">阵营倾向对战斗的影响</h2>
+<p>你的道德阵营会以三种方式影响战斗：</p>
+<ol>
+<li><strong>光明魔法</strong> 随你的 <strong>善良</strong> 阵营阶级成长——每阶级+5%，最高×1.45。</li>
+<li><strong>黑暗魔法</strong> 随你的 <strong>邪恶</strong> 阵营阶级成长——成长幅度相同。</li>
+<li><strong>太极</strong>——其反伤概率与反伤比例都会随你的 <strong>绝对中立</strong> 阵营阶级成长：
+<ul>
+<li>基础：5%概率反弹5%。</li>
+<li>每个中立阶级（1至9）：触发概率+3%，反伤比例+3%。</li>
+<li>达到最高的永恒阶级时：32%概率反弹32%。</li>
+</ul>
+</li>
+</ol>
+<p>因此，阵营倾向实际上会让你投入一种专长：善良强化光明，邪恶强化黑暗，中立强化太极。你无法同时将三者都优化到极致。</p>
+<hr/>
+<p></p>
+<h2 id="zh-skills-that-actually-matter">真正重要的技能</h2>
+<p>以下是实战价值较高的战斗技能简表，大致按影响力排序：</p>
+<p><strong>S级（脱胎换骨）：</strong></p>
+<ul>
+<li>碎颅击（强力打击有概率×4——单次伤害之王）</li>
+<li>魔法大师（魔法×1.5——让每个法术都拥有强力打击般的威力）</li>
+<li>太极（配合较高的中立阶级——让敌人变成你的治疗来源）</li>
+<li>巫术（大幅提高魔法伤害下限）</li>
+<li>奥术涌动（足以定义流派的魔法爆发）</li>
+</ul>
+<p><strong>A级（非常强力）：</strong></p>
+<ul>
+<li>狂战士之怒（健康时让强力打击打出最大伤害）</li>
+<li>法力引导（支持持续施放光明／黑暗魔法）</li>
+<li>内心平静（可与法力引导叠加，还能偏转魔法）</li>
+<li>疼痛耐受（装备护甲时有效护甲等级+1）</li>
+<li>圣愈之术（使治疗翻倍，往往能挽救一次探索）</li>
+<li>预知（有10%概率完全闪避来袭攻击）</li>
+</ul>
+<p><strong>B级（视情况而定，但确实有用）：</strong></p>
+<ul>
+<li>武术（提高攻击的最低伤害掷骰）</li>
+<li>武器精通（武器贡献提高50%）</li>
+<li>杂技（快速攻击伤害加成）</li>
+<li>钢铁意志／钢铁体魄／音乐制作（状态抗性）</li>
+<li>战斗反射（对付蛛网效果时尤其有价值）</li>
+<li>肾上腺素爆发（重伤时提高最大伤害）</li>
+<li>利用弱点（15%概率使伤害翻倍，带冷却）</li>
+<li>暴风打击（将风暴斩转化为雷电属性）</li>
+<li>战斗冥想（每回合恢复）</li>
+<li>反击（受到伤害后有20%概率反击）</li>
+</ul>
+<p><strong>C级（用途有限）：</strong></p>
+<ul>
+<li>缴械技巧（当前用途较窄；它会设置缴械标记，但绝大多数敌人伤害都由技能驱动）</li>
+<li>防御姿态（在当前以敌人技能为主的系统中影响较小）</li>
+<li>战斗领导力</li>
+<li>耐力训练</li>
+</ul>
+<p>如果你认真追求战斗强度，应优先把学习资源投入列表顶端的技能。</p>
+<hr/>
+<p></p>
+<h2 id="zh-build-strategy">流派策略</h2>
+<h3 id="zh-魔法流派">魔法流派</h3>
+<p>堆叠神秘，专精光明魔法，选择善良阵营。核心技能为魔法大师+巫术+法力引导+内心平静+奥术涌动+圣愈之术。叠满阵营精华加成后持续施放光明魔法，并穿插使用圣愈之术治疗。面对吸收光明属性或魔法抗性极高的敌人时会陷入劣势，但构筑完善的魔法角色可以单挑任何首领。</p>
+<h3 id="zh-狂战士">狂战士</h3>
+<p>堆叠力量，专精强力打击。核心技能为碎颅击+狂战士之怒+武器精通+武术。利用治疗，或者干脆不受攻击，让生命保持在90%以上。每一次强力打击都如同重锤——而碎颅击30%概率触发的×4会制造骇人的伤害峰值。</p>
+<h3 id="zh-坦克">坦克</h3>
+<p>堆叠耐力，专注防御。穿齐秘银护甲，配备太极、满级绝对中立阵营、不朽头盔与平衡之盾。你不会迅速杀死敌人——而是让它们自己送命。太极持续反弹伤害，防御层吸收绝大多数剩余伤害，而不朽效果会拦下致命重击一次，随后需等待10回合恢复。</p>
+<h3 id="zh-快攻流派">快攻流派</h3>
+<p>堆叠能力，专精快速攻击。核心技能为杂技+侧步+高等级剑石。高速攻击、追加行动概率和侧步闪避会带来更多总行动次数，也创造更多避开敌人攻击的机会。</p>
+<hr/>
+<p></p>
+<h2 id="zh-common-misconceptions">常见误解</h2>
+<p><strong>“战斗经验会让我免疫敌人伤害。”</strong><br/>
+不会。战斗经验会提高你的输出伤害与最终阶位防御掷骰，但不会用原始经验值直接除掉敌人技能伤害。首领依然可能造成极高伤害。</p>
+<p><strong>“护甲越高，就会在每次受击时提供越多固定减伤。”</strong><br/>
+对护甲属性本身而言确实如此，但特定攻击的 <strong>skill_armor_break</strong> 判定可以按百分比绕过护甲。部分首领招牌技能就是为了无视护甲而设计的。</p>
+<p><strong>“太极只对魔法有效。”</strong><br/>
+不对，但有一项例外。它适用于大多数直接来袭伤害，包括物理攻击和QTE攻击；目前不适用于捂耳音波伤害。</p>
+<p><strong>“锻造头盔始终会降低伤害。”</strong><br/>
+它只在暴击时生效，非暴击攻击不会受到任何影响。但一旦触发，往往就是生与死的差别——拥有较高critical_modifier数值的首领，否则会打出毁灭性的暴击。</p>
+<p><strong>“防御总能减伤90%。”</strong><br/>
+主动防御从50%起步，随战斗修正值提高，最高为80%。</p>
+<p><strong>“可以让状态效果绝对无法命中。”</strong><br/>
+不行。90%的抗性上限意味着每次尝试都至少有10%成功概率。可以构筑防御，但不要指望完全免疫。</p>
+<p><strong>“强力打击不过是伤害更高的普通攻击。”</strong><br/>
+它使用完整力量值，而非力量÷2——仅属性贡献就相差×2，更别提它更高的基础值、精力消耗，以及碎颅击潜在的×4倍率。</p>
+<hr/>
+<p><em>战斗系统有意设计得十分深入。游玩时，这套流程并不透明——战斗往往几秒就会结束——但其底层系统会奖励愿意思考的玩家。地下城越深，越要求你真正理解一种策略并为其投入。泛用流派会撞上瓶颈，专精流派则能突破极限。</em></p>
+</div>
+        <div class="guide-community-note"><div><strong data-copy-en="Community discoveries" data-copy-zh="社区发现">Community discoveries</strong><p data-copy-en="These official guides track the current game. The player-maintained wiki may contain additional strategies and discoveries." data-copy-zh="这些官方攻略与当前游戏版本保持一致；玩家维护的 Wiki 可能还收录其他策略与社区发现。">These official guides track the current game. The player-maintained wiki may contain additional strategies and discoveries.</p></div><a href="https://chronoromancer.miraheze.org/wiki/Main_Page" target="_blank" rel="noopener noreferrer" data-copy-en="Visit Player Wiki →" data-copy-zh="访问玩家 Wiki →">Visit Player Wiki →</a></div>
+        <nav class="guide-pager" aria-label="Adjacent guides"><a href="locations.html"><span data-copy-en="Previous guide" data-copy-zh="上一篇攻略">Previous guide</span><strong data-copy-en="Chronoromancer — Locations Guide" data-copy-zh="Chronoromancer — 地点指南">Chronoromancer — Locations Guide</strong></a><a href="investment_system.html"><span data-copy-en="Next guide" data-copy-zh="下一篇攻略">Next guide</span><strong data-copy-en="Investment System — Complete Guide" data-copy-zh="投资系统——完整指南">Investment System — Complete Guide</strong></a></nav>
+      </article>
+    </div>
+  </main>
+  <footer class="site-footer"><div class="container"><div class="footer-grid">
+    <div class="footer-brand"><img src="../assets/images/v2/logo.png" alt="Chronoromancer"><p data-i18n="footerDescription">An adults-only time-travel sandbox RPG. Public website artwork is SFW.</p></div>
+    <div class="footer-column"><h2 data-i18n="footerExplore">Explore</h2><a href="../story.html" data-i18n="navStory">Story</a><a href="../characters.html" data-i18n="navCharacters">Characters</a><a href="../walkthroughs.html" data-i18n="navGuides">Guides</a><a href="../screenshots.html" data-i18n="navGallery">Gallery</a><a href="../main.html#download" data-i18n="navDownload">Download</a></div>
+    <div class="footer-column"><h2 data-i18n="footerCommunity">Community</h2><a data-config-link="community.discord" target="_blank" rel="noopener noreferrer">Discord</a><a data-config-link="community.telegram" target="_blank" rel="noopener noreferrer">Telegram</a><a data-config-link="community.patreon" target="_blank" rel="noopener noreferrer">Patreon</a><a data-config-link="community.wiki" target="_blank" rel="noopener noreferrer" data-i18n="navWiki">Player Wiki</a></div>
+    <div class="footer-column"><h2 data-i18n="footerLegal">Legal</h2><a href="../privacy.html" data-i18n="footerPrivacy">Privacy</a><a href="../terms.html" data-i18n="footerTerms">Terms</a></div>
+  </div><div class="footer-bottom"><span>© <span data-current-year></span> <span data-i18n="copyright">Chronoromancer Studio. All rights reserved.</span></span><span data-copy-en="Official guides · English / Simplified Chinese" data-copy-zh="官方攻略 · English / 简体中文">Official guides · English / Simplified Chinese</span></div></div></footer>
+  <script src="../assets/js/site-config.js"></script><script src="../assets/js/site.js"></script><script src="../assets/js/walkthroughs.js"></script>
+</body></html>

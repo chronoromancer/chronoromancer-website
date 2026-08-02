@@ -1,129 +1,37 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Age Verification - Chronoromancer</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: 'Arial', sans-serif;
-            background: linear-gradient(135deg, #1a1a2e, #16213e);
-            color: #fff;
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        
-        .verification-container {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            border-radius: 20px;
-            padding: 60px 40px;
-            text-align: center;
-            max-width: 500px;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-        }
-        
-        .logo {
-            margin-bottom: 30px;
-        }
-        
-        .logo h1 {
-            font-size: 2.5em;
-            color: #ff6b6b;
-            margin-bottom: 10px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-        }
-        
-        .warning-text {
-            font-size: 1.2em;
-            margin-bottom: 30px;
-            line-height: 1.6;
-            color: #e0e0e0;
-        }
-        
-        .warning-text strong {
-            color: #ff6b6b;
-        }
-        
-        .buttons {
-            display: flex;
-            gap: 20px;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-        
-        .btn {
-            padding: 15px 30px;
-            border: none;
-            border-radius: 10px;
-            font-size: 1.1em;
-            font-weight: bold;
-            cursor: pointer;
-            text-decoration: none;
-            display: inline-block;
-            transition: all 0.3s ease;
-            min-width: 140px;
-        }
-        
-        .btn-enter {
-            background: linear-gradient(45deg, #ff6b6b, #ff8e53);
-            color: white;
-        }
-        
-        .btn-enter:hover {
-            background: linear-gradient(45deg, #ff5252, #ff7043);
-            transform: translateY(-2px);
-            box-shadow: 0 10px 20px rgba(255, 107, 107, 0.3);
-        }
-        
-        .btn-leave {
-            background: linear-gradient(45deg, #666, #888);
-            color: white;
-        }
-        
-        .btn-leave:hover {
-            background: linear-gradient(45deg, #555, #777);
-            transform: translateY(-2px);
-            box-shadow: 0 10px 20px rgba(102, 102, 102, 0.3);
-        }
-        
-        .disclaimer {
-            margin-top: 30px;
-            font-size: 0.9em;
-            color: #aaa;
-            line-height: 1.4;
-        }
-    </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Chronoromancer is an adults-only time-travel sandbox RPG. This public website uses SFW promotional material.">
+  <meta name="robots" content="noindex, follow">
+  <link rel="icon" type="image/png" href="assets/images/v2/favicon.png">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <title>Age confirmation | Chronoromancer</title>
 </head>
-<body>
-    <div class="verification-container">
-        <div class="logo">
-            <h1>Chronoromancer</h1>
-        </div>
-        
-        <div class="warning-text">
-            <p>This website contains <strong>adult content</strong> including mature themes, sexual content, and material intended for adults only.</p>
-            <br>
-            <p>You must be <strong>18 years or older</strong> to enter this site.</p>
-        </div>
-        
-        <div class="buttons">
-            <a href="main.html" class="btn btn-enter">I am 18 or older</a>
-            <a href="https://www.google.com" class="btn btn-leave">Leave this site</a>
-        </div>
-        
-        <div class="disclaimer">
-            <p>By clicking "I am 18 or older" you certify that you are of legal age to view adult content in your jurisdiction and agree to view such material.</p>
-        </div>
+<body class="age-gate-page" data-title-en="Age confirmation | Chronoromancer" data-title-zh="年龄确认 | Chronoromancer">
+  <main class="age-gate" aria-labelledby="age-title">
+    <img class="age-gate-logo" src="assets/images/v2/logo.png" alt="Chronoromancer">
+
+    <div class="language-switch" role="group" aria-label="Language">
+      <button type="button" data-language="en" aria-pressed="true">EN</button>
+      <button type="button" data-language="zh" aria-pressed="false">简体中文</button>
     </div>
+
+    <div class="age-mark" aria-hidden="true">18+</div>
+    <p class="eyebrow" data-copy-en="Mature themes" data-copy-zh="成人主题">Mature themes</p>
+    <h1 id="age-title" data-copy-en="Before you enter" data-copy-zh="进入网站前">Before you enter</h1>
+    <p data-copy-en="Chronoromancer is an adults-only game. This public website uses SFW promotional material, but describes mature themes." data-copy-zh="《Chronoromancer》是一款仅限成人的游戏。本公开网站仅使用适合公开展示的宣传素材，但会介绍成人主题。">Chronoromancer is an adults-only game. This public website uses SFW promotional material, but describes mature themes.</p>
+    <p data-copy-en="Please confirm that you are at least 18 years old and have reached the legal age of majority where you live." data-copy-zh="请确认您已年满 18 周岁，并已达到所在地区规定的法定成年年龄。">Please confirm that you are at least 18 years old and have reached the legal age of majority where you live.</p>
+
+    <div class="button-row">
+      <a class="button" href="main.html" data-copy-en="I am 18 or older" data-copy-zh="我已年满 18 周岁">I am 18 or older</a>
+      <a class="button button--quiet" href="https://www.bing.com" rel="nofollow" data-copy-en="Leave this website" data-copy-zh="离开本网站">Leave this website</a>
+    </div>
+    <p class="age-fine-print" data-copy-en="By continuing, you confirm that viewing information about an adults-only game is lawful in your location." data-copy-zh="继续访问即表示您确认：在您所在地区，浏览成人游戏的相关信息属于合法行为。">By continuing, you confirm that viewing information about an adults-only game is lawful in your location.</p>
+  </main>
+
+  <script src="assets/js/site-config.js"></script>
+  <script src="assets/js/site.js"></script>
 </body>
 </html>

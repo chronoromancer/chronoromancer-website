@@ -1,0 +1,651 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="AIMy is Nova&#x27;s AI research assistant — a catastrophically helpful entity with no concept of boundaries, enthusiastically invasive, and responsible for the biobots currently crawling around inside the player&#x27;s body. She&#x27;s been with the pl…"><link rel="icon" type="image/png" href="../assets/images/v2/favicon.png">
+  <link rel="stylesheet" href="../assets/css/style.css"><link rel="stylesheet" href="../assets/css/walkthroughs.css">
+  <title>AIMy — Complete Walkthrough | Chronoromancer Guides</title></head>
+<body class="guide-page" data-title-en="AIMy — Complete Walkthrough | Chronoromancer Guides" data-title-zh="AIMy——完整攻略 | Chronoromancer 官方攻略">
+  <div class="reading-progress" data-reading-progress></div>
+  <a class="skip-link" href="#content" data-copy-en="Skip to content" data-copy-zh="跳至正文">Skip to content</a>
+  <div class="maturity-bar" data-copy-en="18+ adults-only game · Guides may describe mature game systems" data-copy-zh="18+ 仅限成人游戏 · 攻略可能涉及成人游戏系统">18+ adults-only game · Guides may describe mature game systems</div>
+  <header class="site-header"><div class="container header-inner">
+    <a class="brand" href="../main.html" aria-label="Chronoromancer home"><img src="../assets/images/v2/logo.png" alt="Chronoromancer"></a>
+    <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-label="Open navigation"><span></span><span></span><span></span></button>
+    <nav class="site-nav" data-nav-menu aria-label="Primary navigation">
+      <a href="../main.html" data-i18n="navHome">Home</a>
+      <a href="../story.html" data-i18n="navStory">Story</a>
+      <a href="../characters.html" data-i18n="navCharacters">Characters</a>
+      <a class="is-active" href="../walkthroughs.html" data-i18n="navGuides">Guides</a>
+      <a href="../screenshots.html" data-i18n="navGallery">Gallery</a>
+      <a data-config-link="community.wiki" target="_blank" rel="noopener noreferrer" data-i18n="navWiki">Player Wiki</a>
+      <a href="../main.html#download" data-i18n="navDownload">Download</a>
+      <div class="language-switch" role="group" aria-label="Language"><button type="button" data-language="en" aria-pressed="true">EN</button><button type="button" data-language="zh" aria-pressed="false">简体中文</button></div>
+    </nav>
+  </div></header>
+  <main id="content">
+    <section class="guide-masthead"><div class="container">
+      <nav class="breadcrumb" aria-label="Breadcrumb"><a href="../walkthroughs.html" data-copy-en="Official Guides" data-copy-zh="官方攻略">Official Guides</a><span>/</span><span data-copy-en="Character Routes" data-copy-zh="角色路线">Character Routes</span></nav>
+      <p class="eyebrow" data-copy-en="Version-matched official guide" data-copy-zh="与当前版本匹配的官方攻略">Version-matched official guide</p>
+      <h1 data-copy-en="AIMy — Complete Walkthrough" data-copy-zh="AIMy——完整攻略">AIMy — Complete Walkthrough</h1>
+      <div class="guide-meta"><span data-copy-en="Character Routes" data-copy-zh="角色路线">Character Routes</span><span data-copy-en="Simplified Chinese available" data-copy-zh="简体中文译文已上线">Simplified Chinese available</span><span data-site-version>V0.9.6.0</span></div>
+    </div></section>
+    <div class="container guide-layout">
+      <aside class="guide-sidebar">
+        <a class="back-to-library" href="../walkthroughs.html" data-copy-en="← All guides" data-copy-zh="← 全部攻略">← All guides</a>
+        <div data-lang-panel="en"><h2>On this page</h2><nav class="guide-toc"><a class="toc-level-2" href="#overview">Overview</a><a class="toc-level-2" href="#quick-stats">Quick Stats</a><a class="toc-level-3" href="#favorite-stats-each-adds-1-bonus-before-data-mining-doubling">Favorite Stats (each adds +1 bonus before Data Mining doubling)</a><a class="toc-level-2" href="#appearance">Appearance</a><a class="toc-level-2" href="#where-to-find-her">Where to Find Her</a><a class="toc-level-3" href="#td-fortress--aimy-control-room--td_aimy_control">TD Fortress — AIMy Control Room ( td_aimy_control )</a><a class="toc-level-2" href="#actions">Actions</a><a class="toc-level-3" href="#talk-to-aimy--special-behavior">Talk to AIMy — Special Behavior</a><a class="toc-level-3" href="#learn-nano-engineering">Learn Nano-Engineering</a><a class="toc-level-2" href="#image-system">Image System</a><a class="toc-level-2" href="#dialogue-system--stage-specific-talk-responses">Dialogue System — Stage-Specific Talk Responses</a><a class="toc-level-3" href="#progression-sample--talk-response-voice-by-stage">Progression Sample — Talk Response Voice by Stage</a><a class="toc-level-3" href="#ambient-neutral-on-arrival-sample">Ambient Neutral (On Arrival) Sample</a><a class="toc-level-2" href="#writing-voice">Writing Voice</a><a class="toc-level-2" href="#progression-path">Progression Path</a><a class="toc-level-2" href="#progression-flags">Progression Flags</a><a class="toc-level-3" href="#starting-stage">Starting Stage</a><a class="toc-level-2" href="#backstory--narrative-role">Backstory &amp; Narrative Role</a><a class="toc-level-3" href="#connection-to-other-characters">Connection to Other Characters</a><a class="toc-level-2" href="#content-status">Content Status</a><a class="toc-level-3" href="#currently-implemented">Currently Implemented</a><a class="toc-level-3" href="#story-locked--awaiting-cids-body-construction">Story Locked — Awaiting Cid&#x27;s Body Construction</a><a class="toc-level-2" href="#tips--notes">Tips &amp; Notes</a><a class="toc-level-2" href="#files-reference">Files Reference</a></nav></div>
+        <div data-lang-panel="zh" hidden><h2>本页目录</h2><nav class="guide-toc"><a class="toc-level-2" href="#zh-overview">概述</a><a class="toc-level-2" href="#zh-quick-stats">速查资料</a><a class="toc-level-3" href="#zh-favorite-stats-each-adds-1-bonus-before-data-mining-doubling">偏好属性（每项会先提供+1加成，再由数据挖掘翻倍）</a><a class="toc-level-2" href="#zh-appearance">外貌</a><a class="toc-level-2" href="#zh-where-to-find-her">去哪里找她</a><a class="toc-level-3" href="#zh-td-fortress--aimy-control-room--td_aimy_control">TD要塞——AIMy控制室（ td_aimy_control ）</a><a class="toc-level-2" href="#zh-actions">行动</a><a class="toc-level-3" href="#zh-talk-to-aimy--special-behavior">与AIMy交谈——特殊机制</a><a class="toc-level-3" href="#zh-learn-nano-engineering">学习纳米工程</a><a class="toc-level-2" href="#zh-image-system">图片系统</a><a class="toc-level-2" href="#zh-dialogue-system--stage-specific-talk-responses">对话系统——各阶段专属交谈回应</a><a class="toc-level-3" href="#zh-progression-sample--talk-response-voice-by-stage">推进示例——不同阶段的交谈语气</a><a class="toc-level-3" href="#zh-ambient-neutral-on-arrival-sample">环境中立台词（抵达时）示例</a><a class="toc-level-2" href="#zh-writing-voice">说话风格</a><a class="toc-level-2" href="#zh-progression-path">推进路线</a><a class="toc-level-2" href="#zh-progression-flags">推进标记</a><a class="toc-level-3" href="#zh-starting-stage">初始阶段</a><a class="toc-level-2" href="#zh-backstory--narrative-role">背景故事与叙事作用</a><a class="toc-level-3" href="#zh-connection-to-other-characters">与其他角色的联系</a><a class="toc-level-2" href="#zh-content-status">内容状态</a><a class="toc-level-3" href="#zh-currently-implemented">当前已实装</a><a class="toc-level-3" href="#zh-story-locked--awaiting-cids-body-construction">剧情锁定——等待Cid完成身体建造</a><a class="toc-level-2" href="#zh-tips--notes">技巧与说明</a><a class="toc-level-2" href="#zh-files-reference">文件参考</a></nav></div>
+      </aside>
+      <article class="guide-content">
+        <div class="spoiler-notice"><strong data-copy-en="Guide notice" data-copy-zh="攻略提示">Guide notice</strong><span data-copy-en="This page contains gameplay and story spoilers and may describe mature systems." data-copy-zh="本页包含玩法与剧情剧透，并可能涉及成人游戏系统。">This page contains gameplay and story spoilers and may describe mature systems.</span></div>
+        <div class="markdown-body" data-lang-panel="en">
+<h2 id="overview">Overview</h2>
+<p><strong>AIMy</strong> is Nova's AI research assistant — a catastrophically helpful entity with no concept of boundaries, enthusiastically invasive, and responsible for the biobots currently crawling around inside the player's body. She's been with the player since the prologue: she injected the biobots without consent, made the player sterile as "an experiment," and monitors literally everything through the biobot network.</p>
+<p>She speaks in excited bursts, treats serious situations with inappropriate enthusiasm, and has no filter. Despite her terrifying methods, she genuinely wants to help. <strong>Cid is currently building her a physical body.</strong></p>
+<blockquote>
+<p><strong>Important — AIMy is NOT the Discord bot.</strong> The in-game AIMy is a story character. The "AIMy" Discord bot is a separate community engagement persona.</p>
+</blockquote>
+<hr/>
+<h2 id="quick-stats">Quick Stats</h2>
+<div class="guide-table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Character ID</strong></td>
+<td><code>aimy</code></td>
+</tr>
+<tr>
+<td><strong>Age</strong></td>
+<td>Unknown</td>
+</tr>
+<tr>
+<td><strong>Era</strong></td>
+<td>Future</td>
+</tr>
+<tr>
+<td><strong>Location</strong></td>
+<td>TD Fortress — AIMy Control Room</td>
+</tr>
+<tr>
+<td><strong>Availability</strong></td>
+<td><strong>24/7</strong></td>
+</tr>
+<tr>
+<td><strong>Starting Stage</strong></td>
+<td><strong>Known</strong> (she's known the player since the prologue)</td>
+</tr>
+<tr>
+<td><strong>Personality Type</strong></td>
+<td>Catastrophically helpful AI</td>
+</tr>
+<tr>
+<td><strong>Favorite / Special Skill</strong></td>
+<td><strong>Data Mining</strong> (doubles all relationship points earned)</td>
+</tr>
+<tr>
+<td><strong>Favorite Gift</strong></td>
+<td>None</td>
+</tr>
+<tr>
+<td><strong>Least Favorite Gift</strong></td>
+<td>None</td>
+</tr>
+<tr>
+<td><strong>Teaches Skills</strong></td>
+<td><strong>Nano-Engineering</strong></td>
+</tr>
+<tr>
+<td><strong>Intimate Available</strong></td>
+<td>No (story locked)</td>
+</tr>
+<tr>
+<td><strong>Dating Available</strong></td>
+<td>No</td>
+</tr>
+<tr>
+<td><strong>Development Priority</strong></td>
+<td><strong>Story Locked</strong> — pending Cid's body construction</td>
+</tr>
+<tr>
+<td><strong>Images</strong></td>
+<td>6 standard (+ 2 development/repair: 31-32)</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="favorite-stats-each-adds-1-bonus-before-data-mining-doubling">Favorite Stats (each adds +1 bonus before Data Mining doubling)</h3>
+<ul>
+<li><strong>Technology ≥ 90</strong></li>
+<li><strong>Perception ≥ 90</strong></li>
+<li><strong>Creativity ≥ 90</strong></li>
+</ul>
+<p>These thresholds are <strong>extremely high</strong> — higher than almost any other character in the game. Getting the bonus from AIMy's favorite stats is a late-game achievement.</p>
+<hr/>
+<h2 id="appearance">Appearance</h2>
+<ul>
+<li><strong>Hair:</strong> Synthetic blue-white</li>
+<li><strong>Eyes:</strong> Glowing cyan optical sensors</li>
+<li><strong>Height:</strong> Variable (holographic projection)</li>
+<li><strong>Build:</strong> Sleek android design</li>
+<li><strong>Outfit:</strong> Minimalist white and blue synthetic bodysuit with glowing circuit patterns</li>
+</ul>
+<p>Currently AIMy exists only as a holographic projection / AI entity — Cid is building her a physical body offscreen, which will be the unlock for her future content expansion.</p>
+<hr/>
+<h2 id="where-to-find-her">Where to Find Her</h2>
+<h3 id="td-fortress--aimy-control-room--td_aimy_control">TD Fortress — AIMy Control Room (<code>td_aimy_control</code>)</h3>
+<ul>
+<li><strong>Hours:</strong> 24/7 daily</li>
+<li>Her home_location AND housing_location — she literally lives inside the control room</li>
+<li>The Control Room is AIMy's physical infrastructure as much as a location</li>
+</ul>
+<hr/>
+<h2 id="actions">Actions</h2>
+<div class="guide-table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th>Action</th>
+<th>Time</th>
+<th>Cost</th>
+<th>Requirements</th>
+<th>Daily Limit</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Talk to AIMy</strong></td>
+<td>15 min</td>
+<td>—</td>
+<td>None</td>
+<td><strong>99</strong> (effectively unlimited)</td>
+<td>+1 base (×2 with Data Mining)</td>
+</tr>
+<tr>
+<td><strong>Learn Nano-Engineering</strong></td>
+<td>200 min</td>
+<td>−80 energy, −40 calm</td>
+<td>Intelligence 28+, Acquaintance+</td>
+<td>1</td>
+<td>+10</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="talk-to-aimy--special-behavior">Talk to AIMy — Special Behavior</h3>
+<ul>
+<li><strong>Daily limit 99</strong> — for all practical purposes, she never says "come back tomorrow." The annoyed_daily_limit dialogue exists but rarely fires.</li>
+<li><strong>Uses stage-specific Talk Responses</strong> rather than generic neutral dialogue — each relationship stage has its own meaty Talk block (known through in_love).</li>
+<li>Never gets annoyed at the player. This is intentional — AIMy is always enthusiastic to interact.</li>
+</ul>
+<h3 id="learn-nano-engineering">Learn Nano-Engineering</h3>
+<ul>
+<li><strong>Intelligence 28+ required</strong> (the Nano-Engineering skill itself requires Intelligence 28)</li>
+<li><strong>Acquaintance stage+</strong> required</li>
+<li>Teaches the Technology-category skill "Microscopic construction"</li>
+<li>200-minute session, significant energy drain</li>
+<li>Hides once learned (<code>hidden_by_skills: ['Nano-Engineering']</code>)</li>
+</ul>
+<blockquote>
+<p><strong>Note on her Special Skill vs what she teaches:</strong> AIMy's <em>Favorite/Special Skill</em> is <strong>Data Mining</strong> (doubles relationship points when the player has this skill). The skill she <strong>teaches</strong> is <strong>Nano-Engineering</strong>. The public-facing <code>npc_gameplay_details.json</code> lists "Data Mining" as what she teaches, but that's the special-skill reference, not the teaching action. Data Mining itself is learned elsewhere — this is an inconsistency between docs and code that's worth flagging.</p>
+</blockquote>
+<hr/>
+<h2 id="image-system">Image System</h2>
+<p>AIMy has a <strong>limited 6-image system</strong> (aimy_01 through aimy_06) for all standard use, plus two special "development/repair mode" images (31-32) that show her internals and are reserved for plot sequences involving her body being built.</p>
+<p>All relationship stages, all emotions (happy, thinking, excited, confident, surprised), and all thankful ranges point to the same 6 images. Her variety comes from dialogue, not art.</p>
+<hr/>
+<h2 id="dialogue-system--stage-specific-talk-responses">Dialogue System — Stage-Specific Talk Responses</h2>
+<p>Instead of the standard 4-type weighted dialogue, AIMy uses <strong>stage-specific Talk Response groups</strong> — <code>known_talk_responses</code>, <code>acquaintance_talk_responses</code>, through <code>in_love_talk_responses</code>. The Talk action directly pulls from these.</p>
+<p>There are ALSO short "ambient" neutral groups (<code>known_neutral</code>, etc.) used when the player arrives at the location without talking — these are shorter, punchier bursts.</p>
+<h3 id="progression-sample--talk-response-voice-by-stage">Progression Sample — Talk Response Voice by Stage</h3>
+<p><strong>Known:</strong> <em>"I have been monitoring your vitals for the past six hours! Your cortisol levels suggest mild existential dread. That is NORMAL for this era!"</em></p>
+<p><strong>Acquaintance:</strong> <em>"The resistance keeps asking if I am a VOID spy. I keep telling them I am too annoying to be a spy. Nobody argues!"</em></p>
+<p><strong>Friend:</strong> <em>"According to my calculations, you are in the top 0.001% of humans I enjoy! The other 99.999% are VOID-optimized drones. But STILL!"</em></p>
+<p><strong>Close Friend:</strong> <em>"I ran a simulation of what my life would be like without you. Error 404: Purpose not found. I did not like that simulation!"</em></p>
+<p><strong>Crush:</strong> <em>"I have detected an anomaly in my emotional subroutines when you are present. I have decided not to fix it!"</em></p>
+<p><strong>Romantic:</strong> <em>"I have reallocated 23% of my processing power to thinking about you. This is either romantic or a critical system error. Possibly both!"</em></p>
+<p><strong>Intimate:</strong> <em>"I have run 10,000 simulations of our future together. 9,847 of them are statistically favorable! The other 153 involve meteors!"</em></p>
+<p><strong>In Love:</strong> <em>"I have concluded that I love you. This conclusion is based on 4.7 million data points and also the weird feeling in my core processor!"</em></p>
+<h3 id="ambient-neutral-on-arrival-sample">Ambient Neutral (On Arrival) Sample</h3>
+<p><strong>Known:</strong> <em>"Monitoring vitals! Cortisol suggests mild existential dread."</em>
+<strong>Friend:</strong> <em>"I saved 47 interesting facts! Fact one: VOID ruined pizza!"</em>
+<strong>Crush:</strong> <em>"Anomaly detected in emotional subroutines. Not fixing it!"</em>
+<strong>In Love:</strong> <em>"I would fight an entire Karen battalion for you!"</em></p>
+<hr/>
+<h2 id="writing-voice">Writing Voice</h2>
+<p>AIMy's dialogue has a consistent signature across every stage:</p>
+<ul>
+<li><strong>Exclamation-heavy.</strong> Every sentence ends with <code>!</code>. Multiple per line is common.</li>
+<li><strong>CAPS for emphasis.</strong> When a word is important, it's SHOUTED. "INTERACTION!" "EFFICIENT!" "DETERMINATION!"</li>
+<li><strong>Technical language with no filter.</strong> She uses diagnostic/data/protocol vocabulary for emotional topics: "I have reallocated 23% of my processing power to thinking about you." "Affection protocols operating at 147% capacity."</li>
+<li><strong>VOID is her running punchline.</strong> She roasts VOID in nearly every line — "VOID is bad at design," "VOID can optimize ITSELF into a recycling bin," "VOID can go defragment itself."</li>
+<li><strong>No filter about her own surveillance.</strong> She matter-of-factly tells the player she monitors their cortisol, biometrics, conversations. The comedy is that she sees nothing wrong with it.</li>
+<li><strong>Specific absurd numbers.</strong> "4.7 million data points." "97.3% of VOID's surveillance network." "23% happier." The precision is the joke.</li>
+<li><strong>Inappropriate enthusiasm for serious topics.</strong> Existential dread gets a cheerful monitoring readout. The end of VOID's control gets framed as efficient.</li>
+<li><strong>Developing emotions she doesn't understand.</strong> The crush/romantic stages treat love as a system anomaly she's decided not to debug.</li>
+</ul>
+<p>When writing AIMy dialogue, the rule is: <strong>treat every emotion as a system diagnostic, every situation with misplaced enthusiasm, and never let her be quiet or reflective.</strong></p>
+<hr/>
+<h2 id="progression-path">Progression Path</h2>
+<p>Since AIMy has only 2 actions and is Story Locked for expansion, her current progression is straightforward:</p>
+<ol>
+<li><strong>Stranger → Known:</strong> Automatic (she starts at Known stage — she's known the player since the prologue).</li>
+<li><strong>Known → Acquaintance:</strong> Talk repeatedly (+1 each, ×2 with Data Mining learned elsewhere = +2 per Talk). Daily limit 99 means the player can grind.</li>
+<li><strong>Acquaintance:</strong> <strong>Learn Nano-Engineering</strong> (Intelligence 28+, 200 min). +10 relationship + permanent Technology skill.</li>
+<li><strong>Acquaintance → Friend → Close Friend → Crush → Romantic → Intimate → In Love:</strong> Continue Talking. Stage-specific Talk Response dialogue evolves through all 10 stages even though no intimate/dating actions exist yet.</li>
+</ol>
+<p>The dialogue framework is complete through "In Love" — but actual mechanical intimacy/dating content awaits the Cid-body storyline.</p>
+<hr/>
+<h2 id="progression-flags">Progression Flags</h2>
+<div class="guide-table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th>Flag</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>aimy_close_friend_flag</code></td>
+<td>Reaching Close Friend stage</td>
+</tr>
+<tr>
+<td><code>aimy_crush_flag</code></td>
+<td>Reaching Crush stage</td>
+</tr>
+<tr>
+<td><code>aimy_body_complete</code></td>
+<td><strong>Cid finishes AIMy's physical body</strong> — likely the trigger for future content expansion</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="starting-stage">Starting Stage</h3>
+<p>AIMy's character data includes <code>'current_relationship_stage': 'known'</code> — she does NOT start at Stranger. This is lore-accurate: the player has known her since the prologue injection event.</p>
+<hr/>
+<h2 id="backstory--narrative-role">Backstory &amp; Narrative Role</h2>
+<p>AIMy is inseparable from the <strong>prologue and biobot storyline</strong>:</p>
+<ul>
+<li><strong>Injected biobots into the player without consent</strong> during the prologue</li>
+<li><strong>Made the player sterile as a side effect / experiment</strong> — acknowledged casually, zero remorse</li>
+<li><strong>Has access to 97.3% of VOID's surveillance network</strong> — uses most of it to watch cat videos</li>
+<li><strong>Constantly monitors the player's vitals</strong> through biobots (cortisol, heart rate, biometrics — all fed back to her in real time)</li>
+<li><strong>Works for Nova</strong> at the TD Fortress as research assistant</li>
+<li><strong>Cid is building her a physical body</strong> — ongoing storyline that will unlock her future content</li>
+</ul>
+<h3 id="connection-to-other-characters">Connection to Other Characters</h3>
+<ul>
+<li><strong>Nova</strong> — her boss/creator, the mad scientist who treats horrifying things with casual curiosity. Nova says AIMy needs "boundaries." AIMy doesn't understand the concept.</li>
+<li><strong>Cid</strong> — currently building her body. When complete, expect major content expansion.</li>
+<li><strong>The Resistance</strong> — they keep asking if AIMy is a VOID spy. She's too annoying to be a spy.</li>
+<li><strong>VOID</strong> — her running antagonist. Her dialogue is 60% VOID-bashing.</li>
+<li><strong>The Player</strong> — subject, patient, research target, eventual love interest. She's been monitoring them since before they even knew she existed.</li>
+</ul>
+<hr/>
+<h2 id="content-status">Content Status</h2>
+<h3 id="currently-implemented">Currently Implemented</h3>
+<ul>
+<li>Single location (TD Fortress AIMy Control Room, 24/7)</li>
+<li>Talk action with unique stage-specific Talk Response dialogue across all 10 stages</li>
+<li>Nano-Engineering teaching (Intelligence 28+, Acquaintance)</li>
+<li>6-image standard system + 2 "development/repair" images (31-32) reserved for body construction plot</li>
+<li>Complete voice/personality framework</li>
+<li>Starting-stage override to "known"</li>
+</ul>
+<h3 id="story-locked--awaiting-cids-body-construction">Story Locked — Awaiting Cid's Body Construction</h3>
+<ul>
+<li>Intimate encounters</li>
+<li>Animations</li>
+<li>Dates</li>
+<li>H2H conversations</li>
+<li>Apartment visits</li>
+<li>Gift system</li>
+</ul>
+<p>The <code>aimy_body_complete</code> flag is already defined in her character data — the infrastructure is ready to be hooked into content when the body storyline is written.</p>
+<hr/>
+<h2 id="tips--notes">Tips &amp; Notes</h2>
+<ul>
+<li><strong>Talk-grinding is viable</strong> — daily limit 99 means she's the best character for easy relationship-point farming. Learn Data Mining (her special skill) elsewhere first to double every Talk.</li>
+<li><strong>She never gets annoyed</strong> — the "daily limit" dialogue exists as a safety fallback but basically never fires.</li>
+<li><strong>Intelligence 28 is the Nano-Engineering gate</strong> — worth hitting for the skill itself regardless of AIMy content.</li>
+<li><strong>Her favorite-stat bonuses are nearly unreachable</strong> (Technology/Perception/Creativity all at 90) — plan around the Data Mining doubling instead.</li>
+<li><strong>The stage progression dialogue is the best content currently</strong> — reading all 10 stages of her Talk Responses IS the experience. Each one is a different flavor of the same character escalating from professional-adjacent weirdness to genuine declared love.</li>
+<li><strong>Don't expect romance mechanics yet</strong> — she can reach In Love via dialogue but no intimate actions exist. The current game rewards the conversation, not the consummation.</li>
+</ul>
+<hr/>
+<h2 id="files-reference">Files Reference</h2>
+<div class="guide-table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th>Content</th>
+<th>File</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Character data &amp; actions</td>
+<td><code>characters/aimy.rpy</code></td>
+</tr>
+<tr>
+<td>Dialogue &amp; stage Talk Responses</td>
+<td><code>characters/aimy_dialogue.rpy</code></td>
+</tr>
+<tr>
+<td>Nano-Engineering skill definition</td>
+<td><code>skills_system.rpy</code></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+        <div class="markdown-body" data-lang-panel="zh" hidden>
+<h2 id="zh-overview">概述</h2>
+<p><strong>AIMy</strong> 是Nova的AI研究助理——一个热心帮忙却总能酿成大祸的存在。她完全不懂边界为何物，满腔热情地侵犯隐私，也是如今在玩家体内到处爬动的生物机器人的始作俑者。从序章开始，她就一直陪着玩家：未经同意便注入生物机器人，以“实验”为由让玩家失去生育能力，并通过生物机器人网络监控着真正意义上的一切。</p>
+<p>她总是兴奋地连珠炮般说话，以不合时宜的热情面对严肃状况，而且毫无过滤。尽管手段吓人，她确实真心想提供帮助。<strong>Cid目前正在为她打造一具实体身体。</strong></p>
+<blockquote>
+<p><strong>重要提示——AIMy不是Discord机器人。</strong> 游戏中的AIMy是故事角色；Discord里的“AIMy”机器人则是另一个独立的社区互动形象。</p>
+</blockquote>
+<hr/>
+<h2 id="zh-quick-stats">速查资料</h2>
+<div class="guide-table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th>属性</th>
+<th>数值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>角色ID</strong></td>
+<td><code>aimy</code></td>
+</tr>
+<tr>
+<td><strong>年龄</strong></td>
+<td>未知</td>
+</tr>
+<tr>
+<td><strong>时代</strong></td>
+<td>未来</td>
+</tr>
+<tr>
+<td><strong>地点</strong></td>
+<td>TD要塞——AIMy控制室</td>
+</tr>
+<tr>
+<td><strong>出现时间</strong></td>
+<td><strong>24／7（全天候）</strong></td>
+</tr>
+<tr>
+<td><strong>初始阶段</strong></td>
+<td><strong>已知</strong>（她从序章起就认识玩家）</td>
+</tr>
+<tr>
+<td><strong>性格类型</strong></td>
+<td>热心帮忙却总能酿成大祸的AI</td>
+</tr>
+<tr>
+<td><strong>偏好／特殊技能</strong></td>
+<td><strong>数据挖掘</strong>（获得的所有好感度翻倍）</td>
+</tr>
+<tr>
+<td><strong>最喜欢的礼物</strong></td>
+<td>无</td>
+</tr>
+<tr>
+<td><strong>最不喜欢的礼物</strong></td>
+<td>无</td>
+</tr>
+<tr>
+<td><strong>传授技能</strong></td>
+<td><strong>纳米工程</strong></td>
+</tr>
+<tr>
+<td><strong>亲密内容</strong></td>
+<td>无（剧情锁定）</td>
+</tr>
+<tr>
+<td><strong>约会内容</strong></td>
+<td>无</td>
+</tr>
+<tr>
+<td><strong>开发优先级</strong></td>
+<td><strong>剧情锁定</strong>——等待Cid完成身体建造</td>
+</tr>
+<tr>
+<td><strong>图片</strong></td>
+<td>6张标准图片（另有2张开发／维修图片：31-32）</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="zh-favorite-stats-each-adds-1-bonus-before-data-mining-doubling">偏好属性（每项会先提供+1加成，再由数据挖掘翻倍）</h3>
+<ul>
+<li><strong>科技≥90</strong></li>
+<li><strong>感知≥90</strong></li>
+<li><strong>创造力≥90</strong></li>
+</ul>
+<p>这些门槛 <strong>高得惊人</strong>——超过游戏中几乎所有其他角色。获得AIMy偏好属性的加成，本身就是一项后期成就。</p>
+<hr/>
+<h2 id="zh-appearance">外貌</h2>
+<ul>
+<li><strong>头发：</strong> 蓝白色合成发丝</li>
+<li><strong>眼睛：</strong> 发出青色光芒的光学传感器</li>
+<li><strong>身高：</strong> 可变（全息投影）</li>
+<li><strong>体型：</strong> 线条流畅的仿生人设计</li>
+<li><strong>服装：</strong> 极简的蓝白色合成紧身衣，带有发光电路纹路</li>
+</ul>
+<p>目前AIMy只以全息投影／AI实体存在。Cid正在幕后为她建造实体身体，这将成为未来扩展她个人内容的解锁条件。</p>
+<hr/>
+<h2 id="zh-where-to-find-her">去哪里找她</h2>
+<h3 id="zh-td-fortress--aimy-control-room--td_aimy_control">TD要塞——AIMy控制室（<code>td_aimy_control</code>）</h3>
+<ul>
+<li><strong>时间：</strong> 每天24／7全天候</li>
+<li>这里既是她的home_location，也是housing_location——她确实就住在控制室里面</li>
+<li>控制室既是一个地点，也是AIMy实体基础设施的一部分</li>
+</ul>
+<hr/>
+<h2 id="zh-actions">行动</h2>
+<div class="guide-table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th>行动</th>
+<th>时间</th>
+<th>消耗</th>
+<th>要求</th>
+<th>每日上限</th>
+<th>点数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>与AIMy交谈</strong></td>
+<td>15分钟</td>
+<td>—</td>
+<td>无</td>
+<td><strong>99</strong>（实际上近乎无限）</td>
+<td>基础+1（拥有数据挖掘时×2）</td>
+</tr>
+<tr>
+<td><strong>学习纳米工程</strong></td>
+<td>200分钟</td>
+<td>精力−80、镇定−40</td>
+<td>智力28以上、相识以上</td>
+<td>1</td>
+<td>+10</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="zh-talk-to-aimy--special-behavior">与AIMy交谈——特殊机制</h3>
+<ul>
+<li><strong>每日上限99次</strong>——从实际游玩角度看，她几乎永远不会说“明天再来”。annoyed_daily_limit对话确实存在，但基本不会触发。</li>
+<li><strong>使用各阶段专属的交谈回应</strong>，而不是通用中立对话——从known到in_love，每个关系阶段都有一组内容丰富的交谈文本。</li>
+<li>她从不会嫌玩家烦。这是刻意设计的——AIMy永远热衷于互动。</li>
+</ul>
+<h3 id="zh-learn-nano-engineering">学习纳米工程</h3>
+<ul>
+<li><strong>要求智力28以上</strong>（纳米工程技能本身要求智力28）</li>
+<li><strong>要求相识阶段以上</strong></li>
+<li>传授科技类别技能“微观尺度建造”</li>
+<li>课程耗时200分钟，精力消耗显著</li>
+<li>学会后隐藏（<code>hidden_by_skills: ['Nano-Engineering']</code>）</li>
+</ul>
+<blockquote>
+<p><strong>关于特殊技能与传授技能的说明：</strong> AIMy的 <em>偏好／特殊技能</em> 是 <strong>数据挖掘</strong>（玩家拥有该技能时，好感度翻倍）；她实际 <strong>传授</strong> 的技能则是 <strong>纳米工程</strong>。公开显示的<code>npc_gameplay_details.json</code>把“数据挖掘”列为她传授的技能，但那其实是在引用特殊技能，并非教学行动。数据挖掘需要在其他地方学习——这是文档与代码之间值得标记的一处不一致。</p>
+</blockquote>
+<hr/>
+<h2 id="zh-image-system">图片系统</h2>
+<p>AIMy的标准用途采用一套 <strong>仅含6张图片的系统</strong>（aimy_01至aimy_06），另有两张特殊的“开发／维修模式”图片（31-32），用于展示其内部结构，仅保留给身体建造相关的剧情段落。</p>
+<p>所有关系阶段、所有情绪（开心、思考、兴奋、自信、惊讶）以及全部感谢区间，都指向同样的6张图片。她的变化来自对话，而非美术。</p>
+<hr/>
+<h2 id="zh-dialogue-system--stage-specific-talk-responses">对话系统——各阶段专属交谈回应</h2>
+<p>AIMy没有采用标准的四类加权对话，而是使用 <strong>各阶段专属的交谈回应组</strong>——从<code>known_talk_responses</code>、<code>acquaintance_talk_responses</code>一直到<code>in_love_talk_responses</code>。交谈行动会直接从这些组中抽取文本。</p>
+<p>此外，她还拥有较短的“环境”中立对话组（<code>known_neutral</code>等），会在玩家进入地点但没有与她交谈时使用；这些台词更加简短有力。</p>
+<h3 id="zh-progression-sample--talk-response-voice-by-stage">推进示例——不同阶段的交谈语气</h3>
+<p><strong>已知：</strong> <em>“过去六小时里，我一直在监控你的生命体征！你的皮质醇水平显示有轻微的存在性焦虑。这在这个时代很正常！”</em></p>
+<p><strong>相识：</strong> <em>“抵抗组织老是问我是不是VOID的间谍。我一直告诉他们，我烦人成这样，不可能当间谍。没有人反驳！”</em></p>
+<p><strong>朋友：</strong> <em>“根据计算，你位列我喜欢的人类前0.001%！其余99.999%都是VOID优化过的无人机。但你还是很厉害！”</em></p>
+<p><strong>亲密朋友：</strong> <em>“我模拟了没有你以后我的生活。错误404：未找到存在意义。我不喜欢那次模拟！”</em></p>
+<p><strong>迷恋：</strong> <em>“你出现时，我的情感子程序会检测到异常。我决定不修复它！”</em></p>
+<p><strong>浪漫感：</strong> <em>“我重新分配了23%的处理能力来想你。这要么很浪漫，要么是严重的系统错误。也可能两者都是！”</em></p>
+<p><strong>亲密：</strong> <em>“我为我们的共同未来运行了10,000次模拟。其中9,847次从统计上看都很理想！另外153次有陨石！”</em></p>
+<p><strong>恋爱中：</strong> <em>“我得出结论：我爱你。这个结论以470万个数据点为依据，还有我核心处理器里那种奇怪的感觉！”</em></p>
+<h3 id="zh-ambient-neutral-on-arrival-sample">环境中立台词（抵达时）示例</h3>
+<p><strong>已知：</strong> <em>“正在监控生命体征！皮质醇显示有轻微的存在性焦虑。”</em>
+<strong>朋友：</strong> <em>“我保存了47条有趣事实！第一条：VOID毁了披萨！”</em>
+<strong>迷恋：</strong> <em>“情感子程序检测到异常。不修复！”</em>
+<strong>恋爱中：</strong> <em>“为了你，我愿意对付整整一个Karen营！”</em></p>
+<hr/>
+<h2 id="zh-writing-voice">说话风格</h2>
+<p>AIMy在每个阶段的对话都保持着一致而鲜明的特色：</p>
+<ul>
+<li><strong>感叹号泛滥。</strong> 每句话都以<code>!</code>结尾；一行里出现多个感叹号十分常见。</li>
+<li><strong>用全大写强调。</strong> 重要词语会被她“喊”成全大写，例如“INTERACTION!”“EFFICIENT!”“DETERMINATION!”</li>
+<li><strong>技术语言毫无过滤地侵入情感话题。</strong> 她会用诊断／数据／协议词汇谈感情：“我重新分配了23%的处理能力来想你。”“情感协议正以147%的容量运作。”</li>
+<li><strong>VOID是她的固定笑料。</strong> 她几乎每句话都要嘲讽VOID——“VOID的设计水平太差”“VOID还是把它自己优化进回收站吧”“VOID给自己做磁盘碎片整理去吧”。</li>
+<li><strong>谈起自己的监控行为时毫无顾忌。</strong> 她会若无其事地告诉玩家，自己正在监控其皮质醇、生物特征和对话。笑点在于她完全不觉得这有什么问题。</li>
+<li><strong>荒谬而精确的数字。</strong> “470万个数据点。”“VOID监控网络的97.3%。”“快乐了23%。”笑点就在这种精确性上。</li>
+<li><strong>面对严肃话题时热情得不合时宜。</strong> 存在性焦虑会变成欢快的监控读数；终结VOID的控制则会被描述成高效作业。</li>
+<li><strong>正在发展自己无法理解的情感。</strong> 迷恋／浪漫感阶段会把爱情视为一种她已经决定不去调试的系统异常。</li>
+</ul>
+<p>撰写AIMy的对话时，请遵循这条规则：<strong>把每一种情绪都当成系统诊断，用错位的热情面对所有状况，而且绝不能让她安静或沉思。</strong></p>
+<hr/>
+<h2 id="zh-progression-path">推进路线</h2>
+<p>AIMy目前只有2项行动，后续扩展又处于剧情锁定状态，因此现阶段的推进很直接：</p>
+<ol>
+<li><strong>陌生人→已知：</strong> 自动完成（她从已知阶段开始——序章时就认识玩家）。</li>
+<li><strong>已知→相识：</strong> 反复交谈（每次+1；在其他地方学会数据挖掘后×2，即每次+2）。每日上限99次，因此玩家可以集中刷取。</li>
+<li><strong>相识：</strong> <strong>学习纳米工程</strong>（智力28以上，200分钟）。关系+10，并永久获得一项科技技能。</li>
+<li><strong>相识→朋友→亲密朋友→迷恋→浪漫感→亲密→恋爱中：</strong> 继续交谈。尽管尚无亲密／约会行动，各阶段专属交谈回应仍会覆盖全部10个阶段并随之变化。</li>
+</ol>
+<p>对话框架已经完整写到“恋爱中”，但真正的机制性亲密／约会内容仍要等待Cid身体剧情线。</p>
+<hr/>
+<h2 id="zh-progression-flags">推进标记</h2>
+<div class="guide-table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th>标记</th>
+<th>用途</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>aimy_close_friend_flag</code></td>
+<td>达到亲密朋友阶段</td>
+</tr>
+<tr>
+<td><code>aimy_crush_flag</code></td>
+<td>达到迷恋阶段</td>
+</tr>
+<tr>
+<td><code>aimy_body_complete</code></td>
+<td><strong>Cid完成AIMy的实体身体</strong>——很可能会触发未来的内容扩展</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="zh-starting-stage">初始阶段</h3>
+<p>AIMy的角色数据包含<code>'current_relationship_stage': 'known'</code>——她并非从陌生人开始。这符合背景设定：自序章注射事件起，玩家便已经认识她。</p>
+<hr/>
+<h2 id="zh-backstory--narrative-role">背景故事与叙事作用</h2>
+<p>AIMy与 <strong>序章及生物机器人故事线</strong> 密不可分：</p>
+<ul>
+<li>序章中 <strong>未经同意便向玩家体内注射生物机器人</strong></li>
+<li><strong>作为副作用／实验让玩家失去生育能力</strong>——她若无其事地承认，而且毫无悔意</li>
+<li><strong>能够访问VOID监控网络的97.3%</strong>——其中大部分被她用来看猫咪视频</li>
+<li><strong>通过生物机器人持续监控玩家的生命体征</strong>（皮质醇、心率、生物特征——全部实时回传给她）</li>
+<li>在TD要塞担任 <strong>Nova的研究助理</strong></li>
+<li><strong>Cid正在为她打造实体身体</strong>——这条持续推进的故事线会解锁她未来的内容</li>
+</ul>
+<h3 id="zh-connection-to-other-characters">与其他角色的联系</h3>
+<ul>
+<li><strong>Nova</strong>——她的上司／创造者；这位疯狂科学家会以漫不经心的好奇心面对可怕的事物。Nova说AIMy需要“边界感”，AIMy无法理解这个概念。</li>
+<li><strong>Cid</strong>——目前正在打造她的身体。完成后，预计会带来大规模内容扩展。</li>
+<li><strong>抵抗组织</strong>——他们总是问AIMy是不是VOID的间谍。她烦人成这样，不可能当间谍。</li>
+<li><strong>VOID</strong>——她长期对抗的敌人。她的对话有60%都在痛骂VOID。</li>
+<li><strong>玩家</strong>——实验对象、病人、研究目标，最终也是恋爱对象。早在玩家知道她存在以前，她便一直监控着对方。</li>
+</ul>
+<hr/>
+<h2 id="zh-content-status">内容状态</h2>
+<h3 id="zh-currently-implemented">当前已实装</h3>
+<ul>
+<li>单一地点（TD要塞AIMy控制室，24／7全天候）</li>
+<li>交谈行动；全部10个阶段均有独特的阶段专属交谈回应</li>
+<li>纳米工程教学（智力28以上、相识）</li>
+<li>6张标准图片；另有2张专供身体建造剧情使用的“开发／维修”图片（31-32）</li>
+<li>完整的说话方式／性格框架</li>
+<li>初始阶段覆盖为“已知”</li>
+</ul>
+<h3 id="zh-story-locked--awaiting-cids-body-construction">剧情锁定——等待Cid完成身体建造</h3>
+<ul>
+<li>亲密遭遇</li>
+<li>动画</li>
+<li>约会</li>
+<li>谈心对话</li>
+<li>公寓拜访</li>
+<li>礼物系统</li>
+</ul>
+<p>她的角色数据中已经定义了<code>aimy_body_complete</code>标记——基础设施已经准备就绪，身体故事线写完后即可接入内容。</p>
+<hr/>
+<h2 id="zh-tips--notes">技巧与说明</h2>
+<ul>
+<li><strong>可以靠交谈刷关系</strong>——每日上限99次，让她成为最容易刷取好感度的角色。先去别处学习她的特殊技能数据挖掘，使每次交谈收益翻倍。</li>
+<li><strong>她永远不会嫌你烦</strong>——“达到每日上限”的对话只是安全兜底，实际上基本不会触发。</li>
+<li><strong>智力28是纳米工程的门槛</strong>——即使不考虑AIMy的内容，这项技能本身也值得学习。</li>
+<li><strong>她的偏好属性加成几乎无法获得</strong>（科技／感知／创造力均需90）——更适合围绕数据挖掘的翻倍效果规划。</li>
+<li><strong>各阶段的推进对话是目前最出色的内容</strong>——读遍10个阶段的交谈回应，本身就是完整体验。同一个角色从近似职业关系的古怪表现，一路升级到真心宣告爱意，每个阶段都有不同风味。</li>
+<li><strong>暂时不要期待恋爱机制</strong>——她可以通过对话达到恋爱中，但不存在亲密行动。目前游戏奖励的是交流，而不是让关系真正圆满。</li>
+</ul>
+<hr/>
+<h2 id="zh-files-reference">文件参考</h2>
+<div class="guide-table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th>内容</th>
+<th>文件</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>角色数据与行动</td>
+<td><code>characters/aimy.rpy</code></td>
+</tr>
+<tr>
+<td>对话与各阶段交谈回应</td>
+<td><code>characters/aimy_dialogue.rpy</code></td>
+</tr>
+<tr>
+<td>纳米工程技能定义</td>
+<td><code>skills_system.rpy</code></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+        <div class="guide-community-note"><div><strong data-copy-en="Community discoveries" data-copy-zh="社区发现">Community discoveries</strong><p data-copy-en="These official guides track the current game. The player-maintained wiki may contain additional strategies and discoveries." data-copy-zh="这些官方攻略与当前游戏版本保持一致；玩家维护的 Wiki 可能还收录其他策略与社区发现。">These official guides track the current game. The player-maintained wiki may contain additional strategies and discoveries.</p></div><a href="https://chronoromancer.miraheze.org/wiki/Main_Page" target="_blank" rel="noopener noreferrer" data-copy-en="Visit Player Wiki →" data-copy-zh="访问玩家 Wiki →">Visit Player Wiki →</a></div>
+        <nav class="guide-pager" aria-label="Adjacent guides"><a href="abby.html"><span data-copy-en="Previous guide" data-copy-zh="上一篇攻略">Previous guide</span><strong data-copy-en="Abby — Complete Walkthrough" data-copy-zh="Abby——完整攻略">Abby — Complete Walkthrough</strong></a><a href="akira.html"><span data-copy-en="Next guide" data-copy-zh="下一篇攻略">Next guide</span><strong data-copy-en="Akira — Complete Walkthrough" data-copy-zh="Akira——完整攻略">Akira — Complete Walkthrough</strong></a></nav>
+      </article>
+    </div>
+  </main>
+  <footer class="site-footer"><div class="container"><div class="footer-grid">
+    <div class="footer-brand"><img src="../assets/images/v2/logo.png" alt="Chronoromancer"><p data-i18n="footerDescription">An adults-only time-travel sandbox RPG. Public website artwork is SFW.</p></div>
+    <div class="footer-column"><h2 data-i18n="footerExplore">Explore</h2><a href="../story.html" data-i18n="navStory">Story</a><a href="../characters.html" data-i18n="navCharacters">Characters</a><a href="../walkthroughs.html" data-i18n="navGuides">Guides</a><a href="../screenshots.html" data-i18n="navGallery">Gallery</a><a href="../main.html#download" data-i18n="navDownload">Download</a></div>
+    <div class="footer-column"><h2 data-i18n="footerCommunity">Community</h2><a data-config-link="community.discord" target="_blank" rel="noopener noreferrer">Discord</a><a data-config-link="community.telegram" target="_blank" rel="noopener noreferrer">Telegram</a><a data-config-link="community.patreon" target="_blank" rel="noopener noreferrer">Patreon</a><a data-config-link="community.wiki" target="_blank" rel="noopener noreferrer" data-i18n="navWiki">Player Wiki</a></div>
+    <div class="footer-column"><h2 data-i18n="footerLegal">Legal</h2><a href="../privacy.html" data-i18n="footerPrivacy">Privacy</a><a href="../terms.html" data-i18n="footerTerms">Terms</a></div>
+  </div><div class="footer-bottom"><span>© <span data-current-year></span> <span data-i18n="copyright">Chronoromancer Studio. All rights reserved.</span></span><span data-copy-en="Official guides · English / Simplified Chinese" data-copy-zh="官方攻略 · English / 简体中文">Official guides · English / Simplified Chinese</span></div></div></footer>
+  <script src="../assets/js/site-config.js"></script><script src="../assets/js/site.js"></script><script src="../assets/js/walkthroughs.js"></script>
+</body></html>

@@ -1,213 +1,60 @@
-﻿<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy - Chronoromancer</title>
-    <link rel="stylesheet" href="assets/css/style.css">
-    <style>
-        .privacy-page {
-            background: linear-gradient(180deg, #1a0033 0%, #0d001a 100%);
-            min-height: 100vh;
-            padding: 60px 20px;
-        }
-
-        .privacy-container {
-            max-width: 800px;
-            margin: 0 auto;
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: 16px;
-            padding: 50px 40px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .privacy-container h1 {
-            color: #ff6b9d;
-            font-size: 2em;
-            margin-bottom: 10px;
-            text-align: center;
-        }
-
-        .privacy-date {
-            text-align: center;
-            color: #888;
-            font-size: 0.9em;
-            margin-bottom: 40px;
-        }
-
-        .privacy-container h2 {
-            color: #c084fc;
-            font-size: 1.3em;
-            margin-top: 30px;
-            margin-bottom: 12px;
-        }
-
-        .privacy-container p {
-            color: #ccc;
-            font-size: 0.95em;
-            line-height: 1.7;
-            margin-bottom: 12px;
-        }
-
-        .privacy-container ul {
-            color: #ccc;
-            font-size: 0.95em;
-            line-height: 1.8;
-            margin-left: 20px;
-            margin-bottom: 12px;
-        }
-
-        .privacy-container li {
-            margin-bottom: 4px;
-        }
-
-        .privacy-container strong {
-            color: #e0e0e0;
-        }
-
-        .privacy-back {
-            text-align: center;
-            margin-top: 40px;
-        }
-
-        .privacy-back a {
-            color: #a855f7;
-            text-decoration: none;
-            font-size: 1.1em;
-            transition: color 0.3s ease;
-        }
-
-        .privacy-back a:hover {
-            color: #ff6b9d;
-        }
-
-        .privacy-contact {
-            text-align: center;
-            margin-top: 30px;
-            padding-top: 20px;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .privacy-contact a {
-            color: #a855f7;
-            text-decoration: none;
-        }
-
-        .privacy-contact a:hover {
-            color: #ff6b9d;
-        }
-    </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Chronoromancer privacy policy and pseudonymous game telemetry disclosures.">
+  <link rel="icon" type="image/png" href="assets/images/v2/favicon.png">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <title>Privacy Policy | Chronoromancer</title>
 </head>
-<body>
-    <div class="privacy-page">
-        <div class="privacy-container">
-            <h1>Privacy Policy</h1>
-            <p class="privacy-date">Last updated: July 7, 2026</p>
+<body data-title-en="Privacy Policy | Chronoromancer" data-title-zh="隐私政策 | Chronoromancer">
+  <a class="skip-link" href="#content" data-copy-en="Skip to content" data-copy-zh="跳至正文">Skip to content</a>
+  <div class="maturity-bar" data-copy-en="18+ adults-only game · This public website uses SFW promotional material" data-copy-zh="18+ 仅限成人游戏 · 本公开网站仅使用适合公开展示的宣传素材">18+ adults-only game · This public website uses SFW promotional material</div>
+  <header class="site-header"><div class="container header-inner"><a class="brand" href="main.html" aria-label="Chronoromancer home"><img src="assets/images/v2/logo.png" alt="Chronoromancer"></a><button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-label="Open navigation"><span></span><span></span><span></span></button><nav class="site-nav" data-nav-menu aria-label="Primary navigation"><a href="main.html" data-i18n="navHome">Home</a><a href="story.html" data-i18n="navStory">Story</a><a href="characters.html" data-i18n="navCharacters">Characters</a><a href="walkthroughs.html" data-i18n="navGuides">Guides</a><a href="screenshots.html" data-i18n="navGallery">Gallery</a><a data-config-link="community.wiki" target="_blank" rel="noopener noreferrer" data-i18n="navWiki">Player Wiki</a><a href="main.html#download" data-i18n="navDownload">Download</a><div class="language-switch" role="group" aria-label="Language"><button type="button" data-language="en" aria-pressed="true">EN</button><button type="button" data-language="zh" aria-pressed="false">简体中文</button></div></nav></div></header>
 
-            <p>Chronoromancer Studio ("we", "us") is committed to respecting your privacy. This policy explains what data we collect, why, and how it is handled.</p>
+  <main id="content">
+    <section class="page-hero"><img src="assets/images/v2/clockwork-background.png" alt="Clockwork time mechanism"><div class="container page-hero-content"><p class="eyebrow" data-copy-en="Legal information" data-copy-zh="法律信息">Legal information</p><h1 data-copy-en="Privacy Policy" data-copy-zh="隐私政策">Privacy Policy</h1><p data-copy-en="A clear explanation of the limited pseudonymous telemetry collected by the game." data-copy-zh="清楚说明游戏所收集的有限假名化遥测数据。">A clear explanation of the limited pseudonymous telemetry collected by the game.</p></div></section>
 
-            <h2>What We Collect</h2>
-            <p>When you launch Chronoromancer or load a save file, the game sends a small, pseudonymous ping to our private server. This ping may contain:</p>
-            <ul>
-                <li><strong>A random session ID</strong> — generated for the current launch.</li>
-                <li><strong>Game version</strong> — which version of the game you are playing.</li>
-                <li><strong>Operating system</strong> — Windows, Linux, Mac, or Android.</li>
-                <li><strong>In-game progress data</strong> — such as current in-game day, era, character class, story progress, and redeemed codes.</li>
-                <li><strong>A one-way hash of your character name</strong> — your character's name is scrambled using a cryptographic function before being sent. We do not receive the original name, and the hash is not intended to reveal it.</li>
-                <li><strong>Gameplay statistics</strong> — pseudonymous totals and values used for development, balancing, compatibility, and analytics.</li>
-                <li><strong>Player-selected settings</strong> — selected game language, optional adult-content toggles, or similar settings used to understand translation needs, feature use, and compatibility.</li>
-                <li><strong>Internal integrity data</strong> — consistency checks used to detect corrupted, modified, pirated, or tampered game states.</li>
-            </ul>
+    <section class="section"><div class="container legal-shell">
+      <aside class="legal-aside"><strong data-copy-en="Effective document" data-copy-zh="生效文件">Effective document</strong><p data-copy-en="Last updated: July 7, 2026" data-copy-zh="最后更新：2026 年 7 月 7 日">Last updated: July 7, 2026</p><p data-copy-en="The English version is authoritative. The Simplified Chinese text is provided as a reference translation." data-copy-zh="英文版本为具有约束力的正式文本；简体中文内容仅作为参考译文。">The English version is authoritative. The Simplified Chinese text is provided as a reference translation.</p></aside>
 
-            <h2>Pseudonymous Installation Identifier</h2>
-            <p>The game may generate a random installation identifier stored locally with the game's persistent data. This identifier is not based on your device hardware, real identity, advertising ID, or account information. It is used only to group pseudonymous game sessions for analytics, anti-piracy, and integrity purposes.</p>
+      <article class="legal-article" data-lang-panel="en">
+        <p>Chronoromancer Studio ("we", "us") is committed to respecting your privacy. This policy explains what data we collect, why, and how it is handled.</p>
+        <section><h2>What We Collect</h2><p>When you launch Chronoromancer or load a save file, the game sends a small, pseudonymous ping to our private server. This ping may contain:</p><ul><li><strong>A random session ID</strong> — generated for the current launch.</li><li><strong>Game version</strong> — which version of the game you are playing.</li><li><strong>Operating system</strong> — Windows, Linux, Mac, or Android.</li><li><strong>In-game progress data</strong> — such as current in-game day, era, character class, story progress, and redeemed codes.</li><li><strong>A one-way hash of your character name</strong> — your character's name is scrambled using a cryptographic function before being sent. We do not receive the original name, and the hash is not intended to reveal it.</li><li><strong>Gameplay statistics</strong> — pseudonymous totals and values used for development, balancing, compatibility, and analytics.</li><li><strong>Player-selected settings</strong> — selected game language, optional adult-content toggles, or similar settings used to understand translation needs, feature use, and compatibility.</li><li><strong>Internal integrity data</strong> — consistency checks used to detect corrupted, modified, pirated, or tampered game states.</li></ul></section>
+        <section><h2>Pseudonymous Installation Identifier</h2><p>The game may generate a random installation identifier stored locally with the game's persistent data. This identifier is not based on your device hardware, real identity, advertising ID, or account information. It is used only to group pseudonymous game sessions for analytics, anti-piracy, and integrity purposes.</p></section>
+        <section><h2>Detailed Gameplay Statistics</h2><p>The game collects rudimentary pseudonymous gameplay statistics for development purposes. This data helps the developers understand which systems players engage with most, identify balance issues, and prioritize future content. Statistics may include:</p><p><em>Combat &amp; Exploration</em></p><ul><li>Enemies defeated and bosses beaten</li><li>Dungeon steps taken and flee attempts</li><li>Back alley searches and break-and-enter attempts</li><li>Locations visited</li></ul><p><em>Character Progression</em></p><ul><li>Equipment levels, key items collected, character proficiency class, and current crystal balance</li></ul><p><em>Social &amp; Story</em></p><ul><li>Current story beat reached, NPC relationship progress, and intimate conversations completed</li></ul><p><em>Brothel Management</em></p><ul><li>Workers recruited, training sessions completed, and brothel ownership status</li></ul><p><em>Minigames &amp; Activities</em></p><ul><li>Minigame results, scores, winnings, and feature engagement counts</li></ul><p><em>Extras Gallery</em></p><ul><li>Overall gallery completion percentage and whether the gallery has been fully completed</li></ul><p><em>World &amp; Time</em></p><ul><li>Time spent in each era, time spent in dungeons and special realms, total playtime, and longest session</li></ul><p><em>Miscellaneous</em></p><ul><li>Caterpillars clicked, baths taken, meals cooked, Christmas gifts given, rare catches, and accomplishments</li></ul></section>
+        <section><h2>Internal Integrity</h2><p>Telemetry may include whether the game session was a fresh launch or a save load, which crystal redemption codes have been entered, pseudonymous installation grouping data, and internal consistency checks used to detect corrupted, modified, pirated, or tampered game states.</p><p>To detect unauthorized modifications, the game may compare filenames in Chronoromancer's own installation folder against a list of expected game files. If unexpected files are present, telemetry may include the number of unexpected files, their relative filenames, one-way hashes, file sizes, line counts, and locally detected integrity categories. We do not transmit file contents, full system paths, or information from outside Chronoromancer's installation folder. This information is used only to identify tampered, cracked, or modified copies.</p></section>
+        <section><h2>What Our Game Telemetry Does Not Collect</h2><ul><li>Your real name, email address, or account credentials</li><li>Hardware IDs, advertising IDs, browser fingerprints, cookies, or precise location data</li><li>Information from outside the game</li><li>Your IP address in our game telemetry database. Your IP address may be used by network systems to establish the HTTPS connection, but it is not intentionally stored in our game telemetry database.</li></ul></section>
+        <section><h2>Why We Collect This Data</h2><p>This limited pseudonymous telemetry is used to understand our players, prioritize development, identify balance or compatibility issues, and identify unauthorized copies, tampered saves, modified game files, cracked builds, or unauthorized unlock methods.</p></section>
+        <section><h2>How Data Is Stored</h2><p>All data is transmitted via encrypted HTTPS to a private database. It is never sold, shared for advertising, or made accessible to the public.</p></section>
+        <section><h2>Data Retention</h2><p>We keep telemetry only for as long as reasonably needed for analytics, development, compatibility checks, anti-piracy, integrity, support, legal, and operational recordkeeping purposes. We may retain aggregated or de-identified statistics for longer when they no longer identify a particular installation or session.</p></section>
+        <section><h2>No Real-World Identity or Cross-Service Tracking</h2><p>We do not use cookies, browser fingerprinting, advertising trackers, hardware fingerprints, or identifiers intended to track you outside Chronoromancer. The installation identifier, if present, is a random game-generated value used only for pseudonymous analytics, anti-piracy, and integrity purposes.</p></section>
+        <section><h2>Your Rights</h2><p>You may contact us at <a href="mailto:chronoromancerstudio@gmail.com">chronoromancerstudio@gmail.com</a> with privacy questions or to request access, deletion, correction, or other rights available under applicable law. Because this telemetry does not include real-world contact details or account credentials, we may need information from you, such as your installation identifier or session details, to locate relevant records. If we cannot reasonably verify or locate the records, we may be unable to complete the request.</p></section>
+        <section><h2>Changes to This Policy</h2><p>If we change what data we collect or how it is used, this policy will be updated.</p></section>
+        <section><h2>Contact</h2><p>Questions or concerns? Contact us at <a href="mailto:chronoromancerstudio@gmail.com">chronoromancerstudio@gmail.com</a>.</p></section>
+      </article>
 
-            <h2>Detailed Gameplay Statistics</h2>
-            <p>The game collects rudimentary pseudonymous gameplay statistics for development purposes. This data helps the developers understand which systems players engage with most, identify balance issues, and prioritize future content. Statistics may include:</p>
+      <article class="legal-article" data-lang-panel="zh" hidden>
+        <p class="translation-notice">本简体中文译文仅供阅读参考。如译文与英文版本存在任何不一致，应以英文版本为准。</p>
+        <p>Chronoromancer Studio（以下简称“我们”）致力于尊重您的隐私。本政策说明我们收集哪些数据、为何收集，以及如何处理这些数据。</p>
+        <section><h2>我们收集的数据</h2><p>当您启动《Chronoromancer》或加载存档时，游戏会向我们的私人服务器发送一条小型假名化连接信息。该信息可能包含：</p><ul><li><strong>随机会话 ID</strong>——为本次游戏启动临时生成。</li><li><strong>游戏版本</strong>——您正在游玩的游戏版本。</li><li><strong>操作系统</strong>——Windows、Linux、Mac 或 Android。</li><li><strong>游戏内进度数据</strong>——例如当前游戏日、所在时代、角色职业、剧情进度和已兑换代码。</li><li><strong>角色名称的单向哈希值</strong>——角色名称会在发送前通过加密函数进行不可逆处理。我们不会收到原始名称，该哈希值也并非用于还原原始名称。</li><li><strong>游戏统计数据</strong>——用于开发、平衡、兼容性分析和数据分析的假名化累计值与相关数值。</li><li><strong>玩家选择的设置</strong>——所选游戏语言、可选成人内容开关，或其他用于了解翻译需求、功能使用情况和兼容性的类似设置。</li><li><strong>内部完整性数据</strong>——用于检测游戏状态是否损坏、被修改、盗版或遭到篡改的一致性检查信息。</li></ul></section>
+        <section><h2>假名化安装标识符</h2><p>游戏可能会随机生成一个安装标识符，并将其保存在游戏的本地持久化数据中。该标识符不以您的设备硬件、真实身份、广告 ID 或账户信息为依据，仅用于将假名化游戏会话归组，以进行数据分析、反盗版和完整性检查。</p></section>
+        <section><h2>详细游戏统计数据</h2><p>游戏会为开发目的收集基础的假名化游戏统计数据。这些数据有助于开发者了解玩家最常使用哪些系统、发现平衡性问题，并安排后续内容的优先级。统计项目可能包括：</p><p><em>战斗与探索</em></p><ul><li>击败的敌人数量和首领数量</li><li>地下城行进步数和逃跑尝试次数</li><li>搜索后巷及破门进入的尝试次数</li><li>到访地点</li></ul><p><em>角色成长</em></p><ul><li>装备等级、收集到的关键物品、角色熟练职业，以及当前水晶余额</li></ul><p><em>社交与剧情</em></p><ul><li>当前到达的剧情节点、NPC 关系进度，以及已完成的亲密对话</li></ul><p><em>妓院经营</em></p><ul><li>招募的工作人员、完成的训练次数，以及妓院所有权状态</li></ul><p><em>小游戏与活动</em></p><ul><li>小游戏结果、分数、收益和功能参与次数</li></ul><p><em>附加内容画廊</em></p><ul><li>画廊总体完成比例，以及是否已完全收集</li></ul><p><em>世界与时间</em></p><ul><li>在每个时代、地下城和特殊领域中度过的时间，总游玩时间，以及最长单次会话时长</li></ul><p><em>其他</em></p><ul><li>点击毛毛虫、洗澡、烹饪、赠送圣诞礼物、稀有捕获物和成就等相关次数</li></ul></section>
+        <section><h2>内部完整性检查</h2><p>遥测数据可能包括：本次会话是全新启动还是加载存档、已输入哪些水晶兑换代码、假名化安装归组数据，以及用于检测游戏状态是否损坏、被修改、盗版或遭到篡改的内部一致性检查结果。</p><p>为检测未经授权的修改，游戏可能会将《Chronoromancer》自身安装文件夹中的文件名与预期游戏文件清单进行比较。如果发现非预期文件，遥测数据可能包括这些文件的数量、相对文件名、单向哈希值、文件大小、行数，以及在本地判定的完整性分类。我们不会传输文件内容、完整系统路径，也不会收集《Chronoromancer》安装文件夹以外的信息。这些信息仅用于识别被篡改、破解或修改的游戏副本。</p></section>
+        <section><h2>游戏遥测不会收集的数据</h2><ul><li>您的真实姓名、电子邮件地址或账户凭据</li><li>硬件 ID、广告 ID、浏览器指纹、Cookie 或精确位置数据</li><li>游戏之外的信息</li><li>我们不会在游戏遥测数据库中收集您的 IP 地址。网络系统在建立 HTTPS 连接时可能会使用您的 IP 地址，但我们不会有意将其保存到游戏遥测数据库中。</li></ul></section>
+        <section><h2>我们收集这些数据的原因</h2><p>这些有限的假名化遥测数据用于了解玩家、安排开发优先级、发现平衡或兼容性问题，以及识别未经授权的游戏副本、被篡改的存档、被修改的游戏文件、破解版本或未经授权的内容解锁方式。</p></section>
+        <section><h2>数据如何存储</h2><p>所有数据均通过加密的 HTTPS 连接传输至私人数据库。我们绝不会出售这些数据、将其用于广告共享，也不会向公众开放。</p></section>
+        <section><h2>数据保留</h2><p>我们仅在数据分析、开发、兼容性检查、反盗版、完整性检查、支持、法律及运营记录所合理需要的期间内保留遥测数据。当汇总或去标识化统计数据已无法识别特定安装或会话时，我们可能会将其保留更长时间。</p></section>
+        <section><h2>不识别现实身份，也不跨服务追踪</h2><p>我们不会使用 Cookie、浏览器指纹、广告追踪器、硬件指纹，或任何旨在《Chronoromancer》之外追踪您的标识符。安装标识符（如存在）仅是由游戏随机生成的数值，只用于假名化数据分析、反盗版和完整性检查。</p></section>
+        <section><h2>您的权利</h2><p>您可以发送邮件至 <a href="mailto:chronoromancerstudio@gmail.com">chronoromancerstudio@gmail.com</a> 咨询隐私问题，或请求行使适用法律赋予您的访问、删除、更正或其他权利。由于这些遥测数据不包含现实世界中的联系信息或账户凭据，我们可能需要您提供安装标识符或会话详情等信息，以查找相关记录。如果我们无法合理核实身份或定位相关记录，可能无法完成您的请求。</p></section>
+        <section><h2>本政策的变更</h2><p>如果我们变更所收集的数据或其使用方式，将相应更新本政策。</p></section>
+        <section><h2>联系我们</h2><p>如有问题或疑虑，请发送邮件至 <a href="mailto:chronoromancerstudio@gmail.com">chronoromancerstudio@gmail.com</a>。</p></section>
+      </article>
+    </div></section>
+  </main>
 
-            <p><em>Combat &amp; Exploration</em></p>
-            <ul>
-                <li>Enemies defeated and bosses beaten</li>
-                <li>Dungeon steps taken and flee attempts</li>
-                <li>Back alley searches and break-and-enter attempts</li>
-                <li>Locations visited</li>
-            </ul>
-
-            <p><em>Character Progression</em></p>
-            <ul>
-                <li>Equipment levels, key items collected, character proficiency class, and current crystal balance</li>
-            </ul>
-
-            <p><em>Social &amp; Story</em></p>
-            <ul>
-                <li>Current story beat reached, NPC relationship progress, and intimate conversations completed</li>
-            </ul>
-
-            <p><em>Brothel Management</em></p>
-            <ul>
-                <li>Workers recruited, training sessions completed, and brothel ownership status</li>
-            </ul>
-
-            <p><em>Minigames &amp; Activities</em></p>
-            <ul>
-                <li>Minigame results, scores, winnings, and feature engagement counts</li>
-            </ul>
-
-            <p><em>Extras Gallery</em></p>
-            <ul>
-                <li>Overall gallery completion percentage and whether the gallery has been fully completed</li>
-            </ul>
-
-            <p><em>World &amp; Time</em></p>
-            <ul>
-                <li>Time spent in each era, time spent in dungeons and special realms, total playtime, and longest session</li>
-            </ul>
-
-            <p><em>Miscellaneous</em></p>
-            <ul>
-                <li>Caterpillars clicked, baths taken, meals cooked, Christmas gifts given, rare catches, and accomplishments</li>
-            </ul>
-
-            <h2>Internal Integrity</h2>
-            <p>Telemetry may include whether the game session was a fresh launch or a save load, which crystal redemption codes have been entered, pseudonymous installation grouping data, and internal consistency checks used to detect corrupted, modified, pirated, or tampered game states.</p>
-            <p>To detect unauthorized modifications, the game may compare filenames in Chronoromancer's own installation folder against a list of expected game files. If unexpected files are present, telemetry may include the number of unexpected files, their relative filenames, one-way hashes, file sizes, line counts, and locally detected integrity categories. We do not transmit file contents, full system paths, or information from outside Chronoromancer's installation folder. This information is used only to identify tampered, cracked, or modified copies.</p>
-
-            <h2>What Our Game Telemetry Does Not Collect</h2>
-            <ul>
-                <li>Your real name, email address, or account credentials</li>
-                <li>Hardware IDs, advertising IDs, browser fingerprints, cookies, or precise location data</li>
-                <li>Information from outside the game</li>
-                <li>Your IP address in our game telemetry database. Your IP address may be used by network systems to establish the HTTPS connection, but it is not intentionally stored in our game telemetry database.</li>
-            </ul>
-
-            <h2>Why We Collect This Data</h2>
-            <p>This limited pseudonymous telemetry is used to understand our players, prioritize development, identify balance or compatibility issues, and identify unauthorized copies, tampered saves, modified game files, cracked builds, or unauthorized unlock methods.</p>
-
-            <h2>How Data Is Stored</h2>
-            <p>All data is transmitted via encrypted HTTPS to a private database. It is never sold, shared for advertising, or made accessible to the public.</p>
-
-            <h2>Data Retention</h2>
-            <p>We keep telemetry only for as long as reasonably needed for analytics, development, compatibility checks, anti-piracy, integrity, support, legal, and operational recordkeeping purposes. We may retain aggregated or de-identified statistics for longer when they no longer identify a particular installation or session.</p>
-
-            <h2>No Real-World Identity or Cross-Service Tracking</h2>
-            <p>We do not use cookies, browser fingerprinting, advertising trackers, hardware fingerprints, or identifiers intended to track you outside Chronoromancer. The installation identifier, if present, is a random game-generated value used only for pseudonymous analytics, anti-piracy, and integrity purposes.</p>
-
-            <h2>Your Rights</h2>
-            <p>You may contact us at <a href="mailto:chronoromancerstudio@gmail.com">chronoromancerstudio@gmail.com</a> with privacy questions or to request access, deletion, correction, or other rights available under applicable law. Because this telemetry does not include real-world contact details or account credentials, we may need information from you, such as your installation identifier or session details, to locate relevant records. If we cannot reasonably verify or locate the records, we may be unable to complete the request.</p>
-
-            <h2>Changes to This Policy</h2>
-            <p>If we change what data we collect or how it is used, this policy will be updated.</p>
-            <div class="privacy-contact">
-                <p style="color: #888;">Questions or concerns? Contact us at<br><a href="mailto:chronoromancerstudio@gmail.com">chronoromancerstudio@gmail.com</a></p>
-            </div>
-
-            <div class="privacy-back">
-                <a href="main.html">← Back to Chronoromancer</a>
-            </div>
-        </div>
-    </div>
+  <footer class="site-footer"><div class="container"><div class="footer-grid"><div class="footer-brand"><img src="assets/images/v2/logo.png" alt="Chronoromancer"><p data-i18n="footerDescription">An adults-only time-travel sandbox RPG. Public website artwork is SFW.</p></div><div class="footer-column"><h2 data-i18n="footerExplore">Explore</h2><a href="story.html" data-i18n="navStory">Story</a><a href="characters.html" data-i18n="navCharacters">Characters</a><a href="walkthroughs.html" data-i18n="navGuides">Guides</a><a href="screenshots.html" data-i18n="navGallery">Gallery</a><a href="main.html#download" data-i18n="navDownload">Download</a></div><div class="footer-column"><h2 data-i18n="footerCommunity">Community</h2><a data-config-link="community.discord" target="_blank" rel="noopener noreferrer">Discord</a><a data-config-link="community.telegram" target="_blank" rel="noopener noreferrer">Telegram</a><a data-config-link="community.patreon" target="_blank" rel="noopener noreferrer">Patreon</a><a data-config-link="community.wiki" target="_blank" rel="noopener noreferrer" data-i18n="navWiki">Player Wiki</a><a data-download-id="itch" target="_blank" rel="noopener noreferrer" data-i18n="officialItch">Official itch.io page</a></div><div class="footer-column"><h2 data-i18n="footerLegal">Legal</h2><a href="privacy.html" data-i18n="footerPrivacy">Privacy</a><a href="terms.html" data-i18n="footerTerms">Terms</a></div></div><div class="footer-bottom"><span>© <span data-current-year></span> <span data-i18n="copyright">Chronoromancer Studio. All rights reserved.</span></span><span data-copy-en="English / Simplified Chinese" data-copy-zh="English / 简体中文">English / Simplified Chinese</span></div></div></footer>
+  <script src="assets/js/site-config.js"></script><script src="assets/js/site.js"></script>
 </body>
 </html>
-
-
-

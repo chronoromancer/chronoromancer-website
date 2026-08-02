@@ -1,0 +1,1197 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="This guide expands on Sh1n7&#x27;s community-created Muramasa wiki page, used under CC BY-SA 4.0. All requirements and mechanical effects below were rechecked against the current game source."><link rel="icon" type="image/png" href="../assets/images/v2/favicon.png">
+  <link rel="stylesheet" href="../assets/css/style.css"><link rel="stylesheet" href="../assets/css/walkthroughs.css">
+  <title>Muramasa Walkthrough and Blademaster Guide | Chronoromancer Guides</title></head>
+<body class="guide-page" data-title-en="Muramasa Walkthrough and Blademaster Guide | Chronoromancer Guides" data-title-zh="Muramasa攻略与剑术大师指南 | Chronoromancer 官方攻略">
+  <div class="reading-progress" data-reading-progress></div>
+  <a class="skip-link" href="#content" data-copy-en="Skip to content" data-copy-zh="跳至正文">Skip to content</a>
+  <div class="maturity-bar" data-copy-en="18+ adults-only game · Guides may describe mature game systems" data-copy-zh="18+ 仅限成人游戏 · 攻略可能涉及成人游戏系统">18+ adults-only game · Guides may describe mature game systems</div>
+  <header class="site-header"><div class="container header-inner">
+    <a class="brand" href="../main.html" aria-label="Chronoromancer home"><img src="../assets/images/v2/logo.png" alt="Chronoromancer"></a>
+    <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-label="Open navigation"><span></span><span></span><span></span></button>
+    <nav class="site-nav" data-nav-menu aria-label="Primary navigation">
+      <a href="../main.html" data-i18n="navHome">Home</a>
+      <a href="../story.html" data-i18n="navStory">Story</a>
+      <a href="../characters.html" data-i18n="navCharacters">Characters</a>
+      <a class="is-active" href="../walkthroughs.html" data-i18n="navGuides">Guides</a>
+      <a href="../screenshots.html" data-i18n="navGallery">Gallery</a>
+      <a data-config-link="community.wiki" target="_blank" rel="noopener noreferrer" data-i18n="navWiki">Player Wiki</a>
+      <a href="../main.html#download" data-i18n="navDownload">Download</a>
+      <div class="language-switch" role="group" aria-label="Language"><button type="button" data-language="en" aria-pressed="true">EN</button><button type="button" data-language="zh" aria-pressed="false">简体中文</button></div>
+    </nav>
+  </div></header>
+  <main id="content">
+    <section class="guide-masthead"><div class="container">
+      <nav class="breadcrumb" aria-label="Breadcrumb"><a href="../walkthroughs.html" data-copy-en="Official Guides" data-copy-zh="官方攻略">Official Guides</a><span>/</span><span data-copy-en="Character Routes" data-copy-zh="角色路线">Character Routes</span></nav>
+      <p class="eyebrow" data-copy-en="Version-matched official guide" data-copy-zh="与当前版本匹配的官方攻略">Version-matched official guide</p>
+      <h1 data-copy-en="Muramasa Walkthrough and Blademaster Guide" data-copy-zh="Muramasa攻略与剑术大师指南">Muramasa Walkthrough and Blademaster Guide</h1>
+      <div class="guide-meta"><span data-copy-en="Character Routes" data-copy-zh="角色路线">Character Routes</span><span data-copy-en="Simplified Chinese available" data-copy-zh="简体中文译文已上线">Simplified Chinese available</span><span data-site-version>V0.9.6.0</span></div>
+    </div></section>
+    <div class="container guide-layout">
+      <aside class="guide-sidebar">
+        <a class="back-to-library" href="../walkthroughs.html" data-copy-en="← All guides" data-copy-zh="← 全部攻略">← All guides</a>
+        <div data-lang-panel="en"><h2>On this page</h2><nav class="guide-toc"><a class="toc-level-2" href="#at-a-glance">At a Glance</a><a class="toc-level-2" href="#where-to-find-her">Where to Find Her</a><a class="toc-level-2" href="#first-meeting">First Meeting</a><a class="toc-level-2" href="#relationship-mechanics">Relationship Mechanics</a><a class="toc-level-3" href="#favorite-checks">Favorite checks</a><a class="toc-level-3" href="#talking">Talking</a><a class="toc-level-2" href="#training">Training</a><a class="toc-level-3" href="#sense-mastery">Sense Mastery</a><a class="toc-level-3" href="#katana-training">Katana Training</a><a class="toc-level-2" href="#character-and-cross-character-plots">Character and Cross-Character Plots</a><a class="toc-level-3" href="#muramasa-at-the-training-room">Muramasa at the Training Room</a><a class="toc-level-3" href="#an-arrangement-at-the-inn">An Arrangement at the Inn</a><a class="toc-level-3" href="#the-old-healers-oath">The Old Healer&#x27;s Oath</a><a class="toc-level-2" href="#unlocking-blademaster">Unlocking Blademaster</a><a class="toc-level-3" href="#current-clout-progression-warning">Current clout progression warning</a><a class="toc-level-2" href="#how-the-blademaster-path-works">How the Blademaster Path Works</a><a class="toc-level-3" href="#rank-thresholds-and-damage-multiplier">Rank thresholds and damage multiplier</a><a class="toc-level-3" href="#efficient-path-leveling">Efficient path leveling</a><a class="toc-level-2" href="#sword-stone-bond">Sword Stone Bond</a><a class="toc-level-2" href="#recommended-route">Recommended Route</a><a class="toc-level-2" href="#troubleshooting">Troubleshooting</a><a class="toc-level-3" href="#muramasa-is-missing">Muramasa is missing</a><a class="toc-level-3" href="#sense-mastery-is-missing">Sense Mastery is missing</a><a class="toc-level-3" href="#the-inn-plot-will-not-trigger">The Inn plot will not trigger</a><a class="toc-level-3" href="#the-old-healers-oath-will-not-trigger">The Old Healer&#x27;s Oath will not trigger</a><a class="toc-level-3" href="#blademaster-is-missing">Blademaster is missing</a><a class="toc-level-3" href="#intimate-bonding-is-missing">Intimate Bonding is missing</a><a class="toc-level-2" href="#current-content-boundary">Current Content Boundary</a><a class="toc-level-2" href="#source-reference">Source Reference</a></nav></div>
+        <div data-lang-panel="zh" hidden><h2>本页目录</h2><nav class="guide-toc"><a class="toc-level-2" href="#zh-at-a-glance">一览</a><a class="toc-level-2" href="#zh-where-to-find-her">去哪里找她</a><a class="toc-level-2" href="#zh-first-meeting">初次见面</a><a class="toc-level-2" href="#zh-relationship-mechanics">关系机制</a><a class="toc-level-3" href="#zh-favorite-checks">偏好判定</a><a class="toc-level-3" href="#zh-talking">交谈</a><a class="toc-level-2" href="#zh-training">训练</a><a class="toc-level-3" href="#zh-sense-mastery">感官精通</a><a class="toc-level-3" href="#zh-katana-training">武士刀训练</a><a class="toc-level-2" href="#zh-character-and-cross-character-plots">角色剧情与跨角色剧情</a><a class="toc-level-3" href="#zh-muramasa-at-the-training-room">训练室里的Muramasa</a><a class="toc-level-3" href="#zh-an-arrangement-at-the-inn">旅店里的约定</a><a class="toc-level-3" href="#zh-the-old-healers-oath">老治疗师的誓言</a><a class="toc-level-2" href="#zh-unlocking-blademaster">解锁剑术大师</a><a class="toc-level-3" href="#zh-current-clout-progression-warning">当前声望进度警告</a><a class="toc-level-2" href="#zh-how-the-blademaster-path-works">剑术大师路线的运作方式</a><a class="toc-level-3" href="#zh-rank-thresholds-and-damage-multiplier">等级门槛与伤害倍率</a><a class="toc-level-3" href="#zh-efficient-path-leveling">高效提升路线等级</a><a class="toc-level-2" href="#zh-sword-stone-bond">剑石羁绊</a><a class="toc-level-2" href="#zh-recommended-route">推荐路线</a><a class="toc-level-2" href="#zh-troubleshooting">疑难解答</a><a class="toc-level-3" href="#zh-muramasa-is-missing">找不到Muramasa</a><a class="toc-level-3" href="#zh-sense-mastery-is-missing">找不到感官精通</a><a class="toc-level-3" href="#zh-the-inn-plot-will-not-trigger">旅店剧情没有触发</a><a class="toc-level-3" href="#zh-the-old-healers-oath-will-not-trigger">老治疗师的誓言没有触发</a><a class="toc-level-3" href="#zh-blademaster-is-missing">找不到剑术大师</a><a class="toc-level-3" href="#zh-intimate-bonding-is-missing">找不到亲密羁绊</a><a class="toc-level-2" href="#zh-current-content-boundary">当前内容边界</a><a class="toc-level-2" href="#zh-source-reference">源代码参考</a></nav></div>
+      </aside>
+      <article class="guide-content">
+        <div class="spoiler-notice"><strong data-copy-en="Guide notice" data-copy-zh="攻略提示">Guide notice</strong><span data-copy-en="This page contains gameplay and story spoilers and may describe mature systems." data-copy-zh="本页包含玩法与剧情剧透，并可能涉及成人游戏系统。">This page contains gameplay and story spoilers and may describe mature systems.</span></div>
+        <div class="markdown-body" data-lang-panel="en">
+<blockquote>
+<p><strong>Spoiler warning:</strong> This guide covers Muramasa's character plots, permanent training, Blademaster combat path, cross-character events, and Sword Stone bond.</p>
+</blockquote>
+<p>This guide expands on Sh1n7's community-created <a href="https://chronoromancer.miraheze.org/wiki/Character:Muramasa" rel="noopener noreferrer" target="_blank">Muramasa wiki page</a>, used under <a href="https://creativecommons.org/licenses/by-sa/4.0/" rel="noopener noreferrer" target="_blank">CC BY-SA 4.0</a>. All requirements and mechanical effects below were rechecked against the current game source.</p>
+<h2 id="at-a-glance">At a Glance</h2>
+<div class="guide-table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th>Detail</th>
+<th>Current value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Name</td>
+<td>Muramasa</td>
+</tr>
+<tr>
+<td>Age</td>
+<td>27</td>
+</tr>
+<tr>
+<td>Alignment</td>
+<td>Neutral</td>
+</tr>
+<tr>
+<td>Main location</td>
+<td>Knights Training Grounds</td>
+</tr>
+<tr>
+<td>Favorite stats</td>
+<td>Ability 50, Perception 40, Stamina 45</td>
+</tr>
+<tr>
+<td>Special relationship skill</td>
+<td>Combat Reflexes</td>
+</tr>
+<tr>
+<td>Permanent lesson</td>
+<td>Sense Mastery: +1 Perception</td>
+</tr>
+<tr>
+<td>Repeatable training</td>
+<td>Katana Training: +1 Perception and +1 Ability</td>
+</tr>
+<tr>
+<td>Major unlock</td>
+<td>Blademaster combat path</td>
+</tr>
+<tr>
+<td>Soul Stone</td>
+<td>Sword Stone</td>
+</tr>
+</tbody>
+</table></div>
+<p>Muramasa is a blind katana master who reads a fight through sound, air movement, scent, balance, and footwork. Her route is short on romance scenes but unusually valuable for permanent stat growth and physical-combat progression.</p>
+<h2 id="where-to-find-her">Where to Find Her</h2>
+<p>Muramasa follows the same schedule every day.</p>
+<div class="guide-table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th>Location</th>
+<th style="text-align:right">Hours</th>
+<th>Available content</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Knights Training Grounds</td>
+<td style="text-align:right">08:00-18:00</td>
+<td>Introduction, Talk, Sense Mastery, Katana Training, Blademaster, Sword Stone bond</td>
+</tr>
+<tr>
+<td>Brothel Training Room</td>
+<td style="text-align:right">18:00-20:00</td>
+<td>One-time Training Room plot and Talk</td>
+</tr>
+<tr>
+<td>Travelers Inn</td>
+<td style="text-align:right">20:00-23:00</td>
+<td>Talk and Kent/Muramasa plot</td>
+</tr>
+</tbody>
+</table></div>
+<p>The ranges use an exclusive end hour: arrive before 18:00 for the Training Grounds, before 20:00 for the Brothel Training Room, and before 23:00 for the Inn.</p>
+<p>No recruitment flag is required. You can meet Muramasa as soon as you can reach the Knights Training Grounds during her schedule.</p>
+<h2 id="first-meeting">First Meeting</h2>
+<p>Enter the Knights Training Grounds from 08:00-18:00 to trigger <strong>The Blind Swordswoman</strong> automatically.</p>
+<div class="guide-table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th>Reward</th>
+<th style="text-align:right">Amount</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Base Muramasa relationship</td>
+<td style="text-align:right">+1</td>
+</tr>
+<tr>
+<td>Kind response</td>
+<td style="text-align:right">+3</td>
+</tr>
+<tr>
+<td>Funny response</td>
+<td style="text-align:right">+2</td>
+</tr>
+<tr>
+<td>Flirty response</td>
+<td style="text-align:right">+1</td>
+</tr>
+</tbody>
+</table></div>
+<p>The Kind response gives the best total, <strong>+4 relationship</strong>.</p>
+<h2 id="relationship-mechanics">Relationship Mechanics</h2>
+<h3 id="favorite-checks">Favorite checks</h3>
+<div class="guide-table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th>Favorite</th>
+<th style="text-align:right">Threshold</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ability</td>
+<td style="text-align:right">50</td>
+</tr>
+<tr>
+<td>Perception</td>
+<td style="text-align:right">40</td>
+</tr>
+<tr>
+<td>Stamina</td>
+<td style="text-align:right">45</td>
+</tr>
+<tr>
+<td>Special skill</td>
+<td style="text-align:right">Combat Reflexes</td>
+</tr>
+</tbody>
+</table></div>
+<p>These feed the universal relationship-point modifier system. Muramasa has no favorite gift or dedicated gift action in the current implementation.</p>
+<h3 id="talking">Talking</h3>
+<div class="guide-table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th>Action pool</th>
+<th>Locations</th>
+<th style="text-align:right">Time</th>
+<th style="text-align:right">Gain</th>
+<th style="text-align:right">Limit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Talk to Muramasa</td>
+<td>Training Grounds and Brothel Training Room</td>
+<td style="text-align:right">20 min</td>
+<td style="text-align:right">+1</td>
+<td style="text-align:right">5/day shared</td>
+</tr>
+<tr>
+<td>Talk to Muramasa at the Inn</td>
+<td>Travelers Inn</td>
+<td style="text-align:right">20 min</td>
+<td style="text-align:right">+1</td>
+<td style="text-align:right">5/day separate</td>
+</tr>
+</tbody>
+</table></div>
+<p>The Inn uses a different relationship-action key, so a player following her full schedule can perform <strong>five daytime/evening talks plus five Inn talks</strong> in one day. The Training Grounds and Brothel Training Room share their five-use limit with each other.</p>
+<h2 id="training">Training</h2>
+<h3 id="sense-mastery">Sense Mastery</h3>
+<p>Sense Mastery is a one-time reward at the Knights Training Grounds.</p>
+<div class="guide-table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th>Requirement</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Relationship</td>
+<td>Known+ (25 points)</td>
+</tr>
+<tr>
+<td>Communication</td>
+<td>45+</td>
+</tr>
+<tr>
+<td>Time</td>
+<td>30 min</td>
+</tr>
+<tr>
+<td>Rewards</td>
+<td>+1 permanent Perception, +8 relationship</td>
+</tr>
+</tbody>
+</table></div>
+<p>The action disappears permanently after <code>muramasa_sense_mastery_completed</code> is set.</p>
+<h3 id="katana-training">Katana Training</h3>
+<div class="guide-table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Relationship</td>
+<td>Stranger+</td>
+</tr>
+<tr>
+<td>Time</td>
+<td>75 min</td>
+</tr>
+<tr>
+<td>Cost</td>
+<td>$150, 40 Energy, 10 Calm</td>
+</tr>
+<tr>
+<td>Rewards</td>
+<td>+1 permanent Perception, +1 permanent Ability, +1 relationship</td>
+</tr>
+<tr>
+<td>Limit</td>
+<td>4/day</td>
+</tr>
+</tbody>
+</table></div>
+<p>At the four-use daily limit, this costs <strong>$600, 300 minutes, 160 Energy, and 40 Calm</strong> and gives up to <strong>+4 Perception, +4 Ability, and +4 relationship</strong>, subject to normal stat caps.</p>
+<p>This is one of Muramasa's strongest practical benefits: the training remains available from Stranger and does not require completion of her later plots.</p>
+<h2 id="character-and-cross-character-plots">Character and Cross-Character Plots</h2>
+<h3 id="muramasa-at-the-training-room">Muramasa at the Training Room</h3>
+<p>Enter the Brothel Training Room from 18:00-20:00. The plot triggers automatically once and awards <strong>+5 Muramasa relationship</strong>. It has no relationship-stage or story prerequisite.</p>
+<h3 id="an-arrangement-at-the-inn">An Arrangement at the Inn</h3>
+<div class="guide-table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th>Requirement</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Location</td>
+<td>Travelers Inn</td>
+</tr>
+<tr>
+<td>Time</td>
+<td>20:00-23:00</td>
+</tr>
+<tr>
+<td>Muramasa</td>
+<td>Known+</td>
+</tr>
+<tr>
+<td>Kent</td>
+<td>Known+</td>
+</tr>
+<tr>
+<td>Trigger</td>
+<td>Automatic, once</td>
+</tr>
+<tr>
+<td>Base rewards</td>
+<td>+3 Muramasa, +3 Kent</td>
+</tr>
+</tbody>
+</table></div>
+<p>Choice bonuses:</p>
+<div class="guide-table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th>Choice</th>
+<th style="text-align:right">Muramasa</th>
+<th style="text-align:right">Kent</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Kind</td>
+<td style="text-align:right">+2</td>
+<td style="text-align:right">+2</td>
+</tr>
+<tr>
+<td>Funny</td>
+<td style="text-align:right">+2</td>
+<td style="text-align:right">+3</td>
+</tr>
+<tr>
+<td>Flirty</td>
+<td style="text-align:right">+3</td>
+<td style="text-align:right">+1</td>
+</tr>
+</tbody>
+</table></div>
+<p>Choose Flirty to maximize Muramasa or Funny to maximize Kent.</p>
+<h3 id="the-old-healers-oath">The Old Healer's Oath</h3>
+<div class="guide-table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th>Requirement</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Location</td>
+<td>Village Healer's Hut</td>
+</tr>
+<tr>
+<td>Time</td>
+<td>08:00-19:00</td>
+</tr>
+<tr>
+<td>Required plots</td>
+<td>Amelia introduction and An Arrangement at the Inn</td>
+</tr>
+<tr>
+<td>Amelia</td>
+<td>Acknowledged+</td>
+</tr>
+<tr>
+<td>Muramasa</td>
+<td>Friend+</td>
+</tr>
+<tr>
+<td>Kent</td>
+<td>Acknowledged+</td>
+</tr>
+<tr>
+<td>Presence rule</td>
+<td>Muramasa and Kent must not be vacationing</td>
+</tr>
+</tbody>
+</table></div>
+<p>Base rewards are <strong>+3 Muramasa, +4 Kent, and +6 Amelia</strong>. “Ask mercy” adds another +1 Muramasa; “ask oath” gives the largest Amelia bonus at +4.</p>
+<h2 id="unlocking-blademaster">Unlocking Blademaster</h2>
+<p>The <strong>Blademaster</strong> action is at the Knights Training Grounds.</p>
+<div class="guide-table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th>Requirement</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Muramasa relationship</td>
+<td>Close Friend+ (200 points)</td>
+</tr>
+<tr>
+<td>Fighters Guild clout</td>
+<td>200+</td>
+</tr>
+<tr>
+<td>Existing path state</td>
+<td>Blademaster not yet acquired (<code>blademaster_points &lt; 0</code>)</td>
+</tr>
+<tr>
+<td>Time</td>
+<td>300 min</td>
+</tr>
+<tr>
+<td>Variable-stat cost</td>
+<td>150 Energy, 100 Calm</td>
+</tr>
+<tr>
+<td>Money cost</td>
+<td>None</td>
+</tr>
+</tbody>
+</table></div>
+<p>The action launches <strong>The Blademaster Path</strong>, awards a base <strong>+30 Muramasa relationship</strong>, and sets Blademaster points to 0. Caring adds +5, Flirty +4, and Funny +3, so the best total is <strong>+35</strong>.</p>
+<h3 id="current-clout-progression-warning">Current clout progression warning</h3>
+<p>The current 25 Fighters Guild quests award <strong>184 Fighters Guild clout in total</strong>, but Muramasa requires <strong>200</strong>. Source search finds the quest board as the ordinary gameplay award path, while an external reward/code handler can add further Fighters Guild clout.</p>
+<p>Therefore, on an ordinary fresh save, the present quest chain alone cannot satisfy Muramasa's 200-clout gate. Additional imported/reward clout or a future balance/content change is required. This is a current progression gap, not a missing relationship requirement.</p>
+<p>The existing <strong>Fighters Guild Guide</strong> lists every quest and its reward.</p>
+<h2 id="how-the-blademaster-path-works">How the Blademaster Path Works</h2>
+<p>Blademaster is a <strong>combat path</strong>, not a normal skill in the player's <code>skills</code> list.</p>
+<p>Once acquired:</p>
+<ul>
+<li>Basic Attack and Power Strike gain Blademaster path points when used in combat.</li>
+<li>Outside the Infinity Dungeon, each qualifying action normally gives 1 point.</li>
+<li>In the Infinity Dungeon, each action gains the base point plus a random depth bonus from 1 through the current Infinity floor, then applicable affix/specialist multipliers.</li>
+<li>Blademaster rank multiplies the final damage of Basic Attack and Power Strike.</li>
+<li>Quick Attack and Stormslash belong to the Assassin path instead; they do not gain Blademaster points or its rank multiplier.</li>
+</ul>
+<h3 id="rank-thresholds-and-damage-multiplier">Rank thresholds and damage multiplier</h3>
+<div class="guide-table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th style="text-align:right">Rank</th>
+<th>Name</th>
+<th style="text-align:right">Cumulative points</th>
+<th style="text-align:right">Multiplier</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">1</td>
+<td>Novice Blade</td>
+<td style="text-align:right">0</td>
+<td style="text-align:right">1.15x</td>
+</tr>
+<tr>
+<td style="text-align:right">2</td>
+<td>Apprentice Duelist</td>
+<td style="text-align:right">100</td>
+<td style="text-align:right">1.30x</td>
+</tr>
+<tr>
+<td style="text-align:right">3</td>
+<td>Sword Initiate</td>
+<td style="text-align:right">300</td>
+<td style="text-align:right">1.45x</td>
+</tr>
+<tr>
+<td style="text-align:right">4</td>
+<td>Blade Adept</td>
+<td style="text-align:right">700</td>
+<td style="text-align:right">1.60x</td>
+</tr>
+<tr>
+<td style="text-align:right">5</td>
+<td>Steel Dancer</td>
+<td style="text-align:right">1,500</td>
+<td style="text-align:right">1.75x</td>
+</tr>
+<tr>
+<td style="text-align:right">6</td>
+<td>Cutting Wind</td>
+<td style="text-align:right">3,100</td>
+<td style="text-align:right">1.90x</td>
+</tr>
+<tr>
+<td style="text-align:right">7</td>
+<td>Duelist</td>
+<td style="text-align:right">6,300</td>
+<td style="text-align:right">2.05x</td>
+</tr>
+<tr>
+<td style="text-align:right">8</td>
+<td>Sword Saint</td>
+<td style="text-align:right">12,700</td>
+<td style="text-align:right">2.20x</td>
+</tr>
+<tr>
+<td style="text-align:right">9</td>
+<td>Stormblade</td>
+<td style="text-align:right">25,500</td>
+<td style="text-align:right">2.35x</td>
+</tr>
+<tr>
+<td style="text-align:right">10</td>
+<td>Iron Reaver</td>
+<td style="text-align:right">44,700</td>
+<td style="text-align:right">2.50x</td>
+</tr>
+<tr>
+<td style="text-align:right">20</td>
+<td>Avatar of Steel</td>
+<td style="text-align:right">3,308,607</td>
+<td style="text-align:right">4.00x</td>
+</tr>
+</tbody>
+</table></div>
+<p>Ranks continue beyond 20. Each additional rank adds 0.15x, while the required point span grows by 1.5x.</p>
+<h3 id="efficient-path-leveling">Efficient path leveling</h3>
+<ul>
+<li>Use Basic Attack when conserving Energy; it gains the same base path point as Power Strike.</li>
+<li>Use Power Strike when you also need its higher damage.</li>
+<li>Infinity Dungeon depth dramatically accelerates point gain, but only if you can survive and keep taking turns.</li>
+<li>Fast enemies that die in one action give fewer total opportunities than durable enemies, although deliberately prolonging unsafe battles is rarely worth the risk.</li>
+</ul>
+<h2 id="sword-stone-bond">Sword Stone Bond</h2>
+<p>Muramasa does <strong>not</strong> give you the Sword Stone. It is one of the rare key-item stones obtainable through the Mining game. Once you own it, its level adds flat damage to <strong>Basic Attack and Quick Attack</strong>—a different action pairing from the Blademaster path.</p>
+<p>At In Love, Muramasa gains <strong>Intimate Bonding</strong> at the Knights Training Grounds.</p>
+<div class="guide-table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th>Requirement</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Relationship</td>
+<td>In Love (3,000 points)</td>
+</tr>
+<tr>
+<td>Required item</td>
+<td>Sword Stone</td>
+</tr>
+<tr>
+<td>Time</td>
+<td>60 min</td>
+</tr>
+<tr>
+<td>Reward</td>
+<td>Sword Stone level +1</td>
+</tr>
+<tr>
+<td>Limit</td>
+<td>Once per game day with Muramasa</td>
+</tr>
+</tbody>
+</table></div>
+<p>The Stone is not consumed. The action hides for the rest of the day after use.</p>
+<p>This creates complementary physical bonuses:</p>
+<ul>
+<li>Sword Stone level: flat damage to Attack and Quick Attack.</li>
+<li>Blademaster rank: multiplicative damage to Attack and Power Strike.</li>
+</ul>
+<p>Basic Attack benefits from both.</p>
+<h2 id="recommended-route">Recommended Route</h2>
+<ol>
+<li>Meet Muramasa at the Knights Training Grounds from 08:00-18:00; choose Kind in her introduction.</li>
+<li>Use Katana Training early for permanent Perception and Ability.</li>
+<li>Use five regular talks and, when time allows, follow her to the Inn for five more.</li>
+<li>At Known with Communication 45, take Sense Mastery.</li>
+<li>Raise Kent to Known, then enter the Travelers Inn from 20:00-23:00 for An Arrangement at the Inn.</li>
+<li>Visit the Brothel Training Room from 18:00-20:00 for Muramasa's one-time scene.</li>
+<li>At Muramasa Friend, with Amelia and Kent ready, trigger The Old Healer's Oath at the Healer's Hut.</li>
+<li>Complete the Fighters Guild quest chain, while remembering its current 184-clout total still leaves you 16 short of the Blademaster gate.</li>
+<li>At Close Friend and 200 Fighters clout, rest to at least 150 Energy and 100 Calm, then take Blademaster training.</li>
+<li>Level the path with Attack and Power Strike; use Infinity Dungeon floors for faster gains.</li>
+<li>Obtain the Sword Stone through Mining and, at In Love, bond with Muramasa daily to level it.</li>
+</ol>
+<h2 id="troubleshooting">Troubleshooting</h2>
+<h3 id="muramasa-is-missing">Muramasa is missing</h3>
+<p>Check the time and location:</p>
+<ul>
+<li>Training Grounds: 08:00-18:00</li>
+<li>Brothel Training Room: 18:00-20:00</li>
+<li>Travelers Inn: 20:00-23:00</li>
+</ul>
+<p>She has no recruitment gate.</p>
+<h3 id="sense-mastery-is-missing">Sense Mastery is missing</h3>
+<p>You need Known relationship, Communication 45, and the Knights Training Grounds schedule. It disappears permanently after completion.</p>
+<h3 id="the-inn-plot-will-not-trigger">The Inn plot will not trigger</h3>
+<p>Both Muramasa and Kent must be Known, and you must enter the Travelers Inn from 20:00-23:00.</p>
+<h3 id="the-old-healers-oath-will-not-trigger">The Old Healer's Oath will not trigger</h3>
+<p>Complete Amelia's introduction and the Inn arrangement, meet all three relationship gates, visit the Healer's Hut from 08:00-19:00, and make sure Muramasa and Kent are not marked as vacationing.</p>
+<h3 id="blademaster-is-missing">Blademaster is missing</h3>
+<p>The action needs Close Friend, 200 Fighters Guild clout, and an unacquired Blademaster path. The current ordinary Fighters quest chain stops at 184 total clout, so the relationship stage alone is not enough.</p>
+<h3 id="intimate-bonding-is-missing">Intimate Bonding is missing</h3>
+<p>You need In Love, the Sword Stone in key items, the Training Grounds schedule, and must not have used Muramasa's bond already that day.</p>
+<h2 id="current-content-boundary">Current Content Boundary</h2>
+<p>Muramasa currently has no registered heart-to-heart, date, apartment visit, resort activity, favorite gift action, or brothel-worker route. Her main endpoint is the Blademaster path plus the In Love Sword Stone bond.</p>
+<h2 id="source-reference">Source Reference</h2>
+<p>Primary implementation files checked for this guide:</p>
+<ul>
+<li><code>game/characters/muramasa.rpy</code></li>
+<li><code>game/characters/muramasa_dialogue.rpy</code></li>
+<li><code>game/plot_list_registry_relationships.rpy</code></li>
+<li><code>game/plot_list_registry_community.rpy</code></li>
+<li><code>game/plot_list_registry_brothel.rpy</code></li>
+<li><code>game/plot_list_completion_handlers.rpy</code></li>
+<li><code>game/fighters_guild_quests.rpy</code></li>
+<li><code>game/faction_system.rpy</code></li>
+<li><code>game/combat_path_system.rpy</code></li>
+<li><code>game/battle_mechanics.rpy</code></li>
+<li><code>game/mining_game_core.rpy</code></li>
+<li><code>game/soul_stone_actions.rpy</code></li>
+</ul>
+</div>
+        <div class="markdown-body" data-lang-panel="zh" hidden>
+<blockquote>
+<p><strong>剧透警告：</strong> 本指南涵盖Muramasa的角色剧情、永久训练、剑术大师战斗路线、跨角色事件以及剑石羁绊。</p>
+</blockquote>
+<p>本指南以Sh1n7制作的社区内容<a href="https://chronoromancer.miraheze.org/wiki/Character:Muramasa" rel="noopener noreferrer" target="_blank">Muramasa维基页面</a>为基础加以扩充，并依照<a href="https://creativecommons.org/licenses/by-sa/4.0/" rel="noopener noreferrer" target="_blank">CC BY-SA 4.0</a>使用。下文列出的所有要求和机制效果均已根据当前游戏源代码重新核实。</p>
+<h2 id="zh-at-a-glance">一览</h2>
+<div class="guide-table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th>项目</th>
+<th>当前数值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>姓名</td>
+<td>Muramasa</td>
+</tr>
+<tr>
+<td>年龄</td>
+<td>27岁</td>
+</tr>
+<tr>
+<td>阵营</td>
+<td>中立</td>
+</tr>
+<tr>
+<td>主要地点</td>
+<td>骑士训练场</td>
+</tr>
+<tr>
+<td>偏好属性</td>
+<td>能力50、感知40、耐力45</td>
+</tr>
+<tr>
+<td>特殊关系技能</td>
+<td>战斗反射</td>
+</tr>
+<tr>
+<td>永久课程</td>
+<td>感官精通：感知+1</td>
+</tr>
+<tr>
+<td>可重复训练</td>
+<td>武士刀训练：感知+1、能力+1</td>
+</tr>
+<tr>
+<td>主要解锁</td>
+<td>剑术大师战斗路线</td>
+</tr>
+<tr>
+<td>灵魂石</td>
+<td>剑石</td>
+</tr>
+</tbody>
+</table></div>
+<p>Muramasa是一位失明的武士刀大师，能通过声音、空气流动、气味、平衡感和脚步判断战况。她的路线几乎没有恋爱场景，却能为永久属性成长和物理战斗进度带来非同寻常的价值。</p>
+<h2 id="zh-where-to-find-her">去哪里找她</h2>
+<p>Muramasa每天都遵循同一份日程。</p>
+<div class="guide-table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th>地点</th>
+<th style="text-align:right">时间</th>
+<th>可用内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>骑士训练场</td>
+<td style="text-align:right">08:00—18:00</td>
+<td>初次见面、交谈、感官精通、武士刀训练、剑术大师、剑石羁绊</td>
+</tr>
+<tr>
+<td>青楼训练室</td>
+<td style="text-align:right">18:00—20:00</td>
+<td>一次性训练室剧情和交谈</td>
+</tr>
+<tr>
+<td>旅人旅店</td>
+<td style="text-align:right">20:00—23:00</td>
+<td>交谈以及Kent／Muramasa剧情</td>
+</tr>
+</tbody>
+</table></div>
+<p>这些时间段的结束时刻不包含在内：要进入训练场，请在18:00前抵达；要进入青楼训练室，请在20:00前抵达；要进入旅店，请在23:00前抵达。</p>
+<p>她没有任何招募标记要求。只要能在日程时间内抵达骑士训练场，你就可以立刻认识Muramasa。</p>
+<h2 id="zh-first-meeting">初次见面</h2>
+<p>在08:00—18:00之间进入骑士训练场，会自动触发 <strong>失明的女剑士</strong>。</p>
+<div class="guide-table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th>奖励</th>
+<th style="text-align:right">数值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Muramasa基础好感度</td>
+<td style="text-align:right">+1</td>
+</tr>
+<tr>
+<td>友善回应</td>
+<td style="text-align:right">+3</td>
+</tr>
+<tr>
+<td>风趣回应</td>
+<td style="text-align:right">+2</td>
+</tr>
+<tr>
+<td>调情回应</td>
+<td style="text-align:right">+1</td>
+</tr>
+</tbody>
+</table></div>
+<p>友善回应带来的总收益最高，可获得 <strong>好感度+4</strong>。</p>
+<h2 id="zh-relationship-mechanics">关系机制</h2>
+<h3 id="zh-favorite-checks">偏好判定</h3>
+<div class="guide-table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th>偏好</th>
+<th style="text-align:right">门槛</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>能力</td>
+<td style="text-align:right">50</td>
+</tr>
+<tr>
+<td>感知</td>
+<td style="text-align:right">40</td>
+</tr>
+<tr>
+<td>耐力</td>
+<td style="text-align:right">45</td>
+</tr>
+<tr>
+<td>特殊技能</td>
+<td style="text-align:right">战斗反射</td>
+</tr>
+</tbody>
+</table></div>
+<p>这些条件会计入通用好感度修正系统。当前版本中，Muramasa没有最喜欢的礼物，也没有专属赠礼行动。</p>
+<h3 id="zh-talking">交谈</h3>
+<div class="guide-table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th>行动池</th>
+<th>地点</th>
+<th style="text-align:right">时间</th>
+<th style="text-align:right">收益</th>
+<th style="text-align:right">上限</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>与Muramasa交谈</td>
+<td>训练场和青楼训练室</td>
+<td style="text-align:right">20分钟</td>
+<td style="text-align:right">+1</td>
+<td style="text-align:right">两地共用5次／天</td>
+</tr>
+<tr>
+<td>在旅店与Muramasa交谈</td>
+<td>旅人旅店</td>
+<td style="text-align:right">20分钟</td>
+<td style="text-align:right">+1</td>
+<td style="text-align:right">单独计算5次／天</td>
+</tr>
+</tbody>
+</table></div>
+<p>旅店采用不同的关系行动键，因此完整跟随她日程的玩家可以在一天内完成 <strong>五次日间／晚间交谈，再加五次旅店交谈</strong>。训练场和青楼训练室则会共用五次上限。</p>
+<h2 id="zh-training">训练</h2>
+<h3 id="zh-sense-mastery">感官精通</h3>
+<p>感官精通是骑士训练场提供的一次性奖励。</p>
+<div class="guide-table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th>要求</th>
+<th>数值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>关系</td>
+<td>已知以上（25点）</td>
+</tr>
+<tr>
+<td>沟通</td>
+<td>45以上</td>
+</tr>
+<tr>
+<td>时间</td>
+<td>30分钟</td>
+</tr>
+<tr>
+<td>奖励</td>
+<td>永久感知+1、好感度+8</td>
+</tr>
+</tbody>
+</table></div>
+<p>设置<code>muramasa_sense_mastery_completed</code>后，该行动将永久消失。</p>
+<h3 id="zh-katana-training">武士刀训练</h3>
+<div class="guide-table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th>项目</th>
+<th>数值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>关系</td>
+<td>陌生人以上</td>
+</tr>
+<tr>
+<td>时间</td>
+<td>75分钟</td>
+</tr>
+<tr>
+<td>消耗</td>
+<td>$150、40精力、10镇定</td>
+</tr>
+<tr>
+<td>奖励</td>
+<td>永久感知+1、永久能力+1、好感度+1</td>
+</tr>
+<tr>
+<td>上限</td>
+<td>4次／天</td>
+</tr>
+</tbody>
+</table></div>
+<p>若每天用满四次上限，总计消耗 <strong>$600、300分钟、160精力和40镇定</strong>，最多获得 <strong>感知+4、能力+4以及好感度+4</strong>，但仍受正常属性上限约束。</p>
+<p>这是Muramasa最实用的优势之一：这项训练从陌生人阶段起便可使用，也不要求完成她后续的任何剧情。</p>
+<h2 id="zh-character-and-cross-character-plots">角色剧情与跨角色剧情</h2>
+<h3 id="zh-muramasa-at-the-training-room">训练室里的Muramasa</h3>
+<p>在18:00—20:00之间进入青楼训练室。该剧情会自动触发一次，奖励 <strong>Muramasa好感度+5</strong>，不设关系阶段或故事前置条件。</p>
+<h3 id="zh-an-arrangement-at-the-inn">旅店里的约定</h3>
+<div class="guide-table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th>要求</th>
+<th>数值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>地点</td>
+<td>旅人旅店</td>
+</tr>
+<tr>
+<td>时间</td>
+<td>20:00—23:00</td>
+</tr>
+<tr>
+<td>Muramasa</td>
+<td>已知以上</td>
+</tr>
+<tr>
+<td>Kent</td>
+<td>已知以上</td>
+</tr>
+<tr>
+<td>触发方式</td>
+<td>自动，仅一次</td>
+</tr>
+<tr>
+<td>基础奖励</td>
+<td>Muramasa+3、Kent+3</td>
+</tr>
+</tbody>
+</table></div>
+<p>选项加成：</p>
+<div class="guide-table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th>选项</th>
+<th style="text-align:right">Muramasa</th>
+<th style="text-align:right">Kent</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>友善</td>
+<td style="text-align:right">+2</td>
+<td style="text-align:right">+2</td>
+</tr>
+<tr>
+<td>风趣</td>
+<td style="text-align:right">+2</td>
+<td style="text-align:right">+3</td>
+</tr>
+<tr>
+<td>调情</td>
+<td style="text-align:right">+3</td>
+<td style="text-align:right">+1</td>
+</tr>
+</tbody>
+</table></div>
+<p>想让Muramasa的收益最大化，就选择调情；想让Kent的收益最大化，则选择风趣。</p>
+<h3 id="zh-the-old-healers-oath">老治疗师的誓言</h3>
+<div class="guide-table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th>要求</th>
+<th>数值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>地点</td>
+<td>村庄治疗师小屋</td>
+</tr>
+<tr>
+<td>时间</td>
+<td>08:00—19:00</td>
+</tr>
+<tr>
+<td>前置剧情</td>
+<td>Amelia的介绍剧情以及旅店里的约定</td>
+</tr>
+<tr>
+<td>Amelia</td>
+<td>已遇见以上</td>
+</tr>
+<tr>
+<td>Muramasa</td>
+<td>朋友以上</td>
+</tr>
+<tr>
+<td>Kent</td>
+<td>已遇见以上</td>
+</tr>
+<tr>
+<td>在场规则</td>
+<td>Muramasa和Kent均不得正在度假</td>
+</tr>
+</tbody>
+</table></div>
+<p>基础奖励为 <strong>Muramasa+3、Kent+4、Amelia+6</strong>。“请求宽恕”会使Muramasa额外+1；“请求立誓”则会为Amelia提供最高的+4加成。</p>
+<h2 id="zh-unlocking-blademaster">解锁剑术大师</h2>
+<p><strong>剑术大师</strong> 行动位于骑士训练场。</p>
+<div class="guide-table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th>要求</th>
+<th>数值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Muramasa关系</td>
+<td>亲密朋友以上（200点）</td>
+</tr>
+<tr>
+<td>战士公会声望</td>
+<td>200以上</td>
+</tr>
+<tr>
+<td>现有路线状态</td>
+<td>尚未取得剑术大师（<code>blademaster_points &lt; 0</code>）</td>
+</tr>
+<tr>
+<td>时间</td>
+<td>300分钟</td>
+</tr>
+<tr>
+<td>可变属性消耗</td>
+<td>150精力、100镇定</td>
+</tr>
+<tr>
+<td>金钱消耗</td>
+<td>无</td>
+</tr>
+</tbody>
+</table></div>
+<p>该行动会启动 <strong>剑术大师之路</strong>，提供基础 <strong>Muramasa好感度+30</strong>，并将剑术大师点数设为0。关怀回应额外+5，调情回应+4，风趣回应+3，因此最高总收益为 <strong>+35</strong>。</p>
+<h3 id="zh-current-clout-progression-warning">当前声望进度警告</h3>
+<p>当前25项战士公会任务总共只奖励 <strong>184点战士公会声望</strong>，但Muramasa要求达到 <strong>200点</strong>。检查源代码后可以确认，任务板是普通游戏流程中的声望奖励途径，而外部奖励／代码处理程序可以进一步增加战士公会声望。</p>
+<p>因此，在正常开始的新存档中，现有任务链本身不足以满足Muramasa的200点声望门槛。你还需要额外导入／奖励的声望，或等待未来的平衡调整／内容更新。这是当前的进度缺口，并非遗漏了某项关系要求。</p>
+<p>现有的 <strong>战士公会指南</strong> 列出了每项任务及其奖励。</p>
+<h2 id="zh-how-the-blademaster-path-works">剑术大师路线的运作方式</h2>
+<p>剑术大师是一条 <strong>战斗路线</strong>，并非玩家<code>skills</code>列表中的普通技能。</p>
+<p>取得后：</p>
+<ul>
+<li>在战斗中使用普通攻击和强力打击时，会获得剑术大师路线点数。</li>
+<li>在无限地下城之外，每次符合条件的行动通常会获得1点。</li>
+<li>在无限地下城中，每次行动会获得基础点数，并额外获得1至当前无限层数之间的随机深度加成，随后再应用词缀／专精者倍率。</li>
+<li>剑术大师等级会乘算提升普通攻击和强力打击的最终伤害。</li>
+<li>快速攻击和风暴斩属于刺客路线；它们既不会获得剑术大师点数，也不享受其等级倍率。</li>
+</ul>
+<h3 id="zh-rank-thresholds-and-damage-multiplier">等级门槛与伤害倍率</h3>
+<div class="guide-table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th style="text-align:right">等级</th>
+<th>名称</th>
+<th style="text-align:right">累计点数</th>
+<th style="text-align:right">倍率</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">1</td>
+<td>新手剑士</td>
+<td style="text-align:right">0</td>
+<td style="text-align:right">1.15x</td>
+</tr>
+<tr>
+<td style="text-align:right">2</td>
+<td>见习决斗者</td>
+<td style="text-align:right">100</td>
+<td style="text-align:right">1.30x</td>
+</tr>
+<tr>
+<td style="text-align:right">3</td>
+<td>剑术入门者</td>
+<td style="text-align:right">300</td>
+<td style="text-align:right">1.45x</td>
+</tr>
+<tr>
+<td style="text-align:right">4</td>
+<td>利刃高手</td>
+<td style="text-align:right">700</td>
+<td style="text-align:right">1.60x</td>
+</tr>
+<tr>
+<td style="text-align:right">5</td>
+<td>钢铁舞者</td>
+<td style="text-align:right">1,500</td>
+<td style="text-align:right">1.75x</td>
+</tr>
+<tr>
+<td style="text-align:right">6</td>
+<td>斩风者</td>
+<td style="text-align:right">3,100</td>
+<td style="text-align:right">1.90x</td>
+</tr>
+<tr>
+<td style="text-align:right">7</td>
+<td>决斗者</td>
+<td style="text-align:right">6,300</td>
+<td style="text-align:right">2.05x</td>
+</tr>
+<tr>
+<td style="text-align:right">8</td>
+<td>剑圣</td>
+<td style="text-align:right">12,700</td>
+<td style="text-align:right">2.20x</td>
+</tr>
+<tr>
+<td style="text-align:right">9</td>
+<td>风暴之刃</td>
+<td style="text-align:right">25,500</td>
+<td style="text-align:right">2.35x</td>
+</tr>
+<tr>
+<td style="text-align:right">10</td>
+<td>钢铁收割者</td>
+<td style="text-align:right">44,700</td>
+<td style="text-align:right">2.50x</td>
+</tr>
+<tr>
+<td style="text-align:right">20</td>
+<td>钢铁化身</td>
+<td style="text-align:right">3,308,607</td>
+<td style="text-align:right">4.00x</td>
+</tr>
+</tbody>
+</table></div>
+<p>等级可以继续提升至20级以上。此后每提升一级，倍率增加0.15x，而所需点数跨度会扩大至原来的1.5倍。</p>
+<h3 id="zh-efficient-path-leveling">高效提升路线等级</h3>
+<ul>
+<li>想节省精力时使用普通攻击；它获得的基础路线点数与强力打击相同。</li>
+<li>同时需要更高伤害时，使用强力打击。</li>
+<li>无限地下城的深度会显著加快点数获取，但前提是你能存活下来并不断获得行动回合。</li>
+<li>一击就会倒下的脆弱敌人提供的行动机会总数较少，但为了刷点而故意拖长危险战斗通常并不值得。</li>
+</ul>
+<h2 id="zh-sword-stone-bond">剑石羁绊</h2>
+<p>Muramasa <strong>不会</strong> 把剑石送给你。剑石是采矿小游戏中可以获得的一种稀有关键物品灵魂石。拥有后，其等级会为 <strong>普通攻击和快速攻击</strong> 增加固定伤害——这套行动组合与剑术大师路线并不相同。</p>
+<p>达到恋爱中阶段后，Muramasa会在骑士训练场解锁 <strong>亲密羁绊</strong>。</p>
+<div class="guide-table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th>要求</th>
+<th>数值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>关系</td>
+<td>恋爱中（3,000点）</td>
+</tr>
+<tr>
+<td>所需物品</td>
+<td>剑石</td>
+</tr>
+<tr>
+<td>时间</td>
+<td>60分钟</td>
+</tr>
+<tr>
+<td>奖励</td>
+<td>剑石等级+1</td>
+</tr>
+<tr>
+<td>上限</td>
+<td>与Muramasa的行动每个游戏日限一次</td>
+</tr>
+</tbody>
+</table></div>
+<p>剑石不会被消耗。使用后，该行动会在当天剩余时间内隐藏。</p>
+<p>由此形成两种互补的物理加成：</p>
+<ul>
+<li>剑石等级：为普通攻击和快速攻击增加固定伤害。</li>
+<li>剑术大师等级：乘算提升普通攻击和强力打击的伤害。</li>
+</ul>
+<p>普通攻击可以同时受益于两者。</p>
+<h2 id="zh-recommended-route">推荐路线</h2>
+<ol>
+<li>在08:00—18:00之间前往骑士训练场与Muramasa见面；在她的介绍剧情中选择友善回应。</li>
+<li>尽早进行武士刀训练，永久提升感知和能力。</li>
+<li>完成五次常规交谈；时间允许时，再跟她前往旅店进行五次交谈。</li>
+<li>达到已知阶段且沟通达到45后，学习感官精通。</li>
+<li>将Kent提升至已知阶段，然后在20:00—23:00之间进入旅人旅店，触发旅店里的约定。</li>
+<li>在18:00—20:00之间前往青楼训练室，观看Muramasa的一次性场景。</li>
+<li>Muramasa达到朋友阶段，Amelia和Kent也满足条件后，在治疗师小屋触发老治疗师的誓言。</li>
+<li>完成战士公会任务链，同时牢记当前任务总共只提供184点声望，距离剑术大师门槛仍差16点。</li>
+<li>达到亲密朋友阶段并拥有200点战士公会声望后，将精力恢复至至少150、镇定恢复至至少100，再接受剑术大师训练。</li>
+<li>使用普通攻击和强力打击提升路线等级；前往无限地下城楼层可以更快积累点数。</li>
+<li>通过采矿获得剑石；达到恋爱中阶段后，每天与Muramasa建立羁绊以提升剑石等级。</li>
+</ol>
+<h2 id="zh-troubleshooting">疑难解答</h2>
+<h3 id="zh-muramasa-is-missing">找不到Muramasa</h3>
+<p>检查时间和地点：</p>
+<ul>
+<li>训练场：08:00—18:00</li>
+<li>青楼训练室：18:00—20:00</li>
+<li>旅人旅店：20:00—23:00</li>
+</ul>
+<p>她没有招募门槛。</p>
+<h3 id="zh-sense-mastery-is-missing">找不到感官精通</h3>
+<p>你需要达到已知关系阶段、沟通达到45，并在骑士训练场的日程时间内前往。完成后，该行动会永久消失。</p>
+<h3 id="zh-the-inn-plot-will-not-trigger">旅店剧情没有触发</h3>
+<p>Muramasa和Kent都必须达到已知阶段，而且你必须在20:00—23:00之间进入旅人旅店。</p>
+<h3 id="zh-the-old-healers-oath-will-not-trigger">老治疗师的誓言没有触发</h3>
+<p>完成Amelia的介绍剧情和旅店里的约定，满足三人的全部关系门槛，在08:00—19:00之间前往治疗师小屋，并确保Muramasa和Kent没有被标记为正在度假。</p>
+<h3 id="zh-blademaster-is-missing">找不到剑术大师</h3>
+<p>该行动要求达到亲密朋友阶段、拥有200点战士公会声望，并且尚未取得剑术大师路线。当前普通战士公会任务链到184点总声望便会结束，因此只满足关系阶段还不够。</p>
+<h3 id="zh-intimate-bonding-is-missing">找不到亲密羁绊</h3>
+<p>你必须达到恋爱中阶段，在关键物品中持有剑石，于骑士训练场的日程时间内前往，并且当天尚未与Muramasa进行过羁绊行动。</p>
+<h2 id="zh-current-content-boundary">当前内容边界</h2>
+<p>Muramasa目前没有已登记的交心谈话、约会、公寓拜访、度假村活动、最爱礼物行动或青楼员工路线。她的主要终点是剑术大师路线，以及恋爱中阶段的剑石羁绊。</p>
+<h2 id="zh-source-reference">源代码参考</h2>
+<p>本指南核查的主要实现文件：</p>
+<ul>
+<li><code>game/characters/muramasa.rpy</code></li>
+<li><code>game/characters/muramasa_dialogue.rpy</code></li>
+<li><code>game/plot_list_registry_relationships.rpy</code></li>
+<li><code>game/plot_list_registry_community.rpy</code></li>
+<li><code>game/plot_list_registry_brothel.rpy</code></li>
+<li><code>game/plot_list_completion_handlers.rpy</code></li>
+<li><code>game/fighters_guild_quests.rpy</code></li>
+<li><code>game/faction_system.rpy</code></li>
+<li><code>game/combat_path_system.rpy</code></li>
+<li><code>game/battle_mechanics.rpy</code></li>
+<li><code>game/mining_game_core.rpy</code></li>
+<li><code>game/soul_stone_actions.rpy</code></li>
+</ul>
+</div>
+        <div class="guide-community-note"><div><strong data-copy-en="Community discoveries" data-copy-zh="社区发现">Community discoveries</strong><p data-copy-en="These official guides track the current game. The player-maintained wiki may contain additional strategies and discoveries." data-copy-zh="这些官方攻略与当前游戏版本保持一致；玩家维护的 Wiki 可能还收录其他策略与社区发现。">These official guides track the current game. The player-maintained wiki may contain additional strategies and discoveries.</p></div><a href="https://chronoromancer.miraheze.org/wiki/Main_Page" target="_blank" rel="noopener noreferrer" data-copy-en="Visit Player Wiki →" data-copy-zh="访问玩家 Wiki →">Visit Player Wiki →</a></div>
+        <nav class="guide-pager" aria-label="Adjacent guides"><a href="momosagi.html"><span data-copy-en="Previous guide" data-copy-zh="上一篇攻略">Previous guide</span><strong data-copy-en="Momosagi — Complete Walkthrough" data-copy-zh="Momosagi——完整攻略">Momosagi — Complete Walkthrough</strong></a><a href="rachel.html"><span data-copy-en="Next guide" data-copy-zh="下一篇攻略">Next guide</span><strong data-copy-en="Rachel — Complete Walkthrough" data-copy-zh="Rachel——完整攻略">Rachel — Complete Walkthrough</strong></a></nav>
+      </article>
+    </div>
+  </main>
+  <footer class="site-footer"><div class="container"><div class="footer-grid">
+    <div class="footer-brand"><img src="../assets/images/v2/logo.png" alt="Chronoromancer"><p data-i18n="footerDescription">An adults-only time-travel sandbox RPG. Public website artwork is SFW.</p></div>
+    <div class="footer-column"><h2 data-i18n="footerExplore">Explore</h2><a href="../story.html" data-i18n="navStory">Story</a><a href="../characters.html" data-i18n="navCharacters">Characters</a><a href="../walkthroughs.html" data-i18n="navGuides">Guides</a><a href="../screenshots.html" data-i18n="navGallery">Gallery</a><a href="../main.html#download" data-i18n="navDownload">Download</a></div>
+    <div class="footer-column"><h2 data-i18n="footerCommunity">Community</h2><a data-config-link="community.discord" target="_blank" rel="noopener noreferrer">Discord</a><a data-config-link="community.telegram" target="_blank" rel="noopener noreferrer">Telegram</a><a data-config-link="community.patreon" target="_blank" rel="noopener noreferrer">Patreon</a><a data-config-link="community.wiki" target="_blank" rel="noopener noreferrer" data-i18n="navWiki">Player Wiki</a></div>
+    <div class="footer-column"><h2 data-i18n="footerLegal">Legal</h2><a href="../privacy.html" data-i18n="footerPrivacy">Privacy</a><a href="../terms.html" data-i18n="footerTerms">Terms</a></div>
+  </div><div class="footer-bottom"><span>© <span data-current-year></span> <span data-i18n="copyright">Chronoromancer Studio. All rights reserved.</span></span><span data-copy-en="Official guides · English / Simplified Chinese" data-copy-zh="官方攻略 · English / 简体中文">Official guides · English / Simplified Chinese</span></div></div></footer>
+  <script src="../assets/js/site-config.js"></script><script src="../assets/js/site.js"></script><script src="../assets/js/walkthroughs.js"></script>
+</body></html>

@@ -1,0 +1,871 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="This guide expands on Sh1n7&#x27;s community-created Ruxandra wiki page, used under CC BY-SA 4.0. All requirements, prices, and effects below were rechecked against the current game source."><link rel="icon" type="image/png" href="../assets/images/v2/favicon.png">
+  <link rel="stylesheet" href="../assets/css/style.css"><link rel="stylesheet" href="../assets/css/walkthroughs.css">
+  <title>Magistra Ruxandra Walkthrough and Blood Alchemy Guide | Chronoromancer Guides</title></head>
+<body class="guide-page" data-title-en="Magistra Ruxandra Walkthrough and Blood Alchemy Guide | Chronoromancer Guides" data-title-zh="导师Ruxandra攻略与血液炼金指南 | Chronoromancer 官方攻略">
+  <div class="reading-progress" data-reading-progress></div>
+  <a class="skip-link" href="#content" data-copy-en="Skip to content" data-copy-zh="跳至正文">Skip to content</a>
+  <div class="maturity-bar" data-copy-en="18+ adults-only game · Guides may describe mature game systems" data-copy-zh="18+ 仅限成人游戏 · 攻略可能涉及成人游戏系统">18+ adults-only game · Guides may describe mature game systems</div>
+  <header class="site-header"><div class="container header-inner">
+    <a class="brand" href="../main.html" aria-label="Chronoromancer home"><img src="../assets/images/v2/logo.png" alt="Chronoromancer"></a>
+    <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-label="Open navigation"><span></span><span></span><span></span></button>
+    <nav class="site-nav" data-nav-menu aria-label="Primary navigation">
+      <a href="../main.html" data-i18n="navHome">Home</a>
+      <a href="../story.html" data-i18n="navStory">Story</a>
+      <a href="../characters.html" data-i18n="navCharacters">Characters</a>
+      <a class="is-active" href="../walkthroughs.html" data-i18n="navGuides">Guides</a>
+      <a href="../screenshots.html" data-i18n="navGallery">Gallery</a>
+      <a data-config-link="community.wiki" target="_blank" rel="noopener noreferrer" data-i18n="navWiki">Player Wiki</a>
+      <a href="../main.html#download" data-i18n="navDownload">Download</a>
+      <div class="language-switch" role="group" aria-label="Language"><button type="button" data-language="en" aria-pressed="true">EN</button><button type="button" data-language="zh" aria-pressed="false">简体中文</button></div>
+    </nav>
+  </div></header>
+  <main id="content">
+    <section class="guide-masthead"><div class="container">
+      <nav class="breadcrumb" aria-label="Breadcrumb"><a href="../walkthroughs.html" data-copy-en="Official Guides" data-copy-zh="官方攻略">Official Guides</a><span>/</span><span data-copy-en="Character Routes" data-copy-zh="角色路线">Character Routes</span></nav>
+      <p class="eyebrow" data-copy-en="Version-matched official guide" data-copy-zh="与当前版本匹配的官方攻略">Version-matched official guide</p>
+      <h1 data-copy-en="Magistra Ruxandra Walkthrough and Blood Alchemy Guide" data-copy-zh="导师Ruxandra攻略与血液炼金指南">Magistra Ruxandra Walkthrough and Blood Alchemy Guide</h1>
+      <div class="guide-meta"><span data-copy-en="Character Routes" data-copy-zh="角色路线">Character Routes</span><span data-copy-en="Simplified Chinese available" data-copy-zh="简体中文译文已上线">Simplified Chinese available</span><span data-site-version>V0.9.6.0</span></div>
+    </div></section>
+    <div class="container guide-layout">
+      <aside class="guide-sidebar">
+        <a class="back-to-library" href="../walkthroughs.html" data-copy-en="← All guides" data-copy-zh="← 全部攻略">← All guides</a>
+        <div data-lang-panel="en"><h2>On this page</h2><nav class="guide-toc"><a class="toc-level-2" href="#at-a-glance">At a Glance</a><a class="toc-level-2" href="#finding-ruxandra">Finding Ruxandra</a><a class="toc-level-3" href="#dungeon-route">Dungeon route</a><a class="toc-level-3" href="#story-route">Story route</a><a class="toc-level-2" href="#first-meeting">First Meeting</a><a class="toc-level-2" href="#relationship-mechanics">Relationship Mechanics</a><a class="toc-level-3" href="#favorite-checks">Favorite checks</a><a class="toc-level-3" href="#repeatable-action">Repeatable action</a><a class="toc-level-2" href="#vampire-lore-route">Vampire Lore Route</a><a class="toc-level-2" href="#the-causal-window">The Causal Window</a><a class="toc-level-2" href="#blood-orbs">Blood Orbs</a><a class="toc-level-3" href="#reliable-farming-information">Reliable farming information</a><a class="toc-level-2" href="#blood-alchemy-shop">Blood Alchemy Shop</a><a class="toc-level-3" href="#one-time-artifacts">One-time artifacts</a><a class="toc-level-3" href="#repeatable-refinements">Repeatable refinements</a><a class="toc-level-2" href="#artifact-buying-priorities">Artifact Buying Priorities</a><a class="toc-level-3" href="#general-purpose-build">General-purpose build</a><a class="toc-level-3" href="#physical-build">Physical build</a><a class="toc-level-3" href="#magic-build">Magic build</a><a class="toc-level-3" href="#relationship-focused-build">Relationship-focused build</a><a class="toc-level-2" href="#recommended-progression">Recommended Progression</a><a class="toc-level-2" href="#troubleshooting">Troubleshooting</a><a class="toc-level-3" href="#ruxandra-is-not-in-the-laboratory">Ruxandra is not in the laboratory</a><a class="toc-level-3" href="#the-floor-23-castle-did-not-remain-as-a-map-shortcut">The Floor 23 castle did not remain as a map shortcut</a><a class="toc-level-3" href="#blood-alchemy-is-missing">Blood Alchemy is missing</a><a class="toc-level-3" href="#crimson-grail-is-missing">Crimson Grail is missing</a><a class="toc-level-3" href="#a-lore-scene-will-not-trigger">A lore scene will not trigger</a><a class="toc-level-3" href="#i-used-all-my-blood-orbs-raising-vampire">I used all my Blood Orbs raising Vampire</a><a class="toc-level-2" href="#current-content-boundary">Current Content Boundary</a><a class="toc-level-2" href="#source-reference">Source Reference</a></nav></div>
+        <div data-lang-panel="zh" hidden><h2>本页目录</h2><nav class="guide-toc"><a class="toc-level-2" href="#zh-at-a-glance">一览</a><a class="toc-level-2" href="#zh-finding-ruxandra">找到Ruxandra</a><a class="toc-level-3" href="#zh-dungeon-route">地牢路线</a><a class="toc-level-3" href="#zh-story-route">剧情路线</a><a class="toc-level-2" href="#zh-first-meeting">初次见面</a><a class="toc-level-2" href="#zh-relationship-mechanics">关系机制</a><a class="toc-level-3" href="#zh-favorite-checks">偏好检定</a><a class="toc-level-3" href="#zh-repeatable-action">可重复行动</a><a class="toc-level-2" href="#zh-vampire-lore-route">吸血鬼知识路线</a><a class="toc-level-2" href="#zh-the-causal-window">因果之窗</a><a class="toc-level-2" href="#zh-blood-orbs">鲜血宝珠</a><a class="toc-level-3" href="#zh-reliable-farming-information">可靠刷取信息</a><a class="toc-level-2" href="#zh-blood-alchemy-shop">血液炼金商店</a><a class="toc-level-3" href="#zh-one-time-artifacts">一次性神器</a><a class="toc-level-3" href="#zh-repeatable-refinements">可重复精炼</a><a class="toc-level-2" href="#zh-artifact-buying-priorities">神器购买优先级</a><a class="toc-level-3" href="#zh-general-purpose-build">通用构筑</a><a class="toc-level-3" href="#zh-physical-build">物理构筑</a><a class="toc-level-3" href="#zh-magic-build">魔法构筑</a><a class="toc-level-3" href="#zh-relationship-focused-build">关系向构筑</a><a class="toc-level-2" href="#zh-recommended-progression">推荐推进顺序</a><a class="toc-level-2" href="#zh-troubleshooting">故障排查</a><a class="toc-level-3" href="#zh-ruxandra-is-not-in-the-laboratory">实验室里没有Ruxandra</a><a class="toc-level-3" href="#zh-the-floor-23-castle-did-not-remain-as-a-map-shortcut">第23层城堡没有保留为地图捷径</a><a class="toc-level-3" href="#zh-blood-alchemy-is-missing">找不到血液炼金</a><a class="toc-level-3" href="#zh-crimson-grail-is-missing">找不到猩红圣杯</a><a class="toc-level-3" href="#zh-a-lore-scene-will-not-trigger">知识剧情没有触发</a><a class="toc-level-3" href="#zh-i-used-all-my-blood-orbs-raising-vampire">我为了提高吸血鬼属性，用光了所有鲜血宝珠</a><a class="toc-level-2" href="#zh-current-content-boundary">当前内容边界</a><a class="toc-level-2" href="#zh-source-reference">源文件参考</a></nav></div>
+      </aside>
+      <article class="guide-content">
+        <div class="spoiler-notice"><strong data-copy-en="Guide notice" data-copy-zh="攻略提示">Guide notice</strong><span data-copy-en="This page contains gameplay and story spoilers and may describe mature systems." data-copy-zh="本页包含玩法与剧情剧透，并可能涉及成人游戏系统。">This page contains gameplay and story spoilers and may describe mature systems.</span></div>
+        <div class="markdown-body" data-lang-panel="en">
+<blockquote>
+<p><strong>Spoiler warning:</strong> This guide covers the vampire depths, late-story vampire access, Ruxandra's lore scenes, Blood Orbs, and every current Blood Alchemy purchase.</p>
+</blockquote>
+<p>This guide expands on Sh1n7's community-created <a href="https://chronoromancer.miraheze.org/wiki/Character:Ruxandra" rel="noopener noreferrer" target="_blank">Ruxandra wiki page</a>, used under <a href="https://creativecommons.org/licenses/by-sa/4.0/" rel="noopener noreferrer" target="_blank">CC BY-SA 4.0</a>. All requirements, prices, and effects below were rechecked against the current game source.</p>
+<h2 id="at-a-glance">At a Glance</h2>
+<div class="guide-table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th>Detail</th>
+<th>Current value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Full name</td>
+<td>Magistra Ruxandra</td>
+</tr>
+<tr>
+<td>Location</td>
+<td>Vampire Laboratory</td>
+</tr>
+<tr>
+<td>Schedule</td>
+<td>00:00-24:00, every day</td>
+</tr>
+<tr>
+<td>Earliest dungeon route</td>
+<td>Special castle on Dungeon Floor 23</td>
+</tr>
+<tr>
+<td>Later story route</td>
+<td>City Library basement after Story Beat 61</td>
+</tr>
+<tr>
+<td>Alignment</td>
+<td>Evil</td>
+</tr>
+<tr>
+<td>Age</td>
+<td>260</td>
+</tr>
+<tr>
+<td>Favorite stats</td>
+<td>Vampire 50, Mystic 80, Intelligence 95</td>
+</tr>
+<tr>
+<td>Special relationship skill</td>
+<td>Alchemy</td>
+</tr>
+<tr>
+<td>Shop unlock</td>
+<td>Effective Vampire 25</td>
+</tr>
+<tr>
+<td>Shop currency</td>
+<td>Blood Orbs</td>
+</tr>
+</tbody>
+</table></div>
+<p>Ruxandra is the Sangrael vampire lair's alchemist. She treats vampirism as a chemical and biological system, and her route develops as your Vampire stat rises.</p>
+<h2 id="finding-ruxandra">Finding Ruxandra</h2>
+<p>Ruxandra is always present in the <strong>Vampire Laboratory</strong>. From the Vampire Lair's main room, choose <strong>Vampire Laboratory</strong>.</p>
+<p>There are two ways into the lair:</p>
+<h3 id="dungeon-route">Dungeon route</h3>
+<p>Dungeon Floor 23 uses a special Vampire Castle layout. Stepping onto its Castle tile transfers you to the Vampire Lair. The lair's <strong>Return to Dungeon</strong> portal returns you to the stored Floor 23 position and map.</p>
+<p>This route does not require Story Beat 61.</p>
+<h3 id="story-route">Story route</h3>
+<p>Complete <strong>Story Beat 61: A Vampire's Proposal</strong>. It triggers at the City Library from 20:00-22:00 after Story Beat 60. Completion unlocks the route:</p>
+<p><strong>City Library → Library Basement → Dark Corridor → Vampire Lair → Vampire Laboratory</strong></p>
+<p>This gives you a convenient present-era entrance without navigating Floor 23 again. See the <strong>Complete Story Beats Guide</strong> for the full prerequisite chain.</p>
+<h2 id="first-meeting">First Meeting</h2>
+<p>Entering the Vampire Laboratory for the first time automatically triggers <strong>Magistra Ruxandra</strong>.</p>
+<div class="guide-table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th>Reward</th>
+<th style="text-align:right">Amount</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Base Ruxandra relationship</td>
+<td style="text-align:right">+5</td>
+</tr>
+<tr>
+<td>Caring response</td>
+<td style="text-align:right">+3</td>
+</tr>
+<tr>
+<td>Funny response</td>
+<td style="text-align:right">+2</td>
+</tr>
+<tr>
+<td>Flirty response</td>
+<td style="text-align:right">+3</td>
+</tr>
+</tbody>
+</table></div>
+<p>The best introduction therefore awards <strong>+8 relationship</strong>.</p>
+<h2 id="relationship-mechanics">Relationship Mechanics</h2>
+<p>Ruxandra uses the universal relationship stages, but her implemented personal content is based mainly on the Vampire stat rather than relationship-stage gates.</p>
+<h3 id="favorite-checks">Favorite checks</h3>
+<div class="guide-table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th>Favorite</th>
+<th style="text-align:right">Threshold</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Vampire</td>
+<td style="text-align:right">50</td>
+</tr>
+<tr>
+<td>Mystic</td>
+<td style="text-align:right">80</td>
+</tr>
+<tr>
+<td>Intelligence</td>
+<td style="text-align:right">95</td>
+</tr>
+<tr>
+<td>Special skill</td>
+<td style="text-align:right">Alchemy</td>
+</tr>
+</tbody>
+</table></div>
+<p>These checks interact with the universal relationship-point modifier system. Ruxandra is Evil-aligned, so your current alignment axis can also alter relationship gains.</p>
+<h3 id="repeatable-action">Repeatable action</h3>
+<div class="guide-table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th>Action</th>
+<th>Requirement</th>
+<th style="text-align:right">Time</th>
+<th style="text-align:right">Base gain</th>
+<th style="text-align:right">Limit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Talk to Ruxandra</td>
+<td>Stranger+</td>
+<td style="text-align:right">20 min</td>
+<td style="text-align:right">+1</td>
+<td style="text-align:right">5/day</td>
+</tr>
+</tbody>
+</table></div>
+<p>She has no favorite gift or dedicated gift action in the current implementation. She also has no current heart-to-heart, date, apartment visit, resort route, brothel-worker route, or Soul Stone bonding action.</p>
+<h2 id="vampire-lore-route">Vampire Lore Route</h2>
+<p>Ruxandra's six lore scenes trigger automatically in the Laboratory. They must be completed in order.</p>
+<div class="guide-table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th style="text-align:right">Order</th>
+<th style="text-align:right">Vampire required</th>
+<th>Plot</th>
+<th style="text-align:right">Base reward</th>
+<th style="text-align:right">Best choice bonus</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">1</td>
+<td style="text-align:right">10</td>
+<td>Blood As Data</td>
+<td style="text-align:right">+5</td>
+<td style="text-align:right">+3</td>
+</tr>
+<tr>
+<td style="text-align:right">2</td>
+<td style="text-align:right">20</td>
+<td>The Obedient Prison</td>
+<td style="text-align:right">+5</td>
+<td style="text-align:right">+3</td>
+</tr>
+<tr>
+<td style="text-align:right">3</td>
+<td style="text-align:right">30</td>
+<td>The Negotiating Body</td>
+<td style="text-align:right">+5</td>
+<td style="text-align:right">+3</td>
+</tr>
+<tr>
+<td style="text-align:right">4</td>
+<td style="text-align:right">40</td>
+<td>Sunlight Is An Insult</td>
+<td style="text-align:right">+5</td>
+<td style="text-align:right">+3</td>
+</tr>
+<tr>
+<td style="text-align:right">5</td>
+<td style="text-align:right">50</td>
+<td>The Vanishing Problem</td>
+<td style="text-align:right">+5</td>
+<td style="text-align:right">+3</td>
+</tr>
+<tr>
+<td style="text-align:right">6</td>
+<td style="text-align:right">60</td>
+<td>The Second Nutrient</td>
+<td style="text-align:right">+5</td>
+<td style="text-align:right">+3</td>
+</tr>
+</tbody>
+</table></div>
+<p>For each scene, the nice and flirty choices are both registered at +3; the funny choice is +2. A best-choice completion awards <strong>+8 Ruxandra relationship per lore scene</strong>, or <strong>+48</strong> across all six.</p>
+<p>If you already have a high Vampire stat when you first meet her, only the next eligible scene will trigger at a time. Leave and re-enter the Laboratory to advance through the chain.</p>
+<h2 id="the-causal-window">The Causal Window</h2>
+<p>Ruxandra has one cross-character plot with Torea.</p>
+<div class="guide-table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th>Requirement</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Location</td>
+<td>Vampire Laboratory</td>
+</tr>
+<tr>
+<td>Ruxandra prerequisite</td>
+<td>Magistra Ruxandra introduction complete</td>
+</tr>
+<tr>
+<td>Torea relationship</td>
+<td>Acquaintance+</td>
+</tr>
+<tr>
+<td>Trigger</td>
+<td>Automatic, once</td>
+</tr>
+<tr>
+<td>Base rewards</td>
+<td>+8 Ruxandra, +5 Torea</td>
+</tr>
+</tbody>
+</table></div>
+<p>The choices distribute additional points between Ruxandra and Torea. This plot is independent of the six-step lore order; it does not require a particular Vampire threshold.</p>
+<h2 id="blood-orbs">Blood Orbs</h2>
+<p>Blood Orbs have two competing uses:</p>
+<ol>
+<li><strong>Use one from inventory:</strong> gain +1 base Vampire, up to 999, and fully restore Health, Energy, Calm, and Satiation.</li>
+<li><strong>Spend them at Blood Alchemy:</strong> buy permanent artifacts or repeatable upgrades.</li>
+</ol>
+<p>Because the shop itself requires effective Vampire 25, early Orbs may need to be consumed to reach the unlock. After that, decide whether the full restore and Vampire point are more valuable than saving toward an artifact.</p>
+<h3 id="reliable-farming-information">Reliable farming information</h3>
+<ul>
+<li>Vampire enemies on Dungeon Floors 21-25 have a <strong>15% Blood Orb drop roll</strong> after victory unless their data marks a guaranteed drop.</li>
+<li>Blood Orb drops are separate from the normal pickaxe drop roll.</li>
+<li>Vampire-themed random scenarios on Floors 21-25 can award, trade, consume, or otherwise involve Blood Orbs.</li>
+<li>The Goblin Blood Orb scenario offers one Blood Orb for <strong>5 Dragon Coins</strong>.</li>
+<li>Some external reward systems can grant Orbs, but dungeon combat is the repeatable baseline source.</li>
+</ul>
+<p>The dungeon's vampire-scenario priority check has a 50% chance to select from its vampire-specific scenario pool on Floors 21-25 when a random scenario fires. Anti-repeat tracking prevents the same small subset from appearing continuously.</p>
+<h2 id="blood-alchemy-shop">Blood Alchemy Shop</h2>
+<p>The <strong>Blood Alchemy</strong> action appears in the Vampire Laboratory at <strong>effective Vampire 25</strong>. Opening it costs no time or money. Every shop item currently has the same Vampire 25 visibility requirement.</p>
+<h3 id="one-time-artifacts">One-time artifacts</h3>
+<div class="guide-table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th>Item</th>
+<th style="text-align:right">Blood Orbs</th>
+<th>Exact current effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Vampire Fangs</td>
+<td style="text-align:right">55</td>
+<td>Physical Attack, Quick Attack, Stormslash, and Power Strike have a 15% proc that bypasses enemy defense and adds Vampire-based damage. Vampirism raises the proc to 18% and strengthens the damage roll.</td>
+</tr>
+<tr>
+<td>Hypnotic Gaze</td>
+<td style="text-align:right">50</td>
+<td>Adds +10 percentage points to Sleep success after floor resistance; raises the normal Hypnotic-Gaze cap and raises base boss Sleep chance from 13% to 20%.</td>
+</tr>
+<tr>
+<td>Nocturnal Cloak</td>
+<td style="text-align:right">50</td>
+<td>Adds +1 effective armor level for damage reduction.</td>
+</tr>
+<tr>
+<td>Eye of Batman</td>
+<td style="text-align:right">60</td>
+<td>Adds +50 maximum Health, +50 maximum Energy, and +50 maximum Calm.</td>
+</tr>
+<tr>
+<td>Draculas Ring</td>
+<td style="text-align:right">70</td>
+<td>Adds +1 to the maximum relationship-point roll when your alignment axis matches the NPC's.</td>
+</tr>
+<tr>
+<td>Vampire Grimoire</td>
+<td style="text-align:right">80</td>
+<td>Offensive magic has a 15% proc to bypass enemy damage reduction, resistance, absorption, and strong-element resistance while preserving weakness bonuses; Vampirism raises the proc to 18% and strengthens its Vampire damage.</td>
+</tr>
+</tbody>
+</table></div>
+<p>Buying all six unique artifacts costs <strong>365 Blood Orbs</strong>. Owned artifacts remain owned and cannot be repurchased.</p>
+<p>The in-game key is spelled <strong>Draculas Ring</strong> without an apostrophe; that exact spelling matters in save data and effect checks.</p>
+<h3 id="repeatable-refinements">Repeatable refinements</h3>
+<div class="guide-table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th>Item</th>
+<th style="text-align:right">Blood Orbs</th>
+<th>Requirement</th>
+<th>Exact current effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Blood Exchange</td>
+<td style="text-align:right">10</td>
+<td>Vampire 25</td>
+<td>Permanently adds +1 maximum Energy.</td>
+</tr>
+<tr>
+<td>Crimson Grail</td>
+<td style="text-align:right">20</td>
+<td>Vampire 25 and own Elemental Stone</td>
+<td>Adds +1 Elemental Stone level.</td>
+</tr>
+</tbody>
+</table></div>
+<p>Both refinements can be purchased repeatedly. Crimson Grail is hidden until the Elemental Stone is in your key items, and it raises the Stone's level without consuming it.</p>
+<h2 id="artifact-buying-priorities">Artifact Buying Priorities</h2>
+<p>There is no universal best order, but these routes minimize wasted Orbs:</p>
+<h3 id="general-purpose-build">General-purpose build</h3>
+<ol>
+<li><strong>Eye of Batman</strong> for +50 to all three main combat pools.</li>
+<li><strong>Nocturnal Cloak</strong> for always-on physical damage reduction.</li>
+<li>Choose Fangs or Grimoire based on your main offense.</li>
+<li>Add Hypnotic Gaze if Sleep is part of your control plan.</li>
+</ol>
+<h3 id="physical-build">Physical build</h3>
+<ol>
+<li>Vampire Fangs</li>
+<li>Eye of Batman</li>
+<li>Nocturnal Cloak</li>
+<li>Hypnotic Gaze or Draculas Ring to taste</li>
+<li>Vampire Grimoire last if you rarely cast offensive magic</li>
+</ol>
+<h3 id="magic-build">Magic build</h3>
+<ol>
+<li>Vampire Grimoire</li>
+<li>Hypnotic Gaze if you use Sleep</li>
+<li>Eye of Batman</li>
+<li>Nocturnal Cloak</li>
+<li>Vampire Fangs when physical backup attacks become relevant</li>
+</ol>
+<h3 id="relationship-focused-build">Relationship-focused build</h3>
+<p>Draculas Ring only improves the top end of a relationship gain when your alignment axis matches the NPC's. It is valuable across many characters if you maintain a stable Good, Neutral, or Evil axis, but it does nothing while the alignment system treats you as Unaligned and does not soften opposite-alignment penalties.</p>
+<h2 id="recommended-progression">Recommended Progression</h2>
+<ol>
+<li>Reach the vampire depths and enter the Floor 23 castle.</li>
+<li>Meet Ruxandra in the Laboratory and choose Caring or Flirty for the best introduction bonus.</li>
+<li>Farm Blood Orbs from vampire enemies on Floors 21-25.</li>
+<li>Consume enough Orbs to reach effective Vampire 25 if necessary; remember that every consumed Orb is one less shop currency.</li>
+<li>Re-enter the Laboratory at Vampire 10 and 20 to clear the first two lore scenes.</li>
+<li>At Vampire 25, buy the artifacts most useful to your build.</li>
+<li>Continue the lore chain at Vampire 30, 40, 50, and 60.</li>
+<li>Raise Torea to Acquaintance and enter the Laboratory for <strong>The Causal Window</strong>.</li>
+<li>Complete Story Beat 61 when available to unlock the convenient City Library route.</li>
+<li>After buying the unique artifacts you want, direct surplus Orbs into Blood Exchange or Crimson Grail.</li>
+</ol>
+<h2 id="troubleshooting">Troubleshooting</h2>
+<h3 id="ruxandra-is-not-in-the-laboratory">Ruxandra is not in the laboratory</h3>
+<p>She is scheduled there all day, every day. Confirm that you are in <strong>Vampire Laboratory</strong>, not Carmilla's Chamber or the Vampire Lounge. From the main lair, choose the Laboratory travel action.</p>
+<h3 id="the-floor-23-castle-did-not-remain-as-a-map-shortcut">The Floor 23 castle did not remain as a map shortcut</h3>
+<p>The floor route returns you to the stored dungeon tile through the lair portal. Story Beat 61 separately unlocks a permanent present-era route through the City Library basement.</p>
+<h3 id="blood-alchemy-is-missing">Blood Alchemy is missing</h3>
+<p>The action requires <strong>effective Vampire 25</strong>. It does not require Ruxandra relationship progress or completion of a particular lore scene.</p>
+<h3 id="crimson-grail-is-missing">Crimson Grail is missing</h3>
+<p>You must be Vampire 25 and already own the Elemental Stone.</p>
+<h3 id="a-lore-scene-will-not-trigger">A lore scene will not trigger</h3>
+<ul>
+<li>Complete Ruxandra's introduction.</li>
+<li>Reach the required Vampire value.</li>
+<li>Complete the previous lore scene.</li>
+<li>Leave and re-enter the Vampire Laboratory after another automatic plot finishes.</li>
+</ul>
+<h3 id="i-used-all-my-blood-orbs-raising-vampire">I used all my Blood Orbs raising Vampire</h3>
+<p>This is not a dead end. Continue fighting vampire enemies on Floors 21-25 and explore their scenario tiles. The shop is designed around repeatable Orb acquisition.</p>
+<h2 id="current-content-boundary">Current Content Boundary</h2>
+<p><strong>The Second Nutrient</strong> at Vampire 60 is Ruxandra's current final personal lore scene. Relationship points can continue increasing through daily talks and universal modifiers, but no higher-stage Ruxandra romance scene, heart-to-heart, date, or apartment content is currently registered.</p>
+<h2 id="source-reference">Source Reference</h2>
+<p>Primary implementation files checked for this guide:</p>
+<ul>
+<li><code>game/characters/ruxandra.rpy</code></li>
+<li><code>game/ruxandra_alchemy_shop_system.rpy</code></li>
+<li><code>game/plot_list_registry_tutorials.rpy</code></li>
+<li><code>game/plot_list_registry_relationships.rpy</code></li>
+<li><code>game/dungeon_generation_core.rpy</code></li>
+<li><code>game/dungeon_interactions_core.rpy</code></li>
+<li><code>game/dungeon_scenarios.rpy</code></li>
+<li><code>game/dungeon_scenarios_vampires.rpy</code></li>
+<li><code>game/battle_screens.rpy</code></li>
+<li><code>game/battle_mechanics.rpy</code></li>
+<li><code>game/inventory_images_and_functions.rpy</code></li>
+<li><code>game/actions_vampire_basement.rpy</code></li>
+<li><code>game/locations_vampire_basement.rpy</code></li>
+</ul>
+</div>
+        <div class="markdown-body" data-lang-panel="zh" hidden>
+<blockquote>
+<p><strong>剧透警告：</strong> 本指南涵盖吸血鬼深层区域、后期剧情中的吸血鬼区域入口、Ruxandra的背景剧情、鲜血宝珠，以及当前血液炼金商店的全部商品。</p>
+</blockquote>
+<p>本指南扩充自Sh1n7创作的社区<a href="https://chronoromancer.miraheze.org/wiki/Character:Ruxandra" rel="noopener noreferrer" target="_blank">Ruxandra维基页面</a>，依据<a href="https://creativecommons.org/licenses/by-sa/4.0/" rel="noopener noreferrer" target="_blank">CC BY-SA 4.0</a>许可使用。以下所有要求、价格和效果均已按照当前游戏源文件重新核对。</p>
+<h2 id="zh-at-a-glance">一览</h2>
+<div class="guide-table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th>项目</th>
+<th>当前数值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>全名</td>
+<td>导师Ruxandra</td>
+</tr>
+<tr>
+<td>地点</td>
+<td>吸血鬼实验室</td>
+</tr>
+<tr>
+<td>日程</td>
+<td>每天00:00-24:00</td>
+</tr>
+<tr>
+<td>最早的地牢路线</td>
+<td>地牢第23层的特殊城堡</td>
+</tr>
+<tr>
+<td>后期剧情路线</td>
+<td>完成剧情点61后，经由城市图书馆地下室进入</td>
+</tr>
+<tr>
+<td>阵营</td>
+<td>邪恶</td>
+</tr>
+<tr>
+<td>年龄</td>
+<td>260</td>
+</tr>
+<tr>
+<td>偏好属性</td>
+<td>吸血鬼50、神秘80、智力95</td>
+</tr>
+<tr>
+<td>特殊关系技能</td>
+<td>炼金术</td>
+</tr>
+<tr>
+<td>商店解锁条件</td>
+<td>有效吸血鬼属性25</td>
+</tr>
+<tr>
+<td>商店货币</td>
+<td>鲜血宝珠</td>
+</tr>
+</tbody>
+</table></div>
+<p>Ruxandra是Sangrael吸血鬼巢穴中的炼金术士。她把吸血鬼化视为一套化学与生物系统；随着你的吸血鬼属性提高，她的个人路线也会逐步展开。</p>
+<h2 id="zh-finding-ruxandra">找到Ruxandra</h2>
+<p>Ruxandra始终位于 <strong>吸血鬼实验室</strong>。从吸血鬼巢穴主厅选择 <strong>吸血鬼实验室</strong> 即可前往。</p>
+<p>进入巢穴有两种方式：</p>
+<h3 id="zh-dungeon-route">地牢路线</h3>
+<p>地牢第23层采用特殊的吸血鬼城堡布局。踏上城堡地块后，你会被传送至吸血鬼巢穴。巢穴内的 <strong>返回地牢</strong> 传送门会把你送回第23层之前保存的位置和地图。</p>
+<p>这条路线不要求完成剧情点61。</p>
+<h3 id="zh-story-route">剧情路线</h3>
+<p>完成 <strong>剧情点61：吸血鬼的提议</strong>。完成剧情点60后，在20:00-22:00进入城市图书馆即可触发。完成后会解锁以下路线：</p>
+<p><strong>城市图书馆→图书馆地下室→黑暗走廊→吸血鬼巢穴→吸血鬼实验室</strong></p>
+<p>这样就能从现代时代方便地进入巢穴，不必再次穿越第23层。完整的前置任务链请参阅 <strong>完整剧情点指南</strong>。</p>
+<h2 id="zh-first-meeting">初次见面</h2>
+<p>第一次进入吸血鬼实验室时，会自动触发 <strong>导师Ruxandra</strong>。</p>
+<div class="guide-table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th>奖励</th>
+<th style="text-align:right">数量</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>基础Ruxandra关系</td>
+<td style="text-align:right">+5</td>
+</tr>
+<tr>
+<td>关怀回答</td>
+<td style="text-align:right">+3</td>
+</tr>
+<tr>
+<td>幽默回答</td>
+<td style="text-align:right">+2</td>
+</tr>
+<tr>
+<td>调情回答</td>
+<td style="text-align:right">+3</td>
+</tr>
+</tbody>
+</table></div>
+<p>因此，最佳介绍路线可获得 <strong>关系+8</strong>。</p>
+<h2 id="zh-relationship-mechanics">关系机制</h2>
+<p>Ruxandra使用通用关系阶段，但目前已经实装的个人内容主要取决于吸血鬼属性，而非关系阶段门槛。</p>
+<h3 id="zh-favorite-checks">偏好检定</h3>
+<div class="guide-table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th>偏好项目</th>
+<th style="text-align:right">门槛</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>吸血鬼</td>
+<td style="text-align:right">50</td>
+</tr>
+<tr>
+<td>神秘</td>
+<td style="text-align:right">80</td>
+</tr>
+<tr>
+<td>智力</td>
+<td style="text-align:right">95</td>
+</tr>
+<tr>
+<td>特殊技能</td>
+<td style="text-align:right">炼金术</td>
+</tr>
+</tbody>
+</table></div>
+<p>这些检定会与通用好感度修正系统共同作用。Ruxandra属于邪恶阵营，因此你当前所在的阵营轴也会改变获得的好感度。</p>
+<h3 id="zh-repeatable-action">可重复行动</h3>
+<div class="guide-table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th>行动</th>
+<th>要求</th>
+<th style="text-align:right">时间</th>
+<th style="text-align:right">基础收益</th>
+<th style="text-align:right">上限</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>与Ruxandra交谈</td>
+<td>陌生人以上</td>
+<td style="text-align:right">20分钟</td>
+<td style="text-align:right">+1</td>
+<td style="text-align:right">每天5次</td>
+</tr>
+</tbody>
+</table></div>
+<p>目前她没有最喜欢的礼物，也没有专属送礼行动；同样没有谈心、约会、公寓拜访、度假村路线、青楼员工路线或灵魂石羁绊行动。</p>
+<h2 id="zh-vampire-lore-route">吸血鬼知识路线</h2>
+<p>Ruxandra的六段知识剧情会在实验室中自动触发，且必须依次完成。</p>
+<div class="guide-table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th style="text-align:right">顺序</th>
+<th style="text-align:right">所需吸血鬼属性</th>
+<th>剧情</th>
+<th style="text-align:right">基础奖励</th>
+<th style="text-align:right">最佳选项加成</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">1</td>
+<td style="text-align:right">10</td>
+<td>血即数据</td>
+<td style="text-align:right">+5</td>
+<td style="text-align:right">+3</td>
+</tr>
+<tr>
+<td style="text-align:right">2</td>
+<td style="text-align:right">20</td>
+<td>顺从的囚笼</td>
+<td style="text-align:right">+5</td>
+<td style="text-align:right">+3</td>
+</tr>
+<tr>
+<td style="text-align:right">3</td>
+<td style="text-align:right">30</td>
+<td>会谈判的身体</td>
+<td style="text-align:right">+5</td>
+<td style="text-align:right">+3</td>
+</tr>
+<tr>
+<td style="text-align:right">4</td>
+<td style="text-align:right">40</td>
+<td>阳光是一种侮辱</td>
+<td style="text-align:right">+5</td>
+<td style="text-align:right">+3</td>
+</tr>
+<tr>
+<td style="text-align:right">5</td>
+<td style="text-align:right">50</td>
+<td>消失问题</td>
+<td style="text-align:right">+5</td>
+<td style="text-align:right">+3</td>
+</tr>
+<tr>
+<td style="text-align:right">6</td>
+<td style="text-align:right">60</td>
+<td>第二种养分</td>
+<td style="text-align:right">+5</td>
+<td style="text-align:right">+3</td>
+</tr>
+</tbody>
+</table></div>
+<p>每段剧情中的友善和调情选项均登记为+3，幽默选项则为+2。每次选择最佳答案可获得 <strong>Ruxandra关系+8</strong>；六段合计为 <strong>+48</strong>。</p>
+<p>如果初见她时你的吸血鬼属性已经很高，每次仍只会触发下一段符合条件的剧情。离开实验室再重新进入，即可继续推进这条剧情链。</p>
+<h2 id="zh-the-causal-window">因果之窗</h2>
+<p>Ruxandra有一段与Torea共同出演的跨角色剧情。</p>
+<div class="guide-table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th>要求</th>
+<th>数值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>地点</td>
+<td>吸血鬼实验室</td>
+</tr>
+<tr>
+<td>Ruxandra前置条件</td>
+<td>已完成导师Ruxandra介绍剧情</td>
+</tr>
+<tr>
+<td>Torea关系</td>
+<td>相识以上</td>
+</tr>
+<tr>
+<td>触发方式</td>
+<td>自动触发，仅一次</td>
+</tr>
+<tr>
+<td>基础奖励</td>
+<td>Ruxandra+8、Torea+5</td>
+</tr>
+</tbody>
+</table></div>
+<p>选项会在Ruxandra和Torea之间分配额外点数。这段剧情独立于六步知识剧情的顺序，不要求达到特定的吸血鬼属性门槛。</p>
+<h2 id="zh-blood-orbs">鲜血宝珠</h2>
+<p>鲜血宝珠有两种相互竞争的用途：</p>
+<ol>
+<li><strong>从物品栏使用一颗：</strong> 基础吸血鬼属性+1（最高999），并完全恢复生命、精力、镇定和饱腹感。</li>
+<li><strong>在血液炼金中消费：</strong> 购买永久神器或可重复强化。</li>
+</ol>
+<p>由于商店本身要求有效吸血鬼属性达到25，游戏前期可能需要消耗宝珠才能解锁。达到门槛后，请判断完全恢复与1点吸血鬼属性，是否比为神器储蓄更有价值。</p>
+<h3 id="zh-reliable-farming-information">可靠刷取信息</h3>
+<ul>
+<li>除非敌人数据标记为必定掉落，否则地牢21-25层的吸血鬼敌人在胜利后有 <strong>15%的鲜血宝珠掉落概率</strong>。</li>
+<li>鲜血宝珠的掉落判定与普通镐子掉落判定互相独立。</li>
+<li>21-25层的吸血鬼主题随机场景可能奖励、交换、消耗鲜血宝珠，或以其他方式让宝珠参与事件。</li>
+<li>哥布林鲜血宝珠场景会以 <strong>5龙币</strong> 出售一颗鲜血宝珠。</li>
+<li>某些外部奖励系统也能提供宝珠，但可重复的基础来源仍是地牢战斗。</li>
+</ul>
+<p>在21-25层触发随机场景时，地牢的吸血鬼场景优先检查有50%的概率从吸血鬼专属场景池中选择。防重复追踪机制会避免一小组相同场景连续不断地出现。</p>
+<h2 id="zh-blood-alchemy-shop">血液炼金商店</h2>
+<p>有效吸血鬼属性达到 <strong>25</strong> 后，吸血鬼实验室中会显示 <strong>血液炼金</strong> 行动。打开商店不消耗时间或金钱。目前所有商品都采用同一个吸血鬼25可见性要求。</p>
+<h3 id="zh-one-time-artifacts">一次性神器</h3>
+<div class="guide-table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th>物品</th>
+<th style="text-align:right">鲜血宝珠</th>
+<th>当前确切效果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>吸血鬼獠牙</td>
+<td style="text-align:right">55</td>
+<td>物理攻击、快速攻击、风暴斩和强力打击有15%概率触发无视敌方防御的效果，并附加基于吸血鬼属性的伤害。吸血鬼化会将触发率提高至18%，并增强伤害掷骰。</td>
+</tr>
+<tr>
+<td>催眠凝视</td>
+<td style="text-align:right">50</td>
+<td>在计算楼层抗性后，使睡眠成功率增加10个百分点；提高催眠凝视的常规上限，并把首领的基础睡眠概率从13%提高至20%。</td>
+</tr>
+<tr>
+<td>夜行斗篷</td>
+<td style="text-align:right">50</td>
+<td>伤害减免计算中的有效护甲等级+1。</td>
+</tr>
+<tr>
+<td>蝙蝠侠之眼</td>
+<td style="text-align:right">60</td>
+<td>最大生命+50、最大精力+50、最大镇定+50。</td>
+</tr>
+<tr>
+<td>德古拉之戒</td>
+<td style="text-align:right">70</td>
+<td>当你的阵营轴与NPC一致时，好感度掷骰的最大值+1。</td>
+</tr>
+<tr>
+<td>吸血鬼魔导书</td>
+<td style="text-align:right">80</td>
+<td>进攻魔法有15%概率触发无视敌方伤害减免、抗性、吸收和强属性抗性，同时保留弱点加成的效果；吸血鬼化会将触发率提高至18%，并增强其吸血鬼伤害。</td>
+</tr>
+</tbody>
+</table></div>
+<p>买齐六件独特神器共需 <strong>365颗鲜血宝珠</strong>。已购买的神器会永久保留，无法重复购买。</p>
+<p>游戏内部键名拼作 <strong>Draculas Ring</strong>，没有撇号；存档数据和效果检查要求完全采用这一拼法。</p>
+<h3 id="zh-repeatable-refinements">可重复精炼</h3>
+<div class="guide-table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th>物品</th>
+<th style="text-align:right">鲜血宝珠</th>
+<th>要求</th>
+<th>当前确切效果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>血之交易</td>
+<td style="text-align:right">10</td>
+<td>吸血鬼25</td>
+<td>永久最大精力+1。</td>
+</tr>
+<tr>
+<td>猩红圣杯</td>
+<td style="text-align:right">20</td>
+<td>吸血鬼25，并拥有元素之石</td>
+<td>元素之石等级+1。</td>
+</tr>
+</tbody>
+</table></div>
+<p>两项精炼均可重复购买。拥有元素之石前，猩红圣杯不会显示；购买后会提高灵魂石等级，但不会消耗灵魂石。</p>
+<h2 id="zh-artifact-buying-priorities">神器购买优先级</h2>
+<p>不存在适用于所有人的最佳顺序，但以下路线可以减少宝珠浪费：</p>
+<h3 id="zh-general-purpose-build">通用构筑</h3>
+<ol>
+<li><strong>蝙蝠侠之眼</strong>：三项主要战斗资源上限各+50。</li>
+<li><strong>夜行斗篷</strong>：始终生效的物理伤害减免。</li>
+<li>根据主要进攻方式，在吸血鬼獠牙与吸血鬼魔导书之间选择。</li>
+<li>如果睡眠是控制方案的一部分，再购买催眠凝视。</li>
+</ol>
+<h3 id="zh-physical-build">物理构筑</h3>
+<ol>
+<li>吸血鬼獠牙</li>
+<li>蝙蝠侠之眼</li>
+<li>夜行斗篷</li>
+<li>根据喜好选择催眠凝视或德古拉之戒</li>
+<li>如果很少使用进攻魔法，最后再买吸血鬼魔导书</li>
+</ol>
+<h3 id="zh-magic-build">魔法构筑</h3>
+<ol>
+<li>吸血鬼魔导书</li>
+<li>如果使用睡眠，则购买催眠凝视</li>
+<li>蝙蝠侠之眼</li>
+<li>夜行斗篷</li>
+<li>当物理备用攻击开始派上用场后，再购买吸血鬼獠牙</li>
+</ol>
+<h3 id="zh-relationship-focused-build">关系向构筑</h3>
+<p>只有当你的阵营轴与NPC一致时，德古拉之戒才会提高单次关系收益的上限。如果你长期稳定维持善良、中立或邪恶阵营，它对许多角色都很有价值；但系统判定你处于无阵营时，它完全无效，也不会减轻阵营相反造成的惩罚。</p>
+<h2 id="zh-recommended-progression">推荐推进顺序</h2>
+<ol>
+<li>到达吸血鬼深层区域，进入第23层城堡。</li>
+<li>在实验室与Ruxandra见面，并选择关怀或调情回答以获得最佳介绍加成。</li>
+<li>在21-25层击败吸血鬼敌人，刷取鲜血宝珠。</li>
+<li>必要时消耗足够的宝珠，将有效吸血鬼属性提升至25；请记住，每消耗一颗宝珠，商店货币就少一颗。</li>
+<li>在吸血鬼属性达到10和20时重新进入实验室，完成前两段知识剧情。</li>
+<li>吸血鬼属性达到25后，购买最适合自己构筑的神器。</li>
+<li>在吸血鬼属性达到30、40、50和60时继续知识剧情链。</li>
+<li>将Torea关系提高至相识，再进入实验室触发 <strong>因果之窗</strong>。</li>
+<li>条件满足后完成剧情点61，解锁方便的城市图书馆路线。</li>
+<li>买完想要的独特神器后，把多余宝珠投入血之交易或猩红圣杯。</li>
+</ol>
+<h2 id="zh-troubleshooting">故障排查</h2>
+<h3 id="zh-ruxandra-is-not-in-the-laboratory">实验室里没有Ruxandra</h3>
+<p>她每天全天都在这里。请确认你进入的是 <strong>吸血鬼实验室</strong>，而不是Carmilla的寝室或吸血鬼休息室。从巢穴主厅选择前往实验室的行动。</p>
+<h3 id="zh-the-floor-23-castle-did-not-remain-as-a-map-shortcut">第23层城堡没有保留为地图捷径</h3>
+<p>楼层路线会通过巢穴传送门，把你送回此前保存的地牢地块。剧情点61会另外解锁一条永久的现代时代路线，从城市图书馆地下室进入。</p>
+<h3 id="zh-blood-alchemy-is-missing">找不到血液炼金</h3>
+<p>该行动要求 <strong>有效吸血鬼属性25</strong>，不要求提高Ruxandra的关系，也不要求完成特定的知识剧情。</p>
+<h3 id="zh-crimson-grail-is-missing">找不到猩红圣杯</h3>
+<p>你必须拥有25点吸血鬼属性，并且已经拥有元素之石。</p>
+<h3 id="zh-a-lore-scene-will-not-trigger">知识剧情没有触发</h3>
+<ul>
+<li>完成Ruxandra的介绍剧情。</li>
+<li>达到所需的吸血鬼属性值。</li>
+<li>完成上一段知识剧情。</li>
+<li>另一段自动剧情结束后，离开吸血鬼实验室再重新进入。</li>
+</ul>
+<h3 id="zh-i-used-all-my-blood-orbs-raising-vampire">我为了提高吸血鬼属性，用光了所有鲜血宝珠</h3>
+<p>这不会让你陷入死局。继续在21-25层击败吸血鬼敌人，并探索其中的场景地块。商店的设计本就以可重复获取宝珠为基础。</p>
+<h2 id="zh-current-content-boundary">当前内容边界</h2>
+<p>吸血鬼属性60时触发的 <strong>第二种养分</strong>，是Ruxandra目前最后一段个人知识剧情。你仍可通过每日交谈和通用修正继续提高好感度，但目前没有注册更高阶段的Ruxandra恋爱剧情、谈心、约会或公寓内容。</p>
+<h2 id="zh-source-reference">源文件参考</h2>
+<p>本指南核对的主要实现文件：</p>
+<ul>
+<li><code>game/characters/ruxandra.rpy</code></li>
+<li><code>game/ruxandra_alchemy_shop_system.rpy</code></li>
+<li><code>game/plot_list_registry_tutorials.rpy</code></li>
+<li><code>game/plot_list_registry_relationships.rpy</code></li>
+<li><code>game/dungeon_generation_core.rpy</code></li>
+<li><code>game/dungeon_interactions_core.rpy</code></li>
+<li><code>game/dungeon_scenarios.rpy</code></li>
+<li><code>game/dungeon_scenarios_vampires.rpy</code></li>
+<li><code>game/battle_screens.rpy</code></li>
+<li><code>game/battle_mechanics.rpy</code></li>
+<li><code>game/inventory_images_and_functions.rpy</code></li>
+<li><code>game/actions_vampire_basement.rpy</code></li>
+<li><code>game/locations_vampire_basement.rpy</code></li>
+</ul>
+</div>
+        <div class="guide-community-note"><div><strong data-copy-en="Community discoveries" data-copy-zh="社区发现">Community discoveries</strong><p data-copy-en="These official guides track the current game. The player-maintained wiki may contain additional strategies and discoveries." data-copy-zh="这些官方攻略与当前游戏版本保持一致；玩家维护的 Wiki 可能还收录其他策略与社区发现。">These official guides track the current game. The player-maintained wiki may contain additional strategies and discoveries.</p></div><a href="https://chronoromancer.miraheze.org/wiki/Main_Page" target="_blank" rel="noopener noreferrer" data-copy-en="Visit Player Wiki →" data-copy-zh="访问玩家 Wiki →">Visit Player Wiki →</a></div>
+        <nav class="guide-pager" aria-label="Adjacent guides"><a href="lychee.html"><span data-copy-en="Previous guide" data-copy-zh="上一篇攻略">Previous guide</span><strong data-copy-en="Lychee — Complete Walkthrough" data-copy-zh="Lychee——完整攻略">Lychee — Complete Walkthrough</strong></a><a href="mandarin.html"><span data-copy-en="Next guide" data-copy-zh="下一篇攻略">Next guide</span><strong data-copy-en="Mandarin — Complete Walkthrough" data-copy-zh="Mandarin——完整攻略">Mandarin — Complete Walkthrough</strong></a></nav>
+      </article>
+    </div>
+  </main>
+  <footer class="site-footer"><div class="container"><div class="footer-grid">
+    <div class="footer-brand"><img src="../assets/images/v2/logo.png" alt="Chronoromancer"><p data-i18n="footerDescription">An adults-only time-travel sandbox RPG. Public website artwork is SFW.</p></div>
+    <div class="footer-column"><h2 data-i18n="footerExplore">Explore</h2><a href="../story.html" data-i18n="navStory">Story</a><a href="../characters.html" data-i18n="navCharacters">Characters</a><a href="../walkthroughs.html" data-i18n="navGuides">Guides</a><a href="../screenshots.html" data-i18n="navGallery">Gallery</a><a href="../main.html#download" data-i18n="navDownload">Download</a></div>
+    <div class="footer-column"><h2 data-i18n="footerCommunity">Community</h2><a data-config-link="community.discord" target="_blank" rel="noopener noreferrer">Discord</a><a data-config-link="community.telegram" target="_blank" rel="noopener noreferrer">Telegram</a><a data-config-link="community.patreon" target="_blank" rel="noopener noreferrer">Patreon</a><a data-config-link="community.wiki" target="_blank" rel="noopener noreferrer" data-i18n="navWiki">Player Wiki</a></div>
+    <div class="footer-column"><h2 data-i18n="footerLegal">Legal</h2><a href="../privacy.html" data-i18n="footerPrivacy">Privacy</a><a href="../terms.html" data-i18n="footerTerms">Terms</a></div>
+  </div><div class="footer-bottom"><span>© <span data-current-year></span> <span data-i18n="copyright">Chronoromancer Studio. All rights reserved.</span></span><span data-copy-en="Official guides · English / Simplified Chinese" data-copy-zh="官方攻略 · English / 简体中文">Official guides · English / Simplified Chinese</span></div></div></footer>
+  <script src="../assets/js/site-config.js"></script><script src="../assets/js/site.js"></script><script src="../assets/js/walkthroughs.js"></script>
+</body></html>

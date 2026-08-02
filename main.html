@@ -1,236 +1,244 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chronoromancer - Time-Traveling Adult Visual Novel</title>
-    <link rel="stylesheet" href="assets/css/style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Chronoromancer is an adults-only time-travel sandbox RPG spanning three eras and available in 11 languages.">
+  <meta property="og:title" content="Chronoromancer">
+  <meta property="og:description" content="Rewrite the future in a time-travel sandbox RPG available in 11 languages.">
+  <meta property="og:image" content="assets/images/v2/hero-splash.png">
+  <link rel="icon" type="image/png" href="assets/images/v2/favicon.png">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <title>Chronoromancer | Time-travel sandbox RPG</title>
 </head>
-<body>
-    <!-- Hero Section -->
+<body data-title-en="Chronoromancer | Time-travel sandbox RPG" data-title-zh="Chronoromancer | 时间旅行沙盒 RPG">
+  <a class="skip-link" href="#content" data-copy-en="Skip to content" data-copy-zh="跳至正文">Skip to content</a>
+  <div class="maturity-bar" data-copy-en="18+ adults-only game · This public website uses SFW promotional material" data-copy-zh="18+ 仅限成人游戏 · 本公开网站仅使用适合公开展示的宣传素材">18+ adults-only game · This public website uses SFW promotional material</div>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="main.html" aria-label="Chronoromancer home"><img src="assets/images/v2/logo.png" alt="Chronoromancer"></a>
+      <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-label="Open navigation"><span></span><span></span><span></span></button>
+      <nav class="site-nav" data-nav-menu aria-label="Primary navigation">
+        <a class="is-active" href="main.html" data-i18n="navHome">Home</a>
+        <a href="story.html" data-i18n="navStory">Story</a>
+        <a href="characters.html" data-i18n="navCharacters">Characters</a>
+        <a href="walkthroughs.html" data-i18n="navGuides">Guides</a>
+        <a href="screenshots.html" data-i18n="navGallery">Gallery</a>
+        <a data-config-link="community.wiki" target="_blank" rel="noopener noreferrer" data-i18n="navWiki">Player Wiki</a>
+        <a href="#download" data-i18n="navDownload">Download</a>
+        <div class="language-switch" role="group" aria-label="Language">
+          <button type="button" data-language="en" aria-pressed="true">EN</button>
+          <button type="button" data-language="zh" aria-pressed="false">简体中文</button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="content">
     <section class="hero">
-        <div class="hero-banner">
-            <video autoplay muted loop playsinline class="hero-video">
-                <source src="assets/images/hero.webm" type="video/webm">
-            </video>
-        </div>
+      <div class="container">
         <div class="hero-content">
-            <p class="hero-tagline">A Time-Traveling Adult Sandbox RPG</p>
-            <div class="hero-buttons">
-                <a href="https://discord.gg/6ggs8AS6S6" class="btn btn-primary" target="_blank">Join Discord</a>
-                <a href="https://www.patreon.com/c/ChronoromancerStudio" class="btn btn-primary" target="_blank">Patreon</a>
-                <a href="screenshots.html" class="btn btn-secondary">Screenshots</a>
-            </div>
+          <p class="eyebrow" data-copy-en="A sandbox RPG across three eras" data-copy-zh="横跨三个时代的沙盒 RPG">A sandbox RPG across three eras</p>
+          <h1 data-copy-en="Rewrite the future. Keep what makes us human." data-copy-zh="改写未来，守住人性。">Rewrite the future. Keep what makes us human.</h1>
+          <p class="hero-lede" data-copy-en="Travel between a living medieval kingdom, a modern city, and a future under pressure. Build relationships, run businesses, explore dungeons, and decide which timeline survives." data-copy-zh="穿梭于生机勃勃的中世纪王国、现代都市与危机四伏的未来。经营事业、建立关系、探索地下城，并决定哪一条时间线能够延续。">Travel between a living medieval kingdom, a modern city, and a future under pressure. Build relationships, run businesses, explore dungeons, and decide which timeline survives.</p>
+          <div class="hero-meta" aria-label="Game highlights">
+            <span><span data-copy-en="Version" data-copy-zh="版本">Version</span> <span data-site-version>V0.9.6.0</span></span>
+            <span data-copy-en="170+ characters" data-copy-zh="170+ 位角色">170+ characters</span>
+            <span data-copy-en="11 supported languages" data-copy-zh="支持 11 种语言">11 supported languages</span>
+          </div>
+          <div class="button-row">
+            <a class="button" href="#download" data-copy-en="Choose a download" data-copy-zh="选择下载方式">Choose a download</a>
+            <a class="button button--secondary" href="story.html" data-copy-en="Discover the world" data-copy-zh="了解游戏世界">Discover the world</a>
+          </div>
         </div>
+      </div>
     </section>
 
-    <!-- Navigation -->
-    <nav class="page-nav">
-        <div class="container">
-            <a href="main.html" class="nav-logo">
-                <img src="assets/images/chronoromancer_title.png" alt="Chronoromancer" class="nav-logo-img">
-            </a>
-            <div class="nav-links">
-                <a href="main.html" class="active">Home</a>
-                <a href="story.html">Story</a>
-                <a href="screenshots.html">Screenshots</a>
-            </div>
+    <section class="language-band" aria-labelledby="language-heading">
+      <div class="container language-showcase">
+        <div class="language-showcase-copy">
+          <p class="eyebrow" data-copy-en="Worldwide release" data-copy-zh="面向全球玩家">Worldwide release</p>
+          <h2 id="language-heading" data-copy-en="Play in 11 languages." data-copy-zh="支持 11 种游戏语言。">Play in 11 languages.</h2>
+          <p data-copy-en="Choose your preferred language from the in-game settings." data-copy-zh="可直接在游戏设置中选择您习惯的语言。">Choose your preferred language from the in-game settings.</p>
         </div>
-    </nav>
-
-    <!-- About Section -->
-    <section class="about-game">
-        <div class="container">
-            <div class="about-content">
-                <div class="about-text">
-                    <h2>Save Existence. Get the Girls. Try Not to Screw Up the Timeline.</h2>
-                    <p>An AI named VOID wants to erase all of existence—and the only person who can stop it is some unemployed dude with no skills, no plan, no game, and no idea what's happening. You.</p>
-                    
-                    <p>Travel between a Medieval kingdom, the modern day, and a dystopian future. Build relationships. Train your stats. Run a brothel. Explore dungeons. Get intimate with dozens of unique characters across centuries of history.</p>
-                </div>
-                <div class="about-image">
-                    <img src="assets/images/sashina_loading.jpg" alt="Sashina" class="feature-image">
-                </div>
-            </div>
+        <div class="language-list" aria-label="Supported game languages">
+          <span class="language-pill" lang="en">English</span>
+          <span class="language-pill" lang="zh-CN">简体中文</span>
+          <span class="language-pill" lang="zh-TW">繁體中文</span>
+          <span class="language-pill" lang="ja">日本語</span>
+          <span class="language-pill" lang="de">Deutsch</span>
+          <span class="language-pill" lang="ru">Русский</span>
+          <span class="language-pill" lang="es">Español (LATAM)</span>
+          <span class="language-pill" lang="pt-BR">Português (Brasil)</span>
+          <span class="language-pill" lang="fr">Français</span>
+          <span class="language-pill" lang="pl">Polski</span>
+          <span class="language-pill" lang="th">ไทย</span>
         </div>
+      </div>
     </section>
 
-    <!-- Download Section -->
-    <section class="download-section">
-        <div class="container">
-            <h2>Download V0.9.3 — The Languages Update</h2>
-            <p class="download-text">Chronoromancer now speaks six languages! Full localization in English, Simplified Chinese, Japanese, German, Russian, and Spanish (LATAM) — choose your language at the splash or in the System menu, and press F6 anytime to compare against English. This update also adds Maggie, a new finance-focused Present Era NPC; a Working Experience system that makes modern jobs pay off over time; a full overhaul for poll-winner Amelia; the new Invite Date system launching at the Downtown KTV; craftable Leather Boots; and the supporter-commissioned Sovereign Edge combat skill.</p>
-            <div class="download-buttons">
-                <a href="https://mega.nz/folder/cmARhbra#x7mNWdlQzqRIAOBaQprByQ" class="btn btn-download" target="_blank">
-                    <span class="download-icon">📁</span>
-                    <span>Download from MEGA</span>
-                </a>
-                <a href="https://drive.google.com/drive/folders/1QCr6X2NPUzzCI6MmsRfU7yHsFhNJcgUL?usp=sharing" class="btn btn-download" target="_blank">
-                    <span class="download-icon">📁</span>
-                    <span>Download from Google Drive</span>
-                </a>
-                <a href="https://chronoromancer.itch.io/chronoromancer" class="btn btn-download" target="_blank">
-                    <span class="download-icon">🎮</span>
-                    <span>Download from itch.io</span>
-                </a>
-                <a href="https://mega.nz/folder/cmARhbra#x7mNWdlQzqRIAOBaQprByQ" class="btn btn-download" target="_blank">
-                    <span class="download-icon">📱</span>
-                    <span>Download for Android</span>
-                </a>
-            </div>
-            <p class="download-note">Windows build - 1.4 GB | Android APK available | Linux/Mac players may try Wine/Proton</p>
-            <p class="download-note" style="font-size: 0.85em; opacity: 0.7;">Android: You may need to enable "Install from unknown sources" in your device settings.</p>
-            <p class="download-note">🌐 Now playable in: 🇬🇧 English · 🇨🇳 简体中文 · 🇯🇵 日本語 · 🇩🇪 Deutsch · 🇷🇺 Русский · 🇲🇽 Español (LATAM)</p>
+    <section class="section">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow" data-copy-en="Your time, your priorities" data-copy-zh="由你支配时间">Your time, your priorities</p>
+            <h2 data-copy-en="A world that keeps moving when you do." data-copy-zh="你的每一次行动，都会推动世界前进。">A world that keeps moving when you do.</h2>
+          </div>
+          <p data-copy-en="Chronoromancer combines open-ended daily life with a story about responsibility, desire, and the cost of changing history." data-copy-zh="《Chronoromancer》将自由度极高的日常生活，与一段关于责任、欲望及改写历史代价的故事融为一体。">Chronoromancer combines open-ended daily life with a story about responsibility, desire, and the cost of changing history.</p>
         </div>
+
+        <div class="feature-grid">
+          <article class="feature-card">
+            <span class="feature-number">01</span>
+            <h3 data-copy-en="Live across three eras" data-copy-zh="生活在三个时代">Live across three eras</h3>
+            <p data-copy-en="Carry knowledge, resources, and consequences between the medieval, present, and future worlds." data-copy-zh="让知识、资源与行为后果在中世纪、现代和未来三个世界之间彼此影响。">Carry knowledge, resources, and consequences between the medieval, present, and future worlds.</p>
+          </article>
+          <article class="feature-card">
+            <span class="feature-number">02</span>
+            <h3 data-copy-en="Relationships with consequences" data-copy-zh="会产生后果的关系">Relationships with consequences</h3>
+            <p data-copy-en="Meet a large cast with personal stories, changing loyalties, and paths shaped by your choices." data-copy-zh="结识庞大的角色阵容。每个人都有自己的故事与立场，而你的选择将改变他们的道路。">Meet a large cast with personal stories, changing loyalties, and paths shaped by your choices.</p>
+          </article>
+          <article class="feature-card">
+            <span class="feature-number">03</span>
+            <h3 data-copy-en="More than dialogue" data-copy-zh="不止于对话">More than dialogue</h3>
+            <p data-copy-en="Manage businesses, train skills, play activities, take on quests, and descend into an expanding dungeon." data-copy-zh="经营产业、训练技能、体验多种活动、承接任务，并深入不断扩展的地下城。">Manage businesses, train skills, play activities, take on quests, and descend into an expanding dungeon.</p>
+          </article>
+        </div>
+      </div>
     </section>
 
-    <!-- Three Eras Section -->
-    <section class="eras-showcase">
-        <div class="container">
-            <h2>Three Eras. Your Choices Echo Across Time.</h2>
-            <div class="eras-grid">
-                <div class="era-card">
-                    <div class="era-image">
-                        <img src="assets/images/screen_shots/emily.jpg" alt="Present Era">
-                    </div>
-                    <div class="era-content">
-                        <h3>🏙️ Present Era</h3>
-                        <p>Your starting point. University life, downtown nightlife, and relationships that will ripple across centuries.</p>
-                    </div>
-                    <img src="assets/images/Emily.png" alt="Emily" class="era-character">
-                </div>
-                
-                <div class="era-card">
-                    <div class="era-image">
-                        <img src="assets/images/screen_shots/battle.jpg" alt="Medieval Era">
-                    </div>
-                    <div class="era-content">
-                        <h3>🏰 Medieval Era</h3>
-                        <p>Royal courts, tavern romances, and a brothel to manage in the King's Demesne. Knights, nobility, and a world where magic still flows.</p>
-                    </div>
-                    <img src="assets/images/elara.png" alt="Elara" class="era-character">
-                </div>
-                
-                <div class="era-card">
-                    <div class="era-image">
-                        <img src="assets/images/screen_shots/rei.jpg" alt="Future Era">
-                    </div>
-                    <div class="era-content">
-                        <h3>🚀 Future Era</h3>
-                        <p>VOID's corporate dystopia. Join the resistance, expose the AI's failures, and fight for humanity's survival.</p>
-                    </div>
-                    <img src="assets/images/rei.png" alt="Rei" class="era-character">
-                </div>
-            </div>
-            <p class="eras-tagline">Princesses and Witches. Classmates and coworkers. Rebels and androids. Every era has its perks.</p>
+    <section class="section section--tinted">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow" data-copy-en="Three eras, one unstable timeline" data-copy-zh="三个时代，一条动荡的时间线">Three eras, one unstable timeline</p>
+            <h2 data-copy-en="Every age offers a different kind of life." data-copy-zh="每个时代，都有截然不同的生活。">Every age offers a different kind of life.</h2>
+          </div>
+          <p data-copy-en="Move freely between distinct settings, stories, economies, and dangers—then watch your decisions echo forward and backward through time." data-copy-zh="在风格迥异的环境、故事、经济体系与危机之间自由穿梭，并亲眼见证自己的决定如何跨越时间产生回响。">Move freely between distinct settings, stories, economies, and dangers—then watch your decisions echo forward and backward through time.</p>
         </div>
+
+        <div class="era-grid">
+          <article class="era-card">
+            <img src="assets/images/v2/gallery/thieves_tavern_ambush.jpg" alt="A confrontation in a medieval tavern" loading="lazy">
+            <div class="era-card-content"><span class="era-label" data-copy-en="Medieval" data-copy-zh="中世纪">Medieval</span><h3 data-copy-en="King's Demesne" data-copy-zh="国王领地">King's Demesne</h3><p data-copy-en="Royal courts, guild rivalries, dungeon expeditions, and businesses waiting to be rebuilt." data-copy-zh="宫廷权谋、公会纷争、地下城远征，以及等待你重建的产业。">Royal courts, guild rivalries, dungeon expeditions, and businesses waiting to be rebuilt.</p></div>
+          </article>
+          <article class="era-card">
+            <img src="assets/images/v2/gallery/rock_band_recording_session.jpg" alt="Friends recording music in a modern studio" loading="lazy">
+            <div class="era-card-content"><span class="era-label" data-copy-en="Present" data-copy-zh="现代">Present</span><h3 data-copy-en="Everyday lives, hidden stakes" data-copy-zh="日常生活，暗藏危机">Everyday lives, hidden stakes</h3><p data-copy-en="Friendships, nightlife, careers, and quiet choices that may matter decades from now." data-copy-zh="友情、夜生活、事业，以及那些可能在数十年后改变一切的平凡选择。">Friendships, nightlife, careers, and quiet choices that may matter decades from now.</p></div>
+          </article>
+          <article class="era-card">
+            <img src="assets/images/v2/gallery/time_portal_observation.jpg" alt="Researchers observing a glowing time portal" loading="lazy">
+            <div class="era-card-content"><span class="era-label" data-copy-en="Future" data-copy-zh="未来">Future</span><h3 data-copy-en="Technology at the edge of collapse" data-copy-zh="濒临崩溃的科技时代">Technology at the edge of collapse</h3><p data-copy-en="Cybernetic cities, synthetic lives, and the growing threat that waits beyond the timeline." data-copy-zh="赛博都市、合成生命，以及在时间线之外不断逼近的威胁。">Cybernetic cities, synthetic lives, and the growing threat that waits beyond the timeline.</p></div>
+          </article>
+        </div>
+      </div>
     </section>
 
-    <!-- Features Section -->
-    <section class="features">
-        <div class="container">
-            <h2>RPG Depth, Visual Novel Heart</h2>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <img src="assets/images/nova.png" alt="Nova" class="feature-character">
-                    <h3>Deep Character Relationships</h3>
-                    <p>Every character has their own storyline, personality, and progression. They remember what you've done—across timelines. Earn their trust, their loyalty, or their hearts.</p>
-                </div>
-                
-                <div class="feature-card">
-                    <img src="assets/images/bella.png" alt="Bella" class="feature-character">
-                    <h3>Dungeon Crawling</h3>
-                    <p>Procedural multi-level dungeons with real combat, loot, and progression. Upgrade your weapons and armor. Learn new skills. Get stronger.</p>
-                </div>
-                
-                <div class="feature-card">
-                    <img src="assets/images/marina.png" alt="Marina" class="feature-character">
-                    <h3>Brothel Management</h3>
-                    <p>Recruit workers, train them, grow your establishment across eras. Your business decisions shape your story.</p>
-                </div>
-                
-                <div class="feature-card">
-                    <img src="assets/images/sashina.png" alt="Sashina" class="feature-character">
-                    <h3>Actual Minigames</h3>
-                    <p>Archery, fishing, rhythm dance, space combat, liar's dice, idle/clicker — activities that are fun on their own, not filler between scenes.</p>
-                </div>
-                
-                <div class="feature-card">
-                    <img src="assets/images/Foxy.png" alt="Foxy" class="feature-character">
-                    <h3>Character Progression</h3>
-                    <p>Trainable stats. Dozens of skills to master. Multiple paths to power.</p>
-                </div>
-                
-                <div class="feature-card">
-                    <img src="assets/images/vera.png" alt="Vera" class="feature-character">
-                    <h3>True Sandbox Freedom</h3>
-                    <p>Spend your time on romance, business, dungeon diving, exploration, or following the main story. The game doesn't force a path—you decide what matters.</p>
-                </div>
-            </div>
+    <section class="section">
+      <div class="container split-feature">
+        <div class="split-feature-media"><img src="assets/images/v2/future-cast.png" alt="Chronoromancer characters in a futuristic research facility" loading="lazy"></div>
+        <div class="split-feature-copy">
+          <p class="eyebrow" data-copy-en="Built for an international community" data-copy-zh="为国际玩家社区而打造">Built for an international community</p>
+          <h2 data-copy-en="A bilingual website for an eleven-language game." data-copy-zh="双语网站，连接支持 11 种语言的游戏。">A bilingual website for an eleven-language game.</h2>
+          <p data-copy-en="This public website defaults to English and can switch instantly to complete Simplified Chinese text. The game itself supports all 11 languages shown above, including full Simplified Chinese localization." data-copy-zh="本公开网站默认显示英文，并可即时切换为完整的简体中文内容。游戏本身支持上方列出的全部 11 种语言，其中包括完整的简体中文本地化。">This public website defaults to English and can switch instantly to complete Simplified Chinese text. The game itself supports all 11 languages shown above, including full Simplified Chinese localization.</p>
+          <ul class="check-list">
+            <li data-copy-en="No account or tracking is required to browse this website" data-copy-zh="浏览本网站无需注册账户，也不会进行网站行为追踪">No account or tracking is required to browse this website</li>
+            <li data-copy-en="Download options are separated clearly by host" data-copy-zh="不同下载来源均有清晰标识">Download options are separated clearly by host</li>
+            <li data-copy-en="China-accessible mirrors will be published only after testing" data-copy-zh="中国大陆可访问的镜像将在完成测试后再正式发布">China-accessible mirrors will be published only after testing</li>
+          </ul>
         </div>
+      </div>
     </section>
 
-    <!-- Screenshots Preview -->
-    <section class="screenshots-preview">
-        <div class="container">
-            <h2>See the Game in Action</h2>
-            <div class="screenshot-grid">
-                <img src="assets/images/screen_shots/Friday_1.jpg" alt="Friday - The Soul Collector" class="screenshot-item">
-                <img src="assets/images/screen_shots/Friday_Pose1.jpg" alt="Friday Portrait" class="screenshot-item">
-                <img src="assets/images/screen_shots/dance.jpg" alt="Dance Minigame" class="screenshot-item">
-                <img src="assets/images/screen_shots/demon.jpg" alt="Combat System" class="screenshot-item">
-                <img src="assets/images/screen_shots/vera_dice.jpg" alt="Dice Game" class="screenshot-item">
-                <img src="assets/images/screen_shots/nerida.jpg" alt="Character Scene" class="screenshot-item">
-            </div>
-            <div class="screenshot-cta">
-                <a href="screenshots.html" class="btn btn-primary">View All Screenshots</a>
-            </div>
+    <section class="section section--tinted">
+      <div class="container split-feature">
+        <div class="split-feature-media"><img src="assets/images/v2/gallery/torea_vampire_library.jpg" alt="Torea researching in the vampire library" loading="lazy"></div>
+        <div class="split-feature-copy">
+          <p class="eyebrow" data-copy-en="Official English and Chinese guides" data-copy-zh="中英文官方攻略">Official English and Chinese guides</p>
+          <h2 data-copy-en="A complete guide library built from the current game." data-copy-zh="依据当前游戏内容打造的完整攻略资料库。">A complete guide library built from the current game.</h2>
+          <p data-copy-en="Search walkthroughs, character routes, systems, businesses, factions, and progression advice. Each completed Simplified Chinese translation appears beside its English source on the same page." data-copy-zh="搜索流程攻略、角色路线、系统、经营、阵营与推进建议。每篇完成的简体中文译文都会与英文原文显示在同一页面中。">Search walkthroughs, character routes, systems, businesses, factions, and progression advice. Each completed Simplified Chinese translation appears beside its English source on the same page.</p>
+          <div class="button-row"><a class="button" href="walkthroughs.html" data-copy-en="Browse official guides" data-copy-zh="浏览官方攻略">Browse official guides</a><a class="button button--secondary" data-config-link="community.wiki" target="_blank" rel="noopener noreferrer" data-copy-en="Visit Player Wiki" data-copy-zh="访问玩家 Wiki">Visit Player Wiki</a></div>
         </div>
+      </div>
     </section>
 
-    <!-- Community Section -->
-    <section class="community" id="community">
-        <div class="container">
-            <h2>Join the Community</h2>
-            <p class="community-text">Active development with regular updates. Join Discord to report bugs, get exclusive character unlock codes, and shape what gets built next!</p>
-            <div class="social-links">
-                <a href="https://discord.gg/6ggs8AS6S6" class="social-link discord" target="_blank">
-                    <img src="assets/images/discord.png" alt="Discord">
-                    <span>Discord</span>
-                </a>
-                <a href="https://www.patreon.com/c/ChronoromancerStudio" class="social-link patreon" target="_blank">
-                    <img src="assets/images/patreon.png" alt="Patreon">
-                    <span>Patreon</span>
-                </a>
-                <a href="https://t.me/Chronoromancer" class="social-link telegram" target="_blank">
-                    <img src="assets/images/telegram.png" alt="Telegram">
-                    <span>Telegram</span>
-                </a>
-                <a href="https://chronoromancer.itch.io/chronoromancer" class="social-link itch" target="_blank">
-                    <img src="assets/images/itch.png" alt="Itch.io">
-                    <span>Itch.io</span>
-                </a>
-                <a href="https://bsky.app/profile/chronoromancergame.bsky.social" class="social-link bluesky" target="_blank">
-                    <img src="assets/images/bluesky.png" alt="Bluesky">
-                    <span>Bluesky</span>
-                </a>
-                <a href="https://x.com/Chronoromancer" class="social-link twitter" target="_blank">
-                    <img src="assets/images/twitter.png" alt="Twitter">
-                    <span>Twitter</span>
-                </a>
-            </div>
+    <section class="section" id="download">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow" data-copy-en="Current public release" data-copy-zh="当前公开版本">Current public release</p>
+            <h2><span data-copy-en="Download " data-copy-zh="下载 ">Download </span><span data-site-version>V0.9.6.0</span></h2>
+          </div>
+          <p data-copy-en="Windows/Linux, macOS, and Android builds are available through the official itch.io page. Additional mirrors offer the same public release." data-copy-zh="Windows/Linux、macOS 与 Android 版本可通过 itch.io 官方页面下载；其他镜像提供相同的公开版本。">Windows/Linux, macOS, and Android builds are available through the official itch.io page. Additional mirrors offer the same public release.</p>
         </div>
+
+        <div class="download-grid">
+          <a class="download-card" data-download-id="itch" target="_blank" rel="noopener noreferrer">
+            <span class="card-tag" data-copy-en="Official" data-copy-zh="官方">Official</span><h3>itch.io</h3>
+            <p data-copy-en="All current platforms, release notes, and installation instructions." data-copy-zh="提供所有当前平台版本、更新日志与安装说明。">All current platforms, release notes, and installation instructions.</p>
+            <span class="status-pill" data-download-status>Available</span>
+          </a>
+          <a class="download-card" data-download-id="mega" target="_blank" rel="noopener noreferrer">
+            <span class="card-tag" data-copy-en="Mirror" data-copy-zh="镜像">Mirror</span><h3>MEGA</h3>
+            <p data-copy-en="Alternative hosted folder for the current public builds." data-copy-zh="当前公开版本的备用托管文件夹。">Alternative hosted folder for the current public builds.</p>
+            <span class="status-pill" data-download-status>Available</span>
+          </a>
+          <a class="download-card" data-download-id="googleDrive" target="_blank" rel="noopener noreferrer">
+            <span class="card-tag" data-copy-en="Mirror" data-copy-zh="镜像">Mirror</span><h3>Google Drive</h3>
+            <p data-copy-en="An additional download source for the current public builds." data-copy-zh="当前公开版本的另一备用下载来源。">An additional download source for the current public builds.</p>
+            <span class="status-pill" data-download-status>Available</span>
+          </a>
+          <a class="download-card is-disabled" data-download-id="torrent" aria-disabled="true">
+            <span class="card-tag" data-copy-en="Peer-to-peer" data-copy-zh="点对点下载">Peer-to-peer</span><h3>BitTorrent</h3>
+            <p data-copy-en="A verified torrent and checksum will be added after the release package is prepared." data-copy-zh="发布包准备完成后，将在此提供经过验证的种子文件与校验值。">A verified torrent and checksum will be added after the release package is prepared.</p>
+            <span class="status-pill" data-download-status>Preparing</span>
+          </a>
+          <a class="download-card is-disabled" data-download-id="chinaMirror" aria-disabled="true">
+            <span class="card-tag" data-copy-en="Mainland China" data-copy-zh="中国大陆">Mainland China</span><h3 data-copy-en="Direct mirror" data-copy-zh="直连镜像">Direct mirror</h3>
+            <p data-copy-en="Candidate hosts are being tested before any link is presented as reliable." data-copy-zh="候选托管服务仍在测试中；确认稳定可靠后才会正式发布链接。">Candidate hosts are being tested before any link is presented as reliable.</p>
+            <span class="status-pill" data-download-status>Preparing</span>
+          </a>
+        </div>
+
+        <div class="china-access-note">
+          <strong data-copy-en="Access note" data-copy-zh="访问说明">Access note</strong>
+          <span data-copy-en="A host working today may not remain accessible everywhere. Torrent and mainland-China mirror links will be added only after you verify the final release files and test the hosts." data-copy-zh="某个托管服务今天可以访问，并不代表它在所有地区都能长期保持稳定。种子与中国大陆镜像链接会在最终发布文件核验完毕、托管服务测试通过后再加入。">A host working today may not remain accessible everywhere. Torrent and mainland-China mirror links will be added only after you verify the final release files and test the hosts.</span>
+        </div>
+      </div>
     </section>
 
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <p>&copy; 2025-2026 Chronoromancer. An adult visual novel for mature audiences.</p>
-            <p class="development-note">Master Time. Build Relationships. Save Existence.</p>
-            <p class="footer-links"><a href="privacy.html" class="footer-link">Privacy Policy</a> · <a href="terms.html" class="footer-link">Terms of Service</a></p>
+    <section class="section">
+      <div class="container">
+        <div class="section-heading">
+          <div><p class="eyebrow" data-copy-en="Stay connected" data-copy-zh="加入社区">Stay connected</p><h2 data-copy-en="Follow development and meet the community." data-copy-zh="关注开发进度，与玩家社区交流。">Follow development and meet the community.</h2></div>
+          <p data-copy-en="Choose whichever platform is easiest to reach. Discord remains the main community hub; Telegram provides another accessible channel." data-copy-zh="请选择最方便访问的平台。Discord 仍是主要社区中心，Telegram 则提供另一种便于访问的交流渠道。">Choose whichever platform is easiest to reach. Discord remains the main community hub; Telegram provides another accessible channel.</p>
         </div>
-    </footer>
+        <div class="community-grid">
+          <article class="community-card"><h3>Discord</h3><p data-copy-en="Discussion, feedback, news, and player help." data-copy-zh="讨论、反馈、新闻与玩家互助。">Discussion, feedback, news, and player help.</p><a data-config-link="community.discord" target="_blank" rel="noopener noreferrer" data-copy-en="Join Discord →" data-copy-zh="加入 Discord →">Join Discord →</a></article>
+          <article class="community-card"><h3>Telegram</h3><p data-copy-en="Updates and another path to the community." data-copy-zh="获取更新，并通过另一渠道加入社区。">Updates and another path to the community.</p><a data-config-link="community.telegram" target="_blank" rel="noopener noreferrer" data-copy-en="Open Telegram →" data-copy-zh="打开 Telegram →">Open Telegram →</a></article>
+          <article class="community-card"><h3>Patreon</h3><p data-copy-en="Support ongoing development and follow studio posts." data-copy-zh="支持持续开发，并查看工作室动态。">Support ongoing development and follow studio posts.</p><a data-config-link="community.patreon" target="_blank" rel="noopener noreferrer" data-copy-en="Visit Patreon →" data-copy-zh="访问 Patreon →">Visit Patreon →</a></article>
+          <article class="community-card"><h3 data-copy-en="Player Wiki" data-copy-zh="玩家 Wiki">Player Wiki</h3><p data-copy-en="A useful community-maintained Miraheze wiki with player knowledge, tips, and possible story spoilers." data-copy-zh="由玩家维护的实用 Miraheze Wiki，收录社区资料与游戏提示，其中可能包含剧情剧透。">A useful community-maintained Miraheze wiki with player knowledge, tips, and possible story spoilers.</p><a data-config-link="community.wiki" target="_blank" rel="noopener noreferrer" data-copy-en="Open the player wiki →" data-copy-zh="打开玩家 Wiki →">Open the player wiki →</a></article>
+          <article class="community-card"><h3>Bluesky</h3><p data-copy-en="Short development notes, images, and announcements." data-copy-zh="查看简短的开发动态、图片与公告。">Short development notes, images, and announcements.</p><a data-config-link="community.bluesky" target="_blank" rel="noopener noreferrer" data-copy-en="Follow on Bluesky →" data-copy-zh="在 Bluesky 上关注 →">Follow on Bluesky →</a></article>
+          <article class="community-card"><h3>X</h3><p data-copy-en="Another place to follow public release news." data-copy-zh="通过另一渠道关注公开版本动态。">Another place to follow public release news.</p><a data-config-link="community.x" target="_blank" rel="noopener noreferrer" data-copy-en="Follow on X →" data-copy-zh="在 X 上关注 →">Follow on X →</a></article>
+        </div>
+      </div>
+    </section>
+  </main>
 
-    <script src="assets/js/script.js"></script>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand"><img src="assets/images/v2/logo.png" alt="Chronoromancer"><p data-i18n="footerDescription">An adults-only time-travel sandbox RPG. Public website artwork is SFW.</p></div>
+        <div class="footer-column"><h2 data-i18n="footerExplore">Explore</h2><a href="story.html" data-i18n="navStory">Story</a><a href="characters.html" data-i18n="navCharacters">Characters</a><a href="walkthroughs.html" data-i18n="navGuides">Guides</a><a href="screenshots.html" data-i18n="navGallery">Gallery</a><a href="#download" data-i18n="navDownload">Download</a></div>
+        <div class="footer-column"><h2 data-i18n="footerCommunity">Community</h2><a data-config-link="community.discord" target="_blank" rel="noopener noreferrer">Discord</a><a data-config-link="community.telegram" target="_blank" rel="noopener noreferrer">Telegram</a><a data-config-link="community.patreon" target="_blank" rel="noopener noreferrer">Patreon</a><a data-config-link="community.wiki" target="_blank" rel="noopener noreferrer" data-i18n="navWiki">Player Wiki</a><a data-download-id="itch" target="_blank" rel="noopener noreferrer" data-i18n="officialItch">Official itch.io page</a></div>
+        <div class="footer-column"><h2 data-i18n="footerLegal">Legal</h2><a href="privacy.html" data-i18n="footerPrivacy">Privacy</a><a href="terms.html" data-i18n="footerTerms">Terms</a></div>
+      </div>
+      <div class="footer-bottom"><span>© <span data-current-year></span> <span data-i18n="copyright">Chronoromancer Studio. All rights reserved.</span></span><span data-copy-en="English / Simplified Chinese" data-copy-zh="English / 简体中文">English / Simplified Chinese</span></div>
+    </div>
+  </footer>
+
+  <script src="assets/js/site-config.js"></script>
+  <script src="assets/js/site.js"></script>
 </body>
 </html>

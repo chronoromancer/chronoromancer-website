@@ -1,0 +1,3289 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A complete player-build reference for Chronoromancer V0.9.6.1FUTURE: what every stat does, how effective values and resource soft caps work, what each starting proficiency actually grants, where skills come from, and how the three specia…"><link rel="icon" type="image/png" href="../assets/images/v2/favicon.png">
+  <link rel="stylesheet" href="../assets/css/style.css"><link rel="stylesheet" href="../assets/css/walkthroughs.css">
+  <title>Stats, Skills &amp; Proficiencies Guide | Chronoromancer Guides</title></head>
+<body class="guide-page" data-title-en="Stats, Skills &amp; Proficiencies Guide | Chronoromancer Guides" data-title-zh="属性、技能与专长指南 | Chronoromancer 官方攻略">
+  <div class="reading-progress" data-reading-progress></div>
+  <a class="skip-link" href="#content" data-copy-en="Skip to content" data-copy-zh="跳至正文">Skip to content</a>
+  <div class="maturity-bar" data-copy-en="18+ adults-only game · Guides may describe mature game systems" data-copy-zh="18+ 仅限成人游戏 · 攻略可能涉及成人游戏系统">18+ adults-only game · Guides may describe mature game systems</div>
+  <header class="site-header"><div class="container header-inner">
+    <a class="brand" href="../main.html" aria-label="Chronoromancer home"><img src="../assets/images/v2/logo.png" alt="Chronoromancer"></a>
+    <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-label="Open navigation"><span></span><span></span><span></span></button>
+    <nav class="site-nav" data-nav-menu aria-label="Primary navigation">
+      <a href="../main.html" data-i18n="navHome">Home</a>
+      <a href="../story.html" data-i18n="navStory">Story</a>
+      <a href="../characters.html" data-i18n="navCharacters">Characters</a>
+      <a class="is-active" href="../walkthroughs.html" data-i18n="navGuides">Guides</a>
+      <a href="../screenshots.html" data-i18n="navGallery">Gallery</a>
+      <a data-config-link="community.wiki" target="_blank" rel="noopener noreferrer" data-i18n="navWiki">Player Wiki</a>
+      <a href="../main.html#download" data-i18n="navDownload">Download</a>
+      <div class="language-switch" role="group" aria-label="Language"><button type="button" data-language="en" aria-pressed="true">EN</button><button type="button" data-language="zh" aria-pressed="false">简体中文</button></div>
+    </nav>
+  </div></header>
+  <main id="content">
+    <section class="guide-masthead"><div class="container">
+      <nav class="breadcrumb" aria-label="Breadcrumb"><a href="../walkthroughs.html" data-copy-en="Official Guides" data-copy-zh="官方攻略">Official Guides</a><span>/</span><span data-copy-en="Core Systems" data-copy-zh="核心系统">Core Systems</span></nav>
+      <p class="eyebrow" data-copy-en="Version-matched official guide" data-copy-zh="与当前版本匹配的官方攻略">Version-matched official guide</p>
+      <h1 data-copy-en="Stats, Skills &amp; Proficiencies Guide" data-copy-zh="属性、技能与专长指南">Stats, Skills &amp; Proficiencies Guide</h1>
+      <div class="guide-meta"><span data-copy-en="Core Systems" data-copy-zh="核心系统">Core Systems</span><span data-copy-en="Simplified Chinese available" data-copy-zh="简体中文译文已上线">Simplified Chinese available</span><span data-site-version>V0.9.6.0</span></div>
+    </div></section>
+    <div class="container guide-layout">
+      <aside class="guide-sidebar">
+        <a class="back-to-library" href="../walkthroughs.html" data-copy-en="← All guides" data-copy-zh="← 全部攻略">← All guides</a>
+        <div data-lang-panel="en"><h2>On this page</h2><nav class="guide-toc"><a class="toc-level-2" href="#contents">Contents</a><a class="toc-level-2" href="#the-short-version">The short version</a><a class="toc-level-2" href="#player-stats">Player stats</a><a class="toc-level-3" href="#the-ten-primary-stats">The ten primary stats</a><a class="toc-level-3" href="#vocational-stats">Vocational stats</a><a class="toc-level-3" href="#skill-unlocked-stats">Skill-unlocked stats</a><a class="toc-level-3" href="#separate-resources-and-progress-trackers">Separate resources and progress trackers</a><a class="toc-level-2" href="#base-stats-effective-stats-and-caps">Base stats, effective stats, and caps</a><a class="toc-level-3" href="#effective-stat-formula">Effective-stat formula</a><a class="toc-level-3" href="#what-uses-effective-values">What uses effective values?</a><a class="toc-level-3" href="#what-still-uses-base-values">What still uses base values?</a><a class="toc-level-3" href="#is-50-the-stat-cap">Is 50 the stat cap?</a><a class="toc-level-3" href="#live-percentage-key-item-bonuses">Live percentage key-item bonuses</a><a class="toc-level-3" href="#twenty-four-hour-consumable-buffs">Twenty-four-hour consumable buffs</a><a class="toc-level-2" href="#health-energy-calm-satiation-and-starting-wealth">Health, energy, calm, satiation, and starting wealth</a><a class="toc-level-3" href="#the-shared-raw-stat-total">The shared raw-stat total</a><a class="toc-level-3" href="#raw-resource-formulas">Raw resource formulas</a><a class="toc-level-3" href="#progressive-reduction-and-soft-caps">Progressive reduction and soft caps</a><a class="toc-level-3" href="#bonuses-applied-after-the-curve">Bonuses applied after the curve</a><a class="toc-level-3" href="#loss-reduction-skills">Loss-reduction skills</a><a class="toc-level-2" href="#starting-proficiencies">Starting proficiencies</a><a class="toc-level-3" href="#starting-primary-stats">Starting primary stats</a><a class="toc-level-3" href="#starting-vocational-stats">Starting vocational stats</a><a class="toc-level-3" href="#starting-package-and-private-action">Starting package and private action</a><a class="toc-level-3" href="#jack-of-all-trades">Jack of All Trades</a><a class="toc-level-3" href="#patreon-master">Patreon Master</a><a class="toc-level-2" href="#proficiency-careers">Proficiency careers</a><a class="toc-level-3" href="#universal-stat-30-careers">Universal stat-30 careers</a><a class="toc-level-3" href="#working-experience-bonuses">Working Experience bonuses</a><a class="toc-level-2" href="#skills-and-categories">Skills and categories</a><a class="toc-level-3" href="#how-skills-are-learned">How skills are learned</a><a class="toc-level-3" href="#skill-descriptions-are-not-universal-passives">Skill descriptions are not universal passives</a><a class="toc-level-2" href="#fixed-location-skill-training">Fixed-location skill training</a><a class="toc-level-2" href="#named-skill-teachers">Named skill teachers</a><a class="toc-level-2" href="#exclusive-skills">Exclusive skills</a><a class="toc-level-2" href="#specialist-combat-paths">Specialist combat paths</a><a class="toc-level-3" href="#unlock-requirements">Unlock requirements</a><a class="toc-level-3" href="#damage-and-healing-multiplier">Damage and healing multiplier</a><a class="toc-level-3" href="#earning-specialist-points">Earning specialist points</a><a class="toc-level-3" href="#rank-thresholds-and-titles">Rank thresholds and titles</a><a class="toc-level-3" href="#assassin-chain-mechanics">Assassin chain mechanics</a><a class="toc-level-3" href="#how-the-paths-combine-with-exclusive-skills">How the paths combine with exclusive skills</a><a class="toc-level-2" href="#permanent-versus-conditional-modifiers">Permanent versus conditional modifiers</a><a class="toc-level-3" href="#permanent-progression">Permanent progression</a><a class="toc-level-3" href="#permanent-ownership-conditional-effect">Permanent ownership, conditional effect</a><a class="toc-level-3" href="#temporary-or-state-dependent">Temporary or state-dependent</a><a class="toc-level-3" href="#permanent-modifier-does-not-mean-base-stat">“Permanent modifier” does not mean “base stat”</a><a class="toc-level-2" href="#build-planning">Build planning</a><a class="toc-level-3" href="#physical-route">Physical route</a><a class="toc-level-3" href="#magic-route">Magic route</a><a class="toc-level-3" href="#economy-route">Economy route</a><a class="toc-level-3" href="#flexible-completionist-route">Flexible completionist route</a><a class="toc-level-3" href="#reliable-general-advice">Reliable general advice</a><a class="toc-level-2" href="#current-build-source-audit-notes">Current-build source-audit notes</a></nav></div>
+        <div data-lang-panel="zh" hidden><h2>本页目录</h2><nav class="guide-toc"><a class="toc-level-2" href="#zh-目录">目录</a><a class="toc-level-2" href="#zh-the-short-version">简要结论</a><a class="toc-level-2" href="#zh-player-stats">玩家属性</a><a class="toc-level-3" href="#zh-十项主要属性">十项主要属性</a><a class="toc-level-3" href="#zh-职业属性">职业属性</a><a class="toc-level-3" href="#zh-由技能解锁的属性">由技能解锁的属性</a><a class="toc-level-3" href="#zh-独立资源与进度追踪项">独立资源与进度追踪项</a><a class="toc-level-2" href="#zh-base-stats-effective-stats-and-caps">基础属性、有效属性与上限</a><a class="toc-level-3" href="#zh-有效属性公式">有效属性公式</a><a class="toc-level-3" href="#zh-哪些机制使用有效值">哪些机制使用有效值？</a><a class="toc-level-3" href="#zh-哪些机制仍使用基础值">哪些机制仍使用基础值？</a><a class="toc-level-3" href="#zh-属性上限是-50-吗">属性上限是 50 吗？</a><a class="toc-level-3" href="#zh-当前生效的百分比关键物品加成">当前生效的百分比关键物品加成</a><a class="toc-level-3" href="#zh-二十四小时消耗品增益">二十四小时消耗品增益</a><a class="toc-level-2" href="#zh-health-energy-calm-satiation-and-starting-wealth">生命、精力、镇定、饱腹感与初始财富</a><a class="toc-level-3" href="#zh-共用原始属性总和">共用原始属性总和</a><a class="toc-level-3" href="#zh-原始资源公式">原始资源公式</a><a class="toc-level-3" href="#zh-渐进削减与软上限">渐进削减与软上限</a><a class="toc-level-3" href="#zh-曲线计算后应用的加成">曲线计算后应用的加成</a><a class="toc-level-3" href="#zh-损耗减免技能">损耗减免技能</a><a class="toc-level-2" href="#zh-starting-proficiencies">初始专长</a><a class="toc-level-3" href="#zh-初始主要属性">初始主要属性</a><a class="toc-level-3" href="#zh-初始职业属性">初始职业属性</a><a class="toc-level-3" href="#zh-初始配置与私人行动">初始配置与私人行动</a><a class="toc-level-3" href="#zh-万事通">万事通</a><a class="toc-level-3" href="#zh-patreon-大师">Patreon 大师</a><a class="toc-level-2" href="#zh-proficiency-careers">专长职业</a><a class="toc-level-3" href="#zh-通用属性-30-职业">通用属性 30 职业</a><a class="toc-level-3" href="#zh-工作经验加成">工作经验加成</a><a class="toc-level-2" href="#zh-skills-and-categories">技能与类别</a><a class="toc-level-3" href="#zh-技能学习方式">技能学习方式</a><a class="toc-level-3" href="#zh-技能说明并非全局被动效果">技能说明并非全局被动效果</a><a class="toc-level-2" href="#zh-fixed-location-skill-training">固定地点技能训练</a><a class="toc-level-2" href="#zh-named-skill-teachers">具名技能导师</a><a class="toc-level-2" href="#zh-exclusive-skills">独占技能</a><a class="toc-level-2" href="#zh-specialist-combat-paths">专精战斗路线</a><a class="toc-level-3" href="#zh-解锁要求">解锁要求</a><a class="toc-level-3" href="#zh-伤害与治疗倍率">伤害与治疗倍率</a><a class="toc-level-3" href="#zh-获取专精点数">获取专精点数</a><a class="toc-level-3" href="#zh-阶级门槛与称号">阶级门槛与称号</a><a class="toc-level-3" href="#zh-刺客连击机制">刺客连击机制</a><a class="toc-level-3" href="#zh-各路线如何与独占技能结合">各路线如何与独占技能结合</a><a class="toc-level-2" href="#zh-permanent-versus-conditional-modifiers">永久修正与条件修正</a><a class="toc-level-3" href="#zh-永久进度">永久进度</a><a class="toc-level-3" href="#zh-永久持有效果有条件">永久持有，效果有条件</a><a class="toc-level-3" href="#zh-临时或取决于状态">临时或取决于状态</a><a class="toc-level-3" href="#zh-永久修正不等于基础属性">“永久修正”不等于“基础属性”</a><a class="toc-level-2" href="#zh-build-planning">构筑规划</a><a class="toc-level-3" href="#zh-物理路线">物理路线</a><a class="toc-level-3" href="#zh-魔法路线">魔法路线</a><a class="toc-level-3" href="#zh-经济路线">经济路线</a><a class="toc-level-3" href="#zh-灵活的全收集路线">灵活的全收集路线</a><a class="toc-level-3" href="#zh-通用可靠建议">通用可靠建议</a><a class="toc-level-2" href="#zh-current-build-documentation-exceptions">当前版本源代码审计说明</a></nav></div>
+      </aside>
+      <article class="guide-content">
+        <div class="spoiler-notice"><strong data-copy-en="Guide notice" data-copy-zh="攻略提示">Guide notice</strong><span data-copy-en="This page contains gameplay and story spoilers and may describe mature systems." data-copy-zh="本页包含玩法与剧情剧透，并可能涉及成人游戏系统。">This page contains gameplay and story spoilers and may describe mature systems.</span></div>
+        <div class="markdown-body" data-lang-panel="en">
+<p><em>A complete player-build reference for Chronoromancer V0.9.6.1_FUTURE: what every stat does, how effective values and resource soft caps work, what each starting proficiency actually grants, where skills come from, and how the three specialist combat paths scale.</em></p>
+<blockquote>
+<p><strong>Community credit:</strong> The Specialist Combat Paths section was informed by the player-created <a href="https://chronoromancer.miraheze.org/wiki/Game_Systems:Specialist_Class" rel="noopener noreferrer" target="_blank">Specialist Class wiki guide</a>, available under <a href="https://creativecommons.org/licenses/by-sa/4.0/" rel="noopener noreferrer" target="_blank">CC BY-SA 4.0</a>. Its rank research was used as a foundation, then rechecked, corrected, and expanded against the current game source.</p>
+</blockquote>
+<p>This is a mechanics guide, so it names late-game characters, locations, relationship requirements, and story gates. The first half is safe for a new player; the specialist and exclusive-skill sections contain progression spoilers.</p>
+<h2 id="contents">Contents</h2>
+<ul>
+<li><a href="#the-short-version">The short version</a></li>
+<li><a href="#player-stats">Player stats</a></li>
+<li><a href="#base-stats-effective-stats-and-caps">Base stats, effective stats, and caps</a></li>
+<li><a href="#health-energy-calm-satiation-and-starting-wealth">Health, energy, calm, satiation, and starting wealth</a></li>
+<li><a href="#starting-proficiencies">Starting proficiencies</a></li>
+<li><a href="#proficiency-careers">Proficiency careers</a></li>
+<li><a href="#skills-and-categories">Skills and categories</a></li>
+<li><a href="#fixed-location-skill-training">Fixed-location skill training</a></li>
+<li><a href="#named-skill-teachers">Named skill teachers</a></li>
+<li><a href="#exclusive-skills">Exclusive skills</a></li>
+<li><a href="#specialist-combat-paths">Specialist combat paths</a></li>
+<li><a href="#permanent-versus-conditional-modifiers">Permanent versus conditional modifiers</a></li>
+<li><a href="#build-planning">Build planning</a></li>
+<li><a href="#current-build-documentation-exceptions">Current-build documentation exceptions</a></li>
+</ul>
+<hr/>
+<h2 id="the-short-version">The short version</h2>
+<ol>
+<li>Your proficiency chooses your <strong>starting numbers</strong>, two free skills, starting equipment, a private bedroom action, and access to a proficiency career. It is not a conventional level-locked class.</li>
+<li>A <strong>base stat</strong> is the stored number on the character. An <strong>effective stat</strong> adds temporary consumables and live key-item bonuses.</li>
+<li>Most action visibility and job-pay formulas use effective stats, but formal skill requirements and many unlock checks use the base stat. If a boosted stat reveals something but does not satisfy the final requirement, raise the base stat.</li>
+<li>Ordinary stats do <strong>not</strong> have a universal hard cap of 50. Many activities stop granting easy growth around their own thresholds, but permanent rewards can take stats higher.</li>
+<li>Health, energy, and calm use progressive reduction and late soft caps. The displayed soft-cap targets are not absolute maximums; flat and percentage bonuses are added afterward.</li>
+<li>Learned skills are permanent. Their effects may still be conditional: a skill can unlock one action, trigger only on one attack, improve one job, or double relationship gains with a particular character.</li>
+<li>Blademaster, Assassin, and Sorcerer are separate late-game combat paths. They do not replace the starting proficiency and all three can coexist on one character.</li>
+</ol>
+<hr/>
+<h2 id="player-stats">Player stats</h2>
+<h3 id="the-ten-primary-stats">The ten primary stats</h3>
+<div class="guide-table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th>Stat</th>
+<th>Main uses</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Strength</strong></td>
+<td>Physical power, basic attacks, Power Strike, strength checks, and max health.</td>
+</tr>
+<tr>
+<td><strong>Intelligence</strong></td>
+<td>Research, analysis, many technology/economic skills, jobs, max calm, and starting wealth.</td>
+</tr>
+<tr>
+<td><strong>Charm</strong></td>
+<td>Persuasion, social and intimate options, relationship checks, jobs, and max calm.</td>
+</tr>
+<tr>
+<td><strong>Stamina</strong></td>
+<td>Endurance, physical resilience, max health, max energy, and max satiation.</td>
+</tr>
+<tr>
+<td><strong>Ability</strong></td>
+<td>Agility, coordination, Quick Attack, Stormslash, evasion-oriented skills, and dexterity checks.</td>
+</tr>
+<tr>
+<td><strong>Creativity</strong></td>
+<td>Performance, music, artistic work, invention, and cooking-related options.</td>
+</tr>
+<tr>
+<td><strong>Perception</strong></td>
+<td>Awareness, appraisal, observation, ranged themes, and encounter checks.</td>
+</tr>
+<tr>
+<td><strong>Mystic</strong></td>
+<td>Magic damage and healing, spell and ritual skills, and supernatural checks.</td>
+</tr>
+<tr>
+<td><strong>Technology</strong></td>
+<td>Hacking, engineering, future-era actions, technical jobs, and starting wealth.</td>
+</tr>
+<tr>
+<td><strong>Luck</strong></td>
+<td>Random outcomes, games, loot-oriented checks, and starting wealth.</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="vocational-stats">Vocational stats</h3>
+<div class="guide-table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th>Stat</th>
+<th>Main uses</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Cooking</strong></td>
+<td>Food preparation, cooking yield, Chef work, culinary skill gates, and some relationship checks.</td>
+</tr>
+<tr>
+<td><strong>Commerce</strong></td>
+<td>Business, investments, Broker work, economic skills, and commercial checks.</td>
+</tr>
+<tr>
+<td><strong>Communication</strong></td>
+<td>Customer-facing work, social checks, relationship content, and the Tamer requirement.</td>
+</tr>
+<tr>
+<td><strong>Rogue</strong></td>
+<td>Theft, infiltration, heists, criminal actions, and Thieves Guild-oriented checks.</td>
+</tr>
+</tbody>
+</table></div>
+<p>These four are genuine player stats, not subskills. They begin much lower than the primary stats and often need deliberate training.</p>
+<h3 id="skill-unlocked-stats">Skill-unlocked stats</h3>
+<div class="guide-table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th>Stat</th>
+<th>How it appears</th>
+<th>Main use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Taming</strong></td>
+<td>Learning <strong>Tamer</strong> creates the stat at 1.</td>
+<td>Monster capture and taming-session performance; taming content can raise it.</td>
+</tr>
+<tr>
+<td><strong>Leader</strong></td>
+<td>Learning <strong>Leadership</strong> creates the stat at 1.</td>
+<td>A tracked leadership specialty used by content that requests the Leader stat.</td>
+</tr>
+</tbody>
+</table></div>
+<p>These stats do not exist on a fresh character. This is why they are absent from starting-stat tables.</p>
+<h3 id="separate-resources-and-progress-trackers">Separate resources and progress trackers</h3>
+<p>The following are displayed beside stats but are not ordinary core stats:</p>
+<ul>
+<li><strong>Health, Energy, Calm, Satiation, Wealth, and Attractiveness</strong> are direct player values.</li>
+<li><strong>Beast</strong> and <strong>Vampire</strong> are supernatural progress values with their own checks.</li>
+<li><strong>Fighting, Erotic, and Working Experience</strong> are permanent progression trackers.</li>
+<li><strong>Good, Evil, and Neutral alignment</strong> are separate moral axes.</li>
+<li><strong>Sorcerer, Assassin, and Blademaster points</strong> exist only after their respective paths are acquired.</li>
+</ul>
+<hr/>
+<h2 id="base-stats-effective-stats-and-caps">Base stats, effective stats, and caps</h2>
+<h3 id="effective-stat-formula">Effective-stat formula</h3>
+<p>For an ordinary stat:</p>
+<pre><code class="language-text">effective stat = base stat
+               + permanent flat modifier
+               + active consumable modifier
+               + live key-item bonus
+</code></pre>
+<p>Attractiveness has the same structure but is stored outside the ordinary stat dictionary. Beast accepts its active consumable modifier. Vampire currently returns its base value without a separate modifier layer.</p>
+<p>The character sheet shows modifier totals separately, so a value such as <code>30 (+6)</code> means base 30 and effective 36.</p>
+<h3 id="what-uses-effective-values">What uses effective values?</h3>
+<p>Effective values are used by action visibility, proficiency-career visibility, career pay, most ordinary income formulas, and many combat calculations. Temporary buffs are therefore useful for earning more money and revealing effective-stat-gated actions.</p>
+<h3 id="what-still-uses-base-values">What still uses base values?</h3>
+<p>Formal skill objects check the stored base stat. The standard <code>unlocked_by_stats</code> action gate also checks the base stat. Derived health, energy, calm, and satiation formulas read base stats rather than temporary or key-item-boosted effective values.</p>
+<p>Practical rule: <strong>use buffs to improve performance, but train the base number for reliable unlocks and skill learning.</strong></p>
+<h3 id="is-50-the-stat-cap">Is 50 the stat cap?</h3>
+<p>No. There is no universal hard cap in the core stat-adjustment method. Individual activities have their own limits, visibility conditions, success caps, or diminishing availability, but permanent rewards can push a stat beyond 50 and late content explicitly checks values such as 60, 75, 85, and 100.</p>
+<h3 id="live-percentage-key-item-bonuses">Live percentage key-item bonuses</h3>
+<p>These are calculated from the unmodified base value. Each individual bonus has a minimum of +1, and bonuses from different items add rather than compounding with each other.</p>
+<div class="guide-table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th>Key item</th>
+<th>Effective-stat bonus</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Magic Spectacles</strong></td>
+<td>+10% Intelligence and +10% Attractiveness.</td>
+</tr>
+<tr>
+<td><strong>Ornate Locket</strong></td>
+<td>+10% Charm and +10% Attractiveness.</td>
+</tr>
+<tr>
+<td><strong>Awesome Crown</strong></td>
+<td>+2% Strength, Intelligence, Charm, Stamina, Ability, Creativity, Perception, Mystic, Technology, Luck, Cooking, and Commerce.</td>
+</tr>
+</tbody>
+</table></div>
+<p>Communication and Rogue are not boosted by the Awesome Crown.</p>
+<h3 id="twenty-four-hour-consumable-buffs">Twenty-four-hour consumable buffs</h3>
+<div class="guide-table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th>Consumable</th>
+<th>Temporary effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Focus</strong></td>
+<td>+25 Intelligence, Mystic, Technology, and Perception.</td>
+</tr>
+<tr>
+<td><strong>Cologne</strong></td>
+<td>+10 Charm and +10 Attractiveness.</td>
+</tr>
+<tr>
+<td><strong>Luck</strong></td>
+<td>+50 Luck.</td>
+</tr>
+<tr>
+<td><strong>Desire</strong></td>
+<td>+200 Erotic Experience immediately; in Experimental Mode, +50 Beast for the buff duration.</td>
+</tr>
+</tbody>
+</table></div>
+<p>The Time, Antidote, Power, and Shield consumables also maintain timed buff states, but their effects are handled by their relevant systems rather than the ordinary stat-modifier table. A buff expires after 24 in-game hours and does not stack with another copy of itself while active.</p>
+<hr/>
+<h2 id="health-energy-calm-satiation-and-starting-wealth">Health, energy, calm, satiation, and starting wealth</h2>
+<h3 id="the-shared-raw-stat-total">The shared raw-stat total</h3>
+<p>Several resource formulas use this sum:</p>
+<pre><code class="language-text">all-stats total = Strength + Intelligence + Charm + Stamina + Ability
+                + Creativity + Perception + Mystic + Technology + Cooking
+</code></pre>
+<p>Luck, Commerce, Communication, Rogue, Taming, and Leader are not included.</p>
+<h3 id="raw-resource-formulas">Raw resource formulas</h3>
+<pre><code class="language-text">health total    = (Strength + Stamina) × 3 + floor(all-stats total ÷ 2)
+energy total    = Stamina × 8 + floor(all-stats total ÷ 2)
+calm total      = (Charm + Intelligence) × 3 + floor(all-stats total ÷ 2)
+satiation raw   = Stamina × 4 + floor(all-stats total ÷ 4)
+starting wealth = (Intelligence + Luck) × 2 + Technology
+</code></pre>
+<p>Satiation is linear through 100. Above 100, only half the excess is retained:</p>
+<pre><code class="language-text">max satiation = 100 + floor((raw - 100) ÷ 2), when raw &gt; 100
+</code></pre>
+<h3 id="progressive-reduction-and-soft-caps">Progressive reduction and soft caps</h3>
+<p>Health, energy, and calm first pass through a progressive reduction:</p>
+<pre><code class="language-text">reduction percentage = 0.10 + total/7500 + total²/7,500,000
+base result          = total - floor(total × reduction percentage)
+</code></pre>
+<p>Late totals then approach a soft-cap target asymptotically:</p>
+<div class="guide-table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th>Resource</th>
+<th style="text-align:right">Raw-total threshold</th>
+<th style="text-align:right">Soft-cap target</th>
+<th style="text-align:right">Curve constant</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Health</td>
+<td style="text-align:right">1,100</td>
+<td style="text-align:right">750</td>
+<td style="text-align:right">0.0025</td>
+</tr>
+<tr>
+<td>Energy</td>
+<td style="text-align:right">1,300</td>
+<td style="text-align:right">775</td>
+<td style="text-align:right">0.0020</td>
+</tr>
+<tr>
+<td>Calm</td>
+<td style="text-align:right">1,100</td>
+<td style="text-align:right">750</td>
+<td style="text-align:right">0.0025</td>
+</tr>
+</tbody>
+</table></div>
+<p>These are <strong>soft-cap targets before final bonuses</strong>, not absolute limits.</p>
+<h3 id="bonuses-applied-after-the-curve">Bonuses applied after the curve</h3>
+<div class="guide-table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th>Resource</th>
+<th>Post-curve bonuses</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Health</strong></td>
+<td>Persistent <code>health_max</code> rewards; Queenstone +1 per level; Heart of the Ocean +50; Eye of Batman +50; Vital Heartcap +50; The Second Pulse ×1.10 after flat bonuses; Bio-Reactor Core +1% per level after everything before it.</td>
+</tr>
+<tr>
+<td><strong>Energy</strong></td>
+<td>Persistent <code>energy_max</code> rewards; Aether Stone +1 per level; Heart of the Ocean +50; Eye of Batman +50; Mnemonic Battery +1% per level.</td>
+</tr>
+<tr>
+<td><strong>Calm</strong></td>
+<td>Persistent <code>calm_max</code> rewards; Aether Stone +1 per level; Heart of the Ocean +50; Eye of Batman +50.</td>
+</tr>
+</tbody>
+</table></div>
+<p>Void and crystal content can grant additional persistent maximum-resource modifiers. Because these are added after the soft-cap curve, the final displayed maximum can exceed 750 or 775.</p>
+<h3 id="loss-reduction-skills">Loss-reduction skills</h3>
+<ul>
+<li><strong>Iron Constitution</strong> reduces ordinary health penalties by 10%.</li>
+<li><strong>Endurance Training</strong> reduces ordinary energy penalties by 10%.</li>
+<li><strong>Inner Peace</strong> reduces ordinary calm penalties by 10%.</li>
+</ul>
+<p>These apply when the shared variable-stat adjustment route is used. A system that performs a direct deduction can have its own rules.</p>
+<hr/>
+<h2 id="starting-proficiencies">Starting proficiencies</h2>
+<p>Chronoromancer has eleven selectable starting proficiencies. The profile labels—main, secondary, and weakness—describe the starting specialization. They do not create a permanent experience multiplier or prevent another stat from being trained later.</p>
+<h3 id="starting-primary-stats">Starting primary stats</h3>
+<div class="guide-table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th>Proficiency</th>
+<th style="text-align:right">Str</th>
+<th style="text-align:right">Int</th>
+<th style="text-align:right">Cha</th>
+<th style="text-align:right">Sta</th>
+<th style="text-align:right">Abi</th>
+<th style="text-align:right">Cre</th>
+<th style="text-align:right">Per</th>
+<th style="text-align:right">Mys</th>
+<th style="text-align:right">Tec</th>
+<th style="text-align:right">Luck</th>
+<th style="text-align:right">Attr</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Body Builder</td>
+<td style="text-align:right">29</td>
+<td style="text-align:right">8</td>
+<td style="text-align:right">9</td>
+<td style="text-align:right">21</td>
+<td style="text-align:right">11</td>
+<td style="text-align:right">12</td>
+<td style="text-align:right">10</td>
+<td style="text-align:right">1</td>
+<td style="text-align:right">8</td>
+<td style="text-align:right">6</td>
+<td style="text-align:right">9</td>
+</tr>
+<tr>
+<td>Scholar</td>
+<td style="text-align:right">7</td>
+<td style="text-align:right">30</td>
+<td style="text-align:right">8</td>
+<td style="text-align:right">10</td>
+<td style="text-align:right">6</td>
+<td style="text-align:right">18</td>
+<td style="text-align:right">20</td>
+<td style="text-align:right">12</td>
+<td style="text-align:right">9</td>
+<td style="text-align:right">13</td>
+<td style="text-align:right">5</td>
+</tr>
+<tr>
+<td>Salesman</td>
+<td style="text-align:right">8</td>
+<td style="text-align:right">11</td>
+<td style="text-align:right">28</td>
+<td style="text-align:right">10</td>
+<td style="text-align:right">1</td>
+<td style="text-align:right">9</td>
+<td style="text-align:right">13</td>
+<td style="text-align:right">6</td>
+<td style="text-align:right">7</td>
+<td style="text-align:right">20</td>
+<td style="text-align:right">17</td>
+</tr>
+<tr>
+<td>Computer Expert</td>
+<td style="text-align:right">6</td>
+<td style="text-align:right">17</td>
+<td style="text-align:right">8</td>
+<td style="text-align:right">1</td>
+<td style="text-align:right">15</td>
+<td style="text-align:right">12</td>
+<td style="text-align:right">9</td>
+<td style="text-align:right">10</td>
+<td style="text-align:right">27</td>
+<td style="text-align:right">11</td>
+<td style="text-align:right">7</td>
+</tr>
+<tr>
+<td>Musician</td>
+<td style="text-align:right">9</td>
+<td style="text-align:right">10</td>
+<td style="text-align:right">18</td>
+<td style="text-align:right">8</td>
+<td style="text-align:right">13</td>
+<td style="text-align:right">27</td>
+<td style="text-align:right">1</td>
+<td style="text-align:right">11</td>
+<td style="text-align:right">6</td>
+<td style="text-align:right">12</td>
+<td style="text-align:right">18</td>
+</tr>
+<tr>
+<td>Martial Artist</td>
+<td style="text-align:right">15</td>
+<td style="text-align:right">8</td>
+<td style="text-align:right">6</td>
+<td style="text-align:right">15</td>
+<td style="text-align:right">29</td>
+<td style="text-align:right">2</td>
+<td style="text-align:right">15</td>
+<td style="text-align:right">13</td>
+<td style="text-align:right">10</td>
+<td style="text-align:right">9</td>
+<td style="text-align:right">8</td>
+</tr>
+<tr>
+<td>Player</td>
+<td style="text-align:right">11</td>
+<td style="text-align:right">13</td>
+<td style="text-align:right">30</td>
+<td style="text-align:right">10</td>
+<td style="text-align:right">12</td>
+<td style="text-align:right">8</td>
+<td style="text-align:right">16</td>
+<td style="text-align:right">1</td>
+<td style="text-align:right">6</td>
+<td style="text-align:right">18</td>
+<td style="text-align:right">20</td>
+</tr>
+<tr>
+<td>Games Master</td>
+<td style="text-align:right">8</td>
+<td style="text-align:right">18</td>
+<td style="text-align:right">1</td>
+<td style="text-align:right">12</td>
+<td style="text-align:right">10</td>
+<td style="text-align:right">15</td>
+<td style="text-align:right">26</td>
+<td style="text-align:right">9</td>
+<td style="text-align:right">13</td>
+<td style="text-align:right">29</td>
+<td style="text-align:right">9</td>
+</tr>
+<tr>
+<td>Athlete</td>
+<td style="text-align:right">24</td>
+<td style="text-align:right">9</td>
+<td style="text-align:right">11</td>
+<td style="text-align:right">28</td>
+<td style="text-align:right">15</td>
+<td style="text-align:right">6</td>
+<td style="text-align:right">8</td>
+<td style="text-align:right">10</td>
+<td style="text-align:right">1</td>
+<td style="text-align:right">12</td>
+<td style="text-align:right">12</td>
+</tr>
+<tr>
+<td>Magician</td>
+<td style="text-align:right">7</td>
+<td style="text-align:right">15</td>
+<td style="text-align:right">13</td>
+<td style="text-align:right">9</td>
+<td style="text-align:right">11</td>
+<td style="text-align:right">22</td>
+<td style="text-align:right">20</td>
+<td style="text-align:right">28</td>
+<td style="text-align:right">12</td>
+<td style="text-align:right">8</td>
+<td style="text-align:right">8</td>
+</tr>
+<tr>
+<td>Jack of All Trades</td>
+<td style="text-align:right">12</td>
+<td style="text-align:right">16</td>
+<td style="text-align:right">17</td>
+<td style="text-align:right">13</td>
+<td style="text-align:right">10</td>
+<td style="text-align:right">18</td>
+<td style="text-align:right">11</td>
+<td style="text-align:right">14</td>
+<td style="text-align:right">12</td>
+<td style="text-align:right">18</td>
+<td style="text-align:right">14</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="starting-vocational-stats">Starting vocational stats</h3>
+<div class="guide-table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th>Proficiency</th>
+<th style="text-align:right">Cooking</th>
+<th style="text-align:right">Commerce</th>
+<th style="text-align:right">Communication</th>
+<th style="text-align:right">Rogue</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Body Builder</td>
+<td style="text-align:right">1</td>
+<td style="text-align:right">3</td>
+<td style="text-align:right">2</td>
+<td style="text-align:right">2</td>
+</tr>
+<tr>
+<td>Scholar</td>
+<td style="text-align:right">1</td>
+<td style="text-align:right">6</td>
+<td style="text-align:right">4</td>
+<td style="text-align:right">2</td>
+</tr>
+<tr>
+<td>Salesman</td>
+<td style="text-align:right">1</td>
+<td style="text-align:right">15</td>
+<td style="text-align:right">10</td>
+<td style="text-align:right">3</td>
+</tr>
+<tr>
+<td>Computer Expert</td>
+<td style="text-align:right">1</td>
+<td style="text-align:right">8</td>
+<td style="text-align:right">3</td>
+<td style="text-align:right">5</td>
+</tr>
+<tr>
+<td>Musician</td>
+<td style="text-align:right">1</td>
+<td style="text-align:right">4</td>
+<td style="text-align:right">7</td>
+<td style="text-align:right">3</td>
+</tr>
+<tr>
+<td>Martial Artist</td>
+<td style="text-align:right">1</td>
+<td style="text-align:right">3</td>
+<td style="text-align:right">2</td>
+<td style="text-align:right">2</td>
+</tr>
+<tr>
+<td>Player</td>
+<td style="text-align:right">1</td>
+<td style="text-align:right">10</td>
+<td style="text-align:right">9</td>
+<td style="text-align:right">7</td>
+</tr>
+<tr>
+<td>Games Master</td>
+<td style="text-align:right">1</td>
+<td style="text-align:right">8</td>
+<td style="text-align:right">4</td>
+<td style="text-align:right">4</td>
+</tr>
+<tr>
+<td>Athlete</td>
+<td style="text-align:right">1</td>
+<td style="text-align:right">5</td>
+<td style="text-align:right">3</td>
+<td style="text-align:right">2</td>
+</tr>
+<tr>
+<td>Magician</td>
+<td style="text-align:right">1</td>
+<td style="text-align:right">2</td>
+<td style="text-align:right">3</td>
+<td style="text-align:right">3</td>
+</tr>
+<tr>
+<td>Jack of All Trades</td>
+<td style="text-align:right">1</td>
+<td style="text-align:right">12</td>
+<td style="text-align:right">5</td>
+<td style="text-align:right">3</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="starting-package-and-private-action">Starting package and private action</h3>
+<div class="guide-table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th>Proficiency</th>
+<th>Main / secondary / weakness</th>
+<th>Actual free skills</th>
+<th>Extra starting equipment</th>
+<th>Private bedroom action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Body Builder</strong></td>
+<td>Strength / Stamina, Creativity / Mystic</td>
+<td>Power Strike; Endurance Training</td>
+<td>Armor</td>
+<td>Lift Weights: +1 Strength, 45 min, -30 Energy</td>
+</tr>
+<tr>
+<td><strong>Scholar</strong></td>
+<td>Intelligence / Creativity, Perception / Strength</td>
+<td>Arcane Knowledge; Researching</td>
+<td>Formal Outfit</td>
+<td>Study Research Papers: +1 Intelligence, 45 min, -15 Energy, -15 Calm</td>
+</tr>
+<tr>
+<td><strong>Salesman</strong></td>
+<td>Charm / Luck, Intelligence / Ability</td>
+<td>Silver Tongue; Networking</td>
+<td>Formal Outfit</td>
+<td>Practice Sales Pitch: +1 Commerce, 45 min, -15 Energy, -15 Calm</td>
+</tr>
+<tr>
+<td><strong>Computer Expert</strong></td>
+<td>Technology / Intelligence, Ability / Stamina</td>
+<td>Engineering Genius; <strong>System Hacking</strong></td>
+<td>Ranged Weapon</td>
+<td>Work on Code Projects: earn Intelligence ×2, 45 min, -15 Energy, -15 Calm</td>
+</tr>
+<tr>
+<td><strong>Musician</strong></td>
+<td>Creativity / Charm, Intelligence / Perception</td>
+<td>Musical Virtuosity; Master Performer</td>
+<td>Dating Outfit</td>
+<td>Practice Guitar: +1 Creativity, 45 min, -15 Energy, -15 Calm</td>
+</tr>
+<tr>
+<td><strong>Martial Artist</strong></td>
+<td>Ability / Stamina, Perception / Creativity</td>
+<td>Martial Arts; Combat Reflexes</td>
+<td>Melee Weapon</td>
+<td>Practice Martial Forms: +1 Ability, 45 min, -20 Energy, -10 Calm</td>
+</tr>
+<tr>
+<td><strong>Player</strong></td>
+<td>Charm / Luck, Perception / Mystic</td>
+<td>Seduction; Reading People</td>
+<td>Dating Outfit</td>
+<td>Practice Social Skills: +1 Attractiveness, 45 min, -10 Energy, -20 Calm</td>
+</tr>
+<tr>
+<td><strong>Games Master</strong></td>
+<td>Luck / Intelligence, Perception / Charm</td>
+<td>Tactical Awareness; <strong>Cheating</strong></td>
+<td>—</td>
+<td>Plan Game Strategies: +1 Luck, 45 min, -15 Energy, -15 Calm</td>
+</tr>
+<tr>
+<td><strong>Athlete</strong></td>
+<td>Stamina / Strength, Ability / Technology</td>
+<td>Endurance Training; Adrenaline Rush</td>
+<td>Armor</td>
+<td>Aerobics Workout: +1 Stamina, 45 min, -30 Energy</td>
+</tr>
+<tr>
+<td><strong>Magician</strong></td>
+<td>Mystic / Creativity, Perception / Strength</td>
+<td>Elemental Blast; Illusion Weaving</td>
+<td>—</td>
+<td>Crystal Meditation: +1 Mystic, 45 min, -15 Energy, -15 Calm</td>
+</tr>
+<tr>
+<td><strong>Jack of All Trades</strong></td>
+<td>None / Intelligence, Charm, Creativity, Luck / None</td>
+<td>Improvisation; Cultural Adaptation</td>
+<td>—</td>
+<td>Practice Various Skills: +1 Perception, 45 min, -15 Energy, -15 Calm</td>
+</tr>
+</tbody>
+</table></div>
+<p>Every proficiency also starts with its own upgradeable proficiency item and a Casual Outfit. “Extra starting equipment” lists only the additional ordinary slot.</p>
+<h3 id="jack-of-all-trades">Jack of All Trades</h3>
+<p>Jack of All Trades can see all ten proficiency-specific careers. It earns 70% of the ordinary career result on those jobs unless verified supporter access bypasses the penalty. The penalty does not apply to universal jobs such as Chef or Broker. Its advantage is access and flexibility, not top pay.</p>
+<h3 id="patreon-master">Patreon Master</h3>
+<p>Patreon Master is a later supporter upgrade rather than a character-creation option. It costs 10 crystals through the supporter upgrade offered by the crystal-vendor route, replaces the current proficiency, upgrades the bedroom, renames the proficiency item, and opens supporter training/work access. Other systems also give it specific bonuses, including +5% brothel income and reputation, +5% investment returns, and ×2 timed Kupie affection.</p>
+<p>It does not overwrite the character's existing base-stat block with a new starting array.</p>
+<hr/>
+<h2 id="proficiency-careers">Proficiency careers</h2>
+<p>Each proficiency career lasts 60 minutes, costs 30 Energy, requires effective stat 30 for visibility, and has an 8% chance to raise its work stat by 1.</p>
+<p>For the ten ordinary proficiency careers:</p>
+<pre><code class="language-text">base pay = random(effective work stat, effective work stat × 2) + 15
+</code></pre>
+<p>The listed skill doubles that career's base pay. Working-experience bonus money is added afterward.</p>
+<div class="guide-table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th>Proficiency</th>
+<th>Career</th>
+<th>Location</th>
+<th>Hours</th>
+<th>Work stat</th>
+<th>×2 pay skill</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Body Builder</td>
+<td>Personal Trainer</td>
+<td>Gym</td>
+<td>06:00–21:00</td>
+<td>Strength</td>
+<td>Berserker Rage</td>
+</tr>
+<tr>
+<td>Scholar</td>
+<td>Teacher</td>
+<td>University Classroom</td>
+<td>09:00–17:00</td>
+<td>Intelligence</td>
+<td>Material Science</td>
+</tr>
+<tr>
+<td>Salesman</td>
+<td>Car Salesman</td>
+<td>Car Dealer</td>
+<td>09:00–18:00</td>
+<td>Communication</td>
+<td>Negotiation</td>
+</tr>
+<tr>
+<td>Computer Expert</td>
+<td>IT Specialist</td>
+<td>University Computer Lab</td>
+<td>09:00–17:00</td>
+<td>Technology</td>
+<td>Quantum Computing</td>
+</tr>
+<tr>
+<td>Musician</td>
+<td>Producer</td>
+<td>Music Studio</td>
+<td>12:00–23:00</td>
+<td>Creativity</td>
+<td>Song Writing</td>
+</tr>
+<tr>
+<td>Martial Artist</td>
+<td>Sensei</td>
+<td>Dojo</td>
+<td>10:00–19:00</td>
+<td>Stamina</td>
+<td>Weapon Mastery</td>
+</tr>
+<tr>
+<td>Player</td>
+<td>Promoter</td>
+<td>Night Club</td>
+<td>21:00–03:00</td>
+<td>Charm</td>
+<td>Reputation Management</td>
+</tr>
+<tr>
+<td>Games Master</td>
+<td>Gamer</td>
+<td>Arcade</td>
+<td>12:00–22:00</td>
+<td>Luck</td>
+<td>Cheating</td>
+</tr>
+<tr>
+<td>Athlete</td>
+<td>Coach</td>
+<td>Basketball Court</td>
+<td>09:00–17:00</td>
+<td>Stamina</td>
+<td>Leadership</td>
+</tr>
+<tr>
+<td>Magician</td>
+<td>Illusionist</td>
+<td>Magic Shop</td>
+<td>09:00–18:00</td>
+<td>Mystic</td>
+<td>Illusion Weaving</td>
+</tr>
+</tbody>
+</table></div>
+<p>Sensei also has a 15% chance to grant +1 Neutral alignment.</p>
+<h3 id="universal-stat-30-careers">Universal stat-30 careers</h3>
+<div class="guide-table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th>Career</th>
+<th>Location / hours</th>
+<th>Requirement and pay</th>
+<th>×2 pay skill</th>
+<th>Extra</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Chef</strong></td>
+<td>Downtown Restaurant, 10:00–22:00</td>
+<td>Cooking 30; <code>random(Cooking, Cooking×2) + 15</code></td>
+<td>Creative Cooking</td>
+<td>Refills Satiation to maximum.</td>
+</tr>
+<tr>
+<td><strong>Broker</strong></td>
+<td>Investment Planning, 09:00–17:00</td>
+<td>Commerce 30; <code>random(Charm+Communication, Commerce+Intelligence) + Luck</code></td>
+<td>Market Analysis</td>
+<td>Raises Commerce on the 8% growth roll.</td>
+</tr>
+</tbody>
+</table></div>
+<p>All formula stats are effective values.</p>
+<h3 id="working-experience-bonuses">Working Experience bonuses</h3>
+<p>Every completed job adds a random wage bonus from 0 through current Working Experience, then advances the tracker.</p>
+<ul>
+<li><strong>Business Acumen:</strong> upper wage-bonus limit becomes <code>Working Experience ×2</code>.</li>
+<li><strong>Diligent Worker:</strong> base Working Experience gain becomes 2 instead of 1.</li>
+<li><strong>Responsibility:</strong> 25% chance of +1 extra Working Experience.</li>
+<li><strong>Outfit levels:</strong> the combined Casual, Dating, and Formal Outfit levels create a chance out of 16 for +1 extra experience, capped at 16/16.</li>
+</ul>
+<hr/>
+<h2 id="skills-and-categories">Skills and categories</h2>
+<p>The current skill registry contains <strong>131 skills</strong> grouped for display as follows:</p>
+<div class="guide-table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th>Category</th>
+<th style="text-align:right">Count</th>
+<th>What it generally contains</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Combat</td>
+<td style="text-align:right">29</td>
+<td>Attacks, defense, dodging, weapons, and combat passives.</td>
+</tr>
+<tr>
+<td>Magic</td>
+<td style="text-align:right">27</td>
+<td>Spells, magic passives, rituals, and supernatural abilities.</td>
+</tr>
+<tr>
+<td>Social</td>
+<td style="text-align:right">17</td>
+<td>Persuasion, relationships, deception, leadership, and creature care.</td>
+</tr>
+<tr>
+<td>Technology</td>
+<td style="text-align:right">22</td>
+<td>Hacking, research, engineering, lockpicking, mining, and technical knowledge.</td>
+</tr>
+<tr>
+<td>Economic</td>
+<td style="text-align:right">9</td>
+<td>Markets, work growth, accounting, appraisal, and business.</td>
+</tr>
+<tr>
+<td>Performance</td>
+<td style="text-align:right">11</td>
+<td>Music, dance, acting, games, and audience skills.</td>
+</tr>
+<tr>
+<td>Intimate</td>
+<td style="text-align:right">9</td>
+<td>Seduction, bonding, trust, pleasure, and romantic interaction.</td>
+</tr>
+<tr>
+<td>Culinary</td>
+<td style="text-align:right">4</td>
+<td>Cooking actions and mastery.</td>
+</tr>
+<tr>
+<td>Physical</td>
+<td style="text-align:right">3</td>
+<td>Metabolism, swimming, and fishing mastery.</td>
+</tr>
+<tr>
+<td>Special</td>
+<td style="text-align:right">0 currently</td>
+<td>Reserved display group for skills without another recognized category.</td>
+</tr>
+</tbody>
+</table></div>
+<p>The source categories <strong>Academic</strong> and <strong>Technical</strong> are displayed under Technology.</p>
+<h3 id="how-skills-are-learned">How skills are learned</h3>
+<p>Skills come from six main routes:</p>
+<ol>
+<li>Two free skills from the starting proficiency.</li>
+<li>Fixed training actions at world locations.</li>
+<li>Named NPC teachers, often relationship-gated.</li>
+<li>Plot and story completion rewards.</li>
+<li>Faction selections, dungeon scenarios, and search encounters.</li>
+<li>Random-skill purchases or encounters, which exclude the exclusive-skill set.</li>
+</ol>
+<p>The stat shown on a skill is its generic learning requirement, not a skill level. A concrete trainer can impose a different gate or deliberately bypass the generic requirement, and starting/plot rewards grant their skill directly. Skills themselves are owned/not owned; they do not rank up.</p>
+<h3 id="skill-descriptions-are-not-universal-passives">Skill descriptions are not universal passives</h3>
+<p>A learned skill can have several different kinds of effect:</p>
+<ul>
+<li>unlock a battle button or world action;</li>
+<li>modify one named attack;</li>
+<li>add a random trigger chance;</li>
+<li>double one job's pay;</li>
+<li>unlock dialogue or scenario choices;</li>
+<li>act as a character's favorite skill and double relationship points;</li>
+<li>satisfy a plot requirement without adding a general numeric passive.</li>
+</ul>
+<p>Use the in-game Skills Glossary for the complete list of each skill's applications. Do not assume that a broad description such as “understanding magic theory” adds a hidden bonus to every magic formula.</p>
+<hr/>
+<h2 id="fixed-location-skill-training">Fixed-location skill training</h2>
+<p>These are the repeatable world-location trainers for non-exclusive skills. The base-stat gate is listed in parentheses.</p>
+<div class="guide-table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th>Location</th>
+<th>Skills</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Acrobat Training Hall</strong></td>
+<td>Acrobatics (Ability 18), $200, 180 min</td>
+</tr>
+<tr>
+<td><strong>Bards Guild</strong></td>
+<td>Silver Tongue (Charm 20), $600, 360 min; Song Writing (Creativity 25), $300, 220 min</td>
+</tr>
+<tr>
+<td><strong>Bio-Optimization Medical Center</strong></td>
+<td>Pain Tolerance (Stamina 18), $250, 180 min</td>
+</tr>
+<tr>
+<td><strong>Cognitive Optimization Academy</strong></td>
+<td>Cybernetics (Technology 26), Information Brokering (Intelligence 18), Reputation Management (Charm 16): $250, 150 min each</td>
+</tr>
+<tr>
+<td><strong>Dance &amp; Yoga Studio</strong></td>
+<td>Dance Mastery (Ability 20), $500, 180 min</td>
+</tr>
+<tr>
+<td><strong>Downtown Bar</strong></td>
+<td>Alcohol Tolerance (Stamina 15), $200, 120 min, night hours</td>
+</tr>
+<tr>
+<td><strong>Downtown Restaurant</strong></td>
+<td>Cook Food (Intelligence 18), $250, 200 min</td>
+</tr>
+<tr>
+<td><strong>Fighters Guild</strong></td>
+<td>Power Strike (Strength 15), $200, 180 min; Combat Leadership (Charm 15), $300, 220 min; Weapon Mastery (Ability 18), $400, 250 min</td>
+</tr>
+<tr>
+<td><strong>Fishing Village Coast</strong></td>
+<td>Fry Fish (Ability 15), $200, 180 min</td>
+</tr>
+<tr>
+<td><strong>Human Performance Optimization Lab</strong></td>
+<td>Iron Constitution (Strength 30), $350, 250 min; Perfect Metabolism (Strength 35), $800, 500 min</td>
+</tr>
+<tr>
+<td><strong>Knight's Training Grounds</strong></td>
+<td>Endurance Training (Stamina 30), $350, 250 min</td>
+</tr>
+<tr>
+<td><strong>Monk's Temple Training Hall</strong></td>
+<td>Battle Meditation (Mystic 10) and Healing Touch (Mystic 15), $100 and 200 min each; Inner Peace (Mystic 30), $350, 250 min</td>
+</tr>
+<tr>
+<td><strong>Music Studio</strong></td>
+<td>Music Production (Technology 25), $500, 180 min</td>
+</tr>
+<tr>
+<td><strong>Mystic Curiosities Shop</strong></td>
+<td>Sleight of Hand (Ability 16), $250, 180 min</td>
+</tr>
+<tr>
+<td><strong>Offices</strong></td>
+<td>Entrepreneurship (Commerce 20), $600, 360 min</td>
+</tr>
+<tr>
+<td><strong>Tailor Shop</strong></td>
+<td>Fashion, $300, 180 min; the action displays an Attractiveness 18 requirement, but see <a href="#current-build-documentation-exceptions">current-build exceptions</a>.</td>
+</tr>
+<tr>
+<td><strong>Thieves Guild</strong></td>
+<td>Lockpicking (Ability 16), $200, 180 min</td>
+</tr>
+<tr>
+<td><strong>Underground Modification Clinic</strong></td>
+<td>Iron Will (Stamina 16), $200 plus 10 epic materials, 150 min</td>
+</tr>
+<tr>
+<td><strong>Universal Knowledge Synthesis Institute</strong></td>
+<td>Cultural Adaptation (Intelligence 14), Data Mining (Technology 20), Digital Forensics (Technology 18), Material Science (Intelligence 19): $200, 180 min each</td>
+</tr>
+<tr>
+<td><strong>University Classroom</strong></td>
+<td>Accounting and Anthropology (Intelligence 15), Resource Optimization (Intelligence 16): $200, 180 min each</td>
+</tr>
+<tr>
+<td><strong>University Computer Lab</strong></td>
+<td>Network Security (Technology 20), $200, 180 min; System Hacking (Technology 30), $350, 220 min</td>
+</tr>
+<tr>
+<td><strong>University Research Lab</strong></td>
+<td>Researching (Intelligence 15), $200, 180 min</td>
+</tr>
+<tr>
+<td><strong>Unregistered Housing Complex</strong></td>
+<td>Creative Cooking (Creativity 25), $300, 220 min</td>
+</tr>
+<tr>
+<td><strong>Virtual Recreation Optimization Center</strong></td>
+<td>Quick Draw (Ability 20), $250, 150 min</td>
+</tr>
+</tbody>
+</table></div>
+<p>Energy, calm, health, resource, relationship, and opening-hour costs still apply. The action tooltip gives the exact current total before confirmation.</p>
+<hr/>
+<h2 id="named-skill-teachers">Named skill teachers</h2>
+<p>This table is a route map, not a replacement for each NPC's walkthrough. Relationship stages, story access, time, money, crystals, and resource costs may apply.</p>
+<div class="guide-table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th>Teacher / source</th>
+<th>Skills taught or awarded</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Valkyra</strong></td>
+<td>Power Strike, Defensive Stance, Weapon Mastery, Swordplay, Side-Step</td>
+</tr>
+<tr>
+<td><strong>Yrsa</strong></td>
+<td>Berserker Rage, Intimidating Presence, Skull Crusher</td>
+</tr>
+<tr>
+<td><strong>Lilu</strong></td>
+<td>Counterattack, Disarming Technique, Fleet Footed, Exploit Weakness, Tai-Chi</td>
+</tr>
+<tr>
+<td><strong>Robin</strong></td>
+<td>Archery Focus, Animal Care</td>
+</tr>
+<tr>
+<td><strong>Sashina</strong></td>
+<td>Elemental Blast, Healing Touch, Telekinesis, Illusion Weaving, Mystic Seduction, Arcane Surge, Sashina's Gift; her Frog Rescue plot awards Transmutation</td>
+</tr>
+<tr>
+<td><strong>Aziza</strong></td>
+<td>Mana Channeling, Enchantment; later unlocks the Sorcerer path</td>
+</tr>
+<tr>
+<td><strong>Blinky</strong></td>
+<td>Divination, Protective Ward; her training plot awards Blink</td>
+</tr>
+<tr>
+<td><strong>Gandon</strong></td>
+<td>Wizardry, Master Wizard</td>
+</tr>
+<tr>
+<td><strong>Carmilla</strong></td>
+<td>Vampirism</td>
+</tr>
+<tr>
+<td><strong>Azariel</strong></td>
+<td>Empathy, Soul Sight</td>
+</tr>
+<tr>
+<td><strong>Amelia</strong></td>
+<td>Sacred Mending</td>
+</tr>
+<tr>
+<td><strong>Audrey</strong></td>
+<td>Nature's Embrace</td>
+</tr>
+<tr>
+<td><strong>Sylwithe</strong></td>
+<td>Tempest Strike</td>
+</tr>
+<tr>
+<td><strong>Coradio</strong></td>
+<td>Sovereign Edge</td>
+</tr>
+<tr>
+<td><strong>Saber</strong></td>
+<td>Stormslash after the relevant story access</td>
+</tr>
+<tr>
+<td><strong>EPOM</strong></td>
+<td>Combat Scanner, Master Engineer</td>
+</tr>
+<tr>
+<td><strong>AIMy</strong></td>
+<td>Nano-Engineering</td>
+</tr>
+<tr>
+<td><strong>Tinker</strong></td>
+<td>Cybernetics</td>
+</tr>
+<tr>
+<td><strong>Glitch</strong></td>
+<td>Networking, AI Programming, Automated Systems, Quantum Computing</td>
+</tr>
+<tr>
+<td><strong>Ghost</strong></td>
+<td>Leadership</td>
+</tr>
+<tr>
+<td><strong>Vixen</strong></td>
+<td>Reading People, Deception, Reputation Management, Blackmail, Information Brokering, Seduction</td>
+</tr>
+<tr>
+<td><strong>Jinx</strong></td>
+<td>Negotiation</td>
+</tr>
+<tr>
+<td><strong>Esperanza</strong></td>
+<td>Cultural Adaptation</td>
+</tr>
+<tr>
+<td><strong>Sabbath</strong></td>
+<td>Alchemy</td>
+</tr>
+<tr>
+<td><strong>Jade</strong></td>
+<td>Market Analysis</td>
+</tr>
+<tr>
+<td><strong>Arestes</strong></td>
+<td>Investment Savvy; later unlocks Assassin and Dark Consolador</td>
+</tr>
+<tr>
+<td><strong>Silas</strong></td>
+<td>Appraisal</td>
+</tr>
+<tr>
+<td><strong>Diane</strong></td>
+<td>Responsibility through Katie's tutorial route</td>
+</tr>
+<tr>
+<td><strong>Maggie</strong></td>
+<td>Diligent Worker and Business Acumen through her work-experience plot chain</td>
+</tr>
+<tr>
+<td><strong>Cotton</strong></td>
+<td>Stage Presence</td>
+</tr>
+<tr>
+<td><strong>Kent</strong></td>
+<td>Storytelling</td>
+</tr>
+<tr>
+<td><strong>Sandra</strong></td>
+<td>Dramatic Arts, Artistic Vision</td>
+</tr>
+<tr>
+<td><strong>Vera</strong></td>
+<td>Cheating, Seduction</td>
+</tr>
+<tr>
+<td><strong>Kurenai</strong></td>
+<td>Emotional Bonding, Pleasure Arts</td>
+</tr>
+<tr>
+<td><strong>Raven</strong></td>
+<td>Tamer</td>
+</tr>
+<tr>
+<td><strong>Poppy / Chef Martha</strong></td>
+<td>Master Chef through alternative routes</td>
+</tr>
+<tr>
+<td><strong>Summer / Kristen</strong></td>
+<td>Swim through alternative routes</td>
+</tr>
+<tr>
+<td><strong>Gem</strong></td>
+<td>Mining</td>
+</tr>
+<tr>
+<td><strong>Old Fisherman dungeon encounter</strong></td>
+<td>Master Baiter for 5 Dragon Coins</td>
+</tr>
+</tbody>
+</table></div>
+<p>The Wizard Faction can supply many magic skills as clout selections, including some that also have named teachers. Random crystal training, the Gonzo shop, Wiseman encounters, and several dungeon scenarios can teach eligible non-exclusive skills.</p>
+<hr/>
+<h2 id="exclusive-skills">Exclusive skills</h2>
+<p>“Exclusive” means excluded from the ordinary random-skill pool. It does not always mean there is only one historical route; a plot or faction route can sometimes provide the same skill deliberately.</p>
+<div class="guide-table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th>Skill</th>
+<th>Current route</th>
+<th>Main mechanical effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Blink</strong></td>
+<td>Complete Blinky's blink-training plot.</td>
+<td>Set and use a no-time-cost warp anchor.</td>
+</tr>
+<tr>
+<td><strong>Soul Sight</strong></td>
+<td>Azariel, Close Friend+, 1 crystal.</td>
+<td>Reveals NPC alignment.</td>
+</tr>
+<tr>
+<td><strong>Vampirism</strong></td>
+<td>Carmilla, Known+, Vampire 25, 30 Blood Orbs.</td>
+<td>Improves Vampire Fangs/Grimoire combat procs.</td>
+</tr>
+<tr>
+<td><strong>Combat Scanner</strong></td>
+<td>EPOM, Acquaintance+, $500.</td>
+<td>Displays enemy HP, power, elemental strengths, and weaknesses.</td>
+</tr>
+<tr>
+<td><strong>Mystic Seduction</strong></td>
+<td>Sashina H2H, Mystic 65+, 300 relationship points, Seduction.</td>
+<td>Unlocks the Mystic Seduction relationship action and themed choices.</td>
+</tr>
+<tr>
+<td><strong>Transmutation</strong></td>
+<td>Sashina's Frog Rescue plot; Wizard Faction also offers it.</td>
+<td>Unlocks special alchemical and dungeon resolutions.</td>
+</tr>
+<tr>
+<td><strong>Master Baiter</strong></td>
+<td>Old Fisherman water-dungeon encounter, 5 Dragon Coins.</td>
+<td>Improves rare fishing results and ring timing.</td>
+</tr>
+<tr>
+<td><strong>Tamer</strong></td>
+<td>Raven, Crush+, Communication 20, $7,000.</td>
+<td>Enables monster capture and creates Taming at 1.</td>
+</tr>
+<tr>
+<td><strong>Precognition</strong></td>
+<td>Story Beat 39 completion.</td>
+<td>Flat 10% incoming-attack dodge check.</td>
+</tr>
+<tr>
+<td><strong>Arcane Surge</strong></td>
+<td>Sashina, Romantic+, Mystic 60.</td>
+<td>18% chance for elemental attack magic to become a defense-bypassing ×3 surge with extra cost and damage.</td>
+</tr>
+<tr>
+<td><strong>Sashina's Gift</strong></td>
+<td>Sashina, In Love, Story Beat 55, Mystic 60.</td>
+<td>15% fire/ice proc for ×2 damage, absorption bypass, and partial defense pierce.</td>
+</tr>
+<tr>
+<td><strong>Sacred Mending</strong></td>
+<td>Amelia, Romantic+, Mystic 60.</td>
+<td>30% chance to double Heal Magic.</td>
+</tr>
+<tr>
+<td><strong>Nature's Embrace</strong></td>
+<td>Audrey, Romantic+, Mystic 60.</td>
+<td>Defending restores 4–10% maximum Energy.</td>
+</tr>
+<tr>
+<td><strong>Tempest Strike</strong></td>
+<td>Sylwithe, Mystic 60, $10,000,000 and 5 crystals.</td>
+<td>Adds lightning, +5% base damage, and a decaying multi-hit chain to Stormslash.</td>
+</tr>
+<tr>
+<td><strong>Skull Crusher</strong></td>
+<td>Yrsa, Romantic+, Strength 60.</td>
+<td>Power Strike gets +10% base damage and a 30% chance for ×4 damage.</td>
+</tr>
+<tr>
+<td><strong>Side-Step</strong></td>
+<td>Valkyra, Romantic+, Ability 60.</td>
+<td>Quick Attack has a 20% chance to grant a dodge and bonus Quick Attack.</td>
+</tr>
+<tr>
+<td><strong>Shadow Step</strong></td>
+<td>Shadow, Romantic+, Ability 60, Shadow active as brothel worker #8.</td>
+<td>Guarantees fleeing from non-boss battles.</td>
+</tr>
+<tr>
+<td><strong>Master Chef</strong></td>
+<td>Poppy at Friend+ and Cooking 50, or Chef Martha at Romantic+ and Cooking 60.</td>
+<td>Unlocks Master Chef cooking.</td>
+</tr>
+<tr>
+<td><strong>Master Engineer</strong></td>
+<td>EPOM, Friend+, Technology 60.</td>
+<td>Master engineering specialty and character-specific applications.</td>
+</tr>
+<tr>
+<td><strong>Tai-Chi</strong></td>
+<td>Lilu, Romantic+, Ability 60.</td>
+<td>Reflect chance and amount start at 5%/5% and scale with True Neutral tier to 32%/32%.</td>
+</tr>
+<tr>
+<td><strong>Sovereign Edge</strong></td>
+<td>Coradio, Ability 60, 5 crystals, supporter gated.</td>
+<td>Replaces basic Attack with an upgraded no-energy sword discipline and rare finishers.</td>
+</tr>
+<tr>
+<td><strong>Responsibility</strong></td>
+<td>Diane through Katie's tutorial route.</td>
+<td>25% chance for +1 extra Working Experience per job.</td>
+</tr>
+<tr>
+<td><strong>Diligent Worker</strong></td>
+<td>Maggie plot, Working Experience 15, Formal Outfit level 2.</td>
+<td>Base Working Experience gain becomes 2.</td>
+</tr>
+<tr>
+<td><strong>Business Acumen</strong></td>
+<td>Maggie plot, Working Experience 80, Formal Outfit level 3.</td>
+<td>Doubles the maximum random experience-based wage bonus.</td>
+</tr>
+<tr>
+<td><strong>Mining</strong></td>
+<td>Gem, Friend+, Strength 25, $600, paid-build gated.</td>
+<td>Enables pickaxe wall-mining in dungeons.</td>
+</tr>
+</tbody>
+</table></div>
+<hr/>
+<h2 id="specialist-combat-paths">Specialist combat paths</h2>
+<p>The three specialist paths are late-game overlays. Acquiring one changes its point value from -1 (“not acquired”) to 0 and immediately grants rank 1. They do not replace the starting proficiency, consume skill slots, or lock out the other paths.</p>
+<h3 id="unlock-requirements">Unlock requirements</h3>
+<div class="guide-table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th>Path</th>
+<th>Teacher</th>
+<th>Current requirements</th>
+<th>Actions improved</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Blademaster</strong></td>
+<td>Muramasa</td>
+<td>Close Friend+, Fighters Guild clout 200; 300 min, -150 Energy, -100 Calm</td>
+<td>Basic Attack and Power Strike</td>
+</tr>
+<tr>
+<td><strong>Assassin</strong></td>
+<td>Arestes</td>
+<td>Thieves Guild clout 350 and access to Arestes's Hidden Chamber; 300 min, -150 Energy, -150 Calm</td>
+<td>Quick Attack and Stormslash</td>
+</tr>
+<tr>
+<td><strong>Sorcerer</strong></td>
+<td>Aziza</td>
+<td>In Love; floor-40 miniboss defeated; Maid #4 <strong>Lime</strong> acquired; Sashina's Gift learned; supporter/paid access; 300 min, -150 Energy, -150 Calm</td>
+<td>Fire, Ice, Light, Dark, Sleep, and Heal Magic</td>
+</tr>
+</tbody>
+</table></div>
+<p>The supporter gate and Lime spelling are current-source corrections to the community page.</p>
+<h3 id="damage-and-healing-multiplier">Damage and healing multiplier</h3>
+<pre><code class="language-text">path multiplier = 1 + (rank × 0.15)
+</code></pre>
+<p>Rank 1 is ×1.15, rank 10 is ×2.50, and rank 20 is ×4.00. Each rank after 20 adds another ×0.15. The multiplier is applied to the eligible action's final result; for Sorcerer this includes Heal Magic.</p>
+<h3 id="earning-specialist-points">Earning specialist points</h3>
+<ul>
+<li>Blademaster earns points by using Basic Attack or Power Strike.</li>
+<li>Assassin earns points by using Quick Attack or Stormslash.</li>
+<li>Sorcerer earns points by using Fire, Ice, Light, Dark, Sleep, or Heal Magic.</li>
+<li>Outside the Infinity Dungeon, an eligible action normally grants 1 point.</li>
+<li>In the Infinity Dungeon, the action adds a random bonus from 1 through the current floor, then applies the floor affix's specialist-experience multiplier and the enemy's specialist-point multiplier. Some Infinity enemies use a ×2 enemy multiplier.</li>
+<li>Point gain is at least 1 after rounding.</li>
+</ul>
+<p>This makes deep Infinity runs dramatically faster than repeating ordinary encounters.</p>
+<h3 id="rank-thresholds-and-titles">Rank thresholds and titles</h3>
+<div class="guide-table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th style="text-align:right">Rank</th>
+<th style="text-align:right">Total points</th>
+<th style="text-align:right">Multiplier</th>
+<th>Sorcerer</th>
+<th>Assassin</th>
+<th>Blademaster</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">1</td>
+<td style="text-align:right">0</td>
+<td style="text-align:right">×1.15</td>
+<td>Novice</td>
+<td>Initiate</td>
+<td>Novice Blade</td>
+</tr>
+<tr>
+<td style="text-align:right">2</td>
+<td style="text-align:right">100</td>
+<td style="text-align:right">×1.30</td>
+<td>Apprentice</td>
+<td>Knifehand</td>
+<td>Apprentice Duelist</td>
+</tr>
+<tr>
+<td style="text-align:right">3</td>
+<td style="text-align:right">300</td>
+<td style="text-align:right">×1.45</td>
+<td>Initiate</td>
+<td>Stalker</td>
+<td>Sword Initiate</td>
+</tr>
+<tr>
+<td style="text-align:right">4</td>
+<td style="text-align:right">700</td>
+<td style="text-align:right">×1.60</td>
+<td>Adept</td>
+<td>Silencer</td>
+<td>Blade Adept</td>
+</tr>
+<tr>
+<td style="text-align:right">5</td>
+<td style="text-align:right">1,500</td>
+<td style="text-align:right">×1.75</td>
+<td>Channeler</td>
+<td>Nightblade</td>
+<td>Steel Dancer</td>
+</tr>
+<tr>
+<td style="text-align:right">6</td>
+<td style="text-align:right">3,100</td>
+<td style="text-align:right">×1.90</td>
+<td>Evoker</td>
+<td>Cutthroat</td>
+<td>Cutting Wind</td>
+</tr>
+<tr>
+<td style="text-align:right">7</td>
+<td style="text-align:right">6,300</td>
+<td style="text-align:right">×2.05</td>
+<td>Conjurer</td>
+<td>Veilwalker</td>
+<td>Duelist</td>
+</tr>
+<tr>
+<td style="text-align:right">8</td>
+<td style="text-align:right">12,700</td>
+<td style="text-align:right">×2.20</td>
+<td>Spellbinder</td>
+<td>Deathmark</td>
+<td>Sword Saint</td>
+</tr>
+<tr>
+<td style="text-align:right">9</td>
+<td style="text-align:right">25,500</td>
+<td style="text-align:right">×2.35</td>
+<td>Warlock</td>
+<td>Shadowblade</td>
+<td>Stormblade</td>
+</tr>
+<tr>
+<td style="text-align:right">10</td>
+<td style="text-align:right">44,700</td>
+<td style="text-align:right">×2.50</td>
+<td>Thaumaturge</td>
+<td>Ghost Knife</td>
+<td>Iron Reaver</td>
+</tr>
+<tr>
+<td style="text-align:right">11</td>
+<td style="text-align:right">73,500</td>
+<td style="text-align:right">×2.65</td>
+<td>Magus</td>
+<td>Nocturne</td>
+<td>Crimson Edge</td>
+</tr>
+<tr>
+<td style="text-align:right">12</td>
+<td style="text-align:right">116,700</td>
+<td style="text-align:right">×2.80</td>
+<td>High Magus</td>
+<td>Black Lotus</td>
+<td>Kensei</td>
+</tr>
+<tr>
+<td style="text-align:right">13</td>
+<td style="text-align:right">181,500</td>
+<td style="text-align:right">×2.95</td>
+<td>Archmagus</td>
+<td>Silent Reaper</td>
+<td>Blade Sage</td>
+</tr>
+<tr>
+<td style="text-align:right">14</td>
+<td style="text-align:right">278,700</td>
+<td style="text-align:right">×3.10</td>
+<td>Grand Sorcerer</td>
+<td>Master Assassin</td>
+<td>True Swordmaster</td>
+</tr>
+<tr>
+<td style="text-align:right">15</td>
+<td style="text-align:right">424,500</td>
+<td style="text-align:right">×3.25</td>
+<td>Eldritch Sage</td>
+<td>Phantom Edge</td>
+<td>Peerless Sword</td>
+</tr>
+<tr>
+<td style="text-align:right">16</td>
+<td style="text-align:right">643,200</td>
+<td style="text-align:right">×3.40</td>
+<td>Master of Mysteries</td>
+<td>Voidstalker</td>
+<td>Thousand-Cut Master</td>
+</tr>
+<tr>
+<td style="text-align:right">17</td>
+<td style="text-align:right">971,250</td>
+<td style="text-align:right">×3.55</td>
+<td>Arcane Sovereign</td>
+<td>Kingslayer</td>
+<td>Living Katana</td>
+</tr>
+<tr>
+<td style="text-align:right">18</td>
+<td style="text-align:right">1,463,325</td>
+<td style="text-align:right">×3.70</td>
+<td>Reality Weaver</td>
+<td>Deathless Shade</td>
+<td>Heaven-Splitter</td>
+</tr>
+<tr>
+<td style="text-align:right">19</td>
+<td style="text-align:right">2,201,438</td>
+<td style="text-align:right">×3.85</td>
+<td>Transcendent</td>
+<td>Mythic Killer</td>
+<td>Mythic Blademaster</td>
+</tr>
+<tr>
+<td style="text-align:right">20</td>
+<td style="text-align:right">3,308,607</td>
+<td style="text-align:right">×4.00</td>
+<td>Avatar of Magic</td>
+<td>Avatar of Shadows</td>
+<td>Avatar of Steel</td>
+</tr>
+</tbody>
+</table></div>
+<p>Ranks continue infinitely. The extension seed is 1,660,753, and the code multiplies it by 1.5 before adding the first post-rank-20 span. Rank 21 therefore begins at <strong>5,799,736 total points</strong>; each later span is 1.5 times the previous one. The displayed title remains the rank-20 title with the higher rank number appended.</p>
+<h3 id="assassin-chain-mechanics">Assassin chain mechanics</h3>
+<p>Once Assassin is acquired, Quick Attack becomes the path's chaining attack:</p>
+<pre><code class="language-text">starting follow-up chance = 50% + Assassin rank
+normal chance loss        = 10 percentage points after each chained hit
+</code></pre>
+<p>Every successful follow-up is a newly calculated Quick Attack and can continue the chain. <strong>Dark Consolador</strong> raises the starting chance by 15 percentage points and reduces the loss to only 5 points per chained hit. <strong>Phantom Stone</strong> adds its level as flat damage to each chain follow-up.</p>
+<p>Assassin rank therefore improves both Quick Attack damage and the probability that its chain starts.</p>
+<h3 id="how-the-paths-combine-with-exclusive-skills">How the paths combine with exclusive skills</h3>
+<ul>
+<li>Blademaster multiplies the already-upgraded result of <strong>Sovereign Edge</strong> or <strong>Skull Crusher</strong> when the relevant base action is used.</li>
+<li>Assassin multiplies Quick Attack/Stormslash while <strong>Side-Step</strong>, <strong>Tempest Strike</strong>, Dark Consolador, and Phantom Stone keep their own trigger rules.</li>
+<li>Sorcerer multiplies spell results after the normal magic pipeline; <strong>Arcane Surge</strong>, <strong>Sashina's Gift</strong>, <strong>Sacred Mending</strong>, and other magic modifiers still have their own chances.</li>
+</ul>
+<p>For the exact order of combat calculations, see <code>combat_system.md</code>.</p>
+<hr/>
+<h2 id="permanent-versus-conditional-modifiers">Permanent versus conditional modifiers</h2>
+<h3 id="permanent-progression">Permanent progression</h3>
+<ul>
+<li>Base-stat gains from training, jobs, conversations, plots, and dungeon rewards.</li>
+<li>Learned skills.</li>
+<li>Fighting, Erotic, and Working Experience.</li>
+<li>Alignment, faction clout, relationship progress, and specialist-path points.</li>
+<li>Persistent <code>health_max</code>, <code>energy_max</code>, and <code>calm_max</code> rewards.</li>
+<li>Acquired and upgraded equipment, key items, and stones while they remain owned.</li>
+</ul>
+<h3 id="permanent-ownership-conditional-effect">Permanent ownership, conditional effect</h3>
+<ul>
+<li>A skill remains learned, but its bonus may require one attack, job, NPC, status, health range, alignment tier, or random proc.</li>
+<li>A key item remains owned, but its effect may apply only in combat, a minigame, the Infinity Dungeon, or a particular formula.</li>
+<li>Equipment upgrades remain, but only the relevant equipped slot or system uses the level.</li>
+<li>Specialist rank remains, but only the actions listed for that path receive its multiplier.</li>
+</ul>
+<h3 id="temporary-or-state-dependent">Temporary or state-dependent</h3>
+<ul>
+<li>Twenty-four-hour consumable buffs.</li>
+<li>Combat statuses, defend state, QTE results, enemy weaknesses/resistances, and low-health triggers.</li>
+<li>Time, day, location, relationship stage, outfit, active-worker assignment, faction clout, and story flags.</li>
+<li>Supporter/paid access checks.</li>
+</ul>
+<h3 id="permanent-modifier-does-not-mean-base-stat">“Permanent modifier” does not mean “base stat”</h3>
+<p>The character model has a permanent flat-modifier layer separate from the stored base stat. Most normal permanent growth directly raises the base stat, while live item bonuses are calculated separately. This matters because a base-stat unlock may ignore a modifier even though an effective-stat formula uses it.</p>
+<hr/>
+<h2 id="build-planning">Build planning</h2>
+<h3 id="physical-route">Physical route</h3>
+<p>Prioritize Strength, Stamina, and Ability. Body Builder reaches Power Strike and Endurance Training immediately; Martial Artist starts with the best Ability and combat passives; Athlete has the strongest combined early physical resources. Blademaster rewards Attack/Power Strike, while Assassin rewards Quick Attack/Stormslash.</p>
+<h3 id="magic-route">Magic route</h3>
+<p>Magician has the strongest starting Mystic and begins with Elemental Blast and Illusion Weaving. Intelligence and Charm also matter because they support Calm, while Stamina supports the Energy pool. Sorcerer's final unlock is intentionally late: Sashina's Gift, Aziza In Love, Lime, and the floor-40 miniboss are all required.</p>
+<h3 id="economy-route">Economy route</h3>
+<p>Salesman begins closest to Commerce and Communication careers. Scholar and Computer Expert have strong high-paying stat routes. Musician has exceptional early busking synergy through Master Performer. Whatever the proficiency, unlock Responsibility, Diligent Worker, and Business Acumen early enough that later work compounds faster.</p>
+<h3 id="flexible-completionist-route">Flexible completionist route</h3>
+<p>Jack of All Trades offers the broadest job access, balanced starting stats, and no extreme hole besides low Cooking. Its 70% proficiency-job pay is the tradeoff. Since specialist combat paths are independent of starting proficiency, Jack can still acquire all three.</p>
+<h3 id="reliable-general-advice">Reliable general advice</h3>
+<ol>
+<li>Raise Stamina even on nonphysical builds; it dominates Energy and contributes to every long session.</li>
+<li>Train base stats to learning thresholds instead of relying only on Focus, Cologne, Luck, or key items.</li>
+<li>Treat Communication, Commerce, Cooking, and Rogue as progression stats, not flavor numbers.</li>
+<li>Check the Skills Glossary before buying random training; a fixed teacher may be cheaper or tied to content you want to see.</li>
+<li>Choose specialist actions you already use. A high rank does nothing for attacks outside that path.</li>
+</ol>
+<hr/>
+<span aria-hidden="true" class="anchor-alias" id="current-build-documentation-exceptions"></span><h2 id="current-build-source-audit-notes">Current-build source-audit notes</h2>
+<p>These are source-audit findings for V0.9.6.1_FUTURE:</p>
+<ol>
+<li><strong>Computer Expert's character-creation display is fixed in the current code.</strong> It now lists the actual granted skills: <strong>Engineering Genius</strong> and <strong>System Hacking</strong>.</li>
+<li><strong>Games Master's character-creation display is fixed in the current code.</strong> It now lists the actual granted skills: <strong>Tactical Awareness</strong> and <strong>Cheating</strong>.</li>
+<li><strong>Fashion's Attractiveness 18 gate is not enforced by the standard base-stat unlock checker.</strong> Attractiveness is stored outside the ordinary stat dictionary, so the current Tailor Shop action can pass that check regardless of the displayed number.</li>
+<li><strong>Main/secondary/weakness labels do not currently modify action growth.</strong> The meaningful starting difference is already baked into the starting stat arrays and private actions.</li>
+<li><strong>The community Specialist Class page omits Sorcerer's supporter/paid-access requirement</strong>, calls Maid #4 “Lyme” instead of <strong>Lime</strong>, and does not include the current Infinity Dungeon specialist-point scaling or Phantom Stone's Assassin-chain bonus.</li>
+</ol>
+<p>These notes should be revisited whenever character creation, action gating, or the combat-path system changes.</p>
+</div>
+        <div class="markdown-body" data-lang-panel="zh" hidden>
+<p><em>Chronoromancer V0.9.6.1_FUTURE 的完整角色构筑参考：每项属性的作用、有效值与资源软上限的运作方式、各项初始专长实际提供的内容、技能的来源，以及三条专精战斗路线的成长机制。</em></p>
+<blockquote>
+<p><strong>社区致谢：</strong>“专精战斗路线”一节参考了玩家编写的 <a href="https://chronoromancer.miraheze.org/wiki/Game_Systems:Specialist_Class" rel="noopener noreferrer" target="_blank">专精职业 Wiki 指南</a>，该指南采用 <a href="https://creativecommons.org/licenses/by-sa/4.0/" rel="noopener noreferrer" target="_blank">CC BY-SA 4.0</a> 许可。本文以其中的阶级研究为基础，并依据当前游戏源代码重新核对、修正和扩充。</p>
+</blockquote>
+<p>本指南讲解游戏机制，因此会提及后期角色、地点、关系要求和剧情门槛。前半部分适合新玩家放心阅读；专精路线与独占技能章节包含流程剧透。</p>
+<h2 id="zh-目录">目录</h2>
+<ul>
+<li><a href="#zh-the-short-version">简要结论</a></li>
+<li><a href="#zh-player-stats">玩家属性</a></li>
+<li><a href="#zh-base-stats-effective-stats-and-caps">基础属性、有效属性与上限</a></li>
+<li><a href="#zh-health-energy-calm-satiation-and-starting-wealth">生命、精力、镇定、饱腹感与初始财富</a></li>
+<li><a href="#zh-starting-proficiencies">初始专长</a></li>
+<li><a href="#zh-proficiency-careers">专长职业</a></li>
+<li><a href="#zh-skills-and-categories">技能与类别</a></li>
+<li><a href="#zh-fixed-location-skill-training">固定地点技能训练</a></li>
+<li><a href="#zh-named-skill-teachers">具名技能导师</a></li>
+<li><a href="#zh-exclusive-skills">独占技能</a></li>
+<li><a href="#zh-specialist-combat-paths">专精战斗路线</a></li>
+<li><a href="#zh-permanent-versus-conditional-modifiers">永久修正与条件修正</a></li>
+<li><a href="#zh-build-planning">构筑规划</a></li>
+<li><a href="#zh-current-build-documentation-exceptions">当前版本文档例外</a></li>
+</ul>
+<hr/>
+<p></p>
+<h2 id="zh-the-short-version">简要结论</h2>
+<ol>
+<li>专长决定你的 <strong>初始数值</strong>、两项免费技能、初始装备、一项私人卧室行动，以及可进入的专长职业。它并不是传统意义上受等级限制的职业。</li>
+<li><strong>基础属性</strong> 是角色身上存储的数值。<strong>有效属性</strong> 还会加上临时消耗品与当前生效的关键物品加成。</li>
+<li>大多数行动显示条件和工作薪资公式使用有效属性，但正式技能要求及许多解锁检查使用基础属性。如果属性增益让某项内容出现，却仍无法满足最终要求，请提高基础属性。</li>
+<li>普通属性 <strong>并不存在统一的 50 硬上限</strong>。许多活动在达到各自门槛附近后便不再轻易提升属性，但永久奖励仍能让属性继续增长。</li>
+<li>生命、精力和镇定采用渐进削减及后期软上限。界面显示的软上限目标并非绝对最大值；固定值与百分比加成会在其后继续叠加。</li>
+<li>已学技能永久保留，但其效果仍可能有条件：某技能可能只解锁一个行动、只在一种攻击中触发、只强化一份工作，或仅令特定角色的关系收益翻倍。</li>
+<li>剑术大师、刺客与术士是彼此独立的后期战斗路线。它们不会取代初始专长，而且同一角色可以同时拥有三条路线。</li>
+</ol>
+<hr/>
+<p></p>
+<h2 id="zh-player-stats">玩家属性</h2>
+<h3 id="zh-十项主要属性">十项主要属性</h3>
+<div class="guide-table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th>属性</th>
+<th>主要用途</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>力量</strong></td>
+<td>物理力量、基础攻击、强力打击、力量检定和生命上限。</td>
+</tr>
+<tr>
+<td><strong>智力</strong></td>
+<td>研究、分析、多种科技/经济技能、工作、镇定上限和初始财富。</td>
+</tr>
+<tr>
+<td><strong>魅力</strong></td>
+<td>说服、社交与亲密选项、关系检定、工作和镇定上限。</td>
+</tr>
+<tr>
+<td><strong>耐力</strong></td>
+<td>持久力、身体韧性、生命上限、精力上限和饱腹感上限。</td>
+</tr>
+<tr>
+<td><strong>能力</strong></td>
+<td>敏捷、协调、快速攻击、风暴斩、闪避类技能和灵巧检定。</td>
+</tr>
+<tr>
+<td><strong>创造力</strong></td>
+<td>表演、音乐、艺术工作、发明和烹饪相关选项。</td>
+</tr>
+<tr>
+<td><strong>感知</strong></td>
+<td>警觉、鉴定、观察、远程战斗主题和遭遇检定。</td>
+</tr>
+<tr>
+<td><strong>神秘</strong></td>
+<td>魔法伤害与治疗、法术及仪式技能和超自然检定。</td>
+</tr>
+<tr>
+<td><strong>科技</strong></td>
+<td>黑客、工程、未来时代行动、技术工作和初始财富。</td>
+</tr>
+<tr>
+<td><strong>运气</strong></td>
+<td>随机结果、游戏、战利品相关检定和初始财富。</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="zh-职业属性">职业属性</h3>
+<div class="guide-table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th>属性</th>
+<th>主要用途</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>烹饪</strong></td>
+<td>食物制作、烹饪产量、厨师工作、烹饪技能门槛和部分关系检定。</td>
+</tr>
+<tr>
+<td><strong>商业</strong></td>
+<td>生意、投资、经纪人工作、经济技能和商业检定。</td>
+</tr>
+<tr>
+<td><strong>沟通</strong></td>
+<td>面向顾客的工作、社交检定、关系内容和驯服者要求。</td>
+</tr>
+<tr>
+<td><strong>盗贼</strong></td>
+<td>偷窃、潜入、劫案、犯罪行动和盗贼公会相关检定。</td>
+</tr>
+</tbody>
+</table></div>
+<p>这四项是真正的玩家属性，并非子技能。它们的初始值远低于主要属性，通常需要刻意训练。</p>
+<h3 id="zh-由技能解锁的属性">由技能解锁的属性</h3>
+<div class="guide-table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th>属性</th>
+<th>出现方式</th>
+<th>主要用途</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>驯服</strong></td>
+<td>学会 <strong>驯服者</strong> 时会创建该属性，初始值为 1。</td>
+<td>怪物捕获与驯服训练的表现；驯服内容可以提升它。</td>
+</tr>
+<tr>
+<td><strong>领导者</strong></td>
+<td>学会 <strong>领导力</strong> 时会创建该属性，初始值为 1。</td>
+<td>一项受追踪的领导专长，供要求领导者属性的内容使用。</td>
+</tr>
+</tbody>
+</table></div>
+<p>新角色并没有这些属性，因此初始属性表中不会列出它们。</p>
+<h3 id="zh-独立资源与进度追踪项">独立资源与进度追踪项</h3>
+<p>以下数值会与属性一同显示，但不属于普通核心属性：</p>
+<ul>
+<li><strong>生命、精力、镇定、饱腹感、财富和吸引力</strong> 是玩家的直接数值。</li>
+<li><strong>野兽</strong> 和 <strong>吸血鬼</strong> 是各有独立检定的超自然进度值。</li>
+<li><strong>战斗、色情和工作经验</strong> 是永久进度追踪项。</li>
+<li><strong>善良、邪恶和中立阵营</strong> 是彼此独立的道德轴。</li>
+<li><strong>术士、刺客和剑术大师点数</strong> 仅在取得对应路线后存在。</li>
+</ul>
+<hr/>
+<p></p>
+<h2 id="zh-base-stats-effective-stats-and-caps">基础属性、有效属性与上限</h2>
+<h3 id="zh-有效属性公式">有效属性公式</h3>
+<p>对于普通属性：</p>
+<pre><code class="language-text">effective stat = base stat
+               + permanent flat modifier
+               + active consumable modifier
+               + live key-item bonus
+</code></pre>
+<p>吸引力采用相同结构，但存储在普通属性字典之外。野兽会接受当前生效的消耗品修正；吸血鬼目前只返回基础值，没有单独的修正层。</p>
+<p>角色面板会另行显示修正总值，因此 <code>30 (+6)</code> 表示基础值 30、有效值 36。</p>
+<h3 id="zh-哪些机制使用有效值">哪些机制使用有效值？</h3>
+<p>行动显示、专长职业显示、职业薪资、大多数普通收入公式和许多战斗计算都会使用有效值。因此，临时增益适合用来提高收入，并显示受有效属性限制的行动。</p>
+<h3 id="zh-哪些机制仍使用基础值">哪些机制仍使用基础值？</h3>
+<p>正式技能对象会检查存储的基础属性。标准 <code>unlocked_by_stats</code> 行动门槛也检查基础属性。生命、精力、镇定和饱腹感的派生公式读取基础属性，而不读取临时增益或关键物品加成后的有效值。</p>
+<p>实用原则：<strong>利用增益改善表现，但若要稳定解锁内容及学习技能，请训练基础数值。</strong></p>
+<h3 id="zh-属性上限是-50-吗">属性上限是 50 吗？</h3>
+<p>不是。核心属性调整方法没有统一硬上限。各项活动有自己的限制、显示条件、成功上限或逐渐减少的可用机会，但永久奖励可以把属性推到 50 以上，后期内容也会明确检查 60、75、85 和 100 等数值。</p>
+<h3 id="zh-当前生效的百分比关键物品加成">当前生效的百分比关键物品加成</h3>
+<p>这些加成以未经修正的基础值计算。每项独立加成最少为 +1，不同物品的加成彼此相加而非复利叠乘。</p>
+<div class="guide-table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th>关键物品</th>
+<th>有效属性加成</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>魔法眼镜</strong></td>
+<td>智力 +10%，吸引力 +10%。</td>
+</tr>
+<tr>
+<td><strong>华丽挂坠</strong></td>
+<td>魅力 +10%，吸引力 +10%。</td>
+</tr>
+<tr>
+<td><strong>非凡王冠</strong></td>
+<td>力量、智力、魅力、耐力、能力、创造力、感知、神秘、科技、运气、烹饪和商业各 +2%。</td>
+</tr>
+</tbody>
+</table></div>
+<p>非凡王冠不会提高沟通和盗贼。</p>
+<h3 id="zh-二十四小时消耗品增益">二十四小时消耗品增益</h3>
+<div class="guide-table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th>消耗品</th>
+<th>临时效果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>专注</strong></td>
+<td>智力、神秘、科技和感知各 +25。</td>
+</tr>
+<tr>
+<td><strong>古龙水</strong></td>
+<td>魅力 +10，吸引力 +10。</td>
+</tr>
+<tr>
+<td><strong>运气</strong></td>
+<td>运气 +50。</td>
+</tr>
+<tr>
+<td><strong>欲望</strong></td>
+<td>立即获得 +200 色情经验；实验模式下，在增益持续期间野兽 +50。</td>
+</tr>
+</tbody>
+</table></div>
+<p>时间、解毒、力量和护盾消耗品也会维持限时增益状态，但其效果由相关系统处理，而不经过普通属性修正表。增益会在 24 个游戏内小时后失效，生效期间使用同种物品不会叠加。</p>
+<hr/>
+<p></p>
+<h2 id="zh-health-energy-calm-satiation-and-starting-wealth">生命、精力、镇定、饱腹感与初始财富</h2>
+<h3 id="zh-共用原始属性总和">共用原始属性总和</h3>
+<p>数项资源公式会使用以下总和：</p>
+<pre><code class="language-text">all-stats total = Strength + Intelligence + Charm + Stamina + Ability
+                + Creativity + Perception + Mystic + Technology + Cooking
+</code></pre>
+<p>运气、商业、沟通、盗贼、驯服和领导者不计入其中。</p>
+<h3 id="zh-原始资源公式">原始资源公式</h3>
+<pre><code class="language-text">health total    = (Strength + Stamina) × 3 + floor(all-stats total ÷ 2)
+energy total    = Stamina × 8 + floor(all-stats total ÷ 2)
+calm total      = (Charm + Intelligence) × 3 + floor(all-stats total ÷ 2)
+satiation raw   = Stamina × 4 + floor(all-stats total ÷ 4)
+starting wealth = (Intelligence + Luck) × 2 + Technology
+</code></pre>
+<p>饱腹感在 100 以内线性增长。超过 100 后，超出部分只保留一半：</p>
+<pre><code class="language-text">max satiation = 100 + floor((raw - 100) ÷ 2), when raw &gt; 100
+</code></pre>
+<h3 id="zh-渐进削减与软上限">渐进削减与软上限</h3>
+<p>生命、精力和镇定会先经过渐进削减：</p>
+<pre><code class="language-text">reduction percentage = 0.10 + total/7500 + total²/7,500,000
+base result          = total - floor(total × reduction percentage)
+</code></pre>
+<p>后期总值随后会渐近趋向软上限目标：</p>
+<div class="guide-table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th>资源</th>
+<th style="text-align:right">原始总值门槛</th>
+<th style="text-align:right">软上限目标</th>
+<th style="text-align:right">曲线常数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>生命</td>
+<td style="text-align:right">1,100</td>
+<td style="text-align:right">750</td>
+<td style="text-align:right">0.0025</td>
+</tr>
+<tr>
+<td>精力</td>
+<td style="text-align:right">1,300</td>
+<td style="text-align:right">775</td>
+<td style="text-align:right">0.0020</td>
+</tr>
+<tr>
+<td>镇定</td>
+<td style="text-align:right">1,100</td>
+<td style="text-align:right">750</td>
+<td style="text-align:right">0.0025</td>
+</tr>
+</tbody>
+</table></div>
+<p>这些是 <strong>最终加成应用前的软上限目标</strong>，并非绝对上限。</p>
+<h3 id="zh-曲线计算后应用的加成">曲线计算后应用的加成</h3>
+<div class="guide-table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th>资源</th>
+<th>曲线后加成</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>生命</strong></td>
+<td>永久 <code>health_max</code> 奖励；女王石每级 +1；海洋之心 +50；蝙蝠侠之眼 +50；活力心冠 +50；第二次脉动在固定加成后 ×1.10；生物反应堆核心在此前所有计算完成后每级 +1%。</td>
+</tr>
+<tr>
+<td><strong>精力</strong></td>
+<td>永久 <code>energy_max</code> 奖励；以太之石每级 +1；海洋之心 +50；蝙蝠侠之眼 +50；记忆电池每级 +1%。</td>
+</tr>
+<tr>
+<td><strong>镇定</strong></td>
+<td>永久 <code>calm_max</code> 奖励；以太之石每级 +1；海洋之心 +50；蝙蝠侠之眼 +50。</td>
+</tr>
+</tbody>
+</table></div>
+<p>虚空和水晶相关内容可以提供额外的永久资源上限修正。由于这些修正会在软上限曲线之后加入，最终显示的上限可以超过 750 或 775。</p>
+<h3 id="zh-损耗减免技能">损耗减免技能</h3>
+<ul>
+<li><strong>钢铁体魄</strong> 使普通生命惩罚降低 10%。</li>
+<li><strong>耐力训练</strong> 使普通精力惩罚降低 10%。</li>
+<li><strong>内心平静</strong> 使普通镇定惩罚降低 10%。</li>
+</ul>
+<p>共享的可变属性调整流程生效时，这些减免便会应用。直接扣除数值的系统可能有自己的规则。</p>
+<hr/>
+<p></p>
+<h2 id="zh-starting-proficiencies">初始专长</h2>
+<p>Chronoromancer 提供十一项可选初始专长。档案中的主要、次要和弱项标签描述初始特化方向；它们不会产生永久经验倍率，也不会妨碍日后训练其他属性。</p>
+<h3 id="zh-初始主要属性">初始主要属性</h3>
+<div class="guide-table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th>专长</th>
+<th style="text-align:right">力</th>
+<th style="text-align:right">智</th>
+<th style="text-align:right">魅</th>
+<th style="text-align:right">耐</th>
+<th style="text-align:right">能</th>
+<th style="text-align:right">创</th>
+<th style="text-align:right">感</th>
+<th style="text-align:right">神</th>
+<th style="text-align:right">科</th>
+<th style="text-align:right">运</th>
+<th style="text-align:right">吸</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>健美运动员</td>
+<td style="text-align:right">29</td>
+<td style="text-align:right">8</td>
+<td style="text-align:right">9</td>
+<td style="text-align:right">21</td>
+<td style="text-align:right">11</td>
+<td style="text-align:right">12</td>
+<td style="text-align:right">10</td>
+<td style="text-align:right">1</td>
+<td style="text-align:right">8</td>
+<td style="text-align:right">6</td>
+<td style="text-align:right">9</td>
+</tr>
+<tr>
+<td>学者</td>
+<td style="text-align:right">7</td>
+<td style="text-align:right">30</td>
+<td style="text-align:right">8</td>
+<td style="text-align:right">10</td>
+<td style="text-align:right">6</td>
+<td style="text-align:right">18</td>
+<td style="text-align:right">20</td>
+<td style="text-align:right">12</td>
+<td style="text-align:right">9</td>
+<td style="text-align:right">13</td>
+<td style="text-align:right">5</td>
+</tr>
+<tr>
+<td>销售员</td>
+<td style="text-align:right">8</td>
+<td style="text-align:right">11</td>
+<td style="text-align:right">28</td>
+<td style="text-align:right">10</td>
+<td style="text-align:right">1</td>
+<td style="text-align:right">9</td>
+<td style="text-align:right">13</td>
+<td style="text-align:right">6</td>
+<td style="text-align:right">7</td>
+<td style="text-align:right">20</td>
+<td style="text-align:right">17</td>
+</tr>
+<tr>
+<td>计算机专家</td>
+<td style="text-align:right">6</td>
+<td style="text-align:right">17</td>
+<td style="text-align:right">8</td>
+<td style="text-align:right">1</td>
+<td style="text-align:right">15</td>
+<td style="text-align:right">12</td>
+<td style="text-align:right">9</td>
+<td style="text-align:right">10</td>
+<td style="text-align:right">27</td>
+<td style="text-align:right">11</td>
+<td style="text-align:right">7</td>
+</tr>
+<tr>
+<td>音乐家</td>
+<td style="text-align:right">9</td>
+<td style="text-align:right">10</td>
+<td style="text-align:right">18</td>
+<td style="text-align:right">8</td>
+<td style="text-align:right">13</td>
+<td style="text-align:right">27</td>
+<td style="text-align:right">1</td>
+<td style="text-align:right">11</td>
+<td style="text-align:right">6</td>
+<td style="text-align:right">12</td>
+<td style="text-align:right">18</td>
+</tr>
+<tr>
+<td>武术家</td>
+<td style="text-align:right">15</td>
+<td style="text-align:right">8</td>
+<td style="text-align:right">6</td>
+<td style="text-align:right">15</td>
+<td style="text-align:right">29</td>
+<td style="text-align:right">2</td>
+<td style="text-align:right">15</td>
+<td style="text-align:right">13</td>
+<td style="text-align:right">10</td>
+<td style="text-align:right">9</td>
+<td style="text-align:right">8</td>
+</tr>
+<tr>
+<td>情场高手</td>
+<td style="text-align:right">11</td>
+<td style="text-align:right">13</td>
+<td style="text-align:right">30</td>
+<td style="text-align:right">10</td>
+<td style="text-align:right">12</td>
+<td style="text-align:right">8</td>
+<td style="text-align:right">16</td>
+<td style="text-align:right">1</td>
+<td style="text-align:right">6</td>
+<td style="text-align:right">18</td>
+<td style="text-align:right">20</td>
+</tr>
+<tr>
+<td>游戏大师</td>
+<td style="text-align:right">8</td>
+<td style="text-align:right">18</td>
+<td style="text-align:right">1</td>
+<td style="text-align:right">12</td>
+<td style="text-align:right">10</td>
+<td style="text-align:right">15</td>
+<td style="text-align:right">26</td>
+<td style="text-align:right">9</td>
+<td style="text-align:right">13</td>
+<td style="text-align:right">29</td>
+<td style="text-align:right">9</td>
+</tr>
+<tr>
+<td>运动员</td>
+<td style="text-align:right">24</td>
+<td style="text-align:right">9</td>
+<td style="text-align:right">11</td>
+<td style="text-align:right">28</td>
+<td style="text-align:right">15</td>
+<td style="text-align:right">6</td>
+<td style="text-align:right">8</td>
+<td style="text-align:right">10</td>
+<td style="text-align:right">1</td>
+<td style="text-align:right">12</td>
+<td style="text-align:right">12</td>
+</tr>
+<tr>
+<td>魔术师</td>
+<td style="text-align:right">7</td>
+<td style="text-align:right">15</td>
+<td style="text-align:right">13</td>
+<td style="text-align:right">9</td>
+<td style="text-align:right">11</td>
+<td style="text-align:right">22</td>
+<td style="text-align:right">20</td>
+<td style="text-align:right">28</td>
+<td style="text-align:right">12</td>
+<td style="text-align:right">8</td>
+<td style="text-align:right">8</td>
+</tr>
+<tr>
+<td>万事通</td>
+<td style="text-align:right">12</td>
+<td style="text-align:right">16</td>
+<td style="text-align:right">17</td>
+<td style="text-align:right">13</td>
+<td style="text-align:right">10</td>
+<td style="text-align:right">18</td>
+<td style="text-align:right">11</td>
+<td style="text-align:right">14</td>
+<td style="text-align:right">12</td>
+<td style="text-align:right">18</td>
+<td style="text-align:right">14</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="zh-初始职业属性">初始职业属性</h3>
+<div class="guide-table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th>专长</th>
+<th style="text-align:right">烹饪</th>
+<th style="text-align:right">商业</th>
+<th style="text-align:right">沟通</th>
+<th style="text-align:right">盗贼</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>健美运动员</td>
+<td style="text-align:right">1</td>
+<td style="text-align:right">3</td>
+<td style="text-align:right">2</td>
+<td style="text-align:right">2</td>
+</tr>
+<tr>
+<td>学者</td>
+<td style="text-align:right">1</td>
+<td style="text-align:right">6</td>
+<td style="text-align:right">4</td>
+<td style="text-align:right">2</td>
+</tr>
+<tr>
+<td>销售员</td>
+<td style="text-align:right">1</td>
+<td style="text-align:right">15</td>
+<td style="text-align:right">10</td>
+<td style="text-align:right">3</td>
+</tr>
+<tr>
+<td>计算机专家</td>
+<td style="text-align:right">1</td>
+<td style="text-align:right">8</td>
+<td style="text-align:right">3</td>
+<td style="text-align:right">5</td>
+</tr>
+<tr>
+<td>音乐家</td>
+<td style="text-align:right">1</td>
+<td style="text-align:right">4</td>
+<td style="text-align:right">7</td>
+<td style="text-align:right">3</td>
+</tr>
+<tr>
+<td>武术家</td>
+<td style="text-align:right">1</td>
+<td style="text-align:right">3</td>
+<td style="text-align:right">2</td>
+<td style="text-align:right">2</td>
+</tr>
+<tr>
+<td>情场高手</td>
+<td style="text-align:right">1</td>
+<td style="text-align:right">10</td>
+<td style="text-align:right">9</td>
+<td style="text-align:right">7</td>
+</tr>
+<tr>
+<td>游戏大师</td>
+<td style="text-align:right">1</td>
+<td style="text-align:right">8</td>
+<td style="text-align:right">4</td>
+<td style="text-align:right">4</td>
+</tr>
+<tr>
+<td>运动员</td>
+<td style="text-align:right">1</td>
+<td style="text-align:right">5</td>
+<td style="text-align:right">3</td>
+<td style="text-align:right">2</td>
+</tr>
+<tr>
+<td>魔术师</td>
+<td style="text-align:right">1</td>
+<td style="text-align:right">2</td>
+<td style="text-align:right">3</td>
+<td style="text-align:right">3</td>
+</tr>
+<tr>
+<td>万事通</td>
+<td style="text-align:right">1</td>
+<td style="text-align:right">12</td>
+<td style="text-align:right">5</td>
+<td style="text-align:right">3</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="zh-初始配置与私人行动">初始配置与私人行动</h3>
+<div class="guide-table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th>专长</th>
+<th>主要 / 次要 / 弱项</th>
+<th>实际免费技能</th>
+<th>额外初始装备</th>
+<th>私人卧室行动</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>健美运动员</strong></td>
+<td>力量 / 耐力、创造力 / 神秘</td>
+<td>强力打击；耐力训练</td>
+<td>护甲</td>
+<td>举重：力量 +1，45 分钟，-30 精力</td>
+</tr>
+<tr>
+<td><strong>学者</strong></td>
+<td>智力 / 创造力、感知 / 力量</td>
+<td>奥术知识；研究</td>
+<td>正装</td>
+<td>研读研究论文：智力 +1，45 分钟，-15 精力，-15 镇定</td>
+</tr>
+<tr>
+<td><strong>销售员</strong></td>
+<td>魅力 / 运气、智力 / 能力</td>
+<td>巧舌如簧；人脉经营</td>
+<td>正装</td>
+<td>练习销售话术：商业 +1，45 分钟，-15 精力，-15 镇定</td>
+</tr>
+<tr>
+<td><strong>计算机专家</strong></td>
+<td>科技 / 智力、能力 / 耐力</td>
+<td>工程天才；<strong>系统黑客</strong></td>
+<td>远程武器</td>
+<td>编写代码项目：获得智力 ×2 的金钱，45 分钟，-15 精力，-15 镇定</td>
+</tr>
+<tr>
+<td><strong>音乐家</strong></td>
+<td>创造力 / 魅力、智力 / 感知</td>
+<td>音乐大师技艺；表演大师</td>
+<td>约会装</td>
+<td>练习吉他：创造力 +1，45 分钟，-15 精力，-15 镇定</td>
+</tr>
+<tr>
+<td><strong>武术家</strong></td>
+<td>能力 / 耐力、感知 / 创造力</td>
+<td>武术；战斗反射</td>
+<td>近战武器</td>
+<td>练习武术套路：能力 +1，45 分钟，-20 精力，-10 镇定</td>
+</tr>
+<tr>
+<td><strong>情场高手</strong></td>
+<td>魅力 / 运气、感知 / 神秘</td>
+<td>诱惑；识人术</td>
+<td>约会装</td>
+<td>练习社交技巧：吸引力 +1，45 分钟，-10 精力，-20 镇定</td>
+</tr>
+<tr>
+<td><strong>游戏大师</strong></td>
+<td>运气 / 智力、感知 / 魅力</td>
+<td>战术意识；<strong>作弊</strong></td>
+<td>—</td>
+<td>规划游戏策略：运气 +1，45 分钟，-15 精力，-15 镇定</td>
+</tr>
+<tr>
+<td><strong>运动员</strong></td>
+<td>耐力 / 力量、能力 / 科技</td>
+<td>耐力训练；肾上腺素爆发</td>
+<td>护甲</td>
+<td>有氧训练：耐力 +1，45 分钟，-30 精力</td>
+</tr>
+<tr>
+<td><strong>魔术师</strong></td>
+<td>神秘 / 创造力、感知 / 力量</td>
+<td>元素爆破；幻象编织</td>
+<td>—</td>
+<td>水晶冥想：神秘 +1，45 分钟，-15 精力，-15 镇定</td>
+</tr>
+<tr>
+<td><strong>万事通</strong></td>
+<td>无 / 智力、魅力、创造力、运气 / 无</td>
+<td>即兴发挥；文化适应</td>
+<td>—</td>
+<td>练习各种技能：感知 +1，45 分钟，-15 精力，-15 镇定</td>
+</tr>
+</tbody>
+</table></div>
+<p>每项专长还会获得一件对应的可升级专长物品和一套休闲装。“额外初始装备”仅列出额外提供的普通装备栏物品。</p>
+<h3 id="zh-万事通">万事通</h3>
+<p>万事通可以看到全部十种专长专属职业。除非已验证的支持者权限免除惩罚，否则从这些工作中只能获得普通职业结果的 70%。该惩罚不适用于厨师或经纪人等通用工作。万事通的优势在于就业机会与灵活性，而非最高薪资。</p>
+<h3 id="zh-patreon-大师">Patreon 大师</h3>
+<p>Patreon 大师是后续的支持者升级，并非角色创建选项。它需要通过水晶商人路线提供的支持者升级花费 10 块水晶，会替换当前专长、升级卧室、重命名专长物品，并开放支持者训练及工作。其他系统也会给予专属加成，包括青楼收入和声望 +5%、投资回报 +5%，以及限时 Kupie 好感 ×2。</p>
+<p>它不会用新的初始属性数组覆盖角色已有的基础属性区块。</p>
+<hr/>
+<p></p>
+<h2 id="zh-proficiency-careers">专长职业</h2>
+<p>每种专长职业耗时 60 分钟、消耗 30 精力，需要有效属性达到 30 才会显示，并有 8% 概率使工作属性 +1。</p>
+<p>十种普通专长职业的公式为：</p>
+<pre><code class="language-text">base pay = random(effective work stat, effective work stat × 2) + 15
+</code></pre>
+<p>表中所列技能会使该职业的基础薪资翻倍。工作经验带来的额外薪资会在之后加入。</p>
+<div class="guide-table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th>专长</th>
+<th>职业</th>
+<th>地点</th>
+<th>时间</th>
+<th>工作属性</th>
+<th>薪资 ×2 技能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>健美运动员</td>
+<td>私人教练</td>
+<td>健身房</td>
+<td>06:00–21:00</td>
+<td>力量</td>
+<td>狂战士之怒</td>
+</tr>
+<tr>
+<td>学者</td>
+<td>教师</td>
+<td>大学教室</td>
+<td>09:00–17:00</td>
+<td>智力</td>
+<td>材料科学</td>
+</tr>
+<tr>
+<td>销售员</td>
+<td>汽车销售员</td>
+<td>汽车经销店</td>
+<td>09:00–18:00</td>
+<td>沟通</td>
+<td>谈判</td>
+</tr>
+<tr>
+<td>计算机专家</td>
+<td>IT 专家</td>
+<td>大学计算机实验室</td>
+<td>09:00–17:00</td>
+<td>科技</td>
+<td>量子计算</td>
+</tr>
+<tr>
+<td>音乐家</td>
+<td>制作人</td>
+<td>音乐工作室</td>
+<td>12:00–23:00</td>
+<td>创造力</td>
+<td>歌曲创作</td>
+</tr>
+<tr>
+<td>武术家</td>
+<td>师傅</td>
+<td>道场</td>
+<td>10:00–19:00</td>
+<td>耐力</td>
+<td>武器精通</td>
+</tr>
+<tr>
+<td>情场高手</td>
+<td>推广员</td>
+<td>夜总会</td>
+<td>21:00–03:00</td>
+<td>魅力</td>
+<td>声望管理</td>
+</tr>
+<tr>
+<td>游戏大师</td>
+<td>玩家</td>
+<td>游戏厅</td>
+<td>12:00–22:00</td>
+<td>运气</td>
+<td>作弊</td>
+</tr>
+<tr>
+<td>运动员</td>
+<td>教练</td>
+<td>篮球场</td>
+<td>09:00–17:00</td>
+<td>耐力</td>
+<td>领导力</td>
+</tr>
+<tr>
+<td>魔术师</td>
+<td>幻术师</td>
+<td>魔法商店</td>
+<td>09:00–18:00</td>
+<td>神秘</td>
+<td>幻象编织</td>
+</tr>
+</tbody>
+</table></div>
+<p>师傅职业还有 15% 概率给予 +1 中立阵营。</p>
+<h3 id="zh-通用属性-30-职业">通用属性 30 职业</h3>
+<div class="guide-table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th>职业</th>
+<th>地点 / 时间</th>
+<th>要求与薪资</th>
+<th>薪资 ×2 技能</th>
+<th>额外效果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>厨师</strong></td>
+<td>市中心餐厅，10:00–22:00</td>
+<td>烹饪 30；<code>random(Cooking, Cooking×2) + 15</code></td>
+<td>创意烹饪</td>
+<td>将饱腹感补满。</td>
+</tr>
+<tr>
+<td><strong>经纪人</strong></td>
+<td>投资规划，09:00–17:00</td>
+<td>商业 30；<code>random(Charm+Communication, Commerce+Intelligence) + Luck</code></td>
+<td>市场分析</td>
+<td>在 8% 成长判定成功时提高商业。</td>
+</tr>
+</tbody>
+</table></div>
+<p>公式中的所有属性均为有效值。</p>
+<h3 id="zh-工作经验加成">工作经验加成</h3>
+<p>每完成一份工作，都会获得 0 至当前工作经验之间的随机薪资加成，随后推进该追踪项。</p>
+<ul>
+<li><strong>商业头脑：</strong> 薪资加成上限变为 <code>Working Experience ×2</code>。</li>
+<li><strong>勤勉工作者：</strong> 基础工作经验收益从 1 变为 2。</li>
+<li><strong>责任感：</strong> 有 25% 概率额外获得 +1 工作经验。</li>
+<li><strong>服装等级：</strong> 休闲装、约会装和正装的合计等级会产生以 16 为分母、额外获得 +1 经验的概率，最高为 16/16。</li>
+</ul>
+<hr/>
+<p></p>
+<h2 id="zh-skills-and-categories">技能与类别</h2>
+<p>当前技能登记表包含 <strong>131 项技能</strong>，显示分组如下：</p>
+<div class="guide-table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th>类别</th>
+<th style="text-align:right">数量</th>
+<th>通常包含的内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>战斗</td>
+<td style="text-align:right">29</td>
+<td>攻击、防御、闪避、武器和战斗被动效果。</td>
+</tr>
+<tr>
+<td>魔法</td>
+<td style="text-align:right">27</td>
+<td>法术、魔法被动效果、仪式和超自然能力。</td>
+</tr>
+<tr>
+<td>社交</td>
+<td style="text-align:right">17</td>
+<td>说服、关系、欺骗、领导和生物照料。</td>
+</tr>
+<tr>
+<td>科技</td>
+<td style="text-align:right">22</td>
+<td>黑客、研究、工程、开锁、采矿和技术知识。</td>
+</tr>
+<tr>
+<td>经济</td>
+<td style="text-align:right">9</td>
+<td>市场、工作成长、会计、鉴定和商业。</td>
+</tr>
+<tr>
+<td>表演</td>
+<td style="text-align:right">11</td>
+<td>音乐、舞蹈、表演、游戏和观众互动技能。</td>
+</tr>
+<tr>
+<td>亲密</td>
+<td style="text-align:right">9</td>
+<td>诱惑、羁绊、信任、愉悦和浪漫互动。</td>
+</tr>
+<tr>
+<td>烹饪</td>
+<td style="text-align:right">4</td>
+<td>烹饪行动与精通。</td>
+</tr>
+<tr>
+<td>体能</td>
+<td style="text-align:right">3</td>
+<td>新陈代谢、游泳和钓鱼精通。</td>
+</tr>
+<tr>
+<td>特殊</td>
+<td style="text-align:right">当前为 0</td>
+<td>为不属于其他已识别类别的技能预留的显示分组。</td>
+</tr>
+</tbody>
+</table></div>
+<p>源数据中的 <strong>学术</strong> 和 <strong>技术</strong> 类别均显示在科技分组下。</p>
+<h3 id="zh-技能学习方式">技能学习方式</h3>
+<p>技能主要来自六种途径：</p>
+<ol>
+<li>初始专长提供的两项免费技能。</li>
+<li>世界各地点的固定训练行动。</li>
+<li>具名 NPC 导师，通常有关系阶段门槛。</li>
+<li>剧情及故事完成奖励。</li>
+<li>阵营选择、地牢场景和搜索遭遇。</li>
+<li>随机技能购买或遭遇；独占技能集合不在随机池中。</li>
+</ol>
+<p>技能上显示的属性是其通用学习要求，而不是技能等级。具体导师可以设置不同门槛或特意绕过通用要求，初始奖励及剧情奖励也会直接授予技能。技能只有已拥有/未拥有两种状态，不会升级。</p>
+<h3 id="zh-技能说明并非全局被动效果">技能说明并非全局被动效果</h3>
+<p>已学技能可能拥有多种不同类型的效果：</p>
+<ul>
+<li>解锁战斗按钮或世界行动；</li>
+<li>修改一种具名攻击；</li>
+<li>添加随机触发概率；</li>
+<li>使一份工作的薪资翻倍；</li>
+<li>解锁对话或场景选项；</li>
+<li>作为某角色偏爱的技能，使好感度翻倍；</li>
+<li>满足剧情要求，而不提供通用数值被动效果。</li>
+</ul>
+<p>请使用游戏内的技能词汇表查看每项技能的完整应用列表。不要想当然地认为“理解魔法理论”之类的宽泛说明会给所有魔法公式附加隐藏加成。</p>
+<hr/>
+<p></p>
+<h2 id="zh-fixed-location-skill-training">固定地点技能训练</h2>
+<p>以下是可在世界固定地点反复进行的非独占技能训练。括号内列出基础属性门槛。</p>
+<div class="guide-table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th>地点</th>
+<th>技能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>杂技训练厅</strong></td>
+<td>杂技（能力 18），$200，180 分钟</td>
+</tr>
+<tr>
+<td><strong>吟游诗人公会</strong></td>
+<td>巧舌如簧（魅力 20），$600，360 分钟；歌曲创作（创造力 25），$300，220 分钟</td>
+</tr>
+<tr>
+<td><strong>生物优化医疗中心</strong></td>
+<td>疼痛耐受（耐力 18），$250，180 分钟</td>
+</tr>
+<tr>
+<td><strong>认知优化学院</strong></td>
+<td>控制论（科技 26）、情报交易（智力 18）、声望管理（魅力 16）：每项 $250、150 分钟</td>
+</tr>
+<tr>
+<td><strong>舞蹈与瑜伽工作室</strong></td>
+<td>舞蹈精通（能力 20），$500，180 分钟</td>
+</tr>
+<tr>
+<td><strong>市中心酒吧</strong></td>
+<td>酒精耐受（耐力 15），$200，120 分钟，仅夜间开放</td>
+</tr>
+<tr>
+<td><strong>市中心餐厅</strong></td>
+<td>烹饪食物（智力 18），$250，200 分钟</td>
+</tr>
+<tr>
+<td><strong>战士公会</strong></td>
+<td>强力打击（力量 15），$200，180 分钟；战斗领导力（魅力 15），$300，220 分钟；武器精通（能力 18），$400，250 分钟</td>
+</tr>
+<tr>
+<td><strong>渔村海岸</strong></td>
+<td>煎鱼（能力 15），$200，180 分钟</td>
+</tr>
+<tr>
+<td><strong>人体机能优化实验室</strong></td>
+<td>钢铁体魄（力量 30），$350，250 分钟；完美代谢（力量 35），$800，500 分钟</td>
+</tr>
+<tr>
+<td><strong>骑士训练场</strong></td>
+<td>耐力训练（耐力 30），$350，250 分钟</td>
+</tr>
+<tr>
+<td><strong>僧侣神殿训练厅</strong></td>
+<td>战斗冥想（神秘 10）和治愈之触（神秘 15），每项 $100、200 分钟；内心平静（神秘 30），$350，250 分钟</td>
+</tr>
+<tr>
+<td><strong>音乐工作室</strong></td>
+<td>音乐制作（科技 25），$500，180 分钟</td>
+</tr>
+<tr>
+<td><strong>神秘珍奇商店</strong></td>
+<td>手法技巧（能力 16），$250，180 分钟</td>
+</tr>
+<tr>
+<td><strong>办公室</strong></td>
+<td>创业精神（商业 20），$600，360 分钟</td>
+</tr>
+<tr>
+<td><strong>裁缝店</strong></td>
+<td>时尚，$300，180 分钟；行动会显示吸引力 18 要求，但请参阅<a href="#zh-current-build-documentation-exceptions">当前版本例外</a>。</td>
+</tr>
+<tr>
+<td><strong>盗贼公会</strong></td>
+<td>开锁（能力 16），$200，180 分钟</td>
+</tr>
+<tr>
+<td><strong>地下改造诊所</strong></td>
+<td>钢铁意志（耐力 16），$200 外加 10 份史诗材料，150 分钟</td>
+</tr>
+<tr>
+<td><strong>通用知识综合研究所</strong></td>
+<td>文化适应（智力 14）、数据挖掘（科技 20）、数字取证（科技 18）、材料科学（智力 19）：每项 $200、180 分钟</td>
+</tr>
+<tr>
+<td><strong>大学教室</strong></td>
+<td>会计和人类学（智力 15）、资源优化（智力 16）：每项 $200、180 分钟</td>
+</tr>
+<tr>
+<td><strong>大学计算机实验室</strong></td>
+<td>网络安全（科技 20），$200，180 分钟；系统黑客（科技 30），$350，220 分钟</td>
+</tr>
+<tr>
+<td><strong>大学研究实验室</strong></td>
+<td>研究（智力 15），$200，180 分钟</td>
+</tr>
+<tr>
+<td><strong>未注册住宅区</strong></td>
+<td>创意烹饪（创造力 25），$300，220 分钟</td>
+</tr>
+<tr>
+<td><strong>虚拟娱乐优化中心</strong></td>
+<td>快速拔枪（能力 20），$250，150 分钟</td>
+</tr>
+</tbody>
+</table></div>
+<p>精力、镇定、生命、资源、关系和开放时间等成本及限制仍然适用。确认前，行动工具提示会给出当前的准确总成本。</p>
+<hr/>
+<p></p>
+<h2 id="zh-named-skill-teachers">具名技能导师</h2>
+<p>本表是路线索引，不能取代各 NPC 的攻略。关系阶段、剧情进度、时间、金钱、水晶和资源消耗等要求仍可能适用。</p>
+<div class="guide-table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th>导师 / 来源</th>
+<th>教授或奖励的技能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Valkyra</strong></td>
+<td>强力打击、防御姿态、武器精通、剑术、侧步</td>
+</tr>
+<tr>
+<td><strong>Yrsa</strong></td>
+<td>狂战士之怒、威慑气场、碎颅击</td>
+</tr>
+<tr>
+<td><strong>Lilu</strong></td>
+<td>反击、缴械技巧、步履轻盈、利用弱点、太极</td>
+</tr>
+<tr>
+<td><strong>Robin</strong></td>
+<td>弓术专注、动物照料</td>
+</tr>
+<tr>
+<td><strong>Sashina</strong></td>
+<td>元素爆破、治愈之触、念动力、幻象编织、神秘诱惑、奥术涌动、Sashina 的恩赐；她的青蛙救援剧情会奖励转化术</td>
+</tr>
+<tr>
+<td><strong>Aziza</strong></td>
+<td>法力引导、附魔；后续解锁术士路线</td>
+</tr>
+<tr>
+<td><strong>Blinky</strong></td>
+<td>占卜、防护结界；她的训练剧情会奖励闪现</td>
+</tr>
+<tr>
+<td><strong>Gandon</strong></td>
+<td>巫术、魔法大师</td>
+</tr>
+<tr>
+<td><strong>Carmilla</strong></td>
+<td>吸血鬼化</td>
+</tr>
+<tr>
+<td><strong>Azariel</strong></td>
+<td>共情、灵魂视界</td>
+</tr>
+<tr>
+<td><strong>Amelia</strong></td>
+<td>圣愈之术</td>
+</tr>
+<tr>
+<td><strong>Audrey</strong></td>
+<td>自然之拥</td>
+</tr>
+<tr>
+<td><strong>Sylwithe</strong></td>
+<td>暴风打击</td>
+</tr>
+<tr>
+<td><strong>Coradio</strong></td>
+<td>王权锋刃</td>
+</tr>
+<tr>
+<td><strong>Saber</strong></td>
+<td>相关剧情开放后教授风暴斩</td>
+</tr>
+<tr>
+<td><strong>EPOM</strong></td>
+<td>战斗扫描器、工程大师</td>
+</tr>
+<tr>
+<td><strong>AIMy</strong></td>
+<td>纳米工程</td>
+</tr>
+<tr>
+<td><strong>Tinker</strong></td>
+<td>控制论</td>
+</tr>
+<tr>
+<td><strong>Glitch</strong></td>
+<td>人脉经营、AI 编程、自动化系统、量子计算</td>
+</tr>
+<tr>
+<td><strong>Ghost</strong></td>
+<td>领导力</td>
+</tr>
+<tr>
+<td><strong>Vixen</strong></td>
+<td>识人术、欺骗、声望管理、勒索、情报交易、诱惑</td>
+</tr>
+<tr>
+<td><strong>Jinx</strong></td>
+<td>谈判</td>
+</tr>
+<tr>
+<td><strong>Esperanza</strong></td>
+<td>文化适应</td>
+</tr>
+<tr>
+<td><strong>Sabbath</strong></td>
+<td>炼金术</td>
+</tr>
+<tr>
+<td><strong>Jade</strong></td>
+<td>市场分析</td>
+</tr>
+<tr>
+<td><strong>Arestes</strong></td>
+<td>投资眼光；后续解锁刺客和暗影慰藉者</td>
+</tr>
+<tr>
+<td><strong>Silas</strong></td>
+<td>鉴定</td>
+</tr>
+<tr>
+<td><strong>Diane</strong></td>
+<td>通过 Katie 的教程路线教授责任感</td>
+</tr>
+<tr>
+<td><strong>Maggie</strong></td>
+<td>通过她的工作经验剧情链教授勤勉工作者和商业头脑</td>
+</tr>
+<tr>
+<td><strong>Cotton</strong></td>
+<td>舞台气场</td>
+</tr>
+<tr>
+<td><strong>Kent</strong></td>
+<td>讲故事</td>
+</tr>
+<tr>
+<td><strong>Sandra</strong></td>
+<td>戏剧艺术、艺术眼光</td>
+</tr>
+<tr>
+<td><strong>Vera</strong></td>
+<td>作弊、诱惑</td>
+</tr>
+<tr>
+<td><strong>Kurenai</strong></td>
+<td>情感纽带、愉悦艺术</td>
+</tr>
+<tr>
+<td><strong>Raven</strong></td>
+<td>驯服者</td>
+</tr>
+<tr>
+<td><strong>Poppy / Chef Martha</strong></td>
+<td>通过不同路线教授厨艺大师</td>
+</tr>
+<tr>
+<td><strong>Summer / Kristen</strong></td>
+<td>通过不同路线教授游泳</td>
+</tr>
+<tr>
+<td><strong>Gem</strong></td>
+<td>采矿</td>
+</tr>
+<tr>
+<td><strong>老渔夫地牢遭遇</strong></td>
+<td>以 5 枚龙币教授钓饵大师</td>
+</tr>
+</tbody>
+</table></div>
+<p>巫师阵营可以通过影响力选择提供许多魔法技能，其中部分技能也有具名导师。随机水晶训练、Gonzo 商店、Wiseman 遭遇和若干地牢场景均可教授符合条件的非独占技能。</p>
+<hr/>
+<p></p>
+<h2 id="zh-exclusive-skills">独占技能</h2>
+<p>“独占”表示不在普通随机技能池中，并不总是意味着历史上只有唯一途径；有时剧情或阵营路线也会有意提供同一技能。</p>
+<div class="guide-table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th>技能</th>
+<th>当前途径</th>
+<th>主要机制效果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>闪现</strong></td>
+<td>完成 Blinky 的闪现训练剧情。</td>
+<td>设置并使用一个不消耗时间的传送锚点。</td>
+</tr>
+<tr>
+<td><strong>灵魂视界</strong></td>
+<td>Azariel，亲密朋友+，1 块水晶。</td>
+<td>显示 NPC 阵营。</td>
+</tr>
+<tr>
+<td><strong>吸血鬼化</strong></td>
+<td>Carmilla，已知+，吸血鬼 25，30 颗鲜血宝珠。</td>
+<td>强化吸血鬼獠牙/魔导书的战斗触发效果。</td>
+</tr>
+<tr>
+<td><strong>战斗扫描器</strong></td>
+<td>EPOM，相识以上，$500。</td>
+<td>显示敌人的生命、力量、元素优势与弱点。</td>
+</tr>
+<tr>
+<td><strong>神秘诱惑</strong></td>
+<td>Sashina H2H（谈心），神秘 65+，300 好感度，已学诱惑。</td>
+<td>解锁神秘诱惑关系行动及主题选项。</td>
+</tr>
+<tr>
+<td><strong>转化术</strong></td>
+<td>Sashina 的青蛙救援剧情；巫师阵营也会提供。</td>
+<td>解锁特殊炼金和地牢解决方式。</td>
+</tr>
+<tr>
+<td><strong>钓饵大师</strong></td>
+<td>水域地牢的老渔夫遭遇，5 枚龙币。</td>
+<td>改善稀有钓鱼结果和收线时机。</td>
+</tr>
+<tr>
+<td><strong>驯服者</strong></td>
+<td>Raven，迷恋+，沟通 20，$7,000。</td>
+<td>允许捕获怪物，并创建初始值为 1 的驯服属性。</td>
+</tr>
+<tr>
+<td><strong>预知</strong></td>
+<td>完成剧情节点 39。</td>
+<td>受到攻击时提供固定 10% 闪避判定。</td>
+</tr>
+<tr>
+<td><strong>奥术涌动</strong></td>
+<td>Sashina，浪漫感+，神秘 60。</td>
+<td>元素攻击魔法有 18% 概率变为无视防御的 ×3 涌动，同时增加消耗与伤害。</td>
+</tr>
+<tr>
+<td><strong>Sashina 的恩赐</strong></td>
+<td>Sashina，恋爱中，剧情节点 55，神秘 60。</td>
+<td>有 15% 概率让火/冰攻击造成 ×2 伤害、绕过吸收并部分穿透防御。</td>
+</tr>
+<tr>
+<td><strong>圣愈之术</strong></td>
+<td>Amelia，浪漫感+，神秘 60。</td>
+<td>有 30% 概率使治疗魔法效果翻倍。</td>
+</tr>
+<tr>
+<td><strong>自然之拥</strong></td>
+<td>Audrey，浪漫感+，神秘 60。</td>
+<td>防御时恢复最大精力的 4–10%。</td>
+</tr>
+<tr>
+<td><strong>暴风打击</strong></td>
+<td>Sylwithe，神秘 60，$10,000,000 和 5 块水晶。</td>
+<td>为风暴斩附加闪电、+5% 基础伤害及概率递减的多段连击。</td>
+</tr>
+<tr>
+<td><strong>碎颅击</strong></td>
+<td>Yrsa，浪漫感+，力量 60。</td>
+<td>强力打击基础伤害 +10%，并有 30% 概率造成 ×4 伤害。</td>
+</tr>
+<tr>
+<td><strong>侧步</strong></td>
+<td>Valkyra，浪漫感+，能力 60。</td>
+<td>快速攻击有 20% 概率给予一次闪避和一次额外快速攻击。</td>
+</tr>
+<tr>
+<td><strong>影步</strong></td>
+<td>Shadow，浪漫感+，能力 60，且 Shadow 正担任第 8 位青楼员工。</td>
+<td>保证能从非首领战斗中逃离。</td>
+</tr>
+<tr>
+<td><strong>厨艺大师</strong></td>
+<td>Poppy 朋友+且烹饪 50，或 Chef Martha 浪漫感+且烹饪 60。</td>
+<td>解锁厨艺大师烹饪。</td>
+</tr>
+<tr>
+<td><strong>工程大师</strong></td>
+<td>EPOM，朋友+，科技 60。</td>
+<td>提供工程大师专长及角色专属用途。</td>
+</tr>
+<tr>
+<td><strong>太极</strong></td>
+<td>Lilu，浪漫感+，能力 60。</td>
+<td>反弹概率与数值从 5%/5% 起步，随绝对中立层级提高，最高为 32%/32%。</td>
+</tr>
+<tr>
+<td><strong>王权锋刃</strong></td>
+<td>Coradio，能力 60，5 块水晶，支持者限定。</td>
+<td>以不消耗精力的强化剑术及稀有终结技取代基础攻击。</td>
+</tr>
+<tr>
+<td><strong>责任感</strong></td>
+<td>通过 Katie 的教程路线向 Diane 学习。</td>
+<td>每次工作有 25% 概率额外获得 +1 工作经验。</td>
+</tr>
+<tr>
+<td><strong>勤勉工作者</strong></td>
+<td>Maggie 剧情，工作经验 15，正装等级 2。</td>
+<td>基础工作经验收益变为 2。</td>
+</tr>
+<tr>
+<td><strong>商业头脑</strong></td>
+<td>Maggie 剧情，工作经验 80，正装等级 3。</td>
+<td>使基于经验的随机薪资加成上限翻倍。</td>
+</tr>
+<tr>
+<td><strong>采矿</strong></td>
+<td>Gem，朋友+，力量 25，$600，付费版本限定。</td>
+<td>可以在地牢中用镐开采墙壁。</td>
+</tr>
+</tbody>
+</table></div>
+<hr/>
+<p></p>
+<h2 id="zh-specialist-combat-paths">专精战斗路线</h2>
+<p>三条专精路线是后期叠加系统。取得路线后，对应点数会从 -1（“未取得”）变为 0，并立即获得阶级 1。它们不会取代初始专长、占用技能栏位或排斥其他路线。</p>
+<h3 id="zh-解锁要求">解锁要求</h3>
+<div class="guide-table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th>路线</th>
+<th>导师</th>
+<th>当前要求</th>
+<th>强化的行动</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>剑术大师</strong></td>
+<td>Muramasa</td>
+<td>亲密朋友+，战士公会影响力 200；300 分钟，-150 精力，-100 镇定</td>
+<td>基础攻击和强力打击</td>
+</tr>
+<tr>
+<td><strong>刺客</strong></td>
+<td>Arestes</td>
+<td>盗贼公会影响力 350，并可进入 Arestes 的隐藏密室；300 分钟，-150 精力，-150 镇定</td>
+<td>快速攻击和风暴斩</td>
+</tr>
+<tr>
+<td><strong>术士</strong></td>
+<td>Aziza</td>
+<td>恋爱中；已击败 40 层小首领；已获得第 4 位女仆 <strong>Lime</strong>；已学 Sashina 的恩赐；需要支持者/付费权限；300 分钟，-150 精力，-150 镇定</td>
+<td>火焰、寒冰、光明、黑暗、睡眠和治疗魔法</td>
+</tr>
+</tbody>
+</table></div>
+<p>支持者门槛与 Lime 的拼写是依据当前源代码对社区页面作出的修正。</p>
+<h3 id="zh-伤害与治疗倍率">伤害与治疗倍率</h3>
+<pre><code class="language-text">path multiplier = 1 + (rank × 0.15)
+</code></pre>
+<p>阶级 1 为 ×1.15，阶级 10 为 ×2.50，阶级 20 为 ×4.00。20 级之后每级再增加 ×0.15。倍率会应用于符合条件行动的最终结果；对术士而言，其中也包括治疗魔法。</p>
+<h3 id="zh-获取专精点数">获取专精点数</h3>
+<ul>
+<li>剑术大师通过使用基础攻击或强力打击获得点数。</li>
+<li>刺客通过使用快速攻击或风暴斩获得点数。</li>
+<li>术士通过使用火焰、寒冰、光明、黑暗、睡眠或治疗魔法获得点数。</li>
+<li>在无限地下城之外，符合条件的行动通常给予 1 点。</li>
+<li>在无限地下城中，行动会先加上 1 至当前层数之间的随机奖励，再应用该层词缀的专精经验倍率和敌人的专精点数倍率。部分无限地下城敌人使用 ×2 敌人倍率。</li>
+<li>四舍五入后，点数收益至少为 1。</li>
+</ul>
+<p>因此，在无限地下城深层推进会比反复进行普通遭遇快得多。</p>
+<h3 id="zh-阶级门槛与称号">阶级门槛与称号</h3>
+<div class="guide-table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th style="text-align:right">阶级</th>
+<th style="text-align:right">总点数</th>
+<th style="text-align:right">倍率</th>
+<th>术士</th>
+<th>刺客</th>
+<th>剑术大师</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">1</td>
+<td style="text-align:right">0</td>
+<td style="text-align:right">×1.15</td>
+<td>新手</td>
+<td>入门者</td>
+<td>新手剑士</td>
+</tr>
+<tr>
+<td style="text-align:right">2</td>
+<td style="text-align:right">100</td>
+<td style="text-align:right">×1.30</td>
+<td>学徒</td>
+<td>刀手</td>
+<td>见习决斗者</td>
+</tr>
+<tr>
+<td style="text-align:right">3</td>
+<td style="text-align:right">300</td>
+<td style="text-align:right">×1.45</td>
+<td>入门者</td>
+<td>潜猎者</td>
+<td>剑道入门者</td>
+</tr>
+<tr>
+<td style="text-align:right">4</td>
+<td style="text-align:right">700</td>
+<td style="text-align:right">×1.60</td>
+<td>熟练者</td>
+<td>灭口者</td>
+<td>熟练剑士</td>
+</tr>
+<tr>
+<td style="text-align:right">5</td>
+<td style="text-align:right">1,500</td>
+<td style="text-align:right">×1.75</td>
+<td>引导者</td>
+<td>夜刃</td>
+<td>钢舞者</td>
+</tr>
+<tr>
+<td style="text-align:right">6</td>
+<td style="text-align:right">3,100</td>
+<td style="text-align:right">×1.90</td>
+<td>唤能者</td>
+<td>割喉者</td>
+<td>斩风</td>
+</tr>
+<tr>
+<td style="text-align:right">7</td>
+<td style="text-align:right">6,300</td>
+<td style="text-align:right">×2.05</td>
+<td>召唤者</td>
+<td>幕行者</td>
+<td>决斗者</td>
+</tr>
+<tr>
+<td style="text-align:right">8</td>
+<td style="text-align:right">12,700</td>
+<td style="text-align:right">×2.20</td>
+<td>缚咒者</td>
+<td>死亡印记</td>
+<td>剑圣</td>
+</tr>
+<tr>
+<td style="text-align:right">9</td>
+<td style="text-align:right">25,500</td>
+<td style="text-align:right">×2.35</td>
+<td>术法师</td>
+<td>影刃</td>
+<td>风暴之刃</td>
+</tr>
+<tr>
+<td style="text-align:right">10</td>
+<td style="text-align:right">44,700</td>
+<td style="text-align:right">×2.50</td>
+<td>奇术师</td>
+<td>鬼影刀</td>
+<td>铁斩者</td>
+</tr>
+<tr>
+<td style="text-align:right">11</td>
+<td style="text-align:right">73,500</td>
+<td style="text-align:right">×2.65</td>
+<td>魔导师</td>
+<td>夜曲</td>
+<td>绯红锋刃</td>
+</tr>
+<tr>
+<td style="text-align:right">12</td>
+<td style="text-align:right">116,700</td>
+<td style="text-align:right">×2.80</td>
+<td>高阶魔导师</td>
+<td>黑莲</td>
+<td>剑豪</td>
+</tr>
+<tr>
+<td style="text-align:right">13</td>
+<td style="text-align:right">181,500</td>
+<td style="text-align:right">×2.95</td>
+<td>大魔导师</td>
+<td>静默收割者</td>
+<td>剑刃贤者</td>
+</tr>
+<tr>
+<td style="text-align:right">14</td>
+<td style="text-align:right">278,700</td>
+<td style="text-align:right">×3.10</td>
+<td>大术士</td>
+<td>刺客大师</td>
+<td>真·剑术大师</td>
+</tr>
+<tr>
+<td style="text-align:right">15</td>
+<td style="text-align:right">424,500</td>
+<td style="text-align:right">×3.25</td>
+<td>奥秘贤者</td>
+<td>幻影锋</td>
+<td>无双之剑</td>
+</tr>
+<tr>
+<td style="text-align:right">16</td>
+<td style="text-align:right">643,200</td>
+<td style="text-align:right">×3.40</td>
+<td>玄秘大师</td>
+<td>虚空潜猎者</td>
+<td>千斩大师</td>
+</tr>
+<tr>
+<td style="text-align:right">17</td>
+<td style="text-align:right">971,250</td>
+<td style="text-align:right">×3.55</td>
+<td>奥术君主</td>
+<td>弑王者</td>
+<td>活太刀</td>
+</tr>
+<tr>
+<td style="text-align:right">18</td>
+<td style="text-align:right">1,463,325</td>
+<td style="text-align:right">×3.70</td>
+<td>现实编织者</td>
+<td>不死暗影</td>
+<td>裂天者</td>
+</tr>
+<tr>
+<td style="text-align:right">19</td>
+<td style="text-align:right">2,201,438</td>
+<td style="text-align:right">×3.85</td>
+<td>超越者</td>
+<td>神话杀手</td>
+<td>神话剑术大师</td>
+</tr>
+<tr>
+<td style="text-align:right">20</td>
+<td style="text-align:right">3,308,607</td>
+<td style="text-align:right">×4.00</td>
+<td>魔法化身</td>
+<td>暗影化身</td>
+<td>钢铁化身</td>
+</tr>
+</tbody>
+</table></div>
+<p>阶级可以无限提升。扩展种子为 1,660,753，代码会先将其乘以 1.5，再加入第一个 20 级之后的跨度。因此，阶级 21 从 <strong>总计 5,799,736 点</strong> 开始；此后每段跨度都是前一段的 1.5 倍。显示称号仍采用阶级 20 的称号，并在后面附加更高的阶级数字。</p>
+<h3 id="zh-刺客连击机制">刺客连击机制</h3>
+<p>取得刺客路线后，快速攻击会成为该路线的连击攻击：</p>
+<pre><code class="language-text">starting follow-up chance = 50% + Assassin rank
+normal chance loss        = 10 percentage points after each chained hit
+</code></pre>
+<p>每次成功追击都会重新计算一次快速攻击，并可继续连击。<strong>暗影慰藉者</strong> 会使初始概率提高 15 个百分点，并把每次连击后的概率损失降至仅 5 个百分点。<strong>幻影之石</strong> 会为每次连击追击增加等同于其等级的固定伤害。</p>
+<p>因此，刺客阶级既会提高快速攻击伤害，也会提高连击启动的概率。</p>
+<h3 id="zh-各路线如何与独占技能结合">各路线如何与独占技能结合</h3>
+<ul>
+<li>使用相应基础行动时，剑术大师会对 <strong>王权锋刃</strong> 或 <strong>碎颅击</strong> 已经强化过的结果继续应用倍率。</li>
+<li>刺客会提高快速攻击/风暴斩的倍率，而 <strong>侧步</strong>、<strong>暴风打击</strong>、暗影慰藉者和幻影之石仍按各自的触发规则运作。</li>
+<li>术士会在普通魔法流程完成后提高法术结果；<strong>奥术涌动</strong>、<strong>Sashina 的恩赐</strong>、<strong>圣愈之术</strong> 及其他魔法修正仍保有各自的触发概率。</li>
+</ul>
+<p>战斗计算的确切顺序请参阅 <code>combat_system.md</code>。</p>
+<hr/>
+<p></p>
+<h2 id="zh-permanent-versus-conditional-modifiers">永久修正与条件修正</h2>
+<h3 id="zh-永久进度">永久进度</h3>
+<ul>
+<li>通过训练、工作、对话、剧情和地牢奖励获得的基础属性增长。</li>
+<li>已学技能。</li>
+<li>战斗、色情和工作经验。</li>
+<li>阵营、阵营影响力、关系进度和专精路线点数。</li>
+<li>永久 <code>health_max</code>、<code>energy_max</code> 和 <code>calm_max</code> 奖励。</li>
+<li>已取得并升级的装备、关键物品和宝石，只要仍然持有即可。</li>
+</ul>
+<h3 id="zh-永久持有效果有条件">永久持有，效果有条件</h3>
+<ul>
+<li>技能会永久保留，但其加成可能要求特定攻击、工作、NPC、状态、生命区间、阵营层级或随机触发。</li>
+<li>关键物品会永久持有，但其效果可能只适用于战斗、小游戏、无限地下城或特定公式。</li>
+<li>装备升级会保留，但只有相关已装备栏位或系统会使用其等级。</li>
+<li>专精阶级会保留，但只有该路线列出的行动会得到倍率。</li>
+</ul>
+<h3 id="zh-临时或取决于状态">临时或取决于状态</h3>
+<ul>
+<li>二十四小时消耗品增益。</li>
+<li>战斗状态、防御状态、QTE 结果、敌人弱点/抗性和低生命触发效果。</li>
+<li>时间、日期、地点、关系阶段、服装、当前员工分配、阵营影响力和剧情标记。</li>
+<li>支持者/付费权限检查。</li>
+</ul>
+<h3 id="zh-永久修正不等于基础属性">“永久修正”不等于“基础属性”</h3>
+<p>角色模型中有一个独立于所存基础属性的永久固定修正层。大多数普通永久成长会直接提高基础属性，而当前物品加成则另行计算。这一点很重要，因为基础属性解锁可能会忽略修正值，即使有效属性公式会使用它。</p>
+<hr/>
+<p></p>
+<h2 id="zh-build-planning">构筑规划</h2>
+<h3 id="zh-物理路线">物理路线</h3>
+<p>优先提高力量、耐力和能力。健美运动员开局即可获得强力打击和耐力训练；武术家拥有最高的初始能力和战斗被动技能；运动员的初期综合物理资源最强。剑术大师强化攻击/强力打击，刺客则强化快速攻击/风暴斩。</p>
+<h3 id="zh-魔法路线">魔法路线</h3>
+<p>魔术师拥有最高的初始神秘，并自带元素爆破与幻象编织。智力和魅力也很重要，因为两者会提高镇定，而耐力则支撑精力池。术士的最终解锁刻意安排在很晚：Sashina 的恩赐、与 Aziza 达到恋爱中、取得 Lime，以及击败 40 层小首领缺一不可。</p>
+<h3 id="zh-经济路线">经济路线</h3>
+<p>销售员开局最接近商业与沟通职业门槛。学者和计算机专家拥有强力的高薪属性路线。凭借表演大师，音乐家前期街头演出的协同效果极佳。无论选择哪项专长，都应尽早解锁责任感、勤勉工作者和商业头脑，让后续工作的复利成长更快。</p>
+<h3 id="zh-灵活的全收集路线">灵活的全收集路线</h3>
+<p>万事通拥有最广泛的工作机会、均衡的初始属性，而且除烹饪较低外没有明显短板，代价是专长职业薪资仅有 70%。由于专精战斗路线与初始专长彼此独立，万事通仍可取得全部三条路线。</p>
+<h3 id="zh-通用可靠建议">通用可靠建议</h3>
+<ol>
+<li>即使是非物理构筑也应提高耐力；它是精力的主要来源，并有助于维持所有长时间活动。</li>
+<li>将基础属性训练到学习门槛，不要只依赖专注、古龙水、运气或关键物品。</li>
+<li>把沟通、商业、烹饪和盗贼视为进度属性，而非仅供点缀的数值。</li>
+<li>购买随机训练前先查阅技能词汇表；固定导师可能更便宜，也可能关联你想体验的内容。</li>
+<li>选择你本来就常用的专精行动。阶级再高，也不会强化该路线以外的攻击。</li>
+</ol>
+<hr/>
+<p></p>
+<h2 id="zh-current-build-documentation-exceptions">当前版本源代码审计说明</h2>
+<p>以下是 V0.9.6.1_FUTURE 的源代码审计结果：</p>
+<ol>
+<li><strong>当前代码已修正计算机专家在角色创建界面的说明。</strong> 现在会列出实际授予的技能：<strong>工程天才</strong> 和 <strong>系统黑客</strong>。</li>
+<li><strong>当前代码已修正游戏大师在角色创建界面的说明。</strong> 现在会列出实际授予的技能：<strong>战术意识</strong> 和 <strong>作弊</strong>。</li>
+<li><strong>时尚技能显示的吸引力 18 门槛不会由标准基础属性解锁检查器强制执行。</strong> 吸引力存储在普通属性字典之外，因此当前的裁缝店行动无论显示数值为何，都可能通过该项检查。</li>
+<li><strong>主要/次要/弱项标签目前不会修改行动成长。</strong> 有实际意义的初始差异已经体现在初始属性数组和私人行动中。</li>
+<li><strong>社区的专精职业页面遗漏了术士的支持者/付费权限要求</strong>，将第 4 位女仆 <strong>Lime</strong> 错写为“Lyme”，并且没有记载当前无限地下城专精点数缩放及幻影之石的刺客连击加成。</li>
+</ol>
+<p>每当角色创建、行动门槛或战斗路线系统发生变动时，都应重新核对这些说明。</p>
+</div>
+        <div class="guide-community-note"><div><strong data-copy-en="Community discoveries" data-copy-zh="社区发现">Community discoveries</strong><p data-copy-en="These official guides track the current game. The player-maintained wiki may contain additional strategies and discoveries." data-copy-zh="这些官方攻略与当前游戏版本保持一致；玩家维护的 Wiki 可能还收录其他策略与社区发现。">These official guides track the current game. The player-maintained wiki may contain additional strategies and discoveries.</p></div><a href="https://chronoromancer.miraheze.org/wiki/Main_Page" target="_blank" rel="noopener noreferrer" data-copy-en="Visit Player Wiki →" data-copy-zh="访问玩家 Wiki →">Visit Player Wiki →</a></div>
+        <nav class="guide-pager" aria-label="Adjacent guides"><a href="relationship_dating_and_intimacy.html"><span data-copy-en="Previous guide" data-copy-zh="上一篇攻略">Previous guide</span><strong data-copy-en="Relationship, Dating &amp; Intimacy — Complete Guide" data-copy-zh="关系、约会与亲密行为——完整指南">Relationship, Dating &amp; Intimacy — Complete Guide</strong></a><a href="blacksmith_and_forge.html"><span data-copy-en="Next guide" data-copy-zh="下一篇攻略">Next guide</span><strong data-copy-en="Blacksmith &amp; Forge — Complete Guide" data-copy-zh="铁匠与熔炉——完整指南">Blacksmith &amp; Forge — Complete Guide</strong></a></nav>
+      </article>
+    </div>
+  </main>
+  <footer class="site-footer"><div class="container"><div class="footer-grid">
+    <div class="footer-brand"><img src="../assets/images/v2/logo.png" alt="Chronoromancer"><p data-i18n="footerDescription">An adults-only time-travel sandbox RPG. Public website artwork is SFW.</p></div>
+    <div class="footer-column"><h2 data-i18n="footerExplore">Explore</h2><a href="../story.html" data-i18n="navStory">Story</a><a href="../characters.html" data-i18n="navCharacters">Characters</a><a href="../walkthroughs.html" data-i18n="navGuides">Guides</a><a href="../screenshots.html" data-i18n="navGallery">Gallery</a><a href="../main.html#download" data-i18n="navDownload">Download</a></div>
+    <div class="footer-column"><h2 data-i18n="footerCommunity">Community</h2><a data-config-link="community.discord" target="_blank" rel="noopener noreferrer">Discord</a><a data-config-link="community.telegram" target="_blank" rel="noopener noreferrer">Telegram</a><a data-config-link="community.patreon" target="_blank" rel="noopener noreferrer">Patreon</a><a data-config-link="community.wiki" target="_blank" rel="noopener noreferrer" data-i18n="navWiki">Player Wiki</a></div>
+    <div class="footer-column"><h2 data-i18n="footerLegal">Legal</h2><a href="../privacy.html" data-i18n="footerPrivacy">Privacy</a><a href="../terms.html" data-i18n="footerTerms">Terms</a></div>
+  </div><div class="footer-bottom"><span>© <span data-current-year></span> <span data-i18n="copyright">Chronoromancer Studio. All rights reserved.</span></span><span data-copy-en="Official guides · English / Simplified Chinese" data-copy-zh="官方攻略 · English / 简体中文">Official guides · English / Simplified Chinese</span></div></div></footer>
+  <script src="../assets/js/site-config.js"></script><script src="../assets/js/site.js"></script><script src="../assets/js/walkthroughs.js"></script>
+</body></html>

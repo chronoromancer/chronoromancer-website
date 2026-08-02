@@ -1,0 +1,666 @@
+{
+  "total": 66,
+  "translated": 66,
+  "guides": [
+    {
+      "slug": "quickstart_guide",
+      "filename": "quickstart_guide.md",
+      "category": "start",
+      "titleEn": "Chronoromancer Quickstart Guide",
+      "titleZh": "Chronoromancer 快速上手指南",
+      "translated": true,
+      "translationState": "ready",
+      "url": "guides/quickstart_guide.html"
+    },
+    {
+      "slug": "early_game_walkthrough",
+      "filename": "early_game_walkthrough.md",
+      "category": "start",
+      "titleEn": "Chronoromancer — Early Game Walkthrough (Free / Non-Patreon)",
+      "titleZh": "Chronoromancer——前期流程攻略（免费／非Patreon版）",
+      "translated": true,
+      "translationState": "ready",
+      "url": "guides/early_game_walkthrough.html"
+    },
+    {
+      "slug": "faq",
+      "filename": "FAQ.md",
+      "category": "start",
+      "titleEn": "Chronoromancer — Frequently Asked Questions",
+      "titleZh": "Chronoromancer——常见问题",
+      "translated": true,
+      "translationState": "ready",
+      "url": "guides/faq.html"
+    },
+    {
+      "slug": "story_beats",
+      "filename": "story_beats.md",
+      "category": "start",
+      "titleEn": "Main Story — Complete Story Beats Walkthrough",
+      "titleZh": "主线故事——完整故事节点攻略",
+      "translated": true,
+      "translationState": "ready",
+      "url": "guides/story_beats.html"
+    },
+    {
+      "slug": "alignment_system",
+      "filename": "alignment_system.md",
+      "category": "systems",
+      "titleEn": "Alignment System",
+      "titleZh": "阵营倾向系统",
+      "translated": true,
+      "translationState": "ready",
+      "url": "guides/alignment_system.html"
+    },
+    {
+      "slug": "wealth_guide",
+      "filename": "wealth_guide.md",
+      "category": "systems",
+      "titleEn": "Chronoromancer Wealth Guide",
+      "titleZh": "Chronoromancer 财富指南",
+      "translated": true,
+      "translationState": "ready",
+      "url": "guides/wealth_guide.html"
+    },
+    {
+      "slug": "items",
+      "filename": "items.md",
+      "category": "systems",
+      "titleEn": "Chronoromancer — Items Guide",
+      "titleZh": "Chronoromancer——物品指南",
+      "translated": true,
+      "translationState": "ready",
+      "url": "guides/items.html"
+    },
+    {
+      "slug": "locations",
+      "filename": "locations.md",
+      "category": "systems",
+      "titleEn": "Chronoromancer — Locations Guide",
+      "titleZh": "Chronoromancer — 地点指南",
+      "translated": true,
+      "translationState": "ready",
+      "url": "guides/locations.html"
+    },
+    {
+      "slug": "combat_system",
+      "filename": "combat_system.md",
+      "category": "systems",
+      "titleEn": "Combat System Guide",
+      "titleZh": "战斗系统指南",
+      "translated": true,
+      "translationState": "ready",
+      "url": "guides/combat_system.html"
+    },
+    {
+      "slug": "investment_system",
+      "filename": "investment_system.md",
+      "category": "systems",
+      "titleEn": "Investment System — Complete Guide",
+      "titleZh": "投资系统——完整指南",
+      "translated": true,
+      "translationState": "ready",
+      "url": "guides/investment_system.html"
+    },
+    {
+      "slug": "relationship_dating_and_intimacy",
+      "filename": "relationship_dating_and_intimacy.md",
+      "category": "systems",
+      "titleEn": "Relationship, Dating & Intimacy — Complete Guide",
+      "titleZh": "关系、约会与亲密行为——完整指南",
+      "translated": true,
+      "translationState": "ready",
+      "url": "guides/relationship_dating_and_intimacy.html"
+    },
+    {
+      "slug": "stats_skills_and_proficiencies",
+      "filename": "stats_skills_and_proficiencies.md",
+      "category": "systems",
+      "titleEn": "Stats, Skills & Proficiencies Guide",
+      "titleZh": "属性、技能与专长指南",
+      "translated": true,
+      "translationState": "ready",
+      "url": "guides/stats_skills_and_proficiencies.html"
+    },
+    {
+      "slug": "blacksmith_and_forge",
+      "filename": "blacksmith_and_forge.md",
+      "category": "activities",
+      "titleEn": "Blacksmith & Forge — Complete Guide",
+      "titleZh": "铁匠与熔炉——完整指南",
+      "translated": true,
+      "translationState": "ready",
+      "url": "guides/blacksmith_and_forge.html"
+    },
+    {
+      "slug": "brothel_stats_and_calculations",
+      "filename": "brothel_stats_and_calculations.md",
+      "category": "activities",
+      "titleEn": "Brothel Stats & Daily Calculation Reference",
+      "titleZh": "青楼属性与每日计算参考",
+      "translated": true,
+      "translationState": "ready",
+      "url": "guides/brothel_stats_and_calculations.html"
+    },
+    {
+      "slug": "caterpillar_rearing",
+      "filename": "caterpillar_rearing.md",
+      "category": "activities",
+      "titleEn": "Caterpillar Rearing - Complete System Guide",
+      "titleZh": "毛虫繁育——完整系统指南",
+      "translated": true,
+      "translationState": "ready",
+      "url": "guides/caterpillar_rearing.html"
+    },
+    {
+      "slug": "christmas_village",
+      "filename": "christmas_village.md",
+      "category": "activities",
+      "titleEn": "Christmas Village — Complete Walkthrough",
+      "titleZh": "圣诞村——完整攻略",
+      "translated": true,
+      "translationState": "ready",
+      "url": "guides/christmas_village.html"
+    },
+    {
+      "slug": "bar_games",
+      "filename": "bar_games.md",
+      "category": "activities",
+      "titleEn": "Downtown Bar Games — Complete Walkthrough",
+      "titleZh": "市中心酒吧游戏——完整攻略",
+      "translated": true,
+      "translationState": "ready",
+      "url": "guides/bar_games.html"
+    },
+    {
+      "slug": "fishing_guide",
+      "filename": "fishing_guide.md",
+      "category": "activities",
+      "titleEn": "Fishing - Complete System Guide",
+      "titleZh": "钓鱼——完整系统指南",
+      "translated": true,
+      "translationState": "ready",
+      "url": "guides/fishing_guide.html"
+    },
+    {
+      "slug": "haunted_mansion",
+      "filename": "haunted_mansion.md",
+      "category": "activities",
+      "titleEn": "Haunted Mansion — Complete Walkthrough",
+      "titleZh": "闹鬼豪宅——完整攻略",
+      "translated": true,
+      "translationState": "ready",
+      "url": "guides/haunted_mansion.html"
+    },
+    {
+      "slug": "mining_system",
+      "filename": "mining_system.md",
+      "category": "activities",
+      "titleEn": "Mining System - Complete Guide",
+      "titleZh": "采矿系统——完整指南",
+      "translated": true,
+      "translationState": "ready",
+      "url": "guides/mining_system.html"
+    },
+    {
+      "slug": "sirena_isle_resort",
+      "filename": "sirena_isle_resort.md",
+      "category": "activities",
+      "titleEn": "Sirena Isle Resort — Complete System Guide",
+      "titleZh": "塞壬岛度假村——完整系统指南",
+      "translated": true,
+      "translationState": "ready",
+      "url": "guides/sirena_isle_resort.html"
+    },
+    {
+      "slug": "maid_system",
+      "filename": "maid_system.md",
+      "category": "activities",
+      "titleEn": "The Maid System — Complete Guide",
+      "titleZh": "女仆系统——完整指南",
+      "translated": true,
+      "translationState": "ready",
+      "url": "guides/maid_system.html"
+    },
+    {
+      "slug": "brothel",
+      "filename": "brothel.md",
+      "category": "activities",
+      "titleEn": "The Rose & Thorn — Complete Brothel Guide",
+      "titleZh": "玫瑰与荆棘——完整青楼指南",
+      "translated": true,
+      "translationState": "ready",
+      "url": "guides/brothel.html"
+    },
+    {
+      "slug": "bards_guild",
+      "filename": "bards_guild.md",
+      "category": "factions",
+      "titleEn": "Bards Guild — Complete Guide",
+      "titleZh": "吟游诗人公会——完整指南",
+      "translated": true,
+      "translationState": "ready",
+      "url": "guides/bards_guild.html"
+    },
+    {
+      "slug": "chaos_syndicate",
+      "filename": "chaos_syndicate.md",
+      "category": "factions",
+      "titleEn": "Chaos Syndicate — Complete Walkthrough",
+      "titleZh": "混沌辛迪加——完整攻略",
+      "translated": true,
+      "translationState": "ready",
+      "url": "guides/chaos_syndicate.html"
+    },
+    {
+      "slug": "dungeon_guide",
+      "filename": "dungeon_guide.md",
+      "category": "factions",
+      "titleEn": "Dungeon and Dragon Coin Guide",
+      "titleZh": "地下城与龙币指南",
+      "translated": true,
+      "translationState": "ready",
+      "url": "guides/dungeon_guide.html"
+    },
+    {
+      "slug": "fighters_guild",
+      "filename": "fighters_guild.md",
+      "category": "factions",
+      "titleEn": "Fighters Guild — Complete Guide",
+      "titleZh": "战士公会——完整指南",
+      "translated": true,
+      "translationState": "ready",
+      "url": "guides/fighters_guild.html"
+    },
+    {
+      "slug": "thieves_guild",
+      "filename": "thieves_guild.md",
+      "category": "factions",
+      "titleEn": "Thieves Guild — Complete Guide",
+      "titleZh": "盗贼公会——完整指南",
+      "translated": true,
+      "translationState": "ready",
+      "url": "guides/thieves_guild.html"
+    },
+    {
+      "slug": "wizard_faction",
+      "filename": "wizard_faction.md",
+      "category": "factions",
+      "titleEn": "Wizard Faction — Complete Guide",
+      "titleZh": "巫师派系——完整攻略",
+      "translated": true,
+      "translationState": "ready",
+      "url": "guides/wizard_faction.html"
+    },
+    {
+      "slug": "abby",
+      "filename": "abby.md",
+      "category": "characters",
+      "titleEn": "Abby — Complete Walkthrough",
+      "titleZh": "Abby——完整攻略",
+      "translated": true,
+      "translationState": "ready",
+      "url": "guides/abby.html"
+    },
+    {
+      "slug": "aimy",
+      "filename": "aimy.md",
+      "category": "characters",
+      "titleEn": "AIMy — Complete Walkthrough",
+      "titleZh": "AIMy——完整攻略",
+      "translated": true,
+      "translationState": "ready",
+      "url": "guides/aimy.html"
+    },
+    {
+      "slug": "akira",
+      "filename": "akira.md",
+      "category": "characters",
+      "titleEn": "Akira — Complete Walkthrough",
+      "titleZh": "Akira——完整攻略",
+      "translated": true,
+      "translationState": "ready",
+      "url": "guides/akira.html"
+    },
+    {
+      "slug": "artemis",
+      "filename": "artemis.md",
+      "category": "characters",
+      "titleEn": "Artemis — Complete Walkthrough",
+      "titleZh": "Artemis——完整攻略",
+      "translated": true,
+      "translationState": "ready",
+      "url": "guides/artemis.html"
+    },
+    {
+      "slug": "audrey",
+      "filename": "audrey.md",
+      "category": "characters",
+      "titleEn": "Audrey — Complete Walkthrough",
+      "titleZh": "Audrey——完整攻略",
+      "translated": true,
+      "translationState": "ready",
+      "url": "guides/audrey.html"
+    },
+    {
+      "slug": "bella",
+      "filename": "bella.md",
+      "category": "characters",
+      "titleEn": "Bella — Complete Walkthrough",
+      "titleZh": "Bella——完整攻略",
+      "translated": true,
+      "translationState": "ready",
+      "url": "guides/bella.html"
+    },
+    {
+      "slug": "blinky",
+      "filename": "blinky.md",
+      "category": "characters",
+      "titleEn": "Blinky — Complete Walkthrough",
+      "titleZh": "Blinky——完整攻略",
+      "translated": true,
+      "translationState": "ready",
+      "url": "guides/blinky.html"
+    },
+    {
+      "slug": "brandy",
+      "filename": "brandy.md",
+      "category": "characters",
+      "titleEn": "Brandy — Complete Walkthrough",
+      "titleZh": "Brandy——完整攻略",
+      "translated": true,
+      "translationState": "ready",
+      "url": "guides/brandy.html"
+    },
+    {
+      "slug": "christy",
+      "filename": "christy.md",
+      "category": "characters",
+      "titleEn": "Christy — Complete Walkthrough",
+      "titleZh": "Christy——完整攻略",
+      "translated": true,
+      "translationState": "ready",
+      "url": "guides/christy.html"
+    },
+    {
+      "slug": "elara",
+      "filename": "elara.md",
+      "category": "characters",
+      "titleEn": "Elara — Complete Walkthrough",
+      "titleZh": "Elara——完整攻略",
+      "translated": true,
+      "translationState": "ready",
+      "url": "guides/elara.html"
+    },
+    {
+      "slug": "esperanza",
+      "filename": "esperanza.md",
+      "category": "characters",
+      "titleEn": "Esperanza — Complete Walkthrough",
+      "titleZh": "Esperanza——完整攻略",
+      "translated": true,
+      "translationState": "ready",
+      "url": "guides/esperanza.html"
+    },
+    {
+      "slug": "grace",
+      "filename": "grace.md",
+      "category": "characters",
+      "titleEn": "Grace — Complete Walkthrough",
+      "titleZh": "Grace——完整攻略",
+      "translated": true,
+      "translationState": "ready",
+      "url": "guides/grace.html"
+    },
+    {
+      "slug": "jade",
+      "filename": "jade.md",
+      "category": "characters",
+      "titleEn": "Jade — Complete Walkthrough",
+      "titleZh": "Jade——完整攻略",
+      "translated": true,
+      "translationState": "ready",
+      "url": "guides/jade.html"
+    },
+    {
+      "slug": "jessie",
+      "filename": "jessie.md",
+      "category": "characters",
+      "titleEn": "Jessie — Complete Walkthrough",
+      "titleZh": "Jessie——完整攻略",
+      "translated": true,
+      "translationState": "ready",
+      "url": "guides/jessie.html"
+    },
+    {
+      "slug": "kupie_love_training",
+      "filename": "kupie_love_training.md",
+      "category": "characters",
+      "titleEn": "Kupie's Love Training — Complete System Guide",
+      "titleZh": "Kupie 的爱之训练——完整系统指南",
+      "translated": true,
+      "translationState": "ready",
+      "url": "guides/kupie_love_training.html"
+    },
+    {
+      "slug": "lime",
+      "filename": "lime.md",
+      "category": "characters",
+      "titleEn": "Lime — Complete Walkthrough",
+      "titleZh": "Lime——完整攻略",
+      "translated": true,
+      "translationState": "ready",
+      "url": "guides/lime.html"
+    },
+    {
+      "slug": "lindia",
+      "filename": "lindia.md",
+      "category": "characters",
+      "titleEn": "Lindia Walkthrough",
+      "titleZh": "Lindia攻略",
+      "translated": true,
+      "translationState": "ready",
+      "url": "guides/lindia.html"
+    },
+    {
+      "slug": "lucy",
+      "filename": "lucy.md",
+      "category": "characters",
+      "titleEn": "Lucy — Complete Walkthrough",
+      "titleZh": "Lucy——完整攻略",
+      "translated": true,
+      "translationState": "ready",
+      "url": "guides/lucy.html"
+    },
+    {
+      "slug": "lychee",
+      "filename": "lychee.md",
+      "category": "characters",
+      "titleEn": "Lychee — Complete Walkthrough",
+      "titleZh": "Lychee——完整攻略",
+      "translated": true,
+      "translationState": "ready",
+      "url": "guides/lychee.html"
+    },
+    {
+      "slug": "ruxandra",
+      "filename": "ruxandra.md",
+      "category": "characters",
+      "titleEn": "Magistra Ruxandra Walkthrough and Blood Alchemy Guide",
+      "titleZh": "导师Ruxandra攻略与血液炼金指南",
+      "translated": true,
+      "translationState": "ready",
+      "url": "guides/ruxandra.html"
+    },
+    {
+      "slug": "mandarin",
+      "filename": "mandarin.md",
+      "category": "characters",
+      "titleEn": "Mandarin — Complete Walkthrough",
+      "titleZh": "Mandarin——完整攻略",
+      "translated": true,
+      "translationState": "ready",
+      "url": "guides/mandarin.html"
+    },
+    {
+      "slug": "marina",
+      "filename": "marina.md",
+      "category": "characters",
+      "titleEn": "Marina — Complete Walkthrough",
+      "titleZh": "Marina——完整攻略",
+      "translated": true,
+      "translationState": "ready",
+      "url": "guides/marina.html"
+    },
+    {
+      "slug": "mindy",
+      "filename": "mindy.md",
+      "category": "characters",
+      "titleEn": "Mindy — Complete Walkthrough",
+      "titleZh": "Mindy——完整攻略",
+      "translated": true,
+      "translationState": "ready",
+      "url": "guides/mindy.html"
+    },
+    {
+      "slug": "momosagi",
+      "filename": "momosagi.md",
+      "category": "characters",
+      "titleEn": "Momosagi — Complete Walkthrough",
+      "titleZh": "Momosagi——完整攻略",
+      "translated": true,
+      "translationState": "ready",
+      "url": "guides/momosagi.html"
+    },
+    {
+      "slug": "muramasa",
+      "filename": "muramasa.md",
+      "category": "characters",
+      "titleEn": "Muramasa Walkthrough and Blademaster Guide",
+      "titleZh": "Muramasa攻略与剑术大师指南",
+      "translated": true,
+      "translationState": "ready",
+      "url": "guides/muramasa.html"
+    },
+    {
+      "slug": "rachel",
+      "filename": "rachel.md",
+      "category": "characters",
+      "titleEn": "Rachel — Complete Walkthrough",
+      "titleZh": "Rachel——完整攻略",
+      "translated": true,
+      "translationState": "ready",
+      "url": "guides/rachel.html"
+    },
+    {
+      "slug": "rain",
+      "filename": "rain.md",
+      "category": "characters",
+      "titleEn": "Rain — Complete Walkthrough",
+      "titleZh": "Rain——完整攻略",
+      "translated": true,
+      "translationState": "ready",
+      "url": "guides/rain.html"
+    },
+    {
+      "slug": "raven",
+      "filename": "raven.md",
+      "category": "characters",
+      "titleEn": "Raven — Complete Walkthrough",
+      "titleZh": "Raven——完整攻略",
+      "translated": true,
+      "translationState": "ready",
+      "url": "guides/raven.html"
+    },
+    {
+      "slug": "robin",
+      "filename": "robin.md",
+      "category": "characters",
+      "titleEn": "Robin — Complete Walkthrough",
+      "titleZh": "Robin——完整攻略",
+      "translated": true,
+      "translationState": "ready",
+      "url": "guides/robin.html"
+    },
+    {
+      "slug": "sabrina",
+      "filename": "sabrina.md",
+      "category": "characters",
+      "titleEn": "Sabrina — Complete Walkthrough",
+      "titleZh": "Sabrina——完整攻略",
+      "translated": true,
+      "translationState": "ready",
+      "url": "guides/sabrina.html"
+    },
+    {
+      "slug": "sashina",
+      "filename": "sashina.md",
+      "category": "characters",
+      "titleEn": "Sashina — Complete Walkthrough",
+      "titleZh": "Sashina——完整攻略",
+      "translated": true,
+      "translationState": "ready",
+      "url": "guides/sashina.html"
+    },
+    {
+      "slug": "shadow",
+      "filename": "shadow.md",
+      "category": "characters",
+      "titleEn": "Shadow — Complete Walkthrough",
+      "titleZh": "Shadow——完整攻略",
+      "translated": true,
+      "translationState": "ready",
+      "url": "guides/shadow.html"
+    },
+    {
+      "slug": "sophie",
+      "filename": "sophie.md",
+      "category": "characters",
+      "titleEn": "Sophie — Complete Walkthrough",
+      "titleZh": "Sophie——完整攻略",
+      "translated": true,
+      "translationState": "ready",
+      "url": "guides/sophie.html"
+    },
+    {
+      "slug": "soul_stones",
+      "filename": "soul_stones.md",
+      "category": "characters",
+      "titleEn": "Soul Stones - Complete Guide",
+      "titleZh": "灵魂石——完整指南",
+      "translated": true,
+      "translationState": "ready",
+      "url": "guides/soul_stones.html"
+    },
+    {
+      "slug": "sylwithes_hollow",
+      "filename": "sylwithes_hollow.md",
+      "category": "characters",
+      "titleEn": "Sylwithe's Hollow — Complete Guide",
+      "titleZh": "Sylwithe的幽谷——完整指南",
+      "translated": true,
+      "translationState": "ready",
+      "url": "guides/sylwithes_hollow.html"
+    },
+    {
+      "slug": "vera",
+      "filename": "vera.md",
+      "category": "characters",
+      "titleEn": "Vera — Complete Walkthrough",
+      "titleZh": "Vera — 完整攻略",
+      "translated": true,
+      "translationState": "ready",
+      "url": "guides/vera.html"
+    },
+    {
+      "slug": "violet",
+      "filename": "violet.md",
+      "category": "characters",
+      "titleEn": "Violet — Complete Walkthrough",
+      "titleZh": "Violet — 完整攻略",
+      "translated": true,
+      "translationState": "ready",
+      "url": "guides/violet.html"
+    }
+  ]
+}

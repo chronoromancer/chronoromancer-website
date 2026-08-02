@@ -1,0 +1,687 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="The Alignment system tracks the moral weight of the player&#x27;s choices across three independent counters: Good, Evil, and Neutral. Every choice in plots, search encounters, and certain dedicated actions can push one or more of these counte…"><link rel="icon" type="image/png" href="../assets/images/v2/favicon.png">
+  <link rel="stylesheet" href="../assets/css/style.css"><link rel="stylesheet" href="../assets/css/walkthroughs.css">
+  <title>Alignment System | Chronoromancer Guides</title></head>
+<body class="guide-page" data-title-en="Alignment System | Chronoromancer Guides" data-title-zh="阵营倾向系统 | Chronoromancer 官方攻略">
+  <div class="reading-progress" data-reading-progress></div>
+  <a class="skip-link" href="#content" data-copy-en="Skip to content" data-copy-zh="跳至正文">Skip to content</a>
+  <div class="maturity-bar" data-copy-en="18+ adults-only game · Guides may describe mature game systems" data-copy-zh="18+ 仅限成人游戏 · 攻略可能涉及成人游戏系统">18+ adults-only game · Guides may describe mature game systems</div>
+  <header class="site-header"><div class="container header-inner">
+    <a class="brand" href="../main.html" aria-label="Chronoromancer home"><img src="../assets/images/v2/logo.png" alt="Chronoromancer"></a>
+    <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-label="Open navigation"><span></span><span></span><span></span></button>
+    <nav class="site-nav" data-nav-menu aria-label="Primary navigation">
+      <a href="../main.html" data-i18n="navHome">Home</a>
+      <a href="../story.html" data-i18n="navStory">Story</a>
+      <a href="../characters.html" data-i18n="navCharacters">Characters</a>
+      <a class="is-active" href="../walkthroughs.html" data-i18n="navGuides">Guides</a>
+      <a href="../screenshots.html" data-i18n="navGallery">Gallery</a>
+      <a data-config-link="community.wiki" target="_blank" rel="noopener noreferrer" data-i18n="navWiki">Player Wiki</a>
+      <a href="../main.html#download" data-i18n="navDownload">Download</a>
+      <div class="language-switch" role="group" aria-label="Language"><button type="button" data-language="en" aria-pressed="true">EN</button><button type="button" data-language="zh" aria-pressed="false">简体中文</button></div>
+    </nav>
+  </div></header>
+  <main id="content">
+    <section class="guide-masthead"><div class="container">
+      <nav class="breadcrumb" aria-label="Breadcrumb"><a href="../walkthroughs.html" data-copy-en="Official Guides" data-copy-zh="官方攻略">Official Guides</a><span>/</span><span data-copy-en="Core Systems" data-copy-zh="核心系统">Core Systems</span></nav>
+      <p class="eyebrow" data-copy-en="Version-matched official guide" data-copy-zh="与当前版本匹配的官方攻略">Version-matched official guide</p>
+      <h1 data-copy-en="Alignment System" data-copy-zh="阵营倾向系统">Alignment System</h1>
+      <div class="guide-meta"><span data-copy-en="Core Systems" data-copy-zh="核心系统">Core Systems</span><span data-copy-en="Simplified Chinese available" data-copy-zh="简体中文译文已上线">Simplified Chinese available</span><span data-site-version>V0.9.6.0</span></div>
+    </div></section>
+    <div class="container guide-layout">
+      <aside class="guide-sidebar">
+        <a class="back-to-library" href="../walkthroughs.html" data-copy-en="← All guides" data-copy-zh="← 全部攻略">← All guides</a>
+        <div data-lang-panel="en"><h2>On this page</h2><nav class="guide-toc"><a class="toc-level-2" href="#quick-navigation">🧭 Quick Navigation</a><a class="toc-level-2" href="#how-it-works">How It Works</a><a class="toc-level-3" href="#your-effective-alignment">Your Effective Alignment</a><a class="toc-level-2" href="#tiers-and-naming">Tiers and Naming</a><a class="toc-level-2" href="#unaligned-and-the-toggle">Unaligned (and the Toggle)</a><a class="toc-level-2" href="#effect-on-npc-relationships">Effect on NPC Relationships</a><a class="toc-level-2" href="#endgame-items-master-alignment-items">Endgame Items (Master Alignment Items)</a><a class="toc-level-2" href="#the-balance-scales-friction-reducer">The Balance Scales (Friction Reducer)</a><a class="toc-level-2" href="#draculas-ring-matching-alignment-bonus">Draculas Ring (Matching Alignment Bonus)</a><a class="toc-level-2" href="#cthulhus-head-evil-npc-bonus">Cthulhu&#x27;s Head (Evil NPC Bonus)</a><a class="toc-level-2" href="#ocean-fragrance-neutral-npc-bonus">Ocean Fragrance (Neutral NPC Bonus)</a><a class="toc-level-2" href="#ways-to-gain-alignment">Ways to Gain Alignment</a><a class="toc-level-3" href="#1-daily-alignment-actions">1. Daily Alignment Actions</a><a class="toc-level-3" href="#2-plot-choices">2. Plot Choices</a><a class="toc-level-3" href="#3-search-encounters">3. Search Encounters</a><a class="toc-level-3" href="#4-dungeon-scenarios">4. Dungeon Scenarios</a><a class="toc-level-2" href="#resetting-your-alignment">Resetting Your Alignment</a><a class="toc-level-2" href="#strategy-notes">Strategy Notes</a><a class="toc-level-2" href="#related-pages">Related Pages</a></nav></div>
+        <div data-lang-panel="zh" hidden><h2>本页目录</h2><nav class="guide-toc"><a class="toc-level-2" href="#zh-quick-navigation">🧭 快速导航</a><a class="toc-level-2" href="#zh-how-it-works">运作方式</a><a class="toc-level-3" href="#zh-your-effective-alignment">你的实际阵营</a><a class="toc-level-2" href="#zh-tiers-and-naming">阶级与名称</a><a class="toc-level-2" href="#zh-unaligned-and-the-toggle">无阵营（以及切换选项）</a><a class="toc-level-2" href="#zh-effect-on-npc-relationships">对NPC关系的影响</a><a class="toc-level-2" href="#zh-endgame-items-master-alignment-items">终局物品（阵营大师物品）</a><a class="toc-level-2" href="#zh-the-balance-scales-friction-reducer">平衡天秤（减少摩擦）</a><a class="toc-level-2" href="#zh-draculas-ring-matching-alignment-bonus">德古拉之戒（阵营相同加成）</a><a class="toc-level-2" href="#zh-cthulhus-head-evil-npc-bonus">克苏鲁之首（邪恶NPC加成）</a><a class="toc-level-2" href="#zh-ocean-fragrance-neutral-npc-bonus">海洋香氛（中立NPC加成）</a><a class="toc-level-2" href="#zh-ways-to-gain-alignment">获取阵营倾向点数的方式</a><a class="toc-level-3" href="#zh-1-daily-alignment-actions">1. 每日阵营行动</a><a class="toc-level-3" href="#zh-2-plot-choices">2. 剧情选项</a><a class="toc-level-3" href="#zh-3-search-encounters">3. 搜索遭遇</a><a class="toc-level-3" href="#zh-4-dungeon-scenarios">4. 地下城事件</a><a class="toc-level-2" href="#zh-resetting-your-alignment">重置阵营倾向</a><a class="toc-level-2" href="#zh-strategy-notes">策略建议</a><a class="toc-level-2" href="#zh-related-pages">相关页面</a></nav></div>
+      </aside>
+      <article class="guide-content">
+        <div class="spoiler-notice"><strong data-copy-en="Guide notice" data-copy-zh="攻略提示">Guide notice</strong><span data-copy-en="This page contains gameplay and story spoilers and may describe mature systems." data-copy-zh="本页包含玩法与剧情剧透，并可能涉及成人游戏系统。">This page contains gameplay and story spoilers and may describe mature systems.</span></div>
+        <div class="markdown-body" data-lang-panel="en">
+<p>The Alignment system tracks the moral weight of the player's choices across three independent counters: <strong>Good</strong>, <strong>Evil</strong>, and <strong>Neutral</strong>. Every choice in plots, search encounters, and certain dedicated actions can push one or more of these counters up.</p>
+<p>Your effective alignment isn't decided by which counter is highest — it's decided by <strong>how far it leads</strong> the runner-up. Until one counter is at least 10 points ahead of the next, you remain <strong>Unaligned</strong>.</p>
+<p>Alignment unlocks special endgame items and modifies how NPCs respond to you. It is a long-game system — designed to feel earned by the time you reach late-game content.</p>
+<h2 id="quick-navigation">🧭 Quick Navigation</h2>
+<ul>
+<li>⚙️ How It Works</li>
+<li>🎚️ Tiers and Naming</li>
+<li>🚫 Unaligned (and the Toggle)</li>
+<li>💕 Effect on NPC Relationships</li>
+<li>🎁 Endgame Items (Master Alignment Items)</li>
+<li>🪙 The Balance Scales (Friction Reducer)</li>
+<li>🐙 Cthulhu's Head (Evil NPC Bonus)</li>
+<li>📜 Ways to Gain Alignment</li>
+<li>🔄 Resetting Your Alignment</li>
+<li>💡 Strategy Notes</li>
+<li>🔗 Related Pages</li>
+</ul>
+<h2 id="how-it-works">How It Works</h2>
+<p>Three counters live silently on your character from the moment you start the game:</p>
+<ul>
+<li><strong>Good</strong> — Charity, mercy, protection of the vulnerable, virtuous choices.</li>
+<li><strong>Evil</strong> — Theft, cruelty, intimidation, selfish choices.</li>
+<li><strong>Neutral</strong> — Detachment, balance, pragmatism, refusing to take sides.</li>
+</ul>
+<p>Each counter starts at 0. Counters can go both up and down, but they never drop below 0. Choices in plots, dedicated actions, and search encounters can each add (or subtract) points on one or more counters.</p>
+<h3 id="your-effective-alignment">Your Effective Alignment</h3>
+<p>At any given moment, the game calculates your alignment with a simple rule:</p>
+<ol>
+<li>Find your highest counter.</li>
+<li>Subtract your second-highest counter from it. This is your <strong>lead</strong>.</li>
+<li>If your lead is less than 10 → you are <strong>Unaligned</strong>.</li>
+<li>If your lead is 10 or more → you are actively aligned to the top axis, at a tier based on the size of the lead.</li>
+</ol>
+<p>So a player with Good 30 / Evil 20 / Neutral 5 has a lead of 10 → just barely Good. A player with Good 12 / Evil 11 / Neutral 6 has a lead of 1 → still Unaligned despite the choices made.</p>
+<p><strong>This is the most important thing to understand about alignment:</strong> you don't accumulate "an alignment" by adding points to one side. You accumulate it by <em>pulling ahead</em> of the other sides. Mixing your choices keeps you Unaligned indefinitely.</p>
+<h2 id="tiers-and-naming">Tiers and Naming</h2>
+<p>Once your lead crosses 10, you enter the alignment ladder. There are ten tiers per axis. Each tier covers a 10-point lead range.</p>
+<div class="guide-table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th>Lead</th>
+<th>Tier</th>
+<th>Evil Name</th>
+<th>Neutral Name</th>
+<th>Good Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>10–19</td>
+<td>1</td>
+<td>Mischievous</td>
+<td>Detached</td>
+<td>Kind</td>
+</tr>
+<tr>
+<td>20–29</td>
+<td>2</td>
+<td>Selfish</td>
+<td>Impartial</td>
+<td>Honorable</td>
+</tr>
+<tr>
+<td>30–39</td>
+<td>3</td>
+<td>Cruel</td>
+<td>Pragmatic</td>
+<td>Virtuous</td>
+</tr>
+<tr>
+<td>40–49</td>
+<td>4</td>
+<td>Ruthless</td>
+<td>Balanced</td>
+<td>Noble</td>
+</tr>
+<tr>
+<td>50–59</td>
+<td>5</td>
+<td>Sinister</td>
+<td>Centered</td>
+<td>Righteous</td>
+</tr>
+<tr>
+<td>60–69</td>
+<td>6</td>
+<td>Wicked</td>
+<td>Steady</td>
+<td>Heroic</td>
+</tr>
+<tr>
+<td>70–79</td>
+<td>7</td>
+<td>Malevolent</td>
+<td>Unswayed</td>
+<td>Saintly</td>
+</tr>
+<tr>
+<td>80–89</td>
+<td>8</td>
+<td>Diabolical</td>
+<td>Equilibrium</td>
+<td>Exalted</td>
+</tr>
+<tr>
+<td>90–99</td>
+<td>9</td>
+<td>Nefarious</td>
+<td>Harmonized</td>
+<td>Divine</td>
+</tr>
+<tr>
+<td>100+</td>
+<td>10</td>
+<td>Abyssal</td>
+<td>Eternal</td>
+<td>Celestial</td>
+</tr>
+</tbody>
+</table></div>
+<p>Within each tier, the position is shown in parentheses — for example, <em>Cruel (4)</em> means a lead of 34. Position 0 (e.g. lead exactly 30) shows just the tier name. Position increments each time your lead grows by 1, and the tier name advances each time your lead crosses a multiple of 10.</p>
+<p>The maximum visible tier is the 10th. Beyond a 109-point lead, the display caps but the underlying counter keeps growing — useful for buffer against future Neutralizer use.</p>
+<h2 id="unaligned-and-the-toggle">Unaligned (and the Toggle)</h2>
+<p>There are two ways to be <strong>Unaligned</strong>:</p>
+<ol>
+<li><strong>Natural Unaligned</strong> — Your lead is below 10. Mixed choices keep you here.</li>
+<li><strong>Manual Toggle</strong> — In the Notebook (Page 8 — "Debug Variables"), there is an <strong>Unaligned Toggle</strong> button. Switching it on locks your status to Unaligned regardless of your counters.</li>
+</ol>
+<p>The Manual Toggle is there for players who want to enjoy the story without worrying about alignment outcomes. While the toggle is on:</p>
+<ul>
+<li>Your counters still tick up silently.</li>
+<li>NPC relationship modifiers based on alignment are disabled.</li>
+<li>You cannot trigger the alignment-locked endgame items.</li>
+<li>Switching the toggle back off resumes normal calculation.</li>
+</ul>
+<p>The toggle is the only way to fully opt out of the system. Resetting alignment to 0/0/0 makes you Unaligned by default, but choices going forward will start pulling you toward an alignment again.</p>
+<h2 id="effect-on-npc-relationships">Effect on NPC Relationships</h2>
+<p>Every NPC in the game has been deliberately assigned an alignment — Good, Evil, or Neutral. The split is roughly even across the cast, not weighted toward Neutral. When you take a relationship action with an NPC (Talk, Praise, Gift, etc.), the points you earn are adjusted based on how your alignments compare:</p>
+<div class="guide-table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th>Your Axis vs. NPC Axis</th>
+<th>Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Same axis</strong> (e.g. both Good)</td>
+<td>+1 to minimum, +2 to maximum point gain</td>
+</tr>
+<tr>
+<td><strong>Opposite axis</strong> (Good vs. Evil)</td>
+<td>−2 to minimum, −1 to maximum point gain</td>
+</tr>
+<tr>
+<td><strong>Mismatch with neutral</strong> (one of you is Neutral, the other Good or Evil)</td>
+<td>−1 to maximum point gain</td>
+</tr>
+</tbody>
+</table></div>
+<p>These modifiers apply whenever the player has an axis — i.e. you are not Unaligned. A Neutral player still gets the bonus when interacting with a Neutral NPC, and gets the mismatch penalty when interacting with a Good or Evil NPC.</p>
+<p>The modifier is disabled entirely while the <strong>Unaligned Toggle</strong> is on, or while the player is naturally Unaligned (lead under 10).</p>
+<p>Aligning yourself can therefore deeply affect which workers, lovers, and allies are easy or hard to grow close to. Picking the wrong alignment for a romance target makes every interaction slower; picking the right one makes every interaction faster.</p>
+<h2 id="endgame-items-master-alignment-items">Endgame Items (Master Alignment Items)</h2>
+<p>The system's biggest payoff is access to three exclusive endgame weapons/armors — one per axis. Each requires reaching the <strong>top tier (lead 90+)</strong> of its axis AND being <strong>In Love</strong> with the relevant NPC.</p>
+<div class="guide-table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th>Axis</th>
+<th>Item</th>
+<th>NPC</th>
+<th>Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Good</strong></td>
+<td>Helmet of Immortality</td>
+<td>Seraph (Future)</td>
+<td>Prevents one lethal heavy blow (250+ damage), recharging after 10 rounds</td>
+</tr>
+<tr>
+<td><strong>Evil</strong></td>
+<td>Hell Fire</td>
+<td>Lillian (Medieval)</td>
+<td>+10% physical damage, +50% fire magic</td>
+</tr>
+<tr>
+<td><strong>Neutral</strong></td>
+<td>Shield of Balance</td>
+<td>Azariel (Brothel Secret Room)</td>
+<td>−15% damage taken from all enemy attacks and spells</td>
+</tr>
+</tbody>
+</table></div>
+<p>Reaching tier 9 in an axis requires a 90-point lead — a long road that involves committing to one axis early and consistently making aligned choices throughout the game. Once you acquire an item it stays in your inventory permanently and its effect remains active forever, regardless of any later changes to your alignment. This means a determined player can, over a very long playthrough, grind alignment back and forth between axes and collect all three items — each one once obtained never goes away.</p>
+<p>A separate plot for each of Seraph and Lillian — <strong>The Eternal War</strong> — also auto-triggers once you are <em>Friend</em> level with that character. This plot lets you commit to a side; choices reward +1 alignment like any other plot choice, but the real value is the symbolic decision and the relationship points with the NPC. (There is no Azariel version of The Eternal War.)</p>
+<h2 id="the-balance-scales-friction-reducer">The Balance Scales (Friction Reducer)</h2>
+<p>The <strong>Balance Scales</strong> is a key item earned through Kupie's Love Training. It softens the alignment relationship modifier in your favor:</p>
+<ul>
+<li><strong>Same axis</strong> — +1 additional to minimum (compatibility bonus is even bigger).</li>
+<li><strong>Mismatch with neutral</strong> — +1 to maximum (mismatch penalty cancelled).</li>
+<li><strong>Opposite axis</strong> — +1 to maximum (opposition penalty partially cancelled).</li>
+</ul>
+<p>The Balance Scales raises the minimum floor in the same-axis case (a real boost to the average gain), and cancels the maximum-roll penalty in both the mismatch and opposite-axis cases. It's the recommended pickup if you've committed to an alignment but still want to romance NPCs on other axes.</p>
+<h2 id="draculas-ring-matching-alignment-bonus">Draculas Ring (Matching Alignment Bonus)</h2>
+<p><strong>Draculas Ring</strong> is a key item that rewards matching the NPC's alignment. When your active alignment axis matches the NPC's alignment, it adds <strong>+1</strong> to the maximum possible relationship points for that action.</p>
+<p>This only applies when the player has an active Good, Neutral, or Evil axis. It does not apply while the Unaligned Toggle is on or while the player is treated as Unaligned by the alignment system.</p>
+<h2 id="cthulhus-head-evil-npc-bonus">Cthulhu's Head (Evil NPC Bonus)</h2>
+<p><strong>Cthulhu's Head</strong> is a separate key item that affects how relationships scale with Evil-aligned NPCs. Whenever you take a relationship action with an NPC whose alignment is Evil, owning Cthulhu's Head adds <strong>+1</strong> to the base relationship points before any other modifier runs.</p>
+<p>The bonus respects the Unaligned Toggle — switching the toggle on disables it. The NPC's alignment is what matters here, not yours; you can be Good, Neutral, Evil, or Unaligned (by lead) and the bonus still applies as long as the toggle is off.</p>
+<h2 id="ocean-fragrance-neutral-npc-bonus">Ocean Fragrance (Neutral NPC Bonus)</h2>
+<p><strong>Ocean Fragrance</strong> is a key item sold at Shelly's Gift Shop on Sirena Isle (60 sea shells). Whenever you take a relationship action with an NPC whose alignment is Neutral, it adds <strong>+1</strong> to the maximum possible relationship points for that action.</p>
+<p>Like Cthulhu's Head, it keys off the NPC's alignment, not yours — it works even while you're Unaligned, and no toggle affects it.</p>
+<h2 id="ways-to-gain-alignment">Ways to Gain Alignment</h2>
+<p>Alignment is sourced from <strong>four</strong> different systems. The most reliable points come from dedicated daily actions; the rest come from story choices and random encounters.</p>
+<h3 id="1-daily-alignment-actions">1. Daily Alignment Actions</h3>
+<p>Each of these actions is once per day. They live at specific locations across the eras and are the primary way to build up alignment intentionally.</p>
+<div class="guide-table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th>Action</th>
+<th>Location</th>
+<th>Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Pray</strong></td>
+<td>Monk's Temple Training Hall (Medieval — Village Outskirts)</td>
+<td>25% chance: +1 Good</td>
+</tr>
+<tr>
+<td><strong>Meditate</strong></td>
+<td>Mystic's Meditation Grove (Medieval — Village Outskirts)</td>
+<td>25% chance: +1 Neutral</td>
+</tr>
+<tr>
+<td><strong>Volunteer</strong></td>
+<td>City Hospital (Uptown) — Present</td>
+<td>Always: +1 Good</td>
+</tr>
+<tr>
+<td><strong>Neutralizer</strong></td>
+<td>Cognitive Optimization Academy (Future Prime Sector)</td>
+<td>Always: −1 Good, −1 Evil, +1 Neutral</td>
+</tr>
+<tr>
+<td><strong>Steal Supplies</strong></td>
+<td>Village Market (Medieval — Village Outskirts)</td>
+<td>25% chance: +1 Evil (also random ingredients)</td>
+</tr>
+<tr>
+<td><strong>Steal Valuables</strong></td>
+<td>Exotic Goods Merchant (Medieval — Kings Demesne)</td>
+<td>25% chance: +1 Evil (also Valuables)</td>
+</tr>
+<tr>
+<td><strong>Steal Coins</strong></td>
+<td>General Goods Store (Medieval — Kings Demesne)</td>
+<td>25% chance: +1 Evil (also gold)</td>
+</tr>
+<tr>
+<td><strong>Pickpocket Crowd</strong></td>
+<td>Bards Guild (Medieval — Kings Demesne)</td>
+<td>25% chance: +1 Evil (also gold)</td>
+</tr>
+<tr>
+<td><strong>Pickpocket Warriors</strong></td>
+<td>Fighters Guild (Medieval — Kings Demesne)</td>
+<td>25% chance: +1 Evil (also gold)</td>
+</tr>
+</tbody>
+</table></div>
+<p>The five <strong>theft actions</strong> require:</p>
+<ul>
+<li><strong>10 Thieves Guild clout</strong> (so you must be a guild initiate)</li>
+<li><strong>Sleight of Hand</strong> skill (taught by Sabrina in the Present)</li>
+</ul>
+<p>Each theft action also has a <strong>25% independent chance</strong> to award +1 Thieves Guild clout on success — a small bonus reason to rotate through them.</p>
+<p>A few additional actions outside the daily set also push alignment:</p>
+<ul>
+<li><strong>Steal Chocolate Bar</strong> — Corner Convenience Store (Present Uptown). A one-time-ever action that guarantees +1 Evil along with +1 Rogue and a chocolate consumable.</li>
+<li><strong>Sensei (work)</strong> — Dojo (Present), via the Martial Artist proficiency. 15% chance of +1 Neutral on each shift.</li>
+</ul>
+<h3 id="2-plot-choices">2. Plot Choices</h3>
+<p>Many plots present choices that explicitly award alignment. Common patterns include:</p>
+<ul>
+<li><strong>"Wait for cops" / "Defend the weak" / "Side with angels"</strong> → Good</li>
+<li><strong>"Stay neutral" / "Defuse situation" / "Walk away"</strong> → Neutral</li>
+<li><strong>"Intimidate" / "Side with rachel" / "Side with demons"</strong> → Evil</li>
+</ul>
+<p>Each such choice grants +1 of the matching axis. Within a single plot only the last choice you commit to counts — re-rolling the plot with the R-restart system revokes the prior award and applies the new one. Story Beat 10 and onward increasingly weave in alignment options.</p>
+<h3 id="3-search-encounters">3. Search Encounters</h3>
+<p>Random encounters during the Search action — drunks in alleys, lost nobles, traveling bards, pickpocket targets — frequently offer choices that carry a chance (often 25%, but it varies per encounter) to award +1 of the appropriate axis. They add up over a long playthrough but aren't reliable on their own.</p>
+<h3 id="4-dungeon-scenarios">4. Dungeon Scenarios</h3>
+<p>Many dungeon scenarios — especially on floors 1-35 — present a three-option choice where each option commits to a different axis and awards +1 alignment along with its other rewards. The deep Void floors (36-40) include rarer encounters that can shift alignment more dramatically, including one that grants +5 to one axis and -5 to the other two at once.</p>
+<h2 id="resetting-your-alignment">Resetting Your Alignment</h2>
+<p>A crystal-purchased action — <strong>Reset Alignment</strong> (3 crystals) — is available at Azariel's <strong>Secret Room</strong> in the Brothel. Using it sets all three counters back to 0. This is permanent for the current alignment state but doesn't lock you in: choices going forward will start pulling you toward an alignment again.</p>
+<p>The reset is the only way to undo accumulated alignment without using the <strong>Neutralizer</strong> repeatedly (which only chips away at Good and Evil while pushing Neutral up).</p>
+<h2 id="strategy-notes">Strategy Notes</h2>
+<ul>
+<li><strong>Pick a direction early.</strong> The relationship modifier compounds across the entire game. Picking Good in the early prologue and sticking with it will produce a Divine player by mid-to-late game with no effort beyond just playing.</li>
+<li><strong>Daily actions are the backbone.</strong> Volunteer at the hospital every single day. It's the fastest reliable way to push Good. Use the steal actions daily for Evil. Pray/Meditate are extra 25% boosts that compound over months.</li>
+<li><strong>Reach tier 9 (or higher) before going for the endgame item.</strong> A lead of 90+ is required. Pushing into tier 10 (lead 100+) also qualifies. Stay focused — every choice that pushes a counter you don't want is a step backward.</li>
+<li><strong>Watch your NPC roster.</strong> Some of your favorite romance targets may have an alignment that clashes with your chosen direction. The Balance Scales (from Kupie) heavily reduces friction.</li>
+<li><strong>Use the Notebook to monitor live values.</strong> Page 8 ("Debug Variables") shows your raw counter values and the Unaligned Toggle. Check it whenever you want to confirm progress.</li>
+<li><strong>All three master items can stack.</strong> Once you obtain an item it stays in your inventory permanently and its effect never expires. A determined long-term player can switch alignments via Neutralizer/Reset and grinding, eventually collecting all three.</li>
+</ul>
+<h2 id="related-pages">Related Pages</h2>
+<ul>
+<li>Game Systems Hub</li>
+<li>Skills</li>
+<li>Items</li>
+<li>Characters</li>
+</ul>
+</div>
+        <div class="markdown-body" data-lang-panel="zh" hidden>
+<p>阵营倾向系统通过三个相互独立的计数器，记录玩家每次选择所代表的道德分量：<strong>善良</strong>、<strong>邪恶</strong> 与 <strong>中立</strong>。剧情选项、搜索遭遇以及某些专门行动，都可能提高其中一个或多个计数。</p>
+<p>你的实际阵营并不取决于哪个计数最高，而取决于它 <strong>领先第二名多少点</strong>。在某个计数领先次高计数至少10点之前，你都会保持 <strong>无阵营</strong> 状态。</p>
+<p>阵营倾向可以解锁特殊的终局物品，也会改变NPC对你的反应。这是一套着眼于长期游玩的系统——等你进入后期内容时，取得的成果理应显得来之不易。</p>
+<h2 id="zh-quick-navigation">🧭 快速导航</h2>
+<ul>
+<li>⚙️ 运作方式</li>
+<li>🎚️ 阶级与名称</li>
+<li>🚫 无阵营（以及切换选项）</li>
+<li>💕 对NPC关系的影响</li>
+<li>🎁 终局物品（阵营大师物品）</li>
+<li>🪙 平衡天秤（减少摩擦）</li>
+<li>🐙 克苏鲁之首（邪恶NPC加成）</li>
+<li>📜 获取阵营倾向点数的方式</li>
+<li>🔄 重置阵营倾向</li>
+<li>💡 策略建议</li>
+<li>🔗 相关页面</li>
+</ul>
+<h2 id="zh-how-it-works">运作方式</h2>
+<p>从游戏开始的那一刻起，你的角色便会在后台记录三个计数：</p>
+<ul>
+<li><strong>善良</strong>——慈善、宽恕、保护弱者以及正直的选择。</li>
+<li><strong>邪恶</strong>——偷窃、残忍、恐吓以及自私的选择。</li>
+<li><strong>中立</strong>——超然、平衡、务实以及拒绝选边站。</li>
+</ul>
+<p>三个计数均从0开始。它们既可能增加，也可能减少，但绝不会低于0。剧情选项、专门行动和搜索遭遇都可能为一个或多个计数增加（或扣除）点数。</p>
+<h3 id="zh-your-effective-alignment">你的实际阵营</h3>
+<p>游戏会随时根据以下简单规则计算你的阵营：</p>
+<ol>
+<li>找出最高的计数。</li>
+<li>用最高计数减去第二高的计数，结果就是你的 <strong>领先值</strong>。</li>
+<li>领先值低于10 → 你处于 <strong>无阵营</strong> 状态。</li>
+<li>领先值达到或超过10 → 你会归入最高计数对应的阵营轴，并根据领先值大小进入相应阶级。</li>
+</ol>
+<p>因此，善良30／邪恶20／中立5的玩家领先10点 → 刚刚达到善良阵营。善良12／邪恶11／中立6的玩家只领先1点 → 尽管已经做出过相关选择，仍然处于无阵营状态。</p>
+<p><strong>这是理解阵营倾向时最重要的一点：</strong> 你并不是单靠提高某一侧的点数来积累“阵营倾向”，而是要让它 <em>领先</em> 其他两侧。混合不同倾向的选择，会让你无限期地维持无阵营状态。</p>
+<h2 id="zh-tiers-and-naming">阶级与名称</h2>
+<p>领先值达到10后，你便会进入阵营阶梯。每条阵营轴均有十个阶级，每阶覆盖10点领先值区间。</p>
+<div class="guide-table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th>领先值</th>
+<th>阶级</th>
+<th>邪恶名称</th>
+<th>中立名称</th>
+<th>善良名称</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>10–19</td>
+<td>1</td>
+<td>调皮</td>
+<td>疏离</td>
+<td>仁慈</td>
+</tr>
+<tr>
+<td>20–29</td>
+<td>2</td>
+<td>自私</td>
+<td>公正</td>
+<td>正直</td>
+</tr>
+<tr>
+<td>30–39</td>
+<td>3</td>
+<td>残酷</td>
+<td>务实</td>
+<td>高尚</td>
+</tr>
+<tr>
+<td>40–49</td>
+<td>4</td>
+<td>冷酷</td>
+<td>平衡</td>
+<td>高贵</td>
+</tr>
+<tr>
+<td>50–59</td>
+<td>5</td>
+<td>阴险</td>
+<td>居中</td>
+<td>正义</td>
+</tr>
+<tr>
+<td>60–69</td>
+<td>6</td>
+<td>邪恶</td>
+<td>稳健</td>
+<td>英勇</td>
+</tr>
+<tr>
+<td>70–79</td>
+<td>7</td>
+<td>恶毒</td>
+<td>不为所动</td>
+<td>圣洁</td>
+</tr>
+<tr>
+<td>80–89</td>
+<td>8</td>
+<td>魔鬼</td>
+<td>均衡</td>
+<td>崇高</td>
+</tr>
+<tr>
+<td>90–99</td>
+<td>9</td>
+<td>恶名昭彰</td>
+<td>和谐</td>
+<td>神圣</td>
+</tr>
+<tr>
+<td>100+</td>
+<td>10</td>
+<td>深渊</td>
+<td>永恒</td>
+<td>天界</td>
+</tr>
+</tbody>
+</table></div>
+<p>每个阶级内的具体位置会显示在括号中——例如，<em>残酷（4）</em> 代表领先34点。位置为0时（例如恰好领先30点），只显示阶级名称。领先值每增加1点，位置便相应递增；每当领先值跨过10的倍数，阶级名称就会提升。</p>
+<p>最高可见阶级为第10阶。领先超过109点后，显示值会封顶，但后台计数仍会继续增长——这可以为以后使用中和器预留缓冲。</p>
+<h2 id="zh-unaligned-and-the-toggle">无阵营（以及切换选项）</h2>
+<p>进入 <strong>无阵营</strong> 状态有两种方式：</p>
+<ol>
+<li><strong>自然无阵营</strong>——领先值低于10。混合不同倾向的选择会让你维持在这里。</li>
+<li><strong>手动切换</strong>——笔记本第8页“调试变量”中有一个 <strong>无阵营切换</strong> 按钮。将其开启后，无论三个计数是多少，你的状态都会被锁定为无阵营。</li>
+</ol>
+<p>手动切换功能是为只想享受故事、不愿担心阵营结果的玩家准备的。开启后：</p>
+<ul>
+<li>三个计数仍会在后台正常增加。</li>
+<li>基于阵营倾向的NPC关系修正会被禁用。</li>
+<li>你无法触发受阵营限制的终局物品。</li>
+<li>再次关闭切换选项后，系统会恢复正常计算。</li>
+</ul>
+<p>这一切换选项是彻底退出该系统的唯一方式。将阵营计数重置为0／0／0也会让你默认进入无阵营状态，但之后的选择仍会再次将你推向某个阵营。</p>
+<h2 id="zh-effect-on-npc-relationships">对NPC关系的影响</h2>
+<p>游戏中的每名NPC都被有意设定为善良、邪恶或中立阵营。三种阵营在所有角色中的分布大致均衡，并非多数角色都偏向中立。对NPC执行关系行动（交谈、赞美、送礼等）时，你获得的点数会根据双方阵营的对比而调整：</p>
+<div class="guide-table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th>你的阵营轴与NPC阵营轴</th>
+<th>效果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>阵营轴相同</strong>（例如双方均为善良）</td>
+<td>点数收益的最小值+1、最大值+2</td>
+</tr>
+<tr>
+<td><strong>阵营轴相反</strong>（善良对邪恶）</td>
+<td>点数收益的最小值−2、最大值−1</td>
+</tr>
+<tr>
+<td><strong>与中立不匹配</strong>（一方为中立，另一方为善良或邪恶）</td>
+<td>点数收益的最大值−1</td>
+</tr>
+</tbody>
+</table></div>
+<p>只要玩家拥有有效阵营轴，也就是并非无阵营，这些修正便会生效。中立玩家与中立NPC互动时同样会获得同轴加成；与善良或邪恶NPC互动时，则会受到不匹配惩罚。</p>
+<p>开启 <strong>无阵营切换</strong>，或玩家自然处于无阵营状态（领先值低于10）时，这项修正会完全禁用。</p>
+<p>因此，选择阵营会显著影响你与哪些员工、恋人和盟友更容易或更难拉近关系。选了与恋爱目标不合的阵营，每次互动的进展都会变慢；选对阵营，则每次互动都会更快。</p>
+<h2 id="zh-endgame-items-master-alignment-items">终局物品（阵营大师物品）</h2>
+<p>这套系统最大的回报，是可以获得三件专属终局武器／护甲——每条阵营轴各一件。每件物品都要求你达到对应阵营轴的 <strong>最高阶级（领先90点以上）</strong>，并且与相关NPC达到 <strong>恋爱中</strong> 关系。</p>
+<div class="guide-table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th>阵营轴</th>
+<th>物品</th>
+<th>NPC</th>
+<th>效果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>善良</strong></td>
+<td>不朽头盔</td>
+<td>Seraph（未来）</td>
+<td>抵挡一次致命重击（250点以上伤害），10回合后恢复</td>
+</tr>
+<tr>
+<td><strong>邪恶</strong></td>
+<td>地狱之火</td>
+<td>Lillian（中世纪）</td>
+<td>物理伤害+10%、火焰魔法+50%</td>
+</tr>
+<tr>
+<td><strong>中立</strong></td>
+<td>平衡之盾</td>
+<td>Azariel（青楼密室）</td>
+<td>来自所有敌方攻击与法术的伤害−15%</td>
+</tr>
+</tbody>
+</table></div>
+<p>在某条阵营轴上达到第9阶需要领先90点——这是一段漫长历程，要求你尽早选定阵营，并在整个游戏中持续作出与之相符的选择。物品一经获得，就会永久留在物品栏中；无论你之后如何改变阵营，其效果都会永远生效。这意味着，只要有足够决心，玩家便可以在一次极其漫长的游玩中反复刷取、来回切换阵营，最终收集全部三件物品——任何一件到手后都不会消失。</p>
+<p>Seraph和Lillian各自还有一段独立剧情——<strong>永恒之战</strong>。与相应角色达到 <em>朋友</em> 关系后，剧情便会自动触发。你可以在剧情中选择支持的一方；与其他剧情选项一样，这些选择会奖励+1阵营倾向点数，但真正的价值在于这项象征性的决定，以及与该NPC获得的好感度。（Azariel没有对应版本的“永恒之战”。）</p>
+<h2 id="zh-the-balance-scales-friction-reducer">平衡天秤（减少摩擦）</h2>
+<p><strong>平衡天秤</strong> 是通过Kupie的爱之训练获得的关键物品。它会以对你有利的方式减轻阵营倾向对关系的修正：</p>
+<ul>
+<li><strong>阵营轴相同</strong>——最小值额外+1（相容加成进一步提高）。</li>
+<li><strong>与中立不匹配</strong>——最大值+1（抵消不匹配惩罚）。</li>
+<li><strong>阵营轴相反</strong>——最大值+1（部分抵消对立惩罚）。</li>
+</ul>
+<p>阵营轴相同时，平衡天秤会抬高收益的最低值（切实提高平均收益）；阵营与中立不匹配或彼此相反时，则会抵消最大值的掷骰惩罚。如果你已经决定专注某个阵营，但仍想与其他阵营轴上的NPC发展恋情，非常建议入手这件物品。</p>
+<h2 id="zh-draculas-ring-matching-alignment-bonus">德古拉之戒（阵营相同加成）</h2>
+<p><strong>德古拉之戒</strong> 是一件奖励你与NPC阵营相同的关键物品。你的当前阵营轴与NPC的阵营一致时，该次行动可能获得的好感度最大值会 <strong>+1</strong>。</p>
+<p>这项效果仅在玩家拥有有效的善良、中立或邪恶阵营轴时生效。开启无阵营切换，或阵营系统将玩家判定为无阵营时，不会生效。</p>
+<h2 id="zh-cthulhus-head-evil-npc-bonus">克苏鲁之首（邪恶NPC加成）</h2>
+<p><strong>克苏鲁之首</strong> 是另一件关键物品，会影响你与邪恶阵营NPC发展关系时的收益。每当你对邪恶阵营NPC执行关系行动时，拥有克苏鲁之首会先为基础好感度 <strong>+1</strong>，之后才计算其他修正。</p>
+<p>这项加成受无阵营切换影响——开启切换选项会将其禁用。此处取决于NPC的阵营，而非你的阵营；只要切换选项处于关闭状态，无论你是善良、中立、邪恶，还是因领先值不足而处于无阵营，加成都仍会生效。</p>
+<h2 id="zh-ocean-fragrance-neutral-npc-bonus">海洋香氛（中立NPC加成）</h2>
+<p><strong>海洋香氛</strong> 是塞壬岛Shelly礼品店出售的关键物品（60枚海贝壳）。每当你对中立阵营NPC执行关系行动时，该次行动可能获得的好感度最大值会 <strong>+1</strong>。</p>
+<p>与克苏鲁之首一样，这件物品只取决于NPC的阵营，而不取决于你的阵营——即使你处于无阵营状态，它仍然有效，而且不受任何切换选项影响。</p>
+<h2 id="zh-ways-to-gain-alignment">获取阵营倾向点数的方式</h2>
+<p>阵营倾向点数来自 <strong>四套</strong> 不同的系统。专门的每日行动是最稳定的点数来源，其余则来自剧情选择和随机遭遇。</p>
+<h3 id="zh-1-daily-alignment-actions">1. 每日阵营行动</h3>
+<p>下列行动每天均可执行一次。它们分布在不同时代的特定地点，是有意积累阵营倾向点数的主要手段。</p>
+<div class="guide-table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th>行动</th>
+<th>地点</th>
+<th>效果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>祈祷</strong></td>
+<td>僧侣神殿训练厅（中世纪——村庄郊外）</td>
+<td>25%概率：善良+1</td>
+</tr>
+<tr>
+<td><strong>冥想</strong></td>
+<td>神秘者冥想林（中世纪——村庄郊外）</td>
+<td>25%概率：中立+1</td>
+</tr>
+<tr>
+<td><strong>志愿服务</strong></td>
+<td>城市医院（上城区）——现代</td>
+<td>必定：善良+1</td>
+</tr>
+<tr>
+<td><strong>中和器</strong></td>
+<td>认知优化学院（未来核心区）</td>
+<td>必定：善良−1、邪恶−1、中立+1</td>
+</tr>
+<tr>
+<td><strong>偷补给</strong></td>
+<td>村庄市场（中世纪——村庄郊外）</td>
+<td>25%概率：邪恶+1（另有随机食材）</td>
+</tr>
+<tr>
+<td><strong>偷贵重品</strong></td>
+<td>异域商品商人（中世纪——国王领地）</td>
+<td>25%概率：邪恶+1（另有贵重品）</td>
+</tr>
+<tr>
+<td><strong>偷钱币</strong></td>
+<td>杂货店（中世纪——国王领地）</td>
+<td>25%概率：邪恶+1（另有金币）</td>
+</tr>
+<tr>
+<td><strong>扒窃人群</strong></td>
+<td>吟游诗人公会（中世纪——国王领地）</td>
+<td>25%概率：邪恶+1（另有金币）</td>
+</tr>
+<tr>
+<td><strong>扒窃战士</strong></td>
+<td>战士公会（中世纪——国王领地）</td>
+<td>25%概率：邪恶+1（另有金币）</td>
+</tr>
+</tbody>
+</table></div>
+<p>五项 <strong>偷窃行动</strong> 均要求：</p>
+<ul>
+<li><strong>10点盗贼公会影响力</strong>（因此你必须先成为公会新人）</li>
+<li><strong>手法技巧</strong> 技能（由现代的Sabrina传授）</li>
+</ul>
+<p>每项偷窃行动成功时，还会有 <strong>25%的独立概率</strong> 额外奖励1点盗贼公会影响力——这也为轮流执行这些行动提供了一点额外动力。</p>
+<p>每日行动之外，还有少数其他行动也会改变阵营倾向：</p>
+<ul>
+<li><strong>偷巧克力棒</strong>——街角便利店（现代上城区）。整个游戏只能执行一次，必定获得邪恶+1、盗贼+1以及一份巧克力消耗品。</li>
+<li><strong>师傅（工作）</strong>——通过武术家专长在道场（现代）工作。每次轮班均有15%概率获得中立+1。</li>
+</ul>
+<h3 id="zh-2-plot-choices">2. 剧情选项</h3>
+<p>许多剧情会提供明确奖励阵营倾向点数的选项。常见模式包括：</p>
+<ul>
+<li><strong>“等警察来”／“保护弱者”／“支持天使”</strong> → 善良</li>
+<li><strong>“保持中立”／“化解局面”／“转身离开”</strong> → 中立</li>
+<li><strong>“恐吓”／“支持rachel”／“支持恶魔”</strong> → 邪恶</li>
+</ul>
+<p>每个此类选项都会为对应阵营轴+1。在同一段剧情中，只有你最终确认的选择会被计入——使用R重开系统重新进行剧情时，系统会撤销之前的奖励，再应用新的奖励。从第10个剧情节点开始，阵营倾向选项会越来越多地融入剧情。</p>
+<h3 id="zh-3-search-encounters">3. 搜索遭遇</h3>
+<p>执行搜索行动时出现的随机遭遇——小巷醉汉、迷路贵族、旅行吟游诗人、扒窃目标等——经常会提供不同选项，并有一定概率（通常为25%，但各遭遇有所不同）为对应阵营轴+1。漫长游玩过程中，这些点数会逐渐累积，但单靠它们并不可靠。</p>
+<h3 id="zh-4-dungeon-scenarios">4. 地下城事件</h3>
+<p>许多地下城事件——尤其是第1至35层——都会提供三个选项，每个选项分别对应一条阵营轴，并在给予其他奖励的同时奖励阵营倾向+1。虚空深层（第36至40层）还会出现更加罕见、能更大幅度改变阵营倾向的遭遇，其中有一项会让某条阵营轴+5，同时让另外两条阵营轴各−5。</p>
+<h2 id="zh-resetting-your-alignment">重置阵营倾向</h2>
+<p>Azariel位于青楼的 <strong>密室</strong> 中提供水晶购买行动——<strong>重置倾向</strong>（3枚水晶）。使用后，善良、邪恶和中立三个计数都会设为0。此操作会永久清除当前积累的阵营状态，但不会将你锁死：之后的选择仍会再次把你推向某个阵营。</p>
+<p>除了反复使用 <strong>中和器</strong>（它只会逐渐削减善良与邪恶，同时提高中立）之外，重置是撤销已积累阵营倾向的唯一方式。</p>
+<h2 id="zh-strategy-notes">策略建议</h2>
+<ul>
+<li><strong>尽早确定方向。</strong> 关系修正的影响会贯穿整个游戏，并不断累积。如果你在序章初期选择善良并始终坚持，单靠正常游玩，通常就能在游戏中后期达到神圣阶级。</li>
+<li><strong>每日行动是核心。</strong> 每天都去医院做志愿服务，这是稳定提高善良最快的方法。想提高邪恶，就每天执行偷窃行动。祈祷／冥想还能额外提供25%概率的提升，数月下来积少成多。</li>
+<li><strong>获得终局物品前，先达到第9阶（或更高）。</strong> 你必须领先90点以上。升到第10阶（领先100点以上）同样符合条件。务必专注——每次提高非目标计数的选择，都相当于后退一步。</li>
+<li><strong>留意NPC名单。</strong> 你喜欢的某些恋爱目标，可能会与你选择的阵营方向冲突。Kupie提供的平衡天秤可以显著减少摩擦。</li>
+<li><strong>使用笔记本监控实时数值。</strong> 第8页“调试变量”会显示三个原始计数值以及无阵营切换选项。想确认进度时，随时可以查看。</li>
+<li><strong>三件阵营大师物品可以叠加。</strong> 物品一经获得便会永久留在物品栏中，效果永不失效。意志坚定的长期玩家可以通过中和器／重置与反复刷取来切换阵营，最终收集全部三件物品。</li>
+</ul>
+<h2 id="zh-related-pages">相关页面</h2>
+<ul>
+<li>游戏系统中心</li>
+<li>技能</li>
+<li>物品</li>
+<li>角色</li>
+</ul>
+</div>
+        <div class="guide-community-note"><div><strong data-copy-en="Community discoveries" data-copy-zh="社区发现">Community discoveries</strong><p data-copy-en="These official guides track the current game. The player-maintained wiki may contain additional strategies and discoveries." data-copy-zh="这些官方攻略与当前游戏版本保持一致；玩家维护的 Wiki 可能还收录其他策略与社区发现。">These official guides track the current game. The player-maintained wiki may contain additional strategies and discoveries.</p></div><a href="https://chronoromancer.miraheze.org/wiki/Main_Page" target="_blank" rel="noopener noreferrer" data-copy-en="Visit Player Wiki →" data-copy-zh="访问玩家 Wiki →">Visit Player Wiki →</a></div>
+        <nav class="guide-pager" aria-label="Adjacent guides"><a href="story_beats.html"><span data-copy-en="Previous guide" data-copy-zh="上一篇攻略">Previous guide</span><strong data-copy-en="Main Story — Complete Story Beats Walkthrough" data-copy-zh="主线故事——完整故事节点攻略">Main Story — Complete Story Beats Walkthrough</strong></a><a href="wealth_guide.html"><span data-copy-en="Next guide" data-copy-zh="下一篇攻略">Next guide</span><strong data-copy-en="Chronoromancer Wealth Guide" data-copy-zh="Chronoromancer 财富指南">Chronoromancer Wealth Guide</strong></a></nav>
+      </article>
+    </div>
+  </main>
+  <footer class="site-footer"><div class="container"><div class="footer-grid">
+    <div class="footer-brand"><img src="../assets/images/v2/logo.png" alt="Chronoromancer"><p data-i18n="footerDescription">An adults-only time-travel sandbox RPG. Public website artwork is SFW.</p></div>
+    <div class="footer-column"><h2 data-i18n="footerExplore">Explore</h2><a href="../story.html" data-i18n="navStory">Story</a><a href="../characters.html" data-i18n="navCharacters">Characters</a><a href="../walkthroughs.html" data-i18n="navGuides">Guides</a><a href="../screenshots.html" data-i18n="navGallery">Gallery</a><a href="../main.html#download" data-i18n="navDownload">Download</a></div>
+    <div class="footer-column"><h2 data-i18n="footerCommunity">Community</h2><a data-config-link="community.discord" target="_blank" rel="noopener noreferrer">Discord</a><a data-config-link="community.telegram" target="_blank" rel="noopener noreferrer">Telegram</a><a data-config-link="community.patreon" target="_blank" rel="noopener noreferrer">Patreon</a><a data-config-link="community.wiki" target="_blank" rel="noopener noreferrer" data-i18n="navWiki">Player Wiki</a></div>
+    <div class="footer-column"><h2 data-i18n="footerLegal">Legal</h2><a href="../privacy.html" data-i18n="footerPrivacy">Privacy</a><a href="../terms.html" data-i18n="footerTerms">Terms</a></div>
+  </div><div class="footer-bottom"><span>© <span data-current-year></span> <span data-i18n="copyright">Chronoromancer Studio. All rights reserved.</span></span><span data-copy-en="Official guides · English / Simplified Chinese" data-copy-zh="官方攻略 · English / 简体中文">Official guides · English / Simplified Chinese</span></div></div></footer>
+  <script src="../assets/js/site-config.js"></script><script src="../assets/js/site.js"></script><script src="../assets/js/walkthroughs.js"></script>
+</body></html>
