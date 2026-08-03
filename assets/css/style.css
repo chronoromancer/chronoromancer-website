@@ -667,6 +667,113 @@ a.download-card:hover {
   color: var(--gold);
 }
 
+.torrent-download-panel {
+  scroll-margin-top: 96px;
+  margin-top: 28px;
+  padding: 30px;
+  border: 1px solid rgba(88, 217, 239, 0.24);
+  border-radius: var(--radius);
+  background:
+    radial-gradient(circle at 92% 8%, rgba(88, 217, 239, 0.1), transparent 32%),
+    rgba(8, 15, 26, 0.88);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+}
+
+.torrent-panel-heading {
+  display: flex;
+  justify-content: space-between;
+  gap: 28px;
+  align-items: end;
+  margin-bottom: 22px;
+}
+
+.torrent-panel-heading h3 {
+  margin: 12px 0 6px;
+}
+
+.torrent-panel-heading p,
+.torrent-platform-card p {
+  color: var(--muted);
+}
+
+.torrent-checksum-link {
+  flex: 0 0 auto;
+  color: var(--cyan);
+  font-size: 0.84rem;
+  font-weight: 800;
+}
+
+.torrent-platform-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.torrent-platform-card {
+  display: flex;
+  min-width: 0;
+  padding: 22px;
+  flex-direction: column;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  background: rgba(14, 23, 38, 0.84);
+}
+
+.torrent-platform-card h4 {
+  margin: 8px 0;
+  font-family: var(--display);
+  font-size: 1.25rem;
+}
+
+.torrent-file-size {
+  color: var(--gold);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.torrent-actions {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: auto;
+  padding-top: 20px;
+}
+
+.torrent-actions .button {
+  min-height: 42px;
+  padding: 9px 12px;
+  font-size: 0.78rem;
+}
+
+.torrent-privacy-note {
+  margin-top: 20px;
+  padding-top: 18px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 0.78rem;
+}
+
+.mirror-download-panel {
+  border-color: rgba(231, 187, 106, 0.28);
+  background:
+    radial-gradient(circle at 92% 8%, rgba(231, 187, 106, 0.11), transparent 32%),
+    rgba(17, 14, 22, 0.9);
+}
+
+.mirror-platform-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.mirror-actions {
+  grid-template-columns: 1fr;
+}
+
+.mirror-host-note {
+  color: #cfc3ab;
+}
+
 .page-hero {
   position: relative;
   min-height: 480px;
@@ -1066,6 +1173,107 @@ a.download-card:hover {
   font-weight: 800;
 }
 
+.china-community-section {
+  border-top: 1px solid rgba(73, 211, 226, 0.12);
+  border-bottom: 1px solid rgba(73, 211, 226, 0.12);
+  background:
+    radial-gradient(circle at 12% 35%, rgba(73, 211, 226, 0.1), transparent 34%),
+    linear-gradient(135deg, rgba(6, 16, 27, 0.96), rgba(11, 8, 24, 0.96));
+}
+
+.china-community-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.35fr);
+  gap: 18px;
+}
+
+.china-community-card {
+  min-width: 0;
+  padding: 30px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: rgba(10, 17, 29, 0.86);
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.18);
+}
+
+.china-community-card h3 {
+  margin: 12px 0 10px;
+}
+
+.china-community-card p {
+  color: var(--muted);
+}
+
+.afdian-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background:
+    radial-gradient(circle at 90% 10%, rgba(232, 80, 120, 0.17), transparent 38%),
+    rgba(10, 17, 29, 0.9);
+}
+
+.afdian-card .button {
+  margin-top: auto;
+}
+
+.qq-community-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(180px, 230px);
+  align-items: center;
+  gap: 28px;
+}
+
+.qq-group-number {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 14px;
+  align-items: baseline;
+  margin-top: 22px;
+}
+
+.qq-group-number span {
+  color: var(--muted);
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.qq-group-number strong {
+  color: var(--cyan);
+  font-family: var(--display);
+  font-size: clamp(1.25rem, 2.5vw, 1.7rem);
+  letter-spacing: 0.04em;
+}
+
+.qq-qr-link {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  color: var(--cyan);
+  font-size: 0.78rem;
+  font-weight: 800;
+  text-align: center;
+}
+
+.qq-qr-link img {
+  width: min(100%, 210px);
+  height: auto;
+  padding: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 16px;
+  background: #f1f1f3;
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.28);
+}
+
+.qq-qr-link:hover img,
+.qq-qr-link:focus-visible img {
+  border-color: var(--cyan);
+  transform: translateY(-2px);
+}
+
 .site-footer {
   padding: 64px 0 30px;
   border-top: 1px solid var(--line);
@@ -1238,8 +1446,17 @@ a.download-card:hover {
   }
 
   .split-feature,
-  .story-intro {
+  .story-intro,
+  .china-community-grid {
     grid-template-columns: 1fr;
+  }
+
+  .torrent-platform-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .mirror-platform-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .timeline-entry {
@@ -1299,6 +1516,31 @@ a.download-card:hover {
   .gallery-grid,
   .character-grid {
     grid-template-columns: 1fr;
+  }
+
+  .qq-community-card {
+    grid-template-columns: 1fr;
+  }
+
+  .torrent-download-panel {
+    padding: 22px;
+  }
+
+  .torrent-panel-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .torrent-actions {
+    grid-template-columns: 1fr;
+  }
+
+  .mirror-platform-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .qq-qr-link img {
+    width: min(100%, 240px);
   }
 
   .era-card {
