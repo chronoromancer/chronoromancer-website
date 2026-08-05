@@ -174,7 +174,7 @@
           <ul class="check-list">
             <li data-copy-en="No account or tracking is required to browse this website" data-copy-zh="浏览本网站无需注册账户，也不会进行网站行为追踪">No account or tracking is required to browse this website</li>
             <li data-copy-en="Download options are separated clearly by host" data-copy-zh="不同下载来源均有清晰标识">Download options are separated clearly by host</li>
-            <li data-copy-en="China-accessible mirrors will be published only after testing" data-copy-zh="中国大陆可访问的镜像将在完成测试后再正式发布">China-accessible mirrors will be published only after testing</li>
+            <li data-copy-en="Official direct downloads and multiple fallback mirrors are provided" data-copy-zh="提供官方直连下载与多种备用镜像">Official direct downloads and multiple fallback mirrors are provided</li>
           </ul>
         </div>
       </div>
@@ -199,10 +199,15 @@
             <p class="eyebrow" data-copy-en="Current public release" data-copy-zh="当前公开版本">Current public release</p>
             <h2><span data-copy-en="Download " data-copy-zh="下载 ">Download </span><span data-site-version>V0.9.6.2</span></h2>
           </div>
-          <p data-copy-en="Windows/Linux, macOS, and Android builds are available through the official itch.io page. Additional mirrors offer the same public release." data-copy-zh="Windows/Linux、macOS 与 Android 版本可通过 itch.io 官方页面下载；其他镜像提供相同的公开版本。">Windows/Linux, macOS, and Android builds are available through the official itch.io page. Additional mirrors offer the same public release.</p>
+          <p data-copy-en="Download Windows, Linux, macOS, and Android builds directly from our official CDN. itch.io, hosted mirrors, and BitTorrent remain available as alternative routes." data-copy-zh="可通过官方 CDN 直接下载 Windows、Linux、macOS 与 Android 版本；itch.io、网盘镜像和 BitTorrent 仍作为备用下载方式保留。">Download Windows, Linux, macOS, and Android builds directly from our official CDN. itch.io, hosted mirrors, and BitTorrent remain available as alternative routes.</p>
         </div>
 
         <div class="download-grid">
+          <a class="download-card" href="#direct-downloads">
+            <span class="card-tag" data-copy-en="Official · Recommended" data-copy-zh="官方 · 推荐">Official · Recommended</span><h3 data-copy-en="Direct downloads" data-copy-zh="直连下载">Direct downloads</h3>
+            <p data-copy-en="One-click downloads from our own ad-free delivery network." data-copy-zh="通过官方无广告分发网络一键下载。">One-click downloads from our own ad-free delivery network.</p>
+            <span class="status-pill" data-copy-en="Available" data-copy-zh="可用">Available</span>
+          </a>
           <a class="download-card" data-download-id="itch" target="_blank" rel="noopener noreferrer">
             <span class="card-tag" data-copy-en="Official" data-copy-zh="官方">Official</span><h3>itch.io</h3>
             <p data-copy-en="All current platforms, release notes, and installation instructions." data-copy-zh="提供所有当前平台版本、更新日志与安装说明。">All current platforms, release notes, and installation instructions.</p>
@@ -230,12 +235,50 @@
           </a>
         </div>
 
+        <div class="torrent-download-panel direct-download-panel" id="direct-downloads">
+          <div class="torrent-panel-heading">
+            <div>
+              <span class="card-tag" data-copy-en="Official ad-free delivery" data-copy-zh="官方无广告分发">Official ad-free delivery</span>
+              <h3 data-copy-en="Choose your platform" data-copy-zh="选择你的平台">Choose your platform</h3>
+              <p data-copy-en="Download directly without a file-host account or BitTorrent client. Downloads support pause and resume when your browser or download manager provides it." data-copy-zh="无需注册网盘账户或安装 BT 客户端即可直接下载。若浏览器或下载工具支持，可暂停并继续下载。">Download directly without a file-host account or BitTorrent client. Downloads support pause and resume when your browser or download manager provides it.</p>
+            </div>
+            <a class="torrent-checksum-link" data-download-id="torrentChecksums" download data-copy-en="Verify SHA-256 checksums →" data-copy-zh="核对 SHA-256 校验值 →">Verify SHA-256 checksums →</a>
+          </div>
+          <div class="torrent-platform-grid mirror-platform-grid">
+            <article class="torrent-platform-card">
+              <span class="torrent-file-size">2.85 GiB</span>
+              <h4>Windows</h4>
+              <p data-copy-en="Windows-only ZIP package." data-copy-zh="仅包含 Windows 版本的 ZIP 安装包。">Windows-only ZIP package.</p>
+              <div class="torrent-actions mirror-actions"><a class="button" data-download-id="directWin" download data-copy-en="Direct download" data-copy-zh="直接下载">Direct download</a></div>
+            </article>
+            <article class="torrent-platform-card">
+              <span class="torrent-file-size">2.87 GiB</span>
+              <h4 data-copy-en="PC · Windows + Linux" data-copy-zh="PC · Windows + Linux">PC · Windows + Linux</h4>
+              <p data-copy-en="Combined desktop ZIP package." data-copy-zh="Windows 与 Linux 桌面版整合 ZIP 包。">Combined desktop ZIP package.</p>
+              <div class="torrent-actions mirror-actions"><a class="button" data-download-id="directPc" download data-copy-en="Direct download" data-copy-zh="直接下载">Direct download</a></div>
+            </article>
+            <article class="torrent-platform-card">
+              <span class="torrent-file-size">2.86 GiB</span>
+              <h4>macOS</h4>
+              <p data-copy-en="Dedicated ZIP package for Mac." data-copy-zh="适用于 Mac 的独立 ZIP 安装包。">Dedicated ZIP package for Mac.</p>
+              <div class="torrent-actions mirror-actions"><a class="button" data-download-id="directMac" download data-copy-en="Direct download" data-copy-zh="直接下载">Direct download</a></div>
+            </article>
+            <article class="torrent-platform-card">
+              <span class="torrent-file-size">2.96 GiB</span>
+              <h4>Android</h4>
+              <p data-copy-en="APK package for compatible Android devices." data-copy-zh="适用于兼容 Android 设备的 APK 安装包。">APK package for compatible Android devices.</p>
+              <div class="torrent-actions mirror-actions"><a class="button" data-download-id="directAndroid" download data-copy-en="Direct download" data-copy-zh="直接下载">Direct download</a></div>
+            </article>
+          </div>
+          <p class="torrent-privacy-note" data-copy-en="Mainland China performance can vary by region and network provider. If a link opened inside WeChat or QQ does not download correctly, copy it into your device's external browser. The mirrors below remain available as alternatives." data-copy-zh="中国大陆的下载速度可能因地区和网络运营商而异。如果在微信或 QQ 内置浏览器中无法正常下载，请将链接复制到设备的系统浏览器中打开。下方镜像仍可作为备用方式。">Mainland China performance can vary by region and network provider. If a link opened inside WeChat or QQ does not download correctly, copy it into your device's external browser. The mirrors below remain available as alternatives.</p>
+        </div>
+
         <div class="torrent-download-panel" id="torrent-downloads">
           <div class="torrent-panel-heading">
             <div>
-              <span class="card-tag" data-copy-en="Official verified torrents" data-copy-zh="官方已验证种子">Official verified torrents</span>
+              <span class="card-tag" data-copy-en="Official torrents with web-seed fallback" data-copy-zh="含网页种子备用源的官方种子">Official torrents with web-seed fallback</span>
               <h3 data-copy-en="Choose your platform" data-copy-zh="选择你的平台">Choose your platform</h3>
-              <p data-copy-en="Each torrent contains only the release shown below. The PC package supports both Windows and Linux." data-copy-zh="每个种子仅包含下方标注的对应版本；PC 安装包同时支持 Windows 与 Linux。">Each torrent contains only the release shown below. The PC package supports both Windows and Linux.</p>
+              <p data-copy-en="Each torrent includes an official HTTPS web seed, allowing compatible clients to retrieve pieces even when no peer is reachable. The PC package supports both Windows and Linux." data-copy-zh="每个种子均包含官方 HTTPS 网页种子备用源；即使暂时没有可连接的节点，兼容的下载客户端仍可获取数据分片。PC 安装包同时支持 Windows 与 Linux。">Each torrent includes an official HTTPS web seed, allowing compatible clients to retrieve pieces even when no peer is reachable. The PC package supports both Windows and Linux.</p>
             </div>
             <a class="torrent-checksum-link" data-download-id="torrentChecksums" download data-copy-en="View SHA-256 checksums →" data-copy-zh="查看 SHA-256 校验值 →">View SHA-256 checksums →</a>
           </div>
@@ -259,7 +302,7 @@
               <div class="torrent-actions"><a class="button" data-download-id="torrentAndroid" download data-copy-en="Download .torrent" data-copy-zh="下载种子文件">Download .torrent</a><a class="button button--secondary" data-config-link="downloads.torrentAndroid.magnet" data-copy-en="Open magnet" data-copy-zh="打开磁力链接">Open magnet</a></div>
             </article>
           </div>
-          <p class="torrent-privacy-note" data-copy-en="BitTorrent requires a torrent client. Peers participating in the same torrent can see one another's IP addresses; choose a direct mirror above if you prefer not to use peer-to-peer downloading." data-copy-zh="使用 BitTorrent 需要安装种子下载客户端。同一种子中的其他节点可以看到彼此的 IP 地址；如果你不希望使用点对点下载，请选择上方的直连镜像。">BitTorrent requires a torrent client. Peers participating in the same torrent can see one another's IP addresses; choose a direct mirror above if you prefer not to use peer-to-peer downloading.</p>
+          <p class="torrent-privacy-note" data-copy-en="BitTorrent requires a compatible client. Clients that support HTTP web seeds can use the official direct-download server as a permanent source; other clients continue with normal trackers, DHT, and peers. Peers in the same torrent can see one another's IP addresses, so use the direct downloads above if you prefer not to participate in peer-to-peer sharing." data-copy-zh="使用 BitTorrent 需要兼容的下载客户端。支持 HTTP 网页种子的客户端可将官方直连服务器作为长期备用源；其他客户端仍会通过 Tracker、DHT 和普通节点下载。同一种子中的节点可以看到彼此的 IP 地址；如果你不希望参与点对点共享，请使用上方的直连下载。">BitTorrent requires a compatible client. Clients that support HTTP web seeds can use the official direct-download server as a permanent source; other clients continue with normal trackers, DHT, and peers. Peers in the same torrent can see one another's IP addresses, so use the direct downloads above if you prefer not to participate in peer-to-peer sharing.</p>
         </div>
 
         <div class="torrent-download-panel mirror-download-panel" id="china-mirror-downloads">
@@ -301,7 +344,7 @@
 
         <div class="china-access-note">
           <strong data-copy-en="Access note" data-copy-zh="访问说明">Access note</strong>
-          <span data-copy-en="BitTorrent and player-recommended ViKiNG FiLE links are available for the current release. External-host availability can change without notice, so the official and mirror options remain listed together." data-copy-zh="当前版本已提供 BitTorrent 与玩家推荐的 ViKiNG FiLE 下载链接。外部托管服务的可用性可能随时变化，因此网站会同时保留官方来源与多种备用下载方式。">BitTorrent and player-recommended ViKiNG FiLE links are available for the current release. External-host availability can change without notice, so the official and mirror options remain listed together.</span>
+          <span data-copy-en="Official direct downloads, BitTorrent, and player-recommended ViKiNG FiLE links are available for the current release. Network conditions and external-host availability can change, so all routes remain listed together." data-copy-zh="当前版本提供官方直连、BitTorrent 与玩家推荐的 ViKiNG FiLE 下载链接。网络状况及外部托管服务的可用性可能发生变化，因此网站会同时保留所有下载方式。">Official direct downloads, BitTorrent, and player-recommended ViKiNG FiLE links are available for the current release. Network conditions and external-host availability can change, so all routes remain listed together.</span>
         </div>
       </div>
     </section>
