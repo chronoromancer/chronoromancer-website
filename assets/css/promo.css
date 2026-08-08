@@ -319,7 +319,7 @@
 
 .promo-download-actions {
   display: grid;
-  grid-template-columns: 1.35fr repeat(3, 0.82fr);
+  grid-template-columns: 1.35fr repeat(4, 0.82fr);
   gap: 9px;
 }
 

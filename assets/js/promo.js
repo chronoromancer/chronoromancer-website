@@ -5,10 +5,10 @@
   const downloads = config.downloads || {};
   const siteRoot = new URL("../../", document.baseURI);
   const platformMap = {
-    windows: { direct: "directWin", mega: "mega", torrent: "torrentPc", mirror: "vikingWin" },
-    pc: { direct: "directPc", mega: "mega", torrent: "torrentPc", mirror: "vikingPc" },
-    mac: { direct: "directMac", mega: "mega", torrent: "torrentMac", mirror: "vikingMac" },
-    android: { direct: "directAndroid", mega: "mega", torrent: "torrentAndroid", mirror: "vikingAndroid" }
+    windows: { direct: "directWin", mega: "mega", torrent: "torrentPc", google: "googleDrive", itch: "itch" },
+    pc: { direct: "directPc", mega: "mega", torrent: "torrentPc", google: "googleDrive", itch: "itch" },
+    mac: { direct: "directMac", mega: "mega", torrent: "torrentMac", google: "googleDrive", itch: "itch" },
+    android: { direct: "directAndroid", mega: "mega", torrent: "torrentAndroid", google: "googleDrive", itch: "itch" }
   };
 
   function resolveUrl(url) {
