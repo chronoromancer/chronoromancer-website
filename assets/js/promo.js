@@ -55,7 +55,7 @@
   });
 
   document.querySelectorAll("[data-site-version]").forEach((element) => {
-    element.textContent = config.release || "";
+    element.textContent = config.promotionRelease || config.release || "";
   });
 
   const copyButton = document.querySelector("[data-copy-code]");

@@ -1,5 +1,6 @@
 window.CHRONO_SITE_CONFIG = Object.freeze({
   release: "V0.9.6.2",
+  promotionRelease: "V0.9.6.3",
   downloads: {
     itch: {
       url: "https://chronoromancer.itch.io/chronoromancer",
