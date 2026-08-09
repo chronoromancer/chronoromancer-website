@@ -1,4 +1,0 @@
-40bac2c7fdc095159896d08896b78f41bee9a3c219eba43696014d1a96503776  Chronoromancer-V0.9.6.3_FUTURE-win.zip
-92470abcde33bec00a589adfc1d1920c1313f22c8b20513d8387b8b72f2d1949  Chronoromancer-V0.9.6.3_FUTURE-pc.zip
-9a727a060afced1ca9d39a5beb6d8279172737ced7b24a577c7369b234b3c498  Chronoromancer-V0.9.6.3_FUTURE-mac.zip
-1b571ce65b257b194862fe8df46c12d2ffad0726dad2389e5553c7e83b53c78a  com.chronoromancer.game-9.6-1786211946-release.apk
