@@ -58,5 +58,9 @@ window.CHRONO_SITE_CONFIG = Object.freeze({
     wiki: "https://chronoromancer.miraheze.org/wiki/Main_Page",
     bluesky: "https://bsky.app/profile/chronoromancergame.bsky.social",
     x: "https://x.com/Chronoromancer"
+  },
+  promoAnalytics: {
+    enabled: true,
+    endpoint: "https://gncyptnmwrhrytjemhhi.supabase.co/functions/v1/promo-event"
   }
 });
