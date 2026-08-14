@@ -1,0 +1,4 @@
+9533d7f1efb8a69c4021191338a031ee5533dc74873ca160a19453bfe5fcd263  Chronoromancer-V0.9.6.4_NOVA_-win.zip
+b7d003c971c80b99e656769e19d2b52160c0fe493503b32e2a5a1201857361cf  Chronoromancer-V0.9.6.4_NOVA_-pc.zip
+569dc4d7f88d4e845ee77e14f815a050fee1ae8d58b0acea5715545ec2560d97  Chronoromancer-V0.9.6.4_NOVA_-mac.zip
+0771adbf259bb73768823a6f1875dddcedaf9a51b3d16267ac5bd146a91b0bee  com.chronoromancer.game-9.6-1786725071-release.apk
