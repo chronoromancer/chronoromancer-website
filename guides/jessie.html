@@ -26,7 +26,7 @@
       <nav class="breadcrumb" aria-label="Breadcrumb"><a href="../walkthroughs.html" data-copy-en="Official Guides" data-copy-zh="官方攻略">Official Guides</a><span>/</span><span data-copy-en="Character Routes" data-copy-zh="角色路线">Character Routes</span></nav>
       <p class="eyebrow" data-copy-en="Version-matched official guide" data-copy-zh="与当前版本匹配的官方攻略">Version-matched official guide</p>
       <h1 data-copy-en="Jessie — Complete Walkthrough" data-copy-zh="Jessie——完整攻略">Jessie — Complete Walkthrough</h1>
-      <div class="guide-meta"><span data-copy-en="Character Routes" data-copy-zh="角色路线">Character Routes</span><span data-copy-en="Simplified Chinese available" data-copy-zh="简体中文译文已上线">Simplified Chinese available</span><span data-site-version>V0.9.6.0</span></div>
+      <div class="guide-meta"><span data-copy-en="Character Routes" data-copy-zh="角色路线">Character Routes</span><span data-copy-en="Simplified Chinese available" data-copy-zh="简体中文译文已上线">Simplified Chinese available</span><span data-site-version>V0.9.7</span></div>
     </div></section>
     <div class="container guide-layout">
       <aside class="guide-sidebar">
@@ -200,7 +200,7 @@
 <li><strong>Business:</strong> "$300 now, pay the rest later"</li>
 <li><strong>Flirty:</strong> "Having a beautiful roommate? $300 sounds perfect"</li>
 </ul>
-<p>She accepts, hands over the cash, moves in. <strong>Sets <code>jessie_moved_in = True</code>.</strong> Visit Jessie action unlocks at the basement (2 PM – 10 PM).</p>
+<p>She accepts, hands over the cash, and moves in. Completing <code>jessie_cafe_encounter</code> unlocks the Visit Jessie action at the basement (2 PM – 10 PM).</p>
 <h3 id="step-3--jessie-notices-your-gains--jessie_gym_recognition">Step 3 — "Jessie Notices Your Gains" (<code>jessie_gym_recognition</code>)</h3>
 <div class="guide-table-wrap" tabindex="0"><table>
 <thead>
@@ -323,7 +323,7 @@
 <h3 id="jessies-room--present_jessies_room_uptown">Jessie's Room (<code>present_jessies_room_uptown</code>)</h3>
 <ul>
 <li><strong>Hours:</strong> 2 PM – 11 PM daily (per her schedule)</li>
-<li><strong>Visit Jessie action</strong> at the basement requires <code>jessie_moved_in</code> flag and 2 PM – 10 PM</li>
+<li><strong>Visit Jessie action</strong> at the basement requires <code>jessie_cafe_encounter_completed</code> and 2 PM – 10 PM</li>
 <li>Outside hours, knocking gets a "no answer" message</li>
 <li>Her only location — entire arc plays out at this single room</li>
 </ul>
@@ -586,12 +586,8 @@
 <td>Set by basement Rent Out Apartment action — gates cafe encounter</td>
 </tr>
 <tr>
-<td><code>jessie_moved_in</code></td>
-<td>Set by <code>jessie_cafe_encounter_completion</code> — unlocks Visit Jessie</td>
-</tr>
-<tr>
 <td><code>jessie_cafe_encounter_completed</code></td>
-<td>Cafe encounter done</td>
+<td>Cafe encounter done — unlocks Visit Jessie</td>
 </tr>
 <tr>
 <td><code>jessie_gym_recognition_completed</code></td>
@@ -904,7 +900,7 @@
 <li><strong>公事公办：</strong> “现在付$300，其余之后再补”</li>
 <li><strong>调情：</strong> “有这么漂亮的室友？$300听起来很合适”</li>
 </ul>
-<p>她接受条件，交出现金并搬了进来。<strong>设置<code>jessie_moved_in = True</code>。</strong> 地下室会解锁“拜访Jessie”行动（下午2点至晚上10点）。</p>
+<p>她接受条件，交出现金并搬了进来。完成<code>jessie_cafe_encounter</code>后，地下室会解锁“拜访Jessie”行动（下午2点至晚上10点）。</p>
 <h3 id="zh-step-3--jessie-notices-your-gains--jessie_gym_recognition">第3步——“Jessie注意到你的变化”（<code>jessie_gym_recognition</code>）</h3>
 <div class="guide-table-wrap" tabindex="0"><table>
 <thead>
@@ -1027,7 +1023,7 @@
 <h3 id="zh-jessies-room--present_jessies_room_uptown">Jessie的房间（<code>present_jessies_room_uptown</code>）</h3>
 <ul>
 <li><strong>时段：</strong> 根据她的日程，每天下午2点至晚上11点</li>
-<li>地下室的<strong>拜访Jessie行动</strong>要求<code>jessie_moved_in</code>标记，开放时间为下午2点至晚上10点</li>
+<li>地下室的<strong>拜访Jessie行动</strong>要求<code>jessie_cafe_encounter_completed</code>，开放时间为下午2点至晚上10点</li>
 <li>在开放时间外敲门会收到“无人应答”的提示</li>
 <li>这是她唯一的地点——整条路线都发生在这一个房间里</li>
 </ul>
@@ -1290,12 +1286,8 @@
 <td>由地下室的出租公寓行动设置——限制咖啡馆遭遇</td>
 </tr>
 <tr>
-<td><code>jessie_moved_in</code></td>
-<td>由<code>jessie_cafe_encounter_completion</code>设置——解锁拜访Jessie</td>
-</tr>
-<tr>
 <td><code>jessie_cafe_encounter_completed</code></td>
-<td>已完成咖啡馆遭遇</td>
+<td>已完成咖啡馆遭遇——解锁拜访Jessie</td>
 </tr>
 <tr>
 <td><code>jessie_gym_recognition_completed</code></td>

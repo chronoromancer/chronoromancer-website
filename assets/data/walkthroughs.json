@@ -1,5 +1,5 @@
 {
-  "total": 66,
+  "total": 68,
   "translated": 66,
   "guides": [
     {
@@ -383,6 +383,16 @@
       "url": "guides/christy.html"
     },
     {
+      "slug": "cressida",
+      "filename": "cressida.md",
+      "category": "characters",
+      "titleEn": "Cressida — Complete Walkthrough",
+      "titleZh": "Cressida — Complete Walkthrough",
+      "translated": false,
+      "translationState": "missing",
+      "url": "guides/cressida.html"
+    },
+    {
       "slug": "elara",
       "filename": "elara.md",
       "category": "characters",
@@ -571,6 +581,16 @@
       "translated": true,
       "translationState": "ready",
       "url": "guides/raven.html"
+    },
+    {
+      "slug": "riki",
+      "filename": "riki.md",
+      "category": "characters",
+      "titleEn": "Riki — Complete Walkthrough",
+      "titleZh": "Riki — Complete Walkthrough",
+      "translated": false,
+      "translationState": "missing",
+      "url": "guides/riki.html"
     },
     {
       "slug": "robin",

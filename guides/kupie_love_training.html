@@ -26,7 +26,7 @@
       <nav class="breadcrumb" aria-label="Breadcrumb"><a href="../walkthroughs.html" data-copy-en="Official Guides" data-copy-zh="官方攻略">Official Guides</a><span>/</span><span data-copy-en="Character Routes" data-copy-zh="角色路线">Character Routes</span></nav>
       <p class="eyebrow" data-copy-en="Version-matched official guide" data-copy-zh="与当前版本匹配的官方攻略">Version-matched official guide</p>
       <h1 data-copy-en="Kupie&#x27;s Love Training — Complete System Guide" data-copy-zh="Kupie 的爱之训练——完整系统指南">Kupie&#x27;s Love Training — Complete System Guide</h1>
-      <div class="guide-meta"><span data-copy-en="Character Routes" data-copy-zh="角色路线">Character Routes</span><span data-copy-en="Simplified Chinese available" data-copy-zh="简体中文译文已上线">Simplified Chinese available</span><span data-site-version>V0.9.6.0</span></div>
+      <div class="guide-meta"><span data-copy-en="Character Routes" data-copy-zh="角色路线">Character Routes</span><span data-copy-en="Simplified Chinese available" data-copy-zh="简体中文译文已上线">Simplified Chinese available</span><span data-site-version>V0.9.7</span></div>
     </div></section>
     <div class="container guide-layout">
       <aside class="guide-sidebar">
@@ -38,7 +38,7 @@
         <div class="spoiler-notice"><strong data-copy-en="Guide notice" data-copy-zh="攻略提示">Guide notice</strong><span data-copy-en="This page contains gameplay and story spoilers and may describe mature systems." data-copy-zh="本页包含玩法与剧情剧透，并可能涉及成人游戏系统。">This page contains gameplay and story spoilers and may describe mature systems.</span></div>
         <div class="markdown-body" data-lang-panel="en">
 <blockquote>
-<p><strong>Verified for:</strong> <code>V0.9.6.1_FUTURE</code><br/>
+<p><strong>Verified for:</strong> <code>V0.9.6.3_FUTURE</code><br/>
 <strong>Community acknowledgment:</strong> This walkthrough was informed by the player-created <a href="https://chronoromancer.miraheze.org/wiki/Game_Systems:Kupie_Love_Training" rel="noopener noreferrer" target="_blank">Kupie Love Training wiki guide</a>, which is available under CC BY-SA 4.0. Its discoveries and organization were used as a foundation; the mechanics, numbers, unlocks, and recommendations below were rechecked and expanded against the current game implementation.</p>
 </blockquote>
 <h2 id="what-this-system-is">What This System Is</h2>
@@ -1085,7 +1085,7 @@
 <p>The Trumpet and Harp affect only jobs that already have at least one real Sylph. The Crown doubles currency production and job XP, but not timed affection or click value.</p>
 <hr/>
 <h2 id="kupie-shop">Kupie Shop</h2>
-<p>The shop spends normal player wealth and places purchases in the normal consumable inventory. Restocking uses real elapsed hours, occurs when the shop is opened, and restores one unit per interval up to a stock cap of 10.</p>
+<p>The shop spends normal player wealth and places purchases in the normal consumable inventory. Restocking uses real elapsed hours, occurs when the shop is opened, and restores one unit per interval up to a stock cap of 10. Dragon Coin stock follows that same real-time system, but the player may purchase only one Dragon Coin per in-game day. Accumulated stock therefore takes a separate game day per coin to buy out.</p>
 <div class="guide-table-wrap" tabindex="0"><table>
 <thead>
 <tr>
@@ -1219,7 +1219,7 @@
 </tbody>
 </table></div>
 <p>Opening the shop for the first time starts restock timers for items below the cap. If you expect a late gift bottleneck, open the shop early and purchase scarce stock so its timer begins replenishing.</p>
-<p>Rebirth returns the shop to its initial stock table and clears its restock timers. Items already bought into the player's normal consumable inventory are not part of the Love Training reset.</p>
+<p>Rebirth returns the shop to its initial stock table and clears its restock timers. It does not clear the current in-game day's Dragon Coin purchase limit. Items already bought into the player's normal consumable inventory are not part of the Love Training reset.</p>
 <hr/>
 <h2 id="achievements">Achievements</h2>
 <p>The current implementation defines <strong>124 achievement slots</strong>:</p>
@@ -1388,12 +1388,12 @@
 </ul>
 <hr/>
 <h2 id="accuracy-notes">Accuracy Notes</h2>
-<p>This guide treats the current game implementation as authoritative. Player-facing details were checked against the Love Training system, screens, reward definitions, main-game adapter, unlock plots, shop, tutorial quest, key-item sources, and hidden-Sylph system in <code>V0.9.6.1_FUTURE</code>.</p>
+<p>This guide treats the current game implementation as authoritative. Player-facing details were checked against the Love Training system, screens, reward definitions, main-game adapter, unlock plots, shop, tutorial quest, key-item sources, and hidden-Sylph system in <code>V0.9.6.3_FUTURE</code>.</p>
 <p>The linked community guide remains valuable as the original player-led reference. This repository walkthrough intentionally credits it, corrects implementation drift, and adds details that are easier to maintain alongside the game source.</p>
 </div>
         <div class="markdown-body" data-lang-panel="zh" hidden>
 <blockquote>
-<p><strong>验证版本：</strong> <code>V0.9.6.1_FUTURE</code><br/>
+<p><strong>验证版本：</strong> <code>V0.9.6.3_FUTURE</code><br/>
 <strong>社区鸣谢：</strong> 本攻略参考了玩家编写的 <a href="https://chronoromancer.miraheze.org/wiki/Game_Systems:Kupie_Love_Training" rel="noopener noreferrer" target="_blank">Kupie 爱之训练 Wiki 指南</a>，其采用 CC BY-SA 4.0 许可。该指南的研究成果和组织方式构成了本文基础；下文的机制、数值、解锁条件和建议均已对照当前游戏实现重新核验并扩充。</p>
 </blockquote>
 <h2 id="zh-what-this-system-is">系统简介</h2>
@@ -2743,7 +2743,7 @@
 </ul>
 <hr/>
 <h2 id="zh-accuracy-notes">准确性说明</h2>
-<p>本指南以当前游戏实现为准。所有面向玩家的细节均已对照 <code>V0.9.6.1_FUTURE</code> 中的爱之训练系统、界面、奖励定义、主游戏适配器、解锁剧情、商店、教程任务、关键物品来源和隐藏小天使系统进行核验。</p>
+<p>本指南以当前游戏实现为准。所有面向玩家的细节均已对照 <code>V0.9.6.3_FUTURE</code> 中的爱之训练系统、界面、奖励定义、主游戏适配器、解锁剧情、商店、教程任务、关键物品来源和隐藏小天使系统进行核验。</p>
 <p>链接中的社区指南仍是珍贵的原始玩家参考资料。本仓库内的攻略特此向其致谢，并纠正了与当前实现的差异，还补充了更适合随游戏源代码一同维护的细节。</p>
 </div>
         <div class="guide-community-note"><div><strong data-copy-en="Community discoveries" data-copy-zh="社区发现">Community discoveries</strong><p data-copy-en="These official guides track the current game. The player-maintained wiki may contain additional strategies and discoveries." data-copy-zh="这些官方攻略与当前游戏版本保持一致；玩家维护的 Wiki 可能还收录其他策略与社区发现。">These official guides track the current game. The player-maintained wiki may contain additional strategies and discoveries.</p></div><a href="https://chronoromancer.miraheze.org/wiki/Main_Page" target="_blank" rel="noopener noreferrer" data-copy-en="Visit Player Wiki →" data-copy-zh="访问玩家 Wiki →">Visit Player Wiki →</a></div>

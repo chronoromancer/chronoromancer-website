@@ -26,7 +26,7 @@
       <nav class="breadcrumb" aria-label="Breadcrumb"><a href="../walkthroughs.html" data-copy-en="Official Guides" data-copy-zh="官方攻略">Official Guides</a><span>/</span><span data-copy-en="Character Routes" data-copy-zh="角色路线">Character Routes</span></nav>
       <p class="eyebrow" data-copy-en="Version-matched official guide" data-copy-zh="与当前版本匹配的官方攻略">Version-matched official guide</p>
       <h1 data-copy-en="Blinky — Complete Walkthrough" data-copy-zh="Blinky——完整攻略">Blinky — Complete Walkthrough</h1>
-      <div class="guide-meta"><span data-copy-en="Character Routes" data-copy-zh="角色路线">Character Routes</span><span data-copy-en="Simplified Chinese available" data-copy-zh="简体中文译文已上线">Simplified Chinese available</span><span data-site-version>V0.9.6.0</span></div>
+      <div class="guide-meta"><span data-copy-en="Character Routes" data-copy-zh="角色路线">Character Routes</span><span data-copy-en="Simplified Chinese available" data-copy-zh="简体中文译文已上线">Simplified Chinese available</span><span data-site-version>V0.9.7</span></div>
     </div></section>
     <div class="container guide-layout">
       <aside class="guide-sidebar">
@@ -298,7 +298,7 @@
 <h3 id="1-where-do-i-belong--h2h_blinky_where_do_i_belong">1. Where Do I Belong? (<code>h2h_blinky_where_do_i_belong</code>)</h3>
 <ul>
 <li><strong>Unlock:</strong> Acquaintance stage, 60 min, daily limit 1</li>
-<li><strong>5 rounds.</strong> Sets <code>blinky_shared_belonging_thoughts</code> flag on completion.</li>
+<li><strong>5 rounds.</strong> Completion is tracked as <code>h2h_blinky_where_do_i_belong</code> in <code>completed_h2h_conversations</code>.</li>
 </ul>
 <p>Blinky is unusually quiet, sitting on the floor clutching her staff. The crystals pulse in a slow, melancholy rhythm. She's processing something deep.</p>
 <p><strong>Round 1</strong> — Finding her still. Standard +5-6. Special (<strong>Empathy</strong>): +8, unlocks variant.</p>
@@ -311,7 +311,7 @@ Standard +5-7 across three choices.</p>
 <h3 id="2-never-been-kissed--h2h_blinky_never_been_kissed---first-kiss">2. Never Been Kissed (<code>h2h_blinky_never_been_kissed</code>) — <strong>FIRST KISS</strong></h3>
 <ul>
 <li><strong>Unlock:</strong> Close Friend stage, 60 min, daily limit 1</li>
-<li><strong>5 rounds.</strong> Sets <code>blinky_first_kiss</code> flag on completion.</li>
+<li><strong>5 rounds.</strong> Completion is tracked as <code>h2h_blinky_never_been_kissed</code> in <code>completed_h2h_conversations</code>.</li>
 </ul>
 <p>She's hunched over the <strong>Grimoire of Emerald Weaving</strong> — a tome about how emotions shape magical energy. She's read that a kiss between two people who care for each other is the most powerful magical catalyst that exists, and she's never experienced one.</p>
 <p><strong>Round 1</strong> — She's absorbed in the book, blushing. Standard +5-6. Special (<strong>Empathy</strong>): +8, unlocks variant.</p>
@@ -319,7 +319,7 @@ Standard +5-7 across three choices.</p>
 <p><strong>Round 3</strong> — She admits she wants to try. "You are the first person who has stayed. Or maybe... I am the first me who has stayed." Standard +7-8. Special (<strong>Emotional Bonding</strong>): +10 — "You don't need a grimoire to tell you what you're feeling right now."</p>
 <p><strong>Round 4</strong> — <strong>The moment before.</strong> Face close-up, anticipation. "I am nervous. My heart is doing the fast thing again." Standard +7-8 across three comforting responses.</p>
 <p><strong>Round 5</strong> — <strong>The kiss.</strong> The crystals in the room flare, the air hums, her staff on the floor blazes emerald. "<em>That was not just magic. That was... everything.</em>" Single +25 closer.</p>
-<p><strong>Mechanical significance:</strong> Her first romantic peak. Sets <code>blinky_first_kiss</code>. Foundation for pushing toward Romantic/Intimate stages.</p>
+<p><strong>Mechanical significance:</strong> Her first romantic peak. Its canonical H2H completion gates later story progression and supports the push toward Romantic/Intimate stages.</p>
 <hr/>
 <h2 id="bazaar-date--bazaar_blinky">Bazaar Date (<code>bazaar_blinky</code>)</h2>
 <ul>
@@ -434,12 +434,12 @@ Player buys it for her. "Nobody has ever given me a gift before. I have had thin
 </thead>
 <tbody>
 <tr>
-<td><code>blinky_shared_belonging_thoughts</code></td>
+<td><code>h2h_blinky_where_do_i_belong</code> in <code>completed_h2h_conversations</code></td>
 <td>"Where Do I Belong?" H2H completed</td>
 </tr>
 <tr>
-<td><code>blinky_first_kiss</code></td>
-<td>"Never Been Kissed" H2H completed</td>
+<td><code>h2h_blinky_never_been_kissed</code> in <code>completed_h2h_conversations</code></td>
+<td>"Never Been Kissed" H2H completed; gates Story Beat 43</td>
 </tr>
 <tr>
 <td><code>blinky_wisdom_of_moments_completed</code></td>
@@ -807,7 +807,7 @@ Player buys it for her. "Nobody has ever given me a gift before. I have had thin
 <h3 id="zh-1-where-do-i-belong--h2h_blinky_where_do_i_belong">1. 我属于哪里？（<code>h2h_blinky_where_do_i_belong</code>）</h3>
 <ul>
 <li><strong>解锁：</strong> 相识阶段、60分钟、每日上限1次</li>
-<li><strong>5轮。</strong> 完成时设置<code>blinky_shared_belonging_thoughts</code>标记。</li>
+<li><strong>5轮。</strong> 完成状态以<code>completed_h2h_conversations</code>中的<code>h2h_blinky_where_do_i_belong</code>为准。</li>
 </ul>
 <p>Blinky一反常态地安静，坐在地板上紧抱法杖。水晶以缓慢而忧郁的节奏闪烁。她正在思索一些沉重的事。</p>
 <p><strong>第1轮</strong>——发现她安静地待着。普通选项+5至6。特殊选项（<strong>共情</strong>）：+8，并解锁变体。</p>
@@ -820,7 +820,7 @@ Player buys it for her. "Nobody has ever given me a gift before. I have had thin
 <h3 id="zh-2-never-been-kissed--h2h_blinky_never_been_kissed---first-kiss">2. 从未被亲吻（<code>h2h_blinky_never_been_kissed</code>）——<strong>初吻</strong></h3>
 <ul>
 <li><strong>解锁：</strong> 亲密朋友阶段、60分钟、每日上限1次</li>
-<li><strong>5轮。</strong> 完成时设置<code>blinky_first_kiss</code>标记。</li>
+<li><strong>5轮。</strong> 完成状态以<code>completed_h2h_conversations</code>中的<code>h2h_blinky_never_been_kissed</code>为准。</li>
 </ul>
 <p>她正伏在 <strong>翡翠编织魔导书</strong> 上——这本书讨论情感如何塑造魔法能量。她读到，两个彼此关心的人接吻，是世间最强大的魔法催化剂，而她从未体验过。</p>
 <p><strong>第1轮</strong>——她全神贯注地读书，脸颊泛红。普通选项+5至6。特殊选项（<strong>共情</strong>）：+8，并解锁变体。</p>
@@ -828,7 +828,7 @@ Player buys it for her. "Nobody has ever given me a gift before. I have had thin
 <p><strong>第3轮</strong>——她承认自己想试试看。“你是第一个留下来的人。或者也许……我是第一个留下来的‘我’。”普通选项+7至8。特殊选项（<strong>情感纽带</strong>）：+10——“你不需要魔导书告诉你，此刻正在感受什么。”</p>
 <p><strong>第4轮</strong>——<strong>前一刻。</strong> 面部特写，满怀期待。“我很紧张。我的心又开始做那件很快的事了。”三种安慰回应分别为+7至8。</p>
 <p><strong>第5轮</strong>——<strong>亲吻。</strong> 房间里的水晶骤然亮起，空气嗡鸣，地板上的法杖绽放出明亮的翡翠光芒。“<em>那不只是魔法。那是……一切。</em>”唯一的收尾选项+25。</p>
-<p><strong>机制意义：</strong> 这是她第一次达到恋爱高峰。设置<code>blinky_first_kiss</code>，为继续推进浪漫感／亲密阶段奠定基础。</p>
+<p><strong>机制意义：</strong> 这是她第一次达到恋爱高峰。该谈心的标准完成记录会解锁后续剧情，并为继续推进浪漫感／亲密阶段奠定基础。</p>
 <hr/>
 <h2 id="zh-bazaar-date--bazaar_blinky">集市约会（<code>bazaar_blinky</code>）</h2>
 <ul>
@@ -943,12 +943,12 @@ Player buys it for her. "Nobody has ever given me a gift before. I have had thin
 </thead>
 <tbody>
 <tr>
-<td><code>blinky_shared_belonging_thoughts</code></td>
+<td><code>completed_h2h_conversations</code>中的<code>h2h_blinky_where_do_i_belong</code></td>
 <td>已完成“我属于哪里？”谈心</td>
 </tr>
 <tr>
-<td><code>blinky_first_kiss</code></td>
-<td>已完成“从未被亲吻”谈心</td>
+<td><code>completed_h2h_conversations</code>中的<code>h2h_blinky_never_been_kissed</code></td>
+<td>已完成“从未被亲吻”谈心；解锁故事节拍43</td>
 </tr>
 <tr>
 <td><code>blinky_wisdom_of_moments_completed</code></td>

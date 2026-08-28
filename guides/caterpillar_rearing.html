@@ -26,7 +26,7 @@
       <nav class="breadcrumb" aria-label="Breadcrumb"><a href="../walkthroughs.html" data-copy-en="Official Guides" data-copy-zh="官方攻略">Official Guides</a><span>/</span><span data-copy-en="Activities &amp; Businesses" data-copy-zh="活动与经营">Activities &amp; Businesses</span></nav>
       <p class="eyebrow" data-copy-en="Version-matched official guide" data-copy-zh="与当前版本匹配的官方攻略">Version-matched official guide</p>
       <h1 data-copy-en="Caterpillar Rearing - Complete System Guide" data-copy-zh="毛虫繁育——完整系统指南">Caterpillar Rearing - Complete System Guide</h1>
-      <div class="guide-meta"><span data-copy-en="Activities &amp; Businesses" data-copy-zh="活动与经营">Activities &amp; Businesses</span><span data-copy-en="Simplified Chinese available" data-copy-zh="简体中文译文已上线">Simplified Chinese available</span><span data-site-version>V0.9.6.0</span></div>
+      <div class="guide-meta"><span data-copy-en="Activities &amp; Businesses" data-copy-zh="活动与经营">Activities &amp; Businesses</span><span data-copy-en="Simplified Chinese available" data-copy-zh="简体中文译文已上线">Simplified Chinese available</span><span data-site-version>V0.9.7</span></div>
     </div></section>
     <div class="container guide-layout">
       <aside class="guide-sidebar">
@@ -76,7 +76,7 @@
 <h2 id="story-introduction">Story Introduction</h2>
 <p>Plot file: <code>seraph_caterpillar_tutorial.json</code> — "The Butterfly Effect"</p>
 <p>Trigger: Auto-fires the first time you enter <code>present_forest_uptown</code> (Whispering Woods Uptown). Blocked by the <code>seraph_caterpillar_tutorial_completed</code> flag after the first run. Awards +5 Seraph relationship.</p>
-<p>Seraph greets you and explains that small actions can have large consequences across time. Raising butterflies and moths in the Present and Medieval eras helps restore the future — VOID's toxic influence on the Future-era forest can be reversed by sustaining large enough populations across the past and present.</p>
+<p>Seraph greets you and explains that small acts of care can build a thriving ecosystem. Raising butterflies and moths in the Present and Medieval eras develops strong, varied populations while supporting research and conservation.</p>
 <p>Seraph covers:</p>
 <ul>
 <li>Caterpillars produce silk for crafting and fish bait when populations get high</li>
@@ -279,10 +279,10 @@
 <p>These are auto-triggering plot rewards that fire when you visit the right location with <code>medieval_population_total + present_population_total</code> at or above the threshold.</p>
 <ul>
 <li>500,000 total: +1 Crystal, +5 Seraph, +5 Lillian. Either Whispering Woods. Plot: Ecosystem Stabilization.</li>
-<li>5,000,000 total: +3 Crystals, +5 Seraph, +5 Lillian. Either Whispering Woods. Plot: Forest Transformation.</li>
+<li>5,000,000 total: +3 Crystals, +5 Seraph, +5 Lillian. Either Whispering Woods. Plot: A Flourishing Ecosystem.</li>
 <li>10,000,000 total: Silken Moth Cloth (maid item). Whispering Woods (Medieval) only. Plot: The Moth Lady's Blessing.</li>
 <li>15,000,000 total: Silk Uniform (worker item). Whispering Woods (Medieval) only. Plot: The Moth Lady's Gift.</li>
-<li>100,000,000 total: +5 Crystals, +5 Seraph, +5 Lillian. Either Whispering Woods. Plot: Secret Guardian.</li>
+<li>100,000,000 total: +5 Crystals, +5 Seraph, +5 Lillian. Either Whispering Woods. Plot: A Living Legacy.</li>
 </ul>
 <p>Each plot has a one-shot completion handler that flips a flag (e.g. <code>caterpillar_reward_500000_claimed</code>) so it cannot fire twice.</p>
 <blockquote>
@@ -676,7 +676,7 @@ Brothel Garden                       24h      3d       Lime Hawkmoth 50, Poplar 
 <li>The 500K and 5M crystal rewards are easy mid-game targets.</li>
 <li>1M unlocks Marina's Caterpillar Bait — permanent fishing minigame buff (unlimited bait, faster ring spawn, better rarity).</li>
 <li>10M and 15M unlock the Silken Moth Cloth maid item and Silk Uniform worker item — both go through one-time plot triggers at Whispering Woods (Medieval) specifically.</li>
-<li>100M is a long-term goal for the Secret Guardian crystal payout.</li>
+<li>100M is a long-term goal for A Living Legacy's crystal payout.</li>
 </ul>
 <h3 id="marina-caterpillar-bait--unlock-checklist">Marina caterpillar bait — unlock checklist</h3>
 <p>To unlock at the Medieval Fishing Hut, all of these must be true:</p>
@@ -739,7 +739,7 @@ Brothel Garden                       24h      3d       Lime Hawkmoth 50, Poplar 
 <h2 id="zh-story-introduction">剧情导入</h2>
 <p>剧情文件：<code>seraph_caterpillar_tutorial.json</code>——“蝴蝶效应”</p>
 <p>触发条件：首次进入 <code>present_forest_uptown</code>（低语森林上城区）时自动触发。首次完成后，<code>seraph_caterpillar_tutorial_completed</code> 标记会阻止其再次播放。奖励 +5 Seraph 好感度。</p>
-<p>Seraph 会迎接你，并解释微小行动如何跨越时间引发巨大后果。在现代和中世纪饲养蝴蝶与飞蛾，有助于修复未来；只要在过去与现代维持足够庞大的种群，就能逆转 VOID 的有毒影响对未来森林造成的破坏。</p>
+<p>Seraph 会迎接你，并解释细小的关爱之举也能孕育繁荣的生态系统。在现代和中世纪饲养蝴蝶与飞蛾，可以在支持研究与保育的同时，培育强健而多样的种群。</p>
 <p>Seraph 会介绍：</p>
 <ul>
 <li>种群足够庞大时，毛虫可以产出用于制作的蚕丝和鱼饵</li>
@@ -950,10 +950,10 @@ Brothel Garden                       24h      3d       Lime Hawkmoth 50, Poplar 
 <p>当 <code>medieval_population_total + present_population_total</code> 达到或超过门槛，并造访正确地点时，以下剧情奖励会自动触发。</p>
 <ul>
 <li>总数 500,000：+1 水晶、+5 Seraph、+5 Lillian。任一低语森林均可。剧情：生态系统稳定。</li>
-<li>总数 5,000,000：+3 水晶、+5 Seraph、+5 Lillian。任一低语森林均可。剧情：森林蜕变。</li>
+<li>总数 5,000,000：+3 水晶、+5 Seraph、+5 Lillian。任一低语森林均可。剧情：蓬勃发展的生态系统。</li>
 <li>总数 10,000,000：丝蛾布（女仆道具）。仅限低语森林（中世纪）。剧情：蛾女士的祝福。</li>
 <li>总数 15,000,000：丝绸制服（员工道具）。仅限低语森林（中世纪）。剧情：蛾女士的馈赠。</li>
-<li>总数 100,000,000：+5 水晶、+5 Seraph、+5 Lillian。任一低语森林均可。剧情：秘密守护者。</li>
+<li>总数 100,000,000：+5 水晶、+5 Seraph、+5 Lillian。任一低语森林均可。剧情：活生生的遗产。</li>
 </ul>
 <p>每段剧情都有一次性完成处理器，会翻转对应标记（例如 <code>caterpillar_reward_500000_claimed</code>），因此无法重复触发。</p>
 <blockquote>
@@ -1354,7 +1354,7 @@ Brothel Garden                       24h      3d       Lime Hawkmoth 50, Poplar 
 <li>500K 与 5M 水晶奖励都是容易达成的中期目标。</li>
 <li>1M 解锁 Marina 的毛虫鱼饵——永久钓鱼小游戏增益（无限鱼饵、更快刷新圆环、更高稀有度）。</li>
 <li>10M 和 15M 分别解锁丝蛾布女仆道具与丝绸制服员工道具——两者都必须在低语森林（中世纪）通过一次性剧情触发。</li>
-<li>100M 是获得“秘密守护者”水晶奖励的长期目标。</li>
+<li>100M 是获得“活生生的遗产”水晶奖励的长期目标。</li>
 </ul>
 <h3 id="zh-marina-毛虫鱼饵解锁检查表">Marina 毛虫鱼饵——解锁检查表</h3>
 <p>要在中世纪钓鱼小屋解锁，必须满足以下全部条件：</p>

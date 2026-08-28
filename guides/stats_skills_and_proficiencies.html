@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="A complete player-build reference for Chronoromancer V0.9.6.1FUTURE: what every stat does, how effective values and resource soft caps work, what each starting proficiency actually grants, where skills come from, and how the three specia…"><link rel="icon" type="image/png" href="../assets/images/v2/favicon.png">
+  <meta name="description" content="A complete player-build reference for Chronoromancer V0.9.6.3FUTURE: what every stat does, how effective values and resource soft caps work, what each starting proficiency actually grants, where skills come from, and how the three specia…"><link rel="icon" type="image/png" href="../assets/images/v2/favicon.png">
   <link rel="stylesheet" href="../assets/css/style.css"><link rel="stylesheet" href="../assets/css/walkthroughs.css">
   <title>Stats, Skills &amp; Proficiencies Guide | Chronoromancer Guides</title></head>
 <body class="guide-page" data-title-en="Stats, Skills &amp; Proficiencies Guide | Chronoromancer Guides" data-title-zh="属性、技能与专长指南 | Chronoromancer 官方攻略">
@@ -26,7 +26,7 @@
       <nav class="breadcrumb" aria-label="Breadcrumb"><a href="../walkthroughs.html" data-copy-en="Official Guides" data-copy-zh="官方攻略">Official Guides</a><span>/</span><span data-copy-en="Core Systems" data-copy-zh="核心系统">Core Systems</span></nav>
       <p class="eyebrow" data-copy-en="Version-matched official guide" data-copy-zh="与当前版本匹配的官方攻略">Version-matched official guide</p>
       <h1 data-copy-en="Stats, Skills &amp; Proficiencies Guide" data-copy-zh="属性、技能与专长指南">Stats, Skills &amp; Proficiencies Guide</h1>
-      <div class="guide-meta"><span data-copy-en="Core Systems" data-copy-zh="核心系统">Core Systems</span><span data-copy-en="Simplified Chinese available" data-copy-zh="简体中文译文已上线">Simplified Chinese available</span><span data-site-version>V0.9.6.0</span></div>
+      <div class="guide-meta"><span data-copy-en="Core Systems" data-copy-zh="核心系统">Core Systems</span><span data-copy-en="Simplified Chinese available" data-copy-zh="简体中文译文已上线">Simplified Chinese available</span><span data-site-version>V0.9.7</span></div>
     </div></section>
     <div class="container guide-layout">
       <aside class="guide-sidebar">
@@ -37,7 +37,7 @@
       <article class="guide-content">
         <div class="spoiler-notice"><strong data-copy-en="Guide notice" data-copy-zh="攻略提示">Guide notice</strong><span data-copy-en="This page contains gameplay and story spoilers and may describe mature systems." data-copy-zh="本页包含玩法与剧情剧透，并可能涉及成人游戏系统。">This page contains gameplay and story spoilers and may describe mature systems.</span></div>
         <div class="markdown-body" data-lang-panel="en">
-<p><em>A complete player-build reference for Chronoromancer V0.9.6.1_FUTURE: what every stat does, how effective values and resource soft caps work, what each starting proficiency actually grants, where skills come from, and how the three specialist combat paths scale.</em></p>
+<p><em>A complete player-build reference for Chronoromancer V0.9.6.3_FUTURE: what every stat does, how effective values and resource soft caps work, what each starting proficiency actually grants, where skills come from, and how the three specialist combat paths scale.</em></p>
 <blockquote>
 <p><strong>Community credit:</strong> The Specialist Combat Paths section was informed by the player-created <a href="https://chronoromancer.miraheze.org/wiki/Game_Systems:Specialist_Class" rel="noopener noreferrer" target="_blank">Specialist Class wiki guide</a>, available under <a href="https://creativecommons.org/licenses/by-sa/4.0/" rel="noopener noreferrer" target="_blank">CC BY-SA 4.0</a>. Its rank research was used as a foundation, then rechecked, corrected, and expanded against the current game source.</p>
 </blockquote>
@@ -1071,12 +1071,16 @@ base result          = total - floor(total × reduction percentage)
 <td>Archery Focus, Animal Care</td>
 </tr>
 <tr>
+<td><strong>Riki</strong></td>
+<td>Archery Focus</td>
+</tr>
+<tr>
 <td><strong>Sashina</strong></td>
 <td>Elemental Blast, Healing Touch, Telekinesis, Illusion Weaving, Mystic Seduction, Arcane Surge, Sashina's Gift; her Frog Rescue plot awards Transmutation</td>
 </tr>
 <tr>
 <td><strong>Aziza</strong></td>
-<td>Mana Channeling, Enchantment; later unlocks the Sorcerer path</td>
+<td>Mana Channeling, Arcane Knowledge, Enchantment; later unlocks the Sorcerer path</td>
 </tr>
 <tr>
 <td><strong>Blinky</strong></td>
@@ -1212,7 +1216,7 @@ base result          = total - floor(total × reduction percentage)
 </tr>
 </tbody>
 </table></div>
-<p>The Wizard Faction can supply many magic skills as clout selections, including some that also have named teachers. Random crystal training, the Gonzo shop, Wiseman encounters, and several dungeon scenarios can teach eligible non-exclusive skills.</p>
+<p>Known magic skills contribute clout to the Wizard Faction; clout is not spent to learn those skills. Random crystal training, the Gonzo shop, Wiseman encounters, and several dungeon scenarios can teach eligible non-exclusive skills.</p>
 <hr/>
 <h2 id="exclusive-skills">Exclusive skills</h2>
 <p>“Exclusive” means excluded from the ordinary random-skill pool. It does not always mean there is only one historical route; a plot or faction route can sometimes provide the same skill deliberately.</p>
@@ -1252,7 +1256,7 @@ base result          = total - floor(total × reduction percentage)
 </tr>
 <tr>
 <td><strong>Transmutation</strong></td>
-<td>Sashina's Frog Rescue plot; Wizard Faction also offers it.</td>
+<td>Complete Sashina's Frog Rescue plot.</td>
 <td>Unlocks special alchemical and dungeon resolutions.</td>
 </tr>
 <tr>
@@ -1638,7 +1642,7 @@ normal chance loss        = 10 percentage points after each chained hit
 </ol>
 <hr/>
 <span aria-hidden="true" class="anchor-alias" id="current-build-documentation-exceptions"></span><h2 id="current-build-source-audit-notes">Current-build source-audit notes</h2>
-<p>These are source-audit findings for V0.9.6.1_FUTURE:</p>
+<p>These are source-audit findings for V0.9.6.3_FUTURE:</p>
 <ol>
 <li><strong>Computer Expert's character-creation display is fixed in the current code.</strong> It now lists the actual granted skills: <strong>Engineering Genius</strong> and <strong>System Hacking</strong>.</li>
 <li><strong>Games Master's character-creation display is fixed in the current code.</strong> It now lists the actual granted skills: <strong>Tactical Awareness</strong> and <strong>Cheating</strong>.</li>
@@ -1649,7 +1653,7 @@ normal chance loss        = 10 percentage points after each chained hit
 <p>These notes should be revisited whenever character creation, action gating, or the combat-path system changes.</p>
 </div>
         <div class="markdown-body" data-lang-panel="zh" hidden>
-<p><em>Chronoromancer V0.9.6.1_FUTURE 的完整角色构筑参考：每项属性的作用、有效值与资源软上限的运作方式、各项初始专长实际提供的内容、技能的来源，以及三条专精战斗路线的成长机制。</em></p>
+<p><em>Chronoromancer V0.9.6.3_FUTURE 的完整角色构筑参考：每项属性的作用、有效值与资源软上限的运作方式、各项初始专长实际提供的内容、技能的来源，以及三条专精战斗路线的成长机制。</em></p>
 <blockquote>
 <p><strong>社区致谢：</strong>“专精战斗路线”一节参考了玩家编写的 <a href="https://chronoromancer.miraheze.org/wiki/Game_Systems:Specialist_Class" rel="noopener noreferrer" target="_blank">专精职业 Wiki 指南</a>，该指南采用 <a href="https://creativecommons.org/licenses/by-sa/4.0/" rel="noopener noreferrer" target="_blank">CC BY-SA 4.0</a> 许可。本文以其中的阶级研究为基础，并依据当前游戏源代码重新核对、修正和扩充。</p>
 </blockquote>
@@ -2697,7 +2701,7 @@ base result          = total - floor(total × reduction percentage)
 </tr>
 <tr>
 <td><strong>Aziza</strong></td>
-<td>法力引导、附魔；后续解锁术士路线</td>
+<td>法力引导、奥术知识、附魔；后续解锁术士路线</td>
 </tr>
 <tr>
 <td><strong>Blinky</strong></td>
@@ -2833,7 +2837,7 @@ base result          = total - floor(total × reduction percentage)
 </tr>
 </tbody>
 </table></div>
-<p>巫师阵营可以通过影响力选择提供许多魔法技能，其中部分技能也有具名导师。随机水晶训练、Gonzo 商店、Wiseman 遭遇和若干地牢场景均可教授符合条件的非独占技能。</p>
+<p>已掌握的魔法技能会为巫师阵营贡献影响力；影响力不能用于学习这些技能。随机水晶训练、Gonzo 商店、Wiseman 遭遇和若干地牢场景均可教授符合条件的非独占技能。</p>
 <hr/>
 <p></p>
 <h2 id="zh-exclusive-skills">独占技能</h2>
@@ -2874,7 +2878,7 @@ base result          = total - floor(total × reduction percentage)
 </tr>
 <tr>
 <td><strong>转化术</strong></td>
-<td>Sashina 的青蛙救援剧情；巫师阵营也会提供。</td>
+<td>完成 Sashina 的青蛙救援剧情。</td>
 <td>解锁特殊炼金和地牢解决方式。</td>
 </tr>
 <tr>
@@ -3264,7 +3268,7 @@ normal chance loss        = 10 percentage points after each chained hit
 <hr/>
 <p></p>
 <h2 id="zh-current-build-documentation-exceptions">当前版本源代码审计说明</h2>
-<p>以下是 V0.9.6.1_FUTURE 的源代码审计结果：</p>
+<p>以下是 V0.9.6.3_FUTURE 的源代码审计结果：</p>
 <ol>
 <li><strong>当前代码已修正计算机专家在角色创建界面的说明。</strong> 现在会列出实际授予的技能：<strong>工程天才</strong> 和 <strong>系统黑客</strong>。</li>
 <li><strong>当前代码已修正游戏大师在角色创建界面的说明。</strong> 现在会列出实际授予的技能：<strong>战术意识</strong> 和 <strong>作弊</strong>。</li>
