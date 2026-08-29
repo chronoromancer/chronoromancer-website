@@ -1,0 +1,4 @@
+c12a0e9aafae43e9470d93abc4ba1485828ed3b280920b20c6228810ad3fccf0  Chronoromancer-V0.9.7b_Malice-win.zip
+581ad31bfd00f137943f15f3779de4df9d682fc8d561aeab5718a83c25bcaf21  Chronoromancer-V0.9.7b_Malice-pc.zip
+abb3d21cc70c42b9b52d1b0cc2fbf78ab13cb795d64437c2ada38b9f69a63692  Chronoromancer-V0.9.7b_Malice-mac.zip
+bb3363e4674d603e3d1b3ce4d6a1bdf67fae48d2a1e1cb16c4d78afdee8cdd9f  com.chronoromancer.game-9-1787997339-release.apk
