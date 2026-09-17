@@ -1334,7 +1334,8 @@ a.download-card:hover {
   display: grid;
   place-items: center;
   padding: 28px;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
   background: #05070c;
 }
 
@@ -1403,6 +1404,12 @@ a.download-card:hover {
   margin: 20px 0 0;
   color: #7f8a9c !important;
   font-size: 0.75rem;
+}
+
+@media (max-height: 820px) {
+  .age-gate-page {
+    place-items: start center;
+  }
 }
 
 @media (max-width: 960px) {
