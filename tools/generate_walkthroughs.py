@@ -334,7 +334,7 @@ def build_guide_page(guide: Guide, previous: Guide | None, following: Guide | No
       <nav class="breadcrumb" aria-label="Breadcrumb"><a href="../walkthroughs.html" data-copy-en="Official Guides" data-copy-zh="官方攻略">Official Guides</a><span>/</span><span data-copy-en="{esc(category['en'])}" data-copy-zh="{esc(category['zh'])}">{esc(category['en'])}</span></nav>
       <p class="eyebrow" data-copy-en="Version-matched official guide" data-copy-zh="与当前版本匹配的官方攻略">Version-matched official guide</p>
       <h1 data-copy-en="{esc(guide.title_en)}" data-copy-zh="{esc(guide.title_zh)}">{esc(guide.title_en)}</h1>
-      <div class="guide-meta"><span data-copy-en="{esc(category['en'])}" data-copy-zh="{esc(category['zh'])}">{esc(category['en'])}</span><span data-copy-en="{translation_label_en}" data-copy-zh="{translation_label_zh}">{translation_label_en}</span><span data-site-version>V0.9.7.6c</span></div>
+      <div class="guide-meta"><span data-copy-en="{esc(category['en'])}" data-copy-zh="{esc(category['zh'])}">{esc(category['en'])}</span><span data-copy-en="{translation_label_en}" data-copy-zh="{translation_label_zh}">{translation_label_en}</span><span data-site-version>V0.9.7.7c</span></div>
     </div></section>
     <div class="container guide-layout">
       <aside class="guide-sidebar">

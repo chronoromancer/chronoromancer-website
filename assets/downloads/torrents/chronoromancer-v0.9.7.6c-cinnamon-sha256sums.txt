@@ -1,4 +1,0 @@
-5baa57a0c36d67d422eedc2bd9b8c523776a6b908e8c752c0c2b1123678b132c  Chronoromancer-V0.9.7.6c_Cinnamon-win.zip
-ee4b2b5e02089d8a14d6e60c85362ffcaf1abff31f8d52437366c47b61de3b0b  Chronoromancer-V0.9.7.6c_Cinnamon-pc.zip
-dd8d15055dc47b343fa457e240635c8e7d3f853c3ae8e1a16e38f25d0ba2878d  Chronoromancer-V0.9.7.6c_Cinnamon-mac.zip
-0ab70571a755b6600d6e2391e281e34589a100e42e60cfff2a7aaf1c0ba99fcf  com.chronoromancer.game-9.7-1789645449-release.apk
