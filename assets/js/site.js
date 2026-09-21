@@ -2,6 +2,8 @@
   "use strict";
 
   const config = window.CHRONO_SITE_CONFIG || {};
+  const russianCopy = window.CHRONO_RU_TRANSLATIONS || {};
+  const russianCharacters = window.CHRONO_RU_CHARACTERS || {};
   const storageKey = "chronoromancer-language";
   const common = {
     en: {
@@ -12,6 +14,7 @@
       navGallery: "Gallery",
       navWiki: "Player Wiki",
       navDownload: "Download",
+      navBuy: "Buy",
       menuOpen: "Open navigation",
       menuClose: "Close navigation",
       languageLabel: "Language",
@@ -37,6 +40,7 @@
       navGallery: "画廊",
       navWiki: "玩家 Wiki",
       navDownload: "下载",
+      navBuy: "购买",
       menuOpen: "打开导航菜单",
       menuClose: "关闭导航菜单",
       languageLabel: "语言",
@@ -53,6 +57,32 @@
       next: "下一张",
       comingSoon: "正在准备",
       available: "可用"
+    },
+    ru: {
+      navHome: "Главная",
+      navStory: "Сюжет",
+      navCharacters: "Персонажи",
+      navGuides: "Руководства",
+      navGallery: "Галерея",
+      navWiki: "Вики игроков",
+      navDownload: "Скачать",
+      navBuy: "Купить",
+      menuOpen: "Открыть меню навигации",
+      menuClose: "Закрыть меню навигации",
+      languageLabel: "Язык",
+      footerDescription: "Ролевая песочница о путешествиях во времени только для взрослых. На общедоступном сайте используются безопасные для просмотра изображения.",
+      footerExplore: "Разделы",
+      footerCommunity: "Сообщество",
+      footerLegal: "Правовая информация",
+      footerPrivacy: "Конфиденциальность",
+      footerTerms: "Условия",
+      officialItch: "Официальная страница на itch.io",
+      copyright: "Chronoromancer Studio. Все права защищены.",
+      close: "Закрыть",
+      previous: "Предыдущее",
+      next: "Следующее",
+      comingSoon: "Готовится",
+      available: "Доступно"
     }
   };
 
@@ -60,19 +90,34 @@
   let galleryItems = [];
   let activeGalleryIndex = 0;
 
+  function pageSupportsRussian() {
+    return Boolean(document.querySelector('[data-language="ru"]'));
+  }
+
   function getInitialLanguage() {
     const requested = new URLSearchParams(window.location.search).get("lang");
     if (requested === "zh" || requested === "zh-CN") return "zh";
+    if ((requested === "ru" || requested === "ru-RU") && pageSupportsRussian()) return "ru";
     if (requested === "en") return "en";
     try {
-      return localStorage.getItem(storageKey) === "zh" ? "zh" : "en";
+      const stored = localStorage.getItem(storageKey);
+      if (stored === "ru") return pageSupportsRussian() ? "ru" : "en";
+      return stored === "zh" ? "zh" : "en";
     } catch (error) {
       return "en";
     }
   }
 
+  function localizedValue(element, attribute) {
+    const english = element.dataset[`${attribute}En`];
+    if (currentLanguage === "zh") return element.dataset[`${attribute}Zh`] || english;
+    if (currentLanguage === "ru") return element.dataset[`${attribute}Ru`] || russianCopy[english] || english;
+    return english;
+  }
+
   function setStoredLanguage(language) {
     try {
+      if (!pageSupportsRussian() && language === "en" && localStorage.getItem(storageKey) === "ru") return;
       localStorage.setItem(storageKey, language);
     } catch (error) {
       // The site still works when storage is unavailable.
@@ -80,10 +125,11 @@
   }
 
   function applyLanguage(language) {
-    currentLanguage = language === "zh" ? "zh" : "en";
+    currentLanguage = language === "zh" || language === "ru" ? language : "en";
     const copy = common[currentLanguage];
-    document.documentElement.lang = currentLanguage === "zh" ? "zh-CN" : "en";
+    document.documentElement.lang = currentLanguage === "zh" ? "zh-CN" : currentLanguage === "ru" ? "ru" : "en";
     document.body.classList.toggle("lang-zh", currentLanguage === "zh");
+    document.body.classList.toggle("lang-ru", currentLanguage === "ru");
 
     document.querySelectorAll("[data-i18n]").forEach((element) => {
       const value = copy[element.dataset.i18n];
@@ -91,15 +137,15 @@
     });
 
     document.querySelectorAll("[data-copy-en][data-copy-zh]").forEach((element) => {
-      element.textContent = currentLanguage === "zh" ? element.dataset.copyZh : element.dataset.copyEn;
+      element.textContent = localizedValue(element, "copy");
     });
 
     document.querySelectorAll("[data-placeholder-en][data-placeholder-zh]").forEach((element) => {
-      element.placeholder = currentLanguage === "zh" ? element.dataset.placeholderZh : element.dataset.placeholderEn;
+      element.placeholder = localizedValue(element, "placeholder");
     });
 
     document.querySelectorAll("[data-aria-en][data-aria-zh]").forEach((element) => {
-      element.setAttribute("aria-label", currentLanguage === "zh" ? element.dataset.ariaZh : element.dataset.ariaEn);
+      element.setAttribute("aria-label", localizedValue(element, "aria"));
     });
 
     document.querySelectorAll("[data-lang-panel]").forEach((panel) => {
@@ -112,7 +158,15 @@
       button.setAttribute("aria-pressed", String(selected));
     });
 
-    const title = currentLanguage === "zh" ? document.body.dataset.titleZh : document.body.dataset.titleEn;
+    document.querySelectorAll(".language-switch").forEach((switcher) => {
+      switcher.setAttribute("aria-label", copy.languageLabel);
+    });
+
+    const title = currentLanguage === "zh"
+      ? document.body.dataset.titleZh
+      : currentLanguage === "ru"
+        ? (document.body.dataset.titleRu || russianCopy[document.body.dataset.titleEn] || document.body.dataset.titleEn)
+        : document.body.dataset.titleEn;
     if (title) document.title = title;
     const navToggle = document.querySelector("[data-nav-toggle]");
     if (navToggle) {
@@ -242,7 +296,11 @@
     const item = galleryItems[activeGalleryIndex];
     if (!modal || !item) return;
     const source = item.querySelector("img");
-    const caption = currentLanguage === "zh" ? item.dataset.captionZh : item.dataset.captionEn;
+    const caption = currentLanguage === "zh"
+      ? item.dataset.captionZh
+      : currentLanguage === "ru"
+        ? (item.dataset.captionRu || russianCopy[item.dataset.captionEn] || item.dataset.captionEn)
+        : item.dataset.captionEn;
     modal.querySelector("[data-lightbox-image]").src = source.src;
     modal.querySelector("[data-lightbox-image]").alt = caption || source.alt;
     modal.querySelector("[data-lightbox-caption]").textContent = caption || "";
@@ -266,9 +324,9 @@
     if (!grid || !characters.length) return;
 
     const eraLabels = {
-      present: { en: "Present", zh: "现代" },
-      medieval: { en: "Medieval", zh: "中世纪" },
-      future: { en: "Future", zh: "未来" }
+      present: { en: "Present", zh: "现代", ru: "Современность" },
+      medieval: { en: "Medieval", zh: "中世纪", ru: "Средневековье" },
+      future: { en: "Future", zh: "未来", ru: "Будущее" }
     };
     const fragment = document.createDocumentFragment();
 
@@ -279,6 +337,7 @@
       card.dataset.era = character.era;
       card.dataset.searchEn = `${character.name} ${character.id} ${character.era} ${character.descriptionEn}`;
       card.dataset.searchZh = `${character.name} ${character.id} ${character.descriptionZh}`;
+      card.dataset.searchRu = `${character.name} ${character.id} ${russianCharacters[character.id] || ""}`;
 
       const portrait = document.createElement("img");
       portrait.src = character.image;
@@ -291,6 +350,7 @@
       tag.className = "card-tag";
       tag.dataset.copyEn = eraLabels[character.era].en;
       tag.dataset.copyZh = eraLabels[character.era].zh;
+      tag.dataset.copyRu = eraLabels[character.era].ru;
       tag.textContent = eraLabels[character.era][currentLanguage];
 
       const name = document.createElement("h2");
@@ -299,7 +359,12 @@
       const description = document.createElement("p");
       description.dataset.copyEn = character.descriptionEn;
       description.dataset.copyZh = character.descriptionZh;
-      description.textContent = currentLanguage === "zh" ? character.descriptionZh : character.descriptionEn;
+      description.dataset.copyRu = russianCharacters[character.id] || character.descriptionEn;
+      description.textContent = currentLanguage === "zh"
+        ? character.descriptionZh
+        : currentLanguage === "ru"
+          ? description.dataset.copyRu
+          : character.descriptionEn;
 
       copy.append(tag, name, description);
       card.append(portrait, copy);
@@ -320,11 +385,12 @@
     const active = document.querySelector("[data-character-filter].is-active");
     const filter = active ? active.dataset.characterFilter : "all";
     const search = document.querySelector("[data-character-search]");
-    const query = search ? search.value.trim().toLocaleLowerCase(currentLanguage === "zh" ? "zh-CN" : "en") : "";
+    const locale = currentLanguage === "zh" ? "zh-CN" : currentLanguage === "ru" ? "ru" : "en";
+    const query = search ? search.value.trim().toLocaleLowerCase(locale) : "";
     let visibleCount = 0;
     cards.forEach((card) => {
       const eraMatch = filter === "all" || card.dataset.era === filter;
-      const haystack = `${card.dataset.searchEn || ""} ${card.dataset.searchZh || ""} ${card.textContent}`.toLocaleLowerCase();
+      const haystack = `${card.dataset.searchEn || ""} ${card.dataset.searchZh || ""} ${card.dataset.searchRu || ""} ${card.textContent}`.toLocaleLowerCase(locale);
       const searchMatch = !query || haystack.includes(query);
       card.hidden = !(eraMatch && searchMatch);
       if (!card.hidden) visibleCount += 1;
