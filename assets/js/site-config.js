@@ -1,6 +1,6 @@
 window.CHRONO_SITE_CONFIG = Object.freeze({
-  release: "V0.9.7.7c",
-  promotionRelease: "V0.9.7.7c",
+  release: "V0.9.8cc",
+  promotionRelease: "V0.9.8cc",
   store: {
     earlyAccess: {
       url: "https://store.chronoromancergame.com/products/df3e206f-c149-4557-b335-9bcafeadef18",
@@ -21,38 +21,38 @@ window.CHRONO_SITE_CONFIG = Object.freeze({
       enabled: true
     },
     directWin: {
-      url: "https://downloads.chronoromancergame.com/Chronoromancer-V0.9.7.7c_Cinnamon-win.zip",
+      url: "https://downloads.chronoromancergame.com/Chronoromancer-V0.9.8cc_TD-win.zip",
       enabled: true
     },
     directPc: {
-      url: "https://downloads.chronoromancergame.com/Chronoromancer-V0.9.7.7c_Cinnamon-pc.zip",
+      url: "https://downloads.chronoromancergame.com/Chronoromancer-V0.9.8cc_TD-pc.zip",
       enabled: true
     },
     directMac: {
-      url: "https://downloads.chronoromancergame.com/Chronoromancer-V0.9.7.7c_Cinnamon-mac.zip",
+      url: "https://downloads.chronoromancergame.com/Chronoromancer-V0.9.8cc_TD-mac.zip",
       enabled: true
     },
     directAndroid: {
-      url: "https://downloads.chronoromancergame.com/com.chronoromancer.game-9.7-1789699662-release.apk",
+      url: "https://downloads.chronoromancergame.com/com.chronoromancer.game-9-1790388769-release.apk",
       enabled: true
     },
     torrentPc: {
-      url: "assets/downloads/torrents/chronoromancer-v0.9.7.7c-cinnamon-pc-windows-linux.torrent",
-      magnet: "magnet:?xt=urn:btih:5ef5880b1cce434a63e5eedcd807c5e9360b066f&dn=Chronoromancer-V0.9.7.7c_Cinnamon-pc.zip&ws=https%3A%2F%2Fdownloads.chronoromancergame.com%2FChronoromancer-V0.9.7.7c_Cinnamon-pc.zip&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451&tr=udp%3A%2F%2Fopen.tracker.cl%3A1337%2Fannounce",
+      url: "assets/downloads/torrents/chronoromancer-v0.9.8cc-td-pc-windows-linux.torrent",
+      magnet: "magnet:?xt=urn:btih:a8b5834e05c351cf2d95bcc5216bde66100dd18f&dn=Chronoromancer-V0.9.8cc_TD-pc.zip&ws=https%3A%2F%2Fdownloads.chronoromancergame.com%2FChronoromancer-V0.9.8cc_TD-pc.zip&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451&tr=udp%3A%2F%2Fopen.tracker.cl%3A1337%2Fannounce",
       enabled: true
     },
     torrentMac: {
-      url: "assets/downloads/torrents/chronoromancer-v0.9.7.7c-cinnamon-macos.torrent",
-      magnet: "magnet:?xt=urn:btih:ffaf37c37f4a666f5f21c39ad24f84d285f19d56&dn=Chronoromancer-V0.9.7.7c_Cinnamon-mac.zip&ws=https%3A%2F%2Fdownloads.chronoromancergame.com%2FChronoromancer-V0.9.7.7c_Cinnamon-mac.zip&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451&tr=udp%3A%2F%2Fopen.tracker.cl%3A1337%2Fannounce",
+      url: "assets/downloads/torrents/chronoromancer-v0.9.8cc-td-macos.torrent",
+      magnet: "magnet:?xt=urn:btih:5dbfa3c6306dad386ba022adbe3fc5a93c75e223&dn=Chronoromancer-V0.9.8cc_TD-mac.zip&ws=https%3A%2F%2Fdownloads.chronoromancergame.com%2FChronoromancer-V0.9.8cc_TD-mac.zip&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451&tr=udp%3A%2F%2Fopen.tracker.cl%3A1337%2Fannounce",
       enabled: true
     },
     torrentAndroid: {
-      url: "assets/downloads/torrents/chronoromancer-v0.9.7.7c-cinnamon-android.torrent",
-      magnet: "magnet:?xt=urn:btih:1379d7604774cf25f70fe07b29ba6c972b6294c1&dn=com.chronoromancer.game-9.7-1789699662-release.apk&ws=https%3A%2F%2Fdownloads.chronoromancergame.com%2Fcom.chronoromancer.game-9.7-1789699662-release.apk&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451&tr=udp%3A%2F%2Fopen.tracker.cl%3A1337%2Fannounce",
+      url: "assets/downloads/torrents/chronoromancer-v0.9.8cc-td-android.torrent",
+      magnet: "magnet:?xt=urn:btih:705bd277cdd46bf01ebd4a75717ade250c651e93&dn=com.chronoromancer.game-9-1790388769-release.apk&ws=https%3A%2F%2Fdownloads.chronoromancergame.com%2Fcom.chronoromancer.game-9-1790388769-release.apk&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451&tr=udp%3A%2F%2Fopen.tracker.cl%3A1337%2Fannounce",
       enabled: true
     },
     torrentChecksums: {
-      url: "assets/downloads/torrents/chronoromancer-v0.9.7.7c-cinnamon-sha256sums.txt",
+      url: "assets/downloads/torrents/chronoromancer-v0.9.8cc-td-sha256sums.txt",
       enabled: true
     }
   },

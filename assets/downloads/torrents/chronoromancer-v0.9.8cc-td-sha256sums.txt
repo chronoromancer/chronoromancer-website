@@ -1,0 +1,4 @@
+2c5c50897d2e44234cf4511df3f071f0bcd4ceac504d4bae63a5a084fe1a777a  Chronoromancer-V0.9.8cc_TD-win.zip
+334c19ca28e379fd1a4d5b7e57e3b3d5fae984af32759abf0a42a4d60c361f72  Chronoromancer-V0.9.8cc_TD-pc.zip
+df2d781b6fefca54e3403d2209d4b4d10f22fbfdca7e0fa0cfd699d014bb1b52  Chronoromancer-V0.9.8cc_TD-mac.zip
+42e99261306f24ee0ddc69fda95af132ddfc94002113afd55787e1b6284270d1  com.chronoromancer.game-9-1790388769-release.apk
