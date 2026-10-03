@@ -1,0 +1,4 @@
+e49364165e8301a75fcdc9a0565c935a90a0f5c6dc507ad8f51c7b2cbe933d0f  Chronoromancer-V0.9.8.5_Nerida-win.zip
+7bb9976f31b3172511c4180b9d412f07ac4d937f25113eb1a20a8073c1b9f8cd  Chronoromancer-V0.9.8.5_Nerida-pc.zip
+fab34fec77a7f44fc59a81de9cbb207ec334a965275c9cca821db0f6ee2857e3  Chronoromancer-V0.9.8.5_Nerida-mac.zip
+ad8401c1c7eb05cdd153f39d85bb9e2c72dc5aa621604a49ec2e835020a8fe4f  com.chronoromancer.game-9.8-1791034654-release.apk

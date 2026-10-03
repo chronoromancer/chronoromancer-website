@@ -1,6 +1,6 @@
 window.CHRONO_SITE_CONFIG = Object.freeze({
-  release: "V0.9.8ce",
-  promotionRelease: "V0.9.8ce",
+  release: "V0.9.8.5",
+  promotionRelease: "V0.9.8.5",
   store: {
     earlyAccess: {
       url: "https://store.chronoromancergame.com/products/df3e206f-c149-4557-b335-9bcafeadef18",
@@ -21,38 +21,38 @@ window.CHRONO_SITE_CONFIG = Object.freeze({
       enabled: true
     },
     directWin: {
-      url: "https://downloads.chronoromancergame.com/Chronoromancer-V0.9.8ce_TD-win.zip",
+      url: "https://downloads.chronoromancergame.com/Chronoromancer-V0.9.8.5_Nerida-win.zip",
       enabled: true
     },
     directPc: {
-      url: "https://downloads.chronoromancergame.com/Chronoromancer-V0.9.8ce_TD-pc.zip",
+      url: "https://downloads.chronoromancergame.com/Chronoromancer-V0.9.8.5_Nerida-pc.zip",
       enabled: true
     },
     directMac: {
-      url: "https://downloads.chronoromancergame.com/Chronoromancer-V0.9.8ce_TD-mac.zip",
+      url: "https://downloads.chronoromancergame.com/Chronoromancer-V0.9.8.5_Nerida-mac.zip",
       enabled: true
     },
     directAndroid: {
-      url: "https://downloads.chronoromancergame.com/com.chronoromancer.game-9-1790512699-release.apk",
+      url: "https://downloads.chronoromancergame.com/com.chronoromancer.game-9.8-1791034654-release.apk",
       enabled: true
     },
     torrentPc: {
-      url: "assets/downloads/torrents/chronoromancer-v0.9.8ce-td-pc-windows-linux.torrent",
-      magnet: "magnet:?xt=urn:btih:cda2b1157856520bd499b39294216166a26d042d&dn=Chronoromancer-V0.9.8ce_TD-pc.zip&ws=https%3A%2F%2Fdownloads.chronoromancergame.com%2FChronoromancer-V0.9.8ce_TD-pc.zip&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451&tr=udp%3A%2F%2Fopen.tracker.cl%3A1337%2Fannounce",
+      url: "assets/downloads/torrents/chronoromancer-v0.9.8.5-nerida-pc-windows-linux.torrent",
+      magnet: "magnet:?xt=urn:btih:ada3d74be9608bae1c2d8736b93d2f5c677f5664&dn=Chronoromancer-V0.9.8.5_Nerida-pc.zip&ws=https%3A%2F%2Fdownloads.chronoromancergame.com%2FChronoromancer-V0.9.8.5_Nerida-pc.zip&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451&tr=udp%3A%2F%2Fopen.tracker.cl%3A1337%2Fannounce",
       enabled: true
     },
     torrentMac: {
-      url: "assets/downloads/torrents/chronoromancer-v0.9.8ce-td-macos.torrent",
-      magnet: "magnet:?xt=urn:btih:52d67b820d1453dd10969488852e7f4a9cbc818a&dn=Chronoromancer-V0.9.8ce_TD-mac.zip&ws=https%3A%2F%2Fdownloads.chronoromancergame.com%2FChronoromancer-V0.9.8ce_TD-mac.zip&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451&tr=udp%3A%2F%2Fopen.tracker.cl%3A1337%2Fannounce",
+      url: "assets/downloads/torrents/chronoromancer-v0.9.8.5-nerida-macos.torrent",
+      magnet: "magnet:?xt=urn:btih:01b3ea4648f3836b9f7d61e26ba412c73d06807c&dn=Chronoromancer-V0.9.8.5_Nerida-mac.zip&ws=https%3A%2F%2Fdownloads.chronoromancergame.com%2FChronoromancer-V0.9.8.5_Nerida-mac.zip&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451&tr=udp%3A%2F%2Fopen.tracker.cl%3A1337%2Fannounce",
       enabled: true
     },
     torrentAndroid: {
-      url: "assets/downloads/torrents/chronoromancer-v0.9.8ce-td-android.torrent",
-      magnet: "magnet:?xt=urn:btih:5bd62af60624c63cbfc5b1fee0d1fc78a28f4353&dn=com.chronoromancer.game-9-1790512699-release.apk&ws=https%3A%2F%2Fdownloads.chronoromancergame.com%2Fcom.chronoromancer.game-9-1790512699-release.apk&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451&tr=udp%3A%2F%2Fopen.tracker.cl%3A1337%2Fannounce",
+      url: "assets/downloads/torrents/chronoromancer-v0.9.8.5-nerida-android.torrent",
+      magnet: "magnet:?xt=urn:btih:dc57a33d11521667a70f9a7d1ae530207669c8bc&dn=com.chronoromancer.game-9.8-1791034654-release.apk&ws=https%3A%2F%2Fdownloads.chronoromancergame.com%2Fcom.chronoromancer.game-9.8-1791034654-release.apk&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451&tr=udp%3A%2F%2Fopen.tracker.cl%3A1337%2Fannounce",
       enabled: true
     },
     torrentChecksums: {
-      url: "assets/downloads/torrents/chronoromancer-v0.9.8ce-td-sha256sums.txt",
+      url: "assets/downloads/torrents/chronoromancer-v0.9.8.5-nerida-sha256sums.txt",
       enabled: true
     }
   },
