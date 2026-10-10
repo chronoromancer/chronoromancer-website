@@ -200,7 +200,7 @@
 
   function initialiseConfiguredLinks() {
     document.querySelectorAll("[data-site-version]").forEach((element) => {
-      element.textContent = config.release || "V0.9.8.5";
+      element.textContent = config.release || "V0.9.9c";
     });
 
     document.querySelectorAll("[data-config-link]").forEach((element) => {
