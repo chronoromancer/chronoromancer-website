@@ -1,4 +1,0 @@
-404dd8d8bb5a075854ad2f16d0c444f902ec6f66aa22371d262b2dd406d7ded4  Chronoromancer-V0.9.9c_Miki-win.zip
-90240571e62bef31f541bc64a34d2a70dd54a1ff6e64aa6be7c8920363a020fc  Chronoromancer-V0.9.9c_Miki-pc.zip
-ab776e33e8111a7155e6f99089d3a9d7101373373dd4a253a3d0d68c0435509c  Chronoromancer-V0.9.9c_Miki-mac.zip
-79385e94d2c00ebc01bda55d6f8b008d2adb45af55941d0c8b0c17ca63c7358f  com.chronoromancer.game-9-1791641532-release.apk
