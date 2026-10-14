@@ -1,0 +1,1754 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="Combat System — Chronoromancer player knowledge in English and Simplified Chinese." name="description"/>
+<link href="../assets/images/v2/favicon.png" rel="icon" type="image/png"/>
+<link href="../assets/css/style.css" rel="stylesheet"/><link href="../assets/css/wiki.css" rel="stylesheet"/>
+<title>Combat System | Chronoromancer Wiki</title></head>
+<body class="wiki-article-page" data-title-en="Combat System | Chronoromancer Wiki" data-title-zh="Combat System | Chronoromancer 玩家 Wiki">
+<a class="skip-link" data-copy-en="Skip to content" data-copy-zh="跳至正文" href="#content">Skip to content</a>
+<div class="maturity-bar" data-copy-en="18+ adults-only game · Wiki pages may contain story and gameplay spoilers" data-copy-zh="18+ 仅限成人游戏 · Wiki 页面可能包含剧情与玩法剧透">18+ adults-only game · Wiki pages may contain story and gameplay spoilers</div>
+<header class="site-header"><div class="container header-inner">
+<a aria-label="Chronoromancer home" class="brand" href="../main.html"><img alt="Chronoromancer" src="../assets/images/v2/logo.png"/></a>
+<button aria-expanded="false" aria-label="Open navigation" class="nav-toggle" data-nav-toggle="" type="button"><span></span><span></span><span></span></button>
+<nav aria-label="Primary navigation" class="site-nav" data-nav-menu="">
+<a data-i18n="navHome" href="../main.html">Home</a><a data-i18n="navStory" href="../story.html">Story</a>
+<a data-i18n="navCharacters" href="../characters.html">Characters</a><a data-i18n="navGuides" href="../walkthroughs.html">Guides</a>
+<a data-i18n="navGallery" href="../screenshots.html">Gallery</a><a class="is-active" data-i18n="navWiki" href="../wiki.html">Player Wiki</a>
+<a data-i18n="navDownload" href="../main.html#download">Download</a>
+<div aria-label="Language" class="language-switch" role="group"><button aria-pressed="true" data-language="en" type="button">EN</button><button aria-pressed="false" data-language="zh" type="button">简体中文</button></div>
+</nav>
+</div></header>
+<main id="content">
+<section class="wiki-page-hero"><div class="container">
+<nav aria-label="Breadcrumb" class="breadcrumb"><a data-copy-en="Player Wiki" data-copy-zh="玩家 Wiki" href="../wiki.html">Player Wiki</a><span>/</span><span data-copy-en="Game Systems" data-copy-zh="游戏系统">Game Systems</span></nav>
+<p class="eyebrow" data-copy-en="Community knowledge, preserved on the official site" data-copy-zh="社区知识，保存于官方网站">Community knowledge, preserved on the official site</p>
+<h1>Combat System</h1>
+<div class="wiki-source-line"><span data-copy-en="Live wiki revision 2108 · October 4, 2026" data-copy-zh="玩家 Wiki 修订版 2108 · October 4, 2026">Live wiki revision 2108 · October 4, 2026</span><a data-copy-en="View or improve the source →" data-copy-zh="查看或完善原始页面 →" href="https://chronoromancer.miraheze.org/wiki/Game_Systems:Combat_System" rel="noopener noreferrer" target="_blank">View or improve the source →</a></div>
+</div></section>
+<section class="section wiki-reading-section"><div class="container wiki-reading-layout">
+<aside class="wiki-toc"><div class="wiki-toc-inner"><button aria-expanded="false" class="wiki-toc-toggle" data-wiki-toc-toggle="" type="button"><span data-copy-en="On this page" data-copy-zh="本页目录">On this page</span><span aria-hidden="true">+</span></button><p class="wiki-toc-heading" data-copy-en="On this page" data-copy-zh="本页目录">On this page</p><div class="wiki-toc-links" data-lang-panel="en" data-wiki-toc-links=""><a class="wiki-toc-h2" href="#Actions_and_Turn_Flow">Actions and Turn Flow</a><a class="wiki-toc-h2" href="#Difficulty_Settings">Difficulty Settings</a><a class="wiki-toc-h2" href="#Fighting_Experience_and_Tiers">Fighting Experience and Tiers</a><a class="wiki-toc-h2" href="#Physical_Damage_and_Accuracy">Physical Damage and Accuracy</a><a class="wiki-toc-h3" href="#Accuracy_Comes_First">Accuracy Comes First</a><a class="wiki-toc-h3" href="#Building_the_Damage_Maximum">Building the Damage Maximum</a><a class="wiki-toc-h3" href="#Physical_Roll_and_Passives">Physical Roll and Passives</a><a class="wiki-toc-h3" href="#Enemy_Defenses_and_Skill_Enhancements">Enemy Defenses and Skill Enhancements</a><a class="wiki-toc-h2" href="#Sovereign_Edge_and_Disarming">Sovereign Edge and Disarming</a><a class="wiki-toc-h2" href="#Magic_Damage_and_Healing">Magic Damage and Healing</a><a class="wiki-toc-h3" href="#Spell_Maximum">Spell Maximum</a><a class="wiki-toc-h3" href="#What_Can_Stop_a_Spell">What Can Stop a Spell</a><a class="wiki-toc-h3" href="#Vampire_Equipment">Vampire Equipment</a><a class="wiki-toc-h3" href="#Healing">Healing</a><a class="wiki-toc-h3" href="#Magic_Energy_Costs">Magic Energy Costs</a><a class="wiki-toc-h2" href="#Sleep_Magic">Sleep Magic</a><a class="wiki-toc-h2" href="#Incoming_Damage_and_Defenses">Incoming Damage and Defenses</a><a class="wiki-toc-h3" href="#Effective_Armor">Effective Armor</a><a class="wiki-toc-h3" href="#Tier_Defense">Tier Defense</a><a class="wiki-toc-h3" href="#Forge_Pieces_and_Other_Defenses">Forge Pieces and Other Defenses</a><a class="wiki-toc-h2" href="#Force_Fields_and_Percentage_Attacks">Force Fields and Percentage Attacks</a><a class="wiki-toc-h3" href="#Player_Force_Field">Player Force Field</a><a class="wiki-toc-h3" href="#Enemy_Force_Fields">Enemy Force Fields</a><a class="wiki-toc-h3" href="#Percentage-of-Maximum-Health_Skills">Percentage-of-Maximum-Health Skills</a><a class="wiki-toc-h2" href="#Status_Effects_and_Resistances">Status Effects and Resistances</a><a class="wiki-toc-h2" href="#Telegraphs,_QTEs,_Luck,_and_Escape">Telegraphs, QTEs, Luck, and Escape</a><a class="wiki-toc-h2" href="#Combat_Paths_and_Soul_Stones">Combat Paths and Soul Stones</a><a class="wiki-toc-h2" href="#Victory_Rewards_and_Emergency_Revival">Victory Rewards and Emergency Revival</a><a class="wiki-toc-h2" href="#Build_Planning_and_Common_Questions">Build Planning and Common Questions</a><a class="wiki-toc-h2" href="#Accuracy_Notes">Accuracy Notes</a><a class="wiki-toc-h2" href="#Related_Pages">Related Pages</a></div><div class="wiki-toc-links" data-lang-panel="zh" data-wiki-toc-links="" hidden="" lang="zh-CN"><a class="wiki-toc-h2" href="#zh-Actions_and_Turn_Flow">动作和转动流程</a><a class="wiki-toc-h2" href="#zh-Difficulty_Settings">难度设置</a><a class="wiki-toc-h2" href="#zh-Fighting_Experience_and_Tiers">战斗经验和级别</a><a class="wiki-toc-h2" href="#zh-Physical_Damage_and_Accuracy">物理损害和准确性</a><a class="wiki-toc-h3" href="#zh-Accuracy_Comes_First">准确性先来</a><a class="wiki-toc-h3" href="#zh-Building_the_Damage_Maximum">建造最大损害</a><a class="wiki-toc-h3" href="#zh-Physical_Roll_and_Passives">物理卷和被动</a><a class="wiki-toc-h3" href="#zh-Enemy_Defenses_and_Skill_Enhancements">敌方防御和技能增强</a><a class="wiki-toc-h2" href="#zh-Sovereign_Edge_and_Disarming">主权边缘和解除武装</a><a class="wiki-toc-h2" href="#zh-Magic_Damage_and_Healing">魔法损伤和愈合</a><a class="wiki-toc-h3" href="#zh-Spell_Maximum">拼写最大值</a><a class="wiki-toc-h3" href="#zh-What_Can_Stop_a_Spell">怎样才能停止拼写</a><a class="wiki-toc-h3" href="#zh-Vampire_Equipment">吸血鬼设备</a><a class="wiki-toc-h3" href="#zh-Healing">治疗</a><a class="wiki-toc-h3" href="#zh-Magic_Energy_Costs">魔法能量成本</a><a class="wiki-toc-h2" href="#zh-Sleep_Magic">睡眠魔术</a><a class="wiki-toc-h2" href="#zh-Incoming_Damage_and_Defenses">受到的损害和防卫</a><a class="wiki-toc-h3" href="#zh-Effective_Armor">有效装甲</a><a class="wiki-toc-h3" href="#zh-Tier_Defense">一级防御</a><a class="wiki-toc-h3" href="#zh-Forge_Pieces_and_Other_Defenses">伪造碎片和其他防御</a><a class="wiki-toc-h2" href="#zh-Force_Fields_and_Percentage_Attacks">部队行动区和攻击百分比</a><a class="wiki-toc-h3" href="#zh-Player_Force_Field">玩家部队球场</a><a class="wiki-toc-h3" href="#zh-Enemy_Force_Fields">敌方部队战区</a><a class="wiki-toc-h3" href="#zh-Percentage-of-Maximum-Health_Skills">最高健康技能的百分比</a><a class="wiki-toc-h2" href="#zh-Status_Effects_and_Resistances">现状影响和抵抗运动</a><a class="wiki-toc-h2" href="#zh-Telegraphs,_QTEs,_Luck,_and_Escape">电报、QTEs、Luck和逃逸</a><a class="wiki-toc-h2" href="#zh-Combat_Paths_and_Soul_Stones">战斗道路和灵魂石</a><a class="wiki-toc-h2" href="#zh-Victory_Rewards_and_Emergency_Revival">胜利奖和紧急复兴</a><a class="wiki-toc-h2" href="#zh-Build_Planning_and_Common_Questions">建立规划和共同问题</a><a class="wiki-toc-h2" href="#zh-Accuracy_Notes">准确性说明</a><a class="wiki-toc-h2" href="#zh-Related_Pages">相关页面</a></div></div></aside>
+<article class="wiki-article">
+<div class="spoiler-notice"><strong data-copy-en="Player wiki notice" data-copy-zh="玩家 Wiki 提示">Player wiki notice</strong><span data-copy-en="This community-maintained page may contain gameplay, story, and mature-content spoilers." data-copy-zh="此社区维护页面可能包含玩法、剧情及成人内容剧透。">This community-maintained page may contain gameplay, story, and mature-content spoilers.</span></div>
+<div class="wiki-source-content wiki-source-content-zh" data-lang-panel="zh" hidden="" lang="zh-CN"><div class="mw-content-ltr mw-parser-output" dir="ltr" lang="en">
+<div style="color:#c9943a; font-size:1.5em; font-weight:bold; border-bottom:1px solid #6b1a2a; padding-bottom:6px; margin-bottom:16px;">战斗系统指南</div>
+<div style="color:#d4c5a9; margin-bottom:8px;">本指南解释了普通的回合制战斗:动作成本,物理和魔法损伤,防御,力场,状态效果,难度,以及三个战斗路径。它列出了力学,但没有揭示主要角色或故事结果。</div>
+<div style="color:#d4c5a9; margin-bottom:8px;">关于勘探、大门、陷阱和地面路线,见 <a href="game-systems-dungeon.html" title="Game Systems:Dungeon">敦煌岛</a>。关于无休止模式主题、老板周期、封面和特殊敌人规则,参见 <a href="game-systems-infinity-dungeons.html" title="Game Systems:Infinity Dungeons">无穷敦煌</a>. 叙述式监护人碰面使用单独的选择式系统;其探索作用在敦煌网页上报道.</div>
+<div class="mw-heading mw-heading2"><h2 id="zh-Actions_and_Turn_Flow">动作和转动流程</h2></div>
+<div style="color:#d4c5a9; margin-bottom:8px;">选择一个动作,解决它的命中和效果,然后处理敌人的响应和持续状态效果。失败仍然可以花掉转弯。一些限制会阻挡特定的按钮而不是每个动作;使用下面状态表中的选项。</div>
+<table style="background:#2a0a12; color:#d4c5a9; border:1px solid #6b1a2a; border-collapse:collapse; margin-bottom:16px;">
+<tbody><tr style="background:#1e0a0f;">
+<th style="border:1px solid #6b1a2a; padding:6px 12px;"><span style="color:#c9943a;">行动</span>
+</th>
+<th style="border:1px solid #6b1a2a; padding:6px 12px;"><span style="color:#c9943a;">正常能源费用</span>
+</th>
+<th style="border:1px solid #6b1a2a; padding:6px 12px;"><span style="color:#c9943a;">主要规模</span>
+</th>
+<th style="border:1px solid #6b1a2a; padding:6px 12px;"><span style="color:#c9943a;">所需技能</span>
+</th></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">攻击
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">0
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">强度
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">无
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">快速攻击
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">5
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">能力
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">无
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">风暴
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">15
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">力量+能力
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">风暴
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">电击
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">20
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">强度
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">电击
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">保卫
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">0
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">战斗水平提高
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">无
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">火/冰
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">12
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">神秘
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">元素爆炸
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">浅/ 暗
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">40
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">神秘
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">轻魔法/ 暗魔法
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">睡觉
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">18
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">神秘/ 敌人特有的睡眠规则
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">幻想织造
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">疗愈
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">22
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">神秘
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">治疗触摸
+</td></tr></tbody></table>
+<div style="color:#d4c5a9; margin-bottom:8px;">拼写按钮需要其列出的技巧和足够的能量. Agrenoire 改善了破坏和愈合; 普通的战斗按钮检查不需要配备一个. Magic 使用了自己的成本削减。 表格中的物理成本是动作的标准要求;一般的物理效应与拼写成本公式是分开的。 Medicine rejurings <b>25 卫生</b> 通过作战物品行动获得的药品。</div>
+<div style="color:#d4c5a9; margin-bottom:8px;"><b>持久性培训</b> 将物理能源支出减少10%, 并进行整数调值: 快速攻击 <b>4</b>暴风雨 <b>13</b>和强击 <b>18</b>。当前的“电击”处理器也检查其缩小 <b>18. 能源需求</b>,匹配显示的成本,而不是在允许动作前要求未减少的20。</div>
+<div style="color:#d4c5a9; margin-bottom:8px;"><b>保卫</b> 减少下一个适用的直接损害 <b>分钟( 80%, 50%x战斗修饰器)</b>防守旗被击中消耗殆尽。它不会减少敌军每一次击中的80%。 <b>自然的拥抱</b>,还原随机 <b>最高能量的4-10%</b>被你的能量池盖住</div>
+<div class="mw-heading mw-heading2"><h2 id="zh-Difficulty_Settings">难度设置</h2></div>
+<div style="color:#d4c5a9; margin-bottom:8px;">战斗难度被保存在每场游戏中。这些乘数适用于支持的战斗值;它们并不普遍衡量每个探索陷阱或情景成本。</div>
+<table style="background:#2a0a12; color:#d4c5a9; border:1px solid #6b1a2a; border-collapse:collapse; margin-bottom:16px;">
+<tbody><tr style="background:#1e0a0f;">
+<th style="border:1px solid #6b1a2a; padding:6px 12px;"><span style="color:#c9943a;">战斗价值</span>
+</th>
+<th style="border:1px solid #6b1a2a; padding:6px 12px;"><span style="color:#c9943a;">轻点</span>
+</th>
+<th style="border:1px solid #6b1a2a; padding:6px 12px;"><span style="color:#c9943a;">常规</span>
+</th>
+<th style="border:1px solid #6b1a2a; padding:6px 12px;"><span style="color:#c9943a;">难</span>
+</th></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">敌人 HP
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">×0.50
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">×1
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">×1.25
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">一般直接损害
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">×0.50
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">×1
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">×1.25
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">最大健康损害的百分比
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">×0.50
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">×1
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">×1.10
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Poison 滴答损伤
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">×0.50
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">×1
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">×1.20
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">敌人愈合
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">×0.50
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">×1
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">×1.25
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">QTE 反应窗口
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">×1.50
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">×1
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">×0.90
+</td></tr></tbody></table>
+<div style="color:#d4c5a9; margin-bottom:8px;">正缩放整数值保留最小值 1. QTE计时保留其 <b>0.35-second 安全地板</b>叙述式守护者在Easy上分别遭遇敌方能量减半和最终的后防玩家损伤.</div>
+<div style="color:#d4c5a9; margin-bottom:8px;">正常会保留下面所解释的标准值。 硬性不会简单地将所有产生的效应乘以 1.25 : 百分率攻击和毒药有自己的修饰符 。</div>
+<div class="mw-heading mw-heading2"><h2 id="zh-Fighting_Experience_and_Tiers">战斗经验和级别</h2></div>
+<div style="color:#d4c5a9; margin-bottom:8px;">战斗经验确定用于输出、状态阻力、主动防御和防御的级别:</div>
+<div style="color:#d4c5a9; margin-bottom:8px;"><b>战斗修饰剂F=1 + 0.05×(一级−1).</b></div>
+<table style="background:#2a0a12; color:#d4c5a9; border:1px solid #6b1a2a; border-collapse:collapse; margin-bottom:16px;">
+<tbody><tr style="background:#1e0a0f;">
+<th style="border:1px solid #6b1a2a; padding:6px 12px;"><span style="color:#c9943a;">级别</span>
+</th>
+<th style="border:1px solid #6b1a2a; padding:6px 12px;"><span style="color:#c9943a;">名称</span>
+</th>
+<th style="border:1px solid #6b1a2a; padding:6px 12px;"><span style="color:#c9943a;">要达到的XP</span>
+</th>
+<th style="border:1px solid #6b1a2a; padding:6px 12px;"><span style="color:#c9943a;">战斗修饰器</span>
+</th></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">1
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">诺维西
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">0
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">×1.00
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">2
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">布朗勒语Name
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">100
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">×1.05
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">3
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">战士
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">200
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">×1.10
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">4
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">退伍军人
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">500
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">×1.15
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">5
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">精英
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">1,000
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">×1.20
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">6
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">冠军
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">2,000
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">×1.25
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">7
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">师父
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">4,000
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">×1.30
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">8
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">角斗士队
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">8,000
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">×1.35
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">9
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">军阀
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">16,000
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">×1.40
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">10
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">英雄们
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">32,000
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">×1.45
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">11
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">图例
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">64,000
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">×1.50
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">12
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">神话
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">128,000
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">×1.55
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">13
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">不朽不灭
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">256,000
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">×1.60
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">14
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">德米戈德语Name
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">512,000
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">×1.65
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">15
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">像上帝一样
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">1,024,000
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">×1.70
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">16
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">占星仪
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">2,048,000
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">×1.75
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">17
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">横切
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">4,096,000
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">×1.80
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">18
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">顶端(1)
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">8,192,000
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">×1.85
+</td></tr></tbody></table>
+<div style="color:#d4c5a9; margin-bottom:8px;">时 <b>8,192,000XP (韩语)</b>,顶端(1)起始于第18级,顶端(2)起始于 <b>12,288,000</b>,顶点(3) <b>18,432,000</b>,每个后期阈值为 ×1.5 上一级阈值。级和战斗修饰器继续增加;旧的 <b>× 1.80 上限不适用</b>.</div>
+<div style="color:#d4c5a9; margin-bottom:8px;">战斗级别与后来描述的战斗路径级别是分开的. RawXP不直接划分敌人的技能损害或授予豁免权.</div>
+<div class="mw-heading mw-heading2"><h2 id="zh-Physical_Damage_and_Accuracy">物理损害和准确性</h2></div>
+<div class="mw-heading mw-heading3"><h3 id="zh-Accuracy_Comes_First">准确性先来</h3></div>
+<div style="color:#d4c5a9; margin-bottom:8px;">物理动作有玩家丢失阈值 :</div>
+<div style="color:#d4c5a9; margin-bottom:8px;"><b>最大(1,43.3−0.414×修改后的能力)%.</b></div>
+<div style="color:#d4c5a9; margin-bottom:8px;"><b>击剑游戏</b> 将这个阈值减半。 执行将整数1–100卷与它作比较,因此,一个分数阈值被有效四舍五入。然后敌人可以单独检查。一个高能力构建可以改进第一个检查,但不会清除每一个敌人的躲避机械师。 <b>狙击手的范围</b> 有一个 <b>15%</b> 有机会纠正一个符合资格的错失或敌人躲避。</div>
+<div class="mw-heading mw-heading3"><h3 id="zh-Building_the_Damage_Maximum">建造最大损害</h3></div>
+<div style="color:#d4c5a9; margin-bottom:8px;">让 <b>维文</b> 有效的melee武器级别。当前物理攻击使用不同的战斗因素:</div>
+<div style="color:#d4c5a9; margin-bottom:8px;"><b>物理因子 = (F + 随机实数从 0到 W → 10) × 随机实数从 0.5到 1.3.</b></div>
+<div style="color:#d4c5a9; margin-bottom:8px;">这种变异在实际损伤卷之前应用,因此物理损伤甚至在武术改变最终卷的下限之前也可能有所不同.</div>
+<div style="color:#d4c5a9; margin-bottom:8px;"><b>武器奖金=W×2</b>,或 <b>W×3有武器掌握器</b>当装备了迷你武器时</div>
+<table style="background:#2a0a12; color:#d4c5a9; border:1px solid #6b1a2a; border-collapse:collapse; margin-bottom:16px;">
+<tbody><tr style="background:#1e0a0f;">
+<th style="border:1px solid #6b1a2a; padding:6px 12px;"><span style="color:#c9943a;">行动</span>
+</th>
+<th style="border:1px solid #6b1a2a; padding:6px 12px;"><span style="color:#c9943a;">基础</span>
+</th>
+<th style="border:1px solid #6b1a2a; padding:6px 12px;"><span style="color:#c9943a;">数据贡献</span>
+</th></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">攻击
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">1
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">修改强度 QQ 2 × 物理因子
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">快速攻击
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">2
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">修正后能力值 ÷ 2 × 物理系数
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">风暴
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">3
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">(修改后的力量+能力) 3×物理因子
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">电击
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">5
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">修改强度×物理系数
+</td></tr></tbody></table>
+<div style="color:#d4c5a9; margin-bottom:8px;"><b>初始上限=下限(基数+STAT贡献+武器奖金).</b></div>
+<div style="color:#d4c5a9; margin-bottom:8px;">有效的melee级别包括适用的关键项目奖金: <b>剑链+1</b>, <b>暗 Sheath +1 游戏</b>,而合格解的机械相遇的+1.这些不一定改变武器可见的储存级别。</div>
+<div class="mw-heading mw-heading3"><h3 id="zh-Physical_Roll_and_Passives">物理卷和被动</h3></div>
+<table style="background:#2a0a12; color:#d4c5a9; border:1px solid #6b1a2a; border-collapse:collapse; margin-bottom:16px;">
+<tbody><tr style="background:#1e0a0f;">
+<th style="border:1px solid #6b1a2a; padding:6px 12px;"><span style="color:#c9943a;">效果</span>
+</th>
+<th style="border:1px solid #6b1a2a; padding:6px 12px;"><span style="color:#c9943a;">当前行为</span>
+</th></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">波塞冬三叉戟
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">15%的机会将初始物理极限增加一倍
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">肾上腺素狂欢
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">健康水平低于30%,是体力极限的两倍
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">贝塞尔克Rage
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">健康:35%的机会直接使用最大值;随机成本 3-10% 最大值健康
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">武术
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">从地板(最大XQ 3)到地板(最大XQ 2)提高最低损害滚动
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">剥削
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">15%的机会将物理损坏翻倍;在触发后跳过其下一个四个合格的物理计算
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">杂技
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">快速攻击:x1.5损伤的15%机会;单独,物理动作可触发15%的后续快速攻击
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">电源泡
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">1.5 卷后物理损坏
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">地狱之火
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">× 1.10 电源泡后物理损坏
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">剑石
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">将其级别添加到攻击和快速攻击中
+</td></tr></tbody></table>
+<div style="color:#d4c5a9; margin-bottom:8px;">在最终最小值和最大值之间全面滚动,除非Berserker强迫最大值。计算通常在百分数乘数后会缩短。后续攻击有自己的计算,可以消耗被动的冷却检查;多击转不一定是每个被动的检查。</div>
+<div class="mw-heading mw-heading3"><h3 id="zh-Enemy_Defenses_and_Skill_Enhancements">敌方防御和技能增强</h3></div>
+<div style="color:#d4c5a9; margin-bottom:8px;">对普通攻击,采用减少敌方损害的方法,减去包括 <b>敌方双层楼</b> 地面防御通常至少会离开 <b>1项损害</b>.</div>
+<div style="color:#d4c5a9; margin-bottom:8px;">对于三种体能技能而言,在这些增强之前,敌方百分比降低:</div>
+<ul><li><span style="color:#d4c5a9;"><b>暴风雨:</b> Stormslash gets ×1.05 and Lightningtwitching. 闪电弱点使损坏加倍; 阻力使其减半。然后可以连锁额外打击, 开始于 <b>50%</b> 继续和减少 <b>5个百分点</b> 每次成功额外命中后,停止一次失败的续作或敌人的失败.</span></li>
+<li><span style="color:#d4c5a9;"><b>骷髅粉碎者:</b> 电击得到×1.10,然后是a <b>30%</b> 乘法的机会 <b>4</b>.</span></li>
+<li><span style="color:#d4c5a9;"><b>布鲁特·斯通:</b> 在其技能增强后,将其水平加到暴风雪和强击中.</span></li></ul>
+<div style="color:#d4c5a9; margin-bottom:8px;">然后应用地面防御和匹配的敌方警卫,然后是适用的战斗路径乘数。 警卫会消耗合格破坏性命中数的收费,因此连锁可以消耗一个以上的电荷。 <b>敌方警卫机械师</b> 他们的精确物理/魔法减少取决于敌人的防守定义。</div>
+<div style="color:#d4c5a9; margin-bottom:8px;"><b>侧步</b> 给予快速攻击 a <b>20%</b> 准备躲过敌方攻击 <b>裸露布</b> 在现有支持的躲避机会中增加5个百分点;它本身不会创造每一个躲避能力。</div>
+<div class="mw-heading mw-heading2"><h2 id="zh-Sovereign_Edge_and_Disarming">主权边缘和解除武装</h2></div>
+<div style="color:#d4c5a9; margin-bottom:8px;"><b>主权边缘</b> 增强正则 <b>攻击</b> 按钮 :</div>
+<ul><li><span style="color:#d4c5a9;">总是×1.15 其滚动攻击损坏。</span></li>
+<li><span style="color:#d4c5a9;">独立 <b>20%</b> 精密卷:绕过敌方警卫并添加 <b>50%</b> 在正常的余下防御后,</span></li>
+<li><span style="color:#d4c5a9;">独立 <b>5%</b> 迫击炮弹滚:×10在敌方防守前.</span></li>
+<li><span style="color:#d4c5a9;">对抗合格的普通敌人,一个单独的 <b>15%的即时杀人记录</b> 在正常的准确度和躲避检查之前发生。老板,无法释放,并且明确被保护的瞬间杀人敌人被排除在外。</span></li></ul>
+<div style="color:#d4c5a9; margin-bottom:8px;">这些增强是属于攻击的,而不是所有的身体技能。即时杀机不应该被当作跳过老板的方法。</div>
+<div style="color:#d4c5a9; margin-bottom:8px;">与 <b>解除武装技术</b>幸存的敌人可以通过 <b>快速攻击</b>,或 <b>以主权边缘攻击</b>时, <b>10%</b>。现在,解除武装将下一个覆盖的敌方损害行动,包括辅助技能损害减半。然后其旗帜被消耗。在作战的解除武装状态下,一个多击打的技能可以解决其命中问题。旧称解除武装基本上与基于技能的敌方攻击无关,已经过时。</div>
+<div class="mw-heading mw-heading2"><h2 id="zh-Magic_Damage_and_Healing">魔法损伤和愈合</h2></div>
+<div class="mw-heading mw-heading3"><h3 id="zh-Spell_Maximum">拼写最大值</h3></div>
+<div style="color:#d4c5a9; margin-bottom:8px;">魔法使用普通的战斗修饰器 <b>F 级</b>,没有物理武器 随机因素步骤。</div>
+<ul><li><span style="color:#d4c5a9;"><b>火/冰:</b> 15+地板(修改后的神秘XQ2×F)+greamoire奖金.</span></li>
+<li><span style="color:#d4c5a9;"><b>浅/暗:</b> 15+地板(修改后的神秘×1.5×F)+gremaoire奖金.</span></li>
+<li><span style="color:#d4c5a9;">攻击性咒语也加上 <b>楼层( 神秘 - 100) ~ 10)</b> 当神话超过100。</span></li></ul>
+<div style="color:#d4c5a9; margin-bottom:8px;">降级 <b>一般事务人员</b>,从 <b>G2型</b>3倍与 <b>阿尔卡内知识</b>如果 G 大于 1,则乘以新的随机实数。 <b>1个至G</b>,然后切换。它不是每个演员的固定G2奖金。</div>
+<div style="color:#d4c5a9; margin-bottom:8px;">在主破坏卷之前:</div>
+<ul><li><span style="color:#d4c5a9;"><b>美人鱼魔法:</b> 15%的机会 加倍攻击性咒语最大。</span></li>
+<li><span style="color:#d4c5a9;"><b>Sashina的礼物:</b> 15%的机会将火/冰的最大值翻一番;同样将敌方减少破坏的百分比降低一半,并防止在投影上进行元素吸收.</span></li>
+<li><span style="color:#d4c5a9;"><b>主向导 :</b> ×1.5 最大值。</span></li>
+<li><span style="color:#d4c5a9;">火灾 <b>火元素塔利斯曼+20%</b> 和 <b>地狱火+50%</b> 当两者都为所有时,加到x1.7。</span></li>
+<li><span style="color:#d4c5a9;">灯光照亮 <b>每个良好对齐等级+5%</b>; Dark每邪恶级得到相同的,最高为×1.45.</span></li></ul>
+<div style="color:#d4c5a9; margin-bottom:8px;">超过 1 的文本值乘以 <b>1+ 0.1×(G−1)</b>。最低卷数是 <b>33%</b> 最高数额,或 <b>向导占55%</b>切换 包罗万象</div>
+<div style="color:#d4c5a9; margin-bottom:8px;">滚开后, <b>阿尔卡内激流</b> 有个 <b>18%</b> 机会的进攻魔法给予 <b>×3 + 随机 1 - 300</b>。在该步骤之后,将元素石水平加入火/冰或紫石水平加入光/暗。</div>
+<div class="mw-heading mw-heading3"><h3 id="zh-What_Can_Stop_a_Spell">怎样才能停止拼写</h3></div>
+<div style="color:#d4c5a9; margin-bottom:8px;">标准攻击咒语可以躲避,然后经过敌方百分率降低,元素弱点×2或阻力×0.5,魔法阻力,可能的吸收,地板防御,以及魔力倍数之前的魔法卫士.</div>
+<div style="color:#d4c5a9; margin-bottom:8px;">敌人的魔法抵抗是一卷新鲜的 <b>所列阻力的50-150%</b>,作为最小损失1的减少百分比。如果吸收成功,敌人将愈合由此造成的损害,但以最大HP为限,并按困难的敌方愈合乘数进行调整。</div>
+<div style="color:#d4c5a9; margin-bottom:8px;"><b>Arcane Surge 跳过元素 / 魔法抵抗 / 吸收块</b>,因此铸件也不会收到普通的弱点翻倍。它仍然检查敌人的躲避和其他适用的减少、地面防御、警卫和战地规则。Sashina的Gift的吸收保护是单独的Proc。</div>
+<div class="mw-heading mw-heading3"><h3 id="zh-Vampire_Equipment">吸血鬼设备</h3></div>
+<div style="color:#d4c5a9; margin-bottom:8px;"><b>吸血鬼方块</b> 可在主要物理计算上进行检测; <b>吸血鬼纪事</b> 在主攻魔法计算上。 <b>15%</b>,升为 <b>18%带有吸血鬼</b>。有了正的吸血鬼值V, proc会添加随机值 <b>1 - V损害</b> 没有技能,或者 <b>10-max(10,地板(1.5V)) 与吸血鬼有关的损害</b>吸血鬼值为0,不会增加损害。</div>
+<div style="color:#d4c5a9; margin-bottom:8px;">Fangs 绕过敌人的百分率破坏减少、地面防御和防撞。 Grimures 也绕过元素阻力、魔法阻力和吸收,同时保留有用的元素弱点奖金,除非Arcane Surge跳过这个阻力。他们仍然需要降落,并且不会自动穿透力场。</div>
+<div style="color:#d4c5a9; margin-bottom:8px;">后续系统有不同的Proc规则: 普通Acrobatics和Side-Step奖金计算不独立滚动Fangs; 重新计算的assassin-chain命中确实如此. 温续命中不会继承主命中防御绕道. 将Proc视为其特定命中而不是整个转弯的规则.</div>
+<div class="mw-heading mw-heading3"><h3 id="zh-Healing">治疗</h3></div>
+<div style="color:#d4c5a9; margin-bottom:8px;"><b>最大疗程=5+地板(经修改的神秘xF)+G</b>,或 <b>3G级</b> 应用 Master Wizard, gremaoire 缩放, 以及上面的 Wizorry/ 正常卷轴范围 。</div>
+<div style="color:#d4c5a9; margin-bottom:8px;"><b>神圣的决断</b> 有一个 <b>30%</b> 当治疗真正恢复健康时, Proc也可以净化一个支持的负面状态。 Sorcerer将愈合率翻倍,然后是正常的最大健康上限限制实际恢复。 Healing的greanoire术语是线性G, 不同于攻击魔法的平方和随机。</div>
+<div class="mw-heading mw-heading3"><h3 id="zh-Magic_Energy_Costs">魔法能量成本</h3></div>
+<div style="color:#d4c5a9; margin-bottom:8px;"><b>玛娜频道</b> 用四舍五入将基本成本减半。 <b>内部和平</b> 然后乘以 0.9 并切换成本。</div>
+<table style="background:#2a0a12; color:#d4c5a9; border:1px solid #6b1a2a; border-collapse:collapse; margin-bottom:16px;">
+<tbody><tr style="background:#1e0a0f;">
+<th style="border:1px solid #6b1a2a; padding:6px 12px;"><span style="color:#c9943a;">拼写</span>
+</th>
+<th style="border:1px solid #6b1a2a; padding:6px 12px;"><span style="color:#c9943a;">基础</span>
+</th>
+<th style="border:1px solid #6b1a2a; padding:6px 12px;"><span style="color:#c9943a;">玛娜频道</span>
+</th>
+<th style="border:1px solid #6b1a2a; padding:6px 12px;"><span style="color:#c9943a;">两种技能</span>
+</th></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">火/冰
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">12
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">6
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">5
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">浅/ 暗
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">40
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">20
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">18
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">睡觉
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">18
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">9
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">8
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">疗愈
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">22
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">11
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">9
+</td></tr></tbody></table>
+<div style="color:#d4c5a9; margin-bottom:8px;">An Arcane Surge Proc使咒语的计算能量成本增加xx1.5,截断. 拼写能量直接扣除,而不是通过一般的物理活动成本降低器.</div>
+<div class="mw-heading mw-heading2"><h2 id="zh-Sleep_Magic">睡眠魔术</h2></div>
+<div style="color:#d4c5a9; margin-bottom:8px;">普通的敌人 睡觉的机会开始 <b>35 + 0.696 x(经修改的神秘 - 20)</b>。内部和平加5. 减去随机整数 <b>1次通过有效的敌方地板</b>. Hypnotic Gaze 添加 10,睡眠孢子添加 7.</div>
+<div style="color:#d4c5a9; margin-bottom:8px;">正常的机会是 <b>70%</b>,或 <b>75%的催眠药</b>,加上睡眠孢子 7.然后减去敌人的临时重复睡眠处罚,最低为零.</div>
+<div style="color:#d4c5a9; margin-bottom:8px;">老板睡觉用 <b>13%</b>，Hypnotic Gaze 提供 +7，Sleep Spores 再提供 +7，之后采用相同的重复睡眠惩罚。部分遭遇明确免疫；存在上限并不代表每个敌人都能被催眠。</div>
+<div style="color:#d4c5a9; margin-bottom:8px;">关于成功:</div>
+<ul><li><span style="color:#d4c5a9;">取消敌人即将发动的电报攻击.</span></li>
+<li><span style="color:#d4c5a9;">设定 <b>一个有保证的睡眠圆</b>,或 <b>2 与主向导</b>.</span></li>
+<li><span style="color:#d4c5a9;">睡眠孢子有一个 <b>10%</b> 有机会再增加一回合</span></li>
+<li><span style="color:#d4c5a9;">设定 <b>20个百分点的处罚</b> 之后的睡眠尝试 对抗敌人;它恢复 <b>每轮战斗1个百分点</b>.</span></li></ul>
+<div style="color:#d4c5a9; margin-bottom:8px;">在有保证的回合后,一个沉睡的敌人有一个 <b>65%的唤醒机会</b> 。这与玩家75%的睡眠检查不同。</div>
+<div class="mw-heading mw-heading2"><h2 id="zh-Incoming_Damage_and_Defenses">受到的损害和防卫</h2></div>
+<div style="color:#d4c5a9; margin-bottom:8px;">主要直接损坏的敌方技能路线使用此顺序,特殊类型如百分数健康攻击,音频损坏,以及仅身份动作都有自己的分支.</div>
+<ol><li><span style="color:#d4c5a9;">将技能的基数范围滚动,只降低其基数 <b>最低</b> 1/2/3, 最少为1;它们使最大值完好无损。</span></li>
+<li><span style="color:#d4c5a9;">乘以数 <b>1+有效敌楼×0.22</b>,然后通过敌人的破坏乘数 和适用的愤怒效应。</span></li>
+<li><span style="color:#d4c5a9;">关键的机会是 <b>10% + 敌人的关键机会奖金</b>关键贡献 <b>×1.5 + 敌人的平稳临界奖金</b>.</span></li>
+<li><span style="color:#d4c5a9;">如果有的话, 应用玩家的主动防御还原程序 。</span></li>
+<li><span style="color:#d4c5a9;">减法 <b>地板(L × (0.89L + 1.11))</b> L级有效装甲 敌方成功的装甲断裂滚可以首先减少装甲的削减 普通的直接损伤至少保留1.</span></li>
+<li><span style="color:#d4c5a9;">应用 Tai-Chi 反射到分支支持的地方 。</span></li>
+<li><span style="color:#d4c5a9;">应用平衡盾和相关的Forge Shield/Helmet效应.</span></li>
+<li><span style="color:#d4c5a9;">减掉玩家的防守级别卷,至少留下1个.</span></li>
+<li><span style="color:#d4c5a9;">应用支持的最后减少健康损失,包括 <b>铁宪法10%</b> 用最近的整数四舍五入减小。</span></li>
+<li><span style="color:#d4c5a9;">采用直接损害难度乘数,任何技能特异性的最大健康损害上限,并包括减少解除武装。</span></li>
+<li><span style="color:#d4c5a9;">检查最终的杀伤力防护,然后对玩家的力场或健康施以伤害.</span></li></ol>
+<div style="color:#d4c5a9; margin-bottom:8px;">一些特殊遭遇会强制实施自身最小的损伤或绕行层.这个管道并不是一个普遍的承诺,即每次袭击都可以减少到1次.</div>
+<div class="mw-heading mw-heading3"><h3 id="zh-Effective_Armor">有效装甲</h3></div>
+<div style="color:#d4c5a9; margin-bottom:8px;">装甲必须配备主要的有效级别奖金。 <b>疼痛容忍+1</b>Forge Pauldrons最好的一级 <b>+1/+2/+3</b>,以及 <b>每个宝石叉件+1</b> 。关键项目添加 <b>Jock壳+1</b>, <b>夜衣+1号</b>, <b>皮靴+1</b>, <b>钛镀+2</b>,以及 <b>绘图装甲+2</b>.</div>
+<div style="color:#d4c5a9; margin-bottom:8px;">示例:有效L=10给定 <b>100</b> 平面装甲削减; L=12 给定 <b>141</b>,在任何敌人的装甲断裂之前。这些是战斗公式;普通的地牢地圈装甲通常使用单独的装甲。 <b>每个有效等级2次损坏</b> 规则。</div>
+<div class="mw-heading mw-heading3"><h3 id="zh-Tier_Defense">一级防御</h3></div>
+<div style="color:#d4c5a9; margin-bottom:8px;">从 <b>通过 3× 级</b>B级平衡石提高最低 <b>ce(B ÷ 2)</b> 和最大 <b>楼层(B ++2)</b>数字乘以 <b>1 + 有效装甲水平 + 10</b>,然后切换和减去。</div>
+<div style="color:#d4c5a9; margin-bottom:8px;">15级有效装甲 12没有平衡石使 <b>33–99</b>第18级 <b>39–118</b>二级防守随着后期的顶级而不断改善.</div>
+<div class="mw-heading mw-heading3"><h3 id="zh-Forge_Pieces_and_Other_Defenses">伪造碎片和其他防御</h3></div>
+<table style="background:#2a0a12; color:#d4c5a9; border:1px solid #6b1a2a; border-collapse:collapse; margin-bottom:16px;">
+<tbody><tr style="background:#1e0a0f;">
+<th style="border:1px solid #6b1a2a; padding:6px 12px;"><span style="color:#c9943a;">块</span>
+</th>
+<th style="border:1px solid #6b1a2a; padding:6px 12px;"><span style="color:#c9943a;">铁</span>
+</th>
+<th style="border:1px solid #6b1a2a; padding:6px 12px;"><span style="color:#c9943a;">银</span>
+</th>
+<th style="border:1px solid #6b1a2a; padding:6px 12px;"><span style="color:#c9943a;">米斯里尔/宝石</span>
+</th></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">头盔,临界命中
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">0.9损害
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">×0.8
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">×0.7
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">被动屏蔽
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">6%的机会;减少3-7%
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">12%;减少6-14%
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">18%;减少9-21%
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">护盾
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">最低技能 - 1
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">−2
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">−3
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">鲍德龙斯
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">有效装甲+1
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">+2
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">+3
+</td></tr></tbody></table>
+<div style="color:#d4c5a9; margin-bottom:8px;">Gemmed保留了Mithril级的片面效果,每个Gemmed片面添加 <b>+1 有效装甲</b>,最多为 +4 。只有普通作品中最好的一级才能贡献其等级效果;拥有较早的版本不会堆叠所有等级奖金。</div>
+<div style="color:#d4c5a9; margin-bottom:8px;"><b>平衡盾牌</b> 在其支持的下移损害层中给出 ×0.85。 <b>太阴</b> 从5%的机会开始反映5%的机会;每个真正的中立级都添加 <b>两者相差3个百分点</b>时,最多 <b>32%的机会/32%的反射率</b> 第9级:反射会减少被击中者的数量,并损害敌人;不是健康治疗。音频损害不会使用通常的台池分支。</div>
+<div style="color:#d4c5a9; margin-bottom:8px;"><b>内部和平</b> 单独给出一个 <b>20%</b> 它反映了在地板缩放后该技能的一半基础卷,并避免了正常的命中;这不是一个20%的毛毯躲避所有损坏。</div>
+<div style="color:#d4c5a9; margin-bottom:8px;"><b>头盔不朽</b> 最终检查:一旦准备好,健康高于10,最终损害既致命,至少是致命的 <b>250</b>离开你 <b>1个HP</b>。它会在 <b>十个回合</b>. 主动玩家力场通常在头盔需要拯救健康之前处理命中. 小型致命命中和低健康命中不需要资格.</div>
+<div style="color:#d4c5a9; margin-bottom:8px;"><b>承认</b> 给出 <b>10%</b> 避免敌方攻击的机会; <b>裸露布</b> 提高支持的机会 <b>15%</b>敌方技能具有自己的瞄准或躲避规则,可能使用单独的分支.</div>
+<div style="color:#d4c5a9; margin-bottom:8px;"><b>战斗冥想</b> 恢复 <b>每轮支助5次保健和5次能源</b>。 遗留下来的“ 防守” 技能公式与按当前 <b>保卫</b> 按钮;不要将其原有的90%的数值替换为上面的主动防御公式。</div>
+<div class="mw-heading mw-heading2"><h2 id="zh-Force_Fields_and_Percentage_Attacks">部队行动区和攻击百分比</h2></div>
+<div class="mw-heading mw-heading3"><h3 id="zh-Player_Force_Field">玩家部队球场</h3></div>
+<div style="color:#d4c5a9; margin-bottom:8px;">拥有 <b>部队外勤</b> 战斗启动能力 <b>地面(最大健康水平×实地水平×5%)</b>,最少为1. 游泳池被刷新为新的战斗。</div>
+<div style="color:#d4c5a9; margin-bottom:8px;">当球场是正球时,它吸收一个命中值达到其剩余容量, <b>丢弃物溢出</b>撞击到20个田间,造成100个损伤,而健康则保持不变,后来的撞击可以到达健康,支持的百分比攻击和毒滴也通过这种保护;明确的绕行攻击是例外。</div>
+<div class="mw-heading mw-heading3"><h3 id="zh-Enemy_Force_Fields">敌方部队战区</h3></div>
+<div style="color:#d4c5a9; margin-bottom:8px;">敌方战区同样防止健康溢出击破它。 <b>行动开始</b>,其保护会持续到整个动作:在早先的命中断开球场后,后续链/后续命中无法损坏 HP。 <b>新行动</b> 伤害健康。</div>
+<div style="color:#d4c5a9; margin-bottom:8px;"><b>剑链</b> 增加支持对活跃的敌方战区造成的实际损害 <b>15%</b>吸血鬼装备绕过多个防御,但不会自动移除此动作保护.</div>
+<div class="mw-heading mw-heading3"><h3 id="zh-Percentage-of-Maximum-Health_Skills">最高健康技能的百分比</h3></div>
+<div style="color:#d4c5a9; margin-bottom:8px;">这些卷列出百分比 <b>上限</b>而非当前, 健康 。它们的特殊分支绕过普通装甲, 防御, 以及级防御,然后应用它自己的难度修饰和辅助裁军。 玩家力量场仍然可以拦截命中,除非攻击明确绕过它。 任何单独的能量排水即使在健康损害被拦截时仍然可以保留 。</div>
+<div style="color:#d4c5a9; margin-bottom:8px;">多重击可以从配置的射程中滚动新的命中数。当技能指定一个最大健康损害上限时,该上限是命中值的上限,而不是所有敌人技能共享同一上限的承诺。</div>
+<div class="mw-heading mw-heading2"><h2 id="zh-Status_Effects_and_Resistances">现状影响和抵抗运动</h2></div>
+<table style="background:#2a0a12; color:#d4c5a9; border:1px solid #6b1a2a; border-collapse:collapse; margin-bottom:16px;">
+<tbody><tr style="background:#1e0a0f;">
+<th style="border:1px solid #6b1a2a; padding:6px 12px;"><span style="color:#c9943a;">效果</span>
+</th>
+<th style="border:1px solid #6b1a2a; padding:6px 12px;"><span style="color:#c9943a;">正常电阻ST</span>
+</th>
+<th style="border:1px solid #6b1a2a; padding:6px 12px;"><span style="color:#c9943a;">主要限制或影响</span>
+</th></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">睡觉
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">斯塔米纳
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">无法行动; 保留了第一个转弯,然后75% 提醒检查
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Poison
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">强度
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">其余弯道的定期健康损害
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">魅力
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">魅力
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">效果不变时无法行动
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">网页
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">能力
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">阻止人身攻击和逃跑; 魔法、防御和物品仍然是其他选择
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">偏执
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">感觉
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">阻碍先进的身体技能和魔法;基本攻击、防御、逃离和物品仍然是其他选择
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">盖耳
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">感觉
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">无法在此效果存在时采取行动; 音频攻击损坏与状态分开
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">宠物
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">斯塔米纳
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">转弯时不能行动
+</td></tr></tbody></table>
+<div style="color:#d4c5a9; margin-bottom:8px;">正常Stat抗药性用途 <b>原始属性值 ÷ 100 × F</b>,封顶 <b>90%</b>弱/轻/重态变体乘以1.25;强/重态变体乘以0.75,盖前.</div>
+<div style="color:#d4c5a9; margin-bottom:8px;">在此正常检查前, 支持的效果可以得到单独的保护 :</div>
+<ul><li><span style="color:#d4c5a9;"><b>铁遗嘱:</b> 25%反对睡眠,魅力,和不安。</span></li>
+<li><span style="color:#d4c5a9;"><b>战斗反射:</b> 30%的基础网络避让,通过支持的避让项目改进.</span></li>
+<li><span style="color:#d4c5a9;"><b>铁宪法:</b> 30%的抗毒药.</span></li>
+<li><span style="color:#d4c5a9;"><b>音乐制作:</b> 普通检查分支中的封耳状态豁免;它不一定取消单独的音频损坏.</span></li></ul>
+<div style="color:#d4c5a9; margin-bottom:8px;">Boss 覆盖卷和明确的平面状态攻击可以使用不同的检查。 90%的上限适用于 <b>普通状态检查</b>而不是在经过独立保护检查后获得所有可能的豁免或完全的机会。</div>
+<div class="mw-heading mw-heading2"><h2 id="zh-Telegraphs,_QTEs,_Luck,_and_Escape"><span id="zh-Telegraphs.2C_QTEs.2C_Luck.2C_and_Escape"></span>电报、QTEs、Luck和逃逸</h2></div>
+<div style="color:#d4c5a9; margin-bottom:8px;"><b>电报攻击</b> 执行前警告您。在待决攻击解决前, 保护、 治愈或成功睡眠敌人 。 成功睡眠取消其待决的指控 。 读取实际警告,因为有些攻击有特殊的绕行规则 。</div>
+<div style="color:#d4c5a9; margin-bottom:8px;"><b>QTE袭击</b> 显示一个简短的目标。在时间上单击相关的命中点数; 弹夹可以为单独的命中点数提供单独的 QTE。一个 Forge Shield 改善了支持的目标大小和反应时间,而困难则调整最后的计时窗口。</div>
+<div style="color:#d4c5a9; margin-bottom:8px;">活动 <b>运气</b> 给出 <b>25%</b> 有机会在支持的检查中滚动两次并保持有利结果。这包括滚动一个较低的敌人弹压计数,并挽救失败的Tempest/Assassin续作。每个链条只能使用 <b>一次成功的幸运救援</b>运气并不能保证无穷无尽的跟进 也不能保证每个战斗随机数的回滚</div>
+<div style="color:#d4c5a9; margin-bottom:8px;">正常逃跑的机会是 <b>50 + 修改后的能力 + 战斗XP + 10</b>,乘以1.5,以 " Fleet Footed " 和 " 封顶 " 表示 <b>95%</b>. Shadow 步骤保证正常的合格越狱。正常的老板或无法承受的遭遇是无法逃脱的。无尽的强迫战斗却允许发生。 <b>3%</b> 逃生卷;普通的无极格斗首先有一个 <b>18%</b> 强制失败检查,即使有 Shadow 步骤。 查看它的指南 。</div>
+<div class="mw-heading mw-heading2"><h2 id="zh-Combat_Paths_and_Soul_Stones">战斗道路和灵魂石</h2></div>
+<table style="background:#2a0a12; color:#d4c5a9; border:1px solid #6b1a2a; border-collapse:collapse; margin-bottom:16px;">
+<tbody><tr style="background:#1e0a0f;">
+<th style="border:1px solid #6b1a2a; padding:6px 12px;"><span style="color:#c9943a;">路径</span>
+</th>
+<th style="border:1px solid #6b1a2a; padding:6px 12px;"><span style="color:#c9943a;">多种行动</span>
+</th>
+<th style="border:1px solid #6b1a2a; padding:6px 12px;"><span style="color:#c9943a;">师父</span>
+</th></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">刀锋师
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">攻击,强击
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;"><a href="character-muramasa.html" title="Character:Muramasa">Muramasa</a>
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">暗杀者
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">快速攻击,暴风雨
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;"><a href="character-arestes.html" title="Character:Arestes">Arestes</a>
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">巫师
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">攻势魔法和治疗;睡眠尝试获得分数
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;"><a href="character-aziza.html" title="Character:Aziza">Aziza</a>
+</td></tr></tbody></table>
+<div style="color:#d4c5a9; margin-bottom:8px;">每条道路必须首先通过主人的动作来唤醒。刀手需要拥有Muramasa和格斗家协会200的亲密朋友;刺客需要盗贼协会350. 声望。巫师有Aziza、女仆、技能以及指南中详述的地牢进步的先决条件。解锁一条道路并不妨碍其他人的觉醒。</div>
+<div style="color:#d4c5a9; margin-bottom:8px;">唤醒的路径开始于 <b>1级</b>,已给出 ×1.15。合格动作通常授予+1分。无限添加随机 <b>1 穿过目前的无穷层</b> 在支持路径经验乘数之前。 Binus 命中并不意味着每个额外的命中都独立地授予另一个动作点。</div>
+<div style="color:#d4c5a9; margin-bottom:8px;"><b>路径乘数=1 + 0.15 x 级.</b> 排名10给出×2.5;排名20×4.0。</div>
+<div style="color:#d4c5a9; margin-bottom:8px;">累积等级1-20阈值为: <b>0, 100, 300, 700, 1,500, 3,100, 6,300, 12,700, 25,500, 44,700, 73,500, 116,700, 181,500, 278,700, 424,500, 643,200, 971,250, 1,463,325, 2,201,438, 3,308,607</b>。以后的排名使用当前扩展宽度规则,将每个新跨度乘以1.5和切换。</div>
+<div style="color:#d4c5a9; margin-bottom:8px;"><b>暗杀</b> 刺客排名1:快速攻击继续 <b>50人+军衔%</b> 并且每一次额外罢工下降10个百分点。 <b>黑暗协调者</b> 在起始数中增加15个,并将下降数减为5个,每次额外打击都会重新计算其损失,检查躲避,并使用刺客乘数。 敌人失败,连续失败,或者躲避的打击会阻止连锁。</div>
+<table style="background:#2a0a12; color:#d4c5a9; border:1px solid #6b1a2a; border-collapse:collapse; margin-bottom:16px;">
+<tbody><tr style="background:#1e0a0f;">
+<th style="border:1px solid #6b1a2a; padding:6px 12px;"><span style="color:#c9943a;">灵魂石</span>
+</th>
+<th style="border:1px solid #6b1a2a; padding:6px 12px;"><span style="color:#c9943a;">每一级作战贡献</span>
+</th></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">剑石
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">+1 攻击/快速攻击损坏
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">野蛮石
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">+1 风暴/ 电击损坏
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">元素石头
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">+1 火灾/冰损
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">light石
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">+1 轻/ 暗损坏
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">幽灵石
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">+1 以重新计算暗杀链打击损害
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">平衡块
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">改为一级防御最低和最高
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">皇后石镇
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">+1 最大健康
+</td></tr></tbody></table>
+<div style="color:#d4c5a9; margin-bottom:8px;">见 <a href="game-systems-soul-stones.html" title="Game Systems:Soul Stones">灵魂石</a> 战斗路径、战斗级别、装备级别和灵魂石级别是独立的进步轨道,可以共同作出贡献。</div>
+<div class="mw-heading mw-heading2"><h2 id="zh-Victory_Rewards_and_Emergency_Revival">胜利奖和紧急复兴</h2></div>
+<div style="color:#d4c5a9; margin-bottom:8px;">普通的战斗奖励计算开始于:</div>
+<ul><li><span style="color:#d4c5a9;"><b>战斗 EXP = 地板(敌方基地 战斗 EXP = 敌方地板 = ÷ 2).</b> Gladiator Belt 乘以 1.5 并切换。</span></li>
+<li><span style="color:#d4c5a9;"><b>黄金基地=5+2×敌楼.</b> 滚动 <b>1 - max( 1, 修改的运气)</b>,然后授予 <b>楼层(黄金底座×(1+幸运卷××15))</b>.</span></li></ul>
+<div style="color:#d4c5a9; margin-bottom:8px;">Infinity 将这些计算出来的EXP和黄金金额翻一番,然后应用其支持的EXP的fix和敌人自己的战斗EXP乘数. Special battle可以添加他们自己的情景或追求的奖励. 普通的黄金是财富;它与战斗是分开的. <b>龙币</b> 胜利也可以记录合格的格斗者协会杀死并授予敌人配置的派系影响力。普通胜利处理器可以清除玩家和敌人的战斗状态效应。</div>
+<div style="color:#d4c5a9; margin-bottom:8px;">例如,在10楼有基地战斗EXP 20的敌人生产 <b>100场战斗EXP</b>,或 <b>150 与角斗士带</b>之后适用的奖金。 <b>$26–$50</b> 战斗EXP的奖励并不直接给予战斗路径行动点;那些跟踪符合条件的行动。</div>
+<div style="color:#d4c5a9; margin-bottom:8px;"><b>凤凰羽毛</b> 当健康在活跃的普通地牢或无穷战役中达到零时,可以自动使你复活,条件是你拥有一个,自动的羽毛复活是能够实现的。 <b>健康、能源、平静地恢复到最大水平</b>这个操作者排除了叙事监护人的遭遇,并不保证从战斗之外的每一个探索危险中恢复过来,本指南没有包括获取和主要的故事结果。</div>
+<div class="mw-heading mw-heading2"><h2 id="zh-Build_Planning_and_Common_Questions">建立规划和共同问题</h2></div>
+<ul><li><span style="color:#d4c5a9;"><b>重型物理 :</b> 强力,一个强大的有效武器级别,武器大师,武术,强力打击,以及骷髅粉碎者;如果使用Berserker Rage,则唤醒刀锋大师并维持健康.</span></li>
+<li><span style="color:#d4c5a9;"><b>快速/ 链条 :</b> 能力,击剑游戏,快速攻击与侧脚,杂技,以及刺客;暴风雪加暴风雨提供了单独的连锁选择.</span></li>
+<li><span style="color:#d4c5a9;"><b>铸造者:</b> 神秘的, 暗黑的升级, Arcane Knowers, Wizardry, Master Wizard, 降低成本的技能, 以及Sorcerer。 保留一个以上的元素供敌人防御之用 。</span></li>
+<li><span style="color:#d4c5a9;"><b>防卫:</b> 有效的盔甲和Forge的碎片、战斗等级、平衡石、适当的状态保护、愈合和部队战地。 Tai-Chi 奖励真正的中立一致,但反映而不是治愈。</span></li></ul>
+<div style="color:#d4c5a9; margin-bottom:8px;">任何建设都无法保证击败每次遭遇。 豁免、强力场、百分率破坏和特别的老板规则可以改变哪些行动是有用的。</div>
+<table style="background:#2a0a12; color:#d4c5a9; border:1px solid #6b1a2a; border-collapse:collapse; margin-bottom:16px;">
+<tbody><tr style="background:#1e0a0f;">
+<th style="border:1px solid #6b1a2a; padding:6px 12px;"><span style="color:#c9943a;">问题</span>
+</th>
+<th style="border:1px solid #6b1a2a; padding:6px 12px;"><span style="color:#c9943a;">现行规则</span>
+</th></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">为什么同样的身体攻击 变化很大?
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">武器/战斗因子变化发生在正常损坏卷之前
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">武术会造成最大的伤害吗?
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">它能提高卷轴最低值 贝瑟克可以在其条件下强迫最大值
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">战斗XP封顶在×1.80吗?
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">否;顶级及其修改符号继续
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">为什么一个巨大的打击只打破一个田地?
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">战地溢出被丢弃 敌人的动作保护也能挡住你的链条
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">吸血鬼装备总是穿透防御吗?
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">只有Proc命中;武力场和打击检查仍然重要
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">防守总是90%?
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">否;当前主动防守为50%×F,上限为80%,因其覆盖的命中
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">解除武装技术对技能无效吗?
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">否;它现在被支持的一半 覆盖的技能损害
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">事件/陷阱的撞击是否使用这个确切的管道?
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">否;环境和叙述系统有单独的处理器
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">90%的状态上限是每个保护的上限吗?
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">它封顶了正常的Stat-resistance卷; 单独的保护和覆盖仍然存在
+</td></tr></tbody></table>
+<div class="mw-heading mw-heading2"><h2 id="zh-Accuracy_Notes">准确性说明</h2></div>
+<div style="color:#d4c5a9; margin-bottom:8px;">对照当前战斗动作处理器、战斗技巧帮助器、魔法计算、难度剖析、力场、状态检查、Forge棋子和战斗路径进度进行测试 <b>2026年10月4日 (中文(简体) ).</b>。整数截图和特殊分支解释与单一组合公式的微小差异。主要拼图结果和保护字符曝光被省略。</div>
+<div class="mw-heading mw-heading2"><h2 id="zh-Related_Pages">相关页面</h2></div>
+<ul><li><span style="color:#d4c5a9;"><a href="game-systems.html" title="Game Systems">游戏系统枢纽</a></span></li>
+<li><span style="color:#d4c5a9;"><a href="game-systems-dungeon.html" title="Game Systems:Dungeon">敦煌勘探公司</a></span></li>
+<li><span style="color:#d4c5a9;"><a href="game-systems-infinity-dungeons.html" title="Game Systems:Infinity Dungeons">无穷敦煌</a></span></li>
+<li><span style="color:#d4c5a9;"><a href="game-systems-soul-stones.html" title="Game Systems:Soul Stones">灵魂石</a></span></li>
+<li><span style="color:#d4c5a9;"><a href="items.html" title="Items">物项和设备</a></span></li>
+<li><span style="color:#d4c5a9;"><a href="skills.html" title="Skills">数据、技能和技能</a></span></li></ul>
+<p><br/>
+<a href="game-systems.html" title="Game Systems">QQ回游戏系统</a>
+</p>
+</div></div>
+<div class="wiki-source-content" data-lang-panel="en"><div class="mw-content-ltr mw-parser-output" dir="ltr" lang="en">
+<div style="color:#c9943a; font-size:1.5em; font-weight:bold; border-bottom:1px solid #6b1a2a; padding-bottom:6px; margin-bottom:16px;">Combat System Guide</div>
+<div style="color:#d4c5a9; margin-bottom:8px;">This guide explains ordinary turn-based combat: action costs, physical and magical damage, defenses, force fields, status effects, difficulty, and the three Combat Paths. It lists mechanics without revealing major character or story outcomes.</div>
+<div style="color:#d4c5a9; margin-bottom:8px;">For exploration, gates, traps, and floor routes, see <a href="game-systems-dungeon.html" title="Game Systems:Dungeon">Dungeon</a>. For endless-mode themes, boss cycles, affixes, and special enemy rules, see <a href="game-systems-infinity-dungeons.html" title="Game Systems:Infinity Dungeons">Infinity Dungeons</a>. Narrative guardian encounters use a separate choice-based system; their exploration role is covered on the Dungeon page.</div>
+<div class="mw-heading mw-heading2"><h2 id="Actions_and_Turn_Flow">Actions and Turn Flow</h2></div>
+<div style="color:#d4c5a9; margin-bottom:8px;">Choose an action, resolve its hit and effects, then handle the enemy's response and ongoing status effects. A miss can still spend the turn. Several restrictions block particular buttons rather than every action; use the alternatives in the status table below.</div>
+<table style="background:#2a0a12; color:#d4c5a9; border:1px solid #6b1a2a; border-collapse:collapse; margin-bottom:16px;">
+<tbody><tr style="background:#1e0a0f;">
+<th style="border:1px solid #6b1a2a; padding:6px 12px;"><span style="color:#c9943a;">Action</span>
+</th>
+<th style="border:1px solid #6b1a2a; padding:6px 12px;"><span style="color:#c9943a;">Normal Energy cost</span>
+</th>
+<th style="border:1px solid #6b1a2a; padding:6px 12px;"><span style="color:#c9943a;">Main scaling</span>
+</th>
+<th style="border:1px solid #6b1a2a; padding:6px 12px;"><span style="color:#c9943a;">Required skill</span>
+</th></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Attack
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">0
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Strength
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">None
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Quick Attack
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">5
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Ability
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">None
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Stormslash
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">15
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Strength + Ability
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Stormslash
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Power Strike
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">20
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Strength
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Power Strike
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Defend
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">0
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Fighting tier improves reduction
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">None
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Fire / Ice
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">12
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Mystic
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Elemental Blast
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Light / Dark
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">40
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Mystic
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Light Magic / Dark Magic
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Sleep
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">18
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Mystic / enemy-specific Sleep rules
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Illusion Weaving
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Heal
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">22
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Mystic
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Healing Touch
+</td></tr></tbody></table>
+<div style="color:#d4c5a9; margin-bottom:8px;">Spell buttons require their listed skill and enough Energy. A grimoire improves damage and healing; the ordinary combat button check does not require one to be equipped. Magic uses its own cost reductions. The physical costs in the table are the action's standard requirements; general physical-activity Energy effects are separate from the spell-cost formula. Medicine restores <b>25 Health</b> per consumed Medicine through the combat item action.</div>
+<div style="color:#d4c5a9; margin-bottom:8px;"><b>Endurance Training</b> reduces physical Energy spending by 10%, with integer truncation: Quick Attack <b>4</b>, Stormslash <b>13</b>, and Power Strike <b>18</b>. The current Power Strike handler also checks its reduced <b>18-Energy requirement</b>, matching the displayed cost, rather than requiring the unreduced 20 before allowing the action.</div>
+<div style="color:#d4c5a9; margin-bottom:8px;"><b>Defend</b> reduces the next applicable direct damage hit by <b>min(80%, 50% × fighting modifier)</b>. That defending flag is consumed by the hit. It does not grant 80% reduction to every hit in an enemy barrage. With <b>Nature's Embrace</b>, Defend also restores a random <b>4–10% of maximum Energy</b>, capped by your Energy pool.</div>
+<div class="mw-heading mw-heading2"><h2 id="Difficulty_Settings">Difficulty Settings</h2></div>
+<div style="color:#d4c5a9; margin-bottom:8px;">Combat difficulty is saved per game. These multipliers apply to supported combat values; they do not universally scale every exploration trap or scenario cost.</div>
+<table style="background:#2a0a12; color:#d4c5a9; border:1px solid #6b1a2a; border-collapse:collapse; margin-bottom:16px;">
+<tbody><tr style="background:#1e0a0f;">
+<th style="border:1px solid #6b1a2a; padding:6px 12px;"><span style="color:#c9943a;">Combat value</span>
+</th>
+<th style="border:1px solid #6b1a2a; padding:6px 12px;"><span style="color:#c9943a;">Easy</span>
+</th>
+<th style="border:1px solid #6b1a2a; padding:6px 12px;"><span style="color:#c9943a;">Normal</span>
+</th>
+<th style="border:1px solid #6b1a2a; padding:6px 12px;"><span style="color:#c9943a;">Hard</span>
+</th></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Enemy HP
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">×0.50
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">×1
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">×1.25
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Ordinary direct damage taken
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">×0.50
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">×1
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">×1.25
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Percentage-of-max-Health damage
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">×0.50
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">×1
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">×1.10
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Poison tick damage
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">×0.50
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">×1
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">×1.20
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Enemy healing
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">×0.50
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">×1
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">×1.25
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">QTE reaction window
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">×1.50
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">×1
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">×0.90
+</td></tr></tbody></table>
+<div style="color:#d4c5a9; margin-bottom:8px;">Positive scaled integer values retain a minimum of 1. QTE timing retains its <b>0.35-second safety floor</b>. Narrative guardian encounters separately halve enemy Energy and final post-defense player damage on Easy.</div>
+<div style="color:#d4c5a9; margin-bottom:8px;">Normal preserves the standard values explained below. Hard does not simply multiply all incoming effects by 1.25: percentage attacks and poison have their own modifiers.</div>
+<div class="mw-heading mw-heading2"><h2 id="Fighting_Experience_and_Tiers">Fighting Experience and Tiers</h2></div>
+<div style="color:#d4c5a9; margin-bottom:8px;">Fighting Experience determines a tier used for output, status resistance, active Defend, and tier defense:</div>
+<div style="color:#d4c5a9; margin-bottom:8px;"><b>Fighting modifier F = 1 + 0.05 × (tier − 1).</b></div>
+<table style="background:#2a0a12; color:#d4c5a9; border:1px solid #6b1a2a; border-collapse:collapse; margin-bottom:16px;">
+<tbody><tr style="background:#1e0a0f;">
+<th style="border:1px solid #6b1a2a; padding:6px 12px;"><span style="color:#c9943a;">Tier</span>
+</th>
+<th style="border:1px solid #6b1a2a; padding:6px 12px;"><span style="color:#c9943a;">Name</span>
+</th>
+<th style="border:1px solid #6b1a2a; padding:6px 12px;"><span style="color:#c9943a;">XP to reach</span>
+</th>
+<th style="border:1px solid #6b1a2a; padding:6px 12px;"><span style="color:#c9943a;">Fighting modifier</span>
+</th></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">1
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Novice
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">0
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">×1.00
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">2
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Brawler
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">100
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">×1.05
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">3
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Warrior
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">200
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">×1.10
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">4
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Veteran
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">500
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">×1.15
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">5
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Elite
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">1,000
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">×1.20
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">6
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Champion
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">2,000
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">×1.25
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">7
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Master
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">4,000
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">×1.30
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">8
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Gladiator
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">8,000
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">×1.35
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">9
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Warlord
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">16,000
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">×1.40
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">10
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Hero
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">32,000
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">×1.45
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">11
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Legend
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">64,000
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">×1.50
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">12
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Mythic
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">128,000
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">×1.55
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">13
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Immortal
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">256,000
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">×1.60
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">14
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Demigod
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">512,000
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">×1.65
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">15
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Godlike
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">1,024,000
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">×1.70
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">16
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Ascendant
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">2,048,000
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">×1.75
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">17
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Transcendent
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">4,096,000
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">×1.80
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">18
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Apex (1)
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">8,192,000
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">×1.85
+</td></tr></tbody></table>
+<div style="color:#d4c5a9; margin-bottom:8px;">At <b>8,192,000 XP</b>, Apex (1) begins at Tier 18. Apex (2) begins at <b>12,288,000</b>, Apex (3) at <b>18,432,000</b>, and each later threshold is ×1.5 the preceding Apex threshold. The tier and fighting modifier continue increasing; the old <b>×1.80 cap does not apply</b>.</div>
+<div style="color:#d4c5a9; margin-bottom:8px;">Fighting tier is separate from the Combat Path ranks described later. Raw XP does not directly divide enemy skill damage or grant immunity.</div>
+<div class="mw-heading mw-heading2"><h2 id="Physical_Damage_and_Accuracy">Physical Damage and Accuracy</h2></div>
+<div class="mw-heading mw-heading3"><h3 id="Accuracy_Comes_First">Accuracy Comes First</h3></div>
+<div style="color:#d4c5a9; margin-bottom:8px;">Physical actions have a player miss threshold:</div>
+<div style="color:#d4c5a9; margin-bottom:8px;"><b>max(1, 43.3 − 0.414 × modified Ability)%.</b></div>
+<div style="color:#d4c5a9; margin-bottom:8px;"><b>Swordplay</b> halves that threshold. The implementation compares an integer 1–100 roll against it, so a fractional threshold is effectively rounded down for that roll. The enemy may then make a separate dodge check. A high Ability build improves the first check but does not remove every enemy dodge mechanic. <b>Sniper's Scope</b> has a <b>15%</b> chance to correct an eligible miss or enemy dodge.</div>
+<div class="mw-heading mw-heading3"><h3 id="Building_the_Damage_Maximum">Building the Damage Maximum</h3></div>
+<div style="color:#d4c5a9; margin-bottom:8px;">Let <b>W</b> be effective melee weapon level. The current physical attack uses a varying fighting factor:</div>
+<div style="color:#d4c5a9; margin-bottom:8px;"><b>Physical factor = (F + random real number from 0 to W ÷ 10) × random real number from 0.5 to 1.3.</b></div>
+<div style="color:#d4c5a9; margin-bottom:8px;">This variation is applied before the actual damage roll. Physical damage can therefore vary even before Martial Arts changes the final roll's lower bound.</div>
+<div style="color:#d4c5a9; margin-bottom:8px;"><b>Weapon bonus = W × 2</b>, or <b>W × 3 with Weapon Mastery</b>, when a melee weapon is equipped.</div>
+<table style="background:#2a0a12; color:#d4c5a9; border:1px solid #6b1a2a; border-collapse:collapse; margin-bottom:16px;">
+<tbody><tr style="background:#1e0a0f;">
+<th style="border:1px solid #6b1a2a; padding:6px 12px;"><span style="color:#c9943a;">Action</span>
+</th>
+<th style="border:1px solid #6b1a2a; padding:6px 12px;"><span style="color:#c9943a;">Base</span>
+</th>
+<th style="border:1px solid #6b1a2a; padding:6px 12px;"><span style="color:#c9943a;">Stat contribution</span>
+</th></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Attack
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">1
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">modified Strength ÷ 2 × physical factor
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Quick Attack
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">2
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">modified Ability ÷ 2 × physical factor
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Stormslash
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">3
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">(modified Strength + Ability) ÷ 3 × physical factor
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Power Strike
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">5
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">modified Strength × physical factor
+</td></tr></tbody></table>
+<div style="color:#d4c5a9; margin-bottom:8px;"><b>Initial maximum = floor(base + stat contribution + weapon bonus).</b></div>
+<div style="color:#d4c5a9; margin-bottom:8px;">Effective melee level includes applicable key-item bonuses: <b>Sword Chain +1</b>, <b>The Dark Sheath +1</b>, and the qualifying resolved mechanical encounter's +1. These do not necessarily alter the weapon's visible stored level.</div>
+<div class="mw-heading mw-heading3"><h3 id="Physical_Roll_and_Passives">Physical Roll and Passives</h3></div>
+<table style="background:#2a0a12; color:#d4c5a9; border:1px solid #6b1a2a; border-collapse:collapse; margin-bottom:16px;">
+<tbody><tr style="background:#1e0a0f;">
+<th style="border:1px solid #6b1a2a; padding:6px 12px;"><span style="color:#c9943a;">Effect</span>
+</th>
+<th style="border:1px solid #6b1a2a; padding:6px 12px;"><span style="color:#c9943a;">Current behavior</span>
+</th></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Poseidon Trident
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">15% chance to double the initial physical maximum
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Adrenaline Rush
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Below 30% Health, doubles the physical maximum
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Berserker Rage
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Power Strike at 90%+ Health: 35% chance to use the maximum directly; costs random 3–10% maximum Health
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Martial Arts
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Raises the damage-roll minimum from floor(maximum ÷ 3) to floor(maximum ÷ 2)
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Exploit Weakness
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">15% chance to double rolled physical damage; skips its next four eligible physical calculations after a trigger
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Acrobatics
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Quick Attack: 15% chance for ×1.5 damage; separately, physical actions can trigger a 15% follow-up Quick Attack
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Power buff
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">×1.5 physical damage after the roll
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Hell Fire
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">×1.10 physical damage after the Power buff
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Sword Stone
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Adds its level to Attack and Quick Attack
+</td></tr></tbody></table>
+<div style="color:#d4c5a9; margin-bottom:8px;">Roll inclusively between the final minimum and maximum, unless Berserker forces the maximum. Calculations generally truncate after percentage multipliers. Follow-up attacks have their own calculations and can consume passive cooldown checks; a multi-hit turn is not necessarily one check of every passive.</div>
+<div class="mw-heading mw-heading3"><h3 id="Enemy_Defenses_and_Skill_Enhancements">Enemy Defenses and Skill Enhancements</h3></div>
+<div style="color:#d4c5a9; margin-bottom:8px;">For a normal Attack, apply enemy damage reduction, subtract an inclusive <b>effective enemy floor through twice that floor</b> defense roll, then apply an active physical guard. Floor defense normally leaves at least <b>1 damage</b>.</div>
+<div style="color:#d4c5a9; margin-bottom:8px;">For the three physical skills, enemy percentage reduction happens before these enhancements:</div>
+<ul><li><span style="color:#d4c5a9;"><b>Tempest Strike:</b> Stormslash gets ×1.05 and Lightning typing. Lightning weakness doubles damage; resistance halves it. It can then chain extra strikes, starting at <b>50%</b> continuation and decreasing by <b>5 percentage points</b> after each successful extra hit, stopping on a failed continuation or enemy defeat.</span></li>
+<li><span style="color:#d4c5a9;"><b>Skull Crusher:</b> Power Strike gets ×1.10, then a <b>30%</b> chance to multiply by <b>4</b>.</span></li>
+<li><span style="color:#d4c5a9;"><b>Brute Stone:</b> adds its level to Stormslash and Power Strike after their skill enhancements.</span></li></ul>
+<div style="color:#d4c5a9; margin-bottom:8px;">Then apply floor defense and matching enemy guard, followed by the applicable Combat Path multiplier. Guards consume charges on qualifying damaging hits, so a chain can consume more than one charge. Defensive Stance and Magical Shield are <b>enemy guard mechanics</b> too; their exact physical/magic reductions depend on that enemy's guard definition.</div>
+<div style="color:#d4c5a9; margin-bottom:8px;"><b>Side-Step</b> gives Quick Attack a <b>20%</b> base chance for an extra strike and readiness to dodge an eligible enemy attack. <b>The Null Shroud</b> adds 5 percentage points to an existing supported dodge chance; it does not create every dodge ability by itself.</div>
+<div class="mw-heading mw-heading2"><h2 id="Sovereign_Edge_and_Disarming">Sovereign Edge and Disarming</h2></div>
+<div style="color:#d4c5a9; margin-bottom:8px;"><b>Sovereign Edge</b> enhances the normal <b>Attack</b> button:</div>
+<ul><li><span style="color:#d4c5a9;">Always ×1.15 to its rolled attack damage.</span></li>
+<li><span style="color:#d4c5a9;">Independent <b>20%</b> precision roll: bypass the enemy guard and add <b>50%</b> to damage after the normal remaining defenses.</span></li>
+<li><span style="color:#d4c5a9;">Independent <b>5%</b> Mortal Blow roll: ×10 before the enemy defenses.</span></li>
+<li><span style="color:#d4c5a9;">Against eligible ordinary enemies, a separate <b>15% instant-kill roll</b> occurs before normal accuracy and dodge checks. Boss, unfleeable, and explicitly instant-kill-protected enemies are excluded.</span></li></ul>
+<div style="color:#d4c5a9; margin-bottom:8px;">These enhancements belong to Attack, not every physical skill. The instant-kill chance should not be treated as a way to skip bosses.</div>
+<div style="color:#d4c5a9; margin-bottom:8px;">With <b>Disarming Technique</b>, a surviving enemy can be disarmed by <b>Quick Attack</b>, or <b>Attack with Sovereign Edge</b>, at <b>10%</b>. Disarm now halves the next covered enemy damage action, including supported skill damage. Its flag is then consumed. A multi-hit skill resolves its hits under the action's disarm state. The old description of disarm as largely irrelevant to skill-based enemy attacks is obsolete.</div>
+<div class="mw-heading mw-heading2"><h2 id="Magic_Damage_and_Healing">Magic Damage and Healing</h2></div>
+<div class="mw-heading mw-heading3"><h3 id="Spell_Maximum">Spell Maximum</h3></div>
+<div style="color:#d4c5a9; margin-bottom:8px;">Magic uses the normal fighting modifier <b>F</b>, without the physical weapon random-factor step.</div>
+<ul><li><span style="color:#d4c5a9;"><b>Fire/Ice:</b> 15 + floor(modified Mystic ÷ 2 × F) + grimoire bonus.</span></li>
+<li><span style="color:#d4c5a9;"><b>Light/Dark:</b> 15 + floor(modified Mystic × 1.5 × F) + grimoire bonus.</span></li>
+<li><span style="color:#d4c5a9;">Offensive spells also add <b>floor((Mystic − 100) ÷ 10)</b> when Mystic is above 100.</span></li></ul>
+<div style="color:#d4c5a9; margin-bottom:8px;">For grimoire level <b>G</b>, start with <b>G²</b>, tripled with <b>Arcane Knowledge</b>. If G is above 1, multiply that by a fresh random real number from <b>1 through G</b>, then truncate. It is not a fixed G² bonus on every cast.</div>
+<div style="color:#d4c5a9; margin-bottom:8px;">Before the main damage roll:</div>
+<ul><li><span style="color:#d4c5a9;"><b>Mermaid Magic:</b> 15% chance to double an offensive spell maximum.</span></li>
+<li><span style="color:#d4c5a9;"><b>Sashina's Gift:</b> 15% chance to double Fire/Ice's maximum; also halves the enemy percentage damage-reduction contribution and prevents elemental absorption on that cast.</span></li>
+<li><span style="color:#d4c5a9;"><b>Master Wizard:</b> ×1.5 maximum.</span></li>
+<li><span style="color:#d4c5a9;">Fire's <b>Fire Elemental Talisman +20%</b> and <b>Hell Fire +50%</b> add together for ×1.7 when both are owned.</span></li>
+<li><span style="color:#d4c5a9;">Light gets <b>+5% per Good alignment tier</b>; Dark gets the same per Evil tier, up to ×1.45.</span></li></ul>
+<div style="color:#d4c5a9; margin-bottom:8px;">Grimoire levels above 1 then multiply the maximum by <b>1 + 0.1 × (G − 1)</b>. The roll minimum is <b>33%</b> of that maximum, or <b>55% with Wizardry</b>, truncated. Roll inclusively.</div>
+<div style="color:#d4c5a9; margin-bottom:8px;">After rolling, <b>Arcane Surge</b> has an <b>18%</b> chance on offensive magic to give <b>damage ×3 + random 1–300</b>. Add Elemental Stone levels to Fire/Ice or Twilight Stone levels to Light/Dark after that step.</div>
+<div class="mw-heading mw-heading3"><h3 id="What_Can_Stop_a_Spell">What Can Stop a Spell</h3></div>
+<div style="color:#d4c5a9; margin-bottom:8px;">A standard offensive spell can be dodged. It then passes through enemy percentage reduction, elemental weakness ×2 or resistance ×0.5, magic resistance, possible absorption, floor defense, and magical guard before its Sorcerer multiplier.</div>
+<div style="color:#d4c5a9; margin-bottom:8px;">Enemy magic resistance is a fresh roll from <b>50–150% of the listed resistance</b>, used as a percentage reduction with a 1-damage minimum. An absorption success heals the enemy for the resulting damage, limited by its maximum HP and adjusted by difficulty's enemy-healing multiplier.</div>
+<div style="color:#d4c5a9; margin-bottom:8px;"><b>Arcane Surge skips the elemental / magic-resistance / absorption block</b>, so that cast does not receive the ordinary weakness doubling either. It still checks enemy dodge and the other applicable reduction, floor-defense, guard, and force-field rules. Sashina's Gift's absorption protection is a separate proc.</div>
+<div class="mw-heading mw-heading3"><h3 id="Vampire_Equipment">Vampire Equipment</h3></div>
+<div style="color:#d4c5a9; margin-bottom:8px;"><b>Vampire Fangs</b> can proc on the main physical calculation; <b>Vampire Grimoire</b> on the main offensive magic calculation. Base chance is <b>15%</b>, raised to <b>18% with Vampirism</b>. With a positive Vampire value V, the proc adds a random <b>1–V damage</b> without the skill, or <b>10–max(10, floor(1.5V)) damage with Vampirism</b>. A Vampire value of zero gives no added damage.</div>
+<div style="color:#d4c5a9; margin-bottom:8px;">Fangs bypass enemy percentage damage reduction, floor defense, and guard for their proc hit. Grimoire also bypasses elemental resistance, magic resistance, and absorption, while preserving a useful elemental weakness bonus unless Arcane Surge skips that block. They still need to land, and they do not automatically pierce force fields.</div>
+<div style="color:#d4c5a9; margin-bottom:8px;">Follow-up systems have different proc rules: ordinary Acrobatics and Side-Step bonus calculations do not independently roll Fangs; recalculated Assassin-chain strikes do. Tempest continuation hits do not inherit the main hit's defensive bypass. Treat the proc as a rule for its particular hit rather than the whole turn.</div>
+<div class="mw-heading mw-heading3"><h3 id="Healing">Healing</h3></div>
+<div style="color:#d4c5a9; margin-bottom:8px;"><b>Heal maximum = 5 + floor(modified Mystic × F) + G</b>, or <b>3G</b> for the grimoire term with Arcane Knowledge. Apply Master Wizard, grimoire scaling, and the Wizardry/normal roll range as above.</div>
+<div style="color:#d4c5a9; margin-bottom:8px;"><b>Sacred Mending</b> has a <b>30%</b> chance to double the rolled healing. When healing actually restores Health, that proc can also cleanse one supported negative status. Sorcerer rank multiplies the heal, then the normal maximum-Health cap limits actual restoration. Healing's grimoire term is linear G, unlike offensive magic's squared-and-random term.</div>
+<div class="mw-heading mw-heading3"><h3 id="Magic_Energy_Costs">Magic Energy Costs</h3></div>
+<div style="color:#d4c5a9; margin-bottom:8px;"><b>Mana Channeling</b> halves base cost with rounding up. <b>Inner Peace</b> then multiplies that reduced cost by 0.9 and truncates.</div>
+<table style="background:#2a0a12; color:#d4c5a9; border:1px solid #6b1a2a; border-collapse:collapse; margin-bottom:16px;">
+<tbody><tr style="background:#1e0a0f;">
+<th style="border:1px solid #6b1a2a; padding:6px 12px;"><span style="color:#c9943a;">Spell</span>
+</th>
+<th style="border:1px solid #6b1a2a; padding:6px 12px;"><span style="color:#c9943a;">Base</span>
+</th>
+<th style="border:1px solid #6b1a2a; padding:6px 12px;"><span style="color:#c9943a;">Mana Channeling</span>
+</th>
+<th style="border:1px solid #6b1a2a; padding:6px 12px;"><span style="color:#c9943a;">Both skills</span>
+</th></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Fire / Ice
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">12
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">6
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">5
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Light / Dark
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">40
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">20
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">18
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Sleep
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">18
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">9
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">8
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Heal
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">22
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">11
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">9
+</td></tr></tbody></table>
+<div style="color:#d4c5a9; margin-bottom:8px;">An Arcane Surge proc increases the spell's calculated Energy cost by ×1.5, truncated. Spell Energy is deducted directly, rather than through the general physical-activity cost reducer.</div>
+<div class="mw-heading mw-heading2"><h2 id="Sleep_Magic">Sleep Magic</h2></div>
+<div style="color:#d4c5a9; margin-bottom:8px;">Ordinary enemy Sleep chance begins with <b>35 + 0.696 × (modified Mystic − 20)</b>. Inner Peace adds 5. Subtract a random integer <b>1 through effective enemy floor</b>. Hypnotic Gaze adds 10, and Sleep Spores adds 7.</div>
+<div style="color:#d4c5a9; margin-bottom:8px;">The normal chance cap is <b>70%</b>, or <b>75% with Hypnotic Gaze</b>, plus Sleep Spores' 7. Then subtract the enemy's temporary repeated-Sleep penalty, with a minimum of zero.</div>
+<div style="color:#d4c5a9; margin-bottom:8px;">Boss Sleep uses <b>13%</b>, plus 7 with Hypnotic Gaze and plus 7 with Sleep Spores, then the same repeated-Sleep penalty. Some encounters are explicitly immune; a cap is not a promise that every enemy can be put to sleep.</div>
+<div style="color:#d4c5a9; margin-bottom:8px;">On success:</div>
+<ul><li><span style="color:#d4c5a9;">Cancel the enemy's pending telegraphed attack.</span></li>
+<li><span style="color:#d4c5a9;">Set <b>1 guaranteed sleep round</b>, or <b>2 with Master Wizard</b>.</span></li>
+<li><span style="color:#d4c5a9;">Sleep Spores has a <b>10%</b> chance to add another guaranteed round.</span></li>
+<li><span style="color:#d4c5a9;">Set a <b>20-percentage-point penalty</b> to subsequent Sleep attempts against that enemy; it recovers <b>1 percentage point per battle round</b>.</span></li></ul>
+<div style="color:#d4c5a9; margin-bottom:8px;">After the guaranteed rounds, a sleeping enemy has a <b>65% wake chance</b> on each later sleep-processing turn. This differs from the player's 75% wake check.</div>
+<div class="mw-heading mw-heading2"><h2 id="Incoming_Damage_and_Defenses">Incoming Damage and Defenses</h2></div>
+<div style="color:#d4c5a9; margin-bottom:8px;">The main direct-damage enemy skill route uses this order. Special types such as percentage-Health attacks, audio damage, and status-only actions have their own branches.</div>
+<ol><li><span style="color:#d4c5a9;">Roll the skill's base range. Forge Gauntlets lower only its <b>minimum</b> by 1/2/3, with a minimum of 1; they leave the maximum intact.</span></li>
+<li><span style="color:#d4c5a9;">Multiply by <b>1 + effective enemy floor × 0.22</b>, then by the enemy's damage multiplier and applicable rage effect.</span></li>
+<li><span style="color:#d4c5a9;">Critical chance is <b>10% + the enemy's critical chance bonus</b>. A critical gives <b>×1.5 + that enemy's flat critical bonus</b>.</span></li>
+<li><span style="color:#d4c5a9;">Apply the player's active Defend reduction if available.</span></li>
+<li><span style="color:#d4c5a9;">Subtract <b>floor(L × (0.89L + 1.11))</b> for effective armor level L. A successful enemy armor-break roll reduces that armor reduction first. Ordinary direct damage retains a minimum of 1.</span></li>
+<li><span style="color:#d4c5a9;">Apply Tai-Chi reflection where that branch supports it.</span></li>
+<li><span style="color:#d4c5a9;">Apply Shield of Balance and the relevant Forge Shield/Helmet effects.</span></li>
+<li><span style="color:#d4c5a9;">Subtract the player's tier-defense roll, leaving at least 1.</span></li>
+<li><span style="color:#d4c5a9;">Apply supported final Health-loss reductions, including <b>Iron Constitution's 10%</b> reduction with nearest-integer rounding.</span></li>
+<li><span style="color:#d4c5a9;">Apply the direct-damage difficulty multiplier, any skill-specific maximum-Health damage cap, and covered disarm reduction.</span></li>
+<li><span style="color:#d4c5a9;">Check final lethal-hit protection, then apply damage to the player's force field or Health.</span></li></ol>
+<div style="color:#d4c5a9; margin-bottom:8px;">Some special encounters enforce their own minimum damage or bypass layers. This pipeline is not a universal promise that every attack can be reduced to 1.</div>
+<div class="mw-heading mw-heading3"><h3 id="Effective_Armor">Effective Armor</h3></div>
+<div style="color:#d4c5a9; margin-bottom:8px;">Armor must be equipped for the main effective-level bonuses. Add <b>Pain Tolerance +1</b>, Forge Pauldrons' best tier <b>+1/+2/+3</b>, and <b>+1 for each Gemmed Forge piece</b> owned. Key items add <b>Jock Shell +1</b>, <b>Nocturnal Cloak +1</b>, <b>Leather Boots +1</b>, <b>Titanium Plating +2</b>, and <b>Plot Armor +2</b>.</div>
+<div style="color:#d4c5a9; margin-bottom:8px;">Example: effective L=10 gives <b>100</b> flat armor reduction; L=12 gives <b>141</b>, before any enemy armor break. These are combat formulas; ordinary dungeon floor-trap armor often uses a separate <b>2 damage per effective level</b> rule.</div>
+<div class="mw-heading mw-heading3"><h3 id="Tier_Defense">Tier Defense</h3></div>
+<div style="color:#d4c5a9; margin-bottom:8px;">Roll an integer from <b>tier through 3 × tier</b>. Balance Stone level B raises the minimum by <b>ceil(B ÷ 2)</b> and maximum by <b>floor(B ÷ 2)</b>. Multiply the rolled number by <b>1 + effective armor level ÷ 10</b>, then truncate and subtract.</div>
+<div style="color:#d4c5a9; margin-bottom:8px;">Tier 15 with effective armor 12 and no Balance Stone gives a reduction of <b>33–99</b>. Tier 18 gives <b>39–118</b>. Tier defense keeps improving with later Apex tiers.</div>
+<div class="mw-heading mw-heading3"><h3 id="Forge_Pieces_and_Other_Defenses">Forge Pieces and Other Defenses</h3></div>
+<table style="background:#2a0a12; color:#d4c5a9; border:1px solid #6b1a2a; border-collapse:collapse; margin-bottom:16px;">
+<tbody><tr style="background:#1e0a0f;">
+<th style="border:1px solid #6b1a2a; padding:6px 12px;"><span style="color:#c9943a;">Piece</span>
+</th>
+<th style="border:1px solid #6b1a2a; padding:6px 12px;"><span style="color:#c9943a;">Iron</span>
+</th>
+<th style="border:1px solid #6b1a2a; padding:6px 12px;"><span style="color:#c9943a;">Silver</span>
+</th>
+<th style="border:1px solid #6b1a2a; padding:6px 12px;"><span style="color:#c9943a;">Mithril / Gemmed</span>
+</th></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Helmet, critical hits
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">×0.9 damage
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">×0.8
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">×0.7
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Shield, passive block
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">6% chance; reduce 3–7%
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">12%; reduce 6–14%
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">18%; reduce 9–21%
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Gauntlets
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Skill minimum −1
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">−2
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">−3
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Pauldrons
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Effective armor +1
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">+2
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">+3
+</td></tr></tbody></table>
+<div style="color:#d4c5a9; margin-bottom:8px;">Gemmed retains the Mithril-tier piece effect and each Gemmed piece adds <b>+1 effective armor</b>, up to +4 for the set. Only the best tier of an ordinary piece contributes its tier effect; owning earlier versions does not stack all tier bonuses.</div>
+<div style="color:#d4c5a9; margin-bottom:8px;"><b>Shield of Balance</b> gives ×0.85 in its supported incoming-damage layer. <b>Tai-Chi</b> begins at 5% chance to reflect 5%; each True Neutral tier adds <b>3 percentage points to both</b>, up to <b>32% chance / 32% reflection</b> at tier 9. Reflection reduces the incoming hit and damages the enemy; it is not a Health heal. Audio damage does not use the usual Tai-Chi branch.</div>
+<div style="color:#d4c5a9; margin-bottom:8px;"><b>Inner Peace</b> separately gives a <b>20%</b> chance to deflect a supported direct magical enemy skill. It reflects half that skill's base roll after floor scaling and avoids the normal hit; this is not a blanket 20% dodge against all damage.</div>
+<div style="color:#d4c5a9; margin-bottom:8px;"><b>Helmet of Immortality</b> checks at the end: when ready, Health is above 10, and final damage is both lethal and at least <b>250</b>, it leaves you at <b>1 HP</b>. It recharges after <b>10 battle turns</b>. An active player force field normally handles the hit before the helmet needs to save Health. Small lethal hits and low-Health hits need not qualify.</div>
+<div style="color:#d4c5a9; margin-bottom:8px;"><b>Precognition</b> gives a <b>10%</b> chance to dodge eligible enemy attacks; <b>The Null Shroud</b> raises that supported chance to <b>15%</b>. Enemy skills with their own targeting or dodge rules may use a separate branch.</div>
+<div style="color:#d4c5a9; margin-bottom:8px;"><b>Battle Meditation</b> restores <b>5 Health and 5 Energy per supported round</b>. The legacy Defensive Stance skill formula is not the same as pressing the current <b>Defend</b> button; do not substitute its old 90% figure for the active Defend formula above.</div>
+<div class="mw-heading mw-heading2"><h2 id="Force_Fields_and_Percentage_Attacks">Force Fields and Percentage Attacks</h2></div>
+<div class="mw-heading mw-heading3"><h3 id="Player_Force_Field">Player Force Field</h3></div>
+<div style="color:#d4c5a9; margin-bottom:8px;">Owning <b>Force Field</b> gives battle-start capacity of <b>floor(maximum Health × field level × 5%)</b>, with a minimum of 1. The pool is refreshed for a new battle.</div>
+<div style="color:#d4c5a9; margin-bottom:8px;">When the field is positive, it absorbs a hit up to its remaining capacity and <b>discards overflow</b>. A 100-damage hit into 20 field breaks it while leaving Health unchanged. A later hit can reach Health. Supported percentage attacks and poison ticks also pass through this protection; explicit bypass attacks are exceptions.</div>
+<div class="mw-heading mw-heading3"><h3 id="Enemy_Force_Fields">Enemy Force Fields</h3></div>
+<div style="color:#d4c5a9; margin-bottom:8px;">An enemy field similarly prevents Health overflow from the hit that breaks it. In addition, when an enemy field was active at the <b>start of your action</b>, its protection lasts for that whole action: later chain/follow-up hits cannot damage HP after an earlier hit breaks the field. Start a <b>new action</b> to damage Health.</div>
+<div style="color:#d4c5a9; margin-bottom:8px;"><b>Sword Chain</b> increases supported physical damage against an active enemy field by <b>15%</b>. Vampire equipment bypasses several defenses but does not automatically remove this action protection.</div>
+<div class="mw-heading mw-heading3"><h3 id="Percentage-of-Maximum-Health_Skills">Percentage-of-Maximum-Health Skills</h3></div>
+<div style="color:#d4c5a9; margin-bottom:8px;">These roll a listed percentage of <b>maximum</b>, not current, Health. Their special branch bypasses ordinary armor, Defend, and tier-defense reduction, then applies its own difficulty modifier and supported disarm. A player force field can still intercept the hit unless the attack explicitly bypasses it. Any separate Energy drain can remain even when Health damage is intercepted.</div>
+<div style="color:#d4c5a9; margin-bottom:8px;">Multi-hit attacks can roll a fresh hit count from their configured range. When a skill specifies a maximum-Health damage cap, that cap is an upper bound for that hit, not a promise that all enemy skills share the same cap.</div>
+<div class="mw-heading mw-heading2"><h2 id="Status_Effects_and_Resistances">Status Effects and Resistances</h2></div>
+<table style="background:#2a0a12; color:#d4c5a9; border:1px solid #6b1a2a; border-collapse:collapse; margin-bottom:16px;">
+<tbody><tr style="background:#1e0a0f;">
+<th style="border:1px solid #6b1a2a; padding:6px 12px;"><span style="color:#c9943a;">Effect</span>
+</th>
+<th style="border:1px solid #6b1a2a; padding:6px 12px;"><span style="color:#c9943a;">Normal resistance stat</span>
+</th>
+<th style="border:1px solid #6b1a2a; padding:6px 12px;"><span style="color:#c9943a;">Main restriction or effect</span>
+</th></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Sleep
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Stamina
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Cannot act; first turn retained, then 75% wake check
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Poison
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Strength
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Periodic Health damage for its remaining turns
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Charm
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Charm
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Cannot act while the effect remains
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Web
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Ability
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Blocks physical attacks and fleeing; magic, Defend, and items remain alternatives
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Disorient
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Perception
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Blocks advanced physical skills and magic; basic Attack, Defend, flee, and items remain alternatives
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Cover ears
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Perception
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Cannot act while this effect remains; audio attack damage is separate from the status
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Petrify
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Stamina
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Cannot act while its turns remain
+</td></tr></tbody></table>
+<div style="color:#d4c5a9; margin-bottom:8px;">Normal stat resistance uses <b>raw stat ÷ 100 × F</b>, capped at <b>90%</b>. Weak/light/mild status variants multiply that chance by 1.25; strong/severe variants by 0.75, before the cap.</div>
+<div style="color:#d4c5a9; margin-bottom:8px;">Before this normal check, supported effects can receive separate protection:</div>
+<ul><li><span style="color:#d4c5a9;"><b>Iron Will:</b> 25% against Sleep, Charm, and Disorient.</span></li>
+<li><span style="color:#d4c5a9;"><b>Combat Reflexes:</b> 30% base web avoidance, improved by supported dodge items.</span></li>
+<li><span style="color:#d4c5a9;"><b>Iron Constitution:</b> 30% poison resistance.</span></li>
+<li><span style="color:#d4c5a9;"><b>Music Production:</b> cover-ears status immunity in the normal check branch; it does not necessarily cancel the separate audio damage.</span></li></ul>
+<div style="color:#d4c5a9; margin-bottom:8px;">Boss override rolls and explicit flat-status attacks can use different checks. The 90% cap applies to the <b>normal stat check</b>, not to every possible immunity or total chance after independent protection checks.</div>
+<div class="mw-heading mw-heading2"><h2 id="Telegraphs,_QTEs,_Luck,_and_Escape"><span id="Telegraphs.2C_QTEs.2C_Luck.2C_and_Escape"></span>Telegraphs, QTEs, Luck, and Escape</h2></div>
+<div style="color:#d4c5a9; margin-bottom:8px;"><b>Telegraphed attacks</b> warn you before they execute. Defend, heal, or successfully Sleep the enemy before the pending attack resolves. Successful Sleep cancels its pending charge. Read the actual warning because some attacks have special bypass rules.</div>
+<div style="color:#d4c5a9; margin-bottom:8px;"><b>QTE attacks</b> show a brief target. Clicking in time blocks the relevant hit; a barrage can offer separate QTEs for separate hits. A Forge Shield improves supported target size and reaction time, while difficulty adjusts the final timing window.</div>
+<div style="color:#d4c5a9; margin-bottom:8px;">An active <b>Luck Potion</b> gives a <b>25%</b> chance at supported checks to roll twice and keep the favorable result. This includes rolling a lower enemy barrage hit count and rescuing failed Tempest/Assassin continuation. Each chain can use only <b>one successful Luck rescue</b>; Luck does not guarantee infinite follow-ups or a reroll of every combat random number.</div>
+<div style="color:#d4c5a9; margin-bottom:8px;">Normal flee chance is <b>50 + modified Ability ÷ 2 + Fighting XP ÷ 10</b>, multiplied by 1.5 with Fleet Footed and capped at <b>95%</b>. Shadow Step guarantees ordinary eligible escape. Normal boss or unfleeable encounters cannot be fled. Infinity's forced battles instead allow a <b>3%</b> escape roll; ordinary Infinity fights first have an <b>18%</b> forced-failure check, even with Shadow Step. See its guide for special endless-mode enemies.</div>
+<div class="mw-heading mw-heading2"><h2 id="Combat_Paths_and_Soul_Stones">Combat Paths and Soul Stones</h2></div>
+<table style="background:#2a0a12; color:#d4c5a9; border:1px solid #6b1a2a; border-collapse:collapse; margin-bottom:16px;">
+<tbody><tr style="background:#1e0a0f;">
+<th style="border:1px solid #6b1a2a; padding:6px 12px;"><span style="color:#c9943a;">Path</span>
+</th>
+<th style="border:1px solid #6b1a2a; padding:6px 12px;"><span style="color:#c9943a;">Multiplied actions</span>
+</th>
+<th style="border:1px solid #6b1a2a; padding:6px 12px;"><span style="color:#c9943a;">Master</span>
+</th></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Blademaster
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Attack, Power Strike
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;"><a href="character-muramasa.html" title="Character:Muramasa">Muramasa</a>
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Assassin
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Quick Attack, Stormslash
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;"><a href="character-arestes.html" title="Character:Arestes">Arestes</a>
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Sorcerer
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Offensive magic and Heal; Sleep attempts earn points
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;"><a href="character-aziza.html" title="Character:Aziza">Aziza</a>
+</td></tr></tbody></table>
+<div style="color:#d4c5a9; margin-bottom:8px;">Each path must first be awakened through its master's action. Blademaster needs Close Friend with Muramasa and Fighters Guild reputation 200; Assassin needs Thieves Guild reputation 350. Sorcerer has Aziza, maid, skill, and dungeon-progression prerequisites detailed in her guide. Unlocking one path does not prevent awakening the others.</div>
+<div style="color:#d4c5a9; margin-bottom:8px;">An awakened path starts at <b>Rank 1</b>, already giving ×1.15. Eligible actions normally award +1 point. Infinity adds a random <b>1 through the current Infinity floor</b> before supported path-experience multipliers. Bonus strikes do not mean every extra hit independently awards another action point.</div>
+<div style="color:#d4c5a9; margin-bottom:8px;"><b>Path multiplier = 1 + 0.15 × rank.</b> Rank 10 gives ×2.5; Rank 20 ×4.0. Ranks keep growing beyond 20.</div>
+<div style="color:#d4c5a9; margin-bottom:8px;">Cumulative Rank 1–20 thresholds are <b>0, 100, 300, 700, 1,500, 3,100, 6,300, 12,700, 25,500, 44,700, 73,500, 116,700, 181,500, 278,700, 424,500, 643,200, 971,250, 1,463,325, 2,201,438, 3,308,607</b>. Later ranks use the current extended-span rule, multiplying each new span by 1.5 and truncating.</div>
+<div style="color:#d4c5a9; margin-bottom:8px;"><b>Assassinate</b> begins at Assassin Rank 1: Quick Attack continuation starts at <b>50 + rank%</b> and falls 10 percentage points per extra strike. <b>Dark Consolador</b> adds 15 to the start and reduces the decline to 5. Each extra strike recalculates its damage, checks dodge, and uses the Assassin multiplier. Enemy defeat, a failed continuation, or a dodged strike stops the chain.</div>
+<table style="background:#2a0a12; color:#d4c5a9; border:1px solid #6b1a2a; border-collapse:collapse; margin-bottom:16px;">
+<tbody><tr style="background:#1e0a0f;">
+<th style="border:1px solid #6b1a2a; padding:6px 12px;"><span style="color:#c9943a;">Soul Stone</span>
+</th>
+<th style="border:1px solid #6b1a2a; padding:6px 12px;"><span style="color:#c9943a;">Combat contribution per level</span>
+</th></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Sword Stone
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">+1 Attack / Quick Attack damage
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Brute Stone
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">+1 Stormslash / Power Strike damage
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Elemental Stone
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">+1 Fire / Ice damage
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Twilight Stone
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">+1 Light / Dark damage
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Phantom Stone
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">+1 to recalculated Assassinate-chain strike damage
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Balance Stone
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Alternating increases to tier-defense minimum and maximum
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Queenstone
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">+1 maximum Health
+</td></tr></tbody></table>
+<div style="color:#d4c5a9; margin-bottom:8px;">See <a href="game-systems-soul-stones.html" title="Game Systems:Soul Stones">Soul Stones</a> for acquisition and upgrade services. Combat Paths, fighting tiers, equipment levels, and Soul Stone levels are separate progression tracks that can contribute together.</div>
+<div class="mw-heading mw-heading2"><h2 id="Victory_Rewards_and_Emergency_Revival">Victory Rewards and Emergency Revival</h2></div>
+<div style="color:#d4c5a9; margin-bottom:8px;">The ordinary battle reward calculation starts with:</div>
+<ul><li><span style="color:#d4c5a9;"><b>Fighting EXP = floor(enemy base Fighting EXP × enemy floor ÷ 2).</b> Gladiator Belt multiplies this by 1.5 and truncates.</span></li>
+<li><span style="color:#d4c5a9;"><b>Gold base = 5 + 2 × enemy floor.</b> Roll <b>1–max(1, modified Luck)</b>, then award <b>floor(gold base × (1 + Luck roll ÷ 15))</b>.</span></li></ul>
+<div style="color:#d4c5a9; margin-bottom:8px;">Infinity doubles these calculated EXP and gold amounts, then applies its supported EXP affix and the enemy's own Fighting EXP multiplier. Special battles can add their own scenario or quest rewards. Ordinary gold is Wealth; it is separate from <b>Dragon Coins</b> and Components. Victory can also record an eligible Fighters Guild kill and grant the enemy's configured faction clout. The ordinary victory handler clears player and enemy battle status effects.</div>
+<div style="color:#d4c5a9; margin-bottom:8px;">For example, an enemy with base Fighting EXP 20 on Floor 10 produces <b>100 battle EXP</b>, or <b>150 with Gladiator Belt</b>, before later applicable bonuses. With modified Luck 15, its 25-gold base produces <b>$26–$50</b> before Infinity doubling. Fighting EXP rewards do not directly grant Combat Path action points; those track eligible actions separately.</div>
+<div style="color:#d4c5a9; margin-bottom:8px;"><b>Phoenix Feathers</b> can automatically revive you when Health reaches zero during an active ordinary dungeon or Infinity battle, provided you own one and automatic feather revival is enabled. One feather is consumed and <b>Health, Energy, and Calm return to maximum</b>. This handler excludes narrative guardian encounters and does not promise revival from every exploration hazard outside combat. Acquisition and major story outcomes are left out of this guide.</div>
+<div class="mw-heading mw-heading2"><h2 id="Build_Planning_and_Common_Questions">Build Planning and Common Questions</h2></div>
+<ul><li><span style="color:#d4c5a9;"><b>Heavy physical:</b> Strength, a strong effective weapon level, Weapon Mastery, Martial Arts, Power Strike, and Skull Crusher; awaken Blademaster and maintain Health if using Berserker Rage.</span></li>
+<li><span style="color:#d4c5a9;"><b>Quick / chain:</b> Ability, Swordplay, Quick Attack with Side-Step, Acrobatics, and Assassin; Stormslash plus Tempest provides a separate chain option.</span></li>
+<li><span style="color:#d4c5a9;"><b>Caster:</b> Mystic, grimoire upgrades, Arcane Knowledge, Wizardry, Master Wizard, cost-reduction skills, and Sorcerer. Keep more than one element available for enemy defenses.</span></li>
+<li><span style="color:#d4c5a9;"><b>Defense:</b> effective armor and Forge pieces, fighting tiers, Balance Stone, appropriate status protection, healing, and Force Field. Tai-Chi rewards True Neutral alignment but reflects rather than heals.</span></li></ul>
+<div style="color:#d4c5a9; margin-bottom:8px;">No build is guaranteed to defeat every encounter. Immunities, force fields, percentage damage, and special boss rules can change which action is useful.</div>
+<table style="background:#2a0a12; color:#d4c5a9; border:1px solid #6b1a2a; border-collapse:collapse; margin-bottom:16px;">
+<tbody><tr style="background:#1e0a0f;">
+<th style="border:1px solid #6b1a2a; padding:6px 12px;"><span style="color:#c9943a;">Question</span>
+</th>
+<th style="border:1px solid #6b1a2a; padding:6px 12px;"><span style="color:#c9943a;">Current rule</span>
+</th></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Why did identical physical attacks vary so much?
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Weapon/fighting-factor variation happens before the normal damage roll
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Does Martial Arts force maximum damage?
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">It raises the roll minimum; Berserker can force the maximum under its conditions
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Is Fighting XP capped at ×1.80?
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">No; Apex tiers and their modifier continue
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Why did a huge hit only break a field?
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Field overflow is discarded; enemy action protection can block the rest of your chain too
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Does Vampire equipment always pierce defenses?
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Only a proc hit; force fields and hit checks still matter
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Is Defend always 90%?
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">No; current active Defend is 50% × F, capped at 80%, for its covered hit
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Is Disarming Technique ineffective against skills?
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">No; it now halves supported covered skill damage
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Do event/trap hits use this exact pipeline?
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">No; environmental and narrative systems have separate handlers
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Is the 90% status cap a cap on every protection?
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">It caps the normal stat-resistance roll; separate protections and overrides still exist
+</td></tr></tbody></table>
+<div class="mw-heading mw-heading2"><h2 id="Accuracy_Notes">Accuracy Notes</h2></div>
+<div style="color:#d4c5a9; margin-bottom:8px;">Checked against the current battle action handlers, combat skill helpers, magic calculation, difficulty profiles, force fields, status checks, Forge pieces, and Combat Path progression on <b>4 October 2026</b>. Integer truncation and special branches explain small differences from a single combined formula. Major plot outcomes and protected character revelations are omitted.</div>
+<div class="mw-heading mw-heading2"><h2 id="Related_Pages">Related Pages</h2></div>
+<ul><li><span style="color:#d4c5a9;"><a href="game-systems.html" title="Game Systems">Game Systems Hub</a></span></li>
+<li><span style="color:#d4c5a9;"><a href="game-systems-dungeon.html" title="Game Systems:Dungeon">Dungeon Exploration</a></span></li>
+<li><span style="color:#d4c5a9;"><a href="game-systems-infinity-dungeons.html" title="Game Systems:Infinity Dungeons">Infinity Dungeons</a></span></li>
+<li><span style="color:#d4c5a9;"><a href="game-systems-soul-stones.html" title="Game Systems:Soul Stones">Soul Stones</a></span></li>
+<li><span style="color:#d4c5a9;"><a href="items.html" title="Items">Items and Equipment</a></span></li>
+<li><span style="color:#d4c5a9;"><a href="skills.html" title="Skills">Stats, Skills &amp; Proficiencies</a></span></li></ul>
+<p><br/>
+<a href="game-systems.html" title="Game Systems">← Back to Game Systems</a>
+</p>
+
+
+
+
+</div></div>
+<div class="wiki-license-note"><span data-copy-en="Text adapted from the community-maintained Chronoromancer Wiki under CC BY-SA 4.0." data-copy-zh="文字内容改编自社区维护的 Chronoromancer Wiki，并依照 CC BY-SA 4.0 使用。">Text adapted from the community-maintained Chronoromancer Wiki under CC BY-SA 4.0.</span></div></article>
+</div></section>
+</main>
+<footer class="site-footer"><div class="container"><div class="footer-grid">
+<div class="footer-brand"><img alt="Chronoromancer" src="../assets/images/v2/logo.png"/><p data-i18n="footerDescription">An adults-only time-travel sandbox RPG. Public website artwork is SFW.</p></div>
+<div class="footer-column"><h2 data-i18n="footerExplore">Explore</h2><a data-i18n="navStory" href="../story.html">Story</a><a data-i18n="navCharacters" href="../characters.html">Characters</a><a data-i18n="navGuides" href="../walkthroughs.html">Guides</a><a data-i18n="navWiki" href="../wiki.html">Player Wiki</a></div>
+<div class="footer-column"><h2 data-i18n="footerCommunity">Community</h2><a data-config-link="community.discord" rel="noopener noreferrer" target="_blank">Discord</a><a data-config-link="community.telegram" rel="noopener noreferrer" target="_blank">Telegram</a><a data-config-link="community.patreon" rel="noopener noreferrer" target="_blank">Patreon</a></div>
+<div class="footer-column"><h2 data-i18n="footerLegal">Legal</h2><a data-i18n="footerPrivacy" href="../privacy.html">Privacy</a><a data-i18n="footerTerms" href="../terms.html">Terms</a></div>
+</div><div class="footer-bottom"><span>© <span data-current-year=""></span> <span data-i18n="copyright">Chronoromancer Studio. All rights reserved.</span></span><span data-copy-en="Player knowledge · English / Simplified Chinese" data-copy-zh="玩家资料 · English / 简体中文">Player knowledge · English / Simplified Chinese</span></div></div></footer><script src="../assets/js/site-config.js"></script><script src="../assets/js/site.js"></script><script src="../assets/js/wiki.js"></script>
+</body></html>

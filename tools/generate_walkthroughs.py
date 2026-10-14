@@ -12,12 +12,13 @@ from bs4 import BeautifulSoup
 from markdown_it import MarkdownIt
 
 
-SITE = Path(r"D:\extended\website")
+SITE = Path(__file__).resolve().parents[1]
 SOURCE = Path(r"D:\GAME_MAKER\Chronoromancer\game\walkthroughs")
 CHINESE = SOURCE / "zh-CN"
 GUIDES = SITE / "guides"
 
-WIKI_URL = "https://chronoromancer.miraheze.org/wiki/Main_Page"
+WIKI_URL_GUIDE = "../wiki.html"
+WIKI_URL_INDEX = "wiki.html"
 PENDING_TRANSLATIONS: set[str] = set()
 
 
@@ -276,7 +277,7 @@ def header(prefix: str, active: str) -> str:
       {nav('characters.html', 'navCharacters', 'Characters', 'characters')}
       {nav('walkthroughs.html', 'navGuides', 'Guides', 'guides')}
       {nav('screenshots.html', 'navGallery', 'Gallery', 'gallery')}
-      <a data-config-link="community.wiki" target="_blank" rel="noopener noreferrer" data-i18n="navWiki">Player Wiki</a>
+      <a href="{prefix}wiki.html" data-i18n="navWiki">Player Wiki</a>
       <a href="{prefix}main.html#download" data-i18n="navDownload">Download</a>
       <div class="language-switch" role="group" aria-label="Language"><button type="button" data-language="en" aria-pressed="true">EN</button><button type="button" data-language="zh" aria-pressed="false">简体中文</button></div>
     </nav>
@@ -287,7 +288,7 @@ def footer(prefix: str) -> str:
     return f'''<footer class="site-footer"><div class="container"><div class="footer-grid">
     <div class="footer-brand"><img src="{prefix}assets/images/v2/logo.png" alt="Chronoromancer"><p data-i18n="footerDescription">An adults-only time-travel sandbox RPG. Public website artwork is SFW.</p></div>
     <div class="footer-column"><h2 data-i18n="footerExplore">Explore</h2><a href="{prefix}story.html" data-i18n="navStory">Story</a><a href="{prefix}characters.html" data-i18n="navCharacters">Characters</a><a href="{prefix}walkthroughs.html" data-i18n="navGuides">Guides</a><a href="{prefix}screenshots.html" data-i18n="navGallery">Gallery</a><a href="{prefix}main.html#download" data-i18n="navDownload">Download</a></div>
-    <div class="footer-column"><h2 data-i18n="footerCommunity">Community</h2><a data-config-link="community.discord" target="_blank" rel="noopener noreferrer">Discord</a><a data-config-link="community.telegram" target="_blank" rel="noopener noreferrer">Telegram</a><a data-config-link="community.patreon" target="_blank" rel="noopener noreferrer">Patreon</a><a data-config-link="community.wiki" target="_blank" rel="noopener noreferrer" data-i18n="navWiki">Player Wiki</a></div>
+    <div class="footer-column"><h2 data-i18n="footerCommunity">Community</h2><a data-config-link="community.discord" target="_blank" rel="noopener noreferrer">Discord</a><a data-config-link="community.telegram" target="_blank" rel="noopener noreferrer">Telegram</a><a data-config-link="community.patreon" target="_blank" rel="noopener noreferrer">Patreon</a><a href="{prefix}wiki.html" data-i18n="navWiki">Player Wiki</a></div>
     <div class="footer-column"><h2 data-i18n="footerLegal">Legal</h2><a href="{prefix}privacy.html" data-i18n="footerPrivacy">Privacy</a><a href="{prefix}terms.html" data-i18n="footerTerms">Terms</a></div>
   </div><div class="footer-bottom"><span>© <span data-current-year></span> <span data-i18n="copyright">Chronoromancer Studio. All rights reserved.</span></span><span data-copy-en="Official guides · English / Simplified Chinese" data-copy-zh="官方攻略 · English / 简体中文">Official guides · English / Simplified Chinese</span></div></div></footer>'''
 
@@ -346,7 +347,7 @@ def build_guide_page(guide: Guide, previous: Guide | None, following: Guide | No
         <div class="spoiler-notice"><strong data-copy-en="Guide notice" data-copy-zh="攻略提示">Guide notice</strong><span data-copy-en="This page contains gameplay and story spoilers and may describe mature systems." data-copy-zh="本页包含玩法与剧情剧透，并可能涉及成人游戏系统。">This page contains gameplay and story spoilers and may describe mature systems.</span></div>
         <div class="markdown-body" data-lang-panel="en">{en_html}</div>
         <div class="markdown-body" data-lang-panel="zh" hidden>{zh_html}</div>
-        <div class="guide-community-note"><div><strong data-copy-en="Community discoveries" data-copy-zh="社区发现">Community discoveries</strong><p data-copy-en="These official guides track the current game. The player-maintained wiki may contain additional strategies and discoveries." data-copy-zh="这些官方攻略与当前游戏版本保持一致；玩家维护的 Wiki 可能还收录其他策略与社区发现。">These official guides track the current game. The player-maintained wiki may contain additional strategies and discoveries.</p></div><a href="{WIKI_URL}" target="_blank" rel="noopener noreferrer" data-copy-en="Visit Player Wiki →" data-copy-zh="访问玩家 Wiki →">Visit Player Wiki →</a></div>
+        <div class="guide-community-note"><div><strong data-copy-en="Community discoveries" data-copy-zh="社区发现">Community discoveries</strong><p data-copy-en="These official guides track the current game. The player-maintained wiki may contain additional strategies and discoveries." data-copy-zh="这些官方攻略与当前游戏版本保持一致；玩家维护的 Wiki 可能还收录其他策略与社区发现。">These official guides track the current game. The player-maintained wiki may contain additional strategies and discoveries.</p></div><a href="{WIKI_URL_GUIDE}" data-copy-en="Visit Player Wiki →" data-copy-zh="访问玩家 Wiki →">Visit Player Wiki →</a></div>
         <nav class="guide-pager" aria-label="Adjacent guides">{pager(previous, 'Previous guide', '上一篇攻略')}{pager(following, 'Next guide', '下一篇攻略')}</nav>
       </article>
     </div>
@@ -402,7 +403,7 @@ def build_index(guides: list[Guide]) -> None:
       {''.join(category_sections)}
       <div class="empty-state" data-guide-empty hidden><h2 data-copy-en="No guide matched that search." data-copy-zh="没有找到符合条件的攻略。">No guide matched that search.</h2><p data-copy-en="Try a character name, system, location, or a broader category." data-copy-zh="请尝试角色名称、系统、地点或更宽泛的分类。">Try a character name, system, location, or a broader category.</p></div>
     </div></section>
-    <section class="section section--tinted"><div class="container wiki-bridge"><div><p class="eyebrow" data-copy-en="Official knowledge + player discoveries" data-copy-zh="官方资料 + 玩家发现">Official knowledge + player discoveries</p><h2 data-copy-en="Keep the community wiki close." data-copy-zh="玩家 Wiki 依然值得收藏。">Keep the community wiki close.</h2><p data-copy-en="This library provides controlled, version-matched English and Chinese guides. Miraheze remains the community space for player tips, discoveries, and contributions." data-copy-zh="本资料库提供受控且与版本匹配的中英文攻略；Miraheze 仍是玩家分享技巧、发现与贡献内容的社区空间。">This library provides controlled, version-matched English and Chinese guides. Miraheze remains the community space for player tips, discoveries, and contributions.</p></div><a class="button button--secondary" href="{WIKI_URL}" target="_blank" rel="noopener noreferrer" data-copy-en="Visit the Player Wiki" data-copy-zh="访问玩家 Wiki">Visit the Player Wiki</a></div></section>
+    <section class="section section--tinted"><div class="container wiki-bridge"><div><p class="eyebrow" data-copy-en="Official knowledge + player discoveries" data-copy-zh="官方资料 + 玩家发现">Official knowledge + player discoveries</p><h2 data-copy-en="Explore the bilingual player wiki." data-copy-zh="浏览中英双语玩家 Wiki。">Explore the bilingual player wiki.</h2><p data-copy-en="The official-site mirror preserves the living community wiki in a fast, searchable English and Simplified Chinese library. Every article links back to its Miraheze source for player contributions." data-copy-zh="官方网站镜像将持续更新的社区 Wiki 整理为快速、可搜索的中英双语资料库。每篇文章都提供 Miraheze 原始页面链接，方便玩家继续贡献内容。">The official-site mirror preserves the living community wiki in a fast, searchable English and Simplified Chinese library. Every article links back to its Miraheze source for player contributions.</p></div><a class="button button--secondary" href="{WIKI_URL_INDEX}" data-copy-en="Browse the Player Wiki" data-copy-zh="浏览玩家 Wiki">Browse the Player Wiki</a></div></section>
   </main>
   {footer('')}
   <script src="assets/js/site-config.js"></script><script src="assets/js/site.js"></script><script src="assets/js/walkthroughs.js"></script>

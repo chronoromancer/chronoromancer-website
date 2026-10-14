@@ -1,0 +1,1958 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="Brothel Stats and Calculations — Chronoromancer player knowledge in English and Simplified Chinese." name="description"/>
+<link href="../assets/images/v2/favicon.png" rel="icon" type="image/png"/>
+<link href="../assets/css/style.css" rel="stylesheet"/><link href="../assets/css/wiki.css" rel="stylesheet"/>
+<title>Brothel Stats and Calculations | Chronoromancer Wiki</title></head>
+<body class="wiki-article-page" data-title-en="Brothel Stats and Calculations | Chronoromancer Wiki" data-title-zh="Brothel Stats and Calculations | Chronoromancer 玩家 Wiki">
+<a class="skip-link" data-copy-en="Skip to content" data-copy-zh="跳至正文" href="#content">Skip to content</a>
+<div class="maturity-bar" data-copy-en="18+ adults-only game · Wiki pages may contain story and gameplay spoilers" data-copy-zh="18+ 仅限成人游戏 · Wiki 页面可能包含剧情与玩法剧透">18+ adults-only game · Wiki pages may contain story and gameplay spoilers</div>
+<header class="site-header"><div class="container header-inner">
+<a aria-label="Chronoromancer home" class="brand" href="../main.html"><img alt="Chronoromancer" src="../assets/images/v2/logo.png"/></a>
+<button aria-expanded="false" aria-label="Open navigation" class="nav-toggle" data-nav-toggle="" type="button"><span></span><span></span><span></span></button>
+<nav aria-label="Primary navigation" class="site-nav" data-nav-menu="">
+<a data-i18n="navHome" href="../main.html">Home</a><a data-i18n="navStory" href="../story.html">Story</a>
+<a data-i18n="navCharacters" href="../characters.html">Characters</a><a data-i18n="navGuides" href="../walkthroughs.html">Guides</a>
+<a data-i18n="navGallery" href="../screenshots.html">Gallery</a><a class="is-active" data-i18n="navWiki" href="../wiki.html">Player Wiki</a>
+<a data-i18n="navDownload" href="../main.html#download">Download</a>
+<div aria-label="Language" class="language-switch" role="group"><button aria-pressed="true" data-language="en" type="button">EN</button><button aria-pressed="false" data-language="zh" type="button">简体中文</button></div>
+</nav>
+</div></header>
+<main id="content">
+<section class="wiki-page-hero"><div class="container">
+<nav aria-label="Breadcrumb" class="breadcrumb"><a data-copy-en="Player Wiki" data-copy-zh="玩家 Wiki" href="../wiki.html">Player Wiki</a><span>/</span><span data-copy-en="Game Systems" data-copy-zh="游戏系统">Game Systems</span></nav>
+<p class="eyebrow" data-copy-en="Community knowledge, preserved on the official site" data-copy-zh="社区知识，保存于官方网站">Community knowledge, preserved on the official site</p>
+<h1>Brothel Stats and Calculations</h1>
+<div class="wiki-source-line"><span data-copy-en="Live wiki revision 2110 · October 4, 2026" data-copy-zh="玩家 Wiki 修订版 2110 · October 4, 2026">Live wiki revision 2110 · October 4, 2026</span><a data-copy-en="View or improve the source →" data-copy-zh="查看或完善原始页面 →" href="https://chronoromancer.miraheze.org/wiki/Game_Systems:Brothel_Stats_and_Calculations" rel="noopener noreferrer" target="_blank">View or improve the source →</a></div>
+</div></section>
+<section class="section wiki-reading-section"><div class="container wiki-reading-layout">
+<aside class="wiki-toc"><div class="wiki-toc-inner"><button aria-expanded="false" class="wiki-toc-toggle" data-wiki-toc-toggle="" type="button"><span data-copy-en="On this page" data-copy-zh="本页目录">On this page</span><span aria-hidden="true">+</span></button><p class="wiki-toc-heading" data-copy-en="On this page" data-copy-zh="本页目录">On this page</p><div class="wiki-toc-links" data-lang-panel="en" data-wiki-toc-links=""><a class="wiki-toc-h2" href="#Reading_the_Daily_Report">Reading the Daily Report</a><a class="wiki-toc-h2" href="#Worker_Stats_and_Their_Actual_Roles">Worker Stats and Their Actual Roles</a><a class="wiki-toc-h3" href="#Buying_Stats_with_EXP">Buying Stats with EXP</a><a class="wiki-toc-h2" href="#Who_Works_and_Who_Does_Not">Who Works and Who Does Not</a><a class="wiki-toc-h2" href="#Client_Count_and_Daily_Pay">Client Count and Daily Pay</a><a class="wiki-toc-h3" href="#Client_Count">Client Count</a><a class="wiki-toc-h3" href="#Pay_Range">Pay Range</a><a class="wiki-toc-h3" href="#Daily_Double_Pay">Daily Double Pay</a><a class="wiki-toc-h2" href="#Cleanliness,_Clothing,_and_Bedrooms">Cleanliness, Clothing, and Bedrooms</a><a class="wiki-toc-h3" href="#Pay-Range_Example">Pay-Range Example</a><a class="wiki-toc-h2" href="#Worker_Pay_Bonus_Order">Worker Pay Bonus Order</a><a class="wiki-toc-h2" href="#Stress_and_Work_EXP">Stress and Work EXP</a><a class="wiki-toc-h3" href="#Work_Stress">Work Stress</a><a class="wiki-toc-h3" href="#Infirmary_and_Medicine">Infirmary and Medicine</a><a class="wiki-toc-h3" href="#Work_Experience">Work Experience</a><a class="wiki-toc-h2" href="#Loyalty,_Visits,_and_Training">Loyalty, Visits, and Training</a><a class="wiki-toc-h2" href="#Fame_and_Reputation">Fame and Reputation</a><a class="wiki-toc-h3" href="#Reputation_Ranks">Reputation Ranks</a><a class="wiki-toc-h2" href="#Building_Income,_Tax,_and_Upkeep">Building Income, Tax, and Upkeep</a><a class="wiki-toc-h3" href="#Daily_Upkeep">Daily Upkeep</a><a class="wiki-toc-h3" href="#Building-Income_Example">Building-Income Example</a><a class="wiki-toc-h2" href="#Monster_Work_and_Statistics">Monster Work and Statistics</a><a class="wiki-toc-h2" href="#Mess_and_Maid_Cleaning">Mess and Maid Cleaning</a><a class="wiki-toc-h3" href="#Worker_Mess">Worker Mess</a><a class="wiki-toc-h3" href="#Maid_Levels_and_Cleaning">Maid Levels and Cleaning</a><a class="wiki-toc-h2" href="#Apprentices,_Decor,_and_Promotion">Apprentices, Decor, and Promotion</a><a class="wiki-toc-h2" href="#Daily_Events_and_Customer_Appreciation">Daily Events and Customer Appreciation</a><a class="wiki-toc-h2" href="#Practical_Checks">Practical Checks</a><a class="wiki-toc-h2" href="#Accuracy_Notes">Accuracy Notes</a><a class="wiki-toc-h2" href="#Related_Pages">Related Pages</a></div><div class="wiki-toc-links" data-lang-panel="zh" data-wiki-toc-links="" hidden="" lang="zh-CN"><a class="wiki-toc-h2" href="#zh-Reading_the_Daily_Report">阅读每日报告</a><a class="wiki-toc-h2" href="#zh-Worker_Stats_and_Their_Actual_Roles">工人及其实际作用</a><a class="wiki-toc-h3" href="#zh-Buying_Stats_with_EXP">使用 EXP 购买Stats</a><a class="wiki-toc-h2" href="#zh-Who_Works_and_Who_Does_Not">谁工作谁不工作</a><a class="wiki-toc-h2" href="#zh-Client_Count_and_Daily_Pay">客户数和每日付款</a><a class="wiki-toc-h3" href="#zh-Client_Count">客户数</a><a class="wiki-toc-h3" href="#zh-Pay_Range">薪酬范围</a><a class="wiki-toc-h3" href="#zh-Daily_Double_Pay">每日双薪</a><a class="wiki-toc-h2" href="#zh-Cleanliness,_Clothing,_and_Bedrooms">清洁、服装和卧室</a><a class="wiki-toc-h3" href="#zh-Pay-Range_Example">薪酬范围示例</a><a class="wiki-toc-h2" href="#zh-Worker_Pay_Bonus_Order">工人工资奖金令</a><a class="wiki-toc-h2" href="#zh-Stress_and_Work_EXP">压力和工作EXP</a><a class="wiki-toc-h3" href="#zh-Work_Stress">工作压力</a><a class="wiki-toc-h3" href="#zh-Infirmary_and_Medicine">医务和医学</a><a class="wiki-toc-h3" href="#zh-Work_Experience">工作经验</a><a class="wiki-toc-h2" href="#zh-Loyalty,_Visits,_and_Training">忠诚、访问和培训</a><a class="wiki-toc-h2" href="#zh-Fame_and_Reputation">名声和声誉</a><a class="wiki-toc-h3" href="#zh-Reputation_Ranks">职衔</a><a class="wiki-toc-h2" href="#zh-Building_Income,_Tax,_and_Upkeep">建设收入、税收和维持</a><a class="wiki-toc-h3" href="#zh-Daily_Upkeep">每日维护</a><a class="wiki-toc-h3" href="#zh-Building-Income_Example">建筑-收入示例</a><a class="wiki-toc-h2" href="#zh-Monster_Work_and_Statistics">怪物工作与统计</a><a class="wiki-toc-h2" href="#zh-Mess_and_Maid_Cleaning">梅斯和女佣清洁</a><a class="wiki-toc-h3" href="#zh-Worker_Mess">员工梅斯</a><a class="wiki-toc-h3" href="#zh-Maid_Levels_and_Cleaning">女佣级别和清洁</a><a class="wiki-toc-h2" href="#zh-Apprentices,_Decor,_and_Promotion">学徒、装饰和晋升</a><a class="wiki-toc-h2" href="#zh-Daily_Events_and_Customer_Appreciation">每日活动和客户欣赏</a><a class="wiki-toc-h2" href="#zh-Practical_Checks">实际检查</a><a class="wiki-toc-h2" href="#zh-Accuracy_Notes">准确性说明</a><a class="wiki-toc-h2" href="#zh-Related_Pages">相关页面</a></div></div></aside>
+<article class="wiki-article">
+<div class="spoiler-notice"><strong data-copy-en="Player wiki notice" data-copy-zh="玩家 Wiki 提示">Player wiki notice</strong><span data-copy-en="This community-maintained page may contain gameplay, story, and mature-content spoilers." data-copy-zh="此社区维护页面可能包含玩法、剧情及成人内容剧透。">This community-maintained page may contain gameplay, story, and mature-content spoilers.</span></div>
+<div class="wiki-source-content wiki-source-content-zh" data-lang-panel="zh" hidden="" lang="zh-CN"><div class="mw-content-ltr mw-parser-output" dir="ltr" lang="en">
+<div style="color:#d4c5a9; margin-bottom:8px;">这是工人统计、每日收入、压力、经验、清洁、声誉、学徒和报告收集的数字参考。 <a href="game-systems-brothel.html" title="Game Systems:Brothel">导线</a> 买下大楼,招聘工人, 并推进各个房间和故事。</div>
+<div style="color:#d4c5a9; margin-bottom:8px;">以下公式描述当前每日计算. <b>工人的工资是每日一卷,而不是每个客户的薪酬乘以每卷。</b> 金钱奖金分阶段适用;将其全部百分比加在一起不会复制一份报告。</div>
+<div class="mw-heading mw-heading2"><h2 id="zh-Reading_the_Daily_Report">阅读每日报告</h2></div>
+<div style="color:#d4c5a9; margin-bottom:8px;">报告涵盖 <b>游戏中已完成的天数</b> 从您获得该业务的那天起。当前未完成的一天没有计算。打开报告会赶上缺失的完成日并存储每个结果,所以重读一份已计算的报告不会再次判给收入。</div>
+<div style="color:#d4c5a9; margin-bottom:8px;">报告采集者提供储存的每日报告。收入输入 <b>待定</b>; 使用募集行动将正的待收收入转化为财富。 查看一份更旧的报告不会再次收集当天的钱。</div>
+<div style="color:#d4c5a9; margin-bottom:8px;">今天的薪水用的是名声等级和清洁度 <b>开始计算</b>清理以后就解决了 今日的名声奖励用的是清洁 <b>打扫完之后</b>今天获得的声誉会影响随后的日薪,而不是已经定价的一天。</div>
+<div style="color:#d4c5a9; margin-bottom:8px;">补习计算使用当前工人名册、任务、设备,并按每份缺失报告运行,而不是重放一份历史名册的快照。它们仍然处理每份完成的天数。如果希望及时看到管理变化的效果,定期访问报告。</div>
+<div class="mw-heading mw-heading2"><h2 id="zh-Worker_Stats_and_Their_Actual_Roles">工人及其实际作用</h2></div>
+<table style="background:#2a0a12; color:#d4c5a9; border:1px solid #6b1a2a; border-collapse:collapse; margin-bottom:16px;">
+<tbody><tr style="background:#1e0a0f;">
+<th style="border:1px solid #6b1a2a; padding:6px 12px;"><span style="color:#c9943a;">状态</span>
+</th>
+<th style="border:1px solid #6b1a2a; padding:6px 12px;"><span style="color:#c9943a;">每日计算</span>
+</th>
+<th style="border:1px solid #6b1a2a; padding:6px 12px;"><span style="color:#c9943a;">其他用途</span>
+</th></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">斯塔米纳
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">在Stamina或以下的1-100卷可以消除2次工作压力
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">最大健康;耐力事件检查
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">情报
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">客户的1-100卷成功双倍基础工作 EXP
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">舞厅EXP范围;情报活动检查
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">数据交换
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">贡献了名人增长平均数的六分之一
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Dexterity事件和具体工人的检查
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">能力
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">客户范围和每日双薪机会
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">能力事件;促进名人增长
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">外观
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">较小的外观/Charisma 设定最低工资,较大的最高数额
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">外观事件;名人成长
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">魅力a
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">与外观共享薪酬范围公式
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">魅力事件;名人成长
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">名声
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">每位工人现在的名声 都为今天的名流贡献了力量
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">通过每日统计平均卷和活动增长
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">经历
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">消耗工人EXP,而不是自动水平乘数
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">用于更新按钮
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">压力
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">燃烧至0-100;工作结束后超过75人休息
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">训练会增加压力并造成溢出损害
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">忠诚
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">可允许拒绝30岁以下或80岁以上奖金卷
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">专门针对工人的衰减和探访;特别房间/物品保护
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">卫生
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">零 健康可以让病人休息
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">活动、培训费、回收和消耗品
+</td></tr></tbody></table>
+<div style="color:#d4c5a9; margin-bottom:8px;">六个存储的原始数据被夹住 <b>0–999</b> 检查中使用的配置奖金与存储的号码是分开的;计算日收入时,在计算工资之前会增加工人物品的外观和Charisma奖金。它不会自动将每个描述工人技能奖金添加到每个每日统计。</div>
+<div style="color:#d4c5a9; margin-bottom:8px;"><b>最大工人健康=分钟(999,最大(100,Stamina×10))。</b> 与工人的 <b>铁制宪法</b>,将 Stamina 术语乘以 1.5 ,然后应用最小值和上限。这是一个工人技能计算,与玩家的战斗技能分开。</div>
+<div class="mw-heading mw-heading3"><h3 id="zh-Buying_Stats_with_EXP">使用 EXP 购买Stats</h3></div>
+<div style="color:#d4c5a9; margin-bottom:8px;">提高初级病历 <b>N改为N+1</b> 费用 <b>N + 1 名工人 EXP</b>,只要存储的Stat低于999。通过管理stat按钮增加Stamina也会使工人恢复到重新计算的最高健康水平。</div>
+<div style="color:#d4c5a9; margin-bottom:8px;">例如,能力30 ~ 31 成本 <b>31 EXP (英语).</b>; 31 – 32 费用 <b>32 EXP 执行方案</b>成本是随提高的统计,而不是普遍工人水平。</div>
+<div class="mw-heading mw-heading2"><h2 id="zh-Who_Works_and_Who_Does_Not">谁工作谁不工作</h2></div>
+<div style="color:#d4c5a9; margin-bottom:8px;">只有现有、征聘和在职工人才能进入每日名册。 <b>30个工人身份证</b>;一个工人的可用性仍然取决于他们自己的游戏进展.</div>
+<table style="background:#2a0a12; color:#d4c5a9; border:1px solid #6b1a2a; border-collapse:collapse; margin-bottom:16px;">
+<tbody><tr style="background:#1e0a0f;">
+<th style="border:1px solid #6b1a2a; padding:6px 12px;"><span style="color:#c9943a;">状态</span>
+</th>
+<th style="border:1px solid #6b1a2a; padding:6px 12px;"><span style="color:#c9943a;">每日结果</span>
+</th></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">普通工人
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">客户,支付,压力,工作 EXP,名人卷,和混乱
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">休息时间
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">没有客户工作、工资、工作EXP或乱七八糟;一天休息日用完
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">今天休息结束
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">压力变为0,健康恢复到最大; <b>那天还是没工作</b>
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">锡雷纳岛度假
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">没有客户工作或事件;+25 忠诚至150,−40 压力,+40 健康至最大;衰减暂停
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">舞厅学员
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">没有普通客户、工资、名牌或工人的烂摊子;
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">拒绝工作
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">没有普通的客户工作,工资,工作 EXP,或混乱的那一天
+</td></tr></tbody></table>
+<div style="color:#d4c5a9; margin-bottom:8px;">工作日计算后开始休息: <b>75天以上的压力——2个休息日</b>否则 <b>零至4个病假日的健康状况</b>,或 <b>3, 活动 Willow</b>。触发日仍然可以赚取收入。每日护士检查是否 <b>Willow是一个在职工人</b>而不是要求把她安排到医务室的学徒岗位上</div>
+<div class="mw-heading mw-heading2"><h2 id="zh-Client_Count_and_Daily_Pay">客户数和每日付款</h2></div>
+<div class="mw-heading mw-heading3"><h3 id="zh-Client_Count">客户数</h3></div>
+<div style="color:#d4c5a9; margin-bottom:8px;">原始工人的能力 <b>页:1</b>:</div>
+<div style="color:#d4c5a9; margin-bottom:8px;"><b>最小客户端=最大(1,楼层(A QQ 10)−2).</b></div>
+<div style="color:#d4c5a9; margin-bottom:8px;"><b>最大客户端=地板(A QQ 10)+2.</b></div>
+<div style="color:#d4c5a9; margin-bottom:8px;">在它们之间滚动一个包容性整数,然后增加适用的房间、设备和分配的客户奖金。 <b>3-7个客户</b>.</div>
+<ul><li><span style="color:#d4c5a9;">卧室等级3:+1;等级4:+2;等级5:+3客户端.</span></li>
+<li><span style="color:#d4c5a9;">律师学徒:+2客户为自己.</span></li>
+<li><span style="color:#d4c5a9;">VIP受益人:+1客户端给自己.</span></li>
+<li><span style="color:#d4c5a9;">厨房:每个学徒一个随机分配的全楼客户.</span></li>
+<li><span style="color:#d4c5a9;">一级以上有效晋升:滚动 <b>0 至 关</b> 额外客户端,然后随机分发。</span></li>
+<li><span style="color:#d4c5a9;">女佣广告项目:在实际可用的工人中分配其累积的客户外资金,而不是拒绝。一个工人可以接受几个。</span></li>
+<li><span style="color:#d4c5a9;">工人设备:加上工人的客户奖金。</span></li></ul>
+<div style="color:#d4c5a9; margin-bottom:8px;">厨房和促销的发行在事件和拒绝检查之前进行,因此,后来的拒绝可能会浪费分配。 佣人广告首先解决拒绝问题,而只将它分配给将要工作的工人。这些是全大楼的集合,而不是每个工人的额外计数。</div>
+<div class="mw-heading mw-heading3"><h3 id="zh-Pay_Range">薪酬范围</h3></div>
+<div style="color:#d4c5a9; margin-bottom:8px;">在增加装备齐全的外观/Charisma奖金后, <b>页:1</b> 外观和 <b>C级</b> 成为魅力:</div>
+<div style="color:#d4c5a9; margin-bottom:8px;"><b>最低基薪=下限(男(P,C)++2)。</b></div>
+<div style="color:#d4c5a9; margin-bottom:8px;"><b>基数最高薪=最高薪(P,C)×2.</b></div>
+<div style="color:#d4c5a9; margin-bottom:8px;">用开始的清洁、衣服和工人的卧室来修改范围,在每个阶段都缩短。 <b>每天支付一次</b> 位于结果的界限之间。</div>
+<div style="color:#d4c5a9; margin-bottom:8px;">更高的外观或Charisma可以提高上限;提高较小的静态可以提高下限。 保持两者的平衡可以使最低支付更强。</div>
+<div class="mw-heading mw-heading3"><h3 id="zh-Daily_Double_Pay">每日双薪</h3></div>
+<div style="color:#d4c5a9; margin-bottom:8px;"><b>Bonuschance = floor(Aliable QQ 2) +今天的客户在此阶段.</b></div>
+<div style="color:#d4c5a9; margin-bottom:8px;">价值或低于该数值的1-100卷比每日卷多一倍。100或以上门槛值保证了双薪结果。 <b>30%</b> 机会</div>
+<div style="color:#d4c5a9; margin-bottom:8px;">这是每个工人每天一次满意的工资奖金,不是每个客户的单项工资,也不是直接支付每日工资×客户数。</div>
+<div class="mw-heading mw-heading2"><h2 id="zh-Cleanliness,_Clothing,_and_Bedrooms"><span id="zh-Cleanliness.2C_Clothing.2C_and_Bedrooms"></span>清洁、服装和卧室</h2></div>
+<table style="background:#2a0a12; color:#d4c5a9; border:1px solid #6b1a2a; border-collapse:collapse; margin-bottom:16px;">
+<tbody><tr style="background:#1e0a0f;">
+<th style="border:1px solid #6b1a2a; padding:6px 12px;"><span style="color:#c9943a;">清洁性</span>
+</th>
+<th style="border:1px solid #6b1a2a; padding:6px 12px;"><span style="color:#c9943a;">薪资最低乘数</span>
+</th>
+<th style="border:1px solid #6b1a2a; padding:6px 12px;"><span style="color:#c9943a;">最高薪资乘数</span>
+</th>
+<th style="border:1px solid #6b1a2a; padding:6px 12px;"><span style="color:#c9943a;">后来的名声乘数</span>
+</th></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">0–4
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">×0
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">×1
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">×0
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">5–14
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">×0.25
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">×1
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">×0.25
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">15–29
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">×0.50
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">×1
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">×0.50
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">30–44
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">×0.75
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">×1
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">×0.75
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">45–59
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">×1
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">×1
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">×1
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">60–74
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">×1
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">×1.20
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">×1.20
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">75–89
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">×1
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">×1.40
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">×1.40
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">90–100
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">×1
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">×1.60
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">×1.60
+</td></tr></tbody></table>
+<div style="color:#d4c5a9; margin-bottom:8px;">使用 <b>开始清洁</b> 前两栏和 <b>清理后的清洁</b> 最后一栏。即使在0清扫时,工资上限也不强制为0;名声仍然可以是0。</div>
+<table style="background:#2a0a12; color:#d4c5a9; border:1px solid #6b1a2a; border-collapse:collapse; margin-bottom:16px;">
+<tbody><tr style="background:#1e0a0f;">
+<th style="border:1px solid #6b1a2a; padding:6px 12px;"><span style="color:#c9943a;">服装职等</span>
+</th>
+<th style="border:1px solid #6b1a2a; padding:6px 12px;"><span style="color:#c9943a;">最低工资</span>
+</th>
+<th style="border:1px solid #6b1a2a; padding:6px 12px;"><span style="color:#c9943a;">最高薪额</span>
+</th>
+<th style="border:1px solid #6b1a2a; padding:6px 12px;"><span style="color:#c9943a;">每天名声平平</span>
+</th></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">1
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">×1
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">×1
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">+0
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">2
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">×1
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">×1.20
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">+1
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">3
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">×1.10
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">×1.30
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">+2
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">4
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">×1.20
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">×1.40
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">+3
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">5
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">×1.30
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">×1.50
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">+4
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">6
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">×1.40
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">×1.60
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">+5
+</td></tr></tbody></table>
+<table style="background:#2a0a12; color:#d4c5a9; border:1px solid #6b1a2a; border-collapse:collapse; margin-bottom:16px;">
+<tbody><tr style="background:#1e0a0f;">
+<th style="border:1px solid #6b1a2a; padding:6px 12px;"><span style="color:#c9943a;">工人卧室级别</span>
+</th>
+<th style="border:1px solid #6b1a2a; padding:6px 12px;"><span style="color:#c9943a;">添加客户端</span>
+</th>
+<th style="border:1px solid #6b1a2a; padding:6px 12px;"><span style="color:#c9943a;">最高薪额</span>
+</th>
+<th style="border:1px solid #6b1a2a; padding:6px 12px;"><span style="color:#c9943a;">每天名声平平</span>
+</th></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">1
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">+0
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">×1
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">+0
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">2
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">+0
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">×1.10
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">+1
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">3
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">+1
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">×1.25
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">+3
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">4
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">+2
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">×1.40
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">+5
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">5
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">+3
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">×1.60
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">+7
+</td></tr></tbody></table>
+<div style="color:#d4c5a9; margin-bottom:8px;">服装和房间声誉奖金 <b>今天的名声池</b>。它们不会永久增加存储的名人。</div>
+<div class="mw-heading mw-heading3"><h3 id="zh-Pay-Range_Example">薪酬范围示例</h3></div>
+<div style="color:#d4c5a9; margin-bottom:8px;">外观40,Charisma30给 <b>$15–$80</b>。开始清洁 90 将上限提高到 128 美元。 <b>$21–$204</b>; 卧室5级修改最大值为 <b>$326</b>因此,每天的卷子是: <b>$21–$326</b>在双薪支票和以后的奖金之前</div>
+<div style="color:#d4c5a9; margin-bottom:8px;">那个工人的衣服和卧室也加了 <b>5 + 7 = 12</b> 平分今天的名人池,加上现在的名人和任何适用的项目/忠诚点.</div>
+<div class="mw-heading mw-heading2"><h2 id="zh-Worker_Pay_Bonus_Order">工人工资奖金令</h2></div>
+<div style="color:#d4c5a9; margin-bottom:8px;">每日卷后:</div>
+<ol><li><span style="color:#d4c5a9;">如果成功,应用双薪结果。</span></li>
+<li><span style="color:#d4c5a9;">适用总和的工人设备收入百分比,然后是固定收入。</span></li>
+<li><span style="color:#d4c5a9;">应用多种项目效果,如 <b>珍珠颈带×2</b>.</span></li>
+<li><span style="color:#d4c5a9;">应用成功的高利贷奖金:外客户支付,×1.25支付,或+2日名.</span></li>
+<li><span style="color:#d4c5a9;">乘以数 <b>1+0.5x完成培训升级</b> 为这个工人。</span></li>
+<li><span style="color:#d4c5a9;">贵宾受益人的双倍报酬.</span></li>
+<li><span style="color:#d4c5a9;">应用那个工人的目标日活动黄金乘数 <b>最后一个</b>.</span></li></ol>
+<div style="color:#d4c5a9; margin-bottom:8px;">已完成的礼品培训升级堆栈 <b>添加剂</b> 用于收入:一个给×1.5,两个×2,三个2.5,等等用于该工人可用的升级。 <b>匹配玩家训练动作</b>,与日常工作分开 EXP.</div>
+<div style="color:#d4c5a9; margin-bottom:8px;">将目标薪酬设定为xx0的事件,即使培训升级、项目和要人翻一番,也维持在零。全球建筑活动的收入在征税前稍后处理。</div>
+<div class="mw-heading mw-heading2"><h2 id="zh-Stress_and_Work_EXP">压力和工作EXP</h2></div>
+<div class="mw-heading mw-heading3"><h3 id="zh-Work_Stress">工作压力</h3></div>
+<div style="color:#d4c5a9; margin-bottom:8px;">每个工人,从 <b>10</b>,或 <b>7如果 Willow 活动</b>:</div>
+<ol><li><span style="color:#d4c5a9;">成功 Stamina 卷: -2.</span></li>
+<li><span style="color:#d4c5a9;">添加 <b>最大( 0, 客户 - 2)</b>.</span></li>
+<li><span style="color:#d4c5a9;">减掉工人设备的压力,然后在零下铺.</span></li>
+<li><span style="color:#d4c5a9;">应用主寝室 / Brothel Dungeon 保护或医务预防.</span></li>
+<li><span style="color:#d4c5a9;">将剩余工作压力加到现有的压力中,将压力控制在0-100。</span></li></ol>
+<div style="color:#d4c5a9; margin-bottom:8px;">睡房主徒弟赚了钱 <b>零工作与积极事件压力</b> Brothel Dungeon学徒不能通过工人更新器获得压力,也不能失去忠心;他们保留现有的压力,仍然可能受益于压力缓解。两个任务都只是将旧压力重置于零。</div>
+<div class="mw-heading mw-heading3"><h3 id="zh-Infirmary_and_Medicine">医务和医学</h3></div>
+<div style="color:#d4c5a9; margin-bottom:8px;">让 <b>(单位:千美元)</b> 医务学徒人数和 <b>页:1</b> 该建筑的医学水平:</div>
+<div style="color:#d4c5a9; margin-bottom:8px;"><b>每个工作压力点的概率=分钟(100米,×a)%。</b></div>
+<div style="color:#d4c5a9; margin-bottom:8px;">在医学0,学徒防止 <b>分钟( 出现压力, a)</b> 点数不随机滚动。在0以上,每工作压力点一次滚动机会,然后防止 <b>大于</b> 成功计数和学徒保证。保证是一层楼,而不是每卷成功单上增加额外的预防。</div>
+<div style="color:#d4c5a9; margin-bottom:8px;">10个工作压力、3个学徒和20个医学:卷a <b>60%</b> 每一点的机会;至少防止3点,最多10点; <b>新工作压力</b>;它不会抹去旧的应激或自动取消事件应激.</div>
+<div class="mw-heading mw-heading3"><h3 id="zh-Work_Experience">工作经验</h3></div>
+<ol><li><span style="color:#d4c5a9;">基础工作EXP在高Loyalty额外客户之前等于客户的计数.</span></li>
+<li><span style="color:#d4c5a9;">成功的原始情报卷 加倍的基地。</span></li>
+<li><span style="color:#d4c5a9;">添加 <b>+1 EXP每个密室学徒</b>,然后工人设备平面EXP.</span></li>
+<li><span style="color:#d4c5a9;">应用工人设备 EXP 百分比,切换.</span></li>
+<li><span style="color:#d4c5a9;">主卧房学徒收×1.5,调校.</span></li>
+<li><span style="color:#d4c5a9;">如果工人有学徒任务,请加上女佣 <b>辅导</b> 计算结果的百分比,缩短奖金。</span></li></ol>
+<div style="color:#d4c5a9; margin-bottom:8px;">事件 EXP在事件处理过程中被单独授予, 并出现在报告总数中。它不是第二次通过工作- EXP 乘数运行 。 高亮度额外客户端是稍后添加的,因此它们会产生额外的薪酬和混乱,但在此计算中不会添加工作压力或工作 EXP 。</div>
+<div style="color:#d4c5a9; margin-bottom:8px;">舞厅训练代替卷 <b>60 - 100 + 1 - max( 1, 原始智能)</b> EXP,然后添加适用的导师。它不使用普通的Intelligence双工作-EXP卷。</div>
+<div class="mw-heading mw-heading2"><h2 id="zh-Loyalty,_Visits,_and_Training"><span id="zh-Loyalty.2C_Visits.2C_and_Training"></span>忠诚、访问和培训</h2></div>
+<div style="color:#d4c5a9; margin-bottom:8px;">所有30名工人都参加目前对忠诚的计算,按特定工人的费率计算。 Raven被排除在普通访问选择者之外,但她的忠诚对于日常工作仍然很重要。</div>
+<ul><li><span style="color:#d4c5a9;">每过一天,都记录工人的衰败机会。 成功将失去1个忠诚;成功级联将失去1个附加点。</span></li>
+<li><span style="color:#d4c5a9;"><b>30岁以下</b>工人拒绝的机会可能使他们拒绝当天的工作。</span></li>
+<li><span style="color:#d4c5a9;"><b>80岁以上</b>,工人的奖金机会可以产生三个同样选定的奖金之一: <b>1至2个额外客户和每个额外薪级表</b>, <b>1.25 每日工资</b>,或 <b>+2 平日声誉</b>完全80没有资格。</span></li>
+<li><span style="color:#d4c5a9;">客户以外的付款不会独立地重复先前的双薪或设备奖金阶段;后来的培训、VIP和有针对性的活动乘数适用于工人综合工资。</span></li>
+<li><span style="color:#d4c5a9;">度假,Brothel Dungeon学徒, 和忠心锁设备暂停腐烂 而不积累积压 以后。</span></li>
+<li><span style="color:#d4c5a9;">普通的忠心更新使用0-100范围;度假胜地和特定设备可以将其提升到100以上,甚至达到自己的上限。 度假归来不会立即丢掉更高的价值。</span></li></ul>
+<div style="color:#d4c5a9; margin-bottom:8px;">对于完成的玩家训练,重点收益是 <b>亲吻 —— 魅力</b>, <b>口头-情报</b>, <b>传教士-外观</b>, <b>牛女  →</b>, <b>Doggie 能力</b>, <b>特殊 1 + 数据交换</b>. Special 2/3 每人将两个随机的初级统计数提高1. <b>快乐艺术</b> 增加一个随机主点。</div>
+<div style="color:#d4c5a9; margin-bottom:8px;">培训通常增加 <b>20 压力</b>,或 <b>10 种术</b>超过100种原因的压力 <b>2每个溢出点的健康损害</b>Brothel Dungeon学徒没有受到培训压力,因此,受保护的培训费用不会造成溢出损害。</div>
+<div style="color:#d4c5a9; margin-bottom:8px;">训练的工人EXP基地 玩家Erotic Experience 1 -10级是 <b>2, 13, 24, 35, 46, 57, 68, 79, 90, 100</b>。为 Tantric Arts 添加 10, 乘以 1.5 , 加上感官大师和短音, 保留 80% 和短音, 完成匹配的训练升级后再加双倍。这是不同于普通日常工作的 EXP 。</div>
+<div class="mw-heading mw-heading2"><h2 id="zh-Fame_and_Reputation">名声和声誉</h2></div>
+<div style="color:#d4c5a9; margin-bottom:8px;">每个工作日,平均 <b>能力、外观、魅力、Stamina、情报和Dexterity</b>外观/Charisma包括每日薪金计算所用的奖金项目。 <b>1个永久名人</b>。事件可以分别改变名人。</div>
+<div style="color:#d4c5a9; margin-bottom:8px;">最初的日名人库是:</div>
+<div style="color:#d4c5a9; margin-bottom:8px;"><b>目前名人+服装平面奖金+卧室平面奖金+工人项目平面名人+成功的忠诚名誉奖金.</b></div>
+<div style="color:#d4c5a9; margin-bottom:8px;">应用这些阶段的顺序:</div>
+<ol><li><span style="color:#d4c5a9;">乘以数 <b>清理后的清洁</b> 和全局事件声誉乘数; 截断。 封锁声誉事件将这一基础设为零 。</span></li>
+<li><span style="color:#d4c5a9;">有效晋级1级以上,从 <b>0至10× 级别</b> 并加上该百分比。</span></li>
+<li><span style="color:#d4c5a9;">如果有效的装饰超过0,则从 <b>0至5× 级别</b> 并加上该百分比。</span></li>
+<li><span style="color:#d4c5a9;">拥有圣诞花环:+5%.</span></li>
+<li><span style="color:#d4c5a9;">校验主关:+5%.</span></li>
+<li><span style="color:#d4c5a9;">办公室:每名学徒+5%。</span></li>
+<li><span style="color:#d4c5a9;">拥有栏:+5%,加上每名律师学徒+1%.</span></li>
+<li><span style="color:#d4c5a9;">适用女佣设备的声誉百分比。</span></li>
+<li><span style="color:#d4c5a9;">分配的舞厅学员增加了+10%。</span></li></ol>
+<div style="color:#d4c5a9; margin-bottom:8px;">每个百分比的奖金使用 <b>当前运行值</b> 并缩短其增加的金额。这些阶段复合。结果会增加累积的声誉点,并更新等级。</div>
+<div class="mw-heading mw-heading3"><h3 id="zh-Reputation_Ranks">职衔</h3></div>
+<div style="color:#d4c5a9; margin-bottom:8px;">每个军衔都会增加 <b>5%</b> 工人收入小计: <b>收入奖金=5×(起职——1)%</b>因此,排名20给出了+95%;现行制度延续了排名20。</div>
+<table style="background:#2a0a12; color:#d4c5a9; border:1px solid #6b1a2a; border-collapse:collapse; margin-bottom:16px;">
+<tbody><tr style="background:#1e0a0f;">
+<th style="border:1px solid #6b1a2a; padding:6px 12px;"><span style="color:#c9943a;">军衔</span>
+</th>
+<th style="border:1px solid #6b1a2a; padding:6px 12px;"><span style="color:#c9943a;">名称</span>
+</th>
+<th style="border:1px solid #6b1a2a; padding:6px 12px;"><span style="color:#c9943a;">要达到的点</span>
+</th>
+<th style="border:1px solid #6b1a2a; padding:6px 12px;"><span style="color:#c9943a;">收入奖金</span>
+</th></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">1
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">恶心
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">0
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">+0%
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">2
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">翻转
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">500
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">+5%
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">3
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">脏
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">1,500
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">+10%
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">4
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">肮脏
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">4,000
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">+15%
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">5
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">谢比
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">7,500
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">+20%
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">6
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">穷
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">12,000
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">+25%
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">7
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">平庸语
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">18,000
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">+30%
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">8
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">可接受
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">26,000
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">+35%
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">9
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">体面
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">36,000
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">+40%
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">10
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">不错
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">50,000
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">+45%
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">11
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">精细
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">70,000
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">+50%
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">12
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">质量
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">95,000
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">+55%
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">13
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">不错
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">125,000
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">+60%
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">14
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">高级
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">160,000
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">+65%
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">15
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">ium
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">200,000
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">+70%
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">16
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">奢华
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">250,000
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">+75%
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">17
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">特别
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">310,000
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">+80%
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">18
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">皇家
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">380,000
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">+85%
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">19
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">国王
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">460,000
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">+90%
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">20
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">像上帝一样
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">550,000
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">+95%
+</td></tr></tbody></table>
+<div style="color:#d4c5a9; margin-bottom:8px;">排名第20后, <b>像神一样(1)</b> 排名 21 时 <b>685 000点</b>。下一步费用为202 500分;随后每一步费用为前一步×1.5,四舍五入。对于名声增长或军衔收入奖金,没有20级上限。</div>
+<div class="mw-heading mw-heading2"><h2 id="zh-Building_Income,_Tax,_and_Upkeep"><span id="zh-Building_Income.2C_Tax.2C_and_Upkeep"></span>建设收入、税收和维持</h2></div>
+<div style="color:#d4c5a9; margin-bottom:8px;">从所有工人最后日薪的总和开始。按此顺序:</div>
+<ol><li><span style="color:#d4c5a9;">开始名声等级 : <b>+5%×(排名−1)</b>.</span></li>
+<li><span style="color:#d4c5a9;">拥有 <b>圣诞花环</b>: +5%.</span></li>
+<li><span style="color:#d4c5a9;">已验证 <b>师级</b>: +5%.</span></li>
+<li><span style="color:#d4c5a9;">办公室:每名学徒+5%。</span></li>
+<li><span style="color:#d4c5a9;">拥有栏:+5%,加上每名律师学徒+1%.</span></li>
+<li><span style="color:#d4c5a9;">有效装饰:从 <b>0至5× 级别</b>.</span></li>
+<li><span style="color:#d4c5a9;">女佣设备财富总额百分比。</span></li>
+<li><span style="color:#d4c5a9;">全球每日活动收入乘数; 获取短线 <b>收入毛额</b>.</span></li></ol>
+<div style="color:#d4c5a9; margin-bottom:8px;">现在的圣诞花环检查是 <b>所有权</b>女佣的财富奖金会影响实际收入,而不是只用于展示。</div>
+<div style="color:#d4c5a9; margin-bottom:8px;"><b>税额=下限(总收入×15%)。</b></div>
+<div style="color:#d4c5a9; margin-bottom:8px;"><b>正常净额=最大(0,毛额-税收-每日维持)。</b></div>
+<div style="color:#d4c5a9; margin-bottom:8px;">如果有舞厅学员,Esperanza的费用是: <b>下限(正常净额×15%)</b>中,从正的正常网中扣除。然后将怪物收入单独添加。正常的负结果由企业承担,而不是在计算日常利润时从你的财富中扣除。</div>
+<div class="mw-heading mw-heading3"><h3 id="zh-Daily_Upkeep">每日维护</h3></div>
+<div style="color:#d4c5a9; margin-bottom:8px;"><b>60 + 20 × (有效的主卧室级别+所有确定的工人卧室级别的总和+有效的酒吧、女佣宿舍、医务室、保安、室外和Brothel Dungeon)。</b></div>
+<div style="color:#d4c5a9; margin-bottom:8px;">计算包括卧室,即使他们的工人在休息或当天没有挣钱。特殊房间的有效水平来自房间的基数和学徒计数; 女佣的四分房使用获得的女佣计数和学徒计数,因此,分配工作人员可以增加维持费用。这一功能并不增加独立的女佣工资费,也不增加其他每个专用房间的20美元。</div>
+<div class="mw-heading mw-heading3"><h3 id="zh-Building-Income_Example">建筑-收入示例</h3></div>
+<div style="color:#d4c5a9; margin-bottom:8px;">假设工人工资总额 <b>$1,000</b>, 起始等级为 10, 花环是拥有的,有一个办公室学徒, 酒吧有两个学徒, 装饰的卷子给出 + 10%, 女仆设备给出 + 5%。没有主 Tier 或事件变化 :</div>
+<div style="color:#d4c5a9; margin-bottom:8px;"><b>1 000 = 1 450 = 1 522 = 1 598 = 1 709 = 1 879 = 1 972 毛额。</b></div>
+<div style="color:#d4c5a9; margin-bottom:8px;">税收是 <b>$295</b>保持200美元,正常的网络是 <b>$1,477</b>舞厅学员的费用 <b>$221</b>,离开 <b>$1,256</b> 在单独的怪物收入之前 。此示例遵循每个奖金阶段的整数切换; 单个总和百分比给出不同的答案 。</div>
+<div class="mw-heading mw-heading2"><h2 id="zh-Monster_Work_and_Statistics">怪物工作与统计</h2></div>
+<div style="color:#d4c5a9; margin-bottom:8px;">活生生的怪物有自己的每日报告,与工人工资公式分开,他们必须在报告日到来,不能休息,而且有 <b>那天至少30岁</b>。在进行资格检查的前一天,将进行调试。</div>
+<table style="background:#2a0a12; color:#d4c5a9; border:1px solid #6b1a2a; border-collapse:collapse; margin-bottom:16px;">
+<tbody><tr style="background:#1e0a0f;">
+<th style="border:1px solid #6b1a2a; padding:6px 12px;"><span style="color:#c9943a;">数值</span>
+</th>
+<th style="border:1px solid #6b1a2a; padding:6px 12px;"><span style="color:#c9943a;">每日计算</span>
+</th></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">客户
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">随机 <b>1 - max(1, 楼层( 能力) + 10) + 1)</b>
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">每个客户的薪酬
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">随机 <b>最大(1, 楼层( ALLure QX 2) )</b> 结束 <b>最大值( 下限 + 1, Aura x 2)</b>
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">收入共计
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">这些单独的客户工资单的总和
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">任务 EXP
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">客户数
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">压力
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">+10,在成功的1-100生命卷上减少2个;上限为100个
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">飞行
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">在1至100卷中加1, 或低于Ability、Allure、Aura、Vitality、Cunning和Acility的平均值
+</td></tr></tbody></table>
+<div style="color:#d4c5a9; margin-bottom:8px;">怪兽真会付账 <b>每个客户</b>与普通工人的单日工资单不同的是,他们的收入被加起来。 <b>在正常工人奖金、税收、维修费和任何舞厅费之后</b>;它没有收到这些工人收入乘数或扣减。 <b>二乱</b> 在女佣清洁之前</div>
+<div style="color:#d4c5a9; margin-bottom:8px;">示例:能力30 <b>1-4个客户</b>吸引20和奥拉15 <b>每个客户10至30美元</b>3个客户,共计3个单卷 <b>$30–$90</b>,加上正常净收入。</div>
+<div style="color:#d4c5a9; margin-bottom:8px;">75号以上的压力开始 <b>3个休息日</b>。当最后休息日结束时,压力变为零; 怪物在该完成日不工作。在 Tamed 30 下, 报告标记了怪物未受约束且没有工作收入。 Monsterstat 升级成本 <b>下一个统计级别 EXP</b> 停下来 <b>100</b>与普通工人的999顶级标准不同</div>
+<div class="mw-heading mw-heading2"><h2 id="zh-Mess_and_Maid_Cleaning">梅斯和女佣清洁</h2></div>
+<div class="mw-heading mw-heading3"><h3 id="zh-Worker_Mess">员工梅斯</h3></div>
+<div style="color:#d4c5a9; margin-bottom:8px;">基础混乱是工人的 <b>最终</b> 客户点数,包括高亮度的额外客户。</div>
+<table style="background:#2a0a12; color:#d4c5a9; border:1px solid #6b1a2a; border-collapse:collapse; margin-bottom:16px;">
+<tbody><tr style="background:#1e0a0f;">
+<th style="border:1px solid #6b1a2a; padding:6px 12px;"><span style="color:#c9943a;">滚动</span>
+</th>
+<th style="border:1px solid #6b1a2a; padding:6px 12px;"><span style="color:#c9943a;">工人乱七八糟的</span>
+</th></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">最多10名客户
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">楼层(客户x2)
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">否则,最多20个以上客户
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">楼层(客户x1.5)
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">否则,最多30名客户
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">楼层(客户x1.25)
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">否则
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">客户
+</td></tr></tbody></table>
+<div style="color:#d4c5a9; margin-bottom:8px;">与 <b>8个客户</b>,概率是 <b>18%、10%、10%和62%</b>,给出16、12、10或8个差错。这些差错是累积的;它们不是分别的18%、28%和38%的机会。要人受益人是最后工人差错的两倍。</div>
+<div style="color:#d4c5a9; margin-bottom:8px;">拥有的栏子添加 <b>10 + 律师学徒人数</b> 乱七八糟的 <b>每块两块</b>应用女佣设备的总和的减杂费百分比和减杂费,然后减去减杂费,最低为零。</div>
+<div class="mw-heading mw-heading3"><h3 id="zh-Maid_Levels_and_Cleaning">女佣级别和清洁</h3></div>
+<div style="color:#d4c5a9; margin-bottom:8px;">目前的女佣名册是 <b>Violet、Mandarin、Lychee、Lime、Rain和Onyx</b>只有买来的女佣才有贡献。</div>
+<table style="background:#2a0a12; color:#d4c5a9; border:1px solid #6b1a2a; border-collapse:collapse; margin-bottom:16px;">
+<tbody><tr style="background:#1e0a0f;">
+<th style="border:1px solid #6b1a2a; padding:6px 12px;"><span style="color:#c9943a;">女佣级</span>
+</th>
+<th style="border:1px solid #6b1a2a; padding:6px 12px;"><span style="color:#c9943a;">累计 EXP</span>
+</th>
+<th style="border:1px solid #6b1a2a; padding:6px 12px;"><span style="color:#c9943a;">基地清洁</span>
+</th>
+<th style="border:1px solid #6b1a2a; padding:6px 12px;"><span style="color:#c9943a;">设备槽</span>
+</th></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">1
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">0
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">10
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">1
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">2
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">200
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">15
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">1
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">3
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">600
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">20
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">1
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">4
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">1,200
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">25
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">2
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">5
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">3,500
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">30
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">2
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">6
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">7,000
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">40
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">2
+</td></tr></tbody></table>
+<div style="color:#d4c5a9; margin-bottom:8px;">每个女仆:</div>
+<div style="color:#d4c5a9; margin-bottom:8px;"><b>个人清洁=地板(基地清洁×(1+个人百分比××100))+个人平房奖金.</b></div>
+<div style="color:#d4c5a9; margin-bottom:8px;">对于团队:</div>
+<div style="color:#d4c5a9; margin-bottom:8px;"><b>团队清洁=地板(个人清洁××(1+团队百分比××100))+团队平面奖金.</b></div>
+<div style="color:#d4c5a9; margin-bottom:8px;">然后添加 <b>每名女佣的学徒做10次清洁</b>从 <b>50+差异项目奖金</b> 结束 <b>150+差异项目奖金</b> 并应用到这个总数,截断。</div>
+<div style="color:#d4c5a9; margin-bottom:8px;"><b>新的清洁性=夹具(旧的清洁性+滚滚的清洁性-减少杂乱,0,100).</b></div>
+<div style="color:#d4c5a9; margin-bottom:8px;">增加个人固定奖金 <b>之后</b> 女佣的百分比奖金,而不是乘以它。 <b>30</b>,不是31岁。</div>
+<div style="color:#d4c5a9; margin-bottom:8px;">每个女佣至少从滚滚的清洁中获得1个底质EXP: <b>最大(1, 楼层( 滚动清洁 ) 已获得的女佣数)</b>,然后适用个人/团队女仆EXP奖金。这使用滚滚式清洁,即使最后的清洁夹子防止建筑物超过100个。</div>
+<div class="mw-heading mw-heading2"><h2 id="zh-Apprentices,_Decor,_and_Promotion"><span id="zh-Apprentices.2C_Decor.2C_and_Promotion"></span>学徒、装饰和晋升</h2></div>
+<div style="color:#d4c5a9; margin-bottom:8px;">室内人员配备使用衍生出的有效级别. 工人卧室保持其付费级别; 多数学徒服务室有一个基础解锁级别加上分配的号码. 可用的档位和房间访问取决于相关的主机和故事进度.</div>
+<table style="background:#2a0a12; color:#d4c5a9; border:1px solid #6b1a2a; border-collapse:collapse; margin-bottom:16px;">
+<tbody><tr style="background:#1e0a0f;">
+<th style="border:1px solid #6b1a2a; padding:6px 12px;"><span style="color:#c9943a;">会议室</span>
+</th>
+<th style="border:1px solid #6b1a2a; padding:6px 12px;"><span style="color:#c9943a;">当前数值效应</span>
+</th></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">主卧室
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">分配工人:+50%工作 EXP,没有积极的日常工作/活动压力
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Brothel 敦煌语Name
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">学徒防止压力增加和失去忠诚;培训压力也为零
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">栏
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">所有权:+5%的收入/信誉和+10的混乱;每个学徒:+1%的收入/信誉,+1的混乱,以及+2的客户给自己
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">贵宾休息室
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">当拥有时,Vixen和分配的学徒可以获得+1客户,x2工资,x2乱
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">医务室
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">如上所述,学徒保证预防压力和药品卷
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">女佣的四分之一
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">+10小组每名学徒清洁;有效级别包括购置的女佣
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">办公室
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">+5% 建筑收入和每个学徒的声誉
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">厨房
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">每个学徒一个随机分配的额外建筑客户端
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">密室
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">每名工人在智商翻一番后,每名学徒每人工作1次EXP
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">阿尔卡内房间
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">+1每名学徒有效装饰
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">菜单
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">+1每名学徒有效晋升
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">警卫
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">帮助事件检查和客户欣赏成功;没有增加普遍工人工资乘数
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">舞厅
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">1名学员;无正常工人收入;培训EXP, +10%的声誉和15%的正常网费
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">训练室
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">人员配置改变其玩家培训行动;没有单独的普遍日薪奖金
+</td></tr></tbody></table>
+<div style="color:#d4c5a9; margin-bottom:8px;"><b>有效装饰 = 存储的装饰 + Cthulhu头奖(如果拥有) + 女仆装备 装饰 + Arcane学徒计数.</b> 它为收入和声誉分别滚动,因此两个报告奖金都不需要匹配.</div>
+<div style="color:#d4c5a9; margin-bottom:8px;"><b>有效晋级 = 存储晋级 + Cthulhu头奖(如果拥有) + 女仆装备晋级 + 1如果Vespa是活跃的 + Menagerie学徒计数.</b> 它授予其外客户人才库和名声榜 <b>仅高于一级</b>.即使从人员配置中得出的有效水平较高,房间艺术水平也可封顶。</div>
+<div class="mw-heading mw-heading2"><h2 id="zh-Daily_Events_and_Customer_Appreciation">每日活动和客户欣赏</h2></div>
+<div style="color:#d4c5a9; margin-bottom:8px;">日常活动在主要工人计算之前从在场的工人、不休息的工人和不参加舞会的受训者中选择,然后应用他们的统计、健康、忠诚、名声和EXP等变化。 报告栏描述了这些变化;之后不再应用这些变化。</div>
+<div style="color:#d4c5a9; margin-bottom:8px;">事件可以针对单个工人的工资,修改整个建筑的收入,乘以名声,或者阻碍名声收益. <b>以工人为目标的工资乘数在VIP和培训奖金之后适用,全大楼的收入活动在征税和征收之前适用。</b> 报告显示的全球事件奖金是描述性的,不是第二次付款。</div>
+<div style="color:#d4c5a9; margin-bottom:8px;">不同的事件测试了不同的统计数据,可以使用自己的最小/最大机会、技能调整、安全效应或失败后果。 Dexterity对许多事件很有价值,尽管它没有直接客户端和支付公式。 仅凭一个技能的描述性文本并不能证明它修改了每天的卷。</div>
+<div style="color:#d4c5a9; margin-bottom:8px;"><b>客户欣赏</b> 是一个单独的 <b>每个工作日一次的机会</b>,带有 <b>19个中1个</b> 在没有待决奖励的情况下,合格工人必须确实与客户合作,并拥有1至4级服装。 该系统还需要符合资格的客户,其级别为目前的声誉等级。</div>
+<div style="color:#d4c5a9; margin-bottom:8px;">它的质量机会是 <b>20+平均值(Charisma,外观)</b> 用于Brothel模式,或 <b>20+平均值(Charisma,情报)</b> 用于酒店模式。添加 <b>每个保安学徒8+5人</b> 如果建立安全性,则工人项目事件-成功奖金; 夹住 <b>5–95%</b>成功的机会创造了后续服装奖赏,不是每个客户或每个工人一个独立的机会,服装等级5结束工人获得这一特定奖励途径的资格,六级服装使用其单独的升级途径。</div>
+<div class="mw-heading mw-heading2"><h2 id="zh-Practical_Checks">实际检查</h2></div>
+<ul><li><span style="color:#d4c5a9;">平衡观和Charisma要求更强大的薪酬底线,然后提高客户的能力和双薪门槛。 更多的客户也意味着更多的混乱和工作压力。</span></li>
+<li><span style="color:#d4c5a9;">提高工人EXP的智力,并使用EXP来改进你所需要的数据。 名声从6次初选的平均值增长,而不是仅靠能力。</span></li>
+<li><span style="color:#d4c5a9;">保持清洁能力领先于名册,清洁有助于今天的名声在清洁后和日后的薪酬范围.</span></li>
+<li><span style="color:#d4c5a9;">请检查access-date=中的日期值 (帮助)</span></li>
+<li><span style="color:#d4c5a9;">故意使用学徒:VIP增加杂乱,Ballroom清除一个挣钱的人并收费,同时员工可以提高维持费用.</span></li></ul>
+<table style="background:#2a0a12; color:#d4c5a9; border:1px solid #6b1a2a; border-collapse:collapse; margin-bottom:16px;">
+<tbody><tr style="background:#1e0a0f;">
+<th style="border:1px solid #6b1a2a; padding:6px 12px;"><span style="color:#c9943a;">意外结果</span>
+</th>
+<th style="border:1px solid #6b1a2a; padding:6px 12px;"><span style="color:#c9943a;">核对的解释</span>
+</th></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">薪酬不等于客户×上市卷
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">这卷是工人的日薪
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">增益百分比不增加报告总数
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">按整数切换顺序排列
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">声誉有所改善,但报告的军衔工资没有提高
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">当天开始军衔价格;以后适用新军衔
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">收入和声誉显示出不同的清洁效果
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">收入用于开始清洁;声誉用于清洁后的清洁
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">服装在不提高名声的情况下提高了声誉
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">服装每天都有名气,不是永久名声
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">额外的忠诚客户没有增加工作 EXP
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">他们在工作后到达 EXP/压力计算
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">医务室没有减轻老压力
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">药物只防止工作压力
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">敦煌学徒还有压力
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">保护块增加;它不会抹去旧值
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">休养但收入为零
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">稍后报告日恢复工作
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">学员的EXP是高的,而工资是零
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">舞厅培训取代普通客户工作
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">显示的事件奖金似乎未收
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">它已经是应纳税的毛额或最后定向工资的一部分,而不是额外支付
+</td></tr></tbody></table>
+<div class="mw-heading mw-heading2"><h2 id="zh-Accuracy_Notes">准确性说明</h2></div>
+<div style="color:#d4c5a9; margin-bottom:8px;">检查过了 <b>2026年10月4日 (中文(简体) ).</b> 对照当前日常计算、报告存储/收集、Stat更新器、房间级别、培训升级、工人设备、女仆设备、医药预防、客户欣赏和名声阈值。公式示例包括当前整数调值规则。本页描述的是力学,但没有披露人物身份或主要故事结果。</div>
+<div class="mw-heading mw-heading2"><h2 id="zh-Related_Pages">相关页面</h2></div>
+<ul><li><span style="color:#d4c5a9;"><a href="game-systems.html" title="Game Systems">游戏系统枢纽</a></span></li>
+<li><span style="color:#d4c5a9;"><a href="game-systems-brothel.html" title="Game Systems:Brothel">导线</a></span></li>
+<li><span style="color:#d4c5a9;"><a href="game-systems-investment-system.html" title="Game Systems:Investment System">投资系统</a></span></li>
+<li><span style="color:#d4c5a9;"><a href="game-systems-pregnancy.html" title="Game Systems:Pregnancy">怀孕制度</a></span></li>
+<li><span style="color:#d4c5a9;"><a href="character-willow.html" title="Character:Willow">Willow</a></span></li>
+<li><span style="color:#d4c5a9;"><a href="character-vixen.html" title="Character:Vixen">Vixen</a></span></li>
+<li><span style="color:#d4c5a9;"><a href="character-esperanza.html" title="Character:Esperanza">Esperanza</a></span></li></ul>
+<p><br/>
+<a href="game-systems.html" title="Game Systems">QQ回游戏系统</a>
+</p>
+</div></div>
+<div class="wiki-source-content" data-lang-panel="en"><div class="mw-content-ltr mw-parser-output" dir="ltr" lang="en">
+<div style="color:#d4c5a9; margin-bottom:8px;">This is the numerical reference for worker stats, daily earnings, stress, experience, cleaning, reputation, apprentices, and report collection. See <a href="game-systems-brothel.html" title="Game Systems:Brothel">Brothel guide</a> for buying the building, recruiting workers, and progressing its individual rooms and stories.</div>
+<div style="color:#d4c5a9; margin-bottom:8px;">The formulas below describe the current daily calculation. <b>Worker pay is one daily roll, not a payment multiplied by every client.</b> Money bonuses apply in stages; adding all their percentages together will not reproduce a report.</div>
+<div class="mw-heading mw-heading2"><h2 id="Reading_the_Daily_Report">Reading the Daily Report</h2></div>
+<div style="color:#d4c5a9; margin-bottom:8px;">Reports cover <b>completed in-game days</b> from the day you acquired the business onward. The current unfinished day is not calculated. Opening the report catches up missing completed days and stores each result, so rereading a calculated report does not award its earnings again.</div>
+<div style="color:#d4c5a9; margin-bottom:8px;">The report picker offers stored daily reports. Earnings enter <b>pending collection</b>; use the collection action to move positive pending earnings into Wealth. Looking at an older report does not collect that day's money a second time.</div>
+<div style="color:#d4c5a9; margin-bottom:8px;">Today's pay uses the reputation rank and cleanliness at the <b>start of the calculation</b>. Cleaning resolves later, and today's reputation reward uses cleanliness <b>after that cleaning</b>. A reputation rank earned today affects subsequent daily pay, not the already priced day.</div>
+<div style="color:#d4c5a9; margin-bottom:8px;">Catch-up calculations use the current worker roster, assignments, equipment, and state as each missing report runs, rather than replaying a historical roster snapshot. They still process those completed days once each. Visit the reports regularly if you want to see the effect of management changes promptly.</div>
+<div class="mw-heading mw-heading2"><h2 id="Worker_Stats_and_Their_Actual_Roles">Worker Stats and Their Actual Roles</h2></div>
+<table style="background:#2a0a12; color:#d4c5a9; border:1px solid #6b1a2a; border-collapse:collapse; margin-bottom:16px;">
+<tbody><tr style="background:#1e0a0f;">
+<th style="border:1px solid #6b1a2a; padding:6px 12px;"><span style="color:#c9943a;">Stat</span>
+</th>
+<th style="border:1px solid #6b1a2a; padding:6px 12px;"><span style="color:#c9943a;">Daily calculation</span>
+</th>
+<th style="border:1px solid #6b1a2a; padding:6px 12px;"><span style="color:#c9943a;">Other uses</span>
+</th></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Stamina
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">A roll of 1–100 at or below Stamina removes 2 incoming work stress
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Maximum Health; endurance event checks
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Intelligence
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">A successful 1–100 roll doubles base work EXP from clients
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Ballroom EXP range; intelligence event checks
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Dexterity
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Contributes one sixth of the Fame-growth average
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Dexterity events and worker-specific checks
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Ability
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Client range and daily double-pay chance
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Ability events; contributes to Fame growth
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Appearance
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Smaller Appearance/Charisma sets minimum pay, larger sets maximum
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Appearance events; Fame growth
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Charisma
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Shares the pay-range formula with Appearance
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Charisma events; Fame growth
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Fame
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Each working worker's current Fame contributes to today's reputation pool
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Grows through the daily stat-average roll and events
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Experience
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Spendable worker EXP, rather than an automatic level multiplier
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Used by the stat-upgrade buttons
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Stress
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Clamped to 0–100; exceeding 75 after work starts exhausted rest
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Training can add stress and cause overflow damage
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Loyalty
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Can enable refusal below 30 or bonus rolls above 80
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Worker-specific decay and visits; special room/item protection
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Health
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Zero Health can cause sick rest
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Events, training overflow, recovery, and consumables
+</td></tr></tbody></table>
+<div style="color:#d4c5a9; margin-bottom:8px;">The six stored primary stats are clamped to <b>0–999</b> by their updater. Equipped bonuses used in a check are separate from the stored number; the daily income calculation adds the worker item's Appearance and Charisma bonuses before computing pay. It does not automatically add every descriptive worker skill bonus to every daily stat.</div>
+<div style="color:#d4c5a9; margin-bottom:8px;"><b>Maximum worker Health = min(999, max(100, Stamina × 10)).</b> With the worker's <b>Iron Constitution</b>, multiply the Stamina term by 1.5 before applying the minimum and cap. This is a worker skill calculation, separate from the player's combat skill.</div>
+<div class="mw-heading mw-heading3"><h3 id="Buying_Stats_with_EXP">Buying Stats with EXP</h3></div>
+<div style="color:#d4c5a9; margin-bottom:8px;">Raising a primary stat from <b>N to N + 1</b> costs <b>N + 1 worker EXP</b>, provided the stored stat is below 999. Increasing Stamina through the management stat button also restores the worker to the recalculated maximum Health.</div>
+<div style="color:#d4c5a9; margin-bottom:8px;">For example, Ability 30 → 31 costs <b>31 EXP</b>; 31 → 32 costs <b>32 EXP</b>. The cost follows the stat being raised, not a universal worker level.</div>
+<div class="mw-heading mw-heading2"><h2 id="Who_Works_and_Who_Does_Not">Who Works and Who Does Not</h2></div>
+<div style="color:#d4c5a9; margin-bottom:8px;">Only available, recruited, active workers enter the daily roster. The current roster supports <b>30 worker IDs</b>; a worker's availability still depends on their own game progress.</div>
+<table style="background:#2a0a12; color:#d4c5a9; border:1px solid #6b1a2a; border-collapse:collapse; margin-bottom:16px;">
+<tbody><tr style="background:#1e0a0f;">
+<th style="border:1px solid #6b1a2a; padding:6px 12px;"><span style="color:#c9943a;">State</span>
+</th>
+<th style="border:1px solid #6b1a2a; padding:6px 12px;"><span style="color:#c9943a;">Daily result</span>
+</th></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Normal working worker
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Clients, pay, stress, work EXP, Fame roll, and mess
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Resting
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">No client work, pay, work EXP, or mess; one rest day is consumed
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Rest completes today
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Stress becomes 0 and Health returns to maximum; <b>still no work that day</b>
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Sirena Isle vacation
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">No client work or events; +25 Loyalty up to 150, −40 Stress, +40 Health up to maximum; decay paused
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Ballroom trainee
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">No ordinary clients, pay, Fame roll, or worker mess; gains Ballroom training EXP
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Refuses work
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">No ordinary client work, pay, work EXP, or mess for that day
+</td></tr></tbody></table>
+<div style="color:#d4c5a9; margin-bottom:8px;">Rest begins after a working day's calculations: <b>Stress over 75 → 2 rest days</b>; otherwise, <b>Health at zero → 4 sick rest days</b>, or <b>3 with Willow active</b>. The trigger day can still earn income. The daily nurse check is whether <b>Willow is an active worker</b>, rather than a requirement to assign her to an apprentice slot in the Infirmary.</div>
+<div class="mw-heading mw-heading2"><h2 id="Client_Count_and_Daily_Pay">Client Count and Daily Pay</h2></div>
+<div class="mw-heading mw-heading3"><h3 id="Client_Count">Client Count</h3></div>
+<div style="color:#d4c5a9; margin-bottom:8px;">For raw worker Ability <b>A</b>:</div>
+<div style="color:#d4c5a9; margin-bottom:8px;"><b>Minimum clients = max(1, floor(A ÷ 10) − 2).</b></div>
+<div style="color:#d4c5a9; margin-bottom:8px;"><b>Maximum clients = floor(A ÷ 10) + 2.</b></div>
+<div style="color:#d4c5a9; margin-bottom:8px;">Roll an inclusive integer between them, then add applicable room, equipment, and distributed client bonuses. Ability 50 starts at <b>3–7 clients</b>.</div>
+<ul><li><span style="color:#d4c5a9;">Bedroom Level 3: +1; Level 4: +2; Level 5: +3 clients.</span></li>
+<li><span style="color:#d4c5a9;">Bar apprentices: +2 clients to themselves.</span></li>
+<li><span style="color:#d4c5a9;">VIP beneficiaries: +1 client to themselves.</span></li>
+<li><span style="color:#d4c5a9;">Kitchen: one randomly assigned building-wide client per apprentice.</span></li>
+<li><span style="color:#d4c5a9;">Effective Promotion above Level 1: roll <b>0 through the level</b> extra clients for the building, then distribute them randomly.</span></li>
+<li><span style="color:#d4c5a9;">Maid advertising items: distribute their summed extra-client pool among workers actually available and not refusing. One worker can receive several.</span></li>
+<li><span style="color:#d4c5a9;">Worker equipment: add that worker's client bonus.</span></li></ul>
+<div style="color:#d4c5a9; margin-bottom:8px;">Kitchen and Promotion distributions are drawn before the event and refusal checks, so a later refusal can waste their allocation. Maid advertising resolves refusals first and only assigns its pool to workers who will work. These are building-wide pools, not the listed extra count for every worker.</div>
+<div class="mw-heading mw-heading3"><h3 id="Pay_Range">Pay Range</h3></div>
+<div style="color:#d4c5a9; margin-bottom:8px;">After adding equipped Appearance/Charisma bonuses, let <b>P</b> be Appearance and <b>C</b> be Charisma:</div>
+<div style="color:#d4c5a9; margin-bottom:8px;"><b>Base minimum pay = floor(min(P, C) ÷ 2).</b></div>
+<div style="color:#d4c5a9; margin-bottom:8px;"><b>Base maximum pay = max(P, C) × 2.</b></div>
+<div style="color:#d4c5a9; margin-bottom:8px;">Modify that range using starting cleanliness, clothing, and the worker's bedroom, truncating at each stage. Then roll <b>one daily payment</b> between the resulting bounds.</div>
+<div style="color:#d4c5a9; margin-bottom:8px;">Higher Appearance or Charisma can raise the upper bound; raising the smaller stat raises the lower bound. Keeping the two balanced makes the minimum payment stronger.</div>
+<div class="mw-heading mw-heading3"><h3 id="Daily_Double_Pay">Daily Double Pay</h3></div>
+<div style="color:#d4c5a9; margin-bottom:8px;"><b>Bonus chance = floor(Ability ÷ 2) + today's clients at this stage.</b></div>
+<div style="color:#d4c5a9; margin-bottom:8px;">A 1–100 roll at or below that value doubles the daily roll. A threshold of 100 or more guarantees the double-pay result. Ability 50 and 5 clients gives a <b>30%</b> chance.</div>
+<div style="color:#d4c5a9; margin-bottom:8px;">This is one satisfaction-style pay bonus per worker per day. It is not a separate roll for every client, nor a direct payment of daily pay × client count.</div>
+<div class="mw-heading mw-heading2"><h2 id="Cleanliness,_Clothing,_and_Bedrooms"><span id="Cleanliness.2C_Clothing.2C_and_Bedrooms"></span>Cleanliness, Clothing, and Bedrooms</h2></div>
+<table style="background:#2a0a12; color:#d4c5a9; border:1px solid #6b1a2a; border-collapse:collapse; margin-bottom:16px;">
+<tbody><tr style="background:#1e0a0f;">
+<th style="border:1px solid #6b1a2a; padding:6px 12px;"><span style="color:#c9943a;">Cleanliness</span>
+</th>
+<th style="border:1px solid #6b1a2a; padding:6px 12px;"><span style="color:#c9943a;">Pay minimum multiplier</span>
+</th>
+<th style="border:1px solid #6b1a2a; padding:6px 12px;"><span style="color:#c9943a;">Pay maximum multiplier</span>
+</th>
+<th style="border:1px solid #6b1a2a; padding:6px 12px;"><span style="color:#c9943a;">Later reputation multiplier</span>
+</th></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">0–4
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">×0
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">×1
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">×0
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">5–14
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">×0.25
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">×1
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">×0.25
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">15–29
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">×0.50
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">×1
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">×0.50
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">30–44
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">×0.75
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">×1
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">×0.75
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">45–59
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">×1
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">×1
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">×1
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">60–74
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">×1
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">×1.20
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">×1.20
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">75–89
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">×1
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">×1.40
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">×1.40
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">90–100
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">×1
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">×1.60
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">×1.60
+</td></tr></tbody></table>
+<div style="color:#d4c5a9; margin-bottom:8px;">Use <b>starting cleanliness</b> for the first two columns and <b>post-cleaning cleanliness</b> for the last column. Even at 0 cleanliness, the pay maximum is not forced to zero; reputation can still be zero.</div>
+<table style="background:#2a0a12; color:#d4c5a9; border:1px solid #6b1a2a; border-collapse:collapse; margin-bottom:16px;">
+<tbody><tr style="background:#1e0a0f;">
+<th style="border:1px solid #6b1a2a; padding:6px 12px;"><span style="color:#c9943a;">Clothing level</span>
+</th>
+<th style="border:1px solid #6b1a2a; padding:6px 12px;"><span style="color:#c9943a;">Pay minimum</span>
+</th>
+<th style="border:1px solid #6b1a2a; padding:6px 12px;"><span style="color:#c9943a;">Pay maximum</span>
+</th>
+<th style="border:1px solid #6b1a2a; padding:6px 12px;"><span style="color:#c9943a;">Flat daily reputation</span>
+</th></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">1
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">×1
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">×1
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">+0
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">2
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">×1
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">×1.20
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">+1
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">3
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">×1.10
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">×1.30
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">+2
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">4
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">×1.20
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">×1.40
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">+3
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">5
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">×1.30
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">×1.50
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">+4
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">6
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">×1.40
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">×1.60
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">+5
+</td></tr></tbody></table>
+<table style="background:#2a0a12; color:#d4c5a9; border:1px solid #6b1a2a; border-collapse:collapse; margin-bottom:16px;">
+<tbody><tr style="background:#1e0a0f;">
+<th style="border:1px solid #6b1a2a; padding:6px 12px;"><span style="color:#c9943a;">Worker bedroom level</span>
+</th>
+<th style="border:1px solid #6b1a2a; padding:6px 12px;"><span style="color:#c9943a;">Added clients</span>
+</th>
+<th style="border:1px solid #6b1a2a; padding:6px 12px;"><span style="color:#c9943a;">Pay maximum</span>
+</th>
+<th style="border:1px solid #6b1a2a; padding:6px 12px;"><span style="color:#c9943a;">Flat daily reputation</span>
+</th></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">1
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">+0
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">×1
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">+0
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">2
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">+0
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">×1.10
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">+1
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">3
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">+1
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">×1.25
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">+3
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">4
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">+2
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">×1.40
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">+5
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">5
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">+3
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">×1.60
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">+7
+</td></tr></tbody></table>
+<div style="color:#d4c5a9; margin-bottom:8px;">Clothing and room reputation bonuses add to <b>today's reputation pool</b>. They do not permanently increase stored Fame.</div>
+<div class="mw-heading mw-heading3"><h3 id="Pay-Range_Example">Pay-Range Example</h3></div>
+<div style="color:#d4c5a9; margin-bottom:8px;">Appearance 40, Charisma 30 gives <b>$15–$80</b>. Starting cleanliness 90 raises the maximum to $128. Clothing Level 6 changes the bounds to <b>$21–$204</b>; Bedroom Level 5 changes the maximum to <b>$326</b>. The daily roll is therefore <b>$21–$326</b>, before the double-pay check and later bonuses.</div>
+<div style="color:#d4c5a9; margin-bottom:8px;">That worker's clothing and bedroom also add <b>5 + 7 = 12</b> flat points to today's reputation pool, plus current Fame and any applicable item/loyalty points.</div>
+<div class="mw-heading mw-heading2"><h2 id="Worker_Pay_Bonus_Order">Worker Pay Bonus Order</h2></div>
+<div style="color:#d4c5a9; margin-bottom:8px;">After the daily roll:</div>
+<ol><li><span style="color:#d4c5a9;">Apply the double-pay result if successful.</span></li>
+<li><span style="color:#d4c5a9;">Apply summed worker equipment income percentage, then flat income.</span></li>
+<li><span style="color:#d4c5a9;">Apply a multiplicative item effect such as <b>Pearl Necklace ×2</b>.</span></li>
+<li><span style="color:#d4c5a9;">Apply a successful high-Loyalty bonus: extra-client payments, ×1.25 pay, or +2 daily reputation.</span></li>
+<li><span style="color:#d4c5a9;">Multiply by <b>1 + 0.5 × completed training upgrades</b> for this worker.</span></li>
+<li><span style="color:#d4c5a9;">Double pay for a VIP beneficiary.</span></li>
+<li><span style="color:#d4c5a9;">Apply that worker's targeted daily-event gold multiplier <b>last</b>.</span></li></ol>
+<div style="color:#d4c5a9; margin-bottom:8px;">Completed gift training upgrades stack <b>additively</b> for income: one gives ×1.5, two ×2, three ×2.5, and so on for the upgrades available to that worker. They do not compound as ×1.5 ×1.5. An upgrade also doubles EXP from its <b>matching player training action</b>, separately from daily work EXP.</div>
+<div style="color:#d4c5a9; margin-bottom:8px;">An event that sets targeted pay to ×0 keeps it at zero even with training upgrades, items, and VIP doubling. Global building-event income is handled later, before tax.</div>
+<div class="mw-heading mw-heading2"><h2 id="Stress_and_Work_EXP">Stress and Work EXP</h2></div>
+<div class="mw-heading mw-heading3"><h3 id="Work_Stress">Work Stress</h3></div>
+<div style="color:#d4c5a9; margin-bottom:8px;">For each worker, begin with <b>10</b>, or <b>7 if Willow is active</b>:</div>
+<ol><li><span style="color:#d4c5a9;">Successful Stamina roll: −2.</span></li>
+<li><span style="color:#d4c5a9;">Add <b>max(0, clients − 2)</b>.</span></li>
+<li><span style="color:#d4c5a9;">Subtract worker equipment's stress reduction, then floor at zero.</span></li>
+<li><span style="color:#d4c5a9;">Apply Master Bedroom / Brothel Dungeon protection or Infirmary prevention.</span></li>
+<li><span style="color:#d4c5a9;">Add the remaining work stress to existing Stress, clamped to 0–100.</span></li></ol>
+<div style="color:#d4c5a9; margin-bottom:8px;">Master Bedroom apprentices gain <b>zero work and positive event stress</b> in the daily system. Brothel Dungeon apprentices cannot gain Stress through the worker updater and cannot lose Loyalty; they retain existing stress and may still benefit from stress relief. Neither assignment simply resets old Stress to zero.</div>
+<div class="mw-heading mw-heading3"><h3 id="Infirmary_and_Medicine">Infirmary and Medicine</h3></div>
+<div style="color:#d4c5a9; margin-bottom:8px;">Let <b>a</b> be the number of Infirmary apprentices and <b>m</b> the building's Medicine level:</div>
+<div style="color:#d4c5a9; margin-bottom:8px;"><b>Chance per incoming work-stress point = min(100, m × a)%.</b></div>
+<div style="color:#d4c5a9; margin-bottom:8px;">At Medicine 0, apprentices prevent <b>min(incoming stress, a)</b> points without random rolls. Above zero, roll that chance once per incoming work-stress point, then prevent the <b>greater of</b> the success count and the apprentice guarantee. The guarantee is a floor, not extra prevention added on top of every successful roll.</div>
+<div style="color:#d4c5a9; margin-bottom:8px;">For 10 incoming work stress, 3 apprentices, and Medicine 20: roll a <b>60%</b> chance for each point; prevent at least 3 and at most 10. This prevents <b>new work stress</b>; it does not erase old Stress or automatically cancel event stress.</div>
+<div class="mw-heading mw-heading3"><h3 id="Work_Experience">Work Experience</h3></div>
+<ol><li><span style="color:#d4c5a9;">Base work EXP equals the client's count before high-Loyalty extra clients.</span></li>
+<li><span style="color:#d4c5a9;">Successful raw Intelligence roll doubles that base.</span></li>
+<li><span style="color:#d4c5a9;">Add <b>+1 EXP per Secret Room apprentice</b>, then worker equipment flat EXP.</span></li>
+<li><span style="color:#d4c5a9;">Apply worker equipment EXP percentage, truncating.</span></li>
+<li><span style="color:#d4c5a9;">Master Bedroom apprentices receive ×1.5, truncating.</span></li>
+<li><span style="color:#d4c5a9;">If the worker has an apprentice assignment, add the maid <b>Mentorship</b> percentage of that result, truncating the bonus.</span></li></ol>
+<div style="color:#d4c5a9; margin-bottom:8px;">Event EXP is awarded separately during event processing and appears in the report total. It is not run through the work-EXP multipliers a second time. High-Loyalty extra clients are added later, so they produce extra pay and mess but do not add work stress or work EXP in this calculation.</div>
+<div style="color:#d4c5a9; margin-bottom:8px;">Ballroom training instead rolls <b>60–100 + 1–max(1, raw Intelligence)</b> EXP, then adds applicable Mentorship. It does not use the ordinary Intelligence double-work-EXP roll.</div>
+<div class="mw-heading mw-heading2"><h2 id="Loyalty,_Visits,_and_Training"><span id="Loyalty.2C_Visits.2C_and_Training"></span>Loyalty, Visits, and Training</h2></div>
+<div style="color:#d4c5a9; margin-bottom:8px;">All 30 workers participate in the current loyalty calculation, with worker-specific rates. Raven is excluded from the ordinary visit selector, but her Loyalty can still matter to daily work.</div>
+<ul><li><span style="color:#d4c5a9;">For each elapsed day, roll that worker's decay chance. A success loses 1 Loyalty; a successful cascade roll loses one additional point.</span></li>
+<li><span style="color:#d4c5a9;"><b>Below 30</b>, the worker's refusal chance may make them refuse that day's work. Exactly 30 does not trigger this condition.</span></li>
+<li><span style="color:#d4c5a9;"><b>Above 80</b>, the worker's bonus chance may produce one of three equally selected bonuses: <b>1–2 extra clients and an extra pay-range roll for each</b>, <b>×1.25 daily pay</b>, or <b>+2 flat daily reputation</b>. Exactly 80 does not qualify.</span></li>
+<li><span style="color:#d4c5a9;">The extra-client payments do not independently repeat the earlier double-pay or equipment bonus stages; the later training, VIP, and targeted-event multipliers apply to the combined worker pay.</span></li>
+<li><span style="color:#d4c5a9;">Resort vacations, Brothel Dungeon apprentices, and loyalty-lock equipment pause decay without accumulating a backlog for later.</span></li>
+<li><span style="color:#d4c5a9;">Ordinary Loyalty updates use a 0–100 range; resort vacations and specific equipment can raise it above 100, up to their own caps. Returning from vacation does not instantly discard the higher value.</span></li></ul>
+<div style="color:#d4c5a9; margin-bottom:8px;">For completed player training, the focused gains are <b>Kissing → Charisma</b>, <b>Oral → Intelligence</b>, <b>Missionary → Appearance</b>, <b>Cowgirl → Stamina</b>, <b>Doggie → Ability</b>, <b>Special 1 → Dexterity</b>. Special 2/3 each raise two random primary stats by 1. <b>Pleasure Arts</b> adds one random primary-stat point.</div>
+<div style="color:#d4c5a9; margin-bottom:8px;">Training normally adds <b>20 Stress</b>, or <b>10 with Tantric Arts</b>. Stress beyond 100 causes <b>2 Health damage per overflow point</b>. Brothel Dungeon apprentices incur no training stress, so that protected training cost cannot create overflow damage.</div>
+<div style="color:#d4c5a9; margin-bottom:8px;">Training's worker EXP base by player Erotic Experience level 1–10 is <b>2, 13, 24, 35, 46, 57, 68, 79, 90, 100</b>. Add 10 for Tantric Arts, multiply by 1.5 with Sensual Mastery and truncate, keep 80% and truncate, then double for a completed matching training upgrade. This is a different formula from ordinary daily work EXP.</div>
+<div class="mw-heading mw-heading2"><h2 id="Fame_and_Reputation">Fame and Reputation</h2></div>
+<div style="color:#d4c5a9; margin-bottom:8px;">Each working day, average <b>Ability, Appearance, Charisma, Stamina, Intelligence, and Dexterity</b>. Appearance/Charisma include the item bonuses used by the daily pay calculation. A 1–100 roll at or below the average adds <b>1 permanent Fame</b>. Events can separately change Fame.</div>
+<div style="color:#d4c5a9; margin-bottom:8px;">The initial daily reputation pool is the sum, over working workers, of:</div>
+<div style="color:#d4c5a9; margin-bottom:8px;"><b>current Fame + clothing flat bonus + bedroom flat bonus + worker item flat reputation + successful Loyalty reputation bonus.</b></div>
+<div style="color:#d4c5a9; margin-bottom:8px;">Apply these stages in order:</div>
+<ol><li><span style="color:#d4c5a9;">Multiply by <b>post-cleaning cleanliness</b> and the global event reputation multiplier; truncate. A reputation-blocking event sets this base to zero.</span></li>
+<li><span style="color:#d4c5a9;">With effective Promotion above 1, roll an integer percentage from <b>0 through 10 × the level</b> and add that percentage.</span></li>
+<li><span style="color:#d4c5a9;">With effective Decor above 0, roll an integer percentage from <b>0 through 5 × the level</b> and add that percentage.</span></li>
+<li><span style="color:#d4c5a9;">Owned Christmas Wreath: +5%.</span></li>
+<li><span style="color:#d4c5a9;">Verified Master Tier: +5%.</span></li>
+<li><span style="color:#d4c5a9;">Office: +5% per apprentice.</span></li>
+<li><span style="color:#d4c5a9;">Owned Bar: +5%, plus +1% per Bar apprentice.</span></li>
+<li><span style="color:#d4c5a9;">Apply summed maid equipment reputation percentage.</span></li>
+<li><span style="color:#d4c5a9;">An assigned Ballroom trainee adds +10%.</span></li></ol>
+<div style="color:#d4c5a9; margin-bottom:8px;">Each percentage bonus uses the <b>current running value</b> and truncates its added amount. These stages compound. The result adds to accumulated reputation points and updates the rank.</div>
+<div class="mw-heading mw-heading3"><h3 id="Reputation_Ranks">Reputation Ranks</h3></div>
+<div style="color:#d4c5a9; margin-bottom:8px;">Every rank adds <b>5%</b> to the worker income subtotal: <b>income bonus = 5 × (starting rank − 1)%</b>. Rank 20 therefore gives +95%; the current system continues past Rank 20.</div>
+<table style="background:#2a0a12; color:#d4c5a9; border:1px solid #6b1a2a; border-collapse:collapse; margin-bottom:16px;">
+<tbody><tr style="background:#1e0a0f;">
+<th style="border:1px solid #6b1a2a; padding:6px 12px;"><span style="color:#c9943a;">Rank</span>
+</th>
+<th style="border:1px solid #6b1a2a; padding:6px 12px;"><span style="color:#c9943a;">Name</span>
+</th>
+<th style="border:1px solid #6b1a2a; padding:6px 12px;"><span style="color:#c9943a;">Points to reach</span>
+</th>
+<th style="border:1px solid #6b1a2a; padding:6px 12px;"><span style="color:#c9943a;">Income bonus</span>
+</th></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">1
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Disgusting
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">0
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">+0%
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">2
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Revolting
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">500
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">+5%
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">3
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Filthy
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">1,500
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">+10%
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">4
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Dirty
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">4,000
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">+15%
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">5
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Shabby
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">7,500
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">+20%
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">6
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Poor
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">12,000
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">+25%
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">7
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Mediocre
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">18,000
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">+30%
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">8
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Acceptable
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">26,000
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">+35%
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">9
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Decent
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">36,000
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">+40%
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">10
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Good
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">50,000
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">+45%
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">11
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Fine
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">70,000
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">+50%
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">12
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Quality
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">95,000
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">+55%
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">13
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Excellent
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">125,000
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">+60%
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">14
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Superior
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">160,000
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">+65%
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">15
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Premium
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">200,000
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">+70%
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">16
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Luxurious
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">250,000
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">+75%
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">17
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Exquisite
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">310,000
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">+80%
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">18
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Royal
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">380,000
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">+85%
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">19
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Kingly
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">460,000
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">+90%
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">20
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Godlike
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">550,000
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">+95%
+</td></tr></tbody></table>
+<div style="color:#d4c5a9; margin-bottom:8px;">After Rank 20, <b>Godlike (1)</b> is Rank 21 at <b>685,000 points</b>. The next step costs 202,500 points; each subsequent step costs the previous step ×1.5, rounded up. There is no Rank 20 cap on reputation growth or the rank income bonus.</div>
+<div class="mw-heading mw-heading2"><h2 id="Building_Income,_Tax,_and_Upkeep"><span id="Building_Income.2C_Tax.2C_and_Upkeep"></span>Building Income, Tax, and Upkeep</h2></div>
+<div style="color:#d4c5a9; margin-bottom:8px;">Start with the sum of all working workers' final daily pay. Apply, in this order:</div>
+<ol><li><span style="color:#d4c5a9;">Starting reputation rank: <b>+5% × (rank − 1)</b>.</span></li>
+<li><span style="color:#d4c5a9;">Owned <b>Christmas Wreath</b>: +5%.</span></li>
+<li><span style="color:#d4c5a9;">Verified <b>Master Tier</b>: +5%.</span></li>
+<li><span style="color:#d4c5a9;">Office: +5% per apprentice.</span></li>
+<li><span style="color:#d4c5a9;">Owned Bar: +5%, plus +1% per Bar apprentice.</span></li>
+<li><span style="color:#d4c5a9;">Effective Decor: a random integer percentage from <b>0 through 5 × the level</b>.</span></li>
+<li><span style="color:#d4c5a9;">Summed maid equipment wealth percentage.</span></li>
+<li><span style="color:#d4c5a9;">Global daily-event income multiplier; truncate to obtain <b>gross income</b>.</span></li></ol>
+<div style="color:#d4c5a9; margin-bottom:8px;">The current Christmas Wreath check is <b>ownership</b>; it does not require the Christmas event to be active. Maid wealth bonuses affect the actual earnings, rather than being display-only.</div>
+<div style="color:#d4c5a9; margin-bottom:8px;"><b>Tax = floor(gross income × 15%).</b></div>
+<div style="color:#d4c5a9; margin-bottom:8px;"><b>Normal net = max(0, gross − tax − daily upkeep).</b></div>
+<div style="color:#d4c5a9; margin-bottom:8px;">If there is a Ballroom trainee, Esperanza's fee is <b>floor(normal net × 15%)</b>, deducted from that positive normal net. Monster income is then added separately. The normal negative result is covered by the business rather than deducted from your Wealth in this daily-profit calculation.</div>
+<div class="mw-heading mw-heading3"><h3 id="Daily_Upkeep">Daily Upkeep</h3></div>
+<div style="color:#d4c5a9; margin-bottom:8px;"><b>$60 + $20 × (effective Master Bedroom level + sum of all defined worker-bedroom levels + effective levels of Bar, Maids' Quarters, Infirmary, Security, Exterior, and Brothel Dungeon).</b></div>
+<div style="color:#d4c5a9; margin-bottom:8px;">The calculation includes bedrooms even when their workers are resting or not earning that day. Special-room effective levels are derived from the room's base and apprentice count; Maids' Quarters uses acquired maid count plus apprentices. Assigning staff can therefore increase upkeep. This function does not add an independent maid-wage charge or a $20 charge for every other specialty room.</div>
+<div class="mw-heading mw-heading3"><h3 id="Building-Income_Example">Building-Income Example</h3></div>
+<div style="color:#d4c5a9; margin-bottom:8px;">Suppose worker pay totals <b>$1,000</b>, starting rank is 10, the Wreath is owned, there is one Office apprentice, the Bar has two apprentices, Decor's roll gives +10%, and maid equipment gives +5%. With no Master Tier or event change:</div>
+<div style="color:#d4c5a9; margin-bottom:8px;"><b>1,000 → 1,450 → 1,522 → 1,598 → 1,709 → 1,879 → 1,972 gross.</b></div>
+<div style="color:#d4c5a9; margin-bottom:8px;">Tax is <b>$295</b>. With upkeep $200, normal net is <b>$1,477</b>. A Ballroom trainee would cost <b>$221</b>, leaving <b>$1,256</b> before separate monster income. This example follows integer truncation at every bonus stage; a single summed percentage gives a different answer.</div>
+<div class="mw-heading mw-heading2"><h2 id="Monster_Work_and_Statistics">Monster Work and Statistics</h2></div>
+<div style="color:#d4c5a9; margin-bottom:8px;">Active monsters have their own daily report, separate from the worker pay formula. They must have arrived by the report day, not be resting, and have <b>Tamed at least 30 on that day</b>. Tamed decay is processed for the report day before this eligibility check.</div>
+<table style="background:#2a0a12; color:#d4c5a9; border:1px solid #6b1a2a; border-collapse:collapse; margin-bottom:16px;">
+<tbody><tr style="background:#1e0a0f;">
+<th style="border:1px solid #6b1a2a; padding:6px 12px;"><span style="color:#c9943a;">Value</span>
+</th>
+<th style="border:1px solid #6b1a2a; padding:6px 12px;"><span style="color:#c9943a;">Daily calculation</span>
+</th></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Clients
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Random <b>1–max(1, floor(Ability ÷ 10) + 1)</b>
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Pay per client
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Random <b>max(1, floor(Allure ÷ 2))</b> through <b>max(lower bound + 1, Aura × 2)</b>
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Total income
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Sum of those separate client pay rolls
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Work EXP
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Client count
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Stress
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">+10, reduced by 2 on a successful 1–100 Vitality roll; capped at 100
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Ferocity
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">+1 on a 1–100 roll at or below the average of Ability, Allure, Aura, Vitality, Cunning, and Agility
+</td></tr></tbody></table>
+<div style="color:#d4c5a9; margin-bottom:8px;">Monsters really do roll pay <b>per client</b>, unlike ordinary workers' single daily roll. Their income is added <b>after normal worker bonuses, tax, upkeep, and any Ballroom fee</b>; it does not receive those worker income multipliers or deductions. Each monster client adds <b>2 mess</b> before maid cleaning.</div>
+<div style="color:#d4c5a9; margin-bottom:8px;">Example: Ability 30 gives <b>1–4 clients</b>. Allure 20 and Aura 15 give <b>$10–$30 per client</b>. At three clients, three separate rolls total <b>$30–$90</b>, added to normal net income.</div>
+<div style="color:#d4c5a9; margin-bottom:8px;">Stress above 75 starts <b>three rest days</b>. When the last rest day completes, Stress becomes zero; the monster does not work on that completion day. Below Tamed 30, the report marks the monster untamed and gives no work income. Monster stat upgrades cost <b>next stat level EXP</b> and stop at <b>100</b>, unlike the ordinary worker stat-upgrade cap of 999.</div>
+<div class="mw-heading mw-heading2"><h2 id="Mess_and_Maid_Cleaning">Mess and Maid Cleaning</h2></div>
+<div class="mw-heading mw-heading3"><h3 id="Worker_Mess">Worker Mess</h3></div>
+<div style="color:#d4c5a9; margin-bottom:8px;">Base mess is the worker's <b>final</b> client count, including high-Loyalty extra clients. Roll 1–100 once:</div>
+<table style="background:#2a0a12; color:#d4c5a9; border:1px solid #6b1a2a; border-collapse:collapse; margin-bottom:16px;">
+<tbody><tr style="background:#1e0a0f;">
+<th style="border:1px solid #6b1a2a; padding:6px 12px;"><span style="color:#c9943a;">Roll</span>
+</th>
+<th style="border:1px solid #6b1a2a; padding:6px 12px;"><span style="color:#c9943a;">Worker mess</span>
+</th></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">At most 10 + clients
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">floor(clients × 2)
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Otherwise, at most 20 + clients
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">floor(clients × 1.5)
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Otherwise, at most 30 + clients
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">floor(clients × 1.25)
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Otherwise
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">clients
+</td></tr></tbody></table>
+<div style="color:#d4c5a9; margin-bottom:8px;">With <b>8 clients</b>, the probabilities are <b>18%, 10%, 10%, and 62%</b>, giving 16, 12, 10, or 8 mess. The thresholds are cumulative; they are not separate 18%, 28%, and 38% chances. VIP beneficiaries double the final worker mess.</div>
+<div style="color:#d4c5a9; margin-bottom:8px;">An owned Bar adds <b>10 + Bar apprentice count</b> mess. Working monster clients add <b>2 mess each</b>. Apply maid equipment's summed mess reduction percentage and truncate, then subtract its flat reduction, with a minimum of zero.</div>
+<div class="mw-heading mw-heading3"><h3 id="Maid_Levels_and_Cleaning">Maid Levels and Cleaning</h3></div>
+<div style="color:#d4c5a9; margin-bottom:8px;">The current maid roster is <b>Violet, Mandarin, Lychee, Lime, Rain, and Onyx</b>. Only acquired maids contribute.</div>
+<table style="background:#2a0a12; color:#d4c5a9; border:1px solid #6b1a2a; border-collapse:collapse; margin-bottom:16px;">
+<tbody><tr style="background:#1e0a0f;">
+<th style="border:1px solid #6b1a2a; padding:6px 12px;"><span style="color:#c9943a;">Maid level</span>
+</th>
+<th style="border:1px solid #6b1a2a; padding:6px 12px;"><span style="color:#c9943a;">Cumulative EXP</span>
+</th>
+<th style="border:1px solid #6b1a2a; padding:6px 12px;"><span style="color:#c9943a;">Base cleaning</span>
+</th>
+<th style="border:1px solid #6b1a2a; padding:6px 12px;"><span style="color:#c9943a;">Equipment slots</span>
+</th></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">1
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">0
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">10
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">1
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">2
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">200
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">15
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">1
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">3
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">600
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">20
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">1
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">4
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">1,200
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">25
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">2
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">5
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">3,500
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">30
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">2
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">6
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">7,000
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">40
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">2
+</td></tr></tbody></table>
+<div style="color:#d4c5a9; margin-bottom:8px;">For each maid:</div>
+<div style="color:#d4c5a9; margin-bottom:8px;"><b>Personal cleaning = floor(base cleaning × (1 + personal percentage ÷ 100)) + personal flat bonus.</b></div>
+<div style="color:#d4c5a9; margin-bottom:8px;">For the team:</div>
+<div style="color:#d4c5a9; margin-bottom:8px;"><b>Team cleaning = floor(sum of personal cleaning × (1 + team percentage ÷ 100)) + team flat bonus.</b></div>
+<div style="color:#d4c5a9; margin-bottom:8px;">Then add <b>10 cleaning per Maids' Quarters apprentice</b>. Roll an integer percentage from <b>50 + variance item bonus</b> through <b>150 + variance item bonus</b> and apply it to that total, truncating.</div>
+<div style="color:#d4c5a9; margin-bottom:8px;"><b>New cleanliness = clamp(old cleanliness + rolled cleaning − reduced mess, 0, 100).</b></div>
+<div style="color:#d4c5a9; margin-bottom:8px;">Personal flat bonuses are added <b>after</b> the maid's percentage bonus, rather than multiplied by it. For example, base 20, +25%, and +5 flat gives <b>30</b>, not 31.</div>
+<div style="color:#d4c5a9; margin-bottom:8px;">Each acquired maid receives at least 1 base EXP from the rolled cleaning: <b>max(1, floor(rolled cleaning ÷ acquired maid count))</b>, then applicable personal/team maid EXP bonuses. This uses rolled cleaning even when the final cleanliness clamp prevents the building from exceeding 100.</div>
+<div class="mw-heading mw-heading2"><h2 id="Apprentices,_Decor,_and_Promotion"><span id="Apprentices.2C_Decor.2C_and_Promotion"></span>Apprentices, Decor, and Promotion</h2></div>
+<div style="color:#d4c5a9; margin-bottom:8px;">Room staffing uses derived effective levels. Worker bedrooms keep their paid levels; most apprentice service rooms have a base unlock level plus the number assigned. Available slots and room access depend on the relevant master and story progress.</div>
+<table style="background:#2a0a12; color:#d4c5a9; border:1px solid #6b1a2a; border-collapse:collapse; margin-bottom:16px;">
+<tbody><tr style="background:#1e0a0f;">
+<th style="border:1px solid #6b1a2a; padding:6px 12px;"><span style="color:#c9943a;">Room</span>
+</th>
+<th style="border:1px solid #6b1a2a; padding:6px 12px;"><span style="color:#c9943a;">Current numerical effect</span>
+</th></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Master Bedroom
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Assigned workers: +50% work EXP and no positive daily work/event stress
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Brothel Dungeon
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Apprentices protected against Stress increases and Loyalty loss; training stress also zero
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Bar
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Ownership: +5% income/reputation and +10 mess; each apprentice: +1% income/reputation, +1 mess, and +2 clients to themselves
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">VIP Lounge
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">When owned, Vixen and assigned apprentices get +1 client, ×2 pay, and ×2 mess
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Infirmary
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Apprentice guaranteed stress prevention plus Medicine rolls, as detailed above
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Maids' Quarters
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">+10 team cleaning per apprentice; effective level includes acquired maids
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Office
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">+5% building income and reputation per apprentice
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Kitchen
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">One randomly allocated extra building client per apprentice
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Secret Room
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">+1 work EXP per apprentice for every working worker, after Intelligence doubling
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Arcane Room
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">+1 effective Decor per apprentice
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Menagerie
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">+1 effective Promotion per apprentice
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Security
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Helps event checks and Customer Appreciation success; does not add a universal worker-pay multiplier
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Ballroom
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">One trainee; no normal worker income; training EXP, +10% reputation, and 15% normal-net fee
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Training Room
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Staffing changes its player training actions; no separate universal daily-pay bonus
+</td></tr></tbody></table>
+<div style="color:#d4c5a9; margin-bottom:8px;"><b>Effective Decor = stored Decor + Cthulhu's Head bonus (+1 if owned) + maid equipment Decor + Arcane apprentice count.</b> It rolls separately for income and reputation, so both report bonuses need not match.</div>
+<div style="color:#d4c5a9; margin-bottom:8px;"><b>Effective Promotion = stored Promotion + Cthulhu's Head bonus (+1 if owned) + maid equipment Promotion + 1 if Vespa is active + Menagerie apprentice count.</b> It grants its extra-client pool and reputation roll <b>only above Level 1</b>. The room art tier can be capped even when a staffing-derived effective level is higher.</div>
+<div class="mw-heading mw-heading2"><h2 id="Daily_Events_and_Customer_Appreciation">Daily Events and Customer Appreciation</h2></div>
+<div style="color:#d4c5a9; margin-bottom:8px;">Daily events are selected before the main worker calculations from workers who are present, not resting, and not Ballroom trainees. Their stat, Health, Loyalty, Fame, and EXP changes are applied then. Report columns describe those changes; they do not apply them again afterward.</div>
+<div style="color:#d4c5a9; margin-bottom:8px;">Events can target a single worker's pay, modify the whole building's income, multiply reputation, or block reputation gain. <b>Worker-targeted pay multipliers apply after VIP and training bonuses. Building-wide income events apply before tax and collection.</b> The report's displayed global event bonus is descriptive and is not a second payment.</div>
+<div style="color:#d4c5a9; margin-bottom:8px;">Different events test different stats and can use their own minimum/maximum chance, skill adjustment, Security effect, or failure consequences. Dexterity is valuable to many events even though it is absent from the direct client and pay formulas. A skill's descriptive text alone is not evidence that it modifies every daily roll.</div>
+<div style="color:#d4c5a9; margin-bottom:8px;"><b>Customer Appreciation</b> is a separate <b>once-per-business-day opportunity</b>, with a <b>1 in 19</b> opportunity roll when there is no pending reward. Eligible workers must actually have worked with clients and have Clothing Level 1–4. The system also needs an eligible customer at the current reputation rank.</div>
+<div style="color:#d4c5a9; margin-bottom:8px;">Its quality chance is <b>20 + average(Charisma, Appearance)</b> for Brothel mode, or <b>20 + average(Charisma, Intelligence)</b> for Hotel mode. Add <b>8 + 5 per Security apprentice</b> if Security is built, then the worker item event-success bonus; clamp to <b>5–95%</b>. A successful opportunity creates the follow-up clothing reward. It is not one independent chance per client or per worker, and clothing Level 5 ends that worker's eligibility for this particular reward path. Level 6 clothing uses its separate upgrade path.</div>
+<div class="mw-heading mw-heading2"><h2 id="Practical_Checks">Practical Checks</h2></div>
+<ul><li><span style="color:#d4c5a9;">Balance Appearance and Charisma for a stronger pay floor, then improve Ability for clients and the double-pay threshold. More clients also mean more mess and work stress.</span></li>
+<li><span style="color:#d4c5a9;">Raise Intelligence for worker EXP and use that EXP to improve the stats you need. Fame grows from the average of the six primaries, rather than Ability alone.</span></li>
+<li><span style="color:#d4c5a9;">Keep cleaning capacity ahead of the roster. Cleanliness helps today's reputation after cleaning and later days' pay range.</span></li>
+<li><span style="color:#d4c5a9;">Check Loyalty and existing Stress before blaming room upgrades for a missing worker income row.</span></li>
+<li><span style="color:#d4c5a9;">Use apprentices deliberately: VIP increases mess, Ballroom removes one earner and charges a fee, while staffing can raise upkeep.</span></li></ul>
+<table style="background:#2a0a12; color:#d4c5a9; border:1px solid #6b1a2a; border-collapse:collapse; margin-bottom:16px;">
+<tbody><tr style="background:#1e0a0f;">
+<th style="border:1px solid #6b1a2a; padding:6px 12px;"><span style="color:#c9943a;">Unexpected result</span>
+</th>
+<th style="border:1px solid #6b1a2a; padding:6px 12px;"><span style="color:#c9943a;">Explanation to check</span>
+</th></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Pay does not equal clients × listed roll
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">The roll is daily worker pay
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Bonus percentages do not add to the report total
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Bonuses compound in order with integer truncation
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Reputation improved but that report's rank pay did not
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Starting rank prices the day; the new rank applies later
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Income and reputation show different cleanliness effects
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Income uses starting cleanliness; reputation uses post-cleaning cleanliness
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Clothing raised reputation without raising Fame
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Clothing gives flat daily reputation, not permanent Fame
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Extra Loyalty clients did not raise work EXP
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">They arrive after the work-EXP/stress calculation
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Infirmary did not reduce old Stress
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Medicine prevents incoming work stress only
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Dungeon apprentice still has Stress
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Protection blocks increases; it does not erase the old value
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Rest completed but income is zero
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Work resumes on a later report day
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">A trainee's EXP is high while pay is zero
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">Ballroom training replaces ordinary client work
+</td></tr>
+<tr>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">A displayed event bonus seemed uncollected
+</td>
+<td style="border:1px solid #6b1a2a; padding:6px 12px;">It is already part of taxable gross or final targeted pay, not an extra payment
+</td></tr></tbody></table>
+<div class="mw-heading mw-heading2"><h2 id="Accuracy_Notes">Accuracy Notes</h2></div>
+<div style="color:#d4c5a9; margin-bottom:8px;">Checked on <b>4 October 2026</b> against the current daily calculation, report storage/collection, stat updater, room levels, training upgrades, worker equipment, maid equipment, Medicine prevention, Customer Appreciation, and reputation thresholds. Formula examples include the current integer truncation rules. This page describes mechanics without revealing character identities or major story outcomes.</div>
+<div class="mw-heading mw-heading2"><h2 id="Related_Pages">Related Pages</h2></div>
+<ul><li><span style="color:#d4c5a9;"><a href="game-systems.html" title="Game Systems">Game Systems Hub</a></span></li>
+<li><span style="color:#d4c5a9;"><a href="game-systems-brothel.html" title="Game Systems:Brothel">Brothel guide</a></span></li>
+<li><span style="color:#d4c5a9;"><a href="game-systems-investment-system.html" title="Game Systems:Investment System">Investment System</a></span></li>
+<li><span style="color:#d4c5a9;"><a href="game-systems-pregnancy.html" title="Game Systems:Pregnancy">Pregnancy System</a></span></li>
+<li><span style="color:#d4c5a9;"><a href="character-willow.html" title="Character:Willow">Willow</a></span></li>
+<li><span style="color:#d4c5a9;"><a href="character-vixen.html" title="Character:Vixen">Vixen</a></span></li>
+<li><span style="color:#d4c5a9;"><a href="character-esperanza.html" title="Character:Esperanza">Esperanza</a></span></li></ul>
+<p><br/>
+<a href="game-systems.html" title="Game Systems">← Back to Game Systems</a>
+</p>
+
+
+
+
+</div></div>
+<div class="wiki-license-note"><span data-copy-en="Text adapted from the community-maintained Chronoromancer Wiki under CC BY-SA 4.0." data-copy-zh="文字内容改编自社区维护的 Chronoromancer Wiki，并依照 CC BY-SA 4.0 使用。">Text adapted from the community-maintained Chronoromancer Wiki under CC BY-SA 4.0.</span></div></article>
+</div></section>
+</main>
+<footer class="site-footer"><div class="container"><div class="footer-grid">
+<div class="footer-brand"><img alt="Chronoromancer" src="../assets/images/v2/logo.png"/><p data-i18n="footerDescription">An adults-only time-travel sandbox RPG. Public website artwork is SFW.</p></div>
+<div class="footer-column"><h2 data-i18n="footerExplore">Explore</h2><a data-i18n="navStory" href="../story.html">Story</a><a data-i18n="navCharacters" href="../characters.html">Characters</a><a data-i18n="navGuides" href="../walkthroughs.html">Guides</a><a data-i18n="navWiki" href="../wiki.html">Player Wiki</a></div>
+<div class="footer-column"><h2 data-i18n="footerCommunity">Community</h2><a data-config-link="community.discord" rel="noopener noreferrer" target="_blank">Discord</a><a data-config-link="community.telegram" rel="noopener noreferrer" target="_blank">Telegram</a><a data-config-link="community.patreon" rel="noopener noreferrer" target="_blank">Patreon</a></div>
+<div class="footer-column"><h2 data-i18n="footerLegal">Legal</h2><a data-i18n="footerPrivacy" href="../privacy.html">Privacy</a><a data-i18n="footerTerms" href="../terms.html">Terms</a></div>
+</div><div class="footer-bottom"><span>© <span data-current-year=""></span> <span data-i18n="copyright">Chronoromancer Studio. All rights reserved.</span></span><span data-copy-en="Player knowledge · English / Simplified Chinese" data-copy-zh="玩家资料 · English / 简体中文">Player knowledge · English / Simplified Chinese</span></div></div></footer><script src="../assets/js/site-config.js"></script><script src="../assets/js/site.js"></script><script src="../assets/js/wiki.js"></script>
+</body></html>
