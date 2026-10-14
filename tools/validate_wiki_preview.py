@@ -23,6 +23,7 @@ def validate(root: Path) -> None:
     manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
     entries = manifest.get("pages", [])
     slugs = [entry.get("slug", "") for entry in entries]
+    entries_by_slug = {entry.get("slug", ""): entry for entry in entries}
     if len(slugs) != len(set(slugs)):
         errors.append("manifest contains duplicate slugs")
 
@@ -44,8 +45,17 @@ def validate(root: Path) -> None:
         if len(ids) != len(set(ids)):
             errors.append(f"{path.name}: duplicate document IDs")
         page_ids[path.name] = set(ids)
-        if not soup.select_one(".wiki-page-hero h1"):
+        page_heading = soup.select_one(".wiki-page-hero h1")
+        if not page_heading:
             errors.append(f"{path.name}: missing page heading")
+        else:
+            english_title = page_heading.get("data-copy-en", "").strip()
+            chinese_title = page_heading.get("data-copy-zh", "").strip()
+            if not english_title or not chinese_title:
+                errors.append(f"{path.name}: page heading is missing bilingual title data")
+            entry = entries_by_slug.get(path.stem, {})
+            if entry.get("title", "").startswith("Character:") and chinese_title != english_title:
+                errors.append(f"{path.name}: NPC name changed in the Chinese page title")
         english = soup.select_one(".wiki-source-content[data-lang-panel='en']")
         chinese = soup.select_one(".wiki-source-content[data-lang-panel='zh']")
         content = english
@@ -115,6 +125,16 @@ def validate(root: Path) -> None:
         expected_cards = len(entries)
         if card_count != expected_cards:
             errors.append(f"wiki index has {card_count} cards; expected {expected_cards}")
+        for card in index.select("[data-wiki-card]"):
+            title = card.select_one("h2")
+            if title is None or not title.get("data-copy-en", "").strip() or not title.get("data-copy-zh", "").strip():
+                errors.append("wiki index card is missing bilingual title data")
+                continue
+            link = card.select_one("a[href]")
+            slug = Path(urlparse(link.get("href", "")).path).stem if link else ""
+            entry = entries_by_slug.get(slug, {})
+            if entry.get("title", "").startswith("Character:") and title.get("data-copy-zh") != title.get("data-copy-en"):
+                errors.append(f"{slug}: NPC name changed in the Chinese index title")
 
     if unresolved_articles:
         warnings.append(f"{len(unresolved_articles)} unresolved or redirecting Miraheze article links remain")

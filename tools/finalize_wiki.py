@@ -46,6 +46,63 @@ ZH_FIXED = {
     "Single-section article": "单节文章",
 }
 
+# Player-facing wiki titles. Locked game terms follow
+# game/artifacts/localization/TRANSLATION_GAME_CANON.md and
+# TRANSLATION_GLOSSARY.md; the remaining wiki-only labels are concise
+# Simplified Chinese navigation titles. Character/NPC titles are deliberately
+# absent because names remain unchanged in every language.
+ZH_WIKI_TITLES = {
+    "Characters": "角色",
+    "FAQ": "常见问题",
+    "Game Systems": "游戏系统",
+    "Alignment System": "善恶倾向系统",
+    "Bar Games": "酒吧游戏",
+    "Bards Guild": "吟游诗人公会",
+    "Blacksmith and Forge": "铁匠铺与锻造",
+    "Body Modifications": "身体改造",
+    "Brothel": "青楼",
+    "Brothel Stats and Calculations": "青楼属性与计算",
+    "Caterpillar Rearing": "毛毛虫饲养",
+    "Chaos Syndicate": "混沌辛迪加",
+    "Christmas Village": "圣诞村",
+    "Combat System": "战斗系统",
+    "Dungeon": "地下城",
+    "Fighters Guild": "战士公会",
+    "Fishing": "钓鱼",
+    "Haunted Mansion": "闹鬼庄园",
+    "Infinity Dungeons": "无限地下城",
+    "Investment System": "投资系统",
+    "Kupie Love Training": "Kupie 恋爱训练",
+    "Maid System": "女仆系统",
+    "Mining System": "采矿系统",
+    "Morrie": "Morrie",
+    "Neural Targeting": "神经瞄准",
+    "Pregnancy": "怀孕",
+    "Reclamation Bay": "再生工坊",
+    "Relationships Dating and Intimacy": "人际关系、约会与亲密关系",
+    "Ruxandra's Alchemy Shop": "Ruxandra 的炼金术商店",
+    "Sirena Isle Resort": "塞壬岛度假村",
+    "Soul Stones": "灵魂石",
+    "Specialist Class": "专精职业",
+    "Story Beats": "主线剧情节点",
+    "Sylwithes Hollow": "Sylwithe的幽谷",
+    "TD Army": "塔防军队",
+    "TD Battle Reference": "塔防战斗参考",
+    "TD Workshops": "塔防工坊",
+    "Thieves Guild": "盗贼公会",
+    "Tower Defense": "塔防",
+    "Wizard Faction": "法师阵营",
+    "Items": "道具",
+    "Locations": "地点",
+    "Main Page": "首页",
+    "Skills": "技能",
+    "Walkthrough": "攻略",
+    "Early Game": "前期攻略",
+    "Quickstart Guide by DanCave": "DanCave 快速入门指南",
+    "Tips and Tricks": "技巧与提示",
+    "Wealth Guide": "财富指南",
+}
+
 # The compact translation model can loop on a small number of symbolic labels,
 # arrow-separated score formulas, and sentence fragments split by inline HTML.
 # Keep these reviewed translations explicit so rebuilds remain deterministic.
@@ -361,6 +418,14 @@ def add_copy(element: Tag, english: str, chinese: str) -> None:
     element["data-copy-zh"] = chinese
 
 
+def wiki_title_zh(full_title: str, translate: ChineseTranslator) -> str:
+    """Return a localized wiki display title without translating NPC names."""
+    display_title = full_title.split(":", 1)[-1].strip()
+    if full_title.startswith("Character:"):
+        return display_title
+    return ZH_WIKI_TITLES.get(display_title, translate(display_title))
+
+
 def repair_local_fragments(wiki_directory: Path) -> int:
     parsed: dict[str, BeautifulSoup] = {
         path.name: BeautifulSoup(path.read_text(encoding="utf-8"), "html.parser")
@@ -431,6 +496,15 @@ def finalize(preview: Path, output: Path, cache_path: Path, *, reset_cache: bool
         slug = source_path.stem
         entry = manifest_by_slug.get(slug, {})
         category = entry.get("category", "Reference")
+        full_title = entry.get("title", "")
+        display_title = full_title.split(":", 1)[-1].strip()
+        chinese_title = wiki_title_zh(full_title, translator)
+        page_heading = soup.select_one(".wiki-page-hero h1")
+        if page_heading and display_title:
+            add_copy(page_heading, display_title, chinese_title)
+        body = soup.body
+        if body and chinese_title:
+            body["data-title-zh"] = f"{chinese_title} | Chronoromancer 玩家 Wiki"
         breadcrumb = soup.select_one(".breadcrumb span:last-child")
         if breadcrumb:
             add_copy(breadcrumb, category, ZH_CATEGORIES.get(category, category))
@@ -478,9 +552,18 @@ def finalize(preview: Path, output: Path, cache_path: Path, *, reset_cache: bool
     index = BeautifulSoup((preview / "wiki.html").read_text(encoding="utf-8"), "html.parser")
     for card in index.select("[data-wiki-card]"):
         category = card.get("data-category", "Reference")
+        link = card.select_one("a[href]")
+        slug = Path(urllib.parse.urlsplit(link.get("href", "")).path).stem if link else ""
+        entry = manifest_by_slug.get(slug, {})
+        full_title = entry.get("title", "")
+        display_title = full_title.split(":", 1)[-1].strip()
+        chinese_title = wiki_title_zh(full_title, translator)
         card["data-search"] = (
-            f"{card.get('data-search', '')} {ZH_CATEGORIES.get(category, category)}"
+            f"{card.get('data-search', '')} {ZH_CATEGORIES.get(category, category)} {chinese_title}"
         ).strip()
+        title = card.select_one("h2")
+        if title and display_title:
+            add_copy(title, display_title, chinese_title)
         category_label = card.select_one(".wiki-card-category")
         if category_label:
             add_copy(category_label, category, ZH_CATEGORIES.get(category, category))
@@ -495,7 +578,6 @@ def finalize(preview: Path, output: Path, cache_path: Path, *, reset_cache: bool
             english = normalize_text(revision.get_text(" ", strip=True))
             chinese = english.replace("Live revision", "实时修订版")
             add_copy(revision, english, chinese)
-        link = card.select_one("a")
         if link:
             add_copy(link, "Read article →", "阅读文章 →")
     for button in index.select("[data-wiki-filter]"):
