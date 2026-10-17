@@ -1,6 +1,6 @@
 window.CHRONO_SITE_CONFIG = Object.freeze({
-  release: "V0.9.9ce",
-  promotionRelease: "V0.9.9ce",
+  release: "V0.9.9.5",
+  promotionRelease: "V0.9.9.5",
   store: {
     earlyAccess: {
       url: "https://store.chronoromancergame.com/products/df3e206f-c149-4557-b335-9bcafeadef18",
@@ -21,38 +21,38 @@ window.CHRONO_SITE_CONFIG = Object.freeze({
       enabled: true
     },
     directWin: {
-      url: "https://downloads.chronoromancergame.com/Chronoromancer-V0.9.9ce_Miki-win.zip",
+      url: "https://downloads.chronoromancergame.com/Chronoromancer-V0.9.9.5_Aziza-win.zip",
       enabled: true
     },
     directPc: {
-      url: "https://downloads.chronoromancergame.com/Chronoromancer-V0.9.9ce_Miki-pc.zip",
+      url: "https://downloads.chronoromancergame.com/Chronoromancer-V0.9.9.5_Aziza-pc.zip",
       enabled: true
     },
     directMac: {
-      url: "https://downloads.chronoromancergame.com/Chronoromancer-V0.9.9ce_Miki-mac.zip",
+      url: "https://downloads.chronoromancergame.com/Chronoromancer-V0.9.9.5_Aziza-mac.zip",
       enabled: true
     },
     directAndroid: {
-      url: "https://downloads.chronoromancergame.com/com.chronoromancer.game-9-1791783726-release.apk",
+      url: "https://downloads.chronoromancergame.com/com.chronoromancer.game-9.9-1792238436-release.apk",
       enabled: true
     },
     torrentPc: {
-      url: "assets/downloads/torrents/chronoromancer-v0.9.9ce-miki-pc-windows-linux.torrent",
-      magnet: "magnet:?xt=urn:btih:6385029562d72fb8dc3a383512232046a3a553ea&dn=Chronoromancer-V0.9.9ce_Miki-pc.zip&ws=https%3A%2F%2Fdownloads.chronoromancergame.com%2FChronoromancer-V0.9.9ce_Miki-pc.zip&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451&tr=udp%3A%2F%2Fopen.tracker.cl%3A1337%2Fannounce",
+      url: "assets/downloads/torrents/chronoromancer-v0.9.9.5-aziza-pc-windows-linux.torrent",
+      magnet: "magnet:?xt=urn:btih:6ff1996d7b76bb9023444698addd67eabba42b01&dn=Chronoromancer-V0.9.9.5_Aziza-pc.zip&ws=https%3A%2F%2Fdownloads.chronoromancergame.com%2FChronoromancer-V0.9.9.5_Aziza-pc.zip&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451&tr=udp%3A%2F%2Fopen.tracker.cl%3A1337%2Fannounce",
       enabled: true
     },
     torrentMac: {
-      url: "assets/downloads/torrents/chronoromancer-v0.9.9ce-miki-macos.torrent",
-      magnet: "magnet:?xt=urn:btih:8726551bd2caecd9be6147e626934df52e0d45e3&dn=Chronoromancer-V0.9.9ce_Miki-mac.zip&ws=https%3A%2F%2Fdownloads.chronoromancergame.com%2FChronoromancer-V0.9.9ce_Miki-mac.zip&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451&tr=udp%3A%2F%2Fopen.tracker.cl%3A1337%2Fannounce",
+      url: "assets/downloads/torrents/chronoromancer-v0.9.9.5-aziza-macos.torrent",
+      magnet: "magnet:?xt=urn:btih:2f9890489fbb84b8b736f0a0e916ef7b41fabd39&dn=Chronoromancer-V0.9.9.5_Aziza-mac.zip&ws=https%3A%2F%2Fdownloads.chronoromancergame.com%2FChronoromancer-V0.9.9.5_Aziza-mac.zip&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451&tr=udp%3A%2F%2Fopen.tracker.cl%3A1337%2Fannounce",
       enabled: true
     },
     torrentAndroid: {
-      url: "assets/downloads/torrents/chronoromancer-v0.9.9ce-miki-android.torrent",
-      magnet: "magnet:?xt=urn:btih:3adb7b5a6ebcdda0f9b66e6d8ac9fbd59e671724&dn=com.chronoromancer.game-9-1791783726-release.apk&ws=https%3A%2F%2Fdownloads.chronoromancergame.com%2Fcom.chronoromancer.game-9-1791783726-release.apk&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451&tr=udp%3A%2F%2Fopen.tracker.cl%3A1337%2Fannounce",
+      url: "assets/downloads/torrents/chronoromancer-v0.9.9.5-aziza-android.torrent",
+      magnet: "magnet:?xt=urn:btih:470f1bd6608216e7daf2cefdd0c600b02ed312dd&dn=com.chronoromancer.game-9.9-1792238436-release.apk&ws=https%3A%2F%2Fdownloads.chronoromancergame.com%2Fcom.chronoromancer.game-9.9-1792238436-release.apk&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451&tr=udp%3A%2F%2Fopen.tracker.cl%3A1337%2Fannounce",
       enabled: true
     },
     torrentChecksums: {
-      url: "assets/downloads/torrents/chronoromancer-v0.9.9ce-miki-sha256sums.txt",
+      url: "assets/downloads/torrents/chronoromancer-v0.9.9.5-aziza-sha256sums.txt",
       enabled: true
     }
   },
