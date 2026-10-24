@@ -1,0 +1,4 @@
+28c31bcc5ea40d9d58b1d608b3c1fae340c9a4ee7f52fccf2662394190e2bdc7  Chronoromancer-V0.9.9.7c_HALLOWEEN-win.zip
+8bf76e6e5e3e3ca4d91e1cda70fa824e36df6c33a41f00e088491fa349f4d9f6  Chronoromancer-V0.9.9.7c_HALLOWEEN-pc.zip
+27f4c99451510ade7d96a67b0f6ca60ef438f25e1c4fdf2baff0a5e6e622ac00  Chronoromancer-V0.9.9.7c_HALLOWEEN-mac.zip
+fc12ca3bccf422359849fc79a5d21fa63ba0d8c75461121ca9d2e8a7151e3134  com.chronoromancer.game-9.9-1792820789-release.apk

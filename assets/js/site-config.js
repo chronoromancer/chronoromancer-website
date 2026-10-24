@@ -1,6 +1,6 @@
 window.CHRONO_SITE_CONFIG = Object.freeze({
-  release: "V0.9.9.5",
-  promotionRelease: "V0.9.9.5",
+  release: "V0.9.9.7c",
+  promotionRelease: "V0.9.9.7c",
   store: {
     earlyAccess: {
       url: "https://store.chronoromancergame.com/products/df3e206f-c149-4557-b335-9bcafeadef18",
@@ -21,38 +21,38 @@ window.CHRONO_SITE_CONFIG = Object.freeze({
       enabled: true
     },
     directWin: {
-      url: "https://downloads.chronoromancergame.com/Chronoromancer-V0.9.9.5_Aziza-win.zip",
+      url: "https://downloads.chronoromancergame.com/Chronoromancer-V0.9.9.7c_HALLOWEEN-win.zip",
       enabled: true
     },
     directPc: {
-      url: "https://downloads.chronoromancergame.com/Chronoromancer-V0.9.9.5_Aziza-pc.zip",
+      url: "https://downloads.chronoromancergame.com/Chronoromancer-V0.9.9.7c_HALLOWEEN-pc.zip",
       enabled: true
     },
     directMac: {
-      url: "https://downloads.chronoromancergame.com/Chronoromancer-V0.9.9.5_Aziza-mac.zip",
+      url: "https://downloads.chronoromancergame.com/Chronoromancer-V0.9.9.7c_HALLOWEEN-mac.zip",
       enabled: true
     },
     directAndroid: {
-      url: "https://downloads.chronoromancergame.com/com.chronoromancer.game-9.9-1792238436-release.apk",
+      url: "https://downloads.chronoromancergame.com/com.chronoromancer.game-9.9-1792820789-release.apk",
       enabled: true
     },
     torrentPc: {
-      url: "assets/downloads/torrents/chronoromancer-v0.9.9.5-aziza-pc-windows-linux.torrent",
-      magnet: "magnet:?xt=urn:btih:6ff1996d7b76bb9023444698addd67eabba42b01&dn=Chronoromancer-V0.9.9.5_Aziza-pc.zip&ws=https%3A%2F%2Fdownloads.chronoromancergame.com%2FChronoromancer-V0.9.9.5_Aziza-pc.zip&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451&tr=udp%3A%2F%2Fopen.tracker.cl%3A1337%2Fannounce",
+      url: "assets/downloads/torrents/chronoromancer-v0.9.9.7c-halloween-pc-windows-linux.torrent",
+      magnet: "magnet:?xt=urn:btih:cd94fa3b19a5a50437c142e69c4841d3e7a25f4d&dn=Chronoromancer-V0.9.9.7c_HALLOWEEN-pc.zip&ws=https%3A%2F%2Fdownloads.chronoromancergame.com%2FChronoromancer-V0.9.9.7c_HALLOWEEN-pc.zip&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451&tr=udp%3A%2F%2Fopen.tracker.cl%3A1337%2Fannounce",
       enabled: true
     },
     torrentMac: {
-      url: "assets/downloads/torrents/chronoromancer-v0.9.9.5-aziza-macos.torrent",
-      magnet: "magnet:?xt=urn:btih:2f9890489fbb84b8b736f0a0e916ef7b41fabd39&dn=Chronoromancer-V0.9.9.5_Aziza-mac.zip&ws=https%3A%2F%2Fdownloads.chronoromancergame.com%2FChronoromancer-V0.9.9.5_Aziza-mac.zip&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451&tr=udp%3A%2F%2Fopen.tracker.cl%3A1337%2Fannounce",
+      url: "assets/downloads/torrents/chronoromancer-v0.9.9.7c-halloween-macos.torrent",
+      magnet: "magnet:?xt=urn:btih:3790648df3721fe7876148508419e1c13e0f514d&dn=Chronoromancer-V0.9.9.7c_HALLOWEEN-mac.zip&ws=https%3A%2F%2Fdownloads.chronoromancergame.com%2FChronoromancer-V0.9.9.7c_HALLOWEEN-mac.zip&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451&tr=udp%3A%2F%2Fopen.tracker.cl%3A1337%2Fannounce",
       enabled: true
     },
     torrentAndroid: {
-      url: "assets/downloads/torrents/chronoromancer-v0.9.9.5-aziza-android.torrent",
-      magnet: "magnet:?xt=urn:btih:470f1bd6608216e7daf2cefdd0c600b02ed312dd&dn=com.chronoromancer.game-9.9-1792238436-release.apk&ws=https%3A%2F%2Fdownloads.chronoromancergame.com%2Fcom.chronoromancer.game-9.9-1792238436-release.apk&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451&tr=udp%3A%2F%2Fopen.tracker.cl%3A1337%2Fannounce",
+      url: "assets/downloads/torrents/chronoromancer-v0.9.9.7c-halloween-android.torrent",
+      magnet: "magnet:?xt=urn:btih:da13ba1bedc9d93d99737bffd0d73fbfbffbf494&dn=com.chronoromancer.game-9.9-1792820789-release.apk&ws=https%3A%2F%2Fdownloads.chronoromancergame.com%2Fcom.chronoromancer.game-9.9-1792820789-release.apk&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451&tr=udp%3A%2F%2Fopen.tracker.cl%3A1337%2Fannounce",
       enabled: true
     },
     torrentChecksums: {
-      url: "assets/downloads/torrents/chronoromancer-v0.9.9.5-aziza-sha256sums.txt",
+      url: "assets/downloads/torrents/chronoromancer-v0.9.9.7c-halloween-sha256sums.txt",
       enabled: true
     }
   },

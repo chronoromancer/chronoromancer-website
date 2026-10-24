@@ -1,4 +1,0 @@
-cca658e86d6a5198c79316a207a9367058ca8916c75555745a33d8330e4d23cd  Chronoromancer-V0.9.9.5_Aziza-win.zip
-829a14f0b36dd526f16944d35a7d569cc2bbd6f1d35f986b4ad90cbdb76c6758  Chronoromancer-V0.9.9.5_Aziza-pc.zip
-fe1691ff755ec6f4a31fe542d30f0bf88bfaf0a8af14a5a8a1e82a7769dd7900  Chronoromancer-V0.9.9.5_Aziza-mac.zip
-1e06ff1218c2db82d2e3c6ad75c0cea6472335d529a41b59a1b79367fa47d628  com.chronoromancer.game-9.9-1792238436-release.apk
