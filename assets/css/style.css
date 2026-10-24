@@ -452,6 +452,109 @@ h3 {
   font-weight: 700;
 }
 
+.halloween-feature {
+  overflow: hidden;
+  padding: clamp(36px, 5vw, 64px) 0;
+  border-top: 1px solid rgba(255, 122, 52, 0.2);
+  border-bottom: 1px solid var(--line);
+  background:
+    radial-gradient(circle at 12% 50%, rgba(177, 24, 39, 0.18), transparent 35%),
+    linear-gradient(110deg, rgba(19, 8, 19, 0.96), rgba(8, 12, 23, 0.98));
+}
+
+.halloween-feature__inner {
+  display: grid;
+  min-width: 0;
+  grid-template-columns: minmax(300px, 0.95fr) minmax(320px, 1.05fr);
+  gap: clamp(28px, 4vw, 52px);
+  align-items: center;
+}
+
+.halloween-feature__poster {
+  display: block;
+  overflow: hidden;
+  border: 1px solid rgba(255, 169, 73, 0.35);
+  border-radius: var(--radius);
+  background: #080812;
+  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.34);
+}
+
+.halloween-feature__poster img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: transform 180ms ease;
+}
+
+.halloween-feature__poster:hover img,
+.halloween-feature__poster:focus-visible img {
+  transform: scale(1.015);
+}
+
+.halloween-feature__copy h2 {
+  margin-bottom: 14px;
+  font-size: clamp(1.8rem, 3.4vw, 3rem);
+}
+
+.halloween-feature__copy {
+  min-width: 0;
+}
+
+.halloween-feature__copy > p:not(.eyebrow) {
+  color: var(--muted);
+}
+
+.halloween-feature__copy .halloween-feature__free {
+  color: #f2d5a8;
+  font-weight: 700;
+}
+
+.halloween-feature__actions {
+  display: flex;
+  margin-top: 22px;
+  gap: 16px;
+  align-items: stretch;
+  flex-wrap: wrap;
+}
+
+.halloween-feature__code {
+  display: flex;
+  min-width: min(100%, 285px);
+  padding: 14px 16px;
+  flex: 1 1 285px;
+  flex-direction: column;
+  justify-content: center;
+  border: 1px solid rgba(255, 169, 73, 0.32);
+  border-radius: 12px;
+  background: rgba(5, 9, 16, 0.68);
+}
+
+.halloween-feature__code span {
+  color: #f6b45b;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.halloween-feature__code strong {
+  margin: 4px 0 2px;
+  color: var(--ink);
+  font-size: 1rem;
+  overflow-wrap: anywhere;
+}
+
+.halloween-feature__code small {
+  color: var(--muted);
+  line-height: 1.45;
+}
+
+.halloween-feature__actions .button {
+  flex: 0 1 auto;
+  align-self: center;
+  text-align: center;
+}
+
 .purchase-band {
   padding: 30px 0;
   border-top: 1px solid rgba(88, 217, 239, 0.18);
@@ -1628,6 +1731,15 @@ a.download-card:hover {
   .purchase-showcase {
     grid-template-columns: 1fr;
     gap: 20px;
+  }
+
+  .halloween-feature__inner {
+    grid-template-columns: 1fr;
+  }
+
+  .halloween-feature__actions .button {
+    width: 100%;
+    justify-content: center;
   }
 
   .feature-grid,
