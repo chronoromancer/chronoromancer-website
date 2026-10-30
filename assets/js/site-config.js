@@ -2,8 +2,16 @@ window.CHRONO_SITE_CONFIG = Object.freeze({
   release: "V0.9.9.7c",
   promotionRelease: "V0.9.9.7c",
   store: {
-    earlyAccess: {
+    purchaseOptions: {
+      url: "purchase.html",
+      enabled: true
+    },
+    directPurchase: {
       url: "https://store.chronoromancergame.com/products/df3e206f-c149-4557-b335-9bcafeadef18",
+      enabled: true
+    },
+    earlyAccess: {
+      url: "purchase.html",
       enabled: true
     }
   },
