@@ -1,0 +1,4 @@
+ef93beb659060ca2b221c4c81051565471b2bb15947ccb71648a9eace622240c  Chronoromancer-V1.0_BETA-win.zip
+fbad5cf7f2c123dcade5bdda6f176a08c03337548aa83ceb61b923b510bc9700  Chronoromancer-V1.0_BETA-pc.zip
+9f437e8ea8f7509ed1705ba85e27ea4ac8e21340dfab18178d06fd0db4bae497  Chronoromancer-V1.0_BETA-mac.zip
+8ec288fdd68e67eadbba18b3c1cc7fa61c4cf272cf0a2812af8ed8aa1de4d4d4  com.chronoromancer.game-1.0-1793465818-release.apk
