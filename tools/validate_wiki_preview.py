@@ -24,16 +24,20 @@ def validate(root: Path) -> None:
     entries = manifest.get("pages", [])
     slugs = [entry.get("slug", "") for entry in entries]
     entries_by_slug = {entry.get("slug", ""): entry for entry in entries}
+    redirects = {entry["slug"]: entry for entry in manifest.get("redirects", [])}
     if len(slugs) != len(set(slugs)):
         errors.append("manifest contains duplicate slugs")
 
     files = sorted(wiki_dir.glob("*.html"))
-    if len(files) != len(entries):
+    if len(files) != len(entries) + len(redirects):
         errors.append(f"manifest has {len(entries)} pages but wiki directory has {len(files)} HTML files")
 
-    expected = {f"{slug}.html" for slug in slugs}
+    expected = {f"{slug}.html" for slug in slugs + list(redirects)}
     for entry in entries:
-        if not entry.get("revision_id"):
+        if entry.get("source_type") == "editorial":
+            if not re.fullmatch(r"\d{4}-\d{2}-\d{2}", entry.get("reviewed_at", "")) or not entry.get("verified_game_version"):
+                errors.append(f"{entry.get('title')}: maintained guide is missing review date or applicable game version")
+        elif not entry.get("revision_id"):
             errors.append(f"{entry.get('title')}: missing live revision ID")
 
     unresolved_articles: set[str] = set()
@@ -45,6 +49,12 @@ def validate(root: Path) -> None:
         if len(ids) != len(set(ids)):
             errors.append(f"{path.name}: duplicate document IDs")
         page_ids[path.name] = set(ids)
+        if path.stem in redirects:
+            destination = redirects[path.stem]["target"]
+            marker = soup.select_one('meta[name="wiki-redirect"]')
+            if not marker or marker.get("content") != destination or not (wiki_dir / (destination + ".html")).is_file():
+                errors.append(f"{path.name}: invalid guide redirect")
+            continue
         page_heading = soup.select_one(".wiki-page-hero h1")
         if not page_heading:
             errors.append(f"{path.name}: missing page heading")
@@ -85,6 +95,7 @@ def validate(root: Path) -> None:
                     "chronoromancer.miraheze.org/wiki/" in href
                     and not any(marker in href for marker in ("/wiki/File:", "/wiki/Special:", "/wiki/Talk:", "/wiki/User:"))
                     and "wiki-source-line" not in " ".join(link.parent.get("class", []))
+                    and link.find_parent(class_="starter-credits") is None
                 ):
                     unresolved_articles.add(href)
                 continue

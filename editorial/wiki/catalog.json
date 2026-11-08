@@ -1,0 +1,985 @@
+{
+  "pages": [
+    {
+      "title": "Walkthrough:Getting Started",
+      "slug": "getting-started",
+      "title_en": "Getting started",
+      "title_zh": "新手入门",
+      "category": "Walkthroughs",
+      "source_type": "editorial",
+      "reviewed_at": "2026-11-08",
+      "verified_game_version": "V1.0_BETA_x",
+      "image_count": 10,
+      "summary_en": "Character creation, controls, objectives, recovery, and saving.",
+      "summary_zh": "从角色创建到第一次存档，认清界面、找到目标、安排好时间与恢复。"
+    },
+    {
+      "title": "Game Systems:Blacksmith and Forge",
+      "slug": "game-systems-blacksmith-and-forge",
+      "title_en": "Blacksmith and Forge",
+      "title_zh": "铁匠铺与锻造",
+      "category": "Game Systems",
+      "source_type": "editorial",
+      "reviewed_at": "2026-11-08",
+      "verified_game_version": "v1.0_BETAx",
+      "image_count": 10,
+      "screenshot_count": 5,
+      "asset_directories": [
+        "forge"
+      ],
+      "summary_en": "Find Gastoff, upgrade your equipment, forge five tiers of armor pieces, and plan construction costs.",
+      "summary_zh": "找到 Gastoff，升级基础装备，打造五级护具，并查清建筑委托的条件与费用。",
+      "search_terms": [
+        "Gastoff",
+        "forge",
+        "blacksmith",
+        "armor",
+        "Chronium",
+        "铁匠",
+        "锻造",
+        "护甲",
+        "时源矿",
+        "建筑",
+        "材料",
+        "训练室",
+        "护手",
+        "肩甲",
+        "盾牌",
+        "头盔"
+      ]
+    },
+    {
+      "title": "Game Systems:Mining System",
+      "slug": "game-systems-mining-system",
+      "title_en": "Mining",
+      "title_zh": "采矿系统",
+      "category": "Game Systems",
+      "source_type": "editorial",
+      "reviewed_at": "2026-11-08",
+      "verified_game_version": "v1.0_BETAx",
+      "image_count": 8,
+      "screenshot_count": 4,
+      "asset_directories": [
+        "mining"
+      ],
+      "summary_en": "Choose your tools, turn fragments into whole resources, and plan for Soul Stones, enhancement ore and Chronium.",
+      "summary_zh": "选好镐、看懂碎片与完整资源，再规划灵魂石、强化矿和时源矿的开采。",
+      "search_terms": [
+        "mining",
+        "pickaxe",
+        "Gem",
+        "Soul Stone",
+        "Chronium",
+        "采矿",
+        "山脚",
+        "铁镐",
+        "铜镐",
+        "钻石镐",
+        "碎片",
+        "矿物簇",
+        "灵魂石",
+        "强化矿",
+        "时源矿",
+        "矿盘"
+      ]
+    },
+    {
+      "title": "Character:Chime",
+      "slug": "character-chime",
+      "title_en": "Chime",
+      "title_zh": "Chime",
+      "category": "Characters",
+      "source_type": "editorial",
+      "reviewed_at": "2026-11-08",
+      "verified_game_version": "v1.0_BETAx",
+      "image_count": 1,
+      "screenshot_count": 0,
+      "asset_directories": [
+        "profiles"
+      ],
+      "summary_en": "Find the Crystal Cavern, follow Chime’s relationship route, and check Resistance Clout requirements.",
+      "summary_zh": "找到水晶洞窟，按顺序推进 Chime 的个人路线，查清反抗军声望与关系要求。",
+      "search_terms": [
+        "character",
+        "chime",
+        "角色",
+        "好感",
+        "谈心",
+        "约会",
+        "路线"
+      ]
+    },
+    {
+      "title": "Character:Daphne",
+      "slug": "character-daphne",
+      "title_en": "Daphne",
+      "title_zh": "Daphne",
+      "category": "Characters",
+      "source_type": "editorial",
+      "reviewed_at": "2026-11-08",
+      "verified_game_version": "v1.0_BETAx",
+      "image_count": 1,
+      "screenshot_count": 0,
+      "asset_directories": [
+        "profiles"
+      ],
+      "summary_en": "Recruit Daphne, prepare her room, and unlock her personal visits and shared corridor events.",
+      "summary_zh": "为 Daphne 准备住处，完成招募，再逐步开放个人拜访与走廊共同事件。",
+      "search_terms": [
+        "character",
+        "daphne",
+        "角色",
+        "好感",
+        "谈心",
+        "约会",
+        "路线"
+      ]
+    },
+    {
+      "title": "Character:Kyou",
+      "slug": "character-kyou",
+      "title_en": "Kyou",
+      "title_zh": "Kyou",
+      "category": "Characters",
+      "source_type": "editorial",
+      "reviewed_at": "2026-11-08",
+      "verified_game_version": "v1.0_BETAx",
+      "image_count": 1,
+      "screenshot_count": 0,
+      "asset_directories": [
+        "profiles"
+      ],
+      "summary_en": "Meet Kyou in the Fringe park, follow her timed events, and unlock Heart-to-Hearts and optional dates.",
+      "summary_zh": "在边缘区公园认识 Kyou，按时段推进个人事件，并开放谈心与可选约会。",
+      "search_terms": [
+        "character",
+        "kyou",
+        "角色",
+        "好感",
+        "谈心",
+        "约会",
+        "路线"
+      ]
+    },
+    {
+      "title": "Game Systems:Body Modifications",
+      "slug": "game-systems-body-modifications",
+      "title_en": "Body Modifications",
+      "title_zh": "身体改造工坊",
+      "category": "Game Systems",
+      "source_type": "editorial",
+      "reviewed_at": "2026-11-08",
+      "verified_game_version": "v1.0_BETAx",
+      "image_count": 6,
+      "screenshot_count": 3,
+      "asset_directories": [
+        "body-modifications"
+      ],
+      "summary_en": "Find Tinker’s two workshops, compare all eight modifications, and budget each permanent upgrade.",
+      "summary_zh": "找到 Tinker 的两处工坊，比较八条永久改造路线，查清等级上限、奖励与安装费用。",
+      "search_terms": [
+        "Tinker",
+        "Theneas",
+        "Body Modifications",
+        "身体改造工坊",
+        "永久提升",
+        "升级",
+        "材料",
+        "身体改造"
+      ]
+    },
+    {
+      "title": "Game Systems:Soul Stones",
+      "slug": "game-systems-soul-stones",
+      "title_en": "Soul Stones",
+      "title_zh": "灵魂石",
+      "category": "Game Systems",
+      "source_type": "editorial",
+      "reviewed_at": "2026-11-08",
+      "verified_game_version": "v1.0_BETAx",
+      "image_count": 6,
+      "screenshot_count": 3,
+      "asset_directories": [
+        "soul-stones"
+      ],
+      "summary_en": "Find all eight stones, understand their passive effects, and choose between bonding, mining enhancements and material upgrades.",
+      "summary_zh": "收集八种灵魂石，了解持有即生效的加成，再选择羁绊、采矿强化或材料升级。",
+      "search_terms": [
+        "Tinker",
+        "Theneas",
+        "Soul Stones",
+        "灵魂石",
+        "永久提升",
+        "升级",
+        "材料",
+        "灵魂石"
+      ]
+    },
+    {
+      "title": "Character:Mittens",
+      "slug": "character-mittens",
+      "title_en": "Mittens",
+      "title_zh": "Mittens",
+      "category": "Characters",
+      "source_type": "editorial",
+      "reviewed_at": "2026-11-08",
+      "verified_game_version": "v1.0_BETAx",
+      "image_count": 1,
+      "screenshot_count": 0,
+      "asset_directories": [
+        "profiles"
+      ],
+      "summary_en": "Complete the rescue, open Mittens’ room, and follow her guestbook chapters, dreams and Heart-to-Hearts.",
+      "summary_zh": "完成营救，为 Mittens 开放房间，再按顺序体验留言簿章节、梦中冒险与谈心。",
+      "search_terms": [
+        "character",
+        "mittens",
+        "角色",
+        "好感",
+        "谈心",
+        "约会",
+        "路线"
+      ]
+    },
+    {
+      "title": "Character:Tinsel",
+      "slug": "character-tinsel",
+      "title_en": "Tinsel",
+      "title_zh": "Tinsel",
+      "category": "Characters",
+      "source_type": "editorial",
+      "reviewed_at": "2026-11-08",
+      "verified_game_version": "v1.0_BETAx",
+      "image_count": 1,
+      "screenshot_count": 0,
+      "asset_directories": [
+        "profiles"
+      ],
+      "summary_en": "Find Tinsel through the Christmas encounter chain, unlock her tavern, and plan repeat visits and gifts.",
+      "summary_zh": "沿圣诞遭遇线找到 Tinsel，开放她的酒馆，查清日常拜访与赠礼要求。",
+      "search_terms": [
+        "character",
+        "tinsel",
+        "角色",
+        "好感",
+        "谈心",
+        "约会",
+        "路线"
+      ]
+    },
+    {
+      "title": "Character:Vardis",
+      "slug": "character-vardis",
+      "title_en": "Vardis",
+      "title_zh": "Vardis",
+      "category": "Characters",
+      "source_type": "editorial",
+      "reviewed_at": "2026-11-08",
+      "verified_game_version": "v1.0_BETAx",
+      "image_count": 1,
+      "screenshot_count": 0,
+      "asset_directories": [
+        "profiles"
+      ],
+      "summary_en": "Find Vardis at the Deep Woods landmarks and plan the walking route, travel costs and information visits.",
+      "summary_zh": "在深林入口与地标找到 Vardis，查阅行走路线、出行消耗和可询问的信息。",
+      "search_terms": [
+        "character",
+        "vardis",
+        "角色",
+        "好感",
+        "谈心",
+        "约会",
+        "路线"
+      ]
+    },
+    {
+      "title": "Game Systems:Combat System",
+      "slug": "game-systems-combat-system",
+      "title_en": "Combat System",
+      "title_zh": "战斗系统",
+      "category": "Game Systems",
+      "source_type": "editorial",
+      "reviewed_at": "2026-11-08",
+      "verified_game_version": "v1.0_BETAx",
+      "image_count": 6,
+      "screenshot_count": 3,
+      "asset_directories": [
+        "combat"
+      ],
+      "summary_en": "Prepare for ordinary combat, choose skills, react to incoming attacks, and understand defenses, status effects and recovery.",
+      "summary_zh": "做好开战准备，选用合适招式，掌握限时格挡，并看懂防御、异常状态与恢复。",
+      "search_terms": [
+        "combat",
+        "Combat System",
+        "战斗系统",
+        "Blademaster",
+        "Assassin",
+        "Sorcerer",
+        "战斗",
+        "剑术大师",
+        "刺客",
+        "术士",
+        "格挡",
+        "恢复",
+        "技能"
+      ]
+    },
+    {
+      "title": "Game Systems:Specialist Class",
+      "slug": "game-systems-specialist-class",
+      "title_en": "Specialist Class",
+      "title_zh": "专家战斗路线",
+      "category": "Game Systems",
+      "source_type": "editorial",
+      "reviewed_at": "2026-11-08",
+      "verified_game_version": "v1.0_BETAx",
+      "image_count": 2,
+      "screenshot_count": 1,
+      "asset_directories": [
+        "specialist"
+      ],
+      "summary_en": "Unlock Blademaster, Assassin and Sorcerer, earn points with the right actions, and understand independent ranks and bonuses.",
+      "summary_zh": "解锁剑术大师、刺客与术士，用对应招式积累点数，了解独立阶级与成长加成。",
+      "search_terms": [
+        "specialist",
+        "Specialist Class",
+        "专家战斗路线",
+        "Blademaster",
+        "Assassin",
+        "Sorcerer",
+        "战斗",
+        "剑术大师",
+        "刺客",
+        "术士",
+        "格挡",
+        "恢复",
+        "技能"
+      ]
+    },
+    {
+      "title": "Character:Gem",
+      "slug": "character-gem",
+      "title_en": "Gem",
+      "title_zh": "Gem",
+      "category": "Characters",
+      "source_type": "editorial",
+      "reviewed_at": "2026-11-08",
+      "verified_game_version": "v1.0_BETAx",
+      "image_count": 1,
+      "screenshot_count": 0,
+      "asset_directories": [
+        "profiles"
+      ],
+      "summary_en": "Find Gem, restock mining tools, learn dungeon-wall Mining, and follow her recruitment and personal routes.",
+      "summary_zh": "找到 Gem，补充采矿工具、学习地下城破墙技能，并推进招募与个人路线。",
+      "search_terms": [
+        "Gem",
+        "character",
+        "角色",
+        "关系",
+        "时间表",
+        "路线",
+        "谈心"
+      ]
+    },
+    {
+      "title": "Character:Gastoff",
+      "slug": "character-gastoff",
+      "title_en": "Gastoff",
+      "title_zh": "Gastoff",
+      "category": "Characters",
+      "source_type": "editorial",
+      "reviewed_at": "2026-11-08",
+      "verified_game_version": "v1.0_BETAx",
+      "image_count": 1,
+      "screenshot_count": 0,
+      "asset_directories": [
+        "profiles"
+      ],
+      "summary_en": "Meet Gastoff, check his personal bonuses, and find the equipment and construction services you need.",
+      "summary_zh": "拜访 Gastoff，查看一次性属性奖励，并找到需要的装备与建筑服务。",
+      "search_terms": [
+        "Gastoff",
+        "character",
+        "角色",
+        "关系",
+        "时间表",
+        "路线",
+        "谈心"
+      ]
+    },
+    {
+      "title": "Character:Tinker",
+      "slug": "character-tinker",
+      "title_en": "Tinker",
+      "title_zh": "Tinker",
+      "category": "Characters",
+      "source_type": "editorial",
+      "reviewed_at": "2026-11-08",
+      "verified_game_version": "v1.0_BETAx",
+      "image_count": 1,
+      "screenshot_count": 0,
+      "asset_directories": [
+        "profiles"
+      ],
+      "summary_en": "Follow Tinker’s events, conversations and dates, and check when her lab and Fortress services are available.",
+      "summary_zh": "按顺序推进 Tinker 的事件、谈心与约会，并查清实验室和要塞服务的开放时间。",
+      "search_terms": [
+        "Tinker",
+        "character",
+        "角色",
+        "关系",
+        "时间表",
+        "路线",
+        "谈心"
+      ]
+    },
+    {
+      "title": "Character:Theneas",
+      "slug": "character-theneas",
+      "title_en": "Theneas",
+      "title_zh": "Theneas",
+      "category": "Characters",
+      "source_type": "editorial",
+      "reviewed_at": "2026-11-08",
+      "verified_game_version": "v1.0_BETAx",
+      "image_count": 1,
+      "screenshot_count": 0,
+      "asset_directories": [
+        "profiles"
+      ],
+      "summary_en": "Reach the secluded Forest Hut, meet Theneas, and check access to his Soul Stone refinements.",
+      "summary_zh": "沿幽僻小径抵达森林小屋，认识 Theneas，并查清灵魂石升级服务的条件。",
+      "search_terms": [
+        "Theneas",
+        "character",
+        "角色",
+        "关系",
+        "时间表",
+        "路线",
+        "谈心"
+      ]
+    },
+    {
+      "title": "Character:Councilor Voss",
+      "slug": "character-councilor-voss",
+      "title_en": "Councilor Voss",
+      "title_zh": "Councilor Voss",
+      "category": "Characters",
+      "source_type": "editorial",
+      "reviewed_at": "2026-11-08",
+      "verified_game_version": "v1.0_BETAx",
+      "image_count": 1,
+      "screenshot_count": 0,
+      "asset_directories": [
+        "profiles"
+      ],
+      "summary_en": "Find Councilor Voss’s office and understand his dialogue and connection to current mission objectives.",
+      "summary_zh": "找到 Councilor Voss 的办公室，了解拜访方式与相关任务的推进方向。",
+      "search_terms": [
+        "Councilor Voss",
+        "character",
+        "角色",
+        "关系",
+        "时间表",
+        "路线",
+        "谈心"
+      ]
+    },
+    {
+      "title": "Character:Officer Becky",
+      "slug": "character-officer-becky",
+      "title_en": "Officer Becky",
+      "title_zh": "Officer Becky",
+      "category": "Characters",
+      "source_type": "editorial",
+      "reviewed_at": "2026-11-08",
+      "verified_game_version": "v1.0_BETAx",
+      "image_count": 1,
+      "screenshot_count": 0,
+      "asset_directories": [
+        "profiles"
+      ],
+      "summary_en": "Follow Becky’s investigation, find the correct locations and time windows, and plan conversations and outings.",
+      "summary_zh": "沿 Officer Becky 的调查线继续，找准地点与时段，安排谈心和外出。",
+      "search_terms": [
+        "Officer Becky",
+        "character",
+        "角色",
+        "关系",
+        "时间表",
+        "路线",
+        "谈心"
+      ]
+    },
+    {
+      "title": "Game Systems:Ruxandra's Alchemy Shop",
+      "slug": "game-systems-ruxandra-s-alchemy-shop",
+      "title_en": "Ruxandra’s Alchemy Shop",
+      "title_zh": "Ruxandra 的炼金商店",
+      "category": "Game Systems",
+      "source_type": "editorial",
+      "reviewed_at": "2026-11-08",
+      "verified_game_version": "v1.0_BETAx",
+      "image_count": 4,
+      "screenshot_count": 2,
+      "asset_directories": [
+        "personal-systems"
+      ],
+      "summary_en": "Reach Blood Alchemy, decide how to use Blood Orbs, and compare six artifacts and two repeatable refinements.",
+      "summary_zh": "找到血液炼金商店，规划鲜血宝珠的用途，比较六件永久物品与两项可重复强化。",
+      "search_terms": [
+        "alchemy",
+        "Ruxandra’s Alchemy Shop",
+        "Ruxandra 的炼金商店",
+        "关系",
+        "好感",
+        "约会",
+        "偏好",
+        "经验",
+        "鲜血宝珠",
+        "炼金",
+        "怀孕"
+      ]
+    },
+    {
+      "title": "Game Systems:Relationships Dating and Intimacy",
+      "slug": "game-systems-relationships-dating-and-intimacy",
+      "title_en": "Relationships, Dating and Intimacy",
+      "title_zh": "关系、约会与亲密互动",
+      "category": "Game Systems",
+      "source_type": "editorial",
+      "reviewed_at": "2026-11-08",
+      "verified_game_version": "v1.0_BETAx",
+      "image_count": 6,
+      "screenshot_count": 3,
+      "asset_directories": [
+        "personal-systems"
+      ],
+      "summary_en": "Build affection, follow personal routes, use relationship cards, and distinguish dates, commitment and character-specific experience.",
+      "summary_zh": "提升好感、推进个人路线、看懂关系卡，并分清约会、交往承诺与角色专属经验。",
+      "search_terms": [
+        "relationships",
+        "Relationships, Dating and Intimacy",
+        "关系、约会与亲密互动",
+        "关系",
+        "好感",
+        "约会",
+        "偏好",
+        "经验",
+        "鲜血宝珠",
+        "炼金",
+        "怀孕"
+      ]
+    },
+    {
+      "title": "Game Systems:Pregnancy",
+      "slug": "game-systems-pregnancy",
+      "title_en": "Pregnancy",
+      "title_zh": "怀孕系统",
+      "category": "Game Systems",
+      "source_type": "editorial",
+      "reviewed_at": "2026-11-08",
+      "verified_game_version": "v1.0_BETAx",
+      "image_count": 4,
+      "screenshot_count": 2,
+      "asset_directories": [
+        "personal-systems"
+      ],
+      "summary_en": "Set your preference, complete the shared protocol, check each character’s readiness, and understand pregnancy timing and activity changes.",
+      "summary_zh": "设置偏好、完成共用规程、检查角色准备条件，并了解怀孕期间的时间推进与行动变化。",
+      "search_terms": [
+        "pregnancy",
+        "Pregnancy",
+        "怀孕系统",
+        "关系",
+        "好感",
+        "约会",
+        "偏好",
+        "经验",
+        "鲜血宝珠",
+        "炼金",
+        "怀孕"
+      ]
+    },
+    {
+      "title": "Character:Aaliyah",
+      "slug": "character-aaliyah",
+      "title_en": "Aaliyah",
+      "title_zh": "Aaliyah",
+      "category": "Characters",
+      "source_type": "editorial",
+      "reviewed_at": "2026-11-08",
+      "verified_game_version": "v1.0_BETAx",
+      "image_count": 1,
+      "screenshot_count": 0,
+      "asset_directories": [
+        "profiles"
+      ],
+      "summary_en": "Find Aaliyah at the KTV entrance and check the venue’s late-night hours.",
+      "summary_zh": "在 KTV 入口找到 Aaliyah，查清深夜营业时段与当前可用互动。",
+      "search_terms": [
+        "Aaliyah",
+        "角色",
+        "关系",
+        "时间表",
+        "路线",
+        "谈心"
+      ]
+    },
+    {
+      "title": "Character:Andi",
+      "slug": "character-andi",
+      "title_en": "Andi",
+      "title_zh": "Andi",
+      "category": "Characters",
+      "source_type": "editorial",
+      "reviewed_at": "2026-11-08",
+      "verified_game_version": "v1.0_BETAx",
+      "image_count": 1,
+      "screenshot_count": 0,
+      "asset_directories": [
+        "profiles"
+      ],
+      "summary_en": "Follow Andi’s personal route, plan dates and Private Time, and check her one-time gift.",
+      "summary_zh": "推进 Andi 的个人路线，安排约会与独处，并查看一次性礼物的条件。",
+      "search_terms": [
+        "Andi",
+        "角色",
+        "关系",
+        "时间表",
+        "路线",
+        "谈心"
+      ]
+    },
+    {
+      "title": "Character:Saline",
+      "slug": "character-saline",
+      "title_en": "Saline",
+      "title_zh": "Saline",
+      "category": "Characters",
+      "source_type": "editorial",
+      "reviewed_at": "2026-11-08",
+      "verified_game_version": "v1.0_BETAx",
+      "image_count": 1,
+      "screenshot_count": 0,
+      "asset_directories": [
+        "profiles"
+      ],
+      "summary_en": "Follow Saline’s complete recruitment route, including conversations, dates and the move to the Medical Bay.",
+      "summary_zh": "按顺序完成 Saline 的招募路线，核对谈心、约会，以及搬入医疗室后的拜访方式。",
+      "search_terms": [
+        "Saline",
+        "角色",
+        "关系",
+        "时间表",
+        "路线",
+        "谈心"
+      ]
+    },
+    {
+      "title": "Character:Sophie",
+      "slug": "character-sophie",
+      "title_en": "Sophie",
+      "title_zh": "Sophie",
+      "category": "Characters",
+      "source_type": "editorial",
+      "reviewed_at": "2026-11-08",
+      "verified_game_version": "v1.0_BETAx",
+      "image_count": 1,
+      "screenshot_count": 0,
+      "asset_directories": [
+        "profiles"
+      ],
+      "summary_en": "Find Sophie, follow her safe introduction and work route, and plan personal visits and gifts.",
+      "summary_zh": "找到 Sophie，按顺序推进初遇与工作路线，安排个人拜访和赠礼。",
+      "search_terms": [
+        "Sophie",
+        "角色",
+        "关系",
+        "时间表",
+        "路线",
+        "谈心"
+      ]
+    },
+    {
+      "title": "Character:Pixie",
+      "slug": "character-pixie",
+      "title_en": "Pixie",
+      "title_zh": "Pixie",
+      "category": "Characters",
+      "source_type": "editorial",
+      "reviewed_at": "2026-11-08",
+      "verified_game_version": "v1.0_BETAx",
+      "image_count": 1,
+      "screenshot_count": 0,
+      "asset_directories": [
+        "profiles"
+      ],
+      "summary_en": "Find Pixie’s early encounters, check recruitment requirements, and plan daily interactions.",
+      "summary_zh": "找到 Pixie 的前期遭遇，查清招募条件与日常互动的安排。",
+      "search_terms": [
+        "Pixie",
+        "角色",
+        "关系",
+        "时间表",
+        "路线",
+        "谈心"
+      ]
+    },
+    {
+      "title": "Character:The Blessed Ones",
+      "slug": "character-the-blessed-ones",
+      "title_en": "The Blessed Ones",
+      "title_zh": "The Blessed Ones",
+      "category": "Characters",
+      "source_type": "editorial",
+      "reviewed_at": "2026-11-08",
+      "verified_game_version": "v1.0_BETAx",
+      "image_count": 1,
+      "screenshot_count": 0,
+      "asset_directories": [
+        "profiles"
+      ],
+      "summary_en": "Find the Blessed Ones at the Anomaly Temple and understand their current role in exploration.",
+      "summary_zh": "在异常神殿找到 The Blessed Ones，了解拜访方式与当前可用内容。",
+      "search_terms": [
+        "The Blessed Ones",
+        "角色",
+        "关系",
+        "时间表",
+        "路线",
+        "谈心"
+      ]
+    },
+    {
+      "title": "Game Systems:Dungeon",
+      "slug": "game-systems-dungeon",
+      "title_en": "Dungeon",
+      "title_zh": "地下城",
+      "category": "Game Systems",
+      "source_type": "editorial",
+      "reviewed_at": "2026-11-08",
+      "verified_game_version": "v1.0_BETAx",
+      "image_count": 6,
+      "screenshot_count": 3,
+      "asset_directories": [
+        "dungeons"
+      ],
+      "summary_en": "Plan ordinary dungeon exploration: movement, floor themes, supplies, hidden routes, recruitment and Dragon Coins.",
+      "summary_zh": "规划普通地下城探索：看懂移动与楼层主题，备齐补给，查找密道、招募路线与龙币用途。",
+      "search_terms": [
+        "Dungeon",
+        "地下城",
+        "地下墓穴",
+        "龙币",
+        "密道",
+        "楼层",
+        "牢房"
+      ]
+    },
+    {
+      "title": "Game Systems:Infinity Dungeons",
+      "slug": "game-systems-infinity-dungeons",
+      "title_en": "Infinity Dungeons",
+      "title_zh": "无限地下城",
+      "category": "Game Systems",
+      "source_type": "editorial",
+      "reviewed_at": "2026-11-08",
+      "verified_game_version": "v1.0_BETAx",
+      "image_count": 4,
+      "screenshot_count": 2,
+      "asset_directories": [
+        "infinity-dungeons"
+      ],
+      "summary_en": "Unlock a separate endless dungeon, understand its progress and enemy traits, and plan the materials you want to earn.",
+      "summary_zh": "解锁独立的无尽探索，分清深度、敌人特性与材料奖励，再按目标安排挑战。",
+      "search_terms": [
+        "Infinity",
+        "无限地下城",
+        "无限模式",
+        "特性",
+        "制作材料",
+        "虚空密室"
+      ]
+    },
+    {
+      "title": "Game Systems:Story Beats",
+      "slug": "game-systems-story-beats",
+      "title_en": "Story Guide",
+      "title_zh": "主线流程",
+      "category": "Game Systems",
+      "source_type": "editorial",
+      "reviewed_at": "2026-11-08",
+      "verified_game_version": "v1.0_BETAx",
+      "image_count": 2,
+      "screenshot_count": 1,
+      "asset_directories": [
+        "story-guide"
+      ],
+      "summary_en": "Find the next main-story location and time, check manual actions and prerequisites, and reveal later steps only when needed.",
+      "summary_zh": "查找下一段主线的地点、时段与前置条件；后期步骤按需展开，避免提前看到剧情。",
+      "search_terms": [
+        "Story",
+        "主线",
+        "剧情",
+        "流程",
+        "卡关",
+        "100",
+        "v1.0_BETAx"
+      ]
+    },
+    {
+      "title": "Game Systems:Chaos Syndicate",
+      "slug": "game-systems-chaos-syndicate",
+      "title_en": "Syndicate Story and Alliance",
+      "title_zh": "辛迪加剧情与联盟",
+      "category": "Game Systems",
+      "source_type": "editorial",
+      "reviewed_at": "2026-11-08",
+      "verified_game_version": "v1.0_BETAx",
+      "image_count": 2,
+      "screenshot_count": 1,
+      "asset_directories": [
+        "syndicate-guide"
+      ],
+      "summary_en": "Navigate the Syndicate, follow its shared missions and alliance, and keep optional personal routes separate.",
+      "summary_zh": "找到辛迪加内部地点，依次推进共同任务与联盟支线，再按需查看个人路线。",
+      "search_terms": [
+        "Syndicate",
+        "辛迪加",
+        "联盟",
+        "共同任务",
+        "盗贼",
+        "核心区"
+      ]
+    },
+    {
+      "title": "Game Systems:Alignment System",
+      "slug": "game-systems-alignment-system",
+      "title_en": "Alignment",
+      "title_zh": "阵营倾向",
+      "category": "Game Systems",
+      "source_type": "editorial",
+      "reviewed_at": "2026-11-08",
+      "verified_game_version": "v1.0_BETAx",
+      "image_count": 4,
+      "screenshot_count": 2,
+      "asset_directories": [
+        "alignment-guide"
+      ],
+      "summary_en": "Read the lead between your alignment counters, plan daily gains, and compare relationship, combat and reset effects.",
+      "summary_zh": "看懂三项点数的领先差值，安排每日行动，查清关系收益、战斗效果与重置费用。",
+      "search_terms": [
+        "Alignment",
+        "阵营",
+        "倾向",
+        "善良",
+        "邪恶",
+        "中立",
+        "无阵营",
+        "重置"
+      ]
+    },
+    {
+      "title": "Game Systems:Bar Games",
+      "slug": "game-systems-bar-games",
+      "title_en": "Bar Games",
+      "title_zh": "酒吧小游戏",
+      "category": "Game Systems",
+      "source_type": "editorial",
+      "reviewed_at": "2026-11-08",
+      "verified_game_version": "v1.0_BETAx",
+      "image_count": 4,
+      "screenshot_count": 2,
+      "asset_directories": [
+        "bar-games-guide"
+      ],
+      "summary_en": "Find Vera’s four games, learn their controls, and distinguish winnings from the money returned with your stake.",
+      "summary_zh": "找到 Vera 的四种小游戏，学会操作与结算规则，分清本金、底池和真正计入进度的净盈利。",
+      "search_terms": [
+        "Bar Games",
+        "酒吧小游戏",
+        "minigame",
+        "小游戏"
+      ]
+    },
+    {
+      "title": "Game Systems:Fishing",
+      "slug": "game-systems-fishing",
+      "title_en": "Fishing",
+      "title_zh": "钓鱼",
+      "category": "Game Systems",
+      "source_type": "editorial",
+      "reviewed_at": "2026-11-08",
+      "verified_game_version": "v1.0_BETAx",
+      "image_count": 4,
+      "screenshot_count": 2,
+      "asset_directories": [
+        "fishing-guide"
+      ],
+      "summary_en": "Prepare your rod and bait, steer into fishing rings, learn the reel timing, and compare catches and permanent boat upgrades.",
+      "summary_zh": "备好钓竿与鱼饵，驾驶小船进入水圈、掌握收线时机，再查找渔获、收益和永久船只升级。",
+      "search_terms": [
+        "Fishing",
+        "钓鱼",
+        "minigame",
+        "小游戏"
+      ]
+    },
+    {
+      "title": "Game Systems:Caterpillar Rearing",
+      "slug": "game-systems-caterpillar-rearing",
+      "title_en": "Caterpillar Rearing",
+      "title_zh": "毛虫繁育",
+      "category": "Game Systems",
+      "source_type": "editorial",
+      "reviewed_at": "2026-11-08",
+      "verified_game_version": "v1.0_BETAx",
+      "image_count": 4,
+      "screenshot_count": 2,
+      "asset_directories": [
+        "caterpillar-guide"
+      ],
+      "summary_en": "Collect and release native species, research five paths, and grow a lasting ecosystem across two eras.",
+      "summary_zh": "收集并放归原生物种，研究五条方向，让现代与中世纪的生态随游戏日逐步成长。",
+      "search_terms": [
+        "Caterpillar Rearing",
+        "毛虫繁育",
+        "minigame",
+        "小游戏"
+      ]
+    },
+    {
+      "title": "Game Systems:Haunted Mansion",
+      "slug": "game-systems-haunted-mansion",
+      "title_en": "Haunted Mansion",
+      "title_zh": "闹鬼豪宅",
+      "category": "Game Systems",
+      "source_type": "editorial",
+      "reviewed_at": "2026-11-08",
+      "verified_game_version": "v1.0_BETAx",
+      "image_count": 4,
+      "screenshot_count": 2,
+      "asset_directories": [
+        "haunted-mansion-guide"
+      ],
+      "summary_en": "Explore both mansion chapters, distinguish revealing from collecting souls, and check puzzle controls, passage requirements and optional rewards.",
+      "summary_zh": "探索豪宅两篇内容，分清揭示与收集灵魂的步骤，按需查找谜题操作、通道条件和可选奖励。",
+      "search_terms": [
+        "Haunted Mansion",
+        "闹鬼豪宅",
+        "minigame",
+        "小游戏"
+      ]
+    }
+  ],
+  "redirects": [
+    {
+      "slug": "character-story",
+      "target": "game-systems-story-beats",
+      "reason": "Story is a guide topic, not a character."
+    }
+  ]
+}

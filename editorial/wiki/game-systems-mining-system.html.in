@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="Choose your tools, turn fragments into whole resources, and plan for Soul Stones, enhancement ore and Chronium. 选好镐、看懂碎片与完整资源，再规划灵魂石、强化矿和时源矿的开采。" name="description"/>
+<link href="../assets/images/v2/favicon.png" rel="icon" type="image/png"/>
+<link href="../assets/css/style.css" rel="stylesheet"/><link href="../assets/css/wiki.css" rel="stylesheet"/>
+<title>Mining | Chronoromancer Player Wiki</title><link href="../assets/css/wiki-starter.css" rel="stylesheet"/><link href="https://chronoromancergame.com/wiki/game-systems-mining-system.html" rel="canonical"/></head>
+<body class="wiki-article-page wiki-starter-page wiki-reviewed-page" data-title-en="Mining | Chronoromancer Player Wiki" data-title-zh="采矿系统 | Chronoromancer 中文攻略">
+<a class="skip-link" data-copy-en="Skip to content" data-copy-zh="跳至正文" href="#content">Skip to content</a>
+<div class="maturity-bar" data-copy-en="18+ adults-only game · Wiki pages may contain story and gameplay spoilers" data-copy-zh="18+ 仅限成人游戏 · Wiki 页面可能包含剧情与玩法剧透">18+ adults-only game · Wiki pages may contain story and gameplay spoilers</div>
+<header class="site-header"><div class="container header-inner">
+<a aria-label="Chronoromancer home" class="brand" href="../main.html"><img alt="Chronoromancer" src="../assets/images/v2/logo.png"/></a>
+<button aria-expanded="false" aria-label="Open navigation" class="nav-toggle" data-nav-toggle="" type="button"><span></span><span></span><span></span></button>
+<nav aria-label="Primary navigation" class="site-nav" data-nav-menu="">
+<a data-i18n="navHome" href="../main.html">Home</a><a data-i18n="navStory" href="../story.html">Story</a>
+<a data-i18n="navCharacters" href="../characters.html">Characters</a><a data-i18n="navGuides" href="../walkthroughs.html">Guides</a>
+<a data-i18n="navGallery" href="../screenshots.html">Gallery</a><a class="is-active" data-i18n="navWiki" href="../wiki.html">Player Wiki</a>
+<a data-i18n="navDownload" href="../main.html#download">Download</a>
+<div aria-label="Language" class="language-switch" role="group"><button aria-pressed="true" data-language="en" type="button">EN</button><button aria-pressed="false" data-language="zh" type="button">简体中文</button></div>
+</nav>
+</div></header>
+<main id="content">
+<section class="wiki-page-hero"><div class="container"><nav aria-label="Breadcrumb" class="breadcrumb"><a data-copy-en="Player Wiki" data-copy-zh="玩家 Wiki" href="../wiki.html">Player Wiki</a><span>/</span><span data-copy-en="Mining" data-copy-zh="采矿系统">Mining</span></nav>
+<p class="eyebrow" data-copy-en="Game systems" data-copy-zh="游戏系统">Game systems</p>
+<h1 data-copy-en="Mining" data-copy-zh="采矿系统">Mining</h1>
+<p class="starter-description" data-copy-en="Choose your tools, turn fragments into whole resources, and plan for Soul Stones, enhancement ore and Chronium." data-copy-zh="选好镐、看懂碎片与完整资源，再规划灵魂石、强化矿和时源矿的开采。">Choose your tools, turn fragments into whole resources, and plan for Soul Stones, enhancement ore and Chronium.</p>
+<div class="wiki-source-line"><span data-copy-en="v1.0_BETAx · Updated 8 November 2026" data-copy-zh="v1.0_BETAx · 2026 年 11 月 8 日更新">v1.0_BETAx · Updated 8 November 2026</span></div></div></section>
+<section class="section wiki-reading-section"><div class="container wiki-reading-layout">
+<aside class="wiki-toc"><div class="wiki-toc-inner"><button aria-expanded="false" class="wiki-toc-toggle" data-wiki-toc-toggle="" type="button"><span data-copy-en="On this page" data-copy-zh="本页目录">On this page</span><span aria-hidden="true">+</span></button><p class="wiki-toc-heading" data-copy-en="On this page" data-copy-zh="本页目录">On this page</p><div class="wiki-toc-links" data-lang-panel="en" data-wiki-toc-links=""><a class="wiki-toc-h2" href="#en-start">Start a mining visit</a><a class="wiki-toc-h2" href="#en-tools">Choose a pickaxe and keep Energy available</a><a class="wiki-toc-h2" href="#en-board">Make the board work for you</a><a class="wiki-toc-h2" href="#en-rewards">Understand the rewards: fragments first</a><a class="wiki-toc-h2" href="#en-rare">Key stones and Chronium</a><a class="wiki-toc-h2" href="#en-enhancements">Upgrade owned Soul Stones with enhancement ore</a><a class="wiki-toc-h2" href="#en-decisions">Decide when to spend and when to leave</a><a class="wiki-toc-h2" href="#en-troubleshooting">Common problems</a><a class="wiki-toc-h2" href="#en-next">Related guides</a></div><div class="wiki-toc-links" data-lang-panel="zh" data-wiki-toc-links="" hidden="" lang="zh-CN"><a class="wiki-toc-h2" href="#zh-start">第一次采矿，从哪里进入</a><a class="wiki-toc-h2" href="#zh-tools">选好镐，也要留意精力</a><a class="wiki-toc-h2" href="#zh-board">用下落与连锁，减少挥镐次数</a><a class="wiki-toc-h2" href="#zh-rewards">普通资源先给碎片，满 100 才合成</a><a class="wiki-toc-h2" href="#zh-rare">灵魂石与时源矿：出现后还要采完</a><a class="wiki-toc-h2" href="#zh-enhancements">灵魂石强化矿：为已持有的石头加级</a><a class="wiki-toc-h2" href="#zh-decisions">什么时候继续挖，什么时候离开</a><a class="wiki-toc-h2" href="#zh-troubleshooting">常见问题，先检查这些地方</a><a class="wiki-toc-h2" href="#zh-next">相关攻略</a></div></div></aside>
+<article class="wiki-article"><p class="starter-reading-note" data-copy-en="Select a screenshot to view the complete image. Screens show example inventories and progress." data-copy-zh="点击截图可查看完整大图。图中的库存和进度仅为示例，请以自己的实际情况为准。">Select a screenshot to view the complete image. Screens show example inventories and progress.</p><div class="wiki-source-content wiki-source-content-en" data-lang-panel="en" lang="en"><div class="starter-lead">
+<p>Break tiles, let the falling pieces form matches, and collect materials on an <strong>8 × 11 board</strong>. Start with the ordinary resource loop; return with more Energy and tools when you want to finish durable stones or hunt rare finds.</p>
+<ol class="starter-checklist">
+<li><a href="#en-start">Go to Mountain Foothills in the Medieval Village Outskirts.</a></li>
+<li><a href="#en-tools">Bring a pickaxe and at least 40 Energy for entry plus one swing.</a></li>
+<li><a href="#en-rewards">Read the fragment counters: 100 fragments become one whole resource.</a></li>
+<li><a href="#en-rare">Finish rare ore before leaving; the next visit has a new board.</a></li>
+</ol>
+</div>
+<section id="en-start"><span aria-hidden="true" class="wiki-anchor-alias" id="Quick_Start"></span><span aria-hidden="true" class="wiki-anchor-alias" id="Locations"></span><span aria-hidden="true" class="wiki-anchor-alias" id="Mountain_Foothills_(Medieval_Outskirts)"></span><span aria-hidden="true" class="wiki-anchor-alias" id="Mountain_Foothills_.28Medieval_Outskirts.29"></span><span aria-hidden="true" class="wiki-anchor-alias" id="Switching_Between_Them"></span><span aria-hidden="true" class="wiki-anchor-alias" id="How_a_Mining_Session_Works"></span><span aria-hidden="true" class="wiki-anchor-alias" id="The_Mining_Screen"></span><span aria-hidden="true" class="wiki-anchor-alias" id="Top_Bar"></span><span aria-hidden="true" class="wiki-anchor-alias" id="Left_Side"></span><span aria-hidden="true" class="wiki-anchor-alias" id="Bottom_Left"></span><span aria-hidden="true" class="wiki-anchor-alias" id="Right_Side"></span><span aria-hidden="true" class="wiki-anchor-alias" id="Wild_Rocks"></span><span aria-hidden="true" class="wiki-anchor-alias" id="Bomb"></span><span aria-hidden="true" class="wiki-anchor-alias" id="Fireblock"></span><span aria-hidden="true" class="wiki-anchor-alias" id="Magic_Cube"></span><span aria-hidden="true" class="wiki-anchor-alias" id="Spawn_Rules"></span><span aria-hidden="true" class="wiki-anchor-alias" id="Strategy_for_Breaking_Them"></span><span aria-hidden="true" class="wiki-anchor-alias" id="Buying_from_Gem"></span><span aria-hidden="true" class="wiki-anchor-alias" id="Battle_Drops_(Dungeon)"></span><span aria-hidden="true" class="wiki-anchor-alias" id="Battle_Drops_.28Dungeon.29"></span><span aria-hidden="true" class="wiki-anchor-alias" id="Heists_(Thieves_Guild)"></span><span aria-hidden="true" class="wiki-anchor-alias" id="Heists_.28Thieves_Guild.29"></span><span aria-hidden="true" class="wiki-anchor-alias" id="Search_Encounters"></span><span aria-hidden="true" class="wiki-anchor-alias" id="Hard_Cap"></span><span aria-hidden="true" class="wiki-anchor-alias" id="Tips_and_Strategy"></span><span aria-hidden="true" class="wiki-anchor-alias" id="Before_Entering"></span><span aria-hidden="true" class="wiki-anchor-alias" id="During_a_Session"></span><span aria-hidden="true" class="wiki-anchor-alias" id="Common_Questions"></span><span aria-hidden="true" class="wiki-anchor-alias" id="Accuracy_Notes"></span><span aria-hidden="true" class="wiki-anchor-alias" id="Related_Pages"></span>
+<h2>Start a mining visit</h2>
+<p>Choose <strong>Mining</strong> at <strong>Mountain Foothills</strong>, in the <strong>Medieval Village Outskirts</strong>. The location and activity are available without learning Gem’s Mining skill. That separate skill is for breaking dungeon walls.</p>
+<ol class="starter-steps">
+<li><strong>Check supplies before entry.</strong> You need at least one pickaxe of any type and 30 Energy to enter. A new character starts with one Iron Pickaxe.</li>
+<li><strong>Allow for the entry cost.</strong> The action lists 30 minutes and spends 30 Energy. Your first swing needs another 10 Energy, so bring at least 40 or use an Energy item after entering. This is a visit cost; further swings do not each add another 30 minutes.</li>
+<li><strong>Select a stocked tool at bottom left.</strong> The yellow border marks the selected type. Selection does not automatically change when that type runs out.</li>
+<li><strong>Click one tile and wait for the board to settle.</strong> A valid swing spends one selected pickaxe and 10 Energy. Falling pieces, matches, and the chain they cause add no further swing cost.</li>
+<li><strong>Use the X at top left or press Esc to leave.</strong> There is no final score or required board clear. Space does not exit.</li>
+</ol>
+<p class="starter-note">An unsuitable hit on bedrock or glass, an empty selected tool, Energy below 10, or clicking during an animation does nothing and spends nothing. Entry already spent is not refunded when you leave. As with other actions, poor condition can extend the actual time taken.</p>
+<figure class="reviewed-screenshot"><a aria-label="View full screenshot: The mining board: tools at bottom left, resource and fragment counts above, and Energy at the top." href="../assets/images/wiki/mining/en-board.webp" rel="noopener" target="_blank"><img alt="The mining board: tools at bottom left, resource and fragment counts above, and Energy at the top." decoding="async" height="720" loading="lazy" src="../assets/images/wiki/mining/en-board.webp" width="1280"/></a><figcaption>The mining board: tools at bottom left, resource and fragment counts above, and Energy at the top.</figcaption></figure></section>
+<section id="en-tools"><span aria-hidden="true" class="wiki-anchor-alias" id="The_Three_Pickaxes"></span><span aria-hidden="true" class="wiki-anchor-alias" id="Iron_Pickaxe_(default)"></span><span aria-hidden="true" class="wiki-anchor-alias" id="Iron_Pickaxe_.28default.29"></span><span aria-hidden="true" class="wiki-anchor-alias" id="Copper_Pickaxe"></span><span aria-hidden="true" class="wiki-anchor-alias" id="Diamond_Pickaxe"></span><span aria-hidden="true" class="wiki-anchor-alias" id="Getting_More_Pickaxes"></span><span aria-hidden="true" class="wiki-anchor-alias" id="Pickaxe_Haul_(supporter_access)"></span><span aria-hidden="true" class="wiki-anchor-alias" id="Pickaxe_Haul_.28supporter_access.29"></span>
+<h2>Choose a pickaxe and keep Energy available</h2>
+<table>
+<caption>One pickaxe is consumed for each accepted swing</caption>
+<thead><tr><th scope="col">Tool</th><th scope="col">Direct damage</th><th scope="col">What makes it useful</th></tr></thead>
+<tbody>
+<tr><th scope="row">Iron</th><td data-label="Direct damage">1</td><td data-label="What makes it useful">Breaks ordinary tiles and chips durable ore. Cannot break bedrock or glass.</td></tr>
+<tr><th scope="row">Copper</th><td data-label="Direct damage">2</td><td data-label="What makes it useful">Breaks bedrock in one hit. Cannot break glass.</td></tr>
+<tr><th scope="row">Diamond</th><td data-label="Direct damage">5</td><td data-label="What makes it useful">Breaks bedrock and glass in one hit. Also hits one random neighboring position, including diagonals, for free.</td></tr>
+</tbody>
+</table>
+<p>Diamond’s extra hit deals 5 damage to durable ore, breaks an ordinary tile, or activates a power-up. It can also break bedrock or glass. The extra hit always targets a different position; it cannot hit your chosen stone twice. You can switch stocked tools between swings without a fee.</p>
+<p>The top-left Energy item button spends one stored item to restore <strong>25 Energy</strong>, or <strong>50</strong> after Willow’s Enhanced Healing upgrade, up to your maximum. An <strong>Energy tile restores 40</strong>. A <strong>Repair tile adds three pickaxes of the type used for that swing’s entire chain</strong>. These bonuses also work when a match or power-up collects the tile.</p>
+<p>A direct Energy-tile hit gives up to 30 net Energy after its swing cost. A direct Repair-tile hit gives a net gain of two pickaxes of the used type. Both gains can be smaller at the relevant cap.</p>
+<h3>Where to restock</h3>
+<table>
+<caption>Reliable purchases and other pickaxe sources</caption>
+<thead><tr><th scope="col">Source</th><th scope="col">Cost or condition</th><th scope="col">Reward</th></tr></thead>
+<tbody>
+<tr><th scope="row">Gem: Iron Pickaxes (x5)</th><td data-label="Cost or condition">$200; 10 minutes; once per game day. Find Gem at Mountain Foothills, 07:00–17:00.</td><td data-label="Reward">5 Iron Pickaxes; +1 Gem relationship.</td></tr>
+<tr><th scope="row">Gem: Pickaxe Haul</th><td data-label="Cost or condition">1 crystal; 15 minutes; requires the full version and the additional supporter-content access indicated by the action. No daily purchase limit.</td><td data-label="Reward">10 Iron, 10 Copper, and 10 Diamond Pickaxes; +2 Gem relationship.</td></tr>
+<tr><th scope="row">Dungeon victories</th><td data-label="Cost or condition">15% base drop chance; applicable loot bonuses can raise it.</td><td data-label="Reward">One Iron on floors 1–20; Copper on 21–30; Diamond on 31–40; random type on 41–45. Minotaur gives Leather instead; special Infinity enemies can have different drops.</td></tr>
+<tr><th scope="row">Successful heists</th><td data-label="Cost or condition">10% chance after a successful exit.</td><td data-label="Reward">One Copper in Gilded Row or one Diamond in Noble Quarter.</td></tr>
+<tr><th scope="row">Medieval Back Alleys search</th><td data-label="Cost or condition">Encounter a pickaxe stash and choose to take it.</td><td data-label="Reward">2–5 Iron and 2–4 Copper; a Luck check can add one Diamond.</td></tr>
+</tbody>
+</table>
+<p>You can hold <strong>999 of each pickaxe type</strong>; excess additions are discarded. Mining itself has no visiting-hour restriction, even when Gem is absent.</p>
+<figure class="reviewed-screenshot" style="max-width: 345px"><a aria-label="View full screenshot: The yellow border marks the selected tool. The fraction line is separate from the whole-resource total." href="../assets/images/wiki/mining/en-controls-full.webp" rel="noopener" target="_blank"><img alt="The yellow border marks the selected tool. The fraction line is separate from the whole-resource total." decoding="async" height="710" loading="lazy" src="../assets/images/wiki/mining/en-controls.webp" width="345"/></a><figcaption>The yellow border marks the selected tool. The fraction line is separate from the whole-resource total.</figcaption></figure></section>
+<section id="en-board"><span aria-hidden="true" class="wiki-anchor-alias" id="Mineral_/_Rock-type_Tiles"></span><span aria-hidden="true" class="wiki-anchor-alias" id="Mineral_.2F_Rock-type_Tiles"></span><span aria-hidden="true" class="wiki-anchor-alias" id="Gem-type_Tiles"></span><span aria-hidden="true" class="wiki-anchor-alias" id="Crystal-type_Tiles_(Panthers)"></span><span aria-hidden="true" class="wiki-anchor-alias" id="Crystal-type_Tiles_.28Panthers.29"></span><span aria-hidden="true" class="wiki-anchor-alias" id="Special_Tiles"></span><span aria-hidden="true" class="wiki-anchor-alias" id="Power-Up_Tiles"></span><span aria-hidden="true" class="wiki-anchor-alias" id="Indestructible_Tiles"></span><span aria-hidden="true" class="wiki-anchor-alias" id="Cascade_Matches"></span><span aria-hidden="true" class="wiki-anchor-alias" id="Power-Ups"></span><span aria-hidden="true" class="wiki-anchor-alias" id="What_Power-Up_Chains_Destroy"></span><span aria-hidden="true" class="wiki-anchor-alias" id="Repair_Tiles_(Mining_Itself)"></span><span aria-hidden="true" class="wiki-anchor-alias" id="Repair_Tiles_.28Mining_Itself.29"></span>
+<h2>Make the board work for you</h2>
+<p>You <strong>break a tile rather than swap two tiles</strong>. Pieces fall into the gap and new ones enter from above. A horizontal or vertical line of at least three identical basic tiles clears automatically and pays each tile’s reward. The basic types are Rock, Iron Ore, Gold, Coal, Metal, Emerald, and Ruby. Diagonals and durable special stones do not form these ordinary matches.</p>
+<table>
+<caption>Matches damage durable tiles directly above, below, left, or right of the line</caption>
+<thead><tr><th scope="col">Match length</th><th scope="col">Adjacent damage</th><th scope="col">Other effects</th></tr></thead>
+<tbody>
+<tr><th scope="row">3</th><td data-label="Adjacent damage">5</td><td data-label="Other effects">Activates adjacent power-ups.</td></tr>
+<tr><th scope="row">4</th><td data-label="Adjacent damage">10</td><td data-label="Other effects">Also collects adjacent Repair and Energy tiles.</td></tr>
+<tr><th scope="row">5 or more</th><td data-label="Adjacent damage">25</td><td data-label="Other effects">Also collects adjacent Repair and Energy tiles.</td></tr>
+</tbody>
+</table>
+<p>Matches do not simply clear all neighboring ordinary tiles. Look for a gap that will align a useful line, especially beside a durable stone or power-up.</p>
+<table>
+<caption>Power-ups can be clicked, struck by Diamond’s extra hit, or activated by neighboring matches and other power-ups</caption>
+<thead><tr><th scope="col">Power-up</th><th scope="col">Area</th></tr></thead>
+<tbody>
+<tr><th scope="row">Bomb</th><td data-label="Area">A 3 × 3 square centered on the bomb.</td></tr>
+<tr><th scope="row">Fireblock</th><td data-label="Area">Its whole horizontal row.</td></tr>
+<tr><th scope="row">Magic Cube</th><td data-label="Area">Its whole vertical column.</td></tr>
+</tbody>
+</table>
+<p>A connected power-up chain clears ordinary tiles, collects Repair and Energy, and activates other power-ups in its area. Durable ore takes <strong>15 damage per affected position in that chain</strong>; overlapping blast areas do not multiply this damage. It pays only when broken. Bedrock and glass are unaffected by blasts.</p>
+<details><summary>What changes in a long cascade?</summary><p>From the third falling-and-matching round of the same swing, a Rock next to any position consumed earlier in that chain can substitute for Coal, Iron, or Metal. All eight neighboring positions count for this rule. It cannot substitute for Gold, Emerald, or Ruby. Bombs activated at this depth also blast every Coal tile on the board. These effects reset for the next swing.</p></details>
+<p>Each fresh board starts with four bedrock blocks. During refills, new bedrock has a 1.5% chance to appear while fewer than four blocks remain. Use Copper to remove an obstruction when that opens a useful match; keep Diamond available for glass and durable finds.</p>
+</section>
+<section id="en-rewards"><span aria-hidden="true" class="wiki-anchor-alias" id="Tile_Types_and_Rewards"></span><span aria-hidden="true" class="wiki-anchor-alias" id="The_Six_Resources"></span><span aria-hidden="true" class="wiki-anchor-alias" id="Resource_Strategy"></span>
+<h2>Understand the rewards: fragments first</h2>
+<p>The six ordinary resource counters track <strong>Iron Ingots, Silver Ingots, Mithril Ingots, Mineral Clusters, Crystals, and Gems</strong>. Every 100 fragments of one resource automatically become one whole unit; leftover fragments remain. For example, 99 Iron fragments plus two becomes one whole Iron Ingot and one fragment.</p>
+<p><strong>Every number in the next table is a fragment reward</strong>, not a whole ingot, crystal, or gem. “Random” means each listed choice is equally likely unless a percentage is shown. Rewards apply when the tile is consumed by a hit, match, or blast.</p>
+<table>
+<caption>Ordinary material tiles and starting HP</caption>
+<thead><tr><th scope="col">Tile</th><th scope="col">HP</th><th scope="col">Fragments on break</th></tr></thead>
+<tbody>
+<tr><th scope="row">Rock</th><td data-label="HP">1</td><td data-label="Fragments on break">One: 50% Iron, 40% Silver, 10% Mithril.</td></tr>
+<tr><th scope="row">Iron Ore</th><td data-label="HP">1</td><td data-label="Fragments on break">1 Iron; 10% chance of one random Silver, Mithril, Cluster, Crystal, or Gem.</td></tr>
+<tr><th scope="row">Gold</th><td data-label="HP">1</td><td data-label="Fragments on break">1 Iron + 1 Silver; 10% chance of one random Mithril, Cluster, Crystal, or Gem.</td></tr>
+<tr><th scope="row">Coal</th><td data-label="HP">1</td><td data-label="Fragments on break">1 Iron; separate 15% chance of 1 Mithril and 10% chance of 1 Gem.</td></tr>
+<tr><th scope="row">Metal</th><td data-label="HP">1</td><td data-label="Fragments on break">Three fragments, each randomly Iron, Silver, or Mithril.</td></tr>
+<tr><th scope="row">Metal Star</th><td data-label="HP">3</td><td data-label="Fragments on break">2 Iron + 2 Silver + 2 Mithril + one random Cluster, Crystal, or Gem.</td></tr>
+<tr><th scope="row">Metal Fragments</th><td data-label="HP">8</td><td data-label="Fragments on break">1 Iron + 1 Silver + 1 Mithril.</td></tr>
+<tr><th scope="row">Molten</th><td data-label="HP">5</td><td data-label="Fragments on break">2 Iron + 1 Silver + 1 Mithril; 40% chance of one random Cluster, Crystal, or Gem.</td></tr>
+<tr><th scope="row">Bedrock</th><td data-label="HP">One compatible hit</td><td data-label="Fragments on break">Two fragments, each randomly one of the six resources.</td></tr>
+<tr><th scope="row">Emerald</th><td data-label="HP">1</td><td data-label="Fragments on break">1 Cluster; 40% chance of one random Crystal or Gem.</td></tr>
+<tr><th scope="row">Ruby</th><td data-label="HP">1</td><td data-label="Fragments on break">2 Clusters; 20% chance of one random Crystal or Gem.</td></tr>
+<tr><th scope="row">Green, Blue, or Pink Panther</th><td data-label="HP">10</td><td data-label="Fragments on break">Three fragments, each randomly Cluster, Crystal, or Gem. All three colors work alike.</td></tr>
+<tr><th scope="row">Rainbow Gem</th><td data-label="HP">15</td><td data-label="Fragments on break">3 Clusters + 1 Crystal + 1 Gem.</td></tr>
+<tr><th scope="row">Rose Gem</th><td data-label="HP">30</td><td data-label="Fragments on break">1 of each of the six resources.</td></tr>
+<tr><th scope="row">Iridescent</th><td data-label="HP">25</td><td data-label="Fragments on break">2 of each of the six resources.</td></tr>
+</tbody>
+</table>
+<p>Energy and Repair tiles have 1 HP and give their named bonuses instead of fragments. Glass yields no material; breaking it opens space. Power-ups have no separate material prize, but the tiles they consume pay normally.</p>
+<p>Whole Crystals and Gems join your main inventory. Ingots, Clusters, and unlocked Chronium are shown among your supplies. Save your game normally to retain progress between play sessions. Gastoff’s <a href="game-systems-blacksmith-and-forge.html">forge</a> spends whole materials, so a display of 10/100 fragments is not ten ingots.</p>
+</section>
+<section id="en-rare"><span aria-hidden="true" class="wiki-anchor-alias" id="Key_Item_Stones"></span><span aria-hidden="true" class="wiki-anchor-alias" id="Pity_Timer"></span><span aria-hidden="true" class="wiki-anchor-alias" id="Long_Sessions_and_the_Pity_Timer"></span>
+<h2>Key stones and Chronium</h2>
+<table>
+<caption>Rare finds award a whole item only after you break the deposit</caption>
+<thead><tr><th scope="col">Find</th><th scope="col">Starting HP</th><th scope="col">Reward</th></tr></thead>
+<tbody>
+<tr><th scope="row">Sword, Brute, Balance, Elemental, or Twilight Stone</th><td data-label="Starting HP">200</td><td data-label="Reward">The corresponding unique Soul Stone, starting at level 1.</td></tr>
+<tr><th scope="row">Queenstone or Aether Stone</th><td data-label="Starting HP">400</td><td data-label="Reward">The corresponding unique Soul Stone, starting at level 1.</td></tr>
+<tr><th scope="row">Chronium ore</th><td data-label="Starting HP">400</td><td data-label="Reward">1 whole Chronium; no fragment conversion.</td></tr>
+</tbody>
+</table>
+<p>Only unowned mining stones can appear. <strong>At most one key-stone deposit can appear in each visit</strong>, even if you leave it unbroken. Phantom Stone is obtained elsewhere; it does not appear as one of these seven mining deposits.</p>
+<h3>Key-stone and Iridescent assistance after 60 swings</h3>
+<p>The ordinary key-stone category has a 0.013% chance per ordinary tile-generation roll, before priority rules. One swing can generate many tiles, so this is not the chance per click.</p>
+<p>After <strong>60 accepted paid swings in one visit</strong>, each ordinary tile-generation check has a 3% chance to offer an eligible rare find. The candidates are each still-unowned mining stone, provided no key stone has appeared this visit, and Iridescent, provided none has appeared this visit. Each candidate is equally likely. A key-stone appearance removes the key-stone candidates; an Iridescent appearance removes its candidate. When both have appeared, this assistance stops. Ordinary Iridescent appearances can still happen.</p>
+<p>This improves the chance; <strong>it does not guarantee a rare item on swing 60</strong>. A Luck Potion can retry this check and supported fragment-bonus checks. It does not increase every ordinary tile’s appearance chance.</p>
+<h3>Unlock Chronium before hunting it</h3>
+<p>Later in the main story, <a href="character-cid.html">Cid</a> offers <strong>Something That Holds</strong> at the Future modification clinic. Complete his Chronium introduction in your current adventure: it gives one whole piece and unlocks further acquisition. Chronium cannot appear in mining before that introduction.</p>
+<p>After unlocking it, raw Chronium ore has a <strong>0.01% chance per eligible ordinary tile-generation roll</strong>. It has no pity guarantee and no Luck Potion retry. <strong>At most one Chronium deposit can appear per visit</strong>; this is separate from the key-stone limit. Breaking it awards one whole piece. Seeing it without breaking it gives nothing.</p>
+<p>A 400-HP deposit would take 80 direct Diamond hits, 200 Copper hits, or 400 Iron hits without other damage. Plan enough supplies, then use nearby matches and power-ups to reduce that cost. The tool that lands the last hit does not change the reward.</p>
+<p>Chronium also has other late-game acquisition routes, including eligible Infinity bosses, long Unlimited defense runs, Mountain Walks, Medieval Back Alleys searches, and a qualifying Dwarf Miner encounter. Mining is a rare additional route rather than a fixed-yield supply. See <a href="character-cid.html">Cid</a> and <a href="game-systems-infinity-dungeons.html">Infinity Dungeons</a> for connected progression. Each final Chronium armor upgrade at Gastoff’s forge costs 10 whole Chronium and replaces the corresponding Gemmed piece.</p>
+<figure class="reviewed-screenshot"><a aria-label="View full screenshot: Tile reference: Sword Stone (160 HP remaining) and raw Chronium (350 remaining). This example arrangement illustrates their appearance, not a guaranteed spawn." href="../assets/images/wiki/mining/en-rare.webp" rel="noopener" target="_blank"><img alt="Tile reference: Sword Stone (160 HP remaining) and raw Chronium (350 remaining). This example arrangement illustrates their appearance, not a guaranteed spawn." decoding="async" height="720" loading="lazy" src="../assets/images/wiki/mining/en-rare.webp" width="1280"/></a><figcaption>Tile reference: Sword Stone (160 HP remaining) and raw Chronium (350 remaining). This example arrangement illustrates their appearance, not a guaranteed spawn.</figcaption></figure></section>
+<section id="en-enhancements"><span aria-hidden="true" class="wiki-anchor-alias" id="Soul_Stone_Enhancements"></span><span aria-hidden="true" class="wiki-anchor-alias" id="How_Enhancement_Levels_Are_Awarded"></span><span aria-hidden="true" class="wiki-anchor-alias" id="The_Separate_60-Swing_Enhancement_Guarantee"></span>
+<h2>Upgrade owned Soul Stones with enhancement ore</h2>
+<p>Own <strong>five different Soul Stones</strong> to unlock enhancement tiles. The count includes the seven mining stones and Phantom Stone. Enhancements can appear on the starting board as well as during refills.</p>
+<table>
+<caption>Break the tile to distribute a shared pool of stone-level increases</caption>
+<thead><tr><th scope="col">Enhancement</th><th scope="col">HP</th><th scope="col">Total levels awarded</th><th scope="col">Ordinary appearance chance</th></tr></thead>
+<tbody>
+<tr><th scope="row">Small · green</th><td data-label="HP">100</td><td data-label="Total levels awarded">5</td><td data-label="Ordinary appearance chance">0.35%</td></tr>
+<tr><th scope="row">Medium · purple</th><td data-label="HP">180</td><td data-label="Total levels awarded">10</td><td data-label="Ordinary appearance chance">0.125%</td></tr>
+<tr><th scope="row">Large · gold</th><td data-label="HP">300</td><td data-label="Total levels awarded">20</td><td data-label="Ordinary appearance chance">0.025%</td></tr>
+</tbody>
+</table>
+<p>These are chances per eligible ordinary tile-generation roll. Each awarded level goes to one randomly chosen owned stone. A Small enhancement gives <strong>five levels in total</strong>, not five to every stone; multiple levels can go to the same recipient. You cannot choose the recipients. Direct hits, Diamond’s extra hit, adjacent matches, and blasts can all finish the tile.</p>
+<h3>The separate 60-swing guarantee</h3>
+<p>With five stones owned, every accepted paid swing advances the enhancement counter. <strong>Any enhancement appearance resets it</strong>, before that tile is broken. After 60 paid swings without an appearance, an enhancement is queued for the <strong>next refill opening</strong>: 70% Small, 25% Medium, 5% Large. If your swing only chips a durable stone and opens no gap, you must create a gap before it can arrive.</p>
+<p>This guarantee can repeat in the same visit. It guarantees an ore tile appearing, not automatic levels. It is independent of the key-stone/Iridescent check and does not help Chronium.</p>
+<p>If you want to raise a specific owned stone instead, <a href="character-theneas.html">Theneas’s Soul Stone Upgrade service</a> offers a separate route using Infinity Dungeon drops. Mining’s enhancement allocations remain random.</p>
+<figure class="reviewed-screenshot"><a aria-label="View full screenshot: Enhancement tile reference: Small green, Medium purple and Large gold, with some HP already removed. Their arrangement here is illustrative." href="../assets/images/wiki/mining/en-enhancements.webp" rel="noopener" target="_blank"><img alt="Enhancement tile reference: Small green, Medium purple and Large gold, with some HP already removed. Their arrangement here is illustrative." decoding="async" height="720" loading="lazy" src="../assets/images/wiki/mining/en-enhancements.webp" width="1280"/></a><figcaption>Enhancement tile reference: Small green, Medium purple and Large gold, with some HP already removed. Their arrangement here is illustrative.</figcaption></figure></section>
+<section id="en-decisions"><span aria-hidden="true" class="wiki-anchor-alias" id="Don't_Forget_to_Exit"></span><span aria-hidden="true" class="wiki-anchor-alias" id="Don.27t_Forget_to_Exit"></span>
+<h2>Decide when to spend and when to leave</h2>
+<ul>
+<li><strong>For ordinary materials:</strong> favor cheap breaks that create matches. Metal gives three metal fragments from a 1-HP tile; a tough-looking tile is not automatically better value.</li>
+<li><strong>For a rare stone:</strong> work around it to create adjacent matches and power-up hits. Damage already dealt remains while you stay on the board. Iron and Copper can finish it too.</li>
+<li><strong>For a longer visit:</strong> bring Energy items and tools before entry. The 60-swing systems count paid swings, so free hits do not advance them. Energy tiles and Repair tiles help extend supplies.</li>
+<li><strong>Before exiting:</strong> finish a wanted rare deposit if you can. A new visit resets the board; it is not a way to carry half-broken ore forward.</li>
+</ul>
+<p><strong>You keep</strong> collected fragments, whole resources, unused tools, acquired key stones, and levels already awarded. <strong>You lose</strong> the current board, unfinished tile HP progress, unbroken ore rewards, the visit’s discovery counters, and any queued enhancement. Costs already spent remain spent.</p>
+</section>
+<section id="en-troubleshooting">
+<h2>Common problems</h2>
+<details><summary>Mining is greyed out</summary><p>Check that you have at least 30 Energy and one pickaxe of any type. Gem’s dungeon-wall Mining lesson is not required for this board.</p></details>
+<details><summary>I entered, but clicking does nothing</summary><p>Entry spent 30 Energy. Check that at least 10 remains, the yellow-bordered tool has stock, the animation has finished, and the tool can break your target. Select another stocked tool manually when the current one runs out.</p></details>
+<details><summary>I mined crystals but my crystal total did not increase</summary><p>Check the fragment line. Only each complete set of 100 becomes a whole crystal. The same rule applies to all six ordinary mining resources.</p></details>
+<details><summary>The blast did not destroy my stone</summary><p>Durable stones keep their remaining HP. A power-up chain deals 15 damage to each affected position; overlapping blasts in that same chain do not multiply it. Bedrock and glass require a compatible pickaxe.</p></details>
+<details><summary>No enhancement appeared after 60 clicks</summary><p>Own five different Soul Stones first. Count accepted paid swings since the last enhancement appeared, then create a refill opening for a queued tile. An earlier natural appearance restarted the counter.</p></details>
+<details><summary>I found a key stone but cannot find another</summary><p>The one-per-visit limit is used when a stone appears, even before collection. A fresh visit can offer another unowned stone, but leaving discards the current board.</p></details>
+<details><summary>I cannot find Chronium</summary><p>Complete Cid’s introduction first. Its 0.01% eligible tile chance has no 60-swing guarantee or Luck Potion retry, and only one deposit can appear per visit. The left column’s six fragment counters are not a Chronium counter.</p></details>
+</section>
+<section id="en-next">
+<h2>Related guides</h2>
+<div class="starter-related">
+<a href="character-gem.html"><strong>Gem</strong><span>Pickaxe purchases and the separate dungeon-wall Mining lesson.</span></a>
+<a href="game-systems-blacksmith-and-forge.html"><strong>Blacksmith and forge</strong><span>Turn whole materials into armor and compare upgrade costs.</span></a>
+<a href="game-systems-dungeon.html"><strong>Dungeon exploration</strong><span>Find pickaxe drops and put the Mining skill to use.</span></a>
+<a href="character-theneas.html"><strong>Theneas</strong><span>Choose a specific Soul Stone for material-based upgrades.</span></a>
+<a href="game-systems-thieves-guild.html"><strong>Thieves Guild</strong><span>Heist rewards and other uses for collected goods.</span></a>
+</div>
+</section>
+</div><div class="wiki-source-content wiki-source-content-zh" data-lang-panel="zh" hidden="" lang="zh-CN"><div class="starter-lead">
+<p>在<strong>8 行 × 11 列</strong>的矿盘上敲碎矿块，让下落的矿块形成消除，积累材料。下文所称的精力，在采矿界面中显示为「能量」。第一次先熟悉资源与工具；想开采高耐久矿石、寻找稀有物品时，再准备足够的精力和镐。</p>
+<ol class="starter-checklist">
+<li><a href="#zh-start">前往中世纪的村庄郊外，进入山脚。</a></li>
+<li><a href="#zh-tools">带上镐，准备至少 40 精力，支付入场和第一次挥镐。</a></li>
+<li><a href="#zh-rewards">看清碎片计数：同种资源的 100 碎片才合成 1 个完整单位。</a></li>
+<li><a href="#zh-rare">离开前尽量采完想要的稀有矿石，下次进入会换一张矿盘。</a></li>
+</ol>
+</div>
+<section id="zh-start"><span aria-hidden="true" class="wiki-anchor-alias" id="zh-Quick_Start"></span><span aria-hidden="true" class="wiki-anchor-alias" id="zh-Locations"></span><span aria-hidden="true" class="wiki-anchor-alias" id="zh-Mountain_Foothills_(Medieval_Outskirts)"></span><span aria-hidden="true" class="wiki-anchor-alias" id="zh-Mountain_Foothills_.28Medieval_Outskirts.29"></span><span aria-hidden="true" class="wiki-anchor-alias" id="zh-Switching_Between_Them"></span><span aria-hidden="true" class="wiki-anchor-alias" id="zh-How_a_Mining_Session_Works"></span><span aria-hidden="true" class="wiki-anchor-alias" id="zh-The_Mining_Screen"></span><span aria-hidden="true" class="wiki-anchor-alias" id="zh-Top_Bar"></span><span aria-hidden="true" class="wiki-anchor-alias" id="zh-Left_Side"></span><span aria-hidden="true" class="wiki-anchor-alias" id="zh-Bottom_Left"></span><span aria-hidden="true" class="wiki-anchor-alias" id="zh-Right_Side"></span><span aria-hidden="true" class="wiki-anchor-alias" id="zh-Wild_Rocks"></span><span aria-hidden="true" class="wiki-anchor-alias" id="zh-Bomb"></span><span aria-hidden="true" class="wiki-anchor-alias" id="zh-Fireblock"></span><span aria-hidden="true" class="wiki-anchor-alias" id="zh-Magic_Cube"></span><span aria-hidden="true" class="wiki-anchor-alias" id="zh-Spawn_Rules"></span><span aria-hidden="true" class="wiki-anchor-alias" id="zh-Strategy_for_Breaking_Them"></span><span aria-hidden="true" class="wiki-anchor-alias" id="zh-Buying_from_Gem"></span><span aria-hidden="true" class="wiki-anchor-alias" id="zh-Battle_Drops_(Dungeon)"></span><span aria-hidden="true" class="wiki-anchor-alias" id="zh-Battle_Drops_.28Dungeon.29"></span><span aria-hidden="true" class="wiki-anchor-alias" id="zh-Heists_(Thieves_Guild)"></span><span aria-hidden="true" class="wiki-anchor-alias" id="zh-Heists_.28Thieves_Guild.29"></span><span aria-hidden="true" class="wiki-anchor-alias" id="zh-Search_Encounters"></span><span aria-hidden="true" class="wiki-anchor-alias" id="zh-Hard_Cap"></span><span aria-hidden="true" class="wiki-anchor-alias" id="zh-Tips_and_Strategy"></span><span aria-hidden="true" class="wiki-anchor-alias" id="zh-Before_Entering"></span><span aria-hidden="true" class="wiki-anchor-alias" id="zh-During_a_Session"></span><span aria-hidden="true" class="wiki-anchor-alias" id="zh-Common_Questions"></span><span aria-hidden="true" class="wiki-anchor-alias" id="zh-Accuracy_Notes"></span><span aria-hidden="true" class="wiki-anchor-alias" id="zh-Related_Pages"></span>
+<h2>第一次采矿，从哪里进入</h2>
+<p>前往<strong>中世纪 → 村庄郊外 → 山脚（Mountain Foothills）</strong>，选择<strong>「采矿」</strong>。地点和小游戏不要求先学会 Gem 的「采矿」技能；她教授的是地下城破墙技巧，两者是不同入口。</p>
+<ol class="starter-steps">
+<li><strong>先检查补给。</strong>入场需要至少 30 精力，并持有任意一种镐。新角色自带 1 把铁镐。</li>
+<li><strong>算上入场消耗。</strong>行动标注耗时 30 分钟，进入时扣除 30 精力。第一次挥镐还要 10 精力，因此直接开始操作至少要带 40 精力；也可以入场后使用精力恢复品。30 分钟是这次入场的耗时，不是每挥一次都再过 30 分钟。</li>
+<li><strong>在左下角选择有库存的镐。</strong>黄色边框表示当前选择。该类镐用完后，不会自动切换到其他类型。</li>
+<li><strong>点击一个矿块，再等矿盘停止下落。</strong>每次有效挥镐消耗 1 把所选镐和 10 精力；由此产生的消除、连锁和额外击打不再加收这笔费用。</li>
+<li><strong>点击左上角的 X，或按 Esc 离开。</strong>没有必须清完的关卡或最终分数。空格键不会退出。</li>
+</ol>
+<p class="starter-note">动画未结束、所选镐已用完、精力不足 10，或用不合适的镐点击基岩／玻璃时，这次点击不会生效，也不会扣除镐和精力。离开不会退还已经支付的入场费用。与其他行动一样，状态不佳可能延长实际耗时。</p>
+<figure class="reviewed-screenshot"><a aria-label="查看完整截图：采矿界面：左下选择工具，左侧分别显示完整资源与碎片，顶部显示剩余精力（能量）。" href="../assets/images/wiki/mining/zh-board.webp" rel="noopener" target="_blank"><img alt="采矿界面：左下选择工具，左侧分别显示完整资源与碎片，顶部显示剩余精力（能量）。" decoding="async" height="720" loading="lazy" src="../assets/images/wiki/mining/zh-board.webp" width="1280"/></a><figcaption>采矿界面：左下选择工具，左侧分别显示完整资源与碎片，顶部显示剩余精力（能量）。</figcaption></figure></section>
+<section id="zh-tools"><span aria-hidden="true" class="wiki-anchor-alias" id="zh-The_Three_Pickaxes"></span><span aria-hidden="true" class="wiki-anchor-alias" id="zh-Iron_Pickaxe_(default)"></span><span aria-hidden="true" class="wiki-anchor-alias" id="zh-Iron_Pickaxe_.28default.29"></span><span aria-hidden="true" class="wiki-anchor-alias" id="zh-Copper_Pickaxe"></span><span aria-hidden="true" class="wiki-anchor-alias" id="zh-Diamond_Pickaxe"></span><span aria-hidden="true" class="wiki-anchor-alias" id="zh-Getting_More_Pickaxes"></span><span aria-hidden="true" class="wiki-anchor-alias" id="zh-Pickaxe_Haul_(supporter_access)"></span><span aria-hidden="true" class="wiki-anchor-alias" id="zh-Pickaxe_Haul_.28supporter_access.29"></span>
+<h2>选好镐，也要留意精力</h2>
+<table>
+<caption>每次有效挥镐消耗一把对应类型的镐</caption>
+<thead><tr><th scope="col">工具</th><th scope="col">直接伤害</th><th scope="col">适合用途</th></tr></thead>
+<tbody>
+<tr><th scope="row">铁镐</th><td data-label="直接伤害">1</td><td data-label="适合用途">敲碎普通矿块、逐步开采高耐久矿石。无法破坏基岩或玻璃。</td></tr>
+<tr><th scope="row">铜镐</th><td data-label="直接伤害">2</td><td data-label="适合用途">一击破坏基岩。无法破坏玻璃。</td></tr>
+<tr><th scope="row">钻石镐</th><td data-label="直接伤害">5</td><td data-label="适合用途">一击破坏基岩和玻璃；还会免费击打周围随机一个位置，包括斜角。</td></tr>
+</tbody>
+</table>
+<p>钻石镐的额外击打会对高耐久矿石造成 5 点伤害，也能敲碎普通矿块、触发特殊矿块，或破坏基岩和玻璃。它一定落在另一个位置，不能对同一目标连打两次。两次挥镐之间可以免费切换有库存的工具。</p>
+<p>左上角的恢复品按钮会消耗 1 个库存恢复品，恢复<strong>25 精力</strong>；获得 Willow 的强化治疗升级后改为<strong>50</strong>，均不超过上限。<strong>精力矿块恢复 40 精力</strong>；<strong>修理矿块补充 3 把本次挥镐所用类型的镐</strong>。同一次连锁中收集到的修理矿块，也按发起这次挥镐时的类型结算。</p>
+<p>直接敲碎精力矿块，扣除挥镐费用后最多净回 30 精力；直接敲碎修理矿块则净增 2 把对应的镐。接近上限时，实际收益可能较少。</p>
+<h3>镐用完了，到哪里补充</h3>
+<table>
+<caption>购买与其他补充来源</caption>
+<thead><tr><th scope="col">来源</th><th scope="col">消耗或条件</th><th scope="col">获得内容</th></tr></thead>
+<tbody>
+<tr><th scope="row">Gem：铁镐（x5）</th><td data-label="消耗或条件">$200；10 分钟；每个游戏日限购一次。Gem 在山脚的时间为 07:00–17:00。</td><td data-label="获得内容">5 把铁镐；Gem 关系 +1。</td></tr>
+<tr><th scope="row">Gem：镐子采购（Pickaxe Haul）</th><td data-label="消耗或条件">1 个水晶；15 分钟；需要完整版，以及该行动提示的额外支持者内容权限。没有每日购买次数限制。</td><td data-label="获得内容">铁镐、铜镐、钻石镐各 10 把；Gem 关系 +2。</td></tr>
+<tr><th scope="row">地下城战斗胜利</th><td data-label="消耗或条件">基础掉落概率 15%；适用的掉落加成可提高概率。</td><td data-label="获得内容">1–20 层为铁镐，21–30 层为铜镐，31–40 层为钻石镐，41–45 层随机一种，每次 1 把。牛头人以皮革替代；部分无限地下城敌人使用其他掉落规则。</td></tr>
+<tr><th scope="row">成功撤离劫盗行动</th><td data-label="消耗或条件">成功退出后有 10% 概率。</td><td data-label="获得内容">鎏金街获得 1 把铜镐，贵族区获得 1 把钻石镐。</td></tr>
+<tr><th scope="row">搜索中世纪后巷</th><td data-label="消耗或条件">遇到遗弃的镐后，选择拿走。</td><td data-label="获得内容">2–5 把铁镐、2–4 把铜镐；通过幸运检定可再得 1 把钻石镐。</td></tr>
+</tbody>
+</table>
+<p>每种镐最多持有<strong>999 把</strong>，超过上限的补充会被舍弃。采矿小游戏本身没有开放时段限制，Gem 不在场也能进入。</p>
+<figure class="reviewed-screenshot" style="max-width: 345px"><a aria-label="查看完整截图：黄色边框表示当前工具。每项资源的完整数量与下方的「碎片／100」分开计算。" href="../assets/images/wiki/mining/zh-controls-full.webp" rel="noopener" target="_blank"><img alt="黄色边框表示当前工具。每项资源的完整数量与下方的「碎片／100」分开计算。" decoding="async" height="710" loading="lazy" src="../assets/images/wiki/mining/zh-controls.webp" width="345"/></a><figcaption>黄色边框表示当前工具。每项资源的完整数量与下方的「碎片／100」分开计算。</figcaption></figure></section>
+<section id="zh-board"><span aria-hidden="true" class="wiki-anchor-alias" id="zh-Mineral_/_Rock-type_Tiles"></span><span aria-hidden="true" class="wiki-anchor-alias" id="zh-Mineral_.2F_Rock-type_Tiles"></span><span aria-hidden="true" class="wiki-anchor-alias" id="zh-Gem-type_Tiles"></span><span aria-hidden="true" class="wiki-anchor-alias" id="zh-Crystal-type_Tiles_(Panthers)"></span><span aria-hidden="true" class="wiki-anchor-alias" id="zh-Crystal-type_Tiles_.28Panthers.29"></span><span aria-hidden="true" class="wiki-anchor-alias" id="zh-Special_Tiles"></span><span aria-hidden="true" class="wiki-anchor-alias" id="zh-Power-Up_Tiles"></span><span aria-hidden="true" class="wiki-anchor-alias" id="zh-Indestructible_Tiles"></span><span aria-hidden="true" class="wiki-anchor-alias" id="zh-Cascade_Matches"></span><span aria-hidden="true" class="wiki-anchor-alias" id="zh-Power-Ups"></span><span aria-hidden="true" class="wiki-anchor-alias" id="zh-What_Power-Up_Chains_Destroy"></span><span aria-hidden="true" class="wiki-anchor-alias" id="zh-Repair_Tiles_(Mining_Itself)"></span><span aria-hidden="true" class="wiki-anchor-alias" id="zh-Repair_Tiles_.28Mining_Itself.29"></span>
+<h2>用下落与连锁，减少挥镐次数</h2>
+<p>这里的操作是<strong>敲碎一个矿块，而不是交换两个位置</strong>。空位上方的矿块会下落，顶部补入新矿块；相同的基础矿块横向或纵向连成至少 3 个，就会自动消除并逐块结算奖励。基础类型包括岩石、铁矿、金矿、煤、金属、绿宝石和红宝石。斜线不算，高耐久的特殊矿石也不参加这种普通三消。</p>
+<table>
+<caption>消除会伤害与这条线直接上下左右相邻的高耐久矿石</caption>
+<thead><tr><th scope="col">连成数量</th><th scope="col">相邻伤害</th><th scope="col">其他效果</th></tr></thead>
+<tbody>
+<tr><th scope="row">3 个</th><td data-label="相邻伤害">5</td><td data-label="其他效果">触发相邻的特殊矿块。</td></tr>
+<tr><th scope="row">4 个</th><td data-label="相邻伤害">10</td><td data-label="其他效果">还会收集相邻的修理与精力矿块。</td></tr>
+<tr><th scope="row">5 个及以上</th><td data-label="相邻伤害">25</td><td data-label="其他效果">还会收集相邻的修理与精力矿块。</td></tr>
+</tbody>
+</table>
+<p>相邻效果不会把周围所有普通矿块一起清掉。落镐前先看：敲掉这个位置后，能否拼出一条消除线，尤其是靠近高耐久矿石或特殊矿块的线。</p>
+<table>
+<caption>直接敲击、钻石镐额外击打、相邻消除或其他特殊矿块都能触发</caption>
+<thead><tr><th scope="col">特殊矿块</th><th scope="col">作用范围</th></tr></thead>
+<tbody>
+<tr><th scope="row">炸弹</th><td data-label="作用范围">以自身为中心的 3 × 3 区域。</td></tr>
+<tr><th scope="row">火焰块（Fireblock）</th><td data-label="作用范围">所在的整条横行。</td></tr>
+<tr><th scope="row">魔方（Magic Cube）</th><td data-label="作用范围">所在的整条纵列。</td></tr>
+</tbody>
+</table>
+<p>同一条特殊矿块连锁会清除范围内的普通矿块、收集修理与精力矿块，并触发其他特殊矿块。范围内的高耐久矿石<strong>每个位置在该次连锁中承受 15 点伤害</strong>；多个爆破范围重叠也不会在这一次连锁中反复叠伤。只有真正敲碎矿石才会拿到奖励。基岩和玻璃不受爆破影响。</p>
+<details><summary>长连锁还有哪些变化？</summary><p>同一次挥镐进入第三轮下落消除后，若岩石周围八格中有位置在本次连锁中被消耗，这块岩石就能代替煤、铁矿或金属参与消除；不能代替金矿、绿宝石或红宝石。在这一阶段触发的炸弹还会炸到整张矿盘上的煤。下一次挥镐会重新计算这些效果。</p></details>
+<p>每张新矿盘起始有 4 块基岩。补入新矿块时，若盘上基岩不足 4 块，每个补入位置有 1.5% 概率生成基岩。挡住关键消除线时，可以用铜镐清掉；钻石镐则优先留给玻璃和高耐久目标。</p>
+</section>
+<section id="zh-rewards"><span aria-hidden="true" class="wiki-anchor-alias" id="zh-Tile_Types_and_Rewards"></span><span aria-hidden="true" class="wiki-anchor-alias" id="zh-The_Six_Resources"></span><span aria-hidden="true" class="wiki-anchor-alias" id="zh-Resource_Strategy"></span>
+<h2>普通资源先给碎片，满 100 才合成</h2>
+<p>左侧六项普通资源是<strong>铁锭、银锭、秘银锭、矿物簇、水晶和宝石</strong>。同种资源每积累 100 碎片，会自动变成 1 个完整单位，并保留余数。例如，已有 99 个铁碎片，再获得 2 个，就会增加 1 个完整铁锭，剩下 1 个碎片。</p>
+<p><strong>下表中的所有材料数量都是碎片</strong>，不是完整的锭、水晶或宝石。「随机」表示列出的选项等概率，另有百分比说明的除外。直接敲碎、消除或爆破收集，都会按对应矿块结算。</p>
+<table>
+<caption>普通材料矿块：初始耐久与碎片收益</caption>
+<thead><tr><th scope="col">矿块</th><th scope="col">耐久</th><th scope="col">敲碎后的碎片</th></tr></thead>
+<tbody>
+<tr><th scope="row">岩石</th><td data-label="耐久">1</td><td data-label="敲碎后的碎片">共 1 个：50% 为铁，40% 为银，10% 为秘银。</td></tr>
+<tr><th scope="row">铁矿</th><td data-label="耐久">1</td><td data-label="敲碎后的碎片">铁 1；另有 10% 概率随机获得银、秘银、矿物簇、水晶或宝石 1 个。</td></tr>
+<tr><th scope="row">金矿</th><td data-label="耐久">1</td><td data-label="敲碎后的碎片">铁 1、银 1；另有 10% 概率随机获得秘银、矿物簇、水晶或宝石 1 个。</td></tr>
+<tr><th scope="row">煤</th><td data-label="耐久">1</td><td data-label="敲碎后的碎片">铁 1；另分别有 15% 概率获得秘银 1、10% 概率获得宝石 1，两项独立判定。</td></tr>
+<tr><th scope="row">金属</th><td data-label="耐久">1</td><td data-label="敲碎后的碎片">共 3 个，每个分别从铁、银、秘银中随机。</td></tr>
+<tr><th scope="row">金属星</th><td data-label="耐久">3</td><td data-label="敲碎后的碎片">铁 2、银 2、秘银 2；再随机获得矿物簇、水晶或宝石 1 个。</td></tr>
+<tr><th scope="row">金属碎块</th><td data-label="耐久">8</td><td data-label="敲碎后的碎片">铁、银、秘银各 1。</td></tr>
+<tr><th scope="row">熔融矿块</th><td data-label="耐久">5</td><td data-label="敲碎后的碎片">铁 2、银 1、秘银 1；另有 40% 概率随机获得矿物簇、水晶或宝石 1 个。</td></tr>
+<tr><th scope="row">基岩</th><td data-label="耐久">合适的镐一击击碎</td><td data-label="敲碎后的碎片">共 2 个，每个分别从六种资源中随机。</td></tr>
+<tr><th scope="row">绿宝石</th><td data-label="耐久">1</td><td data-label="敲碎后的碎片">矿物簇 1；另有 40% 概率随机获得水晶或宝石 1 个。</td></tr>
+<tr><th scope="row">红宝石</th><td data-label="耐久">1</td><td data-label="敲碎后的碎片">矿物簇 2；另有 20% 概率随机获得水晶或宝石 1 个。</td></tr>
+<tr><th scope="row">绿豹／蓝豹／粉豹</th><td data-label="耐久">10</td><td data-label="敲碎后的碎片">共 3 个，每个分别从矿物簇、水晶、宝石中随机。三种颜色的收益规则相同。</td></tr>
+<tr><th scope="row">彩虹宝石</th><td data-label="耐久">15</td><td data-label="敲碎后的碎片">矿物簇 3、水晶 1、宝石 1。</td></tr>
+<tr><th scope="row">玫瑰宝石</th><td data-label="耐久">30</td><td data-label="敲碎后的碎片">六种资源各 1。</td></tr>
+<tr><th scope="row">虹彩矿块（Iridescent）</th><td data-label="耐久">25</td><td data-label="敲碎后的碎片">六种资源各 2。</td></tr>
+</tbody>
+</table>
+<p>精力与修理矿块耐久都是 1，提供对应补给，不给材料碎片。玻璃没有材料奖励，敲掉只是腾出空间。炸弹等特殊矿块本身也没有额外材料奖，但它们消耗的矿块会正常结算。</p>
+<p>完整水晶和宝石进入主背包；锭、矿物簇以及解锁后的时源矿可在补给物资中查看。结束游玩前仍要正常保存游戏。Gastoff 的<a href="game-systems-blacksmith-and-forge.html">锻造服务</a>消耗完整材料，因此「碎片 10/100」并不等于持有 10 个锭。</p>
+</section>
+<section id="zh-rare"><span aria-hidden="true" class="wiki-anchor-alias" id="zh-Key_Item_Stones"></span><span aria-hidden="true" class="wiki-anchor-alias" id="zh-Pity_Timer"></span><span aria-hidden="true" class="wiki-anchor-alias" id="zh-Long_Sessions_and_the_Pity_Timer"></span>
+<h2>灵魂石与时源矿：出现后还要采完</h2>
+<table>
+<caption>稀有矿石需要完全破坏后，才会获得完整物品</caption>
+<thead><tr><th scope="col">矿石</th><th scope="col">初始耐久</th><th scope="col">奖励</th></tr></thead>
+<tbody>
+<tr><th scope="row">剑石、蛮力之石、平衡之石、元素之石、暮光之石</th><td data-label="初始耐久">200</td><td data-label="奖励">对应的独特灵魂石，初次获得为 1 级。</td></tr>
+<tr><th scope="row">女王石、以太之石</th><td data-label="初始耐久">400</td><td data-label="奖励">对应的独特灵魂石，初次获得为 1 级。</td></tr>
+<tr><th scope="row">时源矿原矿</th><td data-label="初始耐久">400</td><td data-label="奖励">1 个完整时源矿，不经过碎片合成。</td></tr>
+</tbody>
+</table>
+<p>只会出现尚未拥有的采矿灵魂石。<strong>每次入场最多出现一块灵魂石矿石</strong>，即使还没采完，也已占用本次名额。幻影之石来自其他途径，不在这七种采矿矿石之中。</p>
+<h3>挥镐 60 次后，灵魂石与虹彩矿块的额外机会</h3>
+<p>在普通矿块生成判定中，灵魂石类别的基础概率为 0.013%，还要考虑优先生成规则。一次挥镐可能补入很多矿块，因此这不是每次点击的概率。</p>
+<p>同一次入场内累计<strong>60 次有效且付费的挥镐</strong>后，每次普通矿块生成判定都有 3% 概率改为生成一项符合条件的稀有物。候选包括每一种尚未拥有的采矿灵魂石，以及虹彩矿块：本次已经出现过灵魂石，就移除所有灵魂石候选；本次已经出现过虹彩矿块，就移除它的候选。各个候选等概率，两类都出现后，这项额外判定停止。普通生成仍可能出现更多虹彩矿块。</p>
+<p>这只是提高后续机会，<strong>不保证第 60 次挥镐立刻出现稀有物</strong>。幸运药水能重试这项判定和部分碎片追加奖励判定，但不会统一提高所有矿块的普通出现概率。</p>
+<h3>先解锁时源矿，再考虑专门寻找</h3>
+<p>主线推进到后期时，<a href="character-cid.html">Cid</a>会在未来时代的改造诊所提供<strong>「坚守之物」（Something That Holds）</strong>事件。先在当前冒险中完成他的时源矿介绍：事件会赠送 1 个完整时源矿，并开放后续获取途径。在此之前，采矿不会生成时源矿。</p>
+<p>解锁后，时源矿原矿在每次符合条件的普通矿块生成判定中有<strong>0.01%</strong>概率出现。它<strong>没有保底，也不受幸运药水重试影响</strong>。每次入场最多出现一块，与灵魂石的单次名额分别计算。完全采碎后才获得 1 个完整时源矿；只发现、未采完则没有奖励。</p>
+<p>不计算其他伤害时，400 耐久需要钻石镐直接敲 80 次、铜镐 200 次或铁镐 400 次。先备好补给，再利用旁边的消除和特殊矿块减少消耗。最后一击用什么镐，不会改变奖励。</p>
+<p>时源矿还可通过部分无限地下城首领、较长的无限防守、现代山路徒步、中世纪后巷搜索，以及符合条件的矮人矿工遭遇获得。采矿是额外的低概率来源，不是每次都有固定产出的供应方式。相关进度可参阅<a href="character-cid.html">Cid</a>与<a href="game-systems-infinity-dungeons.html">无限地下城</a>。Gastoff 的每件最终时源矿护甲升级消耗 10 个完整时源矿，并替换对应的镶宝石护甲。</p>
+<figure class="reviewed-screenshot"><a aria-label="查看完整截图：矿石外观示例：剑石剩余 160 耐久，时源矿原矿剩余 350。此处为便于辨认而展示的排列，不代表必定同时出现。" href="../assets/images/wiki/mining/zh-rare.webp" rel="noopener" target="_blank"><img alt="矿石外观示例：剑石剩余 160 耐久，时源矿原矿剩余 350。此处为便于辨认而展示的排列，不代表必定同时出现。" decoding="async" height="720" loading="lazy" src="../assets/images/wiki/mining/zh-rare.webp" width="1280"/></a><figcaption>矿石外观示例：剑石剩余 160 耐久，时源矿原矿剩余 350。此处为便于辨认而展示的排列，不代表必定同时出现。</figcaption></figure></section>
+<section id="zh-enhancements"><span aria-hidden="true" class="wiki-anchor-alias" id="zh-Soul_Stone_Enhancements"></span><span aria-hidden="true" class="wiki-anchor-alias" id="zh-How_Enhancement_Levels_Are_Awarded"></span><span aria-hidden="true" class="wiki-anchor-alias" id="zh-The_Separate_60-Swing_Enhancement_Guarantee"></span>
+<h2>灵魂石强化矿：为已持有的石头加级</h2>
+<p>持有<strong>五种不同的灵魂石</strong>后，矿盘可以出现强化矿。计数包括七种采矿灵魂石和幻影之石。符合条件后，初始矿盘与后续补入矿块都可能出现强化矿。</p>
+<table>
+<caption>完全采碎后，将总升级次数随机分配给已持有的灵魂石</caption>
+<thead><tr><th scope="col">强化矿</th><th scope="col">耐久</th><th scope="col">总升级次数</th><th scope="col">普通出现概率</th></tr></thead>
+<tbody>
+<tr><th scope="row">小型 · 绿色</th><td data-label="耐久">100</td><td data-label="总升级次数">5</td><td data-label="普通出现概率">0.35%</td></tr>
+<tr><th scope="row">中型 · 紫色</th><td data-label="耐久">180</td><td data-label="总升级次数">10</td><td data-label="普通出现概率">0.125%</td></tr>
+<tr><th scope="row">大型 · 金色</th><td data-label="耐久">300</td><td data-label="总升级次数">20</td><td data-label="普通出现概率">0.025%</td></tr>
+</tbody>
+</table>
+<p>概率按每次符合条件的普通矿块生成判定计算。每一次升级都随机选中一颗已拥有的灵魂石。小型矿提供的是<strong>总共 5 级</strong>，不是每颗石头都加 5 级；同一颗可能被选中多次，玩家不能指定分配对象。直接击打、钻石镐额外击打、相邻消除和爆破都能采碎强化矿。</p>
+<h3>独立计算的 60 次挥镐保底</h3>
+<p>持有五种灵魂石后，每次有效且付费的挥镐都会推进强化矿计数。<strong>任何强化矿一出现，计数就会重置</strong>，不必等采碎。连续 60 次挥镐都未出现强化矿后，会安排一块在<strong>下一个补入空位</strong>出现：小型 70%、中型 25%、大型 5%。如果这一镐只是削减高耐久矿石、没有产生空位，就要先敲出空位，等待补入。</p>
+<p>同一次入场可以反复触发这项保底。它保证的是强化矿出现，不是自动发放等级；与灵魂石／虹彩矿块的额外判定分别计算，也不会帮助生成时源矿。</p>
+<p>如果想指定某一颗已持有的石头升级，可以查看<a href="character-theneas.html">Theneas 的灵魂石升级服务</a>，用无限地下城材料进行升级。采矿强化的分配仍然是随机的。</p>
+<figure class="reviewed-screenshot"><a aria-label="查看完整截图：强化矿外观示例：小型为绿色，中型为紫色，大型为金色；图中已受到部分伤害，排列仅供辨认。" href="../assets/images/wiki/mining/zh-enhancements.webp" rel="noopener" target="_blank"><img alt="强化矿外观示例：小型为绿色，中型为紫色，大型为金色；图中已受到部分伤害，排列仅供辨认。" decoding="async" height="720" loading="lazy" src="../assets/images/wiki/mining/zh-enhancements.webp" width="1280"/></a><figcaption>强化矿外观示例：小型为绿色，中型为紫色，大型为金色；图中已受到部分伤害，排列仅供辨认。</figcaption></figure></section>
+<section id="zh-decisions"><span aria-hidden="true" class="wiki-anchor-alias" id="zh-Don't_Forget_to_Exit"></span><span aria-hidden="true" class="wiki-anchor-alias" id="zh-Don.27t_Forget_to_Exit"></span>
+<h2>什么时候继续挖，什么时候离开</h2>
+<ul>
+<li><strong>主要收集普通材料：</strong>优先考虑低消耗、能拼出消除的落点。金属矿块只有 1 耐久，却给 3 个金属类碎片；外观坚硬的矿块不一定更划算。</li>
+<li><strong>准备采一块稀有矿石：</strong>围绕它制造相邻消除或特殊矿块伤害。只要仍在这张矿盘上，已造成的伤害就会保留；铁镐和铜镐也能完成开采。</li>
+<li><strong>打算长时间采矿：</strong>入场前备好恢复品和镐。两种 60 次挥镐机制都只计付费的有效挥镐，免费连锁不增加次数；精力矿块和修理矿块能帮助延长本次采矿。</li>
+<li><strong>准备离开：</strong>尽量先采完想要的稀有目标。重新入场会换矿盘，不能把采到一半的原矿带到下一次。</li>
+</ul>
+<p><strong>离开后保留：</strong>已获得的碎片、完整资源、剩余镐、已采得的灵魂石，以及已经发放的等级。<strong>离开后清除：</strong>当前矿盘、未完成矿石的耐久进度、未采碎矿石的奖励、本次发现计数，以及排队等待出现的强化矿。已经花掉的资源不会退还。</p>
+</section>
+<section id="zh-troubleshooting">
+<h2>常见问题，先检查这些地方</h2>
+<details><summary>「采矿」为什么是灰色？</summary><p>检查是否至少有 30 精力，并持有任意一种镐。山脚小游戏不要求先学 Gem 的地下城破墙技能。</p></details>
+<details><summary>已经进来了，为什么点击没有反应？</summary><p>入场已扣除 30 精力。确认还剩至少 10 精力、黄色边框选中的镐有库存、动画已结束，而且工具能破坏目标。当前类型用完后，要手动选择另一种有库存的镐。</p></details>
+<details><summary>挖到了水晶，为什么背包水晶没有增加？</summary><p>先看碎片一行。同种碎片凑满 100 才会增加 1 个完整水晶；六种普通采矿资源都遵循这个规则。</p></details>
+<details><summary>爆破为什么没有炸碎灵魂石？</summary><p>高耐久矿石会保留剩余耐久。同一条特殊矿块连锁对范围内每个位置造成 15 点伤害，范围重叠不会在该次连锁中重复叠伤。基岩和玻璃则必须用合适的镐处理。</p></details>
+<details><summary>点了 60 次，为什么没有强化矿？</summary><p>先确认持有五种不同的灵魂石。计算的是上次强化矿出现后的有效付费挥镐次数；排队的强化矿还需要一个补入空位。期间自然出现过强化矿，就已重置计数。</p></details>
+<details><summary>看到一颗灵魂石后，为什么找不到第二颗？</summary><p>每次入场的名额在矿石出现时就已用掉，不需要等采到手。下次入场才可能出现另一颗未持有的灵魂石，但离开会丢弃当前矿盘。</p></details>
+<details><summary>为什么一直找不到时源矿？</summary><p>先完成 Cid 的介绍事件。时源矿每次符合条件的普通生成判定只有 0.01% 概率，不享受 60 次挥镐机制或幸运药水重试，每次入场也最多出现一块。左侧六种碎片资源的计数并不包含时源矿。</p></details>
+</section>
+<section id="zh-next">
+<h2>相关攻略</h2>
+<div class="starter-related">
+<a href="character-gem.html"><strong>Gem</strong><span>购买镐，以及另外学习地下城破墙技能。</span></a>
+<a href="game-systems-blacksmith-and-forge.html"><strong>铁匠与锻造</strong><span>将完整材料制成护甲，比较各级升级消耗。</span></a>
+<a href="game-systems-dungeon.html"><strong>地下城探索</strong><span>获取镐的掉落，了解采矿技能的用途。</span></a>
+<a href="character-theneas.html"><strong>Theneas</strong><span>用材料升级指定的灵魂石。</span></a>
+<a href="game-systems-thieves-guild.html"><strong>盗贼公会</strong><span>劫盗奖励与收集物品的其他用途。</span></a>
+</div>
+</section>
+</div><p class="starter-credits"><span data-copy-en="Adapted and updated from the community Chronoromancer Wiki. " data-copy-zh="参考社区 Chronoromancer Wiki 整理并更新。">Adapted and updated from the community Chronoromancer Wiki. </span><a data-copy-en="Community source and history" data-copy-zh="社区原页与历史" href="https://chronoromancer.miraheze.org/wiki/Game_Systems:Mining_System" rel="noopener noreferrer" target="_blank">Community source and history</a> · <a href="https://creativecommons.org/licenses/by-sa/4.0/" rel="license">CC BY-SA 4.0</a><span data-copy-en=". Game images © Chronoromancer Studio." data-copy-zh="。游戏图片 © Chronoromancer Studio。">. Game images © Chronoromancer Studio.</span></p></article>
+</div></section>
+</main>
+<footer class="site-footer"><div class="container"><div class="footer-grid">
+<div class="footer-brand"><img alt="Chronoromancer" src="../assets/images/v2/logo.png"/><p data-i18n="footerDescription">An adults-only time-travel sandbox RPG. Public website artwork is SFW.</p></div>
+<div class="footer-column"><h2 data-i18n="footerExplore">Explore</h2><a data-i18n="navStory" href="../story.html">Story</a><a data-i18n="navCharacters" href="../characters.html">Characters</a><a data-i18n="navGuides" href="../walkthroughs.html">Guides</a><a data-i18n="navWiki" href="../wiki.html">Player Wiki</a></div>
+<div class="footer-column"><h2 data-i18n="footerCommunity">Community</h2><a data-config-link="community.discord" rel="noopener noreferrer" target="_blank">Discord</a><a data-config-link="community.telegram" rel="noopener noreferrer" target="_blank">Telegram</a><a data-config-link="community.patreon" rel="noopener noreferrer" target="_blank">Patreon</a></div>
+<div class="footer-column"><h2 data-i18n="footerLegal">Legal</h2><a data-i18n="footerPrivacy" href="../privacy.html">Privacy</a><a data-i18n="footerTerms" href="../terms.html">Terms</a></div>
+</div><div class="footer-bottom"><span>© <span data-current-year=""></span> <span data-i18n="copyright">Chronoromancer Studio. All rights reserved.</span></span><span data-copy-en="Player knowledge · English / Simplified Chinese" data-copy-zh="玩家资料 · English / 简体中文">Player knowledge · English / Simplified Chinese</span></div></div></footer><script src="../assets/js/site-config.js"></script><script src="../assets/js/site.js"></script><script src="../assets/js/wiki.js"></script>
+</body></html>

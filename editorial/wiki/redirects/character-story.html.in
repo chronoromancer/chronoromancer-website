@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="Continue to the main story walkthrough. 请前往主线流程攻略。" name="description"/>
+<link href="../assets/images/v2/favicon.png" rel="icon" type="image/png"/>
+<link href="../assets/css/style.css" rel="stylesheet"/><link href="../assets/css/wiki.css" rel="stylesheet"/>
+<title>Main story guide | Chronoromancer Wiki</title><link href="https://chronoromancergame.com/wiki/game-systems-story-beats.html" rel="canonical"/><meta content="game-systems-story-beats" name="wiki-redirect"/><script>(()=>{const target=new URL('game-systems-story-beats.html',location.href);const lang=new URLSearchParams(location.search).get('lang');if(lang==='en'||lang==='zh')target.searchParams.set('lang',lang);location.replace(target.href)})();</script><noscript><meta content="0;url=game-systems-story-beats.html" http-equiv="refresh"/></noscript></head>
+<body class="wiki-article-page" data-title-en="Main story guide | Chronoromancer Wiki" data-title-zh="主线攻略 | Chronoromancer 中文攻略">
+<a class="skip-link" data-copy-en="Skip to content" data-copy-zh="跳至正文" href="#content">Skip to content</a>
+<div class="maturity-bar" data-copy-en="18+ adults-only game · Wiki pages may contain story and gameplay spoilers" data-copy-zh="18+ 仅限成人游戏 · Wiki 页面可能包含剧情与玩法剧透">18+ adults-only game · Wiki pages may contain story and gameplay spoilers</div>
+<header class="site-header"><div class="container header-inner">
+<a aria-label="Chronoromancer home" class="brand" href="../main.html"><img alt="Chronoromancer" src="../assets/images/v2/logo.png"/></a>
+<button aria-expanded="false" aria-label="Open navigation" class="nav-toggle" data-nav-toggle="" type="button"><span></span><span></span><span></span></button>
+<nav aria-label="Primary navigation" class="site-nav" data-nav-menu="">
+<a data-i18n="navHome" href="../main.html">Home</a><a data-i18n="navStory" href="../story.html">Story</a>
+<a data-i18n="navCharacters" href="../characters.html">Characters</a><a data-i18n="navGuides" href="../walkthroughs.html">Guides</a>
+<a data-i18n="navGallery" href="../screenshots.html">Gallery</a><a class="is-active" data-i18n="navWiki" href="../wiki.html">Player Wiki</a>
+<a data-i18n="navDownload" href="../main.html#download">Download</a>
+<div aria-label="Language" class="language-switch" role="group"><button aria-pressed="true" data-language="en" type="button">EN</button><button aria-pressed="false" data-language="zh" type="button">简体中文</button></div>
+</nav>
+</div></header>
+<main id="content">
+<section class="wiki-page-hero"><div class="container">
+<nav aria-label="Breadcrumb" class="breadcrumb"><a data-copy-en="Player Wiki" data-copy-zh="玩家 Wiki" href="../wiki.html">Player Wiki</a><span>/</span><span data-copy-en="Characters" data-copy-zh="角色">Characters</span></nav>
+<p class="eyebrow" data-copy-en="Community knowledge, preserved on the official site" data-copy-zh="社区知识，保存于官方网站">Community knowledge, preserved on the official site</p>
+<h1 data-copy-en="Main story guide" data-copy-zh="主线攻略">Main story guide</h1>
+<div class="wiki-source-line"></div>
+</div></section>
+<section class="section wiki-reading-section"><div class="container wiki-reading-layout">
+
+<article class="wiki-article"><p lang="en">Continue to the main story walkthrough. <a href="game-systems-story-beats.html?lang=en">Read the story guide →</a></p><p lang="zh-CN">请前往主线流程攻略。 <a href="game-systems-story-beats.html?lang=zh">阅读主线攻略 →</a></p></article>
+</div></section>
+</main>
+<footer class="site-footer"><div class="container"><div class="footer-grid">
+<div class="footer-brand"><img alt="Chronoromancer" src="../assets/images/v2/logo.png"/><p data-i18n="footerDescription">An adults-only time-travel sandbox RPG. Public website artwork is SFW.</p></div>
+<div class="footer-column"><h2 data-i18n="footerExplore">Explore</h2><a data-i18n="navStory" href="../story.html">Story</a><a data-i18n="navCharacters" href="../characters.html">Characters</a><a data-i18n="navGuides" href="../walkthroughs.html">Guides</a><a data-i18n="navWiki" href="../wiki.html">Player Wiki</a></div>
+<div class="footer-column"><h2 data-i18n="footerCommunity">Community</h2><a data-config-link="community.discord" rel="noopener noreferrer" target="_blank">Discord</a><a data-config-link="community.telegram" rel="noopener noreferrer" target="_blank">Telegram</a><a data-config-link="community.patreon" rel="noopener noreferrer" target="_blank">Patreon</a></div>
+<div class="footer-column"><h2 data-i18n="footerLegal">Legal</h2><a data-i18n="footerPrivacy" href="../privacy.html">Privacy</a><a data-i18n="footerTerms" href="../terms.html">Terms</a></div>
+</div><div class="footer-bottom"><span>© <span data-current-year=""></span> <span data-i18n="copyright">Chronoromancer Studio. All rights reserved.</span></span><span data-copy-en="Player knowledge · English / Simplified Chinese" data-copy-zh="玩家资料 · English / 简体中文">Player knowledge · English / Simplified Chinese</span></div></div></footer><script src="../assets/js/site-config.js"></script><script src="../assets/js/site.js"></script><script src="../assets/js/wiki.js"></script>
+</body></html>

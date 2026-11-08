@@ -24,6 +24,7 @@ from pathlib import Path
 import ctranslate2
 import sentencepiece as spm
 from bs4 import BeautifulSoup, Comment, NavigableString, Tag
+from apply_editorial_wiki import apply_editorial_wiki
 
 
 ARGOS_PACKAGE = Path.home() / ".local/share/argos-translate/packages/translate-en_zh-1_9"
@@ -609,7 +610,8 @@ def finalize(preview: Path, output: Path, cache_path: Path, *, reset_cache: bool
         encoding="utf-8",
         newline="\n",
     )
-    print(f"finished {len(parsed_pages)} bilingual wiki pages", flush=True)
+    maintained_slugs = apply_editorial_wiki(output)
+    print(f"finished {len(parsed_pages)} imported bilingual pages and {len(maintained_slugs)} maintained guides", flush=True)
 
 
 def main() -> None:
