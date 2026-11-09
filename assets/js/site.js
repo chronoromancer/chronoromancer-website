@@ -337,7 +337,7 @@
       card.dataset.era = character.era;
       card.dataset.searchEn = `${character.name} ${character.id} ${character.era} ${character.descriptionEn}`;
       card.dataset.searchZh = `${character.name} ${character.id} ${character.descriptionZh}`;
-      card.dataset.searchRu = `${character.name} ${character.id} ${russianCharacters[character.id] || ""}`;
+      card.dataset.searchRu = `${character.name} ${character.id} ${character.descriptionRu || russianCharacters[character.id] || ""}`;
 
       const portrait = document.createElement("img");
       portrait.src = character.image;
@@ -359,7 +359,7 @@
       const description = document.createElement("p");
       description.dataset.copyEn = character.descriptionEn;
       description.dataset.copyZh = character.descriptionZh;
-      description.dataset.copyRu = russianCharacters[character.id] || character.descriptionEn;
+      description.dataset.copyRu = character.descriptionRu || russianCharacters[character.id] || character.descriptionEn;
       description.textContent = currentLanguage === "zh"
         ? character.descriptionZh
         : currentLanguage === "ru"

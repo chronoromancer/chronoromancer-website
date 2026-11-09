@@ -2,574 +2,933 @@
   "asset_directory": "character-thumbnails",
   "profiles": {
     "character-abby": {
-      "src": "assets/images/wiki/character-thumbnails/abby.webp"
+      "src": "assets/images/wiki/character-thumbnails/abby.webp",
+      "gallery_id": "abby",
+      "gallery_era": "present"
     },
     "character-aimy": {
-      "src": "assets/images/wiki/character-thumbnails/aimy.webp"
+      "src": "assets/images/wiki/character-thumbnails/aimy.webp",
+      "gallery_id": "aimy",
+      "gallery_era": "future"
     },
     "character-akira": {
-      "src": "assets/images/wiki/character-thumbnails/akira.webp"
+      "src": "assets/images/wiki/character-thumbnails/akira.webp",
+      "gallery_id": "akira",
+      "gallery_era": "present"
     },
     "character-amelia": {
-      "src": "assets/images/wiki/character-thumbnails/amelia.webp"
+      "src": "assets/images/wiki/character-thumbnails/amelia.webp",
+      "gallery_id": "amelia",
+      "gallery_era": "medieval"
     },
     "character-annette": {
-      "src": "assets/images/wiki/character-thumbnails/annette.webp"
+      "src": "assets/images/wiki/character-thumbnails/annette.webp",
+      "gallery_id": "annette",
+      "gallery_era": "medieval"
     },
     "character-anthrax": {
-      "src": "assets/images/wiki/character-thumbnails/anthrax.webp"
+      "src": "assets/images/wiki/character-thumbnails/anthrax.webp",
+      "gallery_id": "anthrax",
+      "gallery_era": "future"
     },
     "character-arachne": {
-      "src": "assets/images/wiki/character-thumbnails/arachne.webp"
+      "src": "assets/images/wiki/character-thumbnails/arachne.webp",
+      "gallery_id": "arachne",
+      "gallery_era": "medieval"
     },
     "character-archie": {
-      "src": "assets/images/wiki/character-thumbnails/archie.webp"
+      "src": "assets/images/wiki/character-thumbnails/archie.webp",
+      "gallery_id": "archie",
+      "gallery_era": "future"
     },
     "character-arestes": {
-      "src": "assets/images/wiki/character-thumbnails/arestes.webp"
+      "src": "assets/images/wiki/character-thumbnails/arestes.webp",
+      "gallery_id": "arestes",
+      "gallery_era": "medieval"
     },
     "character-aria": {
-      "src": "assets/images/wiki/character-thumbnails/aria.webp"
+      "src": "assets/images/wiki/character-thumbnails/aria.webp",
+      "gallery_id": "aria",
+      "gallery_era": "medieval",
+      "gallery_description_ru": "Знакомство с A.R.I.A., личные разговоры и улучшения за особые подарки."
     },
     "character-arnold": {
-      "src": "assets/images/wiki/character-thumbnails/arnold.webp"
+      "src": "assets/images/wiki/character-thumbnails/arnold.webp",
+      "gallery_id": "arnold",
+      "gallery_era": "present"
     },
     "character-artemis": {
-      "src": "assets/images/wiki/character-thumbnails/artemis.webp"
+      "src": "assets/images/wiki/character-thumbnails/artemis.webp",
+      "gallery_id": "artemis",
+      "gallery_era": "future",
+      "gallery_description_ru": "Расписание Artemis в оружейной и казармах, личные разговоры и обучение."
     },
     "character-audrey": {
-      "src": "assets/images/wiki/character-thumbnails/audrey.webp"
+      "src": "assets/images/wiki/character-thumbnails/audrey.webp",
+      "gallery_id": "audrey",
+      "gallery_era": "medieval"
     },
     "character-ava-and-eva": {
-      "src": "assets/images/wiki/character-thumbnails/ava-and-eva.webp"
+      "src": "assets/images/wiki/character-thumbnails/ava-and-eva.webp",
+      "gallery_id": "ava_and_eva",
+      "gallery_era": "medieval"
     },
     "character-azariel": {
-      "src": "assets/images/wiki/character-thumbnails/azariel.webp"
+      "src": "assets/images/wiki/character-thumbnails/azariel.webp",
+      "gallery_id": "azariel",
+      "gallery_era": "medieval"
     },
     "character-aziza": {
-      "src": "assets/images/wiki/character-thumbnails/aziza.webp"
+      "src": "assets/images/wiki/character-thumbnails/aziza.webp",
+      "gallery_id": "aziza",
+      "gallery_era": "medieval"
     },
     "character-barnard": {
-      "src": "assets/images/wiki/character-thumbnails/barnard.webp"
+      "src": "assets/images/wiki/character-thumbnails/barnard.webp",
+      "gallery_id": "barnard",
+      "gallery_era": "medieval"
     },
     "character-barric": {
-      "src": "assets/images/wiki/character-thumbnails/barric.webp"
+      "src": "assets/images/wiki/character-thumbnails/barric.webp",
+      "gallery_id": "barric",
+      "gallery_era": "medieval"
     },
     "character-bayne": {
-      "src": "assets/images/wiki/character-thumbnails/bayne.webp"
+      "src": "assets/images/wiki/character-thumbnails/bayne.webp",
+      "gallery_id": "bayne",
+      "gallery_era": "future"
     },
     "character-bella": {
-      "src": "assets/images/wiki/character-thumbnails/bella.webp"
+      "src": "assets/images/wiki/character-thumbnails/bella.webp",
+      "gallery_id": "bella",
+      "gallery_era": "present"
     },
     "character-bellavia": {
-      "src": "assets/images/wiki/character-thumbnails/bellavia.webp"
+      "src": "assets/images/wiki/character-thumbnails/bellavia.webp",
+      "gallery_id": "bellavia",
+      "gallery_era": "medieval",
+      "gallery_description_ru": "Встречи с Bellavia в погребе, особые подарки и занятия на курорте."
     },
     "character-ben-arthur": {
-      "src": "assets/images/wiki/character-thumbnails/ben-arthur.webp"
+      "src": "assets/images/wiki/character-thumbnails/ben-arthur.webp",
+      "gallery_id": "ben_arthur",
+      "gallery_era": "medieval"
     },
     "character-bessie": {
-      "src": "assets/images/wiki/character-thumbnails/bessie.webp"
+      "src": "assets/images/wiki/character-thumbnails/bessie.webp",
+      "gallery_id": "bessie",
+      "gallery_era": "medieval"
     },
     "character-blinky": {
-      "src": "assets/images/wiki/character-thumbnails/blinky.webp"
+      "src": "assets/images/wiki/character-thumbnails/blinky.webp",
+      "gallery_id": "blinky",
+      "gallery_era": "medieval"
     },
     "character-bobo": {
-      "src": "assets/images/wiki/character-thumbnails/bobo.webp"
+      "src": "assets/images/wiki/character-thumbnails/bobo.webp",
+      "gallery_id": "bobo",
+      "gallery_era": "medieval"
     },
     "character-br10dr": {
-      "src": "assets/images/wiki/character-thumbnails/br10dr.webp"
+      "src": "assets/images/wiki/character-thumbnails/br10dr.webp",
+      "gallery_id": "br10dr",
+      "gallery_era": "future"
     },
     "character-brandy": {
-      "src": "assets/images/wiki/character-thumbnails/brandy.webp"
+      "src": "assets/images/wiki/character-thumbnails/brandy.webp",
+      "gallery_id": "brandy",
+      "gallery_era": "medieval"
     },
     "character-carmilla": {
-      "src": "assets/images/wiki/character-thumbnails/carmilla.webp"
+      "src": "assets/images/wiki/character-thumbnails/carmilla.webp",
+      "gallery_id": "carmilla",
+      "gallery_era": "present"
     },
     "character-chamel": {
-      "src": "assets/images/wiki/character-thumbnails/chamel.webp"
+      "src": "assets/images/wiki/character-thumbnails/chamel.webp",
+      "gallery_id": "chamel",
+      "gallery_era": "future",
+      "gallery_description_ru": "Встречи с Chamel, личные разговоры и продвижение по заданиям Синдиката."
     },
     "character-chamella": {
-      "src": "assets/images/wiki/character-thumbnails/chamella.webp"
+      "src": "assets/images/wiki/character-thumbnails/chamella.webp",
+      "gallery_id": "chamella",
+      "gallery_era": "future",
+      "gallery_description_ru": "Расписание Chamella, личные встречи и необходимые этапы заданий Синдиката."
     },
     "character-chef-martha": {
-      "src": "assets/images/wiki/character-thumbnails/chef-martha.webp"
+      "src": "assets/images/wiki/character-thumbnails/chef-martha.webp",
+      "gallery_id": "chef_martha",
+      "gallery_era": "present"
     },
     "character-cherry": {
-      "src": "assets/images/wiki/character-thumbnails/cherry.webp"
+      "src": "assets/images/wiki/character-thumbnails/cherry.webp",
+      "gallery_id": "cherry",
+      "gallery_era": "present"
     },
     "character-chloe": {
-      "src": "assets/images/wiki/character-thumbnails/chloe.webp"
+      "src": "assets/images/wiki/character-thumbnails/chloe.webp",
+      "gallery_id": "chloe",
+      "gallery_era": "future"
     },
     "character-christy": {
-      "src": "assets/images/wiki/character-thumbnails/christy.webp"
+      "src": "assets/images/wiki/character-thumbnails/christy.webp",
+      "gallery_id": "christy",
+      "gallery_era": "present"
     },
     "character-chrysalia": {
-      "src": "assets/images/wiki/character-thumbnails/chrysalia.webp"
+      "src": "assets/images/wiki/character-thumbnails/chrysalia.webp",
+      "gallery_id": "chrysalia",
+      "gallery_era": "future"
     },
     "character-cid": {
-      "src": "assets/images/wiki/character-thumbnails/cid.webp"
+      "src": "assets/images/wiki/character-thumbnails/cid.webp",
+      "gallery_id": "cid",
+      "gallery_era": "future"
     },
     "character-cinnamon": {
-      "src": "assets/images/wiki/character-thumbnails/cinnamon.webp"
+      "src": "assets/images/wiki/character-thumbnails/cinnamon.webp",
+      "gallery_id": "cinnamon",
+      "gallery_era": "medieval"
     },
     "character-coradio": {
-      "src": "assets/images/wiki/character-thumbnails/coradio.webp"
+      "src": "assets/images/wiki/character-thumbnails/coradio.webp",
+      "gallery_id": "coradio",
+      "gallery_era": "medieval"
     },
     "character-cotton": {
-      "src": "assets/images/wiki/character-thumbnails/cotton.webp"
+      "src": "assets/images/wiki/character-thumbnails/cotton.webp",
+      "gallery_id": "cotton",
+      "gallery_era": "present"
     },
     "character-cressida": {
-      "src": "assets/images/wiki/character-thumbnails/cressida.webp"
+      "src": "assets/images/wiki/character-thumbnails/cressida.webp",
+      "gallery_id": "cressida",
+      "gallery_era": "future"
     },
     "character-dawn": {
-      "src": "assets/images/wiki/character-thumbnails/dawn.webp"
+      "src": "assets/images/wiki/character-thumbnails/dawn.webp",
+      "gallery_id": "dawn",
+      "gallery_era": "present"
     },
     "character-dex": {
-      "src": "assets/images/wiki/character-thumbnails/dex.webp"
+      "src": "assets/images/wiki/character-thumbnails/dex.webp",
+      "gallery_id": "dex",
+      "gallery_era": "future"
     },
     "character-diane": {
-      "src": "assets/images/wiki/character-thumbnails/diane.webp"
+      "src": "assets/images/wiki/character-thumbnails/diane.webp",
+      "gallery_id": "diane",
+      "gallery_era": "present"
     },
     "character-diedra": {
-      "src": "assets/images/wiki/character-thumbnails/diedra.webp"
+      "src": "assets/images/wiki/character-thumbnails/diedra.webp",
+      "gallery_id": "diedra",
+      "gallery_era": "present"
     },
     "character-elara": {
-      "src": "assets/images/wiki/character-thumbnails/elara.webp"
+      "src": "assets/images/wiki/character-thumbnails/elara.webp",
+      "gallery_id": "elara",
+      "gallery_era": "medieval"
     },
     "character-ember": {
-      "src": "assets/images/wiki/character-thumbnails/ember.webp"
+      "src": "assets/images/wiki/character-thumbnails/ember.webp",
+      "gallery_id": "ember",
+      "gallery_era": "medieval"
     },
     "character-emily": {
-      "src": "assets/images/wiki/character-thumbnails/emily.webp"
+      "src": "assets/images/wiki/character-thumbnails/emily.webp",
+      "gallery_id": "emily",
+      "gallery_era": "present"
     },
     "character-epom": {
-      "src": "assets/images/wiki/character-thumbnails/epom.webp"
+      "src": "assets/images/wiki/character-thumbnails/epom.webp",
+      "gallery_id": "epom",
+      "gallery_era": "future"
     },
     "character-esperanza": {
-      "src": "assets/images/wiki/character-thumbnails/esperanza.webp"
+      "src": "assets/images/wiki/character-thumbnails/esperanza.webp",
+      "gallery_id": "esperanza",
+      "gallery_era": "medieval"
     },
     "character-evangeline": {
-      "src": "assets/images/wiki/character-thumbnails/evangeline.webp"
+      "src": "assets/images/wiki/character-thumbnails/evangeline.webp",
+      "gallery_id": "evangeline",
+      "gallery_era": "present"
     },
     "character-fernando": {
-      "src": "assets/images/wiki/character-thumbnails/fernando.webp"
+      "src": "assets/images/wiki/character-thumbnails/fernando.webp",
+      "gallery_id": "fernando",
+      "gallery_era": "medieval"
     },
     "character-foxy": {
-      "src": "assets/images/wiki/character-thumbnails/foxy.webp"
+      "src": "assets/images/wiki/character-thumbnails/foxy.webp",
+      "gallery_id": "foxy",
+      "gallery_era": "medieval"
     },
     "character-friday": {
-      "src": "assets/images/wiki/character-thumbnails/friday.webp"
+      "src": "assets/images/wiki/character-thumbnails/friday.webp",
+      "gallery_id": "friday",
+      "gallery_era": "present"
     },
     "character-gandon": {
-      "src": "assets/images/wiki/character-thumbnails/gandon.webp"
+      "src": "assets/images/wiki/character-thumbnails/gandon.webp",
+      "gallery_id": "gandon",
+      "gallery_era": "medieval"
     },
     "character-ghost": {
-      "src": "assets/images/wiki/character-thumbnails/ghost.webp"
+      "src": "assets/images/wiki/character-thumbnails/ghost.webp",
+      "gallery_id": "ghost",
+      "gallery_era": "future"
     },
     "character-ginger": {
-      "src": "assets/images/wiki/character-thumbnails/ginger.webp"
+      "src": "assets/images/wiki/character-thumbnails/ginger.webp",
+      "gallery_id": "ginger",
+      "gallery_era": "future"
     },
     "character-glitch": {
-      "src": "assets/images/wiki/character-thumbnails/glitch.webp"
+      "src": "assets/images/wiki/character-thumbnails/glitch.webp",
+      "gallery_id": "glitch",
+      "gallery_era": "future"
     },
     "character-grace": {
-      "src": "assets/images/wiki/character-thumbnails/grace.webp"
+      "src": "assets/images/wiki/character-thumbnails/grace.webp",
+      "gallery_id": "grace",
+      "gallery_era": "medieval"
     },
     "character-gruff": {
-      "src": "assets/images/wiki/character-thumbnails/gruff.webp"
+      "src": "assets/images/wiki/character-thumbnails/gruff.webp",
+      "gallery_id": "gruff",
+      "gallery_era": "medieval"
     },
     "character-guard": {
-      "src": "assets/images/wiki/character-thumbnails/guard.webp"
+      "src": "assets/images/wiki/character-thumbnails/guard.webp",
+      "gallery_id": "guard",
+      "gallery_era": "medieval"
     },
     "character-hailey": {
-      "src": "assets/images/wiki/character-thumbnails/hailey.webp"
+      "src": "assets/images/wiki/character-thumbnails/hailey.webp",
+      "gallery_id": "hailey",
+      "gallery_era": "medieval"
     },
     "character-harlequin": {
-      "src": "assets/images/wiki/character-thumbnails/harlequin.webp"
+      "src": "assets/images/wiki/character-thumbnails/harlequin.webp",
+      "gallery_id": "harlequin",
+      "gallery_era": "future",
+      "gallery_description_ru": "История Motley в Синдикате, личные разговоры и доступные уроки."
     },
     "character-helsa": {
-      "src": "assets/images/wiki/character-thumbnails/helsa.webp"
+      "src": "assets/images/wiki/character-thumbnails/helsa.webp",
+      "gallery_id": "helsa",
+      "gallery_era": "present"
     },
     "character-holly": {
-      "src": "assets/images/wiki/character-thumbnails/holly.webp"
+      "src": "assets/images/wiki/character-thumbnails/holly.webp",
+      "gallery_id": "holly",
+      "gallery_era": "future"
     },
     "character-honey": {
-      "src": "assets/images/wiki/character-thumbnails/honey.webp"
+      "src": "assets/images/wiki/character-thumbnails/honey.webp",
+      "gallery_id": "honey",
+      "gallery_era": "medieval"
     },
     "character-isolde": {
-      "src": "assets/images/wiki/character-thumbnails/isolde.webp"
+      "src": "assets/images/wiki/character-thumbnails/isolde.webp",
+      "gallery_id": "isolde",
+      "gallery_era": "medieval"
     },
     "character-jade": {
-      "src": "assets/images/wiki/character-thumbnails/jade.webp"
+      "src": "assets/images/wiki/character-thumbnails/jade.webp",
+      "gallery_id": "jade",
+      "gallery_era": "medieval"
     },
     "character-jarid": {
-      "src": "assets/images/wiki/character-thumbnails/jarid.webp"
+      "src": "assets/images/wiki/character-thumbnails/jarid.webp",
+      "gallery_id": "jarid",
+      "gallery_era": "future"
     },
     "character-jelly": {
-      "src": "assets/images/wiki/character-thumbnails/jelly.webp"
+      "src": "assets/images/wiki/character-thumbnails/jelly.webp",
+      "gallery_id": "jelly",
+      "gallery_era": "medieval"
     },
     "character-jennifer": {
-      "src": "assets/images/wiki/character-thumbnails/jennifer.webp"
+      "src": "assets/images/wiki/character-thumbnails/jennifer.webp",
+      "gallery_id": "jennifer",
+      "gallery_era": "present"
     },
     "character-jessie": {
-      "src": "assets/images/wiki/character-thumbnails/jessie.webp"
+      "src": "assets/images/wiki/character-thumbnails/jessie.webp",
+      "gallery_id": "jessie",
+      "gallery_era": "present"
     },
     "character-jinx": {
-      "src": "assets/images/wiki/character-thumbnails/jinx.webp"
+      "src": "assets/images/wiki/character-thumbnails/jinx.webp",
+      "gallery_id": "jinx",
+      "gallery_era": "future"
     },
     "character-joey": {
-      "src": "assets/images/wiki/character-thumbnails/joey.webp"
+      "src": "assets/images/wiki/character-thumbnails/joey.webp",
+      "gallery_id": "joey",
+      "gallery_era": "present"
     },
     "character-julian": {
-      "src": "assets/images/wiki/character-thumbnails/julian.webp"
+      "src": "assets/images/wiki/character-thumbnails/julian.webp",
+      "gallery_id": "julian",
+      "gallery_era": "medieval"
     },
     "character-kalb": {
-      "src": "assets/images/wiki/character-thumbnails/kalb.webp"
+      "src": "assets/images/wiki/character-thumbnails/kalb.webp",
+      "gallery_id": "kalb",
+      "gallery_era": "medieval"
     },
     "character-kasumi": {
-      "src": "assets/images/wiki/character-thumbnails/kasumi.webp"
+      "src": "assets/images/wiki/character-thumbnails/kasumi.webp",
+      "gallery_id": "kasumi",
+      "gallery_era": "medieval"
     },
     "character-katie": {
-      "src": "assets/images/wiki/character-thumbnails/katie.webp"
+      "src": "assets/images/wiki/character-thumbnails/katie.webp",
+      "gallery_id": "katie",
+      "gallery_era": "present"
     },
     "character-keira": {
-      "src": "assets/images/wiki/character-thumbnails/keira.webp"
+      "src": "assets/images/wiki/character-thumbnails/keira.webp",
+      "gallery_id": "keira",
+      "gallery_era": "medieval"
     },
     "character-kent": {
-      "src": "assets/images/wiki/character-thumbnails/kent.webp"
+      "src": "assets/images/wiki/character-thumbnails/kent.webp",
+      "gallery_id": "kent",
+      "gallery_era": "medieval"
     },
     "character-kimi": {
-      "src": "assets/images/wiki/character-thumbnails/kimi.webp"
+      "src": "assets/images/wiki/character-thumbnails/kimi.webp",
+      "gallery_id": "kimi",
+      "gallery_era": "present"
     },
     "character-king-graham": {
-      "src": "assets/images/wiki/character-thumbnails/king-graham.webp"
+      "src": "assets/images/wiki/character-thumbnails/king-graham.webp",
+      "gallery_id": "king_graham",
+      "gallery_era": "medieval"
     },
     "character-kitty": {
-      "src": "assets/images/wiki/character-thumbnails/kitty.webp"
+      "src": "assets/images/wiki/character-thumbnails/kitty.webp",
+      "gallery_id": "kitty",
+      "gallery_era": "future"
     },
     "character-kristen": {
-      "src": "assets/images/wiki/character-thumbnails/kristen.webp"
+      "src": "assets/images/wiki/character-thumbnails/kristen.webp",
+      "gallery_id": "kristen",
+      "gallery_era": "future"
     },
     "character-kupie": {
-      "src": "assets/images/wiki/character-thumbnails/kupie.webp"
+      "src": "assets/images/wiki/character-thumbnails/kupie.webp",
+      "gallery_id": "kupie",
+      "gallery_era": "present"
     },
     "character-kurenai": {
-      "src": "assets/images/wiki/character-thumbnails/kurenai.webp"
+      "src": "assets/images/wiki/character-thumbnails/kurenai.webp",
+      "gallery_id": "kurenai",
+      "gallery_era": "future"
     },
     "character-kuro": {
-      "src": "assets/images/wiki/character-thumbnails/kuro.webp"
-    },
-    "character-leona": {
-      "src": "assets/images/wiki/character-thumbnails/leona.webp"
+      "src": "assets/images/wiki/character-thumbnails/kuro.webp",
+      "gallery_id": "kuro",
+      "gallery_era": "future"
     },
     "character-lillian": {
-      "src": "assets/images/wiki/character-thumbnails/lillian.webp"
+      "src": "assets/images/wiki/character-thumbnails/lillian.webp",
+      "gallery_id": "lillian",
+      "gallery_era": "medieval"
     },
     "character-lilu": {
-      "src": "assets/images/wiki/character-thumbnails/lilu.webp"
+      "src": "assets/images/wiki/character-thumbnails/lilu.webp",
+      "gallery_id": "lilu",
+      "gallery_era": "present"
     },
     "character-lily": {
-      "src": "assets/images/wiki/character-thumbnails/lily.webp"
+      "src": "assets/images/wiki/character-thumbnails/lily.webp",
+      "gallery_id": "lily",
+      "gallery_era": "medieval"
     },
     "character-lime": {
-      "src": "assets/images/wiki/character-thumbnails/lime.webp"
+      "src": "assets/images/wiki/character-thumbnails/lime.webp",
+      "gallery_id": "lime_maid",
+      "gallery_era": "medieval"
     },
     "character-lindia": {
-      "src": "assets/images/wiki/character-thumbnails/lindia.webp"
+      "src": "assets/images/wiki/character-thumbnails/lindia.webp",
+      "gallery_id": "lindia",
+      "gallery_era": "medieval"
     },
     "character-liora": {
-      "src": "assets/images/wiki/character-thumbnails/liora.webp"
+      "src": "assets/images/wiki/character-thumbnails/liora.webp",
+      "gallery_id": "liora",
+      "gallery_era": "future"
     },
     "character-lord-chamberlain": {
-      "src": "assets/images/wiki/character-thumbnails/lord-chamberlain.webp"
+      "src": "assets/images/wiki/character-thumbnails/lord-chamberlain.webp",
+      "gallery_id": "lord_chamberlain",
+      "gallery_era": "medieval"
     },
     "character-lucy": {
-      "src": "assets/images/wiki/character-thumbnails/lucy.webp"
+      "src": "assets/images/wiki/character-thumbnails/lucy.webp",
+      "gallery_id": "lucy",
+      "gallery_era": "present"
     },
     "character-lychee": {
-      "src": "assets/images/wiki/character-thumbnails/lychee.webp"
+      "src": "assets/images/wiki/character-thumbnails/lychee.webp",
+      "gallery_id": "lychee_maid",
+      "gallery_era": "medieval"
     },
     "character-lyra": {
-      "src": "assets/images/wiki/character-thumbnails/lyra.webp"
+      "src": "assets/images/wiki/character-thumbnails/lyra.webp",
+      "gallery_id": "lyra",
+      "gallery_era": "medieval"
     },
     "character-maggie": {
-      "src": "assets/images/wiki/character-thumbnails/maggie.webp"
+      "src": "assets/images/wiki/character-thumbnails/maggie.webp",
+      "gallery_id": "maggie",
+      "gallery_era": "present"
     },
     "character-maize": {
-      "src": "assets/images/wiki/character-thumbnails/maize.webp"
+      "src": "assets/images/wiki/character-thumbnails/maize.webp",
+      "gallery_id": "maize",
+      "gallery_era": "medieval"
     },
     "character-mandarin": {
-      "src": "assets/images/wiki/character-thumbnails/mandarin.webp"
+      "src": "assets/images/wiki/character-thumbnails/mandarin.webp",
+      "gallery_id": "mandarin_maid",
+      "gallery_era": "medieval"
     },
     "character-marcus": {
-      "src": "assets/images/wiki/character-thumbnails/marcus.webp"
+      "src": "assets/images/wiki/character-thumbnails/marcus.webp",
+      "gallery_id": "marcus",
+      "gallery_era": "future"
     },
     "character-marina": {
-      "src": "assets/images/wiki/character-thumbnails/marina.webp"
+      "src": "assets/images/wiki/character-thumbnails/marina.webp",
+      "gallery_id": "marina",
+      "gallery_era": "medieval"
     },
     "character-mary-ann": {
-      "src": "assets/images/wiki/character-thumbnails/mary-ann.webp"
+      "src": "assets/images/wiki/character-thumbnails/mary-ann.webp",
+      "gallery_id": "maryann",
+      "gallery_era": "present"
     },
     "character-melanthe": {
-      "src": "assets/images/wiki/character-thumbnails/melanthe.webp"
+      "src": "assets/images/wiki/character-thumbnails/melanthe.webp",
+      "gallery_id": "melanthe",
+      "gallery_era": "medieval"
     },
     "character-miki": {
-      "src": "assets/images/wiki/character-thumbnails/miki.webp"
+      "src": "assets/images/wiki/character-thumbnails/miki.webp",
+      "gallery_id": "miki",
+      "gallery_era": "present"
     },
     "character-mindy": {
-      "src": "assets/images/wiki/character-thumbnails/mindy.webp"
+      "src": "assets/images/wiki/character-thumbnails/mindy.webp",
+      "gallery_id": "mindy",
+      "gallery_era": "present"
     },
     "character-momosagi": {
-      "src": "assets/images/wiki/character-thumbnails/momosagi.webp"
+      "src": "assets/images/wiki/character-thumbnails/momosagi.webp",
+      "gallery_id": "momosagi",
+      "gallery_era": "medieval"
     },
     "character-monk": {
-      "src": "assets/images/wiki/character-thumbnails/monk.webp"
+      "src": "assets/images/wiki/character-thumbnails/monk.webp",
+      "gallery_id": "monk",
+      "gallery_era": "medieval"
     },
     "character-muramasa": {
-      "src": "assets/images/wiki/character-thumbnails/muramasa.webp"
+      "src": "assets/images/wiki/character-thumbnails/muramasa.webp",
+      "gallery_id": "muramasa",
+      "gallery_era": "medieval"
     },
     "character-myriss": {
-      "src": "assets/images/wiki/character-thumbnails/myriss.webp"
-    },
-    "character-natsumi": {
-      "src": "assets/images/wiki/character-thumbnails/natsumi.webp"
+      "src": "assets/images/wiki/character-thumbnails/myriss.webp",
+      "gallery_id": "myriss",
+      "gallery_era": "medieval"
     },
     "character-neena": {
-      "src": "assets/images/wiki/character-thumbnails/neena.webp"
+      "src": "assets/images/wiki/character-thumbnails/neena.webp",
+      "gallery_id": "neena",
+      "gallery_era": "future"
     },
     "character-nerida": {
-      "src": "assets/images/wiki/character-thumbnails/nerida.webp"
+      "src": "assets/images/wiki/character-thumbnails/nerida.webp",
+      "gallery_id": "nerida",
+      "gallery_era": "present"
     },
     "character-noella": {
-      "src": "assets/images/wiki/character-thumbnails/noella.webp"
+      "src": "assets/images/wiki/character-thumbnails/noella.webp",
+      "gallery_id": "noella",
+      "gallery_era": "future"
     },
     "character-nova": {
-      "src": "assets/images/wiki/character-thumbnails/nova.webp"
+      "src": "assets/images/wiki/character-thumbnails/nova.webp",
+      "gallery_id": "nova",
+      "gallery_era": "future"
     },
     "character-nyx": {
-      "src": "assets/images/wiki/character-thumbnails/nyx.webp"
+      "src": "assets/images/wiki/character-thumbnails/nyx.webp",
+      "gallery_id": "nyx",
+      "gallery_era": "present"
     },
     "character-nyxara": {
-      "src": "assets/images/wiki/character-thumbnails/nyxara.webp"
+      "src": "assets/images/wiki/character-thumbnails/nyxara.webp",
+      "gallery_id": "nyxara",
+      "gallery_era": "medieval"
     },
     "character-onyx": {
-      "src": "assets/images/wiki/character-thumbnails/onyx.webp"
+      "src": "assets/images/wiki/character-thumbnails/onyx.webp",
+      "gallery_id": "onyx_maid",
+      "gallery_era": "medieval"
     },
     "character-orchid": {
-      "src": "assets/images/wiki/character-thumbnails/orchid.webp"
+      "src": "assets/images/wiki/character-thumbnails/orchid.webp",
+      "gallery_id": "orchid",
+      "gallery_era": "future"
     },
     "character-pepper": {
-      "src": "assets/images/wiki/character-thumbnails/pepper.webp"
+      "src": "assets/images/wiki/character-thumbnails/pepper.webp",
+      "gallery_id": "pepper",
+      "gallery_era": "medieval",
+      "gallery_description_ru": "Расписание Pepper, личное общение, особые подарки и отдых на курорте."
     },
     "character-pixel": {
-      "src": "assets/images/wiki/character-thumbnails/pixel.webp"
+      "src": "assets/images/wiki/character-thumbnails/pixel.webp",
+      "gallery_id": "pixel",
+      "gallery_era": "future"
     },
     "character-poison": {
-      "src": "assets/images/wiki/character-thumbnails/poison.webp"
+      "src": "assets/images/wiki/character-thumbnails/poison.webp",
+      "gallery_id": "poison",
+      "gallery_era": "future"
     },
     "character-poppy": {
-      "src": "assets/images/wiki/character-thumbnails/poppy.webp"
+      "src": "assets/images/wiki/character-thumbnails/poppy.webp",
+      "gallery_id": "poppy",
+      "gallery_era": "medieval"
     },
     "character-portia": {
-      "src": "assets/images/wiki/character-thumbnails/portia.webp"
+      "src": "assets/images/wiki/character-thumbnails/portia.webp",
+      "gallery_id": "portia",
+      "gallery_era": "present"
     },
     "character-rachel": {
-      "src": "assets/images/wiki/character-thumbnails/rachel.webp"
+      "src": "assets/images/wiki/character-thumbnails/rachel.webp",
+      "gallery_id": "rachel",
+      "gallery_era": "present"
     },
     "character-rain": {
-      "src": "assets/images/wiki/character-thumbnails/rain.webp"
+      "src": "assets/images/wiki/character-thumbnails/rain.webp",
+      "gallery_id": "rain_maid",
+      "gallery_era": "medieval"
     },
     "character-raven": {
-      "src": "assets/images/wiki/character-thumbnails/raven.webp"
+      "src": "assets/images/wiki/character-thumbnails/raven.webp",
+      "gallery_id": "raven",
+      "gallery_era": "medieval"
     },
     "character-rei": {
-      "src": "assets/images/wiki/character-thumbnails/rei.webp"
+      "src": "assets/images/wiki/character-thumbnails/rei.webp",
+      "gallery_id": "rei",
+      "gallery_era": "present"
     },
     "character-riki": {
-      "src": "assets/images/wiki/character-thumbnails/riki.webp"
+      "src": "assets/images/wiki/character-thumbnails/riki.webp",
+      "gallery_id": "riki",
+      "gallery_era": "future"
     },
     "character-robin": {
-      "src": "assets/images/wiki/character-thumbnails/robin.webp"
+      "src": "assets/images/wiki/character-thumbnails/robin.webp",
+      "gallery_id": "robin",
+      "gallery_era": "medieval"
     },
     "character-rose-arthur": {
-      "src": "assets/images/wiki/character-thumbnails/rose-arthur.webp"
+      "src": "assets/images/wiki/character-thumbnails/rose-arthur.webp",
+      "gallery_id": "rose_arthur",
+      "gallery_era": "medieval"
     },
     "character-ruxandra": {
-      "src": "assets/images/wiki/character-thumbnails/ruxandra.webp"
+      "src": "assets/images/wiki/character-thumbnails/ruxandra.webp",
+      "gallery_id": "ruxandra",
+      "gallery_era": "present"
     },
     "character-ryia": {
-      "src": "assets/images/wiki/character-thumbnails/ryia.webp"
+      "src": "assets/images/wiki/character-thumbnails/ryia.webp",
+      "gallery_id": "ryia",
+      "gallery_era": "medieval"
     },
     "character-sabbath": {
-      "src": "assets/images/wiki/character-thumbnails/sabbath.webp"
+      "src": "assets/images/wiki/character-thumbnails/sabbath.webp",
+      "gallery_id": "sabbath",
+      "gallery_era": "medieval"
     },
     "character-saber": {
-      "src": "assets/images/wiki/character-thumbnails/saber.webp"
+      "src": "assets/images/wiki/character-thumbnails/saber.webp",
+      "gallery_id": "saber",
+      "gallery_era": "future"
     },
     "character-sabrina": {
-      "src": "assets/images/wiki/character-thumbnails/sabrina.webp"
+      "src": "assets/images/wiki/character-thumbnails/sabrina.webp",
+      "gallery_id": "sabrina",
+      "gallery_era": "present"
     },
     "character-sandra": {
-      "src": "assets/images/wiki/character-thumbnails/sandra.webp"
+      "src": "assets/images/wiki/character-thumbnails/sandra.webp",
+      "gallery_id": "sandra",
+      "gallery_era": "medieval"
     },
     "character-sashimi": {
-      "src": "assets/images/wiki/character-thumbnails/sashimi.webp"
+      "src": "assets/images/wiki/character-thumbnails/sashimi.webp",
+      "gallery_id": "sashimi",
+      "gallery_era": "medieval"
     },
     "character-sashina": {
-      "src": "assets/images/wiki/character-thumbnails/sashina.webp"
+      "src": "assets/images/wiki/character-thumbnails/sashina.webp",
+      "gallery_id": "sashina",
+      "gallery_era": "medieval"
     },
     "character-seraph": {
-      "src": "assets/images/wiki/character-thumbnails/seraph.webp"
+      "src": "assets/images/wiki/character-thumbnails/seraph.webp",
+      "gallery_id": "seraph",
+      "gallery_era": "future"
     },
     "character-shadow": {
-      "src": "assets/images/wiki/character-thumbnails/shadow.webp"
+      "src": "assets/images/wiki/character-thumbnails/shadow.webp",
+      "gallery_id": "shadow",
+      "gallery_era": "medieval"
     },
     "character-shelly": {
-      "src": "assets/images/wiki/character-thumbnails/shelly.webp"
+      "src": "assets/images/wiki/character-thumbnails/shelly.webp",
+      "gallery_id": "shelly",
+      "gallery_era": "medieval"
     },
     "character-sherry": {
-      "src": "assets/images/wiki/character-thumbnails/sherry.webp"
+      "src": "assets/images/wiki/character-thumbnails/sherry.webp",
+      "gallery_id": "sherry",
+      "gallery_era": "medieval"
     },
     "character-silas": {
-      "src": "assets/images/wiki/character-thumbnails/silas.webp"
+      "src": "assets/images/wiki/character-thumbnails/silas.webp",
+      "gallery_id": "silas",
+      "gallery_era": "medieval"
     },
     "character-sonia": {
-      "src": "assets/images/wiki/character-thumbnails/sonia.webp"
+      "src": "assets/images/wiki/character-thumbnails/sonia.webp",
+      "gallery_id": "sonia",
+      "gallery_era": "present"
     },
     "character-summer": {
-      "src": "assets/images/wiki/character-thumbnails/summer.webp"
+      "src": "assets/images/wiki/character-thumbnails/summer.webp",
+      "gallery_id": "summer",
+      "gallery_era": "present"
     },
     "character-swish": {
-      "src": "assets/images/wiki/character-thumbnails/swish.webp"
+      "src": "assets/images/wiki/character-thumbnails/swish.webp",
+      "gallery_id": "swish",
+      "gallery_era": "present"
     },
     "character-sylwithe": {
-      "src": "assets/images/wiki/character-thumbnails/sylwithe.webp"
-    },
-    "character-taiga": {
-      "src": "assets/images/wiki/character-thumbnails/taiga.webp"
+      "src": "assets/images/wiki/character-thumbnails/sylwithe.webp",
+      "gallery_id": "sylwithe",
+      "gallery_era": "medieval"
     },
     "character-talena": {
-      "src": "assets/images/wiki/character-thumbnails/talena.webp"
+      "src": "assets/images/wiki/character-thumbnails/talena.webp",
+      "gallery_id": "talena",
+      "gallery_era": "present"
     },
     "character-terra": {
-      "src": "assets/images/wiki/character-thumbnails/terra.webp"
+      "src": "assets/images/wiki/character-thumbnails/terra.webp",
+      "gallery_id": "terra",
+      "gallery_era": "future"
     },
     "character-tiffany": {
-      "src": "assets/images/wiki/character-thumbnails/tiffany.webp"
+      "src": "assets/images/wiki/character-thumbnails/tiffany.webp",
+      "gallery_id": "tiffany",
+      "gallery_era": "future"
     },
     "character-tobbin": {
-      "src": "assets/images/wiki/character-thumbnails/tobbin.webp"
+      "src": "assets/images/wiki/character-thumbnails/tobbin.webp",
+      "gallery_id": "tobbin",
+      "gallery_era": "medieval"
     },
     "character-torea": {
-      "src": "assets/images/wiki/character-thumbnails/torea.webp"
+      "src": "assets/images/wiki/character-thumbnails/torea.webp",
+      "gallery_id": "torea",
+      "gallery_era": "present"
     },
     "character-uhura": {
-      "src": "assets/images/wiki/character-thumbnails/uhura.webp"
+      "src": "assets/images/wiki/character-thumbnails/uhura.webp",
+      "gallery_id": "uhura",
+      "gallery_era": "medieval"
     },
     "character-valerie": {
-      "src": "assets/images/wiki/character-thumbnails/valerie.webp"
+      "src": "assets/images/wiki/character-thumbnails/valerie.webp",
+      "gallery_id": "valerie",
+      "gallery_era": "present"
     },
     "character-valkyra": {
-      "src": "assets/images/wiki/character-thumbnails/valkyra.webp"
+      "src": "assets/images/wiki/character-thumbnails/valkyra.webp",
+      "gallery_id": "valkyra",
+      "gallery_era": "medieval"
     },
     "character-vera": {
-      "src": "assets/images/wiki/character-thumbnails/vera.webp"
+      "src": "assets/images/wiki/character-thumbnails/vera.webp",
+      "gallery_id": "vera",
+      "gallery_era": "present"
     },
     "character-vespa": {
-      "src": "assets/images/wiki/character-thumbnails/vespa.webp"
+      "src": "assets/images/wiki/character-thumbnails/vespa.webp",
+      "gallery_id": "vespa",
+      "gallery_era": "medieval"
     },
     "character-violet": {
-      "src": "assets/images/wiki/character-thumbnails/violet.webp"
+      "src": "assets/images/wiki/character-thumbnails/violet.webp",
+      "gallery_id": "violet_maid",
+      "gallery_era": "medieval"
     },
     "character-vixen": {
-      "src": "assets/images/wiki/character-thumbnails/vixen.webp"
+      "src": "assets/images/wiki/character-thumbnails/vixen.webp",
+      "gallery_id": "vixen",
+      "gallery_era": "medieval"
     },
     "character-void": {
-      "src": "assets/images/wiki/character-thumbnails/void.webp"
+      "src": "assets/images/wiki/character-thumbnails/void.webp",
+      "gallery_id": "void",
+      "gallery_era": "future"
     },
     "character-whiskers": {
-      "src": "assets/images/wiki/character-thumbnails/whiskers.webp"
+      "src": "assets/images/wiki/character-thumbnails/whiskers.webp",
+      "gallery_id": "whiskers",
+      "gallery_era": "medieval"
     },
     "character-wilfred": {
-      "src": "assets/images/wiki/character-thumbnails/wilfred.webp"
+      "src": "assets/images/wiki/character-thumbnails/wilfred.webp",
+      "gallery_id": "wilfred",
+      "gallery_era": "medieval"
     },
     "character-willow": {
-      "src": "assets/images/wiki/character-thumbnails/willow.webp"
+      "src": "assets/images/wiki/character-thumbnails/willow.webp",
+      "gallery_id": "willow",
+      "gallery_era": "medieval"
     },
     "character-yrsa": {
-      "src": "assets/images/wiki/character-thumbnails/yrsa.webp"
+      "src": "assets/images/wiki/character-thumbnails/yrsa.webp",
+      "gallery_id": "yrsa",
+      "gallery_era": "medieval"
     },
     "character-zodiac": {
-      "src": "assets/images/wiki/character-thumbnails/zodiac.webp"
+      "src": "assets/images/wiki/character-thumbnails/zodiac.webp",
+      "gallery_id": "zodiac",
+      "gallery_era": "future"
     },
     "character-zoe": {
-      "src": "assets/images/wiki/character-thumbnails/zoe.webp"
+      "src": "assets/images/wiki/character-thumbnails/zoe.webp",
+      "gallery_id": "zoe",
+      "gallery_era": "present"
     },
     "character-zosia": {
-      "src": "assets/images/wiki/character-thumbnails/zosia.webp"
+      "src": "assets/images/wiki/character-thumbnails/zosia.webp",
+      "gallery_id": "zosia",
+      "gallery_era": "future"
     },
     "character-chime": {
-      "src": "assets/images/wiki/character-thumbnails/chime.webp"
+      "src": "assets/images/wiki/character-thumbnails/chime.webp",
+      "gallery_id": "chime",
+      "gallery_era": "future"
     },
     "character-daphne": {
-      "src": "assets/images/wiki/character-thumbnails/daphne.webp"
+      "src": "assets/images/wiki/character-thumbnails/daphne.webp",
+      "gallery_id": "daphne",
+      "gallery_era": "medieval"
     },
     "character-kyou": {
-      "src": "assets/images/wiki/character-thumbnails/kyou.webp"
+      "src": "assets/images/wiki/character-thumbnails/kyou.webp",
+      "gallery_id": "kyou",
+      "gallery_era": "future"
     },
     "character-mittens": {
-      "src": "assets/images/wiki/character-thumbnails/mittens.webp"
+      "src": "assets/images/wiki/character-thumbnails/mittens.webp",
+      "gallery_id": "mittens",
+      "gallery_era": "medieval"
     },
     "character-tinsel": {
-      "src": "assets/images/wiki/character-thumbnails/tinsel.webp"
+      "src": "assets/images/wiki/character-thumbnails/tinsel.webp",
+      "gallery_id": "tinsel",
+      "gallery_era": "future"
     },
     "character-vardis": {
-      "src": "assets/images/wiki/character-thumbnails/vardis.webp"
+      "src": "assets/images/wiki/character-thumbnails/vardis.webp",
+      "gallery_id": "vardis",
+      "gallery_era": "medieval"
     },
     "character-gem": {
-      "src": "assets/images/wiki/character-thumbnails/gem.webp"
+      "src": "assets/images/wiki/character-thumbnails/gem.webp",
+      "gallery_id": "gem",
+      "gallery_era": "medieval"
     },
     "character-gastoff": {
-      "src": "assets/images/wiki/character-thumbnails/gastoff.webp"
+      "src": "assets/images/wiki/character-thumbnails/gastoff.webp",
+      "gallery_id": "gastoff",
+      "gallery_era": "medieval"
     },
     "character-tinker": {
-      "src": "assets/images/wiki/character-thumbnails/tinker.webp"
+      "src": "assets/images/wiki/character-thumbnails/tinker.webp",
+      "gallery_id": "tinker",
+      "gallery_era": "future"
     },
     "character-theneas": {
-      "src": "assets/images/wiki/character-thumbnails/theneas.webp"
+      "src": "assets/images/wiki/character-thumbnails/theneas.webp",
+      "gallery_id": "theneas",
+      "gallery_era": "medieval"
     },
     "character-councilor-voss": {
-      "src": "assets/images/wiki/character-thumbnails/councilor-voss.webp"
+      "src": "assets/images/wiki/character-thumbnails/councilor-voss.webp",
+      "gallery_id": "voss",
+      "gallery_era": "future"
     },
     "character-officer-becky": {
-      "src": "assets/images/wiki/character-thumbnails/officer-becky.webp"
+      "src": "assets/images/wiki/character-thumbnails/officer-becky.webp",
+      "gallery_id": "becky",
+      "gallery_era": "present"
     },
     "character-aaliyah": {
-      "src": "assets/images/wiki/character-thumbnails/aaliyah.webp"
+      "src": "assets/images/wiki/character-thumbnails/aaliyah.webp",
+      "gallery_id": "aaliyah",
+      "gallery_era": "present"
     },
     "character-andi": {
-      "src": "assets/images/wiki/character-thumbnails/andi.webp"
+      "src": "assets/images/wiki/character-thumbnails/andi.webp",
+      "gallery_id": "andi",
+      "gallery_era": "future"
     },
     "character-saline": {
-      "src": "assets/images/wiki/character-thumbnails/saline.webp"
+      "src": "assets/images/wiki/character-thumbnails/saline.webp",
+      "gallery_id": "saline",
+      "gallery_era": "future"
     },
     "character-sophie": {
-      "src": "assets/images/wiki/character-thumbnails/sophie.webp"
+      "src": "assets/images/wiki/character-thumbnails/sophie.webp",
+      "gallery_id": "sophie",
+      "gallery_era": "medieval"
     },
     "character-pixie": {
-      "src": "assets/images/wiki/character-thumbnails/pixie.webp"
+      "src": "assets/images/wiki/character-thumbnails/pixie.webp",
+      "gallery_id": "pixie",
+      "gallery_era": "medieval"
     },
     "character-the-blessed-ones": {
-      "src": "assets/images/wiki/character-thumbnails/the-blessed-ones.webp"
-    },
-    "character-huli": {
-      "src": "assets/images/wiki/character-thumbnails/huli.webp"
-    },
-    "character-nanami": {
-      "src": "assets/images/wiki/character-thumbnails/nanami.webp"
-    },
-    "character-rin": {
-      "src": "assets/images/wiki/character-thumbnails/rin.webp"
+      "src": "assets/images/wiki/character-thumbnails/the-blessed-ones.webp",
+      "gallery_id": "the-blessed-ones",
+      "gallery_era": "future",
+      "gallery_description_ru": "Где найти The Blessed Ones и какие взаимодействия с ними доступны."
     }
-  }
+  },
+  "gallery_sync": true
 }

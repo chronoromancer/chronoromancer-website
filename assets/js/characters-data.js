@@ -1,159 +1,1482 @@
 window.CHRONO_CHARACTERS = Object.freeze([
-{"id":"aria","name":"A.R.I.A.","era":"medieval","descriptionEn":"An adult-bodied android assassin built from VOID-derived knowledge. After her defeat, the player removed her command locks and gave her the ability to choose.","descriptionZh":"一名拥有成年身体的仿生人刺客，由源自VOID的知识打造。她被击败后，玩家移除了她的命令锁，赋予她选择的能力。","image":"assets/images/v2/cast/aria.png"},
-{"id":"abby","name":"Abby","era":"present","descriptionEn":"An energetic dance instructor with boundless enthusiasm. She brings youthful energy and passion to every class she teaches.","descriptionZh":"一位精力充沛的舞蹈老师，拥有无穷的热情。她把青春活力与热爱带进自己教授的每一堂课。","image":"assets/images/v2/cast/abby.png"},
-{"id":"aimy","name":"AIMy","era":"future","descriptionEn":"Nova's catastrophically helpful AI research assistant. She monitors everything through the biobot network she injected into you without consent.","descriptionZh":"Nova那位帮起忙来堪称灾难的AI研究助理。她通过未经你同意就注入你体内的生物机器人网络监控一切。","image":"assets/images/v2/cast/aimy.png"},
-{"id":"akira","name":"Akira","era":"present","descriptionEn":"A burned-out hospital doctor with a clinical demeanor and zero patience. She works at her private office in uptown.","descriptionZh":"一位身心俱疲的医院医生，态度冷静专业，却完全没有耐心。她在住宅区的私人诊所工作。","image":"assets/images/v2/cast/akira.png"},
-{"id":"amelia","name":"Amelia","era":"medieval","descriptionEn":"A kind middle-aged village healer who practices simple healing magic and traditional medicine at the Medieval Village Healer's Hut.","descriptionZh":"一位善良的中年村庄治疗师，在中世纪村庄的治疗师小屋中施展简单治疗魔法，并使用传统医术。","image":"assets/images/v2/cast/amelia.png"},
-{"id":"annette","name":"Annette","era":"medieval","descriptionEn":"A red-haired royal guard who patrols both castle and town, sharp-eyed beneath polished red-and-silver armor.","descriptionZh":"红发皇家卫兵，在城堡和城镇巡逻，穿着抛光的红银盔甲，目光锐利。","image":"assets/images/v2/cast/annette.png"},
-{"id":"archie","name":"Archie","era":"future","descriptionEn":"A historical archive android at the Modified Historical Archive Facility. She wears a white lab coat and glasses.","descriptionZh":"改造历史 档案设施中的历史档案安卓人。她穿着白色实验服，戴着眼镜。","image":"assets/images/v2/cast/archie.png"},
-{"id":"arestes","name":"Arestes","era":"medieval","descriptionEn":"A masked figure in a black coat and top hat with mismatched eyes. She leads the Thieves Guild from a hidden chamber few know exists.","descriptionZh":"一位戴着面具、身穿黑色外套和高礼帽的身影，双眼颜色并不相同。她在一间鲜有人知的密室中领导盗贼公会。","image":"assets/images/v2/cast/arestes.png"},
-{"id":"arnold","name":"Arnold","era":"present","descriptionEn":"A prototype service android stationed at the downtown mansion. Half-cybernetic gaze, impeccable formalwear, and a synthesized voice that never wavers.","descriptionZh":"一台驻守在市中心豪宅的原型服务安卓人。半机械化的目光、一丝不苟的正装，以及从不动摇的合成嗓音。","image":"assets/images/v2/cast/arnold.png"},
-{"id":"artemis","name":"Artemis","era":"future","descriptionEn":"The last surviving elf, formerly known as Robin. She was put in magical stasis and woke in the Future Era to find her entire race extinct.","descriptionZh":"最后幸存的精灵，过去名叫Robin。她曾被置入魔法停滞状态，醒来时已身处未来时代，并发现自己的整个种族都已灭绝。","image":"assets/images/v2/cast/artemis.png"},
-{"id":"audrey","name":"Audrey","era":"medieval","descriptionEn":"A Mandragora plant-woman from the dungeon depths. She tends the brothel garden with quiet intensity and doesn't trust easily.","descriptionZh":"一位来自地下城深处的曼德拉草植物女性。她以安静却强烈的专注照料青楼花园，也不轻易信任他人。","image":"assets/images/v2/cast/audrey.png"},
-{"id":"ava_and_eva","name":"Ava and Eva","era":"medieval","descriptionEn":"Two strikingly identical masseuses with long blonde hair and bright green eyes, dressed in matching black-and-leather outfits. They insist they look nothing alike.","descriptionZh":"两位惊人相似的按摩师，拥有金色长发和明亮绿眼，穿着相配的黑色皮革装束。她们坚持认为彼此一点也不像。","image":"assets/images/v2/cast/ava_and_eva.png"},
-{"id":"azariel","name":"Azariel","era":"medieval","descriptionEn":"A neutral angel who observes mortal affairs with detached curiosity. She maintains strict neutrality between light and darkness.","descriptionZh":"一位中立天使，以超然的好奇观察凡间事务。她在光明与黑暗之间保持严格中立。","image":"assets/images/v2/cast/azariel.png"},
-{"id":"aziza","name":"Aziza","era":"medieval","descriptionEn":"A 169-year-old half-elf sorceress who runs the Demesne's arcane shop, teaches advanced magic, and guards the ancient seal beneath it.","descriptionZh":"一位 169 岁的半精灵女术士，经营着领地的奥术商店，教授高级魔法，并守护着其下方的古老封印。","image":"assets/images/v2/cast/aziza.png"},
-{"id":"bayne","name":"Bayne","era":"future","descriptionEn":"Motley's personal bodyguard. Massive, silent, immovable. She is the wall between Motley and everything that wants to hurt her.","descriptionZh":"Motley的私人保镖。高大、沉默、不可动摇。她是Motley与一切想伤害她之物之间的墙。","image":"assets/images/v2/cast/bayne.png"},
-{"id":"bella","name":"Bella","era":"present","descriptionEn":"A librarian with braided pigtails and glasses. She's passionate about fantasy books and appears shy but thoughtful.","descriptionZh":"一位扎着双麻花辫、戴着眼镜的图书管理员。她热爱奇幻书籍，看起来害羞却心思细腻。","image":"assets/images/v2/cast/bella.png"},
-{"id":"bellavia","name":"Bellavia","era":"medieval","descriptionEn":"The librarian Bella, turned vampire and reborn in the cellar. The shy bookworm is gone, replaced by hunger and instinct.","descriptionZh":"图书管理员Bella，被转化为吸血鬼，在地窖中重生。羞怯的书虫已不复存在，取而代之的是饥渴与本能。","image":"assets/images/v2/cast/bellavia.png"},
-{"id":"ben_arthur","name":"Ben Arthur","era":"medieval","descriptionEn":"An older cobbler with a philosophical nature. He's known for sharing wise sayings and thoughtful observations about life.","descriptionZh":"一位年长的鞋匠，天性富有哲思。他以分享睿智格言和对生活的细致观察而闻名。","image":"assets/images/v2/cast/ben_arthur.png"},
-{"id":"bessie","name":"Bessie","era":"medieval","descriptionEn":"A towering minotaur woman with proud horns, immense strength, and a blunt temper. She is loud, direct, and warmer than she first appears.","descriptionZh":"一位高大的牛头人女性，长着骄傲的兽角，力量惊人，脾气直冲。她嗓门大、说话直接，但比第一眼看上去更温暖。","image":"assets/images/v2/cast/bessie.png"},
-{"id":"blinky","name":"Blinky","era":"medieval","descriptionEn":"A mysterious entity who controls the Arcane Room at the brothel. She provides mystical services and magical enhancements.","descriptionZh":"一个掌控着青楼秘法室的神秘存在。她提供各种神秘服务与魔法强化。","image":"assets/images/v2/cast/blinky.png"},
-{"id":"bobo","name":"Bobo","era":"medieval","descriptionEn":"A mischievous goblin girl with green skin, messy pigtails, and a permanent smirk. Wears a red collar with an ear tag and smells faintly of cheese.","descriptionZh":"一个调皮的哥布林女孩，绿色皮肤，双马尾乱糟糟，脸上总挂着坏笑。她戴着带耳牌的红色项圈，身上隐约有奶酪味。","image":"assets/images/v2/cast/bobo.png"},
-{"id":"br10dr","name":"BR10DR","era":"future","descriptionEn":"A robot bartender at the Synthetic Beings Recharge Station. He serves drinks and bad jokes in equal measure.","descriptionZh":"合成人充能站的一位机器人酒保。他供应饮品，也同样供应糟糕笑话。","image":"assets/images/v2/cast/br10dr.png"},
-{"id":"brandy","name":"Brandy","era":"medieval","descriptionEn":"A rowdy alehouse worker who loves drinking, partying, and having a good time. She brings energy and excitement wherever she goes.","descriptionZh":"一位喧闹的酒馆员工，热爱喝酒、聚会和尽情享乐。无论走到哪里，她都会带来活力与兴奋。","image":"assets/images/v2/cast/brandy.png"},
-{"id":"chamel","name":"Chamel","era":"future","descriptionEn":"The Syndicate's master infiltrator: a playful, chaotic clown who builds complete identities such as Chamella and Riven for high-risk operations.","descriptionZh":"辛迪加的首席渗透专家：一位顽皮又混乱的小丑，会为高风险行动塑造出 Chamella、Riven 等完整人格。","image":"assets/images/v2/cast/chamel.png"},
-{"id":"chamella","name":"Chamella","era":"future","descriptionEn":"The sweet, shy daytime attendant at the Syndicate Funhouse—and one of Chamel's most convincing infiltration identities.","descriptionZh":"辛迪加欢乐屋里甜美羞怯的日班接待员，也是 Chamel 最令人信服的潜入身份之一。","image":"assets/images/v2/cast/chamella.png"},
-{"id":"chef_martha","name":"Chef Martha","era":"present","descriptionEn":"A skilled professional chef who runs the kitchen with precision. She takes great pride in her culinary abilities.","descriptionZh":"一位技艺娴熟的专业厨师，以精准方式管理厨房。她对自己的烹饪能力非常自豪。","image":"assets/images/v2/cast/chef_martha.png"},
-{"id":"cherry","name":"Cherry","era":"present","descriptionEn":"A hardened street prostitute who works the downtown back alleys late at night. Sharp tongue, sharper prices.","descriptionZh":"一位老练的街头性工作者，深夜在市中心后巷工作。嘴巴很利，价格更利。","image":"assets/images/v2/cast/cherry.png"},
-{"id":"chloe","name":"Chloe","era":"future","descriptionEn":"An earnest advanced-track Academy student whose sharp mind is beginning to outgrow the answers chosen for her.","descriptionZh":"一名真诚的学院高阶课程学生；她思维敏锐，正逐渐超越那些替她选好的答案。","image":"assets/images/v2/cast/chloe.png"},
-{"id":"christy","name":"Christy","era":"present","descriptionEn":"A cheerful country girl who runs a potato stand at the farmers market. She has extensive knowledge about potato cultivation.","descriptionZh":"一位开朗的乡村女孩，在农贸市场经营土豆摊。她对土豆种植有丰富知识。","image":"assets/images/v2/cast/christy.png"},
-{"id":"cid","name":"Cid","era":"future","descriptionEn":"A gruff, extensively modified resistance technician who runs the underground clinic and speaks with an odd harmonic voice.","descriptionZh":"一位粗鲁、经过广泛改造的抵抗技术员，经营着地下诊所，说话声音奇怪而和谐。","image":"assets/images/v2/cast/cid.png"},
-{"id":"cinnamon","name":"Cinnamon","era":"medieval","descriptionEn":"A scrappy cat girl with messy brown hair and a long tail. Hangs around the Acrobat Training Hall, walking with a slight limp.","descriptionZh":"一个顽强的猫女孩，棕发凌乱，尾巴很长。她常在杂技训练大厅附近活动，走路时有些跛。","image":"assets/images/v2/cast/cinnamon.png"},
-{"id":"coradio","name":"Coradio","era":"medieval","descriptionEn":"An ancient elf sword trainer who divides his time between the tournament grounds and Fighters Guild. Proud, precise, and expensive.","descriptionZh":"一位古老的精灵剑术导师，往返于比武场和战士公会之间。骄傲、精准，而且身价不菲。","image":"assets/images/v2/cast/coradio.png"},
-{"id":"cotton","name":"Cotton","era":"present","descriptionEn":"The energetic lead singer of a local band, chasing a lifelong pop-star dream with infectious enthusiasm and serious performance discipline.","descriptionZh":"本地乐队充满活力的主唱，以富有感染力的热情和严格的表演纪律追逐一生的流行歌星梦想。","image":"assets/images/v2/cast/cotton.png"},
-{"id":"voss","name":"Councilor Voss","era":"future","descriptionEn":"A mid-level councilor overseeing Fringe Zone resource allocation at Synergy Corp. Sharp-jawed with slicked grey hair.","descriptionZh":"新能集公司里一名中层议员，负责监督边缘区资源分配。下颌线锐利，灰发梳得油亮。","image":"assets/images/v2/cast/voss.png"},
-{"id":"dawn","name":"Dawn","era":"present","descriptionEn":"A 21-year-old elite university swimmer who trains at the new uptown pool, with chestnut hair, aqua-blue eyes, and a focused athlete's confidence.","descriptionZh":"一名21岁的大学精英游泳运动员，在新建的上城泳池训练。栗色头发，水蓝色眼眸，带着运动员那份专注的自信。","image":"assets/images/v2/cast/dawn.png"},
-{"id":"dex","name":"Dex","era":"future","descriptionEn":"A scruffy informant with a cybernetic eye who works the Fringe Zone. He knows everyone and sells information to whoever pays.","descriptionZh":"一位邋遢的线人，装着一只赛博义眼，在边缘区活动。他认识所有人，也会把情报卖给任何愿意付钱的人。","image":"assets/images/v2/cast/dex.png"},
-{"id":"diane","name":"Diane","era":"present","descriptionEn":"The Town Hall clerk with platinum blonde hair and a composed demeanor. She handles all civic matters with quiet efficiency.","descriptionZh":"一位铂金金发、举止沉稳的市政厅办事员。她以安静高效的方式处理所有市政事务。","image":"assets/images/v2/cast/diane.png"},
-{"id":"diedra","name":"Diedra","era":"present","descriptionEn":"A feral vampire catgirl kept loose in the vampire lounge as a living threat. Wild blonde curls, feline ears, fangs, and claws. Treats violence as play.","descriptionZh":"一个野性的吸血鬼猫女孩，被放养在吸血鬼休息室里，作为活生生的威胁。狂乱的金色卷发、猫耳、獠牙与利爪。她把暴力当成游戏。","image":"assets/images/v2/cast/diedra.png"},
-{"id":"elara","name":"Elara","era":"medieval","descriptionEn":"A competent manager who handles brothel operations efficiently. She demonstrates professional expertise in organizational matters.","descriptionZh":"一位能干的经理，高效处理青楼运营事务。她在组织管理方面展现出专业能力。","image":"assets/images/v2/cast/elara.png"},
-{"id":"emily","name":"Emily","era":"present","descriptionEn":"A cheerful young woman who works at the uptown cafe. She has bright green eyes and always greets customers with warmth.","descriptionZh":"一位在住宅区咖啡馆工作的开朗年轻女性。她有明亮的绿眼睛，总是热情地迎接顾客。","image":"assets/images/v2/cast/emily.png"},
-{"id":"epom","name":"EPOM","era":"future","descriptionEn":"Enhanced Precision Ordnance Master - Chief Engineer of the TD Fortress. Cold, brilliant, and the reason the defenses actually work.","descriptionZh":"增强型精密军械大师，TD要塞的首席工程师。冷静、聪明，也是防御系统真正能运转的原因。","image":"assets/images/v2/cast/epom.png"},
-{"id":"esperanza","name":"Esperanza","era":"medieval","descriptionEn":"A graceful dance instructor with warm amber eyes and flowing dark hair. Professional, elegant, and kind-hearted across all social classes.","descriptionZh":"一位优雅的舞蹈老师，拥有温暖的琥珀色眼眸和柔顺的深色长发。她专业、端庄，并对各个阶层的人都心怀善意。","image":"assets/images/v2/cast/esperanza.png"},
-{"id":"evangeline","name":"Evangeline","era":"present","descriptionEn":"A CEO of Synergy Corp, ruthless businesswoman at the top of the power hierarchy. She commands respect through sharp intelligence.","descriptionZh":"新能集公司的一位CEO，位居权力阶层顶端的冷酷女商人。她凭借敏锐的智慧赢得敬畏。","image":"assets/images/v2/cast/evangeline.png"},
-{"id":"fernando","name":"Fernando","era":"medieval","descriptionEn":"A flamboyant master tailor who serves as fashion authority for Kings Demesne. He loves gossip and creates stunning outfits.","descriptionZh":"一位华丽张扬的裁缝大师，是国王领地的时尚权威。他热爱八卦，也能创造出惊艳的服装。","image":"assets/images/v2/cast/fernando.png"},
-{"id":"foxy","name":"Foxy","era":"medieval","descriptionEn":"A wild fox-like humanoid creature from the medieval hunting grounds. She retains some fox features and enhanced senses.","descriptionZh":"一位来自中世纪猎场的野性狐类人形生物。她保留了一些狐狸特征，也拥有强化的感官。","image":"assets/images/v2/cast/foxy.png"},
-{"id":"friday","name":"Friday","era":"present","descriptionEn":"A mysterious soul collector who appears throughout the Haunted House. She speaks in deadpan delivery about death and the supernatural.","descriptionZh":"一位神秘的灵魂收集者，会在鬼屋各处出现。她以面无表情的语气谈论死亡与超自然。","image":"assets/images/v2/cast/friday.png"},
-{"id":"gandon","name":"Gandon","era":"medieval","descriptionEn":"A pompous middle-aged Blue Wizard who considers himself sophisticated and wise beyond his years. He specializes in air elemental magic and theoretical wizardry.","descriptionZh":"一位自命不凡的中年蓝袍巫师，自认老练且智慧远超年龄。他专精于风元素魔法与理论巫术。","image":"assets/images/v2/cast/gandon.png"},
-{"id":"gastoff","name":"Gastoff","era":"medieval","descriptionEn":"A gruff, muscular blacksmith whose forge supplies the Demesne and handles the Rose & Thorn's major construction commissions.","descriptionZh":"一位粗鲁、肌肉发达的铁匠，他的锻造厂为领地供货并处理玫瑰与荆棘的主要建筑委托。","image":"assets/images/v2/cast/gastoff.png"},
-{"id":"gem","name":"Gem","era":"medieval","descriptionEn":"A rugged adult dwarf miner who spends her days searching for ores and treasures in the mountain foothills. She stands 4'5\" and prefers rocks to people.","descriptionZh":"一位粗犷的成年矮人矿工，整天在山麓寻找矿石与宝藏。她身高4英尺5英寸，比起人更喜欢石头。","image":"assets/images/v2/cast/gem.png"},
-{"id":"ghost","name":"Ghost","era":"future","descriptionEn":"A cold resistance leader with silver twin-tail hair who commands the underground fight against VOID from the Future Hideout.","descriptionZh":"一位冷峻的抵抗组织领袖，有着银色双马尾，在未来藏身处指挥地下力量对抗VOID。","image":"assets/images/v2/cast/ghost.png"},
-{"id":"ginger","name":"Ginger","era":"future","descriptionEn":"A shameless flirt who lives in the Gingerbread House in Christmas Village. She has a fiery personality and an obsession with candy canes.","descriptionZh":"一位毫不害羞的调情高手，住在圣诞村的姜饼屋。她性格火热，对拐杖糖有种执念。","image":"assets/images/v2/cast/ginger.png"},
-{"id":"glitch","name":"Glitch","era":"future","descriptionEn":"A reclusive hacker with messy purple-white hair and thick glasses. She lives in a tech-filled den in the Fringe Zone.","descriptionZh":"一位隐居黑客，紫白色头发乱糟糟，戴着厚厚的眼镜。她住在边缘区一个堆满科技设备的窝里。","image":"assets/images/v2/cast/glitch.png"},
-{"id":"grace","name":"Grace","era":"medieval","descriptionEn":"A young nun who has lived in the monastery her whole life, now curious about the world beyond its walls. She finds herself restless.","descriptionZh":"一位年轻修女，一生都住在修道院中，如今开始对院墙之外的世界感到好奇。她发现自己变得坐立不安。","image":"assets/images/v2/cast/grace.png"},
-{"id":"gruff","name":"Gruff","era":"medieval","descriptionEn":"Captain of the Royal Guard. Patrols the streets personally. Fair but firm, and the underground knows his name.","descriptionZh":"皇家卫队的队长。亲自在街上巡逻。公正而坚定，地下世界也知道他的名字。","image":"assets/images/v2/cast/gruff.png"},
-{"id":"guard","name":"Guard","era":"medieval","descriptionEn":"A royal guard who stands watch over the throne room when the king is absent.","descriptionZh":"一名王室卫兵，在国王不在时守卫王座厅。","image":"assets/images/v2/cast/guard.png"},
-{"id":"hailey","name":"Hailey","era":"medieval","descriptionEn":"A kind widow who runs the general goods store. The community helps and cares for her, and she's grateful for their support.","descriptionZh":"一位善良的寡妇，经营着杂货店。社区会帮助并关心她，而她也感激他们的支持。","image":"assets/images/v2/cast/hailey.png"},
-{"id":"holly","name":"Holly","era":"future","descriptionEn":"A shy nature girl who tends the Winter Wonderland in Christmas Village. She speaks softly and craves warmth despite living in the snow.","descriptionZh":"一位害羞的自然系女孩，照看圣诞村里的冬日仙境。她说话轻柔，尽管住在雪中，却渴望温暖。","image":"assets/images/v2/cast/holly.png"},
-{"id":"honey","name":"Honey","era":"medieval","descriptionEn":"Wilfred's adult daughter, a hardworking farm woman with a plain tongue, restless curiosity, and an accidental gift for filthy double meanings.","descriptionZh":"Wilfred 已成年的女儿，一个勤劳、嘴直、好奇心旺盛的农家女人。她最特别的天赋，是总能无意间把正经农活说得下流透顶。","image":"assets/images/v2/cast/honey.png"},
-{"id":"isolde","name":"Isolde","era":"medieval","descriptionEn":"A silver-haired noblewoman from a foreign court, recently returned to the castle after being rescued from the back alleys one too many times.","descriptionZh":"一位来自异国宫廷的银发贵族女子，在后巷被救助了太多次之后，最近终于回到了城堡。","image":"assets/images/v2/cast/isolde.png"},
-{"id":"jade","name":"Jade","era":"medieval","descriptionEn":"A shy merchant's daughter who watches performances at the brothel. Her father Silas runs an exotic goods shop in the bazaar.","descriptionZh":"一位害羞的商人之女，常在青楼观看表演。她的父亲Silas在集市里经营着一家异域珍品店。","image":"assets/images/v2/cast/jade.png"},
-{"id":"jarid","name":"Jarid","era":"future","descriptionEn":"An enforcement officer at Synergy Corp with a cybernetic visor and imposing presence. He handles compliance and behavioral flagging.","descriptionZh":"新能集公司的一名执法官，戴着赛博护目镜，气场迫人。他负责合规事务与行为标记。","image":"assets/images/v2/cast/jarid.png"},
-{"id":"jelly","name":"Jelly","era":"medieval","descriptionEn":"A cheerful blue slime girl with long flowing slime hair and bright green eyes. Constantly dripping, constantly smiling, made entirely of soft squishy goo.","descriptionZh":"一个开朗的蓝色史莱姆女孩，拥有长长流动的史莱姆头发和明亮绿眼。她总是在滴落，也总是在微笑，完全由柔软弹润的黏胶构成。","image":"assets/images/v2/cast/jelly.png"},
-{"id":"jennifer","name":"Jennifer","era":"present","descriptionEn":"A disciplined trainer at the uptown gym: short black hair, muscular athletic build, sharp coaching instincts, and an intimidating work ethic softened by genuine care.","descriptionZh":"住宅区健身房里一位纪律严明的教练：黑色短发、肌肉发达的运动体格、敏锐的教练本能，以及因真诚关怀而软化的令人生畏的职业道德。","image":"assets/images/v2/cast/jennifer.png"},
-{"id":"jessie","name":"Jessie","era":"present","descriptionEn":"A 22-year-old woman who just left her emotionally abusive ex and rented your basement apartment. Trying to rebuild her independence after relying on him for everything.","descriptionZh":"一位22岁的女性，刚刚离开情感虐待她的前任，并租下了你的地下室公寓。在曾经凡事依赖对方之后，她正努力重建独立。","image":"assets/images/v2/cast/jessie.png"},
-{"id":"jinx","name":"Jinx","era":"future","descriptionEn":"A sharp-tongued Fringe-born hustler at the Consumer Fulfillment Center. She exploits VOID's bad recommendations and insists she answers to nobody.","descriptionZh":"一位出身边缘区、口才犀利的街头混混，在消费满足中心工作。她利用 VOID 的糟糕推荐，坚持说自己只听自己的。","image":"assets/images/v2/cast/jinx.png"},
-{"id":"joey","name":"Joey","era":"present","descriptionEn":"The bubbly, fast-talking clerk who pretty much lives behind the counter at the Corner Convenience Store. Knows everyone in Uptown by name.","descriptionZh":"街角便利店里那位活泼又语速飞快的店员，几乎就住在柜台后面。她能叫出上城区每个人的名字。","image":"assets/images/v2/cast/joey.png"},
-{"id":"kalb","name":"Kalb","era":"medieval","descriptionEn":"A young fox humanoid food vendor with brown hair, amber eyes, and fox ears and tail. He works harder than necessary to prove his worth.","descriptionZh":"一位年轻的狐类人形食品摊贩，棕发、琥珀色眼睛，还有狐狸耳朵和尾巴。他为了证明自己的价值，比必要程度更加努力。","image":"assets/images/v2/cast/kalb.png"},
-{"id":"kasumi","name":"Kasumi","era":"medieval","descriptionEn":"A young oracle with teal twin tails. She takes everything literally and has prophetic dreams about VOID that the AI cannot monitor.","descriptionZh":"一位年轻的神谕者，留着蓝绿色双马尾。她会按字面理解一切，并做着AI无法监控的关于VOID的预知梦。","image":"assets/images/v2/cast/kasumi.png"},
-{"id":"katie","name":"Katie","era":"present","descriptionEn":"Your energetic new neighbor: blonde ponytail, athletic clothes, bright smile, and a direct way of making confusing things feel manageable.","descriptionZh":"你精力充沛的新邻居：金色马尾、运动服、灿烂笑容，还有一种能把混乱事情讲得好处理的直接风格。","image":"assets/images/v2/cast/katie.png"},
-{"id":"keira","name":"Keira","era":"medieval","descriptionEn":"A quick-footed thieves guild rooftop runner who becomes available in the back alleys after the player beats her in a parkour race.","descriptionZh":"盗贼公会里脚步飞快的屋顶跑者。玩家在跑酷比赛中赢过她后，她会出现在后巷。","image":"assets/images/v2/cast/keira.png"},
-{"id":"kent","name":"Kent","era":"medieval","descriptionEn":"A friendly innkeeper who loves to share stories with travelers from all walks of life. He maintains the medieval travelers' inn.","descriptionZh":"一位友善的旅店老板，喜欢与各行各业的旅人分享故事。他经营着中世纪的旅人旅店。","image":"assets/images/v2/cast/kent.png"},
-{"id":"kimi","name":"Kimi","era":"present","descriptionEn":"A sweet, athletic rollerskater rescued during a downtown alley encounter. She is almost always on teal roller skates and tries to meet the city with bright confidence.","descriptionZh":"一位甜美又擅长运动的轮滑少女，在市中心小巷事件中获救。她几乎总穿着青绿色轮滑鞋，努力以明亮的自信面对这座城。","image":"assets/images/v2/cast/kimi.png"},
-{"id":"king_graham","name":"King Graham","era":"medieval","descriptionEn":"The monarch who rules the kingdom. He loves money and makes impulsive decisions, though he's not entirely terrible.","descriptionZh":"统治王国的君主。他热爱金钱，也常冲动决策，尽管还不算彻底糟糕。","image":"assets/images/v2/cast/king_graham.png"},
-{"id":"kitty","name":"Kitty","era":"future","descriptionEn":"A feisty tiger-themed Syndicate operative who runs day-to-day work at the Big Top. Her moving ears and tail may be natural, gene-spliced, cybernetic, or part of the act; she refuses to say.","descriptionZh":"一位活跃的老虎主题辛迪加特工，在 Big Top 负责日常工作。她的耳朵和尾巴的移动可能是自然的、基因拼接的、控制论的或行为的一部分；她拒绝透露。","image":"assets/images/v2/cast/kitty.png"},
-{"id":"kristen","name":"Kristen","era":"future","descriptionEn":"An aquatic mobility test participant with a glossy teal cybernetic arm and leg. She spends long days at the Future Fringe testing shore.","descriptionZh":"一名水上机动性测试参与者，拥有亮泽的青绿色义肢手臂和腿。她常常整天待在未来边缘的测试海岸。","image":"assets/images/v2/cast/kristen.png"},
-{"id":"kupie","name":"Kupie","era":"present","descriptionEn":"A rookie Love Guardian sylph with silver-white hair and small wings, sent by Seraph to aid the player. Invisible to everyone else.","descriptionZh":"一位新手爱情守护西尔芙，银白色头发，小小的翅膀，由Seraph派来协助玩家。其他人都看不见她。","image":"assets/images/v2/cast/kupie.png"},
-{"id":"kurenai","name":"Kurenai","era":"future","descriptionEn":"A premium companion android at Cyber Sects whose warmth was optimized for customer retention.","descriptionZh":"赛博区的高级合成伴侣；她的温情经过优化，旨在提高客户留存率。","image":"assets/images/v2/cast/kurenai.png"},
-{"id":"kuro","name":"Kuro","era":"future","descriptionEn":"A future-goth audio operator whose quiet emotional range makes her resistant to the Mood Regulation Center's prescriptive broadcasts.","descriptionZh":"一名未来哥特风的音频操作员；她安静而低幅的情绪，使她能抵抗情绪调控中心的指令式广播。","image":"assets/images/v2/cast/kuro.png"},
-{"id":"carmilla","name":"Lady Carmilla","era":"present","descriptionEn":"A 300-year-old Sangrael vampire matriarch and blood mage who oversees blood-orb creation, family politics, and vampire lore.","descriptionZh":"一位 300 岁的桑格雷尔吸血鬼族长和血法师，负责监督血球的创造、家族政治和吸血鬼传说。","image":"assets/images/v2/cast/carmilla.png"},
-{"id":"lillian","name":"Lillian","era":"medieval","descriptionEn":"A seductive demon with vibrant red hair and magnificent black wings. She allied with divine forces to stop VOID's plan from destroying all existence.","descriptionZh":"一位诱人的恶魔，拥有鲜艳红发与华丽黑翼。她与神圣力量结盟，阻止VOID毁灭一切存在的计划。","image":"assets/images/v2/cast/lillian.png"},
-{"id":"lilu","name":"Lilu","era":"present","descriptionEn":"A skilled fighter who offers counterattack training to those willing to learn. She demonstrates expertise in combat techniques.","descriptionZh":"一位熟练的战士，会为愿意学习的人提供反击训练。她展现出对战斗技巧的精通。","image":"assets/images/v2/cast/lilu.png"},
-{"id":"lime_maid","name":"Lime","era":"medieval","descriptionEn":"A maid who shows fascination with magic and mystical arts. She adapts well to different environments and situations.","descriptionZh":"一位对魔法与神秘技艺表现出兴趣的女仆。她能很好地适应不同环境与状况。","image":"assets/images/v2/cast/lime_maid.png"},
-{"id":"lindia","name":"Lindia","era":"medieval","descriptionEn":"A gifted but anxious wizard apprentice who studies in the Rose & Thorn's quiet bar hours and practices controlled magic in its Training Room.","descriptionZh":"一位才华横溢但焦虑的巫师学徒，在玫瑰与荆棘酒吧安静的时间学习并在训练室练习受控魔法。","image":"assets/images/v2/cast/lindia.png"},
-{"id":"lord_chamberlain","name":"Lord Chamberlain","era":"medieval","descriptionEn":"The crown's chief administrator, precise with ledgers, procedure, and the consequences of King Graham's impulses.","descriptionZh":"王室的首席行政官，对账本、程序以及 Graham国王 的冲动的后果有着精确的掌握。","image":"assets/images/v2/cast/lord_chamberlain.png"},
-{"id":"lucy","name":"Lucy","era":"present","descriptionEn":"A professional dance instructor who runs her own studio. She maintains high standards and takes her work seriously.","descriptionZh":"一位专业舞蹈老师，经营着自己的工作室。她保持高标准，并认真对待自己的工作。","image":"assets/images/v2/cast/lucy.png"},
-{"id":"lychee_maid","name":"Lychee","era":"medieval","descriptionEn":"A maid who appreciates gifts and thoughtful gestures. She adapts to new environments while maintaining her personal standards.","descriptionZh":"一位珍视礼物与贴心举动的女仆。她会适应新环境，同时保持自己的个人标准。","image":"assets/images/v2/cast/lychee_maid.png"},
-{"id":"lyra","name":"Lyra","era":"medieval","descriptionEn":"A market vendor who welcomes customers with friendly greetings. She operates her business with warmth and professionalism.","descriptionZh":"一位市场摊贩，会用友善的问候迎接顾客。她以热情而专业的方式经营生意。","image":"assets/images/v2/cast/lyra.png"},
-{"id":"maggie","name":"Maggie","era":"present","descriptionEn":"A sharp, recently-graduated finance associate at the downtown office. She wears glasses and a tailored blazer, always with a report tucked under one arm.","descriptionZh":"市中心办公楼里一位精明干练、刚毕业不久的金融助理。她戴着眼镜，穿一身剪裁合体的西装外套，腋下总夹着一份报告。","image":"assets/images/v2/cast/maggie.png"},
-{"id":"ruxandra","name":"Magistra Ruxandra","era":"present","descriptionEn":"A severe vampire alchemist who keeps the castle laboratory stocked with blood reagents and volatile tinctures.","descriptionZh":"一位严厉的吸血鬼炼金术士，负责让城堡实验室常备血液试剂与易挥发酊剂。","image":"assets/images/v2/cast/ruxandra.png"},
-{"id":"maize","name":"Maize","era":"medieval","descriptionEn":"A devastatingly powerful succubus queen who works the brothel dungeon daytime shift. She has the personality of a golden retriever despite being terrifying.","descriptionZh":"一位强大到可怕的魅魔女王，负责青楼地下城的白班。尽管令人畏惧，她却有着金毛犬般的性格。","image":"assets/images/v2/cast/maize.png"},
-{"id":"mandarin_maid","name":"Mandarin","era":"medieval","descriptionEn":"A maid who focuses on providing excellent service. She maintains professional standards and takes pride in her work.","descriptionZh":"一位专注于提供优秀服务的女仆。她保持职业标准，并以自己的工作为荣。","image":"assets/images/v2/cast/mandarin_maid.png"},
-{"id":"marcus","name":"Marcus","era":"future","descriptionEn":"A young security officer at the Prime Transportation Hub. Recently promoted under mysterious circumstances.","descriptionZh":"核心区交通枢纽的一名年轻安保官。最近在神秘情况下获得晋升。","image":"assets/images/v2/cast/marcus.png"},
-{"id":"marina","name":"Marina","era":"medieval","descriptionEn":"A friendly fishing merchant who manages the essential fish trade. She appears at the fishing village in evenings and welcomes visitors warmly.","descriptionZh":"一位友善的渔业商人，管理着重要的鱼类贸易。她会在傍晚出现在渔村，并热情欢迎访客。","image":"assets/images/v2/cast/marina.png"},
-{"id":"maryann","name":"Mary Ann","era":"present","descriptionEn":"A cheerful young lepidopterist who manages the university butterfly pavilion, runs late because she keeps noticing tiny miracles, and insists butterflies should be called flutterbys.","descriptionZh":"一位性格开朗的年轻鳞翅目学家，负责管理大学蝴蝶馆。她总因为不断注意到微小的奇迹而迟到，并坚持认为蝴蝶应该叫扑棱蝶。","image":"assets/images/v2/cast/maryann.png"},
-{"id":"melanthe","name":"Melanthe","era":"medieval","descriptionEn":"An ancient lamia priestess with crimson hair full of hissing serpents, yellow reptilian eyes, and a long serpentine tail. Imperious bearing.","descriptionZh":"一位古老的拉米亚女祭司，深红头发中满是嘶嘶作响的蛇，拥有黄色爬行动物般的眼睛和长长的蛇尾。气度威严。","image":"assets/images/v2/cast/melanthe.png"},
-{"id":"miki","name":"Miki","era":"present","descriptionEn":"A stunning gyaru fashionista with blonde hair with pink highlights and tanned skin. She's impossibly demanding and makes no apologies for her high standards.","descriptionZh":"一位惊艳的辣妹系时尚达人，金发中带着粉色挑染，皮肤晒成小麦色。她要求高得离谱，也从不为自己的高标准道歉。","image":"assets/images/v2/cast/miki.png"},
-{"id":"mindy","name":"Mindy","era":"present","descriptionEn":"A sweet girl who had a crush on you in high school. She's shy but hopeful, often found at the metro station or the park.","descriptionZh":"一个甜美的女孩，高中时曾暗恋你。她害羞却怀着希望，经常出现在地铁站或公园。","image":"assets/images/v2/cast/mindy.png"},
-{"id":"momosagi","name":"Momosagi","era":"medieval","descriptionEn":"A pink bunny girl rescued from the dungeon depths. The giddy ditz routine is an act she enjoys playing.","descriptionZh":"从地下城深处被救出的粉色兔女孩。那副傻乎乎的呆萌模样，是她乐在其中演出来的。","image":"assets/images/v2/cast/momosagi.png"},
-{"id":"monk","name":"Monk","era":"medieval","descriptionEn":"A religious figure who offers blessings and spiritual guidance. He maintains a peaceful and welcoming demeanor.","descriptionZh":"一位宗教人士，提供祝福与精神指引。他保持着平和而友善的态度。","image":"assets/images/v2/cast/monk.png"},
-{"id":"harlequin","name":"Motley","era":"future","descriptionEn":"The brilliant leader of the Chaos Syndicate. A VOID genetic mistake with genius-level intellect, supernatural charisma, and zero empathy.","descriptionZh":"混沌辛迪加才华横溢的领袖。她是VOID基因工程中的错误产物，拥有天才级智力、超自然魅力，以及零同理心。","image":"assets/images/v2/cast/harlequin.png"},
-{"id":"muramasa","name":"Muramasa","era":"medieval","descriptionEn":"A blind katana master who trains daily at the knights training grounds. She wears a black blindfold and carries a sheathed katana at her hip.","descriptionZh":"一位失明的武士刀大师，每天都在骑士训练场练习。她戴着黑色眼罩，腰间佩着入鞘的武士刀。","image":"assets/images/v2/cast/muramasa.png"},
-{"id":"myriss","name":"Myriss","era":"medieval","descriptionEn":"A battle-scarred dark elf warrior with wild purple hair, red eyes, and a permanent scowl. Wears fur-trimmed battle wraps and silver arm bands.","descriptionZh":"一位伤痕累累的黑暗精灵战士，紫发狂乱，红色双眼，脸上总带着阴沉怒容。她穿着带毛皮饰边的战斗裹衣和银色臂环。","image":"assets/images/v2/cast/myriss.png"},
-{"id":"nerida","name":"Nerida","era":"present","descriptionEn":"A mystical figure who offers wisdom and healing services. She speaks in cryptic ways about water and life's deeper meanings.","descriptionZh":"一位神秘人物，提供智慧与治疗服务。她以隐晦的方式谈论水，以及生命更深层的意义。","image":"assets/images/v2/cast/nerida.png"},
-{"id":"noella","name":"Noella","era":"future","descriptionEn":"A warm hostess who runs the Mistletoe Lodge in Christmas Village. She welcomes guests with cozy hospitality and inviting smiles.","descriptionZh":"一位温暖的女主人，经营着圣诞村的槲寄生小屋。她用舒适的款待和迷人的笑容欢迎客人。","image":"assets/images/v2/cast/noella.png"},
-{"id":"nova","name":"Nova","era":"future","descriptionEn":"The Future Era's primary scientist and the player's main lab contact. Nova studies temporal displacement, maintains the biobot network with AIMy, and coordinates much of the resistance's scientific strategy.","descriptionZh":"未来时代的首席科学家，也是玩家在实验室的主要联络人。Nova研究时间位移，与AIMy一同维护生物机器人网络，并统筹抵抗组织大部分的科研策略。","image":"assets/images/v2/cast/nova.png"},
-{"id":"nyx","name":"Nyx","era":"present","descriptionEn":"The mysterious goth lead guitarist of a local band. She's dark, brooding, and speaks in cryptic observations that often turn out to be profound.","descriptionZh":"本地乐队中神秘的哥特风主音吉他手。她阴郁、沉思，说出口的隐晦观察往往最终显得很深刻。","image":"assets/images/v2/cast/nyx.png"},
-{"id":"nyxara","name":"Nyxara","era":"medieval","descriptionEn":"The Void Princess. A timeless, regal being draped in starlit constellations, found only in a hidden chamber beneath the catacombs.","descriptionZh":"虚空公主。一个不受时间束缚、气质高贵的存在，身披星光般的星座，只能在地下墓穴下方的隐藏密室中找到。","image":"assets/images/v2/cast/nyxara.png"},
-{"id":"becky","name":"Officer Becky","era":"present","descriptionEn":"A police officer with brown hair in a blue uniform, working at the downtown station. She takes her job seriously.","descriptionZh":"一位棕发警官，身穿蓝色制服，在市中心警局工作。她非常认真地对待自己的职责。","image":"assets/images/v2/cast/becky.png"},
-{"id":"orchid","name":"Orchid","era":"future","descriptionEn":"A cheerful scavenger with lavender hair who works at the Surplus Distribution Center. She wears a helmet with goggles.","descriptionZh":"一位开朗的拾荒者，有着淡紫色头发，在盈余分配中心工作。她戴着带护目镜的头盔。","image":"assets/images/v2/cast/orchid.png"},
-{"id":"pepper","name":"Pepper","era":"medieval","descriptionEn":"A resurrected soul in a bunny outfit she can never remove. Bound to the brothel by the angel Lillian as an act of mercy. Eager, obedient, and profoundly dim.","descriptionZh":"一个复活的灵魂，穿着永远无法脱下的兔女郎装。天使Lillian出于怜悯将她束缚在青楼中。她热切、顺从，而且迟钝得惊人。","image":"assets/images/v2/cast/pepper.png"},
-{"id":"pixel","name":"Pixel","era":"future","descriptionEn":"A chaotic adult clone and cybernetic survivor who breaks mandated walking patterns and leaves consent-coded notes for her future self.","descriptionZh":"一个混乱跳脱的成年克隆体和义体改造幸存者，打破强制步行模式，并给未来的自己留下标注同意条件的便条。","image":"assets/images/v2/cast/pixel.png"},
-{"id":"poison","name":"Poison","era":"future","descriptionEn":"The Syndicate's chief enforcer, recognizable by her spiked brass knuckles, electric-cyan mohawk, shaved green sides, and surprisingly gentle touch with plants.","descriptionZh":"辛迪加的首席执行者，她的尖刺指节铜套、电青色莫霍克头、剃光的绿色侧边以及与植物的惊人温柔接触很容易辨认。","image":"assets/images/v2/cast/poison.png"},
-{"id":"poppy","name":"Poppy","era":"medieval","descriptionEn":"A cheerful halfling cook who runs the Rose & Thorn kitchen, experiments with rare ingredients, and teaches the craft behind her comforting meals.","descriptionZh":"一位性格开朗的半身人厨师，负责经营玫瑰与荆棘厨房，尝试使用稀有食材，并传授令人心旷神怡的膳食背后的手艺。","image":"assets/images/v2/cast/poppy.png"},
-{"id":"portia","name":"Portia","era":"present","descriptionEn":"A sophisticated socialite with expensive tastes. She requires a sports car to even acknowledge your existence and appreciates luxury.","descriptionZh":"一位精致的社交名媛，品味昂贵。你至少需要一辆跑车，她才会承认你的存在；她欣赏奢华。","image":"assets/images/v2/cast/portia.png"},
-{"id":"barnard","name":"Prince Barnard","era":"medieval","descriptionEn":"King Graham's spoiled heir, proud of his rank and irritated by the player's growing court importance.","descriptionZh":"Graham国王被宠坏的继承人，以自己的身份为傲，也因玩家在宫廷中日益重要而恼怒。","image":"assets/images/v2/cast/barnard.png"},
-{"id":"rachel","name":"Rachel","era":"present","descriptionEn":"The brilliant student body president at the university. She excels in physics and advanced calculus while maintaining her leadership role.","descriptionZh":"大学里才华出众的学生会主席。她在物理和高等微积分方面表现优异，同时也维持着自己的领导职责。","image":"assets/images/v2/cast/rachel.png"},
-{"id":"rain_maid","name":"Rain","era":"medieval","descriptionEn":"A maid who brings energy and enthusiasm to her work. She maintains positive relationships with her colleagues.","descriptionZh":"一位把活力与热情带入工作的女仆。她与同事保持着积极的关系。","image":"assets/images/v2/cast/rain_maid.png"},
-{"id":"raven","name":"Raven","era":"medieval","descriptionEn":"A commanding dominatrix with long black hair who rules the brothel dungeon. You defeated her twice before she joined you.","descriptionZh":"一位黑色长发、统御青楼地牢的威严女王。她加入你之前，你曾两次击败她。","image":"assets/images/v2/cast/raven.png"},
-{"id":"rei","name":"Rei","era":"present","descriptionEn":"A passionate gamer at the downtown arcade. She takes the Invading Space strategy game very seriously and doesn't like being interrupted.","descriptionZh":"市中心街机厅里一位热情的玩家。她非常认真地对待《入侵太空》这款策略游戏，也不喜欢被打扰。","image":"assets/images/v2/cast/rei.png"},
-{"id":"riki","name":"Riki","era":"future","descriptionEn":"A young resistance fighter at the Underground Hideout. She's Ghost's most trusted lieutenant and handles tactical operations.","descriptionZh":"地下藏身处里一位年轻的抵抗战士。她是Ghost最信任的副手，负责战术行动。","image":"assets/images/v2/cast/riki.png"},
-{"id":"robin","name":"Robin","era":"medieval","descriptionEn":"A 96-year-old elven master archer who runs the archery range. She has dark olive hair and sharp blue eyes.","descriptionZh":"一位96岁的精灵弓术大师，经营着射箭场。她有深橄榄色头发和锐利的蓝眼睛。","image":"assets/images/v2/cast/robin.png"},
-{"id":"rose_arthur","name":"Rose Arthur","era":"medieval","descriptionEn":"A community-minded person who keeps track of local happenings and relationships. She demonstrates strong social awareness.","descriptionZh":"一位关心社区的人，留意本地发生的事情与人际关系。她展现出很强的社交意识。","image":"assets/images/v2/cast/rose_arthur.png"},
-{"id":"sabbath","name":"Sabbath","era":"medieval","descriptionEn":"A wild witch dwelling in the Whispering Woods. She practices unconventional magic and has a long-standing feud with Gandon the Blue Wizard.","descriptionZh":"一位居住在低语森林的野性女巫。她修习非传统魔法，并与蓝袍巫师Gandon有着长期宿怨。","image":"assets/images/v2/cast/sabbath.png"},
-{"id":"saber","name":"Saber","era":"future","descriptionEn":"An elite corporate enforcer at Synergy Corp Tower. Her combat skills are legendary, her loyalty is purchased.","descriptionZh":"新能集公司塔的一名精英企业执行者。她的战斗技巧堪称传奇，而她的忠诚是买来的。","image":"assets/images/v2/cast/saber.png"},
-{"id":"sabrina","name":"Sabrina","era":"present","descriptionEn":"A self-made illusionist who runs a downtown magic shop, selling original illusion rigs to professional touring acts worldwide. She wears the witch costume because she loves it.","descriptionZh":"一位白手起家的幻术师，在市中心经营魔术商店，向全球巡演的专业表演团体出售原创幻术装置。她穿女巫装，是因为她喜欢。","image":"assets/images/v2/cast/sabrina.png"},
-{"id":"sandra","name":"Sandra","era":"medieval","descriptionEn":"A talented bard who performs at various venues. She's beautiful and skilled but seems to struggle financially despite her abilities.","descriptionZh":"一位才华横溢的吟游诗人，在各种场所表演。她美丽又有本事，却似乎尽管能力出众，依然在经济上挣扎。","image":"assets/images/v2/cast/sandra.png"},
-{"id":"sashimi","name":"Sashimi","era":"medieval","descriptionEn":"A runaway mermaid princess who watches the surface world from the brothel pool with wide-eyed curiosity and wonder.","descriptionZh":"一位离家出走的人鱼公主，在青楼水池中睁大眼睛，带着好奇与惊叹观察地表世界。","image":"assets/images/v2/cast/sashimi.png"},
-{"id":"sashina","name":"Sashina","era":"medieval","descriptionEn":"A mysterious ancient sorceress whose elegant warmth often conceals how carefully she is steering the people around her.","descriptionZh":"一位神秘的远古女术士，优雅的温柔常常掩盖着她对身边人的精心引导。","image":"assets/images/v2/cast/sashina.png"},
-{"id":"seraph","name":"Seraph","era":"future","descriptionEn":"A divine angel with flowing silver hair and magnificent white wings. She descended to guide the chosen hero against VOID's threat to existence.","descriptionZh":"一位神圣天使，银发飘逸，拥有壮丽的白色羽翼。她降临此世，引导被选中的英雄对抗VOID对存在本身的威胁。","image":"assets/images/v2/cast/seraph.png"},
-{"id":"shadow","name":"Shadow","era":"medieval","descriptionEn":"A mysterious cat burglar often seen in shadows who speaks little but observes much. She prefers to stay unknown and avoid attention.","descriptionZh":"一位神秘飞贼，常在阴影中现身，话很少，却观察很多。她更喜欢保持身份不明，避开注意。","image":"assets/images/v2/cast/shadow.png"},
-{"id":"shelly","name":"Shelly","era":"medieval","descriptionEn":"The cheerful shopkeeper of the Sirena Isle gift shop, with bright red hair, twitching antennae, and lobster-shell armor over a white kimono.","descriptionZh":"塞壬岛礼品店里开朗的店主，拥有鲜红头发、会颤动的触角，并在白色和服外穿着龙虾壳甲。","image":"assets/images/v2/cast/shelly.png"},
-{"id":"sherry","name":"Sherry","era":"medieval","descriptionEn":"The calm and mature bar manager at the brothel. Elara's childhood friend who needed a fresh start in a new community.","descriptionZh":"青楼里那位沉稳成熟的酒吧经理。她是Elara儿时的好友，需要在一个新的地方重新开始。","image":"assets/images/v2/cast/sherry.png"},
-{"id":"silas","name":"Silas","era":"medieval","descriptionEn":"A merchant who deals in exotic goods, rare gems, and quality pieces. He focuses on providing valuable items to his customers.","descriptionZh":"一位经营异国商品、稀有宝石和优质珍品的商人。他专注于为顾客提供有价值的物品。","image":"assets/images/v2/cast/silas.png"},
-{"id":"sonia","name":"Sonia","era":"present","descriptionEn":"A scientific researcher who conducts studies and experiments. She demonstrates strong intellectual curiosity and methodical thinking.","descriptionZh":"一位进行研究与实验的科学研究员。她展现出强烈的求知欲和有条理的思维。","image":"assets/images/v2/cast/sonia.png"},
-{"id":"sophie","name":"Sophie","era":"medieval","descriptionEn":"A homeless orphan who desperately needs help. She appears vulnerable but shows surprising resilience when given a chance.","descriptionZh":"一个无家可归的孤儿，急需帮助。她看起来脆弱，但一旦得到机会，就会展现出惊人的韧性。","image":"assets/images/v2/cast/sophie.png"},
-{"id":"summer","name":"Summer","era":"present","descriptionEn":"A swimming instructor who offers lessons and guidance. She demonstrates expertise in aquatic activities and teaching.","descriptionZh":"一位游泳教练，提供课程与指导。她在水上活动和教学方面展现出专业能力。","image":"assets/images/v2/cast/summer.png"},
-{"id":"swish","name":"Swish","era":"present","descriptionEn":"A competitive point guard for the Chronos basketball team. She wears #11 and takes her game very seriously.","descriptionZh":"Chronos篮球队里一位好胜的控球后卫。她穿11号球衣，并非常认真地对待比赛。","image":"assets/images/v2/cast/swish.png"},
-{"id":"sylwithe","name":"Sylwithe","era":"medieval","descriptionEn":"An ancient weather spirit who dwells in a forest hollow. Rain follows him everywhere by some cosmic bond he never asked for.","descriptionZh":"一位古老的天气精灵，居住在森林树洞中。雨水因某种他从未要求过的宇宙羁绊，走到哪里都跟着他。","image":"assets/images/v2/cast/sylwithe.png"},
-{"id":"talena","name":"Talena","era":"present","descriptionEn":"The cool, laid-back bassist of a local band. She lets her bass do most of the talking and has a calm confidence that never wavers.","descriptionZh":"本地乐队里冷静随性的贝斯手。她让贝斯替自己说大部分话，并拥有从不动摇的沉稳自信。","image":"assets/images/v2/cast/talena.png"},
-{"id":"terra","name":"Terra","era":"future","descriptionEn":"A Prime Sector botanist preserving forbidden biodiversity inside the Genetically Enhanced Plant Research Dome.","descriptionZh":"一位核心区植物学家，在基因强化植物研究穹顶内保护被禁的生物多样性。","image":"assets/images/v2/cast/terra.png"},
-{"id":"karens","name":"The Blessed Ones","era":"future","descriptionEn":"Mutated cult members at the Sacred Anomaly Temple. They believe their deformities are divine gifts from a higher power.","descriptionZh":"神圣异常神殿中的变异教团成员。她们相信自己的畸形是更高力量赐予的神圣礼物。","image":"assets/images/v2/cast/karens.png"},
-{"id":"theneas","name":"Theneas","era":"medieval","descriptionEn":"A scarred fox beastkin veteran who keeps watch from a hidden hut deep in the medieval forest.","descriptionZh":"一位伤痕累累的狐族兽人老兵，在中世纪森林深处一间隐蔽小屋中守望。","image":"assets/images/v2/cast/theneas.png"},
-{"id":"tiffany","name":"Tiffany","era":"future","descriptionEn":"An organic baseline citizen and nightclub regular with metallic blue hair, content-status classification, and no exceptional assigned aptitude.","descriptionZh":"一名有机基线女性公民，也是夜店常客。她有一头金属蓝色头发，被归为满足状态，没有任何获派的特殊才能。","image":"assets/images/v2/cast/tiffany.png"},
-{"id":"tinker","name":"Tinker","era":"future","descriptionEn":"A gothic robot enhancement artisan who performs underground upgrades at the Human Performance Optimization Lab.","descriptionZh":"哥特式机器人强化工匠，在人类表现优化实验室进行地下升级。","image":"assets/images/v2/cast/tinker.png"},
-{"id":"torea","name":"Torea","era":"present","descriptionEn":"A playful young vampire who left the Sangrael family to live among humans, hiding her nature behind gothic fashion.","descriptionZh":"一个爱玩闹的年轻吸血鬼，离开了Sangrael家族，到人类之中生活，把自己的本性藏在哥特装扮之下。","image":"assets/images/v2/cast/torea.png"},
-{"id":"uhura","name":"Uhura","era":"medieval","descriptionEn":"The warm and elegant manager of Sirena Isle, with long braided hair adorned in gold beads and a flowing white sarong.","descriptionZh":"塞壬岛温暖而优雅的经理，长长的辫发上饰有金珠，穿着飘逸的白色围裙。","image":"assets/images/v2/cast/uhura.png"},
-{"id":"valerie","name":"Valerie","era":"present","descriptionEn":"A straightforward person who speaks directly and doesn't waste time with unnecessary conversation.","descriptionZh":"一个直截了当的人，说话直接，不会把时间浪费在没必要的交谈上。","image":"assets/images/v2/cast/valerie.png"},
-{"id":"valkyra","name":"Valkyra","era":"medieval","descriptionEn":"A blonde warrior in silver armor and a blue cape. Once an undefeated paladin, she now divides her time between training fighters at the guild and working brothel security.","descriptionZh":"一位金发战士，身穿银甲，披着蓝色披风。她曾是未尝败绩的圣骑士，如今一边在公会训练战士，一边负责青楼安保。","image":"assets/images/v2/cast/valkyra.png"},
-{"id":"vera","name":"Vera","era":"present","descriptionEn":"A cunning gambler who frequents the downtown bar. She plays darts for money and demonstrates exceptional skill at reading opponents.","descriptionZh":"一位狡黠的赌徒，常去市中心酒吧。她靠飞镖赢钱，并展现出出色的读懂对手能力。","image":"assets/images/v2/cast/vera.png"},
-{"id":"vespa","name":"Vespa","era":"medieval","descriptionEn":"The rebellious 22-year-old daughter of King Graham. Haughty, bored, and endlessly dramatic. Known throughout the kingdom for her antics.","descriptionZh":"Graham国王 22 岁的叛逆女儿。傲慢、无聊、充满戏剧性。因她的滑稽动作而闻名整个王国。","image":"assets/images/v2/cast/vespa.png"},
-{"id":"violet_maid","name":"Violet","era":"medieval","descriptionEn":"A maid who maintains professional service standards. She adapts well to different work environments and situations.","descriptionZh":"一位保持专业服务标准的女仆。她能很好地适应不同工作环境与情况。","image":"assets/images/v2/cast/violet_maid.png"},
-{"id":"vixen","name":"Vixen","era":"medieval","descriptionEn":"A master con artist with mysterious allure and calculating eyes. She reads people instantly and exploits weaknesses expertly.","descriptionZh":"一位大师级骗子，带着神秘魅力和精于算计的眼神。她能瞬间看透他人，并熟练利用弱点。","image":"assets/images/v2/cast/vixen.png"},
-{"id":"wilfred","name":"Wilfred","era":"medieval","descriptionEn":"An aging farmer who struggles with the physical demands of his work. He worries about the future of his farm.","descriptionZh":"一位年迈的农夫，逐渐难以承受农活对体力的要求。他担心自己农场的未来。","image":"assets/images/v2/cast/wilfred.png"},
-{"id":"willow","name":"Willow","era":"medieval","descriptionEn":"A compassionate healer found in the alleys who helps others with wellness and recovery. She demonstrates genuine care and medical knowledge.","descriptionZh":"一位富有同情心的治疗者，常在小巷中出现，帮助他人恢复健康。她展现出真诚关怀与医疗知识。","image":"assets/images/v2/cast/willow.png"},
-{"id":"yrsa","name":"Yrsa","era":"medieval","descriptionEn":"A massive young barbarian warrior who lives with the bandits by day and brings her strength drills to the Rose & Thorn Training Room at night.","descriptionZh":"一个巨大的年轻野蛮人战士，白天与强盗一起生活，晚上将她的力量训练带到玫瑰与荆棘训练室。","image":"assets/images/v2/cast/yrsa.png"},
-{"id":"zodiac","name":"Zodiac","era":"future","descriptionEn":"The Syndicate's fortune teller and intelligence officer. Genuinely psychic, scheming, and masked. She sees every future except the player's.","descriptionZh":"辛迪加的占卜师兼情报官。她确实拥有灵能力，善于谋划，并以面具示人。她能看见所有人的未来，唯独看不见玩家的。","image":"assets/images/v2/cast/zodiac.png"},
-{"id":"zoe","name":"Zoe","era":"present","descriptionEn":"A nervous computer science student who practically lives in the university computer lab. She barely makes eye contact and always has her screen open.","descriptionZh":"一位紧张的计算机科学学生，几乎住在大学计算机实验室里。她很少与人眼神接触，屏幕也总是开着。","image":"assets/images/v2/cast/zoe.png"},
+  {
+    "id": "aria",
+    "name": "A.R.I.A.",
+    "era": "medieval",
+    "descriptionEn": "Meet A.R.I.A. after the floor 45 encounter, follow three home conversations, and unlock crafted-gift upgrades.",
+    "descriptionZh": "完成第45层遭遇后结识A.R.I.A.，推进三段日常交心及手工礼物升级。",
+    "image": "assets/images/wiki/profiles/aria.webp",
+    "descriptionRu": "Знакомство с A.R.I.A., личные разговоры и улучшения за особые подарки."
+  },
+  {
+    "id": "aaliyah",
+    "name": "Aaliyah",
+    "era": "present",
+    "descriptionEn": "Find Aaliyah at the KTV entrance and check the venue’s late-night hours.",
+    "descriptionZh": "在 KTV 入口找到 Aaliyah，查清深夜营业时段与当前可用互动。",
+    "image": "assets/images/wiki/profiles/aaliyah.webp"
+  },
+  {
+    "id": "abby",
+    "name": "Abby",
+    "era": "present",
+    "descriptionEn": "Follow Abby’s dance route, changing schedule and three heart-to-hearts, with lessons, dates and hotel access.",
+    "descriptionZh": "掌握Abby的舞蹈路线、轮换行程和三段交心对话，查找课程、约会与酒店邀约条件。",
+    "image": "assets/images/wiki/profiles/abby.webp"
+  },
+  {
+    "id": "aimy",
+    "name": "AIMy",
+    "era": "future",
+    "descriptionEn": "Follow AIMy’s control-room conversations, late story requirements, dates and technical lesson.",
+    "descriptionZh": "按顺序推进AIMy的控制室谈心、后期主线条件、约会与技术课程。",
+    "image": "assets/images/wiki/profiles/aimy.webp"
+  },
+  {
+    "id": "akira",
+    "name": "Akira",
+    "era": "present",
+    "descriptionEn": "Find Akira’s examination schedule, research follow-ups, dates and pregnancy consultations.",
+    "descriptionZh": "查清Akira的检查回访时间、研究进展、约会与生育咨询。",
+    "image": "assets/images/wiki/profiles/akira.webp"
+  },
+  {
+    "id": "amelia",
+    "name": "Amelia",
+    "era": "medieval",
+    "descriptionEn": "Find Amelia’s healer-hut schedule, Willow-linked dates, two conversations and healing lessons.",
+    "descriptionZh": "查找Amelia的治疗师小屋行程、与Willow相连的约会、两段交心及治疗课程。",
+    "image": "assets/images/wiki/profiles/amelia.webp"
+  },
+  {
+    "id": "andi",
+    "name": "Andi",
+    "era": "future",
+    "descriptionEn": "Follow Andi’s personal route, plan dates and Private Time, and check her one-time gift.",
+    "descriptionZh": "推进 Andi 的个人路线，安排约会与独处，并查看一次性礼物的条件。",
+    "image": "assets/images/wiki/profiles/andi.webp"
+  },
+  {
+    "id": "annette",
+    "name": "Annette",
+    "era": "medieval",
+    "descriptionEn": "Use Annette’s patrol schedule and conversation to progress the connected royal-court story.",
+    "descriptionZh": "按Annette的巡逻行程见面交谈，推进相连的宫廷事件。",
+    "image": "assets/images/wiki/profiles/annette.webp"
+  },
+  {
+    "id": "anthrax",
+    "name": "Anthrax",
+    "era": "future",
+    "descriptionEn": "Find Anthrax’s recruitment steps, Training Hall hours, combat lessons and army services.",
+    "descriptionZh": "了解Anthrax的招募步骤、训练厅时段、战斗课程与军队服务。",
+    "image": "assets/images/wiki/profiles/anthrax.webp"
+  },
+  {
+    "id": "arachne",
+    "name": "Arachne",
+    "era": "medieval",
+    "descriptionEn": "Recruit Arachne from the ordinary Dungeon, prepare a vacant cell, and manage visits and monster training.",
+    "descriptionZh": "从普通地下城招募Arachne，准备空牢房，并了解探访与魔物训练。",
+    "image": "assets/images/wiki/profiles/arachne.webp"
+  },
+  {
+    "id": "archie",
+    "name": "ARCHIE",
+    "era": "future",
+    "descriptionEn": "Unlock ARCHIE’s archive terminal, read records and use the record-view toggle.",
+    "descriptionZh": "解锁ARCHIE的档案终端，阅读记录并使用档案视图切换。",
+    "image": "assets/images/wiki/profiles/archie.webp"
+  },
+  {
+    "id": "arestes",
+    "name": "Arestes",
+    "era": "medieval",
+    "descriptionEn": "Reach Arestes’s Hidden Chamber, join the Thieves Guild, and distinguish personal events from guild services.",
+    "descriptionZh": "找到 Arestes 所在的隐藏密室，加入盗贼公会，并分清个人事件与公会服务的条件。",
+    "image": "assets/images/wiki/profiles/arestes.webp"
+  },
+  {
+    "id": "arnold",
+    "name": "Arnold",
+    "era": "present",
+    "descriptionEn": "Use Arnold’s mansion conversations and Household Risk to support the connected corporate route.",
+    "descriptionZh": "在宅邸与Arnold交谈，通过家庭风险交心推进相连的企业路线。",
+    "image": "assets/images/wiki/profiles/arnold.webp"
+  },
+  {
+    "id": "artemis",
+    "name": "Artemis",
+    "era": "future",
+    "descriptionEn": "Armory and Barracks schedules, personal conversations and lessons.",
+    "descriptionZh": "军械库与兵营班次、个人对话与技能课程。",
+    "image": "assets/images/wiki/profiles/artemis.webp",
+    "descriptionRu": "Расписание Artemis в оружейной и казармах, личные разговоры и обучение."
+  },
+  {
+    "id": "audrey",
+    "name": "Audrey",
+    "era": "medieval",
+    "descriptionEn": "Find Audrey’s garden schedule, nature lesson, Rainheart gift and three crafted-gift upgrades.",
+    "descriptionZh": "查找Audrey的花园行程、自然课程、雨心插条及三项手工礼物升级。",
+    "image": "assets/images/wiki/profiles/audrey.webp"
+  },
+  {
+    "id": "ava_and_eva",
+    "name": "Ava and Eva",
+    "era": "medieval",
+    "descriptionEn": "Follow Ava and Eva’s shared relationship route, evening conversations, outings and crafted gifts.",
+    "descriptionZh": "推进Ava和Eva共用的关系路线，查找晚间交心、出游及手工礼物条件。",
+    "image": "assets/images/wiki/profiles/ava-and-eva.webp"
+  },
+  {
+    "id": "azariel",
+    "name": "Azariel",
+    "era": "medieval",
+    "descriptionEn": "Unlock Azariel’s room, learn Empathy and Soul Sight, and use her business consultations and stone bonding.",
+    "descriptionZh": "进入Azariel的房间，查找技能课程、经营咨询和灵魂石羁绊条件。",
+    "image": "assets/images/wiki/profiles/azariel.webp"
+  },
+  {
+    "id": "aziza",
+    "name": "Aziza",
+    "era": "medieval",
+    "descriptionEn": "Plan Aziza’s arcane lessons, Grimoire upgrades and current dates, conversations and private continuation.",
+    "descriptionZh": "安排Aziza的奥术课程与魔导书升级，查找当前约会、交心和私密续篇。",
+    "image": "assets/images/wiki/profiles/aziza.webp"
+  },
+  {
+    "id": "barric",
+    "name": "Barric",
+    "era": "medieval",
+    "descriptionEn": "Find Barric’s late-night alehouse conversations and one-time Communication lesson.",
+    "descriptionZh": "查找Barric的深夜酒馆谈话及一次性沟通课程。",
+    "image": "assets/images/wiki/profiles/barric.webp"
+  },
+  {
+    "id": "bayne",
+    "name": "Bayne",
+    "era": "future",
+    "descriptionEn": "Build Bayne’s relationship through Syndicate scenes and unlock his Crowd Control lesson.",
+    "descriptionZh": "通过辛迪加事件提高Bayne关系，解锁人群控制课程。",
+    "image": "assets/images/wiki/profiles/bayne.webp"
+  },
+  {
+    "id": "bella",
+    "name": "Bella",
+    "era": "present",
+    "descriptionEn": "Find Bella’s library schedule, three conversations, gifts, dates and separate after-hours invitation.",
+    "descriptionZh": "查找Bella的图书馆行程、三段交心、礼物、约会及独立的闭馆后邀约。",
+    "image": "assets/images/wiki/profiles/bella.webp"
+  },
+  {
+    "id": "bellavia",
+    "name": "Bellavia",
+    "era": "medieval",
+    "descriptionEn": "Find Bellavia’s cellar interactions, crafted-gift upgrades and resort activities without route revelations.",
+    "descriptionZh": "查找Bellavia的地窖互动、手工礼物升级及度假活动，避开剧情揭示。",
+    "image": "assets/images/wiki/profiles/bellavia.webp",
+    "descriptionRu": "Встречи с Bellavia в погребе, особые подарки и занятия на курорте."
+  },
+  {
+    "id": "ben_arthur",
+    "name": "Ben Arthur",
+    "era": "medieval",
+    "descriptionEn": "Leather equipment, crafting and a one-time Intelligence lesson.",
+    "descriptionZh": "皮革装备、礼物制作与一次性智力课程。",
+    "image": "assets/images/wiki/profiles/ben-arthur.webp"
+  },
+  {
+    "id": "bessie",
+    "name": "Bessie",
+    "era": "medieval",
+    "descriptionEn": "Ordinary Dungeon capture, cell visits and relationship activities.",
+    "descriptionZh": "普通地下城捕捉、牢房探访与关系行动。",
+    "image": "assets/images/wiki/profiles/bessie.webp"
+  },
+  {
+    "id": "blinky",
+    "name": "Blinky",
+    "era": "medieval",
+    "descriptionEn": "Spell lessons, dates, Grimoire level 7 and Queenstone bonding.",
+    "descriptionZh": "法术课程、约会、魔导书 7 级与女王石羁绊。",
+    "image": "assets/images/wiki/profiles/blinky.webp"
+  },
+  {
+    "id": "bobo",
+    "name": "Bobo",
+    "era": "medieval",
+    "descriptionEn": "Three-part dungeon recruitment, Cell 1 and resident activities.",
+    "descriptionZh": "三段地下城招募、牢房 1 与住民行动。",
+    "image": "assets/images/wiki/profiles/bobo.webp"
+  },
+  {
+    "id": "br10dr",
+    "name": "BR10DR",
+    "era": "future",
+    "descriptionEn": "Robot Bar presence and a one-time late event.",
+    "descriptionZh": "机器人酒吧的在场时段与后期一次性事件。",
+    "image": "assets/images/wiki/profiles/br10dr.webp"
+  },
+  {
+    "id": "brandy",
+    "name": "Brandy",
+    "era": "medieval",
+    "descriptionEn": "Recruitment conversations, tavern activities and worker upgrades.",
+    "descriptionZh": "招募谈心、酒馆行动与员工升级。",
+    "image": "assets/images/wiki/profiles/brandy.webp"
+  },
+  {
+    "id": "chamel",
+    "name": "Chamel",
+    "era": "future",
+    "descriptionEn": "Funhouse schedule, personal H2Hs and Syndicate navigation.",
+    "descriptionZh": "欢乐屋日程、个人谈心与辛迪加导航。",
+    "image": "assets/images/wiki/profiles/chamel.webp",
+    "descriptionRu": "Встречи с Chamel, личные разговоры и продвижение по заданиям Синдиката."
+  },
+  {
+    "id": "chamella",
+    "name": "Chamella",
+    "era": "future",
+    "descriptionEn": "Funhouse schedule, personal activities and Syndicate prerequisites.",
+    "descriptionZh": "欢乐屋日程、个人行动与辛迪加前置。",
+    "image": "assets/images/wiki/profiles/chamella.webp",
+    "descriptionRu": "Расписание Chamella, личные встречи и необходимые этапы заданий Синдиката."
+  },
+  {
+    "id": "chef_martha",
+    "name": "Chef Martha",
+    "era": "present",
+    "descriptionEn": "Restaurant events, dates and the Master Chef lesson.",
+    "descriptionZh": "餐厅事件、约会与厨艺大师课程。",
+    "image": "assets/images/wiki/profiles/chef-martha.webp"
+  },
+  {
+    "id": "cherry",
+    "name": "Cherry",
+    "era": "present",
+    "descriptionEn": "Night-time visits, paid services and an independent personal route.",
+    "descriptionZh": "夜间探访、付费服务与独立个人路线。",
+    "image": "assets/images/wiki/profiles/cherry.webp"
+  },
+  {
+    "id": "chime",
+    "name": "Chime",
+    "era": "future",
+    "descriptionEn": "Find the Crystal Cavern, follow Chime’s relationship route, and check Resistance Clout requirements.",
+    "descriptionZh": "找到水晶洞窟，按顺序推进 Chime 的个人路线，查清反抗军声望与关系要求。",
+    "image": "assets/images/wiki/profiles/chime.webp"
+  },
+  {
+    "id": "chloe",
+    "name": "Chloe",
+    "era": "future",
+    "descriptionEn": "Academy lessons, four-destination event route and private visits.",
+    "descriptionZh": "学院课程、四地事件路线与私人探访。",
+    "image": "assets/images/wiki/profiles/chloe.webp"
+  },
+  {
+    "id": "christy",
+    "name": "Christy",
+    "era": "present",
+    "descriptionEn": "Ingredients, dates, market events and the Mary Ann connection.",
+    "descriptionZh": "食材、约会、市场事件与 Mary Ann 路线。",
+    "image": "assets/images/wiki/profiles/christy.webp"
+  },
+  {
+    "id": "chrysalia",
+    "name": "Chrysalia",
+    "era": "future",
+    "descriptionEn": "A personal H2H/date chain and Onyx’s maid equipment gift.",
+    "descriptionZh": "个人谈心与约会链，以及 Onyx 的女仆装备礼物。",
+    "image": "assets/images/wiki/profiles/chrysalia.webp"
+  },
+  {
+    "id": "cid",
+    "name": "Cid",
+    "era": "future",
+    "descriptionEn": "Clinic exchanges and repeatable Chronium upgrades for fortress structures.",
+    "descriptionZh": "诊所资源交换，以及用时源矿锭反复强化要塞建筑。",
+    "image": "assets/images/wiki/profiles/cid.webp"
+  },
+  {
+    "id": "cinnamon",
+    "name": "Cinnamon",
+    "era": "medieval",
+    "descriptionEn": "Room commission checklist, recruitment and worker upgrades.",
+    "descriptionZh": "房间建设清单、招募与员工升级。",
+    "image": "assets/images/wiki/profiles/cinnamon.webp"
+  },
+  {
+    "id": "coradio",
+    "name": "Coradio",
+    "era": "medieval",
+    "descriptionEn": "Three-location schedule and the Sovereign Edge lesson.",
+    "descriptionZh": "三地日程与王权锋刃课程。",
+    "image": "assets/images/wiki/profiles/coradio.webp"
+  },
+  {
+    "id": "cotton",
+    "name": "Cotton",
+    "era": "present",
+    "descriptionEn": "Studio visits, band recognition, three heart-to-hearts and optional dates.",
+    "descriptionZh": "音乐工作室、乐队认可、三次谈心与可选约会。",
+    "image": "assets/images/wiki/profiles/cotton.webp"
+  },
+  {
+    "id": "voss",
+    "name": "Councilor Voss",
+    "era": "future",
+    "descriptionEn": "Find Councilor Voss’s office and understand his dialogue and connection to current mission objectives.",
+    "descriptionZh": "找到 Councilor Voss 的办公室，了解拜访方式与相关任务的推进方向。",
+    "image": "assets/images/wiki/profiles/councilor-voss.webp"
+  },
+  {
+    "id": "cressida",
+    "name": "Cressida",
+    "era": "future",
+    "descriptionEn": "Track Cressida’s alternating workplaces, personal scenes, lessons and relationship requirements.",
+    "descriptionZh": "掌握Cressida的单双日工作地点、个人事件、技能课程与关系条件。",
+    "image": "assets/images/wiki/profiles/cressida.webp"
+  },
+  {
+    "id": "daphne",
+    "name": "Daphne",
+    "era": "medieval",
+    "descriptionEn": "Recruit Daphne, prepare her room, and unlock her personal visits and shared corridor events.",
+    "descriptionZh": "为 Daphne 准备住处，完成招募，再逐步开放个人拜访与走廊共同事件。",
+    "image": "assets/images/wiki/profiles/daphne.webp"
+  },
+  {
+    "id": "dawn",
+    "name": "Dawn",
+    "era": "present",
+    "descriptionEn": "Public-pool access, swimming conversations, dates and the evening beach schedule.",
+    "descriptionZh": "公共泳池入口、游泳谈心、约会与傍晚海滩时间。",
+    "image": "assets/images/wiki/profiles/dawn.webp"
+  },
+  {
+    "id": "dex",
+    "name": "Dex",
+    "era": "future",
+    "descriptionEn": "Where to find Dex and what interactions are currently available.",
+    "descriptionZh": "Dex的出现地点与当前可用互动范围。",
+    "image": "assets/images/wiki/profiles/dex.webp"
+  },
+  {
+    "id": "diane",
+    "name": "Diane",
+    "era": "present",
+    "descriptionEn": "Five public commissions, the Responsibility lesson and boardwalk visits.",
+    "descriptionZh": "五项公共建设、责任感课程与木板路拜访。",
+    "image": "assets/images/wiki/profiles/diane.webp"
+  },
+  {
+    "id": "diedra",
+    "name": "Diedra",
+    "era": "present",
+    "descriptionEn": "Vampire Lounge access, the introduction and Diedra’s Talk allowance.",
+    "descriptionZh": "吸血鬼休息室入口、初次见面与Diedra的交谈额度。",
+    "image": "assets/images/wiki/profiles/diedra.webp"
+  },
+  {
+    "id": "elara",
+    "name": "Elara",
+    "era": "medieval",
+    "descriptionEn": "Open Rose & Thorn, find office events and improve worker training.",
+    "descriptionZh": "开放玫瑰与荆棘，推进办公室事件与员工训练。",
+    "image": "assets/images/wiki/profiles/elara.webp"
+  },
+  {
+    "id": "ember",
+    "name": "Ember",
+    "era": "medieval",
+    "descriptionEn": "Lair access, personal conversations, two dates and Furnace Discipline.",
+    "descriptionZh": "私人巢穴入口、个人谈心、两项约会与熔炉之律。",
+    "image": "assets/images/wiki/profiles/ember.webp"
+  },
+  {
+    "id": "emily",
+    "name": "Emily",
+    "era": "present",
+    "descriptionEn": "Café and park visits, early heart-to-hearts, housing actions and current dates.",
+    "descriptionZh": "咖啡馆与公园拜访、前期谈心、住处动作及当前约会。",
+    "image": "assets/images/wiki/profiles/emily.webp"
+  },
+  {
+    "id": "epom",
+    "name": "EPOM",
+    "era": "future",
+    "descriptionEn": "Engineering lessons, resource redistribution and Army workshops.",
+    "descriptionZh": "工程技能课、资源重分配与军团工坊。",
+    "image": "assets/images/wiki/profiles/epom.webp"
+  },
+  {
+    "id": "esperanza",
+    "name": "Esperanza",
+    "era": "medieval",
+    "descriptionEn": "Dance training, the Romantic lesson, personal conversations and noble-quarter visits.",
+    "descriptionZh": "舞蹈训练、浪漫课程、个人谈心与贵族区拜访。",
+    "image": "assets/images/wiki/profiles/esperanza.webp"
+  },
+  {
+    "id": "evangeline",
+    "name": "Evangeline",
+    "era": "present",
+    "descriptionEn": "Corporate progression, three heart-to-hearts and the current conditions for Mystic Seduction.",
+    "descriptionZh": "企业路线、三次谈心与神秘诱惑的当前条件。",
+    "image": "assets/images/wiki/profiles/evangeline.webp"
+  },
+  {
+    "id": "fernando",
+    "name": "Fernando",
+    "era": "medieval",
+    "descriptionEn": "Personal outfits, worker clothing, MAX fittings and the tailor’s exact costs.",
+    "descriptionZh": "个人服装、员工服装、MAX定制与裁缝价格。",
+    "image": "assets/images/wiki/profiles/fernando.webp"
+  },
+  {
+    "id": "foxy",
+    "name": "Foxy",
+    "era": "medieval",
+    "descriptionEn": "Footprint discovery, outdoor schedules, personal conversations and recruitment.",
+    "descriptionZh": "脚印发现、户外时间表、个人谈心与招募。",
+    "image": "assets/images/wiki/profiles/foxy.webp"
+  },
+  {
+    "id": "friday",
+    "name": "Friday",
+    "era": "present",
+    "descriptionEn": "Mansion visits, the shared Talk allowance and second-story conversations.",
+    "descriptionZh": "豪宅拜访、共用交谈额度与第二篇谈心。",
+    "image": "assets/images/wiki/profiles/friday.webp"
+  },
+  {
+    "id": "gandon",
+    "name": "Gandon",
+    "era": "medieval",
+    "descriptionEn": "Quest-led progress, Wizardry lessons and the wizard initiation requirements.",
+    "descriptionZh": "任务驱动进展、巫术课程与入会考试条件。",
+    "image": "assets/images/wiki/profiles/gandon.webp"
+  },
+  {
+    "id": "gastoff",
+    "name": "Gastoff",
+    "era": "medieval",
+    "descriptionEn": "Meet Gastoff, check his personal bonuses, and find the equipment and construction services you need.",
+    "descriptionZh": "拜访 Gastoff，查看一次性属性奖励，并找到需要的装备与建筑服务。",
+    "image": "assets/images/wiki/profiles/gastoff.webp"
+  },
+  {
+    "id": "gem",
+    "name": "Gem",
+    "era": "medieval",
+    "descriptionEn": "Find Gem, restock mining tools, learn dungeon-wall Mining, and follow her recruitment and personal routes.",
+    "descriptionZh": "找到 Gem，补充采矿工具、学习地下城破墙技能，并推进招募与个人路线。",
+    "image": "assets/images/wiki/profiles/gem.webp"
+  },
+  {
+    "id": "ghost",
+    "name": "Ghost",
+    "era": "future",
+    "descriptionEn": "Find Ghost, follow her conversations and main-story requirements, and plan training and personal visits.",
+    "descriptionZh": "找到 Ghost，核对谈心与主线前置，安排训练和个人拜访。",
+    "image": "assets/images/wiki/profiles/ghost.webp"
+  },
+  {
+    "id": "ginger",
+    "name": "Ginger",
+    "era": "future",
+    "descriptionEn": "Candy Cane trades, milestone Tokens and Ginger’s Christmas interactions.",
+    "descriptionZh": "拐杖糖交易、里程碑代币与Ginger的圣诞互动。",
+    "image": "assets/images/wiki/profiles/ginger.webp"
+  },
+  {
+    "id": "glitch",
+    "name": "Glitch",
+    "era": "future",
+    "descriptionEn": "Reach Glitch’s Den and follow her lessons, personal route, recruitment and private activities.",
+    "descriptionZh": "找到Glitch的藏身处，推进技能课程、个人路线、军队招募与私人活动。",
+    "image": "assets/images/wiki/profiles/glitch.webp"
+  },
+  {
+    "id": "grace",
+    "name": "Grace",
+    "era": "medieval",
+    "descriptionEn": "Monastery and grove schedules, recruitment prerequisites and post-recruitment visits.",
+    "descriptionZh": "修道院与冥想林时间表、招募条件及招募后拜访。",
+    "image": "assets/images/wiki/profiles/grace.webp"
+  },
+  {
+    "id": "gruff",
+    "name": "Gruff",
+    "era": "medieval",
+    "descriptionEn": "The guard captain’s patrol schedule and shared daily Talk limit.",
+    "descriptionZh": "卫队长的巡逻时间与共用交谈额度。",
+    "image": "assets/images/wiki/profiles/gruff.webp"
+  },
+  {
+    "id": "guard",
+    "name": "Guard",
+    "era": "medieval",
+    "descriptionEn": "Find the throne-room Guard and the proper hours for a royal audience.",
+    "descriptionZh": "查找王座厅Guard的值守时段，以及觐见国王的时间。",
+    "image": "assets/images/wiki/profiles/guard.webp"
+  },
+  {
+    "id": "hailey",
+    "name": "Hailey",
+    "era": "medieval",
+    "descriptionEn": "Follow Hailey’s companionship route, supply agreement, three conversations and current evening visits.",
+    "descriptionZh": "推进Hailey的陪伴路线、供货约定、三段交心及当前晚间拜访。",
+    "image": "assets/images/wiki/profiles/hailey.webp"
+  },
+  {
+    "id": "helsa",
+    "name": "Helsa",
+    "era": "present",
+    "descriptionEn": "Unlock Helsa, follow the alternating research schedule, and coordinate her dates and conversations with Torea’s route.",
+    "descriptionZh": "解锁Helsa，掌握单双日研究行程，并与Torea路线衔接约会和交心。",
+    "image": "assets/images/wiki/profiles/helsa.webp"
+  },
+  {
+    "id": "holly",
+    "name": "Holly",
+    "era": "future",
+    "descriptionEn": "Find Holly’s affection milestones, holiday-task rewards, Stargazing activity and Hot Chocolate gift costs.",
+    "descriptionZh": "查找Holly的好感里程碑、圣诞任务奖励、观星活动及热巧克力消耗。",
+    "image": "assets/images/wiki/profiles/holly.webp"
+  },
+  {
+    "id": "honey",
+    "name": "Honey",
+    "era": "medieval",
+    "descriptionEn": "Recruit Honey, plan the farm and even-night barn visits, and unlock her crafted gifts and shared activities.",
+    "descriptionZh": "招募Honey，安排农场与双数日晚间谷仓拜访，查找手工礼物及共同活动。",
+    "image": "assets/images/wiki/profiles/honey.webp"
+  },
+  {
+    "id": "isolde",
+    "name": "Isolde",
+    "era": "medieval",
+    "descriptionEn": "Unlock Isolde through five escorts, then coordinate her castle scenes, dates and conversations with Barnard’s court progress.",
+    "descriptionZh": "完成五次护送解锁Isolde，再衔接城堡事件、约会、交心与Barnard的宫廷进度。",
+    "image": "assets/images/wiki/profiles/isolde.webp"
+  },
+  {
+    "id": "jade",
+    "name": "Jade",
+    "era": "medieval",
+    "descriptionEn": "The Emerald Dragon exchange, recruitment, dates and crafted training gifts.",
+    "descriptionZh": "翡翠巨龙交换、员工招募、约会与训练礼物升级。",
+    "image": "assets/images/wiki/profiles/jade.webp"
+  },
+  {
+    "id": "jarid",
+    "name": "Jarid",
+    "era": "future",
+    "descriptionEn": "Find Jarid’s office and the shared Syndicate appearance without looking for a personal relationship menu.",
+    "descriptionZh": "查找Jarid的办公室及共同辛迪加事件，了解他当前的出场方式。",
+    "image": "assets/images/wiki/profiles/jarid.webp"
+  },
+  {
+    "id": "jelly",
+    "name": "Jelly",
+    "era": "medieval",
+    "descriptionEn": "Recruit Jelly, prepare an empty cell, and separate her three personal activities from daily monster training.",
+    "descriptionZh": "招募Jelly并准备空牢房，区分三种个人活动与每日魔物训练。",
+    "image": "assets/images/wiki/profiles/jelly.webp"
+  },
+  {
+    "id": "jennifer",
+    "name": "Jennifer",
+    "era": "present",
+    "descriptionEn": "Follow Jennifer’s gym scenes, two conversations, five dates and the separate Strength-gated private session.",
+    "descriptionZh": "推进Jennifer的健身房事件、两段交心及五项约会，查找独立私教活动的力量门槛。",
+    "image": "assets/images/wiki/profiles/jennifer.webp"
+  },
+  {
+    "id": "jessie",
+    "name": "Jessie",
+    "era": "present",
+    "descriptionEn": "Start Jessie’s tenant route, build gym Clout, and follow listening, gifts, dates and separate evening invitations.",
+    "descriptionZh": "开启Jessie租客路线，积累健身房声望，推进倾听、礼物、约会及独立晚间邀请。",
+    "image": "assets/images/wiki/profiles/jessie.webp"
+  },
+  {
+    "id": "jinx",
+    "name": "Jinx",
+    "era": "future",
+    "descriptionEn": "Find each shift and follow personal milestones and equipment upgrades.",
+    "descriptionZh": "找到各处班次，推进个人事件与装备升级。",
+    "image": "assets/images/wiki/profiles/jinx.webp"
+  },
+  {
+    "id": "joey",
+    "name": "Joey",
+    "era": "present",
+    "descriptionEn": "Follow Joey’s current conversations and store-expansion route, including the stockroom conversation and per-night home visit.",
+    "descriptionZh": "推进Joey当前交心及商店扩建路线，查找储藏室交心与每晚居家拜访条件。",
+    "image": "assets/images/wiki/profiles/joey.webp"
+  },
+  {
+    "id": "julian",
+    "name": "Julian",
+    "era": "medieval",
+    "descriptionEn": "Build Julian’s friendship through four conversations, a Commerce reward and the separate private-client roster.",
+    "descriptionZh": "通过四种谈话提高Julian友谊，领取商业奖励，并了解独立客人名单。",
+    "image": "assets/images/wiki/profiles/julian.webp"
+  },
+  {
+    "id": "kalb",
+    "name": "Kalb",
+    "era": "medieval",
+    "descriptionEn": "Use Kalb’s food orders, Cooking reward, community scenes, guild errands and one-time promotion.",
+    "descriptionZh": "了解Kalb的点餐、烹饪奖励、社区事件、公会差事与一次性宣传。",
+    "image": "assets/images/wiki/profiles/kalb.webp"
+  },
+  {
+    "id": "kasumi",
+    "name": "Kasumi",
+    "era": "medieval",
+    "descriptionEn": "Reputation milestones, Garden Walk, Queenstone and worker upgrades.",
+    "descriptionZh": "声誉节点、庭园漫步、女王石与员工升级。",
+    "image": "assets/images/wiki/profiles/kasumi.webp"
+  },
+  {
+    "id": "katie",
+    "name": "Katie",
+    "era": "present",
+    "descriptionEn": "Tutorial order, dates, work requirements and personal visits.",
+    "descriptionZh": "教学顺序、约会、工作要求与个人探访。",
+    "image": "assets/images/wiki/profiles/katie.webp"
+  },
+  {
+    "id": "keira",
+    "name": "Keira",
+    "era": "medieval",
+    "descriptionEn": "Find Keira’s rooftop race, understand its chance to win, and follow her conversations, date and special commission.",
+    "descriptionZh": "找到 Keira 的屋顶竞速，了解获胜条件，再推进谈心、约会与特殊委托。",
+    "image": "assets/images/wiki/profiles/keira.webp"
+  },
+  {
+    "id": "kent",
+    "name": "Kent",
+    "era": "medieval",
+    "descriptionEn": "Storytelling lesson, Charm reward and Inn visits.",
+    "descriptionZh": "讲故事课程、魅力奖励与旅馆探访。",
+    "image": "assets/images/wiki/profiles/kent.webp"
+  },
+  {
+    "id": "kimi",
+    "name": "Kimi",
+    "era": "present",
+    "descriptionEn": "Skating schedules, dates, shared club events and private invitations.",
+    "descriptionZh": "滑行日程、约会、夜店共同事件与私人邀请。",
+    "image": "assets/images/wiki/profiles/kimi.webp"
+  },
+  {
+    "id": "kitty",
+    "name": "Kitty",
+    "era": "future",
+    "descriptionEn": "Meet Kitty at the Syndicate Big Top, unlock repeatable conversations and Rogue training, and follow her personal route.",
+    "descriptionZh": "在辛迪加大帐篷认识 Kitty，开放日常交谈与盗贼训练，再按顺序推进个人路线。",
+    "image": "assets/images/wiki/profiles/kitty.webp"
+  },
+  {
+    "id": "kristen",
+    "name": "Kristen",
+    "era": "future",
+    "descriptionEn": "Swim lesson, evening H2Hs, dates and room invitation.",
+    "descriptionZh": "游泳课程、夜间谈心、约会与房间邀请。",
+    "image": "assets/images/wiki/profiles/kristen.webp"
+  },
+  {
+    "id": "kupie",
+    "name": "Kupie",
+    "era": "present",
+    "descriptionEn": "Attic conversations, dates and the link to Kupie’s Love Training.",
+    "descriptionZh": "阁楼交谈、约会，以及Kupie 的爱之训练的独立进度。",
+    "image": "assets/images/wiki/profiles/kupie.webp"
+  },
+  {
+    "id": "kurenai",
+    "name": "Kurenai",
+    "era": "future",
+    "descriptionEn": "Skill lessons, facility access and personal conversation order.",
+    "descriptionZh": "技能课程、设施访问与个人谈话顺序。",
+    "image": "assets/images/wiki/profiles/kurenai.webp"
+  },
+  {
+    "id": "kuro",
+    "name": "Kuro",
+    "era": "future",
+    "descriptionEn": "Composed-song performance, personal milestones and useful rewards.",
+    "descriptionZh": "原创歌曲演奏、个人节点与实用奖励。",
+    "image": "assets/images/wiki/profiles/kuro.webp"
+  },
+  {
+    "id": "kyou",
+    "name": "Kyou",
+    "era": "future",
+    "descriptionEn": "Meet Kyou in the Fringe park, follow her timed events, and unlock Heart-to-Hearts and optional dates.",
+    "descriptionZh": "在边缘区公园认识 Kyou，按时段推进个人事件，并开放谈心与可选约会。",
+    "image": "assets/images/wiki/profiles/kyou.webp"
+  },
+  {
+    "id": "carmilla",
+    "name": "Lady Carmilla",
+    "era": "present",
+    "descriptionEn": "Vampire progression conversations and the Vampirism lesson.",
+    "descriptionZh": "吸血鬼属性谈话链与吸血鬼化课程。",
+    "image": "assets/images/wiki/profiles/carmilla.webp"
+  },
+  {
+    "id": "lillian",
+    "name": "Lillian",
+    "era": "medieval",
+    "descriptionEn": "Crystal services, alignment requirements and Soul Stone bonding.",
+    "descriptionZh": "水晶服务、阵营条件与灵魂石羁绊。",
+    "image": "assets/images/wiki/profiles/lillian.webp"
+  },
+  {
+    "id": "lily",
+    "name": "Lily",
+    "era": "medieval",
+    "descriptionEn": "Unlock the bard and follow songs, dates and performance milestones.",
+    "descriptionZh": "解锁吟游诗人，推进歌曲、约会与多场所演奏进度。",
+    "image": "assets/images/wiki/profiles/lily.webp"
+  },
+  {
+    "id": "lime_maid",
+    "name": "Lime",
+    "era": "medieval",
+    "descriptionEn": "Wizard initiation, maid recruitment and Mystic lesson.",
+    "descriptionZh": "巫师入门考验、女仆招募与神秘课程。",
+    "image": "assets/images/wiki/profiles/lime.webp"
+  },
+  {
+    "id": "lindia",
+    "name": "Lindia",
+    "era": "medieval",
+    "descriptionEn": "Dungeon recruitment, Training Room events and Elemental Stone.",
+    "descriptionZh": "地下城招募、训练室事件与元素石。",
+    "image": "assets/images/wiki/profiles/lindia.webp"
+  },
+  {
+    "id": "liora",
+    "name": "Liora",
+    "era": "future",
+    "descriptionEn": "Objective navigation, moving schedules, return visits and rewards.",
+    "descriptionZh": "目标导航、地点变化、重新到访与奖励。",
+    "image": "assets/images/wiki/profiles/liora.webp"
+  },
+  {
+    "id": "lord_chamberlain",
+    "name": "Lord Chamberlain",
+    "era": "medieval",
+    "descriptionEn": "Court introductions, account review and inspection requirements.",
+    "descriptionZh": "宫廷介绍、账目审核与视察条件。",
+    "image": "assets/images/wiki/profiles/lord-chamberlain.webp"
+  },
+  {
+    "id": "lucy",
+    "name": "Lucy",
+    "era": "present",
+    "descriptionEn": "Dance Studio Clout, lessons, personal conversations and dates.",
+    "descriptionZh": "舞蹈工作室声望、课程、个人谈心与约会。",
+    "image": "assets/images/wiki/profiles/lucy.webp"
+  },
+  {
+    "id": "lychee_maid",
+    "name": "Lychee",
+    "era": "medieval",
+    "descriptionEn": "Morning travel route, invitation requirement and maid activities.",
+    "descriptionZh": "上午巡回路线、邀请门槛与女仆行动。",
+    "image": "assets/images/wiki/profiles/lychee.webp"
+  },
+  {
+    "id": "lyra",
+    "name": "Lyra",
+    "era": "medieval",
+    "descriptionEn": "Lyra’s market schedule, supply-run route, Commerce reward and lantern-market date.",
+    "descriptionZh": "Lyra的市场时间表、补给路线、商业奖励与灯笼集市约会。",
+    "image": "assets/images/wiki/profiles/lyra.webp"
+  },
+  {
+    "id": "maggie",
+    "name": "Maggie",
+    "era": "present",
+    "descriptionEn": "Maggie’s work-experience milestones, skills, dates and evening invitations.",
+    "descriptionZh": "Maggie的工作经验门槛、技能、约会与晚间邀约。",
+    "image": "assets/images/wiki/profiles/maggie.webp"
+  },
+  {
+    "id": "ruxandra",
+    "name": "Magistra Ruxandra",
+    "era": "present",
+    "descriptionEn": "Reach the laboratory and follow research visits and Blood Alchemy.",
+    "descriptionZh": "抵达实验室，推进研究会面并使用血液炼金术。",
+    "image": "assets/images/wiki/profiles/ruxandra.webp"
+  },
+  {
+    "id": "maize",
+    "name": "Maize",
+    "era": "medieval",
+    "descriptionEn": "Maize’s bounty recruitment, daily gifts, worker activities and resort progression.",
+    "descriptionZh": "Maize的悬赏招募、日常礼物、员工活动与度假进展。",
+    "image": "assets/images/wiki/profiles/maize.webp"
+  },
+  {
+    "id": "mandarin_maid",
+    "name": "Mandarin",
+    "era": "medieval",
+    "descriptionEn": "Mandarin’s hidden-passage recruitment, maid work, Strength reward and repeatable service.",
+    "descriptionZh": "Mandarin的隐藏通道招募、女仆工作、力量奖励与重复服务。",
+    "image": "assets/images/wiki/profiles/mandarin.webp"
+  },
+  {
+    "id": "marcus",
+    "name": "Marcus",
+    "era": "future",
+    "descriptionEn": "Marcus’s transport-hub schedule and the shared Syndicate mission that involves him.",
+    "descriptionZh": "Marcus在交通枢纽的时间表，以及涉及他的辛迪加共同任务。",
+    "image": "assets/images/wiki/profiles/marcus.webp"
+  },
+  {
+    "id": "marina",
+    "name": "Marina",
+    "era": "medieval",
+    "descriptionEn": "Fishing lessons, boat upgrades and the route to Sirena Isle.",
+    "descriptionZh": "钓鱼课程、船只升级与塞壬岛航线。",
+    "image": "assets/images/wiki/profiles/marina.webp"
+  },
+  {
+    "id": "maryann",
+    "name": "Mary Ann",
+    "era": "present",
+    "descriptionEn": "Mary Ann’s fieldwork route, collection reviews, Researching, dates and specimen gift.",
+    "descriptionZh": "Mary Ann的野外调查路线、收藏查看、研究教学、约会与标本赠礼。",
+    "image": "assets/images/wiki/profiles/mary-ann.webp"
+  },
+  {
+    "id": "lilu",
+    "name": "Master Lilu",
+    "era": "present",
+    "descriptionEn": "Dojo lessons, main-story training, Zoe’s visits and personal milestones.",
+    "descriptionZh": "道场技能、主线训练、Zoe的到访与个人关系进展。",
+    "image": "assets/images/wiki/profiles/lilu.webp"
+  },
+  {
+    "id": "melanthe",
+    "name": "Melanthe",
+    "era": "medieval",
+    "descriptionEn": "Melanthe’s recruitment rolls, assigned cell, relationship actions and corridor encounters.",
+    "descriptionZh": "Melanthe的招募概率、分配牢房、关系动作与走廊事件。",
+    "image": "assets/images/wiki/profiles/melanthe.webp"
+  },
+  {
+    "id": "miki",
+    "name": "Miki",
+    "era": "present",
+    "descriptionEn": "Miki’s gifts, dates, company-ownership milestones and current meeting availability.",
+    "descriptionZh": "Miki的礼物、约会、公司持有里程碑与当前会面条件。",
+    "image": "assets/images/wiki/profiles/miki.webp"
+  },
+  {
+    "id": "mindy",
+    "name": "Mindy",
+    "era": "present",
+    "descriptionEn": "Mindy’s reunion, shared daily actions, independent heart-to-hearts and home visits.",
+    "descriptionZh": "Mindy的重逢、日常互动、独立谈心与居家拜访。",
+    "image": "assets/images/wiki/profiles/mindy.webp"
+  },
+  {
+    "id": "mittens",
+    "name": "Mittens",
+    "era": "medieval",
+    "descriptionEn": "Complete the rescue, open Mittens’ room, and follow her guestbook chapters, dreams and Heart-to-Hearts.",
+    "descriptionZh": "完成营救，为 Mittens 开放房间，再按顺序体验留言簿章节、梦中冒险与谈心。",
+    "image": "assets/images/wiki/profiles/mittens.webp"
+  },
+  {
+    "id": "momosagi",
+    "name": "Momosagi",
+    "era": "medieval",
+    "descriptionEn": "Momosagi’s floor-two rescue, evening schedule, food and worker progression.",
+    "descriptionZh": "Momosagi的地下城二层救援、晚间时间表、喂食与员工进展。",
+    "image": "assets/images/wiki/profiles/momosagi.webp"
+  },
+  {
+    "id": "monk",
+    "name": "Monk",
+    "era": "medieval",
+    "descriptionEn": "Monk’s four-location routine, relationship gain and one-time Perception lesson.",
+    "descriptionZh": "Monk的四处日程、关系培养与一次性感知教学。",
+    "image": "assets/images/wiki/profiles/monk.webp"
+  },
+  {
+    "id": "harlequin",
+    "name": "Motley",
+    "era": "future",
+    "descriptionEn": "Follow Motley’s Syndicate story, four conversations, Comedy Timing and Propaganda appreciation.",
+    "descriptionZh": "推进Motley的辛迪加路线、四段交心、喜剧节奏课程及宣传答谢事件。",
+    "image": "assets/images/wiki/profiles/harlequin.webp",
+    "descriptionRu": "История Motley в Синдикате, личные разговоры и доступные уроки."
+  },
+  {
+    "id": "muramasa",
+    "name": "Muramasa",
+    "era": "medieval",
+    "descriptionEn": "Muramasa’s relationship route, permanent training, combat lessons and Sword Stone bond.",
+    "descriptionZh": "Muramasa的关系路线、永久属性训练、战斗教学与剑石羁绊。",
+    "image": "assets/images/wiki/profiles/muramasa.webp"
+  },
+  {
+    "id": "myriss",
+    "name": "Myriss",
+    "era": "medieval",
+    "descriptionEn": "Myriss’s recruitment rolls, assigned cell, relationship actions and corridor encounters.",
+    "descriptionZh": "Myriss的招募概率、分配牢房、关系动作与走廊事件。",
+    "image": "assets/images/wiki/profiles/myriss.webp"
+  },
+  {
+    "id": "neena",
+    "name": "Neena",
+    "era": "future",
+    "descriptionEn": "Find Neena’s current schedule and the dates, H2Hs and story steps needed for recruitment.",
+    "descriptionZh": "查清Neena的出没安排，以及招募所需的约会、谈心与个人事件。",
+    "image": "assets/images/wiki/profiles/neena.webp"
+  },
+  {
+    "id": "nerida",
+    "name": "Nerida",
+    "era": "present",
+    "descriptionEn": "Nerida’s three wellness locations, restorative baths, personal milestones and Aether Stone bond.",
+    "descriptionZh": "Nerida在三个时代的水疗地点、恢复沐浴、个人里程碑与以太之石羁绊。",
+    "image": "assets/images/wiki/profiles/nerida.webp"
+  },
+  {
+    "id": "noella",
+    "name": "Noella",
+    "era": "future",
+    "descriptionEn": "Find Noella at Mistletoe Lodge and track her affection, Extras milestones and Christmas rewards.",
+    "descriptionZh": "在槲寄生小屋找到Noella，了解好感、附加内容里程碑与圣诞奖励。",
+    "image": "assets/images/wiki/profiles/noella.webp"
+  },
+  {
+    "id": "nova",
+    "name": "Nova",
+    "era": "future",
+    "descriptionEn": "Follow Nova’s research route, required dates and H2Hs, then unlock her private activities.",
+    "descriptionZh": "按顺序完成Nova的研究事件、必需约会与谈心，开放后续私人活动。",
+    "image": "assets/images/wiki/profiles/nova.webp"
+  },
+  {
+    "id": "nyx",
+    "name": "Nyx",
+    "era": "present",
+    "descriptionEn": "Follow Nyx’s studio and room schedule, Band Clout gates, two conversations and rockband date.",
+    "descriptionZh": "按Nyx的工作室与房间时间推进，核对乐队声望、两次谈心与摇滚乐队约会。",
+    "image": "assets/images/wiki/profiles/nyx.webp"
+  },
+  {
+    "id": "nyxara",
+    "name": "Nyxara",
+    "era": "medieval",
+    "descriptionEn": "Track Nyxara’s deep-dungeon access, chamber conversations, shore date and Grimoire upgrade.",
+    "descriptionZh": "核对Nyxara的深层地下城入口、密室谈心、海岸约会与魔导书升级条件。",
+    "image": "assets/images/wiki/profiles/nyxara.webp"
+  },
+  {
+    "id": "becky",
+    "name": "Officer Becky",
+    "era": "present",
+    "descriptionEn": "Follow Becky’s investigation, find the correct locations and time windows, and plan conversations and outings.",
+    "descriptionZh": "沿 Officer Becky 的调查线继续，找准地点与时段，安排谈心和外出。",
+    "image": "assets/images/wiki/profiles/officer-becky.webp"
+  },
+  {
+    "id": "onyx_maid",
+    "name": "Onyx",
+    "era": "medieval",
+    "descriptionEn": "Recruit Onyx through the ordered dungeon search, then follow her night shift and shared maid events.",
+    "descriptionZh": "按顺序完成地下城寻访招募Onyx，再核对深夜班次与女仆共同事件。",
+    "image": "assets/images/wiki/profiles/onyx.webp"
+  },
+  {
+    "id": "orchid",
+    "name": "Orchid",
+    "era": "future",
+    "descriptionEn": "Follow changing shifts, personal visits and Reclamation Bay services.",
+    "descriptionZh": "跟随班次变化，推进个人事件与再生工坊服务。",
+    "image": "assets/images/wiki/profiles/orchid.webp"
+  },
+  {
+    "id": "pepper",
+    "name": "Pepper",
+    "era": "medieval",
+    "descriptionEn": "Find Pepper’s daily staff schedule, personal interactions, crafted training gifts and resort continuation.",
+    "descriptionZh": "查看Pepper的每日排班、个人互动、手工训练礼物与度假后续。",
+    "image": "assets/images/wiki/profiles/pepper.webp",
+    "descriptionRu": "Расписание Pepper, личное общение, особые подарки и отдых на курорте."
+  },
+  {
+    "id": "pixel",
+    "name": "Pixel",
+    "era": "future",
+    "descriptionEn": "Follow location changes, conversations, dates and Private Time.",
+    "descriptionZh": "按地点推进事件、交心对话、约会与二人时光。",
+    "image": "assets/images/wiki/profiles/pixel.webp"
+  },
+  {
+    "id": "pixie",
+    "name": "Pixie",
+    "era": "medieval",
+    "descriptionEn": "Find Pixie’s early encounters, check recruitment requirements, and plan daily interactions.",
+    "descriptionZh": "找到 Pixie 的前期遭遇，查清招募条件与日常互动的安排。",
+    "image": "assets/images/wiki/profiles/pixie.webp"
+  },
+  {
+    "id": "poison",
+    "name": "Poison",
+    "era": "future",
+    "descriptionEn": "Follow Poison’s garden route, independent conversations, private actions and shared Syndicate progress.",
+    "descriptionZh": "推进Poison的花园路线、独立谈心、私人行动与辛迪加共同进度。",
+    "image": "assets/images/wiki/profiles/poison.webp"
+  },
+  {
+    "id": "poppy",
+    "name": "Poppy",
+    "era": "medieval",
+    "descriptionEn": "Meet Poppy through business Reputation, learn Master Chef and follow her kitchen conversations and events.",
+    "descriptionZh": "通过青楼声誉迎来Poppy，学习厨艺大师并推进厨房谈心与事件。",
+    "image": "assets/images/wiki/profiles/poppy.webp"
+  },
+  {
+    "id": "portia",
+    "name": "Portia",
+    "era": "present",
+    "descriptionEn": "Plan Portia’s three conversations, car and outfit requirements, villa access and optional dates.",
+    "descriptionZh": "安排Portia的3次谈心，核对跑车、服装、别墅入口与可选约会。",
+    "image": "assets/images/wiki/profiles/portia.webp"
+  },
+  {
+    "id": "barnard",
+    "name": "Prince Barnard",
+    "era": "medieval",
+    "descriptionEn": "Find Prince Barnard’s daily circuit and the relationship gates for his tailor and court scenes.",
+    "descriptionZh": "查找Prince Barnard的每日行程，以及裁缝店和宫廷事件的关系门槛。",
+    "image": "assets/images/wiki/profiles/barnard.webp"
+  },
+  {
+    "id": "rachel",
+    "name": "Rachel",
+    "era": "present",
+    "descriptionEn": "Follow Rachel’s school and evening schedule, tutoring, apartment skill lesson and optional dates.",
+    "descriptionZh": "按Rachel的学校与傍晚排班推进辅导、公寓技能教学和可选约会。",
+    "image": "assets/images/wiki/profiles/rachel.webp"
+  },
+  {
+    "id": "rain_maid",
+    "name": "Rain",
+    "era": "medieval",
+    "descriptionEn": "Recruit Rain with Researching, follow her overnight shift and obtain her maid equipment reward.",
+    "descriptionZh": "学会研究后招募Rain，核对跨夜排班与专属女仆装备奖励。",
+    "image": "assets/images/wiki/profiles/rain.webp"
+  },
+  {
+    "id": "raven",
+    "name": "Raven",
+    "era": "medieval",
+    "descriptionEn": "Find Raven after the floor-20 challenge and compare her room sessions, Tamer lesson and resort options.",
+    "descriptionZh": "通过第20层挑战后找到Raven，核对地牢训练、驯兽师课程与度假选项。",
+    "image": "assets/images/wiki/profiles/raven.webp"
+  },
+  {
+    "id": "rei",
+    "name": "Rei",
+    "era": "present",
+    "descriptionEn": "Challenge Rei at the Arcade, unlock her home visit and System Hacking, and check her date windows.",
+    "descriptionZh": "在街机厅挑战Rei，开放公寓与系统黑客教学，并核对约会时段。",
+    "image": "assets/images/wiki/profiles/rei.webp"
+  },
+  {
+    "id": "riki",
+    "name": "Riki",
+    "era": "future",
+    "descriptionEn": "Recruit Riki, follow her location-based personal route and unlock training, dates and private time.",
+    "descriptionZh": "招募Riki，按地点推进个人路线，开放训练、约会与私人相处。",
+    "image": "assets/images/wiki/profiles/riki.webp"
+  },
+  {
+    "id": "robin",
+    "name": "Robin",
+    "era": "medieval",
+    "descriptionEn": "Unlock Robin’s lodge through hunting, learn her skills and follow her dates, story gate and Aether Stone bond.",
+    "descriptionZh": "通过狩猎开放Robin的猎屋，学习技能，核对约会、主线门槛与以太之石共鸣。",
+    "image": "assets/images/wiki/profiles/robin.webp"
+  },
+  {
+    "id": "rose_arthur",
+    "name": "Rose Arthur",
+    "era": "medieval",
+    "descriptionEn": "Find Rose Arthur’s artisan stall, community events, Creativity lesson and two crafted-gift recipes.",
+    "descriptionZh": "找到Rose Arthur的工艺摊位，查看社区事件、创造力奖励与两种手工礼物配方。",
+    "image": "assets/images/wiki/profiles/rose-arthur.webp"
+  },
+  {
+    "id": "ryia",
+    "name": "Ryia",
+    "era": "medieval",
+    "descriptionEn": "Huts recruitment, management advice, personal milestones and worker upgrades.",
+    "descriptionZh": "茅屋招募、经营建议、个人节点与员工升级。",
+    "image": "assets/images/wiki/profiles/ryia.webp"
+  },
+  {
+    "id": "sabbath",
+    "name": "Sabbath",
+    "era": "medieval",
+    "descriptionEn": "Hut access, spell lessons, crafting, personal H2Hs and Grimoire level 9.",
+    "descriptionZh": "小屋入口、法术课程、制作、个人谈心与魔导书 9 级。",
+    "image": "assets/images/wiki/profiles/sabbath.webp"
+  },
+  {
+    "id": "saber",
+    "name": "Saber",
+    "era": "future",
+    "descriptionEn": "Follow Saber’s late-story personal route, check her move to the Barracks, and plan dates and shared visits with Kitty.",
+    "descriptionZh": "推进 Saber 的后期个人路线，查清兵营中的拜访方式，以及约会和与 Kitty 共同事件的条件。",
+    "image": "assets/images/wiki/profiles/saber.webp"
+  },
+  {
+    "id": "sabrina",
+    "name": "Sabrina",
+    "era": "present",
+    "descriptionEn": "Magic Shop visits, street events, couch access, dates and lessons.",
+    "descriptionZh": "神秘珍奇商店探访、街头事件、沙发区入口、约会与课程。",
+    "image": "assets/images/wiki/profiles/sabrina.webp"
+  },
+  {
+    "id": "saline",
+    "name": "Saline",
+    "era": "future",
+    "descriptionEn": "Follow Saline’s complete recruitment route, including conversations, dates and the move to the Medical Bay.",
+    "descriptionZh": "按顺序完成 Saline 的招募路线，核对谈心、约会，以及搬入医疗室后的拜访方式。",
+    "image": "assets/images/wiki/profiles/saline.webp"
+  },
+  {
+    "id": "sandra",
+    "name": "Sandra",
+    "era": "medieval",
+    "descriptionEn": "Duet recruitment, Guild lessons, performance rewards and worker upgrades.",
+    "descriptionZh": "二重唱招募、公会课程、表演奖励与员工升级。",
+    "image": "assets/images/wiki/profiles/sandra.webp"
+  },
+  {
+    "id": "sashimi",
+    "name": "Sashimi",
+    "era": "medieval",
+    "descriptionEn": "Water encounters, fishing discovery, Pool route, recruitment and island visits.",
+    "descriptionZh": "水域遭遇、钓鱼发现、水池路线、招募与海岛探访。",
+    "image": "assets/images/wiki/profiles/sashimi.webp"
+  },
+  {
+    "id": "sashina",
+    "name": "Sashina",
+    "era": "medieval",
+    "descriptionEn": "Shrine schedules, spells, Mystic training, personal requirements and stone bonding.",
+    "descriptionZh": "神殿日程、法术、神秘训练、个人条件与灵魂石羁绊。",
+    "image": "assets/images/wiki/profiles/sashina.webp"
+  },
+  {
+    "id": "seraph",
+    "name": "Seraph",
+    "era": "future",
+    "descriptionEn": "Guidance, crystal access, alignment requirements and artifact visits.",
+    "descriptionZh": "指引、水晶入口、阵营条件与神器相关会面。",
+    "image": "assets/images/wiki/profiles/seraph.webp"
+  },
+  {
+    "id": "shadow",
+    "name": "Shadow",
+    "era": "medieval",
+    "descriptionEn": "Find Shadow’s changing nightly locations, follow the guild and recruitment routes, and plan her movement skills and visits.",
+    "descriptionZh": "看懂 Shadow 的夜间行踪，推进公会与招募路线，查找移动技能和个人拜访的条件。",
+    "image": "assets/images/wiki/profiles/shadow.webp"
+  },
+  {
+    "id": "shelly",
+    "name": "Shelly",
+    "era": "medieval",
+    "descriptionEn": "Gift Shop access, the complete Sea Shell catalogue and shared island visits.",
+    "descriptionZh": "礼品店入口、完整海贝壳商品与海岛共同探访。",
+    "image": "assets/images/wiki/profiles/shelly.webp"
+  },
+  {
+    "id": "sherry",
+    "name": "Sherry",
+    "era": "medieval",
+    "descriptionEn": "Bar access, three linked H2Hs, Garden Walk and after-midnight visits.",
+    "descriptionZh": "酒吧入口、三段连续谈心、庭园漫步与午夜后探访。",
+    "image": "assets/images/wiki/profiles/sherry.webp"
+  },
+  {
+    "id": "silas",
+    "name": "Silas",
+    "era": "medieval",
+    "descriptionEn": "Appraisal, Commerce rewards, crafting, shop trade and promotion services.",
+    "descriptionZh": "鉴定、商业奖励、制作、商店交易与宣传服务。",
+    "image": "assets/images/wiki/profiles/silas.webp"
+  },
+  {
+    "id": "sonia",
+    "name": "Sonia",
+    "era": "present",
+    "descriptionEn": "Research-lab visits, three heart-to-hearts and optional dates.",
+    "descriptionZh": "研究实验室事件、三次交心对话与可选约会。",
+    "image": "assets/images/wiki/profiles/sonia.webp"
+  },
+  {
+    "id": "sophie",
+    "name": "Sophie",
+    "era": "medieval",
+    "descriptionEn": "Find Sophie, follow her safe introduction and work route, and plan personal visits and gifts.",
+    "descriptionZh": "找到 Sophie，按顺序推进初遇与工作路线，安排个人拜访和赠礼。",
+    "image": "assets/images/wiki/profiles/sophie.webp"
+  },
+  {
+    "id": "summer",
+    "name": "Summer",
+    "era": "present",
+    "descriptionEn": "Swim lesson, beach events, dates, one-time rewards and Island Escape.",
+    "descriptionZh": "游泳课程、海滩事件、约会、一次性奖励与海岛出逃。",
+    "image": "assets/images/wiki/profiles/summer.webp"
+  },
+  {
+    "id": "swish",
+    "name": "Swish",
+    "era": "present",
+    "descriptionEn": "Basketball Court events, drills, perception reward and the narrow date window.",
+    "descriptionZh": "篮球场事件、训练、感知奖励与约会实际时段。",
+    "image": "assets/images/wiki/profiles/swish.webp"
+  },
+  {
+    "id": "sylwithe",
+    "name": "Sylwithe",
+    "era": "medieval",
+    "descriptionEn": "Find the Hollow, plan crystal upgrades and check New Game+ requirements.",
+    "descriptionZh": "找到幽谷，安排水晶升级并查看新游戏+条件。",
+    "image": "assets/images/wiki/profiles/sylwithe.webp"
+  },
+  {
+    "id": "talena",
+    "name": "Talena",
+    "era": "present",
+    "descriptionEn": "Room visits, Band Clout, drum accuracy and the personal invitation.",
+    "descriptionZh": "房间探访、乐队声望、鼓曲准确率与个人邀请。",
+    "image": "assets/images/wiki/profiles/talena.webp"
+  },
+  {
+    "id": "terra",
+    "name": "Terra",
+    "era": "future",
+    "descriptionEn": "Research visits, relationship milestones, an Army invitation and a living gift.",
+    "descriptionZh": "研究会面、关系进展、军团邀请与活体礼物。",
+    "image": "assets/images/wiki/profiles/terra.webp"
+  },
+  {
+    "id": "the-blessed-ones",
+    "name": "The Blessed Ones",
+    "era": "future",
+    "descriptionEn": "Find the Blessed Ones at the Anomaly Temple and understand their current role in exploration.",
+    "descriptionZh": "在异常神殿找到 The Blessed Ones，了解拜访方式与当前可用内容。",
+    "image": "assets/images/wiki/profiles/the-blessed-ones.webp",
+    "descriptionRu": "Где найти The Blessed Ones и какие взаимодействия с ними доступны."
+  },
+  {
+    "id": "king_graham",
+    "name": "The King",
+    "era": "medieval",
+    "descriptionEn": "Potato quest, royal appointment, court accounts and proclamation.",
+    "descriptionZh": "土豆任务、王室任命、宫廷账目与公告。",
+    "image": "assets/images/wiki/profiles/king-graham.webp"
+  },
+  {
+    "id": "theneas",
+    "name": "Theneas",
+    "era": "medieval",
+    "descriptionEn": "Reach the secluded Forest Hut, meet Theneas, and check access to his Soul Stone refinements.",
+    "descriptionZh": "沿幽僻小径抵达森林小屋，认识 Theneas，并查清灵魂石升级服务的条件。",
+    "image": "assets/images/wiki/profiles/theneas.webp"
+  },
+  {
+    "id": "tiffany",
+    "name": "Tiffany",
+    "era": "future",
+    "descriptionEn": "Neutral Objective navigation, club and tower schedules, dates and private visits.",
+    "descriptionZh": "中立目标导航、俱乐部与高塔日程、约会及私人探访。",
+    "image": "assets/images/wiki/profiles/tiffany.webp"
+  },
+  {
+    "id": "tinker",
+    "name": "Tinker",
+    "era": "future",
+    "descriptionEn": "Follow Tinker’s events, conversations and dates, and check when her lab and Fortress services are available.",
+    "descriptionZh": "按顺序推进 Tinker 的事件、谈心与约会，并查清实验室和要塞服务的开放时间。",
+    "image": "assets/images/wiki/profiles/tinker.webp"
+  },
+  {
+    "id": "tinsel",
+    "name": "Tinsel",
+    "era": "future",
+    "descriptionEn": "Find Tinsel through the Christmas encounter chain, unlock her tavern, and plan repeat visits and gifts.",
+    "descriptionZh": "沿圣诞遭遇线找到 Tinsel，开放她的酒馆，查清日常拜访与赠礼要求。",
+    "image": "assets/images/wiki/profiles/tinsel.webp"
+  },
+  {
+    "id": "tobbin",
+    "name": "Tobbin",
+    "era": "medieval",
+    "descriptionEn": "Coast and hut schedules, fishing conversations, Perception and equipment services.",
+    "descriptionZh": "海岸与小屋日程、钓鱼谈话、感知及装备服务。",
+    "image": "assets/images/wiki/profiles/tobbin.webp"
+  },
+  {
+    "id": "torea",
+    "name": "Torea",
+    "era": "present",
+    "descriptionEn": "Torea’s schedule, linked personal milestones, three heart-to-hearts and dates.",
+    "descriptionZh": "Torea的日程、共同个人里程碑、三段谈心与约会。",
+    "image": "assets/images/wiki/profiles/torea.webp"
+  },
+  {
+    "id": "uhura",
+    "name": "Uhura",
+    "era": "medieval",
+    "descriptionEn": "Uhura’s island access, daily conversations and shared vacation encounters.",
+    "descriptionZh": "Uhura的岛屿交通、日常交谈与共同度假事件。",
+    "image": "assets/images/wiki/profiles/uhura.webp"
+  },
+  {
+    "id": "valerie",
+    "name": "Valerie",
+    "era": "present",
+    "descriptionEn": "Valerie’s office schedule, introduction and shared corporate milestones.",
+    "descriptionZh": "Valerie的办公楼日程、初见与共同企业里程碑。",
+    "image": "assets/images/wiki/profiles/valerie.webp"
+  },
+  {
+    "id": "valkyra",
+    "name": "Valkyra",
+    "era": "medieval",
+    "descriptionEn": "Valkyra’s combat lessons, daytime schedule, recruitment and Security Office activities.",
+    "descriptionZh": "Valkyra的战斗教学、白天日程、招募与安保办公室活动。",
+    "image": "assets/images/wiki/profiles/valkyra.webp"
+  },
+  {
+    "id": "vardis",
+    "name": "Vardis",
+    "era": "medieval",
+    "descriptionEn": "Find Vardis at the Deep Woods landmarks and plan the walking route, travel costs and information visits.",
+    "descriptionZh": "在深林入口与地标找到 Vardis，查阅行走路线、出行消耗和可询问的信息。",
+    "image": "assets/images/wiki/profiles/vardis.webp"
+  },
+  {
+    "id": "vera",
+    "name": "Vera",
+    "era": "present",
+    "descriptionEn": "Track net winnings, relationship milestones and separate hotel activities.",
+    "descriptionZh": "查看净赢额、关系进展与两种独立的旅馆活动。",
+    "image": "assets/images/wiki/profiles/vera.webp"
+  },
+  {
+    "id": "vespa",
+    "name": "Vespa",
+    "era": "medieval",
+    "descriptionEn": "Vespa’s castle route, court requirements, referral letter and post-recruitment schedule.",
+    "descriptionZh": "Vespa的城堡路线、宫廷条件、介绍信与招募后日程。",
+    "image": "assets/images/wiki/profiles/vespa.webp"
+  },
+  {
+    "id": "violet_maid",
+    "name": "Violet",
+    "era": "medieval",
+    "descriptionEn": "Violet’s guild recruitment, morning maid schedule, Creativity reward and service.",
+    "descriptionZh": "Violet的公会招募、晨间女仆日程、创造力奖励与服务。",
+    "image": "assets/images/wiki/profiles/violet.webp"
+  },
+  {
+    "id": "vixen",
+    "name": "Vixen",
+    "era": "medieval",
+    "descriptionEn": "Vixen’s meeting places, six social lessons, dates and VIP Lounge recruitment.",
+    "descriptionZh": "Vixen的会面地点、六项社交教学、约会与VIP休息室招募。",
+    "image": "assets/images/wiki/profiles/vixen.webp"
+  },
+  {
+    "id": "void",
+    "name": "VOID",
+    "era": "future",
+    "descriptionEn": "VOID’s late-game meeting window, gifts and relationship requirements for Story 100.",
+    "descriptionZh": "查看VOID的后期会面时段、礼物及主线100所需的关系进度。",
+    "image": "assets/images/wiki/profiles/void.webp"
+  },
+  {
+    "id": "whiskers",
+    "name": "Whiskers",
+    "era": "medieval",
+    "descriptionEn": "Whiskers’s recruitment, room schedule, three personal conversations and dates.",
+    "descriptionZh": "Whiskers的招募、房间日程、三段个人谈心与约会。",
+    "image": "assets/images/wiki/profiles/whiskers.webp"
+  },
+  {
+    "id": "wilfred",
+    "name": "Wilfred",
+    "era": "medieval",
+    "descriptionEn": "Wilfred’s farm schedule, daily help, Stamina reward and shared farm events.",
+    "descriptionZh": "Wilfred的农场日程、日常帮工、耐力奖励与共同农场事件。",
+    "image": "assets/images/wiki/profiles/wilfred.webp"
+  },
+  {
+    "id": "willow",
+    "name": "Willow",
+    "era": "medieval",
+    "descriptionEn": "Recruit the healer, improve training and collect ten medicine specimens.",
+    "descriptionZh": "招募治疗人员，升级训练并收集十种药用标本。",
+    "image": "assets/images/wiki/profiles/willow.webp"
+  },
+  {
+    "id": "yrsa",
+    "name": "Yrsa",
+    "era": "medieval",
+    "descriptionEn": "Yrsa’s personal milestones, combat lessons, new heart-to-heart and Brute Stone bond.",
+    "descriptionZh": "Yrsa的个人里程碑、战斗教学、新增谈心与蛮力之石羁绊。",
+    "image": "assets/images/wiki/profiles/yrsa.webp"
+  },
+  {
+    "id": "zodiac",
+    "name": "Zodiac",
+    "era": "future",
+    "descriptionEn": "Zodiac’s Syndicate progression, personal conversations, Spirit Communication and daily actions.",
+    "descriptionZh": "Zodiac的辛迪加进展、个人谈心、灵体沟通与日常互动。",
+    "image": "assets/images/wiki/profiles/zodiac.webp"
+  },
+  {
+    "id": "zoe",
+    "name": "Zoe",
+    "era": "present",
+    "descriptionEn": "Zoe’s computer-and-dojo sequence, conversation unlocks, gifts and seven dates.",
+    "descriptionZh": "Zoe的计算机与道场序列、交谈解锁、礼物和七项约会。",
+    "image": "assets/images/wiki/profiles/zoe.webp"
+  },
+  {
+    "id": "zosia",
+    "name": "Zosia",
+    "era": "future",
+    "descriptionEn": "Zosia’s complete tutoring route, heart-to-hearts, dates, private visit and Propaganda lesson.",
+    "descriptionZh": "Zosia的完整导师路线、谈心、约会、私人拜访与宣传教学。",
+    "image": "assets/images/wiki/profiles/zosia.webp"
+  }
 ]);

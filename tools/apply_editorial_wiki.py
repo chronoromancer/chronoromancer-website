@@ -106,6 +106,76 @@ def apply_character_index(index,profile_index):
     for card in cards:card.extract()
     for card in arranged:grid.append(card)
 
+def sync_character_gallery(output, pages, profile_index):
+    """Render the main gallery from the same reviewed roster as the player wiki."""
+    gallery_path=output/'characters.html'
+    if not gallery_path.is_file()or not profile_index or not profile_index.get('gallery_sync'):
+        return
+    profiles=profile_index['profiles']
+    labels={
+        'present':{'en':'Present','zh':'现代','ru':'Современность'},
+        'medieval':{'en':'Medieval','zh':'中世纪','ru':'Средневековье'},
+        'future':{'en':'Future','zh':'未来','ru':'Будущее'}}
+    people=sorted([p for p in pages if p['category']=='Characters'],key=lambda p:p['title_en'].casefold())
+    assert {p['slug']for p in people}==set(profiles),'Gallery and wiki rosters differ'
+    records=[]
+    for person in people:
+        slug=person['slug'];profile=profiles[slug]
+        assert profile['gallery_era']in labels and profile['gallery_id']
+        article=BeautifulSoup((output/'wiki'/(slug+'.html')).read_text(encoding='utf-8'),'html.parser')
+        portrait=article.select_one('.wiki-source-content[data-lang-panel=en] figure.reviewed-screenshot img')
+        assert portrait,(slug,'Missing reviewed portrait')
+        source=portrait['src'];assert source.startswith('../assets/images/wiki/'),(slug,source)
+        record={'id':profile['gallery_id'],'name':person['title_en'],'era':profile['gallery_era'],
+                'descriptionEn':person['summary_en'],'descriptionZh':person['summary_zh'],'image':source[3:]}
+        if profile.get('gallery_description_ru'):record['descriptionRu']=profile['gallery_description_ru']
+        records.append(record)
+    assert len(records)==len({r['id']for r in records})==len({r['name']for r in records})
+    assert not any(r['id']=='karens'for r in records),'Protected legacy identity cannot be a gallery search term'
+    data_path=output/'assets/js/characters-data.js';data_path.parent.mkdir(parents=True,exist_ok=True)
+    data_path.write_text('window.CHRONO_CHARACTERS = Object.freeze('+json.dumps(records,ensure_ascii=False,indent=2)+');\n',encoding='utf-8')
+    doc=BeautifulSoup(gallery_path.read_text(encoding='utf-8'),'html.parser')
+    def copy(tag,en,zh,ru=None):
+        tag['data-copy-en']=en;tag['data-copy-zh']=zh;tag.string=en
+        if ru is not None:tag['data-copy-ru']=ru
+    total=len(records)
+    hero=doc.select_one('.page-hero .page-hero-content');assert hero
+    intro=hero.find_all('p',recursive=False)[-1]
+    copy(intro,
+        f'Browse the same {total} character entries as the Player Wiki. Match their game portraits, then search by name or English and Simplified Chinese keywords.',
+        f'与玩家Wiki一致的{total}个角色条目。对照游戏头像确认人物，再用姓名或中英文关键词查找。',
+        f'Те же {total} записей о персонажах, что и в Wiki. Ищите по имени и описанию.')
+    description=doc.select_one('meta[name=description]');assert description
+    description['content']=f'Browse all {total} characters from the Chronoromancer Player Wiki with game profile portraits and English and Simplified Chinese summaries.'
+    note=doc.select_one('.character-directory-note');assert note
+    copy(note,
+        'Names, portraits and summaries match the Player Wiki. Era filters use each character’s main setting.',
+        '姓名、头像与简介均与玩家Wiki保持一致；时代筛选按主要出场地点分类。',
+        'Имена, портреты и описания совпадают с Wiki. Фильтры эпох указывают основное место появления.')
+    counts=Counter(r['era']for r in records)
+    for element in doc.select('[data-character-count]'):
+        era=element['data-character-count'];element.string=str(total if era=='all'else counts[era])
+    grid=doc.select_one('[data-character-grid]');assert grid;grid.clear()
+    for record in records:
+        card=doc.new_tag('article',attrs={'class':'character-card','data-character-card':'','data-era':record['era'],
+            'data-search-en':' '.join([record['name'],record['id'],record['era'],record['descriptionEn']]),
+            'data-search-zh':' '.join([record['name'],record['descriptionZh']])})
+        image=doc.new_tag('img',src=record['image'],alt=record['name'],attrs={'loading':'lazy','decoding':'async'})
+        text=doc.new_tag('div');tag=doc.new_tag('span',attrs={'class':'card-tag'})
+        copy(tag,labels[record['era']]['en'],labels[record['era']]['zh'],labels[record['era']]['ru'])
+        heading=doc.new_tag('h2');heading.string=record['name'];summary=doc.new_tag('p')
+        copy(summary,record['descriptionEn'],record['descriptionZh'],record.get('descriptionRu'))
+        text.append(tag);text.append(heading);text.append(summary);card.append(image);card.append(text);grid.append(card)
+    footer=doc.select_one('.split-feature-copy')
+    if footer:
+        paragraphs=footer.find_all('p',recursive=False)
+        copy(paragraphs[-1],
+             'This gallery and the Player Wiki share one reviewed character roster. Names retain their in-game spelling, and the portraits help you recognise each character. Use the Player Wiki for detailed routes, requirements and activities.',
+             '这里与玩家Wiki使用同一份角色目录。人物名保留游戏中的拼写，并配有头像，方便对照；详细路线、条件与活动可在玩家Wiki中查阅。',
+             'У галереи и Wiki единый проверенный список персонажей. Имена сохранены как в игре; портреты помогают узнать персонажа. Подробные маршруты и условия ищите в Wiki.')
+    gallery_path.write_text(str(doc),encoding='utf-8',newline='\n')
+
+
 def apply_editorial_wiki(output:Path,source:Path|None=None)->list[str]:
     source=(source or Path(__file__).resolve().parents[1]).resolve()
     output=output.resolve();maintained=source/'editorial/wiki'
@@ -114,7 +184,11 @@ def apply_editorial_wiki(output:Path,source:Path|None=None)->list[str]:
     profile_path=maintained/'character-index.json'
     profile_index=json.loads(profile_path.read_text(encoding='utf-8')) if profile_path.is_file() else None
     pages=catalog['pages'];redirects=catalog.get('redirects',[]);aliases=catalog.get('aliases',[])
-    retired={r['slug'] for r in redirects+aliases}
+    excluded=set(catalog.get('excluded_slugs',[]))
+    for slug in excluded:
+        assert slug and all(c.isalnum()or c=='-'for c in slug)
+        (output/'wiki'/(slug+'.html')).unlink(missing_ok=True)
+    retired={r['slug'] for r in redirects+aliases}|excluded
     manifest_path=output/'wiki-manifest.json'
     manifest=json.loads(manifest_path.read_text(encoding='utf-8'))
     original={p['slug']:p for p in manifest['pages']}
@@ -219,10 +293,14 @@ def apply_editorial_wiki(output:Path,source:Path|None=None)->list[str]:
     path=output/'sitemap.xml'
     if path.is_file():
         text=path.read_text(encoding='utf-8')
+        for slug in excluded:
+            url='https://chronoromancergame.com/wiki/'+slug+'.html'
+            text=re.sub(r'\s*<url>\s*<loc>'+re.escape(url)+r'</loc>\s*</url>','',text)
         for entry in pages:
             url='https://chronoromancergame.com/wiki/'+entry['slug']+'.html'
             if url not in text:text=text.replace('</urlset>','  <url><loc>'+url+'</loc></url>\n</urlset>')
         path.write_text(text,encoding='utf-8',newline='\n')
+    sync_character_gallery(output, pages, profile_index)
     return sorted(slugs)
 if __name__=='__main__':
     p=argparse.ArgumentParser(description=__doc__);p.add_argument('output',type=Path);p.add_argument('--source',type=Path)

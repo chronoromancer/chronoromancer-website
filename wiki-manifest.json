@@ -2024,7 +2024,7 @@
       "revision_id": 2009,
       "revision_timestamp": "2026-10-03T17:49:11Z",
       "category": "World & Reference",
-      "image_count": 380,
+      "image_count": 368,
       "title_en": "Character Directory",
       "title_zh": "角色目录",
       "source_type": "editorial",
@@ -3346,8 +3346,8 @@
       "source_type": "editorial",
       "reviewed_at": "2026-11-09",
       "verified_game_version": "v1.0_BETAx",
-      "summary_en": "Find current map destinations, indoor approaches and opening hours, with Deep Woods landmarks and a separate optional-world appendix.",
-      "summary_zh": "查找当前地图地点、室内入口与营业时间，附深林地标及独立的可选世界说明。",
+      "summary_en": "Find current map destinations, indoor approaches and opening hours, with Deep Woods landmarks.",
+      "summary_zh": "查找当前地图地点、室内入口与营业时间，附深林地标。",
       "search_terms": [
         "locations",
         "map",
@@ -3355,16 +3355,11 @@
         "districts",
         "Deep",
         "Woods",
-        "Wildheart",
-        "Mod",
-        "Manager",
         "地点",
         "地图",
         "时代",
         "地区",
         "深林",
-        "野林",
-        "模组管理器",
         "超环坐标",
         "Bedroom",
         "卧室",
@@ -4590,208 +4585,6 @@
         "training",
         "地窖",
         "训练"
-      ]
-    },
-    {
-      "title": "Character:Leona",
-      "slug": "character-leona",
-      "revision_id": 1783,
-      "revision_timestamp": "2026-10-01T11:04:59Z",
-      "category": "Characters",
-      "image_count": 1,
-      "title_en": "Hime",
-      "title_zh": "Hime",
-      "source_type": "editorial",
-      "reviewed_at": "2026-11-09",
-      "verified_game_version": "v1.0_BETAx",
-      "summary_en": "Optional Wildheart guide: find Hime, follow current events and shared prerequisites, and plan gifts, three conversations and the river date.",
-      "summary_zh": "可选Wildheart人物指南：找到Hime，查当前事件与共同前置，安排赠礼、三段交心和河上约会。",
-      "search_terms": [
-        "Hime",
-        "Hime",
-        "Wildheart",
-        "Wild Woods",
-        "optional mod",
-        "野林",
-        "可选模组",
-        "谈心",
-        "路线"
-      ],
-      "screenshot_count": 0,
-      "asset_directories": [
-        "profiles"
-      ]
-    },
-    {
-      "slug": "character-huli",
-      "title": "Character:Huli",
-      "title_en": "Huli",
-      "title_zh": "Huli",
-      "category": "Characters",
-      "source_type": "editorial",
-      "reviewed_at": "2026-11-09",
-      "verified_game_version": "v1.0_BETAx",
-      "summary_en": "Optional Wildheart guide: find Huli, follow current events and shared prerequisites, and plan gifts, three conversations and the river date.",
-      "summary_zh": "可选Wildheart人物指南：找到Huli，查当前事件与共同前置，安排赠礼、三段交心和河上约会。",
-      "search_terms": [
-        "Huli",
-        "Huli",
-        "Wildheart",
-        "Wild Woods",
-        "optional mod",
-        "野林",
-        "可选模组",
-        "谈心",
-        "路线"
-      ],
-      "image_count": 1,
-      "screenshot_count": 0,
-      "asset_directories": [
-        "profiles"
-      ]
-    },
-    {
-      "slug": "character-nanami",
-      "title": "Character:Nanami",
-      "title_en": "Nanami",
-      "title_zh": "Nanami",
-      "category": "Characters",
-      "source_type": "editorial",
-      "reviewed_at": "2026-11-09",
-      "verified_game_version": "v1.0_BETAx",
-      "summary_en": "Optional Wildheart guide: find Nanami, follow current events and shared prerequisites, and plan gifts, three conversations and the river date.",
-      "summary_zh": "可选Wildheart人物指南：找到Nanami，查当前事件与共同前置，安排赠礼、三段交心和河上约会。",
-      "search_terms": [
-        "Nanami",
-        "Nanami",
-        "Wildheart",
-        "Wild Woods",
-        "optional mod",
-        "野林",
-        "可选模组",
-        "谈心",
-        "路线"
-      ],
-      "image_count": 1,
-      "screenshot_count": 0,
-      "asset_directories": [
-        "profiles"
-      ]
-    },
-    {
-      "title": "Character:Natsumi",
-      "slug": "character-natsumi",
-      "revision_id": 1815,
-      "revision_timestamp": "2026-10-01T15:03:35Z",
-      "category": "Characters",
-      "image_count": 1,
-      "title_en": "Natsumi",
-      "title_zh": "Natsumi",
-      "source_type": "editorial",
-      "reviewed_at": "2026-11-09",
-      "verified_game_version": "v1.0_BETAx",
-      "summary_en": "Optional Wildheart guide: find Natsumi, follow current events and shared prerequisites, and plan gifts, three conversations and the river date.",
-      "summary_zh": "可选Wildheart人物指南：找到Natsumi，查当前事件与共同前置，安排赠礼、三段交心和河上约会。",
-      "search_terms": [
-        "Natsumi",
-        "Natsumi",
-        "Wildheart",
-        "Wild Woods",
-        "optional mod",
-        "野林",
-        "可选模组",
-        "谈心",
-        "路线"
-      ],
-      "screenshot_count": 0,
-      "asset_directories": [
-        "profiles"
-      ]
-    },
-    {
-      "slug": "character-rin",
-      "title": "Character:Rin",
-      "title_en": "Rin",
-      "title_zh": "Rin",
-      "category": "Characters",
-      "source_type": "editorial",
-      "reviewed_at": "2026-11-09",
-      "verified_game_version": "v1.0_BETAx",
-      "summary_en": "Optional Wildheart guide: find Rin, follow current events and shared prerequisites, and plan gifts, three conversations and the river date.",
-      "summary_zh": "可选Wildheart人物指南：找到Rin，查当前事件与共同前置，安排赠礼、三段交心和河上约会。",
-      "search_terms": [
-        "Rin",
-        "Rin",
-        "Wildheart",
-        "Wild Woods",
-        "optional mod",
-        "野林",
-        "可选模组",
-        "谈心",
-        "路线"
-      ],
-      "image_count": 1,
-      "screenshot_count": 0,
-      "asset_directories": [
-        "profiles"
-      ]
-    },
-    {
-      "title": "Character:Taiga",
-      "slug": "character-taiga",
-      "revision_id": 1880,
-      "revision_timestamp": "2026-10-01T20:48:32Z",
-      "category": "Characters",
-      "image_count": 1,
-      "title_en": "Taiga",
-      "title_zh": "Taiga",
-      "source_type": "editorial",
-      "reviewed_at": "2026-11-09",
-      "verified_game_version": "v1.0_BETAx",
-      "summary_en": "Optional Wildheart guide: find Taiga, follow current events and shared prerequisites, and plan gifts, three conversations and the river date.",
-      "summary_zh": "可选Wildheart人物指南：找到Taiga，查当前事件与共同前置，安排赠礼、三段交心和河上约会。",
-      "search_terms": [
-        "Taiga",
-        "Taiga",
-        "Wildheart",
-        "Wild Woods",
-        "optional mod",
-        "野林",
-        "可选模组",
-        "谈心",
-        "路线"
-      ],
-      "screenshot_count": 0,
-      "asset_directories": [
-        "profiles"
-      ]
-    },
-    {
-      "slug": "game-systems-wildheart",
-      "title": "Game Systems:Wildheart",
-      "title_en": "Wildheart: Wild Woods",
-      "title_zh": "Wildheart：野林",
-      "category": "Game Systems",
-      "source_type": "editorial",
-      "reviewed_at": "2026-11-09",
-      "verified_game_version": "v1.0_BETAx",
-      "summary_en": "Install and enter the optional world, find all six characters and resolve eight shared-event prerequisites.",
-      "summary_zh": "安装并进入可选世界，按头像找到六位人物，查清八项共同事件与路线前置。",
-      "search_terms": [
-        "Wildheart: Wild Woods",
-        "Wildheart：野林",
-        "Wildheart",
-        "Wild Woods",
-        "optional mod",
-        "野林",
-        "可选模组",
-        "谈心",
-        "路线"
-      ],
-      "image_count": 6,
-      "screenshot_count": 0,
-      "asset_directories": [
-        "character-thumbnails"
       ]
     },
     {
@@ -6640,7 +6433,7 @@
         "profiles"
       ],
       "summary_en": "Nerida’s three wellness locations, restorative baths, personal milestones and Aether Stone bond.",
-      "summary_zh": "Nerida在三个时代的水疗地点、恢复沐浴、个人里程碑与以太石羁绊。",
+      "summary_zh": "Nerida在三个时代的水疗地点、恢复沐浴、个人里程碑与以太之石羁绊。",
       "search_terms": [
         "Nerida",
         "角色",
@@ -7999,7 +7792,7 @@
         "profiles"
       ],
       "summary_en": "Hut access, spell lessons, crafting, personal H2Hs and Grimoire level 9.",
-      "summary_zh": "小屋入口、法术课程、制作、个人谈心与魔法书 9 级。",
+      "summary_zh": "小屋入口、法术课程、制作、个人谈心与魔导书 9 级。",
       "search_terms": [
         "Sabbath",
         "角色",
@@ -8008,7 +7801,7 @@
         "路线",
         "时间表",
         "Hut access, spell lessons, crafting, personal H2Hs and Grimoire level 9.",
-        "小屋入口、法术课程、制作、个人谈心与魔法书 9 级。"
+        "小屋入口、法术课程、制作、个人谈心与魔导书 9 级。"
       ]
     },
     {
