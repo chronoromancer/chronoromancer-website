@@ -9,7 +9,6 @@ from pathlib import Path
 from urllib.parse import unquote, urlsplit, urlunsplit
 
 from bs4 import BeautifulSoup
-from markdown_it import MarkdownIt
 
 
 SITE = Path(__file__).resolve().parents[1]
@@ -175,6 +174,7 @@ def rewrite_markdown_link(href: str, anchor_prefix: str = "") -> str:
 
 
 def render_markdown(text: str, shared_ids: list[str] | None = None, anchor_prefix: str = "") -> tuple[str, list[dict], list[str]]:
+    from markdown_it import MarkdownIt
     parser = MarkdownIt("commonmark", {"html": True}).enable("table").enable("strikethrough")
     soup = BeautifulSoup(parser.render(text), "html.parser")
     first_h1 = soup.find("h1")
@@ -444,6 +444,12 @@ def write_sitemap(guides: list[Guide]) -> None:
 
 
 def main() -> None:
+    maintained_mapping = SITE / "editorial/wiki/parallel-guides.json"
+    if maintained_mapping.is_file():
+        from apply_editorial_wiki import apply_editorial_wiki
+        apply_editorial_wiki(SITE, SITE)
+        print("Rebuilt the retained guide library from the maintained bilingual wiki.")
+        return
     GUIDES.mkdir(parents=True, exist_ok=True)
     guides = load_guides()
     build_index(guides)
@@ -453,6 +459,8 @@ def main() -> None:
         build_guide_page(guide, previous, following)
     write_manifest(guides)
     write_sitemap(guides)
+    from apply_editorial_wiki import apply_editorial_wiki
+    apply_editorial_wiki(SITE, SITE)
     print(f"Generated {len(guides)} guide pages; {sum(guide.translated for guide in guides)} include Simplified Chinese.")
 
 

@@ -1,0 +1,575 @@
+{
+  "asset_directory": "character-thumbnails",
+  "profiles": {
+    "character-abby": {
+      "src": "assets/images/wiki/character-thumbnails/abby.webp"
+    },
+    "character-aimy": {
+      "src": "assets/images/wiki/character-thumbnails/aimy.webp"
+    },
+    "character-akira": {
+      "src": "assets/images/wiki/character-thumbnails/akira.webp"
+    },
+    "character-amelia": {
+      "src": "assets/images/wiki/character-thumbnails/amelia.webp"
+    },
+    "character-annette": {
+      "src": "assets/images/wiki/character-thumbnails/annette.webp"
+    },
+    "character-anthrax": {
+      "src": "assets/images/wiki/character-thumbnails/anthrax.webp"
+    },
+    "character-arachne": {
+      "src": "assets/images/wiki/character-thumbnails/arachne.webp"
+    },
+    "character-archie": {
+      "src": "assets/images/wiki/character-thumbnails/archie.webp"
+    },
+    "character-arestes": {
+      "src": "assets/images/wiki/character-thumbnails/arestes.webp"
+    },
+    "character-aria": {
+      "src": "assets/images/wiki/character-thumbnails/aria.webp"
+    },
+    "character-arnold": {
+      "src": "assets/images/wiki/character-thumbnails/arnold.webp"
+    },
+    "character-artemis": {
+      "src": "assets/images/wiki/character-thumbnails/artemis.webp"
+    },
+    "character-audrey": {
+      "src": "assets/images/wiki/character-thumbnails/audrey.webp"
+    },
+    "character-ava-and-eva": {
+      "src": "assets/images/wiki/character-thumbnails/ava-and-eva.webp"
+    },
+    "character-azariel": {
+      "src": "assets/images/wiki/character-thumbnails/azariel.webp"
+    },
+    "character-aziza": {
+      "src": "assets/images/wiki/character-thumbnails/aziza.webp"
+    },
+    "character-barnard": {
+      "src": "assets/images/wiki/character-thumbnails/barnard.webp"
+    },
+    "character-barric": {
+      "src": "assets/images/wiki/character-thumbnails/barric.webp"
+    },
+    "character-bayne": {
+      "src": "assets/images/wiki/character-thumbnails/bayne.webp"
+    },
+    "character-bella": {
+      "src": "assets/images/wiki/character-thumbnails/bella.webp"
+    },
+    "character-bellavia": {
+      "src": "assets/images/wiki/character-thumbnails/bellavia.webp"
+    },
+    "character-ben-arthur": {
+      "src": "assets/images/wiki/character-thumbnails/ben-arthur.webp"
+    },
+    "character-bessie": {
+      "src": "assets/images/wiki/character-thumbnails/bessie.webp"
+    },
+    "character-blinky": {
+      "src": "assets/images/wiki/character-thumbnails/blinky.webp"
+    },
+    "character-bobo": {
+      "src": "assets/images/wiki/character-thumbnails/bobo.webp"
+    },
+    "character-br10dr": {
+      "src": "assets/images/wiki/character-thumbnails/br10dr.webp"
+    },
+    "character-brandy": {
+      "src": "assets/images/wiki/character-thumbnails/brandy.webp"
+    },
+    "character-carmilla": {
+      "src": "assets/images/wiki/character-thumbnails/carmilla.webp"
+    },
+    "character-chamel": {
+      "src": "assets/images/wiki/character-thumbnails/chamel.webp"
+    },
+    "character-chamella": {
+      "src": "assets/images/wiki/character-thumbnails/chamella.webp"
+    },
+    "character-chef-martha": {
+      "src": "assets/images/wiki/character-thumbnails/chef-martha.webp"
+    },
+    "character-cherry": {
+      "src": "assets/images/wiki/character-thumbnails/cherry.webp"
+    },
+    "character-chloe": {
+      "src": "assets/images/wiki/character-thumbnails/chloe.webp"
+    },
+    "character-christy": {
+      "src": "assets/images/wiki/character-thumbnails/christy.webp"
+    },
+    "character-chrysalia": {
+      "src": "assets/images/wiki/character-thumbnails/chrysalia.webp"
+    },
+    "character-cid": {
+      "src": "assets/images/wiki/character-thumbnails/cid.webp"
+    },
+    "character-cinnamon": {
+      "src": "assets/images/wiki/character-thumbnails/cinnamon.webp"
+    },
+    "character-coradio": {
+      "src": "assets/images/wiki/character-thumbnails/coradio.webp"
+    },
+    "character-cotton": {
+      "src": "assets/images/wiki/character-thumbnails/cotton.webp"
+    },
+    "character-cressida": {
+      "src": "assets/images/wiki/character-thumbnails/cressida.webp"
+    },
+    "character-dawn": {
+      "src": "assets/images/wiki/character-thumbnails/dawn.webp"
+    },
+    "character-dex": {
+      "src": "assets/images/wiki/character-thumbnails/dex.webp"
+    },
+    "character-diane": {
+      "src": "assets/images/wiki/character-thumbnails/diane.webp"
+    },
+    "character-diedra": {
+      "src": "assets/images/wiki/character-thumbnails/diedra.webp"
+    },
+    "character-elara": {
+      "src": "assets/images/wiki/character-thumbnails/elara.webp"
+    },
+    "character-ember": {
+      "src": "assets/images/wiki/character-thumbnails/ember.webp"
+    },
+    "character-emily": {
+      "src": "assets/images/wiki/character-thumbnails/emily.webp"
+    },
+    "character-epom": {
+      "src": "assets/images/wiki/character-thumbnails/epom.webp"
+    },
+    "character-esperanza": {
+      "src": "assets/images/wiki/character-thumbnails/esperanza.webp"
+    },
+    "character-evangeline": {
+      "src": "assets/images/wiki/character-thumbnails/evangeline.webp"
+    },
+    "character-fernando": {
+      "src": "assets/images/wiki/character-thumbnails/fernando.webp"
+    },
+    "character-foxy": {
+      "src": "assets/images/wiki/character-thumbnails/foxy.webp"
+    },
+    "character-friday": {
+      "src": "assets/images/wiki/character-thumbnails/friday.webp"
+    },
+    "character-gandon": {
+      "src": "assets/images/wiki/character-thumbnails/gandon.webp"
+    },
+    "character-ghost": {
+      "src": "assets/images/wiki/character-thumbnails/ghost.webp"
+    },
+    "character-ginger": {
+      "src": "assets/images/wiki/character-thumbnails/ginger.webp"
+    },
+    "character-glitch": {
+      "src": "assets/images/wiki/character-thumbnails/glitch.webp"
+    },
+    "character-grace": {
+      "src": "assets/images/wiki/character-thumbnails/grace.webp"
+    },
+    "character-gruff": {
+      "src": "assets/images/wiki/character-thumbnails/gruff.webp"
+    },
+    "character-guard": {
+      "src": "assets/images/wiki/character-thumbnails/guard.webp"
+    },
+    "character-hailey": {
+      "src": "assets/images/wiki/character-thumbnails/hailey.webp"
+    },
+    "character-harlequin": {
+      "src": "assets/images/wiki/character-thumbnails/harlequin.webp"
+    },
+    "character-helsa": {
+      "src": "assets/images/wiki/character-thumbnails/helsa.webp"
+    },
+    "character-holly": {
+      "src": "assets/images/wiki/character-thumbnails/holly.webp"
+    },
+    "character-honey": {
+      "src": "assets/images/wiki/character-thumbnails/honey.webp"
+    },
+    "character-isolde": {
+      "src": "assets/images/wiki/character-thumbnails/isolde.webp"
+    },
+    "character-jade": {
+      "src": "assets/images/wiki/character-thumbnails/jade.webp"
+    },
+    "character-jarid": {
+      "src": "assets/images/wiki/character-thumbnails/jarid.webp"
+    },
+    "character-jelly": {
+      "src": "assets/images/wiki/character-thumbnails/jelly.webp"
+    },
+    "character-jennifer": {
+      "src": "assets/images/wiki/character-thumbnails/jennifer.webp"
+    },
+    "character-jessie": {
+      "src": "assets/images/wiki/character-thumbnails/jessie.webp"
+    },
+    "character-jinx": {
+      "src": "assets/images/wiki/character-thumbnails/jinx.webp"
+    },
+    "character-joey": {
+      "src": "assets/images/wiki/character-thumbnails/joey.webp"
+    },
+    "character-julian": {
+      "src": "assets/images/wiki/character-thumbnails/julian.webp"
+    },
+    "character-kalb": {
+      "src": "assets/images/wiki/character-thumbnails/kalb.webp"
+    },
+    "character-kasumi": {
+      "src": "assets/images/wiki/character-thumbnails/kasumi.webp"
+    },
+    "character-katie": {
+      "src": "assets/images/wiki/character-thumbnails/katie.webp"
+    },
+    "character-keira": {
+      "src": "assets/images/wiki/character-thumbnails/keira.webp"
+    },
+    "character-kent": {
+      "src": "assets/images/wiki/character-thumbnails/kent.webp"
+    },
+    "character-kimi": {
+      "src": "assets/images/wiki/character-thumbnails/kimi.webp"
+    },
+    "character-king-graham": {
+      "src": "assets/images/wiki/character-thumbnails/king-graham.webp"
+    },
+    "character-kitty": {
+      "src": "assets/images/wiki/character-thumbnails/kitty.webp"
+    },
+    "character-kristen": {
+      "src": "assets/images/wiki/character-thumbnails/kristen.webp"
+    },
+    "character-kupie": {
+      "src": "assets/images/wiki/character-thumbnails/kupie.webp"
+    },
+    "character-kurenai": {
+      "src": "assets/images/wiki/character-thumbnails/kurenai.webp"
+    },
+    "character-kuro": {
+      "src": "assets/images/wiki/character-thumbnails/kuro.webp"
+    },
+    "character-leona": {
+      "src": "assets/images/wiki/character-thumbnails/leona.webp"
+    },
+    "character-lillian": {
+      "src": "assets/images/wiki/character-thumbnails/lillian.webp"
+    },
+    "character-lilu": {
+      "src": "assets/images/wiki/character-thumbnails/lilu.webp"
+    },
+    "character-lily": {
+      "src": "assets/images/wiki/character-thumbnails/lily.webp"
+    },
+    "character-lime": {
+      "src": "assets/images/wiki/character-thumbnails/lime.webp"
+    },
+    "character-lindia": {
+      "src": "assets/images/wiki/character-thumbnails/lindia.webp"
+    },
+    "character-liora": {
+      "src": "assets/images/wiki/character-thumbnails/liora.webp"
+    },
+    "character-lord-chamberlain": {
+      "src": "assets/images/wiki/character-thumbnails/lord-chamberlain.webp"
+    },
+    "character-lucy": {
+      "src": "assets/images/wiki/character-thumbnails/lucy.webp"
+    },
+    "character-lychee": {
+      "src": "assets/images/wiki/character-thumbnails/lychee.webp"
+    },
+    "character-lyra": {
+      "src": "assets/images/wiki/character-thumbnails/lyra.webp"
+    },
+    "character-maggie": {
+      "src": "assets/images/wiki/character-thumbnails/maggie.webp"
+    },
+    "character-maize": {
+      "src": "assets/images/wiki/character-thumbnails/maize.webp"
+    },
+    "character-mandarin": {
+      "src": "assets/images/wiki/character-thumbnails/mandarin.webp"
+    },
+    "character-marcus": {
+      "src": "assets/images/wiki/character-thumbnails/marcus.webp"
+    },
+    "character-marina": {
+      "src": "assets/images/wiki/character-thumbnails/marina.webp"
+    },
+    "character-mary-ann": {
+      "src": "assets/images/wiki/character-thumbnails/mary-ann.webp"
+    },
+    "character-melanthe": {
+      "src": "assets/images/wiki/character-thumbnails/melanthe.webp"
+    },
+    "character-miki": {
+      "src": "assets/images/wiki/character-thumbnails/miki.webp"
+    },
+    "character-mindy": {
+      "src": "assets/images/wiki/character-thumbnails/mindy.webp"
+    },
+    "character-momosagi": {
+      "src": "assets/images/wiki/character-thumbnails/momosagi.webp"
+    },
+    "character-monk": {
+      "src": "assets/images/wiki/character-thumbnails/monk.webp"
+    },
+    "character-muramasa": {
+      "src": "assets/images/wiki/character-thumbnails/muramasa.webp"
+    },
+    "character-myriss": {
+      "src": "assets/images/wiki/character-thumbnails/myriss.webp"
+    },
+    "character-natsumi": {
+      "src": "assets/images/wiki/character-thumbnails/natsumi.webp"
+    },
+    "character-neena": {
+      "src": "assets/images/wiki/character-thumbnails/neena.webp"
+    },
+    "character-nerida": {
+      "src": "assets/images/wiki/character-thumbnails/nerida.webp"
+    },
+    "character-noella": {
+      "src": "assets/images/wiki/character-thumbnails/noella.webp"
+    },
+    "character-nova": {
+      "src": "assets/images/wiki/character-thumbnails/nova.webp"
+    },
+    "character-nyx": {
+      "src": "assets/images/wiki/character-thumbnails/nyx.webp"
+    },
+    "character-nyxara": {
+      "src": "assets/images/wiki/character-thumbnails/nyxara.webp"
+    },
+    "character-onyx": {
+      "src": "assets/images/wiki/character-thumbnails/onyx.webp"
+    },
+    "character-orchid": {
+      "src": "assets/images/wiki/character-thumbnails/orchid.webp"
+    },
+    "character-pepper": {
+      "src": "assets/images/wiki/character-thumbnails/pepper.webp"
+    },
+    "character-pixel": {
+      "src": "assets/images/wiki/character-thumbnails/pixel.webp"
+    },
+    "character-poison": {
+      "src": "assets/images/wiki/character-thumbnails/poison.webp"
+    },
+    "character-poppy": {
+      "src": "assets/images/wiki/character-thumbnails/poppy.webp"
+    },
+    "character-portia": {
+      "src": "assets/images/wiki/character-thumbnails/portia.webp"
+    },
+    "character-rachel": {
+      "src": "assets/images/wiki/character-thumbnails/rachel.webp"
+    },
+    "character-rain": {
+      "src": "assets/images/wiki/character-thumbnails/rain.webp"
+    },
+    "character-raven": {
+      "src": "assets/images/wiki/character-thumbnails/raven.webp"
+    },
+    "character-rei": {
+      "src": "assets/images/wiki/character-thumbnails/rei.webp"
+    },
+    "character-riki": {
+      "src": "assets/images/wiki/character-thumbnails/riki.webp"
+    },
+    "character-robin": {
+      "src": "assets/images/wiki/character-thumbnails/robin.webp"
+    },
+    "character-rose-arthur": {
+      "src": "assets/images/wiki/character-thumbnails/rose-arthur.webp"
+    },
+    "character-ruxandra": {
+      "src": "assets/images/wiki/character-thumbnails/ruxandra.webp"
+    },
+    "character-ryia": {
+      "src": "assets/images/wiki/character-thumbnails/ryia.webp"
+    },
+    "character-sabbath": {
+      "src": "assets/images/wiki/character-thumbnails/sabbath.webp"
+    },
+    "character-saber": {
+      "src": "assets/images/wiki/character-thumbnails/saber.webp"
+    },
+    "character-sabrina": {
+      "src": "assets/images/wiki/character-thumbnails/sabrina.webp"
+    },
+    "character-sandra": {
+      "src": "assets/images/wiki/character-thumbnails/sandra.webp"
+    },
+    "character-sashimi": {
+      "src": "assets/images/wiki/character-thumbnails/sashimi.webp"
+    },
+    "character-sashina": {
+      "src": "assets/images/wiki/character-thumbnails/sashina.webp"
+    },
+    "character-seraph": {
+      "src": "assets/images/wiki/character-thumbnails/seraph.webp"
+    },
+    "character-shadow": {
+      "src": "assets/images/wiki/character-thumbnails/shadow.webp"
+    },
+    "character-shelly": {
+      "src": "assets/images/wiki/character-thumbnails/shelly.webp"
+    },
+    "character-sherry": {
+      "src": "assets/images/wiki/character-thumbnails/sherry.webp"
+    },
+    "character-silas": {
+      "src": "assets/images/wiki/character-thumbnails/silas.webp"
+    },
+    "character-sonia": {
+      "src": "assets/images/wiki/character-thumbnails/sonia.webp"
+    },
+    "character-summer": {
+      "src": "assets/images/wiki/character-thumbnails/summer.webp"
+    },
+    "character-swish": {
+      "src": "assets/images/wiki/character-thumbnails/swish.webp"
+    },
+    "character-sylwithe": {
+      "src": "assets/images/wiki/character-thumbnails/sylwithe.webp"
+    },
+    "character-taiga": {
+      "src": "assets/images/wiki/character-thumbnails/taiga.webp"
+    },
+    "character-talena": {
+      "src": "assets/images/wiki/character-thumbnails/talena.webp"
+    },
+    "character-terra": {
+      "src": "assets/images/wiki/character-thumbnails/terra.webp"
+    },
+    "character-tiffany": {
+      "src": "assets/images/wiki/character-thumbnails/tiffany.webp"
+    },
+    "character-tobbin": {
+      "src": "assets/images/wiki/character-thumbnails/tobbin.webp"
+    },
+    "character-torea": {
+      "src": "assets/images/wiki/character-thumbnails/torea.webp"
+    },
+    "character-uhura": {
+      "src": "assets/images/wiki/character-thumbnails/uhura.webp"
+    },
+    "character-valerie": {
+      "src": "assets/images/wiki/character-thumbnails/valerie.webp"
+    },
+    "character-valkyra": {
+      "src": "assets/images/wiki/character-thumbnails/valkyra.webp"
+    },
+    "character-vera": {
+      "src": "assets/images/wiki/character-thumbnails/vera.webp"
+    },
+    "character-vespa": {
+      "src": "assets/images/wiki/character-thumbnails/vespa.webp"
+    },
+    "character-violet": {
+      "src": "assets/images/wiki/character-thumbnails/violet.webp"
+    },
+    "character-vixen": {
+      "src": "assets/images/wiki/character-thumbnails/vixen.webp"
+    },
+    "character-void": {
+      "src": "assets/images/wiki/character-thumbnails/void.webp"
+    },
+    "character-whiskers": {
+      "src": "assets/images/wiki/character-thumbnails/whiskers.webp"
+    },
+    "character-wilfred": {
+      "src": "assets/images/wiki/character-thumbnails/wilfred.webp"
+    },
+    "character-willow": {
+      "src": "assets/images/wiki/character-thumbnails/willow.webp"
+    },
+    "character-yrsa": {
+      "src": "assets/images/wiki/character-thumbnails/yrsa.webp"
+    },
+    "character-zodiac": {
+      "src": "assets/images/wiki/character-thumbnails/zodiac.webp"
+    },
+    "character-zoe": {
+      "src": "assets/images/wiki/character-thumbnails/zoe.webp"
+    },
+    "character-zosia": {
+      "src": "assets/images/wiki/character-thumbnails/zosia.webp"
+    },
+    "character-chime": {
+      "src": "assets/images/wiki/character-thumbnails/chime.webp"
+    },
+    "character-daphne": {
+      "src": "assets/images/wiki/character-thumbnails/daphne.webp"
+    },
+    "character-kyou": {
+      "src": "assets/images/wiki/character-thumbnails/kyou.webp"
+    },
+    "character-mittens": {
+      "src": "assets/images/wiki/character-thumbnails/mittens.webp"
+    },
+    "character-tinsel": {
+      "src": "assets/images/wiki/character-thumbnails/tinsel.webp"
+    },
+    "character-vardis": {
+      "src": "assets/images/wiki/character-thumbnails/vardis.webp"
+    },
+    "character-gem": {
+      "src": "assets/images/wiki/character-thumbnails/gem.webp"
+    },
+    "character-gastoff": {
+      "src": "assets/images/wiki/character-thumbnails/gastoff.webp"
+    },
+    "character-tinker": {
+      "src": "assets/images/wiki/character-thumbnails/tinker.webp"
+    },
+    "character-theneas": {
+      "src": "assets/images/wiki/character-thumbnails/theneas.webp"
+    },
+    "character-councilor-voss": {
+      "src": "assets/images/wiki/character-thumbnails/councilor-voss.webp"
+    },
+    "character-officer-becky": {
+      "src": "assets/images/wiki/character-thumbnails/officer-becky.webp"
+    },
+    "character-aaliyah": {
+      "src": "assets/images/wiki/character-thumbnails/aaliyah.webp"
+    },
+    "character-andi": {
+      "src": "assets/images/wiki/character-thumbnails/andi.webp"
+    },
+    "character-saline": {
+      "src": "assets/images/wiki/character-thumbnails/saline.webp"
+    },
+    "character-sophie": {
+      "src": "assets/images/wiki/character-thumbnails/sophie.webp"
+    },
+    "character-pixie": {
+      "src": "assets/images/wiki/character-thumbnails/pixie.webp"
+    },
+    "character-the-blessed-ones": {
+      "src": "assets/images/wiki/character-thumbnails/the-blessed-ones.webp"
+    },
+    "character-huli": {
+      "src": "assets/images/wiki/character-thumbnails/huli.webp"
+    },
+    "character-nanami": {
+      "src": "assets/images/wiki/character-thumbnails/nanami.webp"
+    },
+    "character-rin": {
+      "src": "assets/images/wiki/character-thumbnails/rin.webp"
+    }
+  }
+}

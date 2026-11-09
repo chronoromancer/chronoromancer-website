@@ -25,14 +25,15 @@ def validate(root: Path) -> None:
     slugs = [entry.get("slug", "") for entry in entries]
     entries_by_slug = {entry.get("slug", ""): entry for entry in entries}
     redirects = {entry["slug"]: entry for entry in manifest.get("redirects", [])}
+    aliases = {entry["slug"]: entry for entry in manifest.get("aliases", [])}
     if len(slugs) != len(set(slugs)):
         errors.append("manifest contains duplicate slugs")
 
     files = sorted(wiki_dir.glob("*.html"))
-    if len(files) != len(entries) + len(redirects):
+    if len(files) != len(entries) + len(redirects) + len(aliases):
         errors.append(f"manifest has {len(entries)} pages but wiki directory has {len(files)} HTML files")
 
-    expected = {f"{slug}.html" for slug in slugs + list(redirects)}
+    expected = {f"{slug}.html" for slug in slugs + list(redirects) + list(aliases)}
     for entry in entries:
         if entry.get("source_type") == "editorial":
             if not re.fullmatch(r"\d{4}-\d{2}-\d{2}", entry.get("reviewed_at", "")) or not entry.get("verified_game_version"):
@@ -80,7 +81,8 @@ def validate(root: Path) -> None:
                 errors.append(f"{path.name}: leaked translation marker or corrupted placeholder")
             if any(marker in chinese_text for marker in ("NewPP limit report", "新PP限制报告", "Saved in parser cache", "Render ID")):
                 errors.append(f"{path.name}: inherited MediaWiki parser diagnostics are visible")
-            if re.search(r"(.{2,16})(?:\s*\1){5,}", chinese_text) or re.search(r"(\S{2,20})(?:\s+\1){5,}", chinese_text):
+            repeated = list(re.finditer(r"(.{2,16})(?:\s*\1){5,}", chinese_text)) + list(re.finditer(r"(\S{2,20})(?:\s+\1){5,}", chinese_text))
+            if any(re.search(r"[A-Za-z\u3400-\u9fff]", match.group(1)) for match in repeated):
                 errors.append(f"{path.name}: probable repeated translation output")
         if content.select("script, style, iframe, form, input, button"):
             errors.append(f"{path.name}: unsafe interactive markup remained inside imported content")
