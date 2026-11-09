@@ -96,8 +96,9 @@ def apply_character_index(index,profile_index):
         if not profile:continue
         wrapper=card.select_one('.wiki-character-heading')
         if wrapper is None:
-            wrapper=index.new_tag('div',attrs={'class':'wiki-character-heading'})
+            wrapper=index.new_tag('a',href=link['href'],attrs={'class':'wiki-character-heading'})
             heading.wrap(wrapper)
+        wrapper.name='a';wrapper['href']=link['href']
         for old in wrapper.select('.wiki-character-portrait'):old.decompose()
         image=index.new_tag('img',src=profile['src'],alt='',width='64',height='64',
             attrs={'class':'wiki-character-portrait','loading':'lazy','decoding':'async','aria-hidden':'true'})
@@ -127,7 +128,7 @@ def sync_character_gallery(output, pages, profile_index):
         assert portrait,(slug,'Missing reviewed portrait')
         source=portrait['src'];assert source.startswith('../assets/images/wiki/'),(slug,source)
         record={'id':profile['gallery_id'],'name':person['title_en'],'era':profile['gallery_era'],
-                'descriptionEn':person['summary_en'],'descriptionZh':person['summary_zh'],'image':source[3:]}
+                'descriptionEn':person['summary_en'],'descriptionZh':person['summary_zh'],'image':source[3:],'url':'wiki/'+slug+'.html'}
         if profile.get('gallery_description_ru'):record['descriptionRu']=profile['gallery_description_ru']
         records.append(record)
     assert len(records)==len({r['id']for r in records})==len({r['name']for r in records})
@@ -163,9 +164,10 @@ def sync_character_gallery(output, pages, profile_index):
         image=doc.new_tag('img',src=record['image'],alt=record['name'],attrs={'loading':'lazy','decoding':'async'})
         text=doc.new_tag('div');tag=doc.new_tag('span',attrs={'class':'card-tag'})
         copy(tag,labels[record['era']]['en'],labels[record['era']]['zh'],labels[record['era']]['ru'])
-        heading=doc.new_tag('h2');heading.string=record['name'];summary=doc.new_tag('p')
+        portrait_link=doc.new_tag('a',href=record['url'],attrs={'class':'character-portrait-link'});portrait_link.append(image)
+        heading=doc.new_tag('h2');name_link=doc.new_tag('a',href=record['url']);name_link.string=record['name'];heading.append(name_link);summary=doc.new_tag('p')
         copy(summary,record['descriptionEn'],record['descriptionZh'],record.get('descriptionRu'))
-        text.append(tag);text.append(heading);text.append(summary);card.append(image);card.append(text);grid.append(card)
+        text.append(tag);text.append(heading);text.append(summary);card.append(portrait_link);card.append(text);grid.append(card)
     footer=doc.select_one('.split-feature-copy')
     if footer:
         paragraphs=footer.find_all('p',recursive=False)

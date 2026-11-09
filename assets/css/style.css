@@ -1316,6 +1316,19 @@ a.download-card:hover {
   background: var(--panel);
 }
 
+.character-card .character-portrait-link {
+  display: block;
+  align-self: start;
+  border-radius: 50%;
+}
+
+.character-card h2 a:hover,
+.character-card h2 a:focus-visible {
+  color: var(--cyan);
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+
 .character-card img {
   width: 104px;
   height: 104px;

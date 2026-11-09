@@ -345,6 +345,11 @@
       portrait.loading = "lazy";
       portrait.decoding = "async";
 
+      const portraitLink = document.createElement("a");
+      portraitLink.className = "character-portrait-link";
+      portraitLink.href = character.url;
+      portraitLink.append(portrait);
+
       const copy = document.createElement("div");
       const tag = document.createElement("span");
       tag.className = "card-tag";
@@ -354,7 +359,10 @@
       tag.textContent = eraLabels[character.era][currentLanguage];
 
       const name = document.createElement("h2");
-      name.textContent = character.name;
+      const nameLink = document.createElement("a");
+      nameLink.href = character.url;
+      nameLink.textContent = character.name;
+      name.append(nameLink);
 
       const description = document.createElement("p");
       description.dataset.copyEn = character.descriptionEn;
@@ -367,7 +375,7 @@
           : character.descriptionEn;
 
       copy.append(tag, name, description);
-      card.append(portrait, copy);
+      card.append(portraitLink, copy);
       fragment.append(card);
     });
 

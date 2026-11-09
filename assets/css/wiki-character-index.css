@@ -6,6 +6,8 @@
   gap: 0.85rem;
   margin: 1.15rem 0 0.65rem;
   min-width: 0;
+  color: inherit;
+  font-weight: inherit;
 }
 
 .wiki-character-heading .wiki-character-portrait {
@@ -41,4 +43,11 @@
     font-size: 1.45rem;
     line-height: 1.2;
   }
+}
+
+.wiki-card .wiki-character-heading:hover h2,
+.wiki-card .wiki-character-heading:focus-visible h2 {
+  color: var(--cyan);
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
 }
