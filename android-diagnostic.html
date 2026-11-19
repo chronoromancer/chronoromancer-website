@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Download and testing instructions for the Chronoromancer Android diagnostic build.">
+<meta name="robots" content="noindex, nofollow">
+<title>Android Diagnostic Build | Chronoromancer</title>
+<style>
+:root{color-scheme:dark}*{box-sizing:border-box}body{margin:0;background:#080d17;color:#eaf1fb;font:16px/1.5 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI","Microsoft YaHei",sans-serif}main{width:min(1180px,calc(100% - 32px));margin:24px auto 36px}.intro{text-align:center;background:linear-gradient(145deg,#17223a,#101827);border:1px solid #30415f;border-radius:16px;padding:22px 24px;margin-bottom:18px}h1{font-size:clamp(1.65rem,3vw,2.35rem);line-height:1.15;margin:0 0 8px}.intro p{max-width:760px;margin:8px auto;color:#c6d2e3}.download{display:inline-block;margin-top:10px;padding:13px 22px;border-radius:10px;background:#36c8ee;color:#05131b;font-weight:800;text-decoration:none}.download:hover,.download:focus-visible{background:#78ddf6;outline:3px solid #fff;outline-offset:3px}.languages{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}.language{background:#111a2a;border:1px solid #2c3b56;border-radius:14px;padding:20px 22px}h2{font-size:1.35rem;margin:0 0 14px;color:#64ddf8}h3{font-size:1.05rem;margin:18px 0 6px;color:#fff}p{margin:7px 0}ul{margin:8px 0;padding-left:22px}li{margin:5px 0}.notice{margin-top:14px;padding:11px 13px;border-left:4px solid #36c8ee;background:#17253a;border-radius:0 8px 8px 0}@media(max-width:760px){main{width:min(100% - 20px,680px);margin-top:10px}.intro{padding:18px 14px}.languages{grid-template-columns:1fr;gap:12px}.language{padding:17px 16px}h3{margin-top:15px}}
+</style>
+</head>
+<body>
+<main>
+  <section class="intro" aria-labelledby="page-title">
+    <h1 id="page-title">Chronoromancer Android Diagnostic Build</h1>
+    <p>用于排查安卓卡顿和存档变大问题的专用测试版本。<br>This test build helps us investigate Android lag and unusually large save files.</p>
+    <a class="download" href="https://downloads.chronoromancergame.com/Chronoromancer-Android-Diagnostic-2026-11-19.apk" download>Download APK / 下载 APK</a>
+  </section>
+
+  <div class="languages">
+    <section class="language" lang="zh-CN" aria-labelledby="chinese-heading">
+      <h2 id="chinese-heading">简体中文说明</h2>
+      <p>这是专门用于排查<strong>卡顿和存档变大</strong>的安卓诊断版，请按下面的方法安装和测试：</p>
+
+      <h3>1．直接更新，保留存档</h3>
+      <p>打开这个 APK，在现有游戏上直接安装更新。<strong>不要先卸载游戏，也不要清除游戏数据。</strong></p>
+      <p>如果提示无法更新或安装失败，请先告诉我们，不要通过卸载来解决。</p>
+
+      <h3>2．选择开启诊断</h3>
+      <p>启动时请选择 <strong>“YES / 开启诊断”</strong>。每次重新启动都会询问，测试时都请选择 YES。</p>
+      <p>开启后，会自动向开发者发送本游戏的存档副本、进度与设置、性能数据及崩溃信息，用于排查问题，不会删除你的原始存档。</p>
+      <p>进入游戏前会先上传原始存档。存档较多时需要等待，请保持联网并等待完成，<strong>建议使用 Wi-Fi，避免消耗较多流量。</strong></p>
+
+      <h3>3．读取最容易卡顿的存档</h3>
+      <p>请读取你平时出现问题的存档，尤其是存档明显变大的 New Game+（新游戏＋）存档，不需要重新开档。</p>
+
+      <h3>4．按平时的方式玩，让卡顿出现</h3>
+      <p>建议正常游玩约 15～20 分钟，并尽量包含这些操作：</p>
+      <ul>
+        <li>进行几场普通战斗或地牢战斗，让战后的自动保存正常完成。</li>
+        <li>手动保存一次，可以存到空存档位，保留原来的存档。</li>
+        <li>正常移动、切换地点，以及打开平时容易卡顿的菜单；如果 Extras 页面也会卡，请打开一次。</li>
+      </ul>
+      <p>遇到卡顿时，先等它自行恢复，恢复后继续玩一会儿，方便记录卡顿前后的情况。如果发生闪退，请告诉我们当时正在做什么。</p>
+      <p class="notice"><strong>资料会自动发送，你不需要找存档文件，也不需要手动发送诊断报告。</strong> 测试后请回复一下大致测试时间，以及最明显的卡顿发生在哪一步，方便我们对应记录。</p>
+      <p>想停止诊断时，退出游戏，重新启动并选择 <strong>“NO / 不开启诊断”</strong> 即可。之后收到普通新版，也可以继续直接安装更新。</p>
+    </section>
+
+    <section class="language" lang="en" aria-labelledby="english-heading">
+      <h2 id="english-heading">English Instructions</h2>
+      <p>This is a special Android build to help us investigate <strong>lag and unusually large save files</strong>. Please follow these steps:</p>
+
+      <h3>1. Update without removing your saves</h3>
+      <p>Open the APK and install it as an update over your existing game. <strong>Do not uninstall the game or clear its data.</strong></p>
+      <p>If Android says it cannot update or install, please tell us first. Don’t uninstall the game to get around the error.</p>
+
+      <h3>2. Choose YES for diagnostics</h3>
+      <p>When the game starts, choose <strong>YES</strong> to enable diagnostics. It asks again every time you restart, so please choose YES during testing.</p>
+      <p>This automatically sends the developer copies of your game saves, progress/settings, performance measurements, and crash information. It does not delete your original saves.</p>
+      <p>Before entering the game, it will upload your original saves. This may take some time if you have many saves. Please stay connected and wait for it to finish. <strong>Wi-Fi is recommended to avoid using a lot of mobile data.</strong></p>
+
+      <h3>3. Load the save that has the problem</h3>
+      <p>Load the save you normally experience lag with—especially your New Game+ save if it has become unusually large. You don’t need to start a new game.</p>
+
+      <h3>4. Play normally and let the lag happen</h3>
+      <p>Please play for around 15–20 minutes, ideally including:</p>
+      <ul>
+        <li>Several ordinary or dungeon battles, allowing the automatic save afterward to finish.</li>
+        <li>One manual save. You can use an empty slot to keep your previous save.</li>
+        <li>Normal movement, travel between locations, and opening menus that usually lag. If Extras also freezes, please open it once.</li>
+      </ul>
+      <p>When the game pauses, give it time to recover, then continue playing for a while so we can capture what happens before and after the lag. If it crashes, please tell us what you were doing.</p>
+      <p class="notice"><strong>Everything is sent automatically. You don’t need to find save files or manually send a diagnostic report.</strong> After testing, please tell us approximately when you tested and which actions caused the most noticeable lag, so we can match them to the records.</p>
+      <p>To stop diagnostics, quit the game, restart it, and choose <strong>NO</strong>. When we send the next normal version, you can install that as an update too.</p>
+    </section>
+  </div>
+</main>
+</body>
+</html>
