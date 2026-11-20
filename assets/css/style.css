@@ -1012,6 +1012,21 @@ a.download-card:hover {
   grid-template-columns: 1fr;
 }
 
+.diagnostic-download-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 24px;
+  align-items: center;
+  margin-top: 16px;
+  border-color: rgba(88, 217, 239, 0.34);
+  background: rgba(18, 38, 55, 0.88);
+}
+
+.diagnostic-download-card .button {
+  justify-self: end;
+  white-space: nowrap;
+}
+
 .mirror-host-note {
   color: #cfc3ab;
 }
@@ -1863,6 +1878,14 @@ a.download-card:hover {
 
   .mirror-platform-grid {
     grid-template-columns: 1fr;
+  }
+
+  .diagnostic-download-card {
+    grid-template-columns: 1fr;
+  }
+
+  .diagnostic-download-card .button {
+    justify-self: stretch;
   }
 
   .qq-qr-link img {
