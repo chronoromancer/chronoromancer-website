@@ -1,6 +1,6 @@
 window.CHRONO_SITE_CONFIG = Object.freeze({
-  release: "V1.1c CLEAN",
-  promotionRelease: "V1.1c CLEAN",
+  release: "V1.1cc CLEAN",
+  promotionRelease: "V1.1cc CLEAN",
   store: {
     purchaseOptions: {
       url: "purchase.html",
@@ -29,38 +29,38 @@ window.CHRONO_SITE_CONFIG = Object.freeze({
       enabled: true
     },
     directWin: {
-      url: "https://downloads.chronoromancergame.com/Chronoromancer-V1.1c_CLEAN-win.zip",
+      url: "https://downloads.chronoromancergame.com/Chronoromancer-V1.1cc_CLEAN-win.zip",
       enabled: true
     },
     directPc: {
-      url: "https://downloads.chronoromancergame.com/Chronoromancer-V1.1c_CLEAN-pc.zip",
+      url: "https://downloads.chronoromancergame.com/Chronoromancer-V1.1cc_CLEAN-pc.zip",
       enabled: true
     },
     directMac: {
-      url: "https://downloads.chronoromancergame.com/Chronoromancer-V1.1c_CLEAN-mac.zip",
+      url: "https://downloads.chronoromancergame.com/Chronoromancer-V1.1cc_CLEAN-mac.zip",
       enabled: true
     },
     directAndroid: {
-      url: "https://downloads.chronoromancergame.com/com.chronoromancer.game-1.0-1795523234-release.apk",
+      url: "https://downloads.chronoromancergame.com/com.chronoromancer.game-1.0-1795834019-release.apk",
       enabled: true
     },
     torrentPc: {
-      url: "assets/downloads/torrents/chronoromancer-v1.1c-clean-pc-windows-linux.torrent",
-      magnet: "magnet:?xt=urn:btih:4502bde1c65df8282e227566a067a62c813c0232&dn=Chronoromancer-V1.1c_CLEAN-pc.zip&ws=https%3A%2F%2Fdownloads.chronoromancergame.com%2FChronoromancer-V1.1c_CLEAN-pc.zip&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451&tr=udp%3A%2F%2Fopen.tracker.cl%3A1337%2Fannounce",
+      url: "assets/downloads/torrents/chronoromancer-v1.1cc-clean-pc-windows-linux.torrent",
+      magnet: "magnet:?xt=urn:btih:c2cbcae35fc7cea4c3b85afe8fb60d7c2f7846ac&dn=Chronoromancer-V1.1cc_CLEAN-pc.zip&ws=https%3A%2F%2Fdownloads.chronoromancergame.com%2FChronoromancer-V1.1cc_CLEAN-pc.zip&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451&tr=udp%3A%2F%2Fopen.tracker.cl%3A1337%2Fannounce",
       enabled: true
     },
     torrentMac: {
-      url: "assets/downloads/torrents/chronoromancer-v1.1c-clean-macos.torrent",
-      magnet: "magnet:?xt=urn:btih:3ecf6259bd00783a89abb89e4be0b9c11555eb65&dn=Chronoromancer-V1.1c_CLEAN-mac.zip&ws=https%3A%2F%2Fdownloads.chronoromancergame.com%2FChronoromancer-V1.1c_CLEAN-mac.zip&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451&tr=udp%3A%2F%2Fopen.tracker.cl%3A1337%2Fannounce",
+      url: "assets/downloads/torrents/chronoromancer-v1.1cc-clean-macos.torrent",
+      magnet: "magnet:?xt=urn:btih:2002c32fc8f35c5c511ceae10e0be2eaebff3398&dn=Chronoromancer-V1.1cc_CLEAN-mac.zip&ws=https%3A%2F%2Fdownloads.chronoromancergame.com%2FChronoromancer-V1.1cc_CLEAN-mac.zip&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451&tr=udp%3A%2F%2Fopen.tracker.cl%3A1337%2Fannounce",
       enabled: true
     },
     torrentAndroid: {
-      url: "assets/downloads/torrents/chronoromancer-v1.1c-clean-android.torrent",
-      magnet: "magnet:?xt=urn:btih:21cef8846e9dad3812f4c85f88886e44ef449122&dn=com.chronoromancer.game-1.0-1795523234-release.apk&ws=https%3A%2F%2Fdownloads.chronoromancergame.com%2Fcom.chronoromancer.game-1.0-1795523234-release.apk&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451&tr=udp%3A%2F%2Fopen.tracker.cl%3A1337%2Fannounce",
+      url: "assets/downloads/torrents/chronoromancer-v1.1cc-clean-android.torrent",
+      magnet: "magnet:?xt=urn:btih:6be9070533aff8ac24cd016ae69a644a7319119b&dn=com.chronoromancer.game-1.0-1795834019-release.apk&ws=https%3A%2F%2Fdownloads.chronoromancergame.com%2Fcom.chronoromancer.game-1.0-1795834019-release.apk&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451&tr=udp%3A%2F%2Fopen.tracker.cl%3A1337%2Fannounce",
       enabled: true
     },
     torrentChecksums: {
-      url: "assets/downloads/torrents/chronoromancer-v1.1c-clean-sha256sums.txt",
+      url: "assets/downloads/torrents/chronoromancer-v1.1cc-clean-sha256sums.txt",
       enabled: true
     }
   },

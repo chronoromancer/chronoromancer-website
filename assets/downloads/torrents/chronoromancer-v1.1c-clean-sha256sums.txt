@@ -1,4 +1,0 @@
-0fbbeb0a09efc8b5a91c034d3c1a04309f752273e2fcb48f3e5441939699ab2b  Chronoromancer-V1.1c_CLEAN-win.zip
-1525e017f4669b20525417050af01814f17f06d918b79e56dd89660363ebfc26  Chronoromancer-V1.1c_CLEAN-pc.zip
-f2831d81f17ef97e54a75762f4d34e6fb2202b63422f1e2a81f30a7abd2d580b  Chronoromancer-V1.1c_CLEAN-mac.zip
-fa55ddd882e8e5dc9fc780ba310a5012b4b2391c1681ce79149e0f9164871310  com.chronoromancer.game-1.0-1795523234-release.apk
